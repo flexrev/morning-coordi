@@ -1,0 +1,404 @@
+[
+ {
+  "kind": "top",
+  "length": "crop",
+  "bottomFit": "slim",
+  "score": 4,
+  "note": "다리 길어 보임. 하이웨이스트 권장",
+  "flags": []
+ },
+ {
+  "kind": "top",
+  "length": "crop",
+  "bottomFit": "tapered",
+  "score": 4,
+  "note": "깔끔",
+  "flags": []
+ },
+ {
+  "kind": "top",
+  "length": "crop",
+  "bottomFit": "regular",
+  "score": 4,
+  "note": "무난",
+  "flags": []
+ },
+ {
+  "kind": "top",
+  "length": "crop",
+  "bottomFit": "straight",
+  "score": 5,
+  "note": "2025 클래식. 하이웨이스트 스트레이트",
+  "flags": []
+ },
+ {
+  "kind": "top",
+  "length": "crop",
+  "bottomFit": "wide",
+  "score": 5,
+  "note": "와이드와 가장 잘 맞는 기장",
+  "flags": []
+ },
+ {
+  "kind": "top",
+  "length": "regular",
+  "bottomFit": "slim",
+  "score": 4,
+  "note": "기본",
+  "flags": []
+ },
+ {
+  "kind": "top",
+  "length": "regular",
+  "bottomFit": "tapered",
+  "score": 5,
+  "note": "기본",
+  "flags": []
+ },
+ {
+  "kind": "top",
+  "length": "regular",
+  "bottomFit": "regular",
+  "score": 5,
+  "note": "기본",
+  "flags": []
+ },
+ {
+  "kind": "top",
+  "length": "regular",
+  "bottomFit": "straight",
+  "score": 5,
+  "note": "기본",
+  "flags": []
+ },
+ {
+  "kind": "top",
+  "length": "regular",
+  "bottomFit": "wide",
+  "score": 4,
+  "note": "턱인이면 5",
+  "flags": []
+ },
+ {
+  "kind": "top",
+  "length": "long",
+  "bottomFit": "slim",
+  "score": 4,
+  "note": "롱 셔츠·롱 니트 + 슬림 = 롱앤린 실루엣",
+  "flags": []
+ },
+ {
+  "kind": "top",
+  "length": "long",
+  "bottomFit": "tapered",
+  "score": 3,
+  "note": "롱 상의가 테이퍼드 라인을 가림. 변주",
+  "flags": []
+ },
+ {
+  "kind": "top",
+  "length": "long",
+  "bottomFit": "regular",
+  "score": 3,
+  "note": "밋밋. 변주",
+  "flags": []
+ },
+ {
+  "kind": "top",
+  "length": "long",
+  "bottomFit": "straight",
+  "score": 2,
+  "note": "전체가 길고 평평함",
+  "flags": []
+ },
+ {
+  "kind": "top",
+  "length": "long",
+  "bottomFit": "wide",
+  "score": 2,
+  "note": "전체 길고 넓음. 키 185 이상 변주",
+  "flags": []
+ },
+ {
+  "kind": "outer",
+  "length": "short",
+  "bottomFit": "slim",
+  "score": 3,
+  "note": "2010년대 느낌. 부츠와 함께면 4",
+  "flags": []
+ },
+ {
+  "kind": "outer",
+  "length": "short",
+  "bottomFit": "tapered",
+  "score": 4,
+  "note": "무난",
+  "flags": []
+ },
+ {
+  "kind": "outer",
+  "length": "short",
+  "bottomFit": "regular",
+  "score": 5,
+  "note": "숏 아우터의 기본 짝",
+  "flags": []
+ },
+ {
+  "kind": "outer",
+  "length": "short",
+  "bottomFit": "straight",
+  "score": 5,
+  "note": "숏 재킷 + 스트레이트 데님 = 클래식 (W Korea)",
+  "flags": []
+ },
+ {
+  "kind": "outer",
+  "length": "short",
+  "bottomFit": "wide",
+  "score": 5,
+  "note": "짧은 위 + 넓은 아래 = 2025 기본 비율",
+  "flags": []
+ },
+ {
+  "kind": "outer",
+  "length": "regular",
+  "bottomFit": "slim",
+  "score": 4,
+  "note": "블레이저·셔츠 재킷 + 슬림. 포멀 쪽",
+  "flags": []
+ },
+ {
+  "kind": "outer",
+  "length": "regular",
+  "bottomFit": "tapered",
+  "score": 5,
+  "note": "기본",
+  "flags": []
+ },
+ {
+  "kind": "outer",
+  "length": "regular",
+  "bottomFit": "regular",
+  "score": 5,
+  "note": "기본",
+  "flags": []
+ },
+ {
+  "kind": "outer",
+  "length": "regular",
+  "bottomFit": "straight",
+  "score": 5,
+  "note": "기본",
+  "flags": []
+ },
+ {
+  "kind": "outer",
+  "length": "regular",
+  "bottomFit": "wide",
+  "score": 4,
+  "note": "재킷 자체도 여유 있어야 함",
+  "flags": []
+ },
+ {
+  "kind": "outer",
+  "length": "long",
+  "bottomFit": "slim",
+  "score": 5,
+  "note": "롱 코트 + 슬림 = 클래식 롱앤린",
+  "flags": []
+ },
+ {
+  "kind": "outer",
+  "length": "long",
+  "bottomFit": "tapered",
+  "score": 5,
+  "note": "롱 코트 + 테이퍼드 슬랙스 = 클래식",
+  "flags": []
+ },
+ {
+  "kind": "outer",
+  "length": "long",
+  "bottomFit": "straight",
+  "score": 4,
+  "note": "안전. 코트 품이 넉넉해야",
+  "flags": []
+ },
+ {
+  "kind": "outer",
+  "length": "long",
+  "bottomFit": "regular",
+  "score": 4,
+  "note": "안전",
+  "flags": []
+ },
+ {
+  "kind": "outer",
+  "length": "long",
+  "bottomFit": "wide",
+  "score": 3,
+  "note": "전체 볼륨. 코트도 오버 핏이어야 하고 신발에 무게 필요. 변주",
+  "flags": [
+   "disputed"
+  ]
+ },
+ {
+  "kind": "trouser",
+  "length": "crop",
+  "bottomFit": "slim",
+  "score": 4,
+  "note": "발목 노출. 여름·봄가을",
+  "flags": []
+ },
+ {
+  "kind": "trouser",
+  "length": "crop",
+  "bottomFit": "tapered",
+  "score": 5,
+  "note": "가장 자연스러운 크롭",
+  "flags": []
+ },
+ {
+  "kind": "trouser",
+  "length": "crop",
+  "bottomFit": "regular",
+  "score": 4,
+  "note": "무난",
+  "flags": []
+ },
+ {
+  "kind": "trouser",
+  "length": "crop",
+  "bottomFit": "straight",
+  "score": 4,
+  "note": "2025 스트레이트 크롭 흔함",
+  "flags": []
+ },
+ {
+  "kind": "trouser",
+  "length": "crop",
+  "bottomFit": "wide",
+  "score": 3,
+  "note": "넓고 짧으면 '통바지 7부' 느낌. 발목 바로 위까지만",
+  "flags": []
+ },
+ {
+  "kind": "trouser",
+  "length": "nobreak",
+  "bottomFit": "slim",
+  "score": 5,
+  "note": "기본",
+  "flags": []
+ },
+ {
+  "kind": "trouser",
+  "length": "nobreak",
+  "bottomFit": "tapered",
+  "score": 5,
+  "note": "기본. 2025 표준 기장",
+  "flags": []
+ },
+ {
+  "kind": "trouser",
+  "length": "nobreak",
+  "bottomFit": "regular",
+  "score": 5,
+  "note": "기본",
+  "flags": []
+ },
+ {
+  "kind": "trouser",
+  "length": "nobreak",
+  "bottomFit": "straight",
+  "score": 5,
+  "note": "기본",
+  "flags": []
+ },
+ {
+  "kind": "trouser",
+  "length": "nobreak",
+  "bottomFit": "wide",
+  "score": 4,
+  "note": "밑단이 신발 윗선에 닿는 정도",
+  "flags": []
+ },
+ {
+  "kind": "trouser",
+  "length": "half",
+  "bottomFit": "slim",
+  "score": 4,
+  "note": "포멀 쪽",
+  "flags": []
+ },
+ {
+  "kind": "trouser",
+  "length": "half",
+  "bottomFit": "tapered",
+  "score": 5,
+  "note": "클래식 수트 기장 (Permanent Style Rule 1)",
+  "flags": []
+ },
+ {
+  "kind": "trouser",
+  "length": "half",
+  "bottomFit": "regular",
+  "score": 5,
+  "note": "클래식",
+  "flags": []
+ },
+ {
+  "kind": "trouser",
+  "length": "half",
+  "bottomFit": "straight",
+  "score": 5,
+  "note": "클래식",
+  "flags": []
+ },
+ {
+  "kind": "trouser",
+  "length": "half",
+  "bottomFit": "wide",
+  "score": 5,
+  "note": "와이드는 살짝 브레이크가 있어야 선이 산다",
+  "flags": []
+ },
+ {
+  "kind": "trouser",
+  "length": "full",
+  "bottomFit": "slim",
+  "score": 2,
+  "note": "발목에 뭉침",
+  "flags": []
+ },
+ {
+  "kind": "trouser",
+  "length": "full",
+  "bottomFit": "tapered",
+  "score": 2,
+  "note": "테이퍼드 라인 망가짐",
+  "flags": []
+ },
+ {
+  "kind": "trouser",
+  "length": "full",
+  "bottomFit": "regular",
+  "score": 3,
+  "note": "포멀·올드 클래식",
+  "flags": []
+ },
+ {
+  "kind": "trouser",
+  "length": "full",
+  "bottomFit": "straight",
+  "score": 4,
+  "note": "데님 스태킹(stacking) 변주",
+  "flags": []
+ },
+ {
+  "kind": "trouser",
+  "length": "full",
+  "bottomFit": "wide",
+  "score": 4,
+  "note": "와이드 데님 + 부츠 스태킹. 바닥 끌리지 않게",
+  "flags": []
+ }
+]

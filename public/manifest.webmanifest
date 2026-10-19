@@ -1,0 +1,21 @@
+{
+  "id": "./",
+  "name": "아침 코디",
+  "short_name": "아침코디",
+  "description": "출근 전 10초 안에 오늘 입을 옷 조합을 골라주는 남성 코디 가이드",
+  "lang": "ko",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#121212",
+  "background_color": "#121212",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "screenshots": [
+    { "src": "screenshots/s3-375.png", "sizes": "375x812", "type": "image/png", "form_factor": "narrow", "label": "하의 색을 고르면 바로 나오는 클래식 조합 3장" }
+  ]
+}

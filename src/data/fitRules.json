@@ -1,0 +1,144 @@
+[
+ {
+  "topFit": "slim",
+  "bottomFit": "slim",
+  "score": 3,
+  "note": "마른 체형·재킷 착장에서만. 기본 추천 아님 (2010년대식)",
+  "flags": [
+   "disputed"
+  ]
+ },
+ {
+  "topFit": "slim",
+  "bottomFit": "tapered",
+  "score": 4,
+  "note": "깔끔. 로퍼·더비와 좋음. 상의 턱인 권장",
+  "flags": []
+ },
+ {
+  "topFit": "slim",
+  "bottomFit": "regular",
+  "score": 4,
+  "note": "무난한 클래식",
+  "flags": []
+ },
+ {
+  "topFit": "slim",
+  "bottomFit": "straight",
+  "score": 4,
+  "note": "안전. 상의가 너무 짧지 않게",
+  "flags": []
+ },
+ {
+  "topFit": "slim",
+  "bottomFit": "wide",
+  "score": 5,
+  "note": "2025 기본 실루엣 \"큰 바지 + 작은 상의\". 상의 기장 레귤러 이하",
+  "flags": []
+ },
+ {
+  "topFit": "regular",
+  "bottomFit": "slim",
+  "score": 3,
+  "note": "상체가 무거워 보임. 숏 아우터 추가 시 4",
+  "flags": []
+ },
+ {
+  "topFit": "regular",
+  "bottomFit": "tapered",
+  "score": 5,
+  "note": "가장 안전한 클래식",
+  "flags": []
+ },
+ {
+  "topFit": "regular",
+  "bottomFit": "regular",
+  "score": 5,
+  "note": "누구에게나 통하는 기본값",
+  "flags": []
+ },
+ {
+  "topFit": "regular",
+  "bottomFit": "straight",
+  "score": 5,
+  "note": "클래식. 아우터 길이 불문",
+  "flags": []
+ },
+ {
+  "topFit": "regular",
+  "bottomFit": "wide",
+  "score": 4,
+  "note": "턱인 또는 크롭·레귤러 기장이면 5",
+  "flags": []
+ },
+ {
+  "topFit": "loose",
+  "bottomFit": "slim",
+  "score": 3,
+  "note": "역삼각 실루엣. 상의 기장 짧아야 함. 스트릿 변주",
+  "flags": []
+ },
+ {
+  "topFit": "loose",
+  "bottomFit": "tapered",
+  "score": 5,
+  "note": "코쿤 실루엣. 입문자용 클래식 (계획서 예시)",
+  "flags": []
+ },
+ {
+  "topFit": "loose",
+  "bottomFit": "regular",
+  "score": 4,
+  "note": "안전. 신발은 볼륨 있는 것으로",
+  "flags": []
+ },
+ {
+  "topFit": "loose",
+  "bottomFit": "straight",
+  "score": 4,
+  "note": "안전. 소재가 구조감 있어야 함",
+  "flags": []
+ },
+ {
+  "topFit": "loose",
+  "bottomFit": "wide",
+  "score": 3,
+  "note": "풀 루즈. 키·소재·기장 조건 충족 시 변주",
+  "flags": []
+ },
+ {
+  "topFit": "oversized",
+  "bottomFit": "slim",
+  "score": 3,
+  "note": "스트릿. 변주 전용",
+  "flags": []
+ },
+ {
+  "topFit": "oversized",
+  "bottomFit": "tapered",
+  "score": 4,
+  "note": "오버 후디·스웻 + 테이퍼드 = 스트릿 클래식",
+  "flags": []
+ },
+ {
+  "topFit": "oversized",
+  "bottomFit": "regular",
+  "score": 3,
+  "note": "흐물해 보이기 쉬움",
+  "flags": []
+ },
+ {
+  "topFit": "oversized",
+  "bottomFit": "straight",
+  "score": 3,
+  "note": "상의 기장 크롭에 가까울 때만",
+  "flags": []
+ },
+ {
+  "topFit": "oversized",
+  "bottomFit": "wide",
+  "score": 2,
+  "note": "실루엣 실종. 상급자 변주",
+  "flags": []
+ }
+]

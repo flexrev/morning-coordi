@@ -1,0 +1,163 @@
+[
+ {
+  "id": "sneakerWhite",
+  "labelKo": "흰 스니커즈",
+  "formality": 3,
+  "formalityNote": "캔버스형은 2",
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": "겨울은 가죽형",
+  "socks": "흰·회 양말, 여름 페이크삭스",
+  "note": "2025 기본 신발. 미니멀 가죽형이 '클래식'",
+  "flags": []
+ },
+ {
+  "id": "sneakerColor",
+  "labelKo": "컬러 스니커즈",
+  "formality": 2,
+  "formalityNote": null,
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": null,
+  "socks": "양말 색 포인트 가능",
+  "note": "레트로 러닝 실루엣. 와이드 데님·스웻과",
+  "flags": []
+ },
+ {
+  "id": "running",
+  "labelKo": "러닝화",
+  "formality": 1,
+  "formalityNote": null,
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": null,
+  "socks": "스포츠 양말",
+  "note": "고프코어. 테일러드와는 격차 큼",
+  "flags": []
+ },
+ {
+  "id": "loaferPenny",
+  "labelKo": "페니 로퍼",
+  "formality": 6,
+  "formalityNote": null,
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": "겨울은 양말 착용 시",
+  "socks": "여름 노삭스/페이크삭스, 가을·겨울 양말",
+  "note": "가장 범용적인 가죽 신발. 치노·슬랙스·데님 전부",
+  "flags": []
+ },
+ {
+  "id": "loaferTassel",
+  "labelKo": "태슬 로퍼",
+  "formality": 7,
+  "formalityNote": null,
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": null,
+  "socks": "양말 권장",
+  "note": "페니보다 드레시. 슬랙스·플란넬",
+  "flags": []
+ },
+ {
+  "id": "derby",
+  "labelKo": "더비",
+  "formality": 7,
+  "formalityNote": null,
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": "여름은 스웨이드",
+  "socks": "바지색 양말",
+  "note": "가죽 신발 중 가장 범용. 두꺼운 밑창은 데님과",
+  "flags": []
+ },
+ {
+  "id": "oxford",
+  "labelKo": "옥스포드",
+  "formality": 9,
+  "formalityNote": null,
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "seasonNote": null,
+  "socks": "바지색 긴 양말",
+  "note": "수트 전용에 가까움. 데님·치노와는 격차",
+  "flags": []
+ },
+ {
+  "id": "chelsea",
+  "labelKo": "첼시 부츠",
+  "formality": 6,
+  "formalityNote": "출처 갈림: 몽크 위(Bespoke Unit) vs 아래(Mr. Koachman) → 6 중간 처리",
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "seasonNote": null,
+  "socks": "보이지 않음",
+  "note": "슬림·테이퍼드 전용. 와이드에 묻힘",
+  "flags": [
+   "disputed"
+  ]
+ },
+ {
+  "id": "workboot",
+  "labelKo": "워크 부츠",
+  "formality": 4,
+  "formalityNote": null,
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "seasonNote": "봄가을은 늦가을",
+  "socks": "두꺼운 양말",
+  "note": "스트레이트·와이드 데님·코듀로이. 슬림 금지",
+  "flags": []
+ },
+ {
+  "id": "chukka",
+  "labelKo": "척카 부츠",
+  "formality": 5,
+  "formalityNote": null,
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "seasonNote": null,
+  "socks": "바지색 양말",
+  "note": "치노·데님 만능. 스웨이드 기본",
+  "flags": []
+ },
+ {
+  "id": "sandal",
+  "labelKo": "샌들/슬리퍼",
+  "formality": 1,
+  "formalityNote": null,
+  "seasons": [
+   "summer"
+  ],
+  "seasonNote": null,
+  "socks": "없음",
+  "note": "린넨·쇼츠·크롭. 슬랙스는 변주",
+  "flags": []
+ }
+]

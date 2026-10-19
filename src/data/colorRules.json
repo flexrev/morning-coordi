@@ -1,0 +1,6503 @@
+[
+ {
+  "base": "indigo",
+  "baseCategory": "bottom",
+  "variant": null,
+  "labelKo": "인디고 데님",
+  "matches": [
+   {
+    "category": "top",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "WK1",
+     "GQK",
+     "AtG1",
+     "Celio"
+    ],
+    "flags": [],
+    "note": "흰 티+진청은 '불멸의 조합'"
+   },
+   {
+    "category": "top",
+    "color": "greyMelange",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "FB1",
+     "Hack",
+     "Vou1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "navy",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB3",
+     "Celio"
+    ],
+    "flags": [],
+    "note": "톤온톤. 명도 차 필요"
+   },
+   {
+    "category": "top",
+    "color": "lightBlue",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "WH1",
+     "FB1"
+    ],
+    "flags": [],
+    "note": "블루 톤온톤 셔츠"
+   },
+   {
+    "category": "top",
+    "color": "oatmeal",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "VK1",
+     "AtG4"
+    ],
+    "flags": [],
+    "note": "니트"
+   },
+   {
+    "category": "top",
+    "color": "cream",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "VK1",
+     "AtG4"
+    ],
+    "flags": [],
+    "note": "니트"
+   },
+   {
+    "category": "top",
+    "color": "beige",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "Celio",
+     "WH1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "olive",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG4",
+     "Celio"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "black",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB1",
+     "WH1"
+    ],
+    "flags": [],
+    "note": "블랙 티+진청"
+   },
+   {
+    "category": "top",
+    "color": "burgundy",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG4",
+     "Studio"
+    ],
+    "flags": [],
+    "note": "버건디 니트+다크 데님"
+   },
+   {
+    "category": "top",
+    "color": "rust",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "WH1"
+    ],
+    "flags": [],
+    "note": "블루-오렌지 보색"
+   },
+   {
+    "category": "top",
+    "color": "brown",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG4"
+    ],
+    "flags": [],
+    "note": "브라운 니트+데님"
+   },
+   {
+    "category": "top",
+    "color": "chocolate",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG4"
+    ],
+    "flags": [],
+    "note": "브라운 니트+데님"
+   },
+   {
+    "category": "top",
+    "color": "charcoal",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB1",
+     "MF"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "dustyPink",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "WH1"
+    ],
+    "flags": [],
+    "note": "뉴트럴 위 파스텔"
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "GQK",
+     "AtG1",
+     "Celio"
+    ],
+    "flags": [],
+    "note": "스니커즈"
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "GG",
+     "VK1",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": "부츠·로퍼 — 데님+브라운은 보색 원리"
+   },
+   {
+    "category": "shoes",
+    "color": "chocolate",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "GG",
+     "VK1",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": "부츠·로퍼 — 데님+브라운은 보색 원리"
+   },
+   {
+    "category": "shoes",
+    "color": "tan",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "Dalm",
+     "GG"
+    ],
+    "flags": [],
+    "note": "스웨이드"
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "GG",
+     "FB1",
+     "Allure"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "부츠·더비 — GG는 데님+블랙 구두 비추천, FB·Allure는 블랙 재킷+구두로 격 올리기 제안. 진청엔 가능, 연청엔 비추천",
+    "ruleId": "A3"
+   },
+   {
+    "category": "shoes",
+    "color": "navy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "FB2"
+    ],
+    "flags": [],
+    "note": "스니커즈·데크슈즈"
+   },
+   {
+    "category": "shoes",
+    "color": "burgundy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG4"
+    ],
+    "flags": [],
+    "note": "로퍼"
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Hack",
+     "Celio",
+     "WH2"
+    ],
+    "flags": [],
+    "note": "블레이저·필드재킷"
+   },
+   {
+    "category": "outer",
+    "color": "camel",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "WH1",
+     "VK1"
+    ],
+    "flags": [],
+    "note": "코트·트렌치"
+   },
+   {
+    "category": "outer",
+    "color": "beige",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "WH1",
+     "VK1"
+    ],
+    "flags": [],
+    "note": "코트·트렌치"
+   },
+   {
+    "category": "outer",
+    "color": "olive",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG4",
+     "MM"
+    ],
+    "flags": [],
+    "note": "필드재킷·초어"
+   },
+   {
+    "category": "outer",
+    "color": "charcoal",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB1",
+     "RMRS2"
+    ],
+    "flags": [],
+    "note": "코트·블레이저"
+   },
+   {
+    "category": "outer",
+    "color": "midGrey",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB1",
+     "RMRS2"
+    ],
+    "flags": [],
+    "note": "코트·블레이저"
+   },
+   {
+    "category": "outer",
+    "color": "brown",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB1",
+     "VK1",
+     "AtG1"
+    ],
+    "flags": [],
+    "note": "스웨이드·레더"
+   },
+   {
+    "category": "outer",
+    "color": "black",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "Allure",
+     "FB1"
+    ],
+    "flags": [],
+    "note": "레더·코트 — 블랙 재킷+진청"
+   },
+   {
+    "category": "outer",
+    "color": "indigo",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "AtG3"
+    ],
+    "flags": [],
+    "note": "데님 재킷, 더블데님 — 워시 톤이 달라야 함",
+    "ruleId": "A8"
+   },
+   {
+    "category": "top",
+    "color": "forestGreen",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG1",
+     "C2"
+    ],
+    "flags": [],
+    "note": "브라운 코트 변주(R1 c29 괄호 변주)"
+   }
+  ],
+  "avoid": [
+   {
+    "category": "outer",
+    "color": "indigo",
+    "reason": "같은 워시의 데님 재킷은 유니폼처럼 보임",
+    "sources": [
+     "AtG3"
+    ],
+    "ruleId": "A8"
+   },
+   {
+    "category": null,
+    "color": null,
+    "reason": "4색 이상",
+    "sources": [
+     "Vou1"
+    ],
+    "ruleId": "A11"
+   }
+  ]
+ },
+ {
+  "base": "lightDenim",
+  "baseCategory": "bottom",
+  "variant": null,
+  "labelKo": "라이트워시 데님",
+  "matches": [
+   {
+    "category": "top",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "PM",
+     "Allure"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "greyMelange",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "PM",
+     "Hack"
+    ],
+    "flags": [],
+    "note": "대비 약해 자연스러움"
+   },
+   {
+    "category": "top",
+    "color": "lightGrey",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "PM",
+     "Hack"
+    ],
+    "flags": [],
+    "note": "대비 약해 자연스러움"
+   },
+   {
+    "category": "top",
+    "color": "navy",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "Celio",
+     "StyleGF"
+    ],
+    "flags": [],
+    "note": "명도 대비 안정"
+   },
+   {
+    "category": "top",
+    "color": "lightBlue",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "WH1",
+     "PM"
+    ],
+    "flags": [],
+    "note": "톤온톤"
+   },
+   {
+    "category": "top",
+    "color": "skyBlue",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "WH1",
+     "PM"
+    ],
+    "flags": [],
+    "note": "톤온톤"
+   },
+   {
+    "category": "top",
+    "color": "beige",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "WK2",
+     "PM"
+    ],
+    "flags": [],
+    "note": "밝은 뉴트럴끼리"
+   },
+   {
+    "category": "top",
+    "color": "oatmeal",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "WK2",
+     "PM"
+    ],
+    "flags": [],
+    "note": "밝은 뉴트럴끼리"
+   },
+   {
+    "category": "top",
+    "color": "black",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "PM"
+    ],
+    "flags": [],
+    "note": "PM: 연청과 너무 강한 대비는 '반 잘린' 느낌 → 조건부"
+   },
+   {
+    "category": "top",
+    "color": "sage",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "WH1"
+    ],
+    "flags": [],
+    "note": "봄 파스텔"
+   },
+   {
+    "category": "top",
+    "color": "dustyPink",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "WH1"
+    ],
+    "flags": [],
+    "note": "봄 파스텔"
+   },
+   {
+    "category": "top",
+    "color": "olive",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "MM"
+    ],
+    "flags": [],
+    "note": "데님 재킷 역방향 근거"
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "PM",
+     "MSR",
+     "VK3"
+    ],
+    "flags": [],
+    "note": "스니커즈"
+   },
+   {
+    "category": "shoes",
+    "color": "tan",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "PM",
+     "MSR"
+    ],
+    "flags": [],
+    "note": "스웨이드 부츠"
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "PM",
+     "MSR"
+    ],
+    "flags": [],
+    "note": "스웨이드 부츠"
+   },
+   {
+    "category": "shoes",
+    "color": "navy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "FB2"
+    ],
+    "flags": [],
+    "note": "캔버스"
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "MSR",
+     "GG",
+     "StyleGF"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "대부분 '어두운 신발은 무겁다'며 비추; 일부는 블랙 로퍼 OK",
+    "ruleId": "A3"
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "PM",
+     "StyleGF"
+    ],
+    "flags": [],
+    "note": "블레이저·봄버"
+   },
+   {
+    "category": "outer",
+    "color": "beige",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "WK2"
+    ],
+    "flags": [],
+    "note": "밝은 톤 연결"
+   },
+   {
+    "category": "outer",
+    "color": "camel",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "WK2"
+    ],
+    "flags": [],
+    "note": "밝은 톤 연결"
+   },
+   {
+    "category": "outer",
+    "color": "olive",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MM"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "outer",
+    "color": "midGrey",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "PM"
+    ],
+    "flags": [],
+    "note": "블레이저"
+   },
+   {
+    "category": "outer",
+    "color": "indigo",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG3"
+    ],
+    "flags": [],
+    "note": "데님 재킷 — 진한 워시 재킷+연청 바지 = 톤 차이 있는 더블데님"
+   },
+   {
+    "category": "outer",
+    "color": "black",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "연청과 강한 대비"
+   }
+  ],
+  "avoid": [
+   {
+    "category": "shoes",
+    "color": "black",
+    "reason": "연청+블랙 구두는 무거움",
+    "sources": [
+     "MSR",
+     "GG"
+    ],
+    "ruleId": "A3"
+   },
+   {
+    "category": null,
+    "color": null,
+    "reason": "연청+배기핏(핏이 더 중요), 포멀 자리",
+    "sources": [
+     "PM"
+    ],
+    "ruleId": null
+   }
+  ]
+ },
+ {
+  "base": "blackDenim",
+  "baseCategory": "bottom",
+  "variant": null,
+  "labelKo": "블랙 데님",
+  "matches": [
+   {
+    "category": "top",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "FB1",
+     "AtG1"
+    ],
+    "flags": [],
+    "note": "흑백 70/30"
+   },
+   {
+    "category": "top",
+    "color": "greyMelange",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "lightGrey",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "black",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB1",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": "올블랙, 질감 차이 필요. 여름 블랙 셔츠는 '웨이터' 주의"
+   },
+   {
+    "category": "top",
+    "color": "navy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "FB1: 네이비+블랙 금기 무시하라",
+    "ruleId": "A1"
+   },
+   {
+    "category": "top",
+    "color": "olive",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB1",
+     "MM"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "charcoal",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [],
+    "note": "모노 톤온톤"
+   },
+   {
+    "category": "top",
+    "color": "tan",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [],
+    "note": "FB1 '샌드·탄·토바코' 어스톤"
+   },
+   {
+    "category": "top",
+    "color": "beige",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [],
+    "note": "FB1 '샌드·탄·토바코' 어스톤"
+   },
+   {
+    "category": "top",
+    "color": "camel",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [],
+    "note": "FB1 '샌드·탄·토바코' 어스톤"
+   },
+   {
+    "category": "top",
+    "color": "burgundy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG4"
+    ],
+    "flags": [],
+    "note": "블랙 위 포인트"
+   },
+   {
+    "category": "top",
+    "color": "lightBlue",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [],
+    "note": "FB1 레이어드 셔츠"
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "FB1",
+     "AtG2",
+     "MM"
+    ],
+    "flags": [],
+    "note": "부츠·스니커즈·로퍼"
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [],
+    "note": "스니커즈 — 흑백"
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "워크부츠 — FB1 Red Wing 예시. 블랙+브라운 가죽 혼용은 의견이 갈림(벨트·신발 가죽 통일 권장)",
+    "ruleId": "A2"
+   },
+   {
+    "category": "shoes",
+    "color": "chocolate",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "워크부츠 — FB1 Red Wing 예시. 블랙+브라운 가죽 혼용은 의견이 갈림(벨트·신발 가죽 통일 권장)",
+    "ruleId": "A2"
+   },
+   {
+    "category": "shoes",
+    "color": "midGrey",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [],
+    "note": "스웨이드 로퍼"
+   },
+   {
+    "category": "outer",
+    "color": "black",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "FB1",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": "레더·봄버·블레이저"
+   },
+   {
+    "category": "outer",
+    "color": "midGrey",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [],
+    "note": "블레이저·코트"
+   },
+   {
+    "category": "outer",
+    "color": "charcoal",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [],
+    "note": "블레이저·코트"
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB1",
+     "MRP"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "봄버·블레이저",
+    "ruleId": "A1"
+   },
+   {
+    "category": "outer",
+    "color": "camel",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "VK2"
+    ],
+    "flags": [],
+    "note": "코트 — 블랙+카멜 럭셔리 대비"
+   },
+   {
+    "category": "outer",
+    "color": "olive",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [],
+    "note": "오버셔츠"
+   },
+   {
+    "category": "outer",
+    "color": "tan",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [],
+    "note": "스웨이드 봄버"
+   },
+   {
+    "category": "outer",
+    "color": "indigo",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [],
+    "note": "데님 재킷"
+   },
+   {
+    "category": "top",
+    "color": "midGrey",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB1",
+     "C2"
+    ],
+    "flags": [],
+    "note": "모노 톤온톤(R1 c09 미드 그레이 니트+블랙 데님). 4-3 greyMelange/lightGrey 5와 같은 계열"
+   }
+  ],
+  "avoid": [
+   {
+    "category": "top",
+    "color": "black",
+    "reason": "여름 블랙 셔츠+블랙 데님은 너무 어둡고 웨이터 느낌",
+    "sources": [
+     "FB1"
+    ],
+    "ruleId": "A13"
+   },
+   {
+    "category": null,
+    "color": null,
+    "reason": "스키니 핏, 블랙 데님+브라운 벨트+블랙 신발(가죽 불일치)",
+    "sources": [
+     "FB1"
+    ],
+    "ruleId": "A2"
+   }
+  ]
+ },
+ {
+  "base": "beige",
+  "baseCategory": "bottom",
+  "variant": null,
+  "labelKo": "베이지 치노",
+  "matches": [
+   {
+    "category": "top",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "WH1",
+     "Celio",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Celio",
+     "AtG2",
+     "Vou1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "lightBlue",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "AtG2",
+     "MF"
+    ],
+    "flags": [],
+    "note": "옥스포드"
+   },
+   {
+    "category": "top",
+    "color": "olive",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "Celio",
+     "AtG1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "brown",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "WH1",
+     "VK2"
+    ],
+    "flags": [],
+    "note": "베이지+브라운+화이트"
+   },
+   {
+    "category": "top",
+    "color": "chocolate",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "WH1",
+     "VK2"
+    ],
+    "flags": [],
+    "note": "베이지+브라운+화이트"
+   },
+   {
+    "category": "top",
+    "color": "greyMelange",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "TMM-tan",
+     "Hack"
+    ],
+    "flags": [],
+    "note": "그레이+탄은 저평가된 조합"
+   },
+   {
+    "category": "top",
+    "color": "midGrey",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "TMM-tan",
+     "Hack"
+    ],
+    "flags": [],
+    "note": "그레이+탄은 저평가된 조합"
+   },
+   {
+    "category": "top",
+    "color": "burgundy",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG4",
+     "Studio"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "black",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG2"
+    ],
+    "flags": [],
+    "note": "블랙 롤넥+베이지"
+   },
+   {
+    "category": "top",
+    "color": "cream",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "WK2"
+    ],
+    "flags": [],
+    "note": "밝은 톤온톤, 명도 차 작음"
+   },
+   {
+    "category": "top",
+    "color": "oatmeal",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "WK2"
+    ],
+    "flags": [],
+    "note": "밝은 톤온톤, 명도 차 작음"
+   },
+   {
+    "category": "top",
+    "color": "dustyPink",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "WH1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "lavender",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "WH1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "rust",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG4"
+    ],
+    "flags": [],
+    "note": "어스톤 보색 변주"
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Celio",
+     "WH2",
+     "PS2"
+    ],
+    "flags": [],
+    "note": "로퍼·부츠"
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Celio",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": "스니커즈"
+   },
+   {
+    "category": "shoes",
+    "color": "tan",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "PS2"
+    ],
+    "flags": [],
+    "note": "스웨이드 — 탄+연한 바지 가능"
+   },
+   {
+    "category": "shoes",
+    "color": "navy",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "Khaki-guides"
+    ],
+    "flags": [],
+    "note": "로퍼·보트슈즈 — 카키·베이지엔 네이비 신발"
+   },
+   {
+    "category": "shoes",
+    "color": "burgundy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "Khaki-guides"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "스마트 셋업에만. 캐주얼엔 무거움"
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "AtG2",
+     "WH2",
+     "Celio"
+    ],
+    "flags": [],
+    "note": "블레이저·코트"
+   },
+   {
+    "category": "outer",
+    "color": "brown",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "WH1",
+     "AtG1"
+    ],
+    "flags": [],
+    "note": "스웨이드·코트"
+   },
+   {
+    "category": "outer",
+    "color": "chocolate",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "WH1",
+     "AtG1"
+    ],
+    "flags": [],
+    "note": "스웨이드·코트"
+   },
+   {
+    "category": "outer",
+    "color": "olive",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG1",
+     "Celio"
+    ],
+    "flags": [],
+    "note": "필드·초어"
+   },
+   {
+    "category": "outer",
+    "color": "midGrey",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "TMM-tan"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "outer",
+    "color": "charcoal",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "TMM-tan"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "outer",
+    "color": "camel",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "WH1"
+    ],
+    "flags": [],
+    "note": "코트 — 톤온톤, 상의에 화이트 필요"
+   },
+   {
+    "category": "outer",
+    "color": "black",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "레더 — 블랙+베이지 대비"
+   },
+   {
+    "category": "outer",
+    "color": "indigo",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R2 6",
+     "C2"
+    ],
+    "flags": [],
+    "note": "데님 재킷+치노(R2 6-1 5점, s02)"
+   }
+  ],
+  "avoid": [
+   {
+    "category": null,
+    "color": null,
+    "reason": "올베이지(명도 차 없이). 베이지+화이트 셔츠+탄 신발만으로는 밋밋 → 한 점 어두운 색 필요",
+    "sources": [
+     "WK2"
+    ],
+    "ruleId": null
+   }
+  ]
+ },
+ {
+  "base": "khaki",
+  "baseCategory": "bottom",
+  "variant": null,
+  "labelKo": "카키 치노",
+  "matches": [
+   {
+    "category": "top",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Khaki-guides",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Khaki-guides",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "lightBlue",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "AtG2",
+     "GG"
+    ],
+    "flags": [],
+    "note": "샴브레이+카키"
+   },
+   {
+    "category": "top",
+    "color": "greyMelange",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "Hack",
+     "TMM-tan"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "olive",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "FB3"
+    ],
+    "flags": [],
+    "note": "카키+올리브는 근접색, 명도 차 필요",
+    "ruleId": "P3-06"
+   },
+   {
+    "category": "top",
+    "color": "burgundy",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG4"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "black",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "Khaki-guides"
+    ],
+    "flags": [],
+    "note": "'세미포멀'"
+   },
+   {
+    "category": "top",
+    "color": "brown",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "어스 톤온톤"
+   },
+   {
+    "category": "top",
+    "color": "cream",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "FB3"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Khaki-guides",
+     "PS2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "chocolate",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Khaki-guides",
+     "PS2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "AtG2",
+     "Khaki-guides"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "navy",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "Khaki-guides"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "tan",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "Khaki-guides"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "burgundy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "Khaki-guides"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "캐주얼 카키엔 무거움"
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "AtG2",
+     "GG"
+    ],
+    "flags": [],
+    "note": "네이비 재킷+카키"
+   },
+   {
+    "category": "outer",
+    "color": "olive",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MM"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "outer",
+    "color": "brown",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "WH1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "outer",
+    "color": "indigo",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MM"
+    ],
+    "flags": [],
+    "note": "데님 재킷"
+   },
+   {
+    "category": "outer",
+    "color": "charcoal",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   }
+  ],
+  "avoid": [
+   {
+    "category": "top",
+    "color": "olive",
+    "reason": "카키+올리브+브라운 셋 다 비슷한 명도(흙탕)",
+    "sources": [
+     "R1"
+    ],
+    "ruleId": null
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "reason": "카키+블랙 구두 캐주얼은 무거움",
+    "sources": [
+     "R1"
+    ],
+    "ruleId": null
+   }
+  ]
+ },
+ {
+  "base": "navy",
+  "baseCategory": "bottom",
+  "variant": null,
+  "labelKo": "네이비 치노",
+  "matches": [
+   {
+    "category": "top",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Celio",
+     "WH2",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "lightBlue",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Navy-guides",
+     "WH1"
+    ],
+    "flags": [],
+    "note": "톤온톤"
+   },
+   {
+    "category": "top",
+    "color": "greyMelange",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "Hack",
+     "RMRS2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "lightGrey",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "Hack",
+     "RMRS2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "beige",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Celio",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": "케이블 니트"
+   },
+   {
+    "category": "top",
+    "color": "oatmeal",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Celio",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": "케이블 니트"
+   },
+   {
+    "category": "top",
+    "color": "cream",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Celio",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": "케이블 니트"
+   },
+   {
+    "category": "top",
+    "color": "burgundy",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "PS1",
+     "AtG4"
+    ],
+    "flags": [],
+    "note": "네이비엔 버건디"
+   },
+   {
+    "category": "top",
+    "color": "olive",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG4",
+     "Celio"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "black",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG2"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "블랙 롤넥+네이비 치노",
+    "ruleId": "A1"
+   },
+   {
+    "category": "top",
+    "color": "dustyPink",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "Aza",
+     "WH1"
+    ],
+    "flags": [],
+    "note": "네이비+더스티 로즈"
+   },
+   {
+    "category": "top",
+    "color": "rust",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG4"
+    ],
+    "flags": [],
+    "note": "보색"
+   },
+   {
+    "category": "top",
+    "color": "forestGreen",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "PS-snippet"
+    ],
+    "flags": [],
+    "note": "보틀그린 under navy"
+   },
+   {
+    "category": "top",
+    "color": "navy",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "GG"
+    ],
+    "flags": [],
+    "note": "같은 네이비끼리는 GG가 비추",
+    "ruleId": "A8"
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "GG",
+     "Navy-guides",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "chocolate",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "GG",
+     "Navy-guides",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Celio",
+     "Navy-guides"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "tan",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "Navy-guides"
+    ],
+    "flags": [],
+    "note": "스웨이드"
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG2",
+     "WH2"
+    ],
+    "flags": [],
+    "note": "스마트/포멀"
+   },
+   {
+    "category": "shoes",
+    "color": "burgundy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "outer",
+    "color": "midGrey",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "RMRS2",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": "그레이 재킷+네이비 바지"
+   },
+   {
+    "category": "outer",
+    "color": "charcoal",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "RMRS2",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": "그레이 재킷+네이비 바지"
+   },
+   {
+    "category": "outer",
+    "color": "camel",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "WH1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "outer",
+    "color": "beige",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "WH1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "outer",
+    "color": "olive",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG4"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "outer",
+    "color": "brown",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "WH2"
+    ],
+    "flags": [],
+    "note": "네이비+브라운"
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "톤온톤, 2단계 명도 차"
+   },
+   {
+    "category": "outer",
+    "color": "black",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "네이비+블랙",
+    "ruleId": "A1"
+   }
+  ],
+  "avoid": [
+   {
+    "category": "outer",
+    "color": "navy",
+    "reason": "네이비 수트 재킷+네이비 치노는 세트처럼 보이는 불일치 수트",
+    "sources": [
+     "GG"
+    ],
+    "ruleId": "A8"
+   }
+  ]
+ },
+ {
+  "base": "midGrey",
+  "baseCategory": "bottom",
+  "variant": null,
+  "labelKo": "그레이 울 트라우저",
+  "matches": [
+   {
+    "category": "top",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MF",
+     "RMRS2"
+    ],
+    "flags": [],
+    "note": "질감·패턴 추가 권장"
+   },
+   {
+    "category": "top",
+    "color": "lightBlue",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MF",
+     "RMRS2"
+    ],
+    "flags": [],
+    "note": "가장 안전"
+   },
+   {
+    "category": "top",
+    "color": "skyBlue",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MF",
+     "RMRS2"
+    ],
+    "flags": [],
+    "note": "가장 안전"
+   },
+   {
+    "category": "top",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MF",
+     "Celio"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "black",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "WH1",
+     "MF"
+    ],
+    "flags": [],
+    "note": "블랙+그레이 저녁용"
+   },
+   {
+    "category": "top",
+    "color": "brown",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "WH1",
+     "MF",
+     "VK2"
+    ],
+    "flags": [],
+    "note": "브라운+그레이 가을·겨울"
+   },
+   {
+    "category": "top",
+    "color": "chocolate",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "WH1",
+     "MF",
+     "VK2"
+    ],
+    "flags": [],
+    "note": "브라운+그레이 가을·겨울"
+   },
+   {
+    "category": "top",
+    "color": "burgundy",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "PS-snippet",
+     "Burgundy-guides"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "dustyPink",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MF"
+    ],
+    "flags": [],
+    "note": "라이트그레이+더스티핑크"
+   },
+   {
+    "category": "top",
+    "color": "forestGreen",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "MF"
+    ],
+    "flags": [],
+    "note": "그린 깅엄"
+   },
+   {
+    "category": "top",
+    "color": "mustard",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "MF"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "midGrey",
+    "score": 1,
+    "tag": "variation",
+    "sources": [
+     "RMRS2",
+     "MF"
+    ],
+    "flags": [],
+    "note": "올그레이 비추",
+    "ruleId": "A5"
+   },
+   {
+    "category": "top",
+    "color": "lightGrey",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "RMRS2",
+     "MF"
+    ],
+    "flags": [],
+    "note": "올그레이 비추"
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Dapp",
+     "Fitville",
+     "MF"
+    ],
+    "flags": [],
+    "note": "미드~다크"
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MF",
+     "Dapp"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MF"
+    ],
+    "flags": [],
+    "note": "스니커즈 — 라이트그레이엔"
+   },
+   {
+    "category": "shoes",
+    "color": "tan",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "Dapp"
+    ],
+    "flags": [],
+    "note": "라이트그레이에만. 차콜엔 ✗"
+   },
+   {
+    "category": "shoes",
+    "color": "burgundy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "RMRS2",
+     "MF"
+    ],
+    "flags": [],
+    "note": "블레이저·코트"
+   },
+   {
+    "category": "outer",
+    "color": "camel",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "WH1"
+    ],
+    "flags": [],
+    "note": "코트"
+   },
+   {
+    "category": "outer",
+    "color": "brown",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "WH2"
+    ],
+    "flags": [],
+    "note": "브라운 재킷+그레이 바지"
+   },
+   {
+    "category": "outer",
+    "color": "black",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "WH1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "outer",
+    "color": "olive",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "outer",
+    "color": "charcoal",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG1"
+    ],
+    "flags": [],
+    "note": "톤 차이 2단계 이상"
+   },
+   {
+    "category": "outer",
+    "color": "midGrey",
+    "score": 1,
+    "tag": "variation",
+    "sources": [
+     "RMRS2"
+    ],
+    "flags": [],
+    "note": "그레이 재킷+그레이 플란넬 = 불일치 수트"
+   }
+  ],
+  "avoid": [
+   {
+    "category": "top",
+    "color": "midGrey",
+    "reason": "그레이 셔츠+그레이 바지는 dull and dreary",
+    "sources": [
+     "RMRS2"
+    ],
+    "ruleId": "A5"
+   },
+   {
+    "category": "outer",
+    "color": "midGrey",
+    "reason": "그레이 재킷+그레이 플란넬 = 불일치 수트",
+    "sources": [
+     "RMRS2"
+    ],
+    "ruleId": "A5"
+   },
+   {
+    "category": "shoes",
+    "color": "tan",
+    "reason": "노란기 있는 브라운 구두",
+    "sources": [
+     "Dapp"
+    ],
+    "ruleId": null
+   }
+  ]
+ },
+ {
+  "base": "charcoal",
+  "baseCategory": "bottom",
+  "variant": null,
+  "labelKo": "차콜 트라우저",
+  "matches": [
+   {
+    "category": "top",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MF",
+     "Vou1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "lightBlue",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MF",
+     "Vou1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "navy",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MF"
+    ],
+    "flags": [],
+    "note": "마린 블루"
+   },
+   {
+    "category": "top",
+    "color": "lightGrey",
+    "score": 3,
+    "tag": "classic",
+    "sources": [
+     "AtG1"
+    ],
+    "flags": [],
+    "note": "차콜+라이트그레이 톤온톤",
+    "ruleId": "A5"
+   },
+   {
+    "category": "top",
+    "color": "greyMelange",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG1"
+    ],
+    "flags": [],
+    "note": "차콜+라이트그레이 톤온톤"
+   },
+   {
+    "category": "top",
+    "color": "burgundy",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "Vou1"
+    ],
+    "flags": [],
+    "note": "차콜 수트+클라렛"
+   },
+   {
+    "category": "top",
+    "color": "black",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "MF"
+    ],
+    "flags": [],
+    "note": "어둡고 무거움. 저녁용"
+   },
+   {
+    "category": "top",
+    "color": "dustyPink",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "MF"
+    ],
+    "flags": [],
+    "note": "핑크 스트라이프"
+   },
+   {
+    "category": "top",
+    "color": "forestGreen",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "MF"
+    ],
+    "flags": [],
+    "note": "어두운 색끼리 뭉개짐"
+   },
+   {
+    "category": "top",
+    "color": "cream",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "명도 대비 좋음"
+   },
+   {
+    "category": "top",
+    "color": "oatmeal",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "명도 대비 좋음"
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "PS2",
+     "Dapp",
+     "MF"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "chocolate",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "Dapp",
+     "Fitville"
+    ],
+    "flags": [],
+    "note": "다크브라운 — 밝은 탄은 ✗"
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "MF"
+    ],
+    "flags": [],
+    "note": "스니커즈 — 캐주얼 차콜에만"
+   },
+   {
+    "category": "shoes",
+    "color": "tan",
+    "score": 1,
+    "tag": "variation",
+    "sources": [
+     "Dapp",
+     "Fitville"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "비추. PS도 '차콜엔 브라운 구두 비추'라는 입장",
+    "ruleId": "A7"
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MF",
+     "RMRS2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "outer",
+    "color": "camel",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "WH1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "outer",
+    "color": "black",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "WH1"
+    ],
+    "flags": [],
+    "note": "모노"
+   },
+   {
+    "category": "outer",
+    "color": "lightGrey",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "역톤"
+   },
+   {
+    "category": "outer",
+    "color": "olive",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   }
+  ],
+  "avoid": [
+   {
+    "category": "top",
+    "color": "forestGreen",
+    "reason": "차콜+다크그린은 뭉개짐",
+    "sources": [
+     "MF"
+    ],
+    "ruleId": null
+   },
+   {
+    "category": "shoes",
+    "color": "tan",
+    "reason": "차콜+월넛/탄 구두",
+    "sources": [
+     "Dapp",
+     "Fitville"
+    ],
+    "ruleId": "A7"
+   },
+   {
+    "category": null,
+    "color": null,
+    "reason": "올차콜",
+    "sources": [
+     "R1"
+    ],
+    "ruleId": "A5"
+   }
+  ]
+ },
+ {
+  "base": "olive",
+  "baseCategory": "bottom",
+  "variant": null,
+  "labelKo": "올리브 치노",
+  "matches": [
+   {
+    "category": "top",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MM",
+     "AtG2",
+     "Berle",
+     "Celio"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "offWhite",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MM",
+     "AtG2",
+     "Berle",
+     "Celio"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "beige",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MM",
+     "Celio"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "tan",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MM",
+     "Celio"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MM",
+     "AtG4",
+     "Celio"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "lightBlue",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MM",
+     "Berle"
+    ],
+    "flags": [],
+    "note": "탁한 블루"
+   },
+   {
+    "category": "top",
+    "color": "greyMelange",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MM"
+    ],
+    "flags": [],
+    "note": "봄·여름 라이트그레이, 가을 다크그레이"
+   },
+   {
+    "category": "top",
+    "color": "lightGrey",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MM"
+    ],
+    "flags": [],
+    "note": "봄·여름 라이트그레이, 가을 다크그레이"
+   },
+   {
+    "category": "top",
+    "color": "black",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MM",
+     "Celio"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "MM은 '블랙+어스톤 덜 어울림' 단서도 있음"
+   },
+   {
+    "category": "top",
+    "color": "brown",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG4",
+     "Olive-guides"
+    ],
+    "flags": [],
+    "note": "초콜릿 니트+올리브"
+   },
+   {
+    "category": "top",
+    "color": "chocolate",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG4",
+     "Olive-guides"
+    ],
+    "flags": [],
+    "note": "초콜릿 니트+올리브"
+   },
+   {
+    "category": "top",
+    "color": "burgundy",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MM",
+     "AtG4"
+    ],
+    "flags": [],
+    "note": "보색(탁한)"
+   },
+   {
+    "category": "top",
+    "color": "cream",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG4",
+     "Vou1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "oatmeal",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG4",
+     "Vou1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "lavender",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "MM"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "rust",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "MM",
+     "AtG4"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "MM '오렌지는 거의 모두 ✗', AtG4 '번트오렌지+올리브 OK'",
+    "ruleId": "A9"
+   },
+   {
+    "category": "top",
+    "color": "olive",
+    "score": 1,
+    "tag": "variation",
+    "sources": [
+     "MM"
+    ],
+    "flags": [],
+    "note": "그린온그린 ✗",
+    "ruleId": "A6"
+   },
+   {
+    "category": "top",
+    "color": "forestGreen",
+    "score": 1,
+    "tag": "variation",
+    "sources": [
+     "MM"
+    ],
+    "flags": [],
+    "note": "그린온그린 ✗"
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MM",
+     "Berle",
+     "Olive-guides"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "chocolate",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MM",
+     "Berle",
+     "Olive-guides"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MM",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MM",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": "뉴트럴·쿨톤 상의와 함께"
+   },
+   {
+    "category": "shoes",
+    "color": "tan",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "Olive-guides"
+    ],
+    "flags": [],
+    "note": "스웨이드"
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MM",
+     "Celio"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "outer",
+    "color": "brown",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MM"
+    ],
+    "flags": [],
+    "note": "레더·스웨이드"
+   },
+   {
+    "category": "outer",
+    "color": "chocolate",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MM"
+    ],
+    "flags": [],
+    "note": "레더·스웨이드"
+   },
+   {
+    "category": "outer",
+    "color": "indigo",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MM"
+    ],
+    "flags": [],
+    "note": "데님 재킷"
+   },
+   {
+    "category": "outer",
+    "color": "midGrey",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG2"
+    ],
+    "flags": [],
+    "note": "블레이저"
+   },
+   {
+    "category": "outer",
+    "color": "black",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "MM"
+    ],
+    "flags": [],
+    "note": "레더"
+   },
+   {
+    "category": "outer",
+    "color": "tan",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "MM"
+    ],
+    "flags": [],
+    "note": "봄버"
+   },
+   {
+    "category": "outer",
+    "color": "camel",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "sage",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "FB3"
+    ],
+    "flags": [],
+    "note": "그린 톤온톤은 명도·채도 차가 클 때만",
+    "ruleId": "A6"
+   }
+  ],
+  "avoid": [
+   {
+    "category": "top",
+    "color": "olive",
+    "reason": "그린온그린",
+    "sources": [
+     "MM"
+    ],
+    "ruleId": "A6"
+   },
+   {
+    "category": "top",
+    "color": "forestGreen",
+    "reason": "그린온그린",
+    "sources": [
+     "MM"
+    ],
+    "ruleId": "A6"
+   },
+   {
+    "category": null,
+    "color": null,
+    "reason": "형광 블루·오렌지, 블랙 가죽+브라운 가죽 혼용",
+    "sources": [
+     "MM"
+    ],
+    "ruleId": "A2"
+   }
+  ]
+ },
+ {
+  "base": "brown",
+  "baseCategory": "bottom",
+  "variant": null,
+  "labelKo": "브라운 코듀로이",
+  "matches": [
+   {
+    "category": "top",
+    "color": "cream",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Brown-guides",
+     "HB"
+    ],
+    "flags": [],
+    "note": "청키 니트"
+   },
+   {
+    "category": "top",
+    "color": "oatmeal",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Brown-guides",
+     "HB"
+    ],
+    "flags": [],
+    "note": "청키 니트"
+   },
+   {
+    "category": "top",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Brown-guides",
+     "WH1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "offWhite",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Brown-guides",
+     "WH1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "lightBlue",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "GG",
+     "HB"
+    ],
+    "flags": [],
+    "note": "라이트블루 셔츠+브라운 바지"
+   },
+   {
+    "category": "top",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "WH2",
+     "Brown-guides"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "beige",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "VK2",
+     "WH1"
+    ],
+    "flags": [],
+    "note": "톤온톤+화이트"
+   },
+   {
+    "category": "top",
+    "color": "tan",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "VK2",
+     "WH1"
+    ],
+    "flags": [],
+    "note": "톤온톤+화이트"
+   },
+   {
+    "category": "top",
+    "color": "midGrey",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "VK2",
+     "HB"
+    ],
+    "flags": [],
+    "note": "브라운+그레이 격식"
+   },
+   {
+    "category": "top",
+    "color": "greyMelange",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "VK2",
+     "HB"
+    ],
+    "flags": [],
+    "note": "브라운+그레이 격식"
+   },
+   {
+    "category": "top",
+    "color": "burgundy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "Brown-guides"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "olive",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "Brown-guides"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "HB는 브라운 바지에 그린 상의 비추",
+    "ruleId": "P3-13"
+   },
+   {
+    "category": "top",
+    "color": "indigo",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "HB"
+    ],
+    "flags": [],
+    "note": "데님 셔츠"
+   },
+   {
+    "category": "top",
+    "color": "black",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "VK2"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "럭셔리 대비"
+   },
+   {
+    "category": "top",
+    "color": "rust",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "유사색"
+   },
+   {
+    "category": "shoes",
+    "color": "chocolate",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Brown-guides",
+     "PS2"
+    ],
+    "flags": [],
+    "note": "바지보다 어둡게"
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Brown-guides",
+     "PS2"
+    ],
+    "flags": [],
+    "note": "바지보다 어둡게"
+   },
+   {
+    "category": "shoes",
+    "color": "tan",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "Brown-guides",
+     "HB"
+    ],
+    "flags": [],
+    "note": "스웨이드 로퍼·데저트"
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "Brown-guides"
+    ],
+    "flags": [],
+    "note": "스니커즈"
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "HB"
+    ],
+    "flags": [],
+    "note": "가능, 벨트 통일"
+   },
+   {
+    "category": "shoes",
+    "color": "burgundy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "Brown-guides"
+    ],
+    "flags": [],
+    "note": "적갈색 신발+다크브라운"
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Brown-guides",
+     "HB",
+     "WH2"
+    ],
+    "flags": [],
+    "note": "블레이저·코트"
+   },
+   {
+    "category": "outer",
+    "color": "midGrey",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "HB"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "outer",
+    "color": "charcoal",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "HB"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "outer",
+    "color": "beige",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "HB"
+    ],
+    "flags": [],
+    "note": "코트"
+   },
+   {
+    "category": "outer",
+    "color": "camel",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "HB"
+    ],
+    "flags": [],
+    "note": "코트"
+   },
+   {
+    "category": "outer",
+    "color": "olive",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "outer",
+    "color": "black",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "HB"
+    ],
+    "flags": [],
+    "note": "레더"
+   },
+   {
+    "category": "outer",
+    "color": "brown",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "레더, 톤온톤 — 질감 차 필수"
+   }
+  ],
+  "avoid": [
+   {
+    "category": "top",
+    "color": "olive",
+    "reason": "브라운 바지+그린 상의",
+    "sources": [
+     "HB"
+    ],
+    "ruleId": null
+   },
+   {
+    "category": null,
+    "color": null,
+    "reason": "코듀로이+텍스처 재킷+패턴 베스트 과적재",
+    "sources": [
+     "GG"
+    ],
+    "ruleId": null
+   }
+  ]
+ },
+ {
+  "base": "black",
+  "baseCategory": "bottom",
+  "variant": null,
+  "labelKo": "블랙 트라우저",
+  "matches": [
+   {
+    "category": "top",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "AtG1",
+     "WH2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "lightGrey",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "WH1",
+     "WH2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "greyMelange",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "WH1",
+     "WH2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "black",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG2",
+     "FB3"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "올블랙, 질감 차. FB3: 올블랙은 피부에 가혹할 수 있음",
+    "ruleId": "A12"
+   },
+   {
+    "category": "top",
+    "color": "charcoal",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "모노"
+   },
+   {
+    "category": "top",
+    "color": "navy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "",
+    "ruleId": "A1"
+   },
+   {
+    "category": "top",
+    "color": "burgundy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "블랙+버건디",
+    "ruleId": "P3-6"
+   },
+   {
+    "category": "top",
+    "color": "forestGreen",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG1"
+    ],
+    "flags": [],
+    "note": "그린 블레이저+블랙 롤넥"
+   },
+   {
+    "category": "top",
+    "color": "camel",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "VK2"
+    ],
+    "flags": [],
+    "note": "럭셔리 대비"
+   },
+   {
+    "category": "top",
+    "color": "beige",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "VK2"
+    ],
+    "flags": [],
+    "note": "럭셔리 대비"
+   },
+   {
+    "category": "top",
+    "color": "lightBlue",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "dustyPink",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "AtG1",
+     "AtG2",
+     "WH2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "스니커즈 — 캐주얼"
+   },
+   {
+    "category": "shoes",
+    "color": "chocolate",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "블랙+브라운 가죽",
+    "ruleId": "A2"
+   },
+   {
+    "category": "outer",
+    "color": "black",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "AtG1",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "outer",
+    "color": "charcoal",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "WH1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "outer",
+    "color": "midGrey",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "WH1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "outer",
+    "color": "camel",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "블랙+카멜 코트"
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "MRP"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "네이비 봄버+블랙",
+    "ruleId": "A1"
+   },
+   {
+    "category": "outer",
+    "color": "forestGreen",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG1"
+    ],
+    "flags": [],
+    "note": ""
+   }
+  ],
+  "avoid": [
+   {
+    "category": "shoes",
+    "color": "chocolate",
+    "reason": "블랙 바지+브라운 구두(가죽 통일 원칙)",
+    "sources": [
+     "WH2"
+    ],
+    "ruleId": "A2"
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "reason": "네이비 재킷+블랙 수트 바지는 사고처럼 보임",
+    "sources": [
+     "MRP"
+    ],
+    "ruleId": "A1"
+   }
+  ]
+ },
+ {
+  "base": "white",
+  "baseCategory": "bottom",
+  "variant": null,
+  "labelKo": null,
+  "matches": [
+   {
+    "category": "top",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "FB2",
+     "HSS",
+     "Celio",
+     "AtG1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "lightBlue",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "FB2",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "cream",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG3",
+     "PS3"
+    ],
+    "flags": [],
+    "note": "톤온톤, 정확히 같은 흰색은 ✗"
+   },
+   {
+    "category": "top",
+    "color": "oatmeal",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG3",
+     "PS3"
+    ],
+    "flags": [],
+    "note": "톤온톤, 정확히 같은 흰색은 ✗"
+   },
+   {
+    "category": "top",
+    "color": "beige",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG3",
+     "PS3"
+    ],
+    "flags": [],
+    "note": "톤온톤, 정확히 같은 흰색은 ✗"
+   },
+   {
+    "category": "top",
+    "color": "black",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "HSS"
+    ],
+    "flags": [],
+    "note": "그래픽 대비"
+   },
+   {
+    "category": "top",
+    "color": "sage",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "HSS"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "olive",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG1",
+     "Celio"
+    ],
+    "flags": [],
+    "note": "올리브 재킷+화이트 팬츠"
+   },
+   {
+    "category": "top",
+    "color": "greyMelange",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG3"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "midGrey",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG3"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "brown",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG3"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "chocolate",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG3"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "white",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "FB2"
+    ],
+    "flags": [],
+    "note": "올화이트는 씻겨 보임, 오프화이트로 대체",
+    "ruleId": "A12"
+   },
+   {
+    "category": "top",
+    "color": "dustyPink",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG1"
+    ],
+    "flags": [],
+    "note": "핑크+페일블루 등 파스텔"
+   },
+   {
+    "category": "top",
+    "color": "burgundy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "FB2",
+     "HSS",
+     "VK1",
+     "AtG3"
+    ],
+    "flags": [],
+    "note": "로퍼, 노삭스"
+   },
+   {
+    "category": "shoes",
+    "color": "tan",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB2",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": "스웨이드 첼시·데저트"
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB2"
+    ],
+    "flags": [],
+    "note": "스니커즈 — 다만 '밝은 트레이너는 다리가 땅에 섞임' 주의"
+   },
+   {
+    "category": "shoes",
+    "color": "navy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "FB2"
+    ],
+    "flags": [],
+    "note": "데크슈즈"
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "FB2",
+     "AtG3",
+     "VK1"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "미니멀 스니커즈·로퍼 — FB2·AtG3는 블랙 OK, Vogue Korea는 '발목에서 끊김, 모나미 룩' 비추",
+    "ruleId": "A4"
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "AtG1",
+     "WH2"
+    ],
+    "flags": [],
+    "note": "블레이저"
+   },
+   {
+    "category": "outer",
+    "color": "cream",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB2",
+     "AtG3"
+    ],
+    "flags": [],
+    "note": "언스트럭처드 블레이저"
+   },
+   {
+    "category": "outer",
+    "color": "beige",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB2",
+     "AtG3"
+    ],
+    "flags": [],
+    "note": "언스트럭처드 블레이저"
+   },
+   {
+    "category": "outer",
+    "color": "lightGrey",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB2",
+     "AtG3"
+    ],
+    "flags": [],
+    "note": "언스트럭처드 블레이저"
+   },
+   {
+    "category": "outer",
+    "color": "camel",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG3"
+    ],
+    "flags": [],
+    "note": "코트 — 겨울"
+   },
+   {
+    "category": "outer",
+    "color": "olive",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB2"
+    ],
+    "flags": [],
+    "note": "필드재킷"
+   },
+   {
+    "category": "outer",
+    "color": "forestGreen",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG2"
+    ],
+    "flags": [],
+    "note": "블레이저"
+   },
+   {
+    "category": "outer",
+    "color": "brown",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG3"
+    ],
+    "flags": [],
+    "note": "스웨이드"
+   },
+   {
+    "category": "outer",
+    "color": "indigo",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG3"
+    ],
+    "flags": [],
+    "note": "데님 재킷"
+   }
+  ],
+  "avoid": [
+   {
+    "category": "top",
+    "color": "white",
+    "reason": "화이트온화이트 정확히 같은 흰색",
+    "sources": [
+     "AtG3"
+    ],
+    "ruleId": "A12"
+   },
+   {
+    "category": null,
+    "color": null,
+    "reason": "로우 데님 염색 이염. 겨울엔 크림이 화이트보다 쉬움",
+    "sources": [
+     "AtG3",
+     "PS3"
+    ],
+    "ruleId": null
+   }
+  ]
+ },
+ {
+  "base": "cream",
+  "baseCategory": "bottom",
+  "variant": null,
+  "labelKo": null,
+  "matches": [
+   {
+    "category": "top",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "FB2",
+     "HSS",
+     "Celio",
+     "AtG1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "lightBlue",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "FB2",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "cream",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG3",
+     "PS3"
+    ],
+    "flags": [],
+    "note": "톤온톤, 정확히 같은 흰색은 ✗"
+   },
+   {
+    "category": "top",
+    "color": "oatmeal",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG3",
+     "PS3"
+    ],
+    "flags": [],
+    "note": "톤온톤, 정확히 같은 흰색은 ✗"
+   },
+   {
+    "category": "top",
+    "color": "beige",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG3",
+     "PS3"
+    ],
+    "flags": [],
+    "note": "톤온톤, 정확히 같은 흰색은 ✗"
+   },
+   {
+    "category": "top",
+    "color": "black",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "HSS"
+    ],
+    "flags": [],
+    "note": "그래픽 대비"
+   },
+   {
+    "category": "top",
+    "color": "sage",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "HSS"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "olive",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG1",
+     "Celio"
+    ],
+    "flags": [],
+    "note": "올리브 재킷+화이트 팬츠"
+   },
+   {
+    "category": "top",
+    "color": "greyMelange",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG3"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "midGrey",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG3"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "brown",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG3"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "chocolate",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG3"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "top",
+    "color": "white",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "FB2"
+    ],
+    "flags": [],
+    "note": "올화이트는 씻겨 보임, 오프화이트로 대체"
+   },
+   {
+    "category": "top",
+    "color": "dustyPink",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG1"
+    ],
+    "flags": [],
+    "note": "핑크+페일블루 등 파스텔"
+   },
+   {
+    "category": "top",
+    "color": "burgundy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "FB2",
+     "HSS",
+     "VK1",
+     "AtG3"
+    ],
+    "flags": [],
+    "note": "로퍼, 노삭스"
+   },
+   {
+    "category": "shoes",
+    "color": "tan",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB2",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": "스웨이드 첼시·데저트"
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB2"
+    ],
+    "flags": [],
+    "note": "스니커즈 — 다만 '밝은 트레이너는 다리가 땅에 섞임' 주의"
+   },
+   {
+    "category": "shoes",
+    "color": "navy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "FB2"
+    ],
+    "flags": [],
+    "note": "데크슈즈"
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "FB2",
+     "AtG3",
+     "VK1"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "미니멀 스니커즈·로퍼 — FB2·AtG3는 블랙 OK, Vogue Korea는 '발목에서 끊김, 모나미 룩' 비추"
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "AtG1",
+     "WH2"
+    ],
+    "flags": [],
+    "note": "블레이저"
+   },
+   {
+    "category": "outer",
+    "color": "cream",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB2",
+     "AtG3"
+    ],
+    "flags": [],
+    "note": "언스트럭처드 블레이저"
+   },
+   {
+    "category": "outer",
+    "color": "beige",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB2",
+     "AtG3"
+    ],
+    "flags": [],
+    "note": "언스트럭처드 블레이저"
+   },
+   {
+    "category": "outer",
+    "color": "lightGrey",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB2",
+     "AtG3"
+    ],
+    "flags": [],
+    "note": "언스트럭처드 블레이저"
+   },
+   {
+    "category": "outer",
+    "color": "camel",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG3"
+    ],
+    "flags": [],
+    "note": "코트 — 겨울"
+   },
+   {
+    "category": "outer",
+    "color": "olive",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB2"
+    ],
+    "flags": [],
+    "note": "필드재킷"
+   },
+   {
+    "category": "outer",
+    "color": "forestGreen",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG2"
+    ],
+    "flags": [],
+    "note": "블레이저"
+   },
+   {
+    "category": "outer",
+    "color": "brown",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG3"
+    ],
+    "flags": [],
+    "note": "스웨이드"
+   },
+   {
+    "category": "outer",
+    "color": "indigo",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG3"
+    ],
+    "flags": [],
+    "note": "데님 재킷"
+   }
+  ],
+  "avoid": [
+   {
+    "category": null,
+    "color": null,
+    "reason": "겨울엔 크림이 화이트보다 쉬움",
+    "sources": [
+     "PS3"
+    ],
+    "ruleId": null
+   }
+  ]
+ },
+ {
+  "base": "white",
+  "baseCategory": "top",
+  "variant": null,
+  "labelKo": "화이트 티셔츠",
+  "matches": [
+   {
+    "category": "bottom",
+    "color": "indigo",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "WK1",
+     "GQK",
+     "AtG1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "lightDenim",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "PM"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "blackDenim",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "블랙데님일 때"
+   },
+   {
+    "category": "bottom",
+    "color": "beige",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "WH1",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "khaki",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "WH1",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "tan",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "olive",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MM",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "navy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Celio"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "midGrey",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MF"
+    ],
+    "flags": [],
+    "note": "질감 필요"
+   },
+   {
+    "category": "bottom",
+    "color": "charcoal",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MF"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "black",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "brown",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "Brown-guides"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "white",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "FB2"
+    ],
+    "flags": [],
+    "note": "올화이트",
+    "ruleId": "A12"
+   },
+   {
+    "category": "bottom",
+    "color": "cream",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "FB2"
+    ],
+    "flags": [],
+    "note": "올화이트"
+   }
+  ],
+  "avoid": []
+ },
+ {
+  "base": "black",
+  "baseCategory": "top",
+  "variant": null,
+  "labelKo": "블랙 티셔츠",
+  "matches": [
+   {
+    "category": "bottom",
+    "color": "blackDenim",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "FB1",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "black",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB1",
+     "AtG2"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "",
+    "ruleId": "A12"
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "indigo",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "midGrey",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MF",
+     "WH1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "lightGrey",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MF",
+     "WH1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "chocolate",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "olive",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MM"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "white",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "HSS"
+    ],
+    "flags": [],
+    "note": "대비"
+   },
+   {
+    "category": "bottom",
+    "color": "cream",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "HSS"
+    ],
+    "flags": [],
+    "note": "대비"
+   },
+   {
+    "category": "bottom",
+    "color": "beige",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "khaki",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "navy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "",
+    "ruleId": "A1"
+   },
+   {
+    "category": "bottom",
+    "color": "lightDenim",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "PM"
+    ],
+    "flags": [],
+    "note": "강한 대비"
+   }
+  ],
+  "avoid": []
+ },
+ {
+  "base": "greyMelange",
+  "baseCategory": "top",
+  "variant": null,
+  "labelKo": "그레이 멜란지 티맨투맨",
+  "matches": [
+   {
+    "category": "bottom",
+    "color": "indigo",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "FB1",
+     "Hack"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "blackDenim",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "black",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Hack"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "beige",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "TMM-tan",
+     "Hack"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "tan",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "TMM-tan",
+     "Hack"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "khaki",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "TMM-tan",
+     "Hack"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "olive",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MM"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "lightDenim",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "PM"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "white",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG3"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "cream",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG3"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "charcoal",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG1"
+    ],
+    "flags": [],
+    "note": "그레이온그레이, 명도 차 2단계"
+   },
+   {
+    "category": "bottom",
+    "color": "midGrey",
+    "score": 1,
+    "tag": "variation",
+    "sources": [
+     "RMRS2"
+    ],
+    "flags": [],
+    "note": "올그레이 ✗",
+    "ruleId": "A5"
+   }
+  ],
+  "avoid": []
+ },
+ {
+  "base": "navy",
+  "baseCategory": "top",
+  "variant": null,
+  "labelKo": "네이비 니트",
+  "matches": [
+   {
+    "category": "bottom",
+    "color": "beige",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Celio",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "khaki",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Celio",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "midGrey",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MF",
+     "Celio"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "lightGrey",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MF",
+     "Celio"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "FB2",
+     "Celio"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "cream",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "FB2",
+     "Celio"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "indigo",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "Celio"
+    ],
+    "flags": [],
+    "note": "톤온톤"
+   },
+   {
+    "category": "shoes",
+    "color": "tan",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "olive",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MM",
+     "AtG4"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "brown",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "WH2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "charcoal",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MF"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "lightDenim",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "명도 대비"
+   },
+   {
+    "category": "bottom",
+    "color": "blackDenim",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "네이비+블랙",
+    "ruleId": "A1"
+   },
+   {
+    "category": "bottom",
+    "color": "black",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "네이비+블랙",
+    "ruleId": "A1"
+   },
+   {
+    "category": "bottom",
+    "color": "navy",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "GG"
+    ],
+    "flags": [],
+    "note": "같은 톤"
+   }
+  ],
+  "avoid": []
+ },
+ {
+  "base": "oatmeal",
+  "baseCategory": "top",
+  "variant": null,
+  "labelKo": "오트밀크림 니트",
+  "matches": [
+   {
+    "category": "bottom",
+    "color": "indigo",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "VK1",
+     "AtG4"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "AtG2"
+    ],
+    "flags": [],
+    "note": "케이블 니트"
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "olive",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Vou1",
+     "AtG4"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "tan",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "brown",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Brown-guides",
+     "HB"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "chocolate",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Brown-guides",
+     "HB"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "charcoal",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "명도 대비"
+   },
+   {
+    "category": "bottom",
+    "color": "midGrey",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "명도 대비"
+   },
+   {
+    "category": "bottom",
+    "color": "blackDenim",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [],
+    "note": "FB1 어스톤"
+   },
+   {
+    "category": "bottom",
+    "color": "beige",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "WK2"
+    ],
+    "flags": [],
+    "note": "밝은 톤온톤"
+   },
+   {
+    "category": "bottom",
+    "color": "khaki",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "WK2"
+    ],
+    "flags": [],
+    "note": "밝은 톤온톤"
+   },
+   {
+    "category": "bottom",
+    "color": "white",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG3"
+    ],
+    "flags": [],
+    "note": "톤온톤"
+   },
+   {
+    "category": "bottom",
+    "color": "burgundy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "바지"
+   }
+  ],
+  "avoid": []
+ },
+ {
+  "base": "cream",
+  "baseCategory": "top",
+  "variant": null,
+  "labelKo": "오트밀크림 니트",
+  "matches": [
+   {
+    "category": "bottom",
+    "color": "indigo",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "VK1",
+     "AtG4"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "AtG2"
+    ],
+    "flags": [],
+    "note": "케이블 니트"
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "olive",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Vou1",
+     "AtG4"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "tan",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "brown",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Brown-guides",
+     "HB"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "chocolate",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Brown-guides",
+     "HB"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "charcoal",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "명도 대비"
+   },
+   {
+    "category": "bottom",
+    "color": "midGrey",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "명도 대비"
+   },
+   {
+    "category": "bottom",
+    "color": "blackDenim",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [],
+    "note": "FB1 어스톤"
+   },
+   {
+    "category": "bottom",
+    "color": "beige",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "WK2"
+    ],
+    "flags": [],
+    "note": "밝은 톤온톤"
+   },
+   {
+    "category": "bottom",
+    "color": "khaki",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "WK2"
+    ],
+    "flags": [],
+    "note": "밝은 톤온톤"
+   },
+   {
+    "category": "bottom",
+    "color": "white",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG3"
+    ],
+    "flags": [],
+    "note": "톤온톤"
+   },
+   {
+    "category": "bottom",
+    "color": "burgundy",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "바지"
+   }
+  ],
+  "avoid": []
+ },
+ {
+  "base": "lightBlue",
+  "baseCategory": "top",
+  "variant": null,
+  "labelKo": "라이트블루 옥스포드",
+  "matches": [
+   {
+    "category": "bottom",
+    "color": "beige",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "AtG2",
+     "Blue-guides"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "khaki",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "AtG2",
+     "Blue-guides"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "midGrey",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MF",
+     "Vou1",
+     "Blue-guides"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "charcoal",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MF",
+     "Vou1",
+     "Blue-guides"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Blue-guides",
+     "WH1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "brown",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "GG"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "tan",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "AtG2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "cream",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "AtG2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "olive",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MM",
+     "Berle"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "indigo",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "WH1"
+    ],
+    "flags": [],
+    "note": "톤온톤"
+   },
+   {
+    "category": "bottom",
+    "color": "black",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "Blue-guides"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "lightDenim",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "명도 차 작음"
+   }
+  ],
+  "avoid": []
+ },
+ {
+  "base": "white",
+  "baseCategory": "top",
+  "variant": "oxfordShirt",
+  "labelKo": "화이트 옥스포드",
+  "matches": [
+   {
+    "category": "bottom",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Celio",
+     "WH2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "midGrey",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MF",
+     "WH2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "charcoal",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "MF",
+     "WH2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "beige",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Celio",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "khaki",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Celio",
+     "AtG2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "olive",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "AtG2",
+     "Celio"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "blackDenim",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "indigo",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "GQK"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "brown",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "Brown-guides"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "black",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "WH2"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "white",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG3"
+    ],
+    "flags": [],
+    "note": "톤온톤"
+   },
+   {
+    "category": "bottom",
+    "color": "cream",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "AtG3"
+    ],
+    "flags": [],
+    "note": "톤온톤"
+   }
+  ],
+  "avoid": []
+ },
+ {
+  "base": "navy",
+  "baseCategory": "top",
+  "variant": "bretonStripe",
+  "labelKo": "브레통 스트라이프",
+  "matches": [
+   {
+    "category": "bottom",
+    "color": "indigo",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Dalm",
+     "MRP-stripes"
+    ],
+    "flags": [],
+    "note": "로우 데님"
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "beige",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Dalm",
+     "MRP-stripes"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "khaki",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Dalm",
+     "MRP-stripes"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "로퍼"
+   },
+   {
+    "category": "bottom",
+    "color": "white",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB-stripes"
+    ],
+    "flags": [],
+    "note": "슬림 화이트+스웨이드 더비"
+   },
+   {
+    "category": "shoes",
+    "color": "navy",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "캔버스·보트"
+   },
+   {
+    "category": "bottom",
+    "color": "black",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG2"
+    ],
+    "flags": [],
+    "note": "블랙 치노+브레통"
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "캔버스"
+   },
+   {
+    "category": "bottom",
+    "color": "navy",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "톤온톤"
+   },
+   {
+    "category": "bottom",
+    "color": "midGrey",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "olive",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "Dalm"
+    ],
+    "flags": [],
+    "note": "밀리터리 니트와 함께"
+   }
+  ],
+  "avoid": []
+ },
+ {
+  "base": "olive",
+  "baseCategory": "top",
+  "variant": null,
+  "labelKo": "올리브 상의",
+  "matches": [
+   {
+    "category": "bottom",
+    "color": "beige",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Celio",
+     "MM"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "khaki",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Celio",
+     "MM"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "indigo",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "AtG4",
+     "AtG1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "white",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Celio",
+     "AtG4"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "cream",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Celio",
+     "AtG4"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "navy",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG4"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "blackDenim",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "FB1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "midGrey",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG4"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "charcoal",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "AtG4"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "brown",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "Brown-guides"
+    ],
+    "flags": [
+     "disputed"
+    ],
+    "note": "HB 반대",
+    "ruleId": "P3-25"
+   },
+   {
+    "category": "bottom",
+    "color": "olive",
+    "score": 1,
+    "tag": "variation",
+    "sources": [
+     "MM"
+    ],
+    "flags": [],
+    "note": "그린온그린",
+    "ruleId": "A6"
+   }
+  ],
+  "avoid": []
+ },
+ {
+  "base": "burgundy",
+  "baseCategory": "top",
+  "variant": null,
+  "labelKo": "버건디 니트",
+  "matches": [
+   {
+    "category": "bottom",
+    "color": "midGrey",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Burgundy-guides",
+     "PS-snippet"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "lightGrey",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "Burgundy-guides",
+     "PS-snippet"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "indigo",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "AtG4",
+     "Studio"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "navy",
+    "score": 5,
+    "tag": "classic",
+    "sources": [
+     "PS1",
+     "AtG4"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "charcoal",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "Vou1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "beige",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "Burgundy-guides"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "khaki",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "Burgundy-guides"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "olive",
+    "score": 4,
+    "tag": "classic",
+    "sources": [
+     "MM",
+     "WH1"
+    ],
+    "flags": [],
+    "note": "탁한 보색"
+   },
+   {
+    "category": "bottom",
+    "color": "black",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "white",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "cream",
+    "score": 3,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": ""
+   },
+   {
+    "category": "bottom",
+    "color": "brown",
+    "score": 2,
+    "tag": "variation",
+    "sources": [
+     "R1"
+    ],
+    "flags": [],
+    "note": "가까운 난색끼리 뭉개짐"
+   }
+  ],
+  "avoid": []
+ }
+]

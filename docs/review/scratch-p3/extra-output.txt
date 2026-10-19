@@ -1,0 +1,145 @@
+== orphan color bases (quick, springFall)
+  bottom/teal/springFall: 1 cards: 화이트 옥스포드 셔츠 · 틸 치노 · 흰 스니커즈=>3.72
+  bottom/teal/summer: 1 cards: 화이트 티셔츠 · 틸 치노 · 흰 스니커즈=>3.72
+  bottom/teal/winter: 1 cards: 화이트 울 니트 · 틸 치노 · 흰 스니커즈=>3.76
+  bottom/taupe/springFall: 1 cards: 화이트 옥스포드 셔츠 · 토프 치노 · 흰 스니커즈=>3.72
+  bottom/taupe/summer: 1 cards: 화이트 티셔츠 · 토프 치노 · 흰 스니커즈=>3.12
+  bottom/taupe/winter: 1 cards: 화이트 울 니트 · 토프 치노 · 흰 스니커즈=>3.76
+  bottom/midDenim/springFall: 1 cards: 화이트 옥스포드 셔츠 · 미드워시 데님 · 흰 스니커즈=>3.65
+  bottom/midDenim/summer: 1 cards: 화이트 티셔츠 · 미드워시 데님 · 흰 스니커즈=>3.68
+  bottom/midDenim/winter: 1 cards: 화이트 울 니트 · 미드워시 데님 · 흰 스니커즈=>3.42
+  top/teal/springFall: 1 cards: 틸 코튼 니트 · 인디고 데님 · 흰 스니커즈=>4.4
+  top/teal/summer: 1 cards: 틸 티셔츠 · 인디고 데님 · 흰 스니커즈=>4.4
+  top/teal/winter: 1 cards: 틸 울 니트 · 인디고 데님 · 흰 스니커즈=>4.4
+  top/mustard/springFall: 1 cards: 머스터드 코튼 니트 · 인디고 데님 · 흰 스니커즈=>4.4
+  top/mustard/summer: 1 cards: 머스터드 티셔츠 · 인디고 데님 · 흰 스니커즈=>4.4
+  top/mustard/winter: 1 cards: 머스터드 울 니트 · 인디고 데님 · 흰 스니커즈=>4.4
+  top/tan/springFall: 1 cards: 탄 코튼 니트 · 인디고 데님 · 흰 스니커즈=>5
+  top/tan/summer: 1 cards: 탄 티셔츠 · 인디고 데님 · 흰 스니커즈=>5
+  top/tan/winter: 1 cards: 탄 울 니트 · 인디고 데님 · 흰 스니커즈=>5
+  top/camel/springFall: 1 cards: 카멜 코튼 니트 · 인디고 데님 · 흰 스니커즈=>5
+  top/camel/summer: 1 cards: 카멜 티셔츠 · 인디고 데님 · 흰 스니커즈=>4.4
+  top/camel/winter: 1 cards: 카멜 울 니트 · 인디고 데님 · 흰 스니커즈=>5
+  shoes/navy/springFall: 3 cards: 네이비 코튼 니트 · 베이지 치노 · 네이비 컬러 스니커즈=>4.88 || 초콜릿 코튼 니트 · 베이지 치노 · 네이비 컬러 스니커즈=>4.88 || 버건디 코튼 니트 · 카키(베이지 계열) 치노 · 네이비 컬러 스니커즈=>4.88
+  shoes/navy/summer: 3 cards: 네이비 티셔츠 · 카키(베이지 계열) 치노 · 네이비 컬러 스니커즈=>4.85 || 올리브 티셔츠 · 베이지 치노 · 네이비 컬러 스니커즈=>4.85 || 미드 그레이 티셔츠 · 베이지 치노 · 네이비 컬러 스니커즈=>4.85
+  shoes/navy/winter: 3 cards: 네이비 울 니트 · 카키(베이지 계열) 치노 · 네이비 컬러 스니커즈=>4.88 || 버건디 울 니트 · 카키(베이지 계열) 치노 · 네이비 컬러 스니커즈=>4.88 || 화이트 울 니트 · 카키(베이지 계열) 치노 · 네이비 컬러 스니커즈=>4.88
+  shoes/burgundy/springFall: 3 cards: 베이지 코튼 니트 · 네이비 치노 · 버건디 페니 로퍼 · 베이지 트렌치 코트=>4.97 || 버건디 코튼 니트 · 인디고 데님 · 버건디 페니 로퍼 · 베이지 트렌치 코트=>4.9 || 네이비 코튼 니트 · 베이지 치노 · 버건디 페니 로퍼=>4.96
+  shoes/burgundy/summer: 3 cards: 네이비 티셔츠 · 베이지 치노 · 버건디 페니 로퍼=>3.53 || 베이지 티셔츠 · 인디고 데님 · 버건디 페니 로퍼=>3.31 || 베이지 티셔츠 · 네이비 치노 · 버건디 페니 로퍼=>3.53
+  shoes/burgundy/winter: 3 cards: 네이비 울 니트 · 카키(베이지 계열) 치노 · 버건디 페니 로퍼=>4.96 || 버건디 울 니트 · 카키(베이지 계열) 치노 · 버건디 페니 로퍼 · 네이비 체스터필드·싱글 코트=>4.79 || 네이비 울 니트 · 베이지 치노 · 버건디 페니 로퍼=>4.96
+  outer/brown/springFall: 3 cards: 화이트 옥스포드 셔츠 · 인디고 데님 · 브라운 척카 부츠 · 브라운 블레이저=>5 || 버건디 코튼 니트 · 인디고 데님 · 브라운 척카 부츠 · 브라운 블레이저=>4.98 || 크림 코튼 니트 · 네이비 치노 · 블랙 더비 · 브라운 블레이저=>4.91
+  outer/brown/summer: 3 cards: 네이비 티셔츠 · 올리브 치노 · 흰 스니커즈 · 브라운 오버셔츠(린넨)=>4.91 || 라이트 블루 티셔츠 · 네이비 치노 · 흰 스니커즈 · 브라운 오버셔츠(린넨)=>4.91 || 올리브 티셔츠 · 베이지 치노 · 네이비 컬러 스니커즈 · 브라운 오버셔츠(린넨)=>4.73
+  outer/brown/winter: 3 cards: 화이트 울 니트 · 네이비 치노 · 블랙 더비 · 브라운 체스터필드·싱글 코트=>4.89 || 그레이 멜란지 울 니트 · 인디고 데님 · 블랙 더비 · 브라운 체스터필드·싱글 코트=>4.86 || 버건디 울 니트 · 인디고 데님 · 브라운 워크 부츠 · 브라운 체스터필드·싱글 코트=>4.82
+  outer/midGrey/springFall: 3 cards: 라이트 블루 옥스포드 셔츠 · 인디고 데님 · 브라운 척카 부츠 · 미드 그레이 블레이저=>5 || 버건디 코튼 니트 · 인디고 데님 · 브라운 척카 부츠 · 미드 그레이 블레이저=>4.98 || 베이지 코튼 니트 · 네이비 치노 · 블랙 더비 · 미드 그레이 블레이저=>4.91
+  outer/midGrey/summer: 3 cards: 올리브 티셔츠 · 네이비 치노 · 흰 스니커즈 · 미드 그레이 오버셔츠(린넨)=>4.91 || 베이지 티셔츠 · 인디고 데님 · 흰 스니커즈 · 미드 그레이 오버셔츠(린넨)=>4.88 || 라이트 블루 티셔츠 · 네이비 치노 · 탄 페니 로퍼 · 미드 그레이 오버셔츠(린넨)=>4.74
+  outer/midGrey/winter: 3 cards: 올리브 울 니트 · 네이비 치노 · 블랙 더비 · 미드 그레이 체스터필드·싱글 코트=>4.89 || 올리브 울 니트 · 인디고 데님 · 브라운 워크 부츠 · 미드 그레이 체스터필드·싱글 코트=>4.82 || 버건디 울 니트 · 인디고 데님 · 브라운 워크 부츠 · 미드 그레이 체스터필드·싱글 코트=>4.82
+  outer/indigo/springFall: 3 cards: 버건디 코튼 니트 · 카키(베이지 계열) 치노 · 흰 스니커즈 · 인디고 데님 데님 재킷=>4.93 || 라이트 그레이 코튼 니트 · 올리브 치노 · 흰 스니커즈 · 인디고 데님 데님 재킷=>4.93 || 베이지 코튼 니트 · 올리브 치노 · 브라운 척카 부츠 · 인디고 데님 데님 재킷=>4.93
+  outer/indigo/summer: 3 cards: 그레이 멜란지 티셔츠 · 카키(베이지 계열) 치노 · 흰 스니커즈 · 인디고 데님 오버셔츠(린넨)=>4.91 || 브라운 티셔츠 · 올리브 치노 · 흰 스니커즈 · 인디고 데님 오버셔츠(린넨)=>4.91 || 세이지 티셔츠 · 올리브 치노 · 브라운 페니 로퍼 · 인디고 데님 오버셔츠(린넨)=>4.65
+  outer/indigo/winter: 3 cards: 네이비 울 니트 · 올리브 치노 · 블랙 더비 · 인디고 데님 체스터필드·싱글 코트=>4.89 || 베이지 울 니트 · 올리브 치노 · 블랙 더비 · 인디고 데님 체스터필드·싱글 코트=>4.89 || 버건디 울 니트 · 카키(베이지 계열) 치노 · 흰 스니커즈 · 인디고 데님 체스터필드·싱글 코트=>4.7
+
+== nosource (sources == [R1]) classic score>=4
+  charcoal|bottom → top:cream 4 note="명도 대비 좋음"
+  charcoal|bottom → top:oatmeal 4 note="명도 대비 좋음"
+  black|bottom → top:charcoal 4 note="모노"
+  black|bottom → top:burgundy 4 note="블랙+버건디"
+  black|bottom → outer:camel 4 note="블랙+카멜 코트"
+  white|top → shoes:white 5 note=""
+  white|top → shoes:brown 5 note=""
+  white|top → shoes:black 4 note="블랙데님일 때"
+  white|top → shoes:tan 4 note=""
+  black|top → shoes:black 5 note=""
+  black|top → shoes:white 4 note=""
+  greyMelange|top → shoes:white 5 note=""
+  greyMelange|top → shoes:black 4 note=""
+  greyMelange|top → shoes:brown 4 note=""
+  navy|top → shoes:brown 5 note=""
+  navy|top → shoes:white 4 note=""
+  navy|top → shoes:black 4 note=""
+  navy|top → shoes:tan 4 note=""
+  navy|top → bottom:lightDenim 4 note="명도 대비"
+  oatmeal|top → shoes:brown 5 note=""
+  oatmeal|top → shoes:white 4 note=""
+  oatmeal|top → shoes:tan 4 note=""
+  oatmeal|top → bottom:charcoal 4 note="명도 대비"
+  oatmeal|top → bottom:midGrey 4 note="명도 대비"
+  cream|top → shoes:brown 5 note=""
+  cream|top → shoes:white 4 note=""
+  cream|top → shoes:tan 4 note=""
+  cream|top → bottom:charcoal 4 note="명도 대비"
+  cream|top → bottom:midGrey 4 note="명도 대비"
+  lightBlue|top → shoes:brown 5 note=""
+  lightBlue|top → shoes:white 4 note=""
+  lightBlue|top → shoes:black 4 note=""
+  lightBlue|top → shoes:tan 4 note=""
+  white|top/oxfordShirt → shoes:brown 5 note=""
+  white|top/oxfordShirt → shoes:black 5 note=""
+  white|top/oxfordShirt → shoes:white 4 note=""
+  navy|top/bretonStripe → shoes:white 5 note=""
+  navy|top/bretonStripe → shoes:brown 4 note="로퍼"
+  navy|top/bretonStripe → shoes:navy 4 note="캔버스·보트"
+  navy|top/bretonStripe → bottom:navy 4 note="톤온톤"
+  olive|top → shoes:white 5 note=""
+  olive|top → shoes:brown 5 note=""
+  burgundy|top → shoes:brown 5 note=""
+  burgundy|top → shoes:black 4 note=""
+
+== notes with stripping artifacts (" .", " ;", "  ", leading punctuation, ends with particle)
+  lightDenim|bottom → shoes:black (2 variation) note="대부분 '어두운 신발은 무겁다'며 비추 ; 일부는 블랙 로퍼 OK"
+  blackDenim|bottom → top:black (4 classic) note="올블랙, 질감 차이 필요 . 여름 블랙 셔츠는 '웨이터' 주의"
+  blackDenim|bottom → shoes:brown (3 variation) note="워크부츠 — FB1 Red Wing 예시. 블랙+브라운 가죽 혼용은"
+  blackDenim|bottom → shoes:chocolate (3 variation) note="워크부츠 — FB1 Red Wing 예시. 블랙+브라운 가죽 혼용은"
+  olive|bottom → top:greyMelange (4 classic) note="봄·여름 라이트그레이, 가을 다크그레이"
+  olive|bottom → top:lightGrey (4 classic) note="봄·여름 라이트그레이, 가을 다크그레이"
+  olive|bottom → top:black (4 classic) note="MM은 '블랙+어스톤 덜 어울림' 단서도"
+  olive|bottom → shoes:black (4 classic) note="뉴트럴·쿨톤 상의와"
+  white|bottom → top:white (2 variation) note="올화이트는 씻겨 보임, 오프화이트로"
+  white|bottom → shoes:white (4 classic) note="스니커즈 — 다만 '밝은 트레이너는 다리가 땅에 섞임' 주의"
+  cream|bottom → top:white (2 variation) note="올화이트는 씻겨 보임, 오프화이트로"
+  cream|bottom → shoes:white (4 classic) note="스니커즈 — 다만 '밝은 트레이너는 다리가 땅에 섞임' 주의"
+  navy|top/bretonStripe → bottom:olive (3 variation) note="밀리터리 니트와"
+
+== disputed count per file
+  adjust.json: 1
+  colorRules.json: 25
+  fitRules.json: 1
+  lengthRules.json: 1
+  materials.json: 1
+  shoeRules.json: 1
+  shoes.json: 1
+  toneRules.json: 2
+
+== o50 / o42 / o29 items
+  o50: [["top","white","tee","화이트 티셔츠",""],["bottom","blackDenim","denimBlack","블랙 데님",""],["shoes","black","leather","블랙 첼시 부츠",""],["outer","black","leatherJacket","블랙 가죽 재킷",1],["outer","midGrey","chesterfield","미드 그레이 롱 코트",2]]
+  o42: [["top","navy","tank","네이비 탱크톱",""],["bottom","white","linen","화이트 린넨 팬츠",""],["shoes","brown","nylonTech","브라운 샌들",""],["outer","cream","overshirt","크림 린넨 오버셔츠",""]]
+  o29: [["top","greyMelange","hoodie","그레이 멜란지 후디",""],["bottom","indigo","denimIndigo","인디고 데님",""],["shoes","white","leather","흰 스니커즈",""],["outer","brown","chesterfield","브라운 코트",""]]
+  o14: [["top","midGrey","knitWool","미드 그레이 크루넥 니트",""],["bottom","blackDenim","denimBlack","블랙 데님",""],["shoes","black","leather","블랙 스웨이드 척카",""],["outer","navy","blouson","네이비 봄버",""]]
+
+== khaki/beige in hue groups
+[{"id":"blue","labelKo":"블루 계열","colors":["navy","indigo","midDenim","lightDenim","lightBlue","skyBlue","lavender"]},{"id":"green","labelKo":"그린 계열","colors":["olive","sage","khaki","mustard","forestGreen"]},{"id":"brown","labelKo":"브라운 계열","colors":["brown","rust","camel","tan","chocolate","taupe"]}]
+
+== cream/oatmeal/lightBlue/camel seasons
+  cream: ["springFall","winter"]
+  oatmeal: ["springFall","winter"]
+  lightBlue: ["springFall","summer"]
+  camel: ["springFall","winter"]
+  chocolate: ["springFall","winter"]
+  burgundy: ["springFall","winter"]
+  tan: ["springFall","summer","winter"]
+  greyMelange: ["springFall","summer","winter"]
+
+== tee + wool slacks summer: what if top tee
+  white tee + charcoal wool + white sneakerWhite: final 4.02 gap 5 blocked false warnings: explain.formalityGap
+  white polo + charcoal wool + white sneakerWhite: final 4.02 gap 4
+  white tee + charcoal wool + black loaferPenny: final 4.69 gap 5 blocked false warnings: explain.formalityGap
+  white polo + charcoal wool + black loaferPenny: final 4.88 gap 3
+  white tee + charcoal wool + black sneakerColor: final 4.62 gap 5 blocked false warnings: explain.formalityGap
+  white polo + charcoal wool + black sneakerColor: final 4.62 gap 5
+  white tee + charcoal wool + brown loaferPenny: final 3.49 gap 5 blocked false warnings: explain.formalityGap
+  white polo + charcoal wool + brown loaferPenny: final 3.68 gap 3
+
+== T5 charcoal effect: charcoal + chocolate derby / camel coat
+  white knit + charcoal + chocolate derby + -: final 3.98 color 3.5 toneMod -1
+  white knit + charcoal + black derby + camel: final 4.12 color 3.71 toneMod -1
+  white knit + charcoal + chocolate derby + camel: final 3.18 color 2.43 toneMod -2
+
+== burgundy top + burgundy shoes accent check
+  final 4.1 reasons: explain.variation,explain.fitScore,explain.matScore,explain.shoeScore

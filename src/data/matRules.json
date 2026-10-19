@@ -1,0 +1,1455 @@
+[
+ {
+  "material": "denimIndigo",
+  "pairsWith": [
+   {
+    "material": "denimIndigo",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "denimWashed",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "denimBlack",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "corduroy",
+    "score": 4,
+    "note": "코듀로이↔인디고 데님: 재킷"
+   },
+   {
+    "material": "chino",
+    "score": 4,
+    "note": "치노↔인디고 데님: 재킷"
+   },
+   {
+    "material": "wool",
+    "score": 4,
+    "note": "울 슬랙스↔인디고 데님: 재킷"
+   },
+   {
+    "material": "flannel",
+    "score": 4,
+    "note": "플란넬↔인디고 데님: 재킷"
+   },
+   {
+    "material": "knitCotton",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "knitWool",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "knitCashmere",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "linen",
+    "score": 4,
+    "note": "린넨↔인디고 데님: 얇은 워시드·인디고"
+   },
+   {
+    "material": "jersey",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "leather",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "nylonTech",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "tweed",
+    "score": 5,
+    "note": ""
+   }
+  ],
+  "avoid": [],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ]
+ },
+ {
+  "material": "denimWashed",
+  "pairsWith": [
+   {
+    "material": "denimIndigo",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "denimWashed",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "denimBlack",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "corduroy",
+    "score": 4,
+    "note": "코듀로이↔워시드 데님: 재킷"
+   },
+   {
+    "material": "chino",
+    "score": 4,
+    "note": "치노↔워시드 데님: 재킷"
+   },
+   {
+    "material": "wool",
+    "score": 2,
+    "note": "워시드 데님↔울 슬랙스: 격차; 울 슬랙스↔워시드 데님: 재킷"
+   },
+   {
+    "material": "flannel",
+    "score": 2,
+    "note": "워시드 데님↔플란넬: 포멀도 격차; 플란넬↔워시드 데님: 재킷"
+   },
+   {
+    "material": "knitCotton",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "knitWool",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "knitCashmere",
+    "score": 2,
+    "note": ""
+   },
+   {
+    "material": "linen",
+    "score": 4,
+    "note": "린넨↔워시드 데님: 얇은 워시드·인디고"
+   },
+   {
+    "material": "jersey",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "leather",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "nylonTech",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "tweed",
+    "score": 3,
+    "note": "워시드 데님↔트위드: 워크웨어 변주만"
+   }
+  ],
+  "avoid": [
+   {
+    "material": "wool",
+    "score": 2,
+    "reason": "워시드 데님↔울 슬랙스: 격차; 울 슬랙스↔워시드 데님: 재킷"
+   },
+   {
+    "material": "flannel",
+    "score": 2,
+    "reason": "워시드 데님↔플란넬: 포멀도 격차; 플란넬↔워시드 데님: 재킷"
+   },
+   {
+    "material": "knitCashmere",
+    "score": 2,
+    "reason": "포멀도·계절·질감 격차"
+   }
+  ],
+  "seasons": [
+   "springFall",
+   "summer"
+  ]
+ },
+ {
+  "material": "denimBlack",
+  "pairsWith": [
+   {
+    "material": "denimIndigo",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "denimWashed",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "denimBlack",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "corduroy",
+    "score": 3,
+    "note": "블랙 데님↔코듀로이: 둘 다 어두우면 4; 코듀로이↔블랙 데님: 재킷"
+   },
+   {
+    "material": "chino",
+    "score": 3,
+    "note": "치노↔블랙 데님: 재킷"
+   },
+   {
+    "material": "wool",
+    "score": 4,
+    "note": "울 슬랙스↔블랙 데님: 재킷"
+   },
+   {
+    "material": "flannel",
+    "score": 4,
+    "note": "플란넬↔블랙 데님: 재킷"
+   },
+   {
+    "material": "knitCotton",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "knitWool",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "knitCashmere",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "linen",
+    "score": 2,
+    "note": "블랙 데님↔린넨: 계절·무드 충돌; 린넨↔블랙 데님: 얇은 워시드·인디고"
+   },
+   {
+    "material": "jersey",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "leather",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "nylonTech",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "tweed",
+    "score": 4,
+    "note": ""
+   }
+  ],
+  "avoid": [
+   {
+    "material": "linen",
+    "score": 2,
+    "reason": "블랙 데님↔린넨: 계절·무드 충돌; 린넨↔블랙 데님: 얇은 워시드·인디고"
+   }
+  ],
+  "seasons": [
+   "springFall",
+   "winter"
+  ]
+ },
+ {
+  "material": "corduroy",
+  "pairsWith": [
+   {
+    "material": "denimIndigo",
+    "score": 4,
+    "note": "코듀로이↔인디고 데님: 재킷"
+   },
+   {
+    "material": "denimWashed",
+    "score": 4,
+    "note": "코듀로이↔워시드 데님: 재킷"
+   },
+   {
+    "material": "denimBlack",
+    "score": 3,
+    "note": "블랙 데님↔코듀로이: 둘 다 어두우면 4; 코듀로이↔블랙 데님: 재킷"
+   },
+   {
+    "material": "corduroy",
+    "score": 2,
+    "note": "코듀로이↔코듀로이: 전신 골덴"
+   },
+   {
+    "material": "chino",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "wool",
+    "score": 3,
+    "note": "매끈 워스티드 재킷+골덴 바지는 질감 충돌 2, 반대(코듀로이 재킷+울 바지)는 4 → 3으로 절충(P3-10: R1 c20 라이트블루 셔츠+브라운 코듀로이+네이비 블레이저가 GG·HB classic). 재킷이 워스티드면 2; 코듀로이↔울 슬랙스: 매끈 워스티드 재킷 + 골덴 바지는 질감 충돌 2, 반대는 4"
+   },
+   {
+    "material": "flannel",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "knitCotton",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "knitWool",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "knitCashmere",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "linen",
+    "score": 1,
+    "note": "코듀로이↔린넨: 계절"
+   },
+   {
+    "material": "jersey",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "leather",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "nylonTech",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "tweed",
+    "score": 5,
+    "note": ""
+   }
+  ],
+  "avoid": [
+   {
+    "material": "corduroy",
+    "score": 2,
+    "reason": "전신 골덴"
+   },
+   {
+    "material": "linen",
+    "score": 1,
+    "reason": "코듀로이↔린넨: 계절"
+   }
+  ],
+  "seasons": [
+   "springFall",
+   "winter"
+  ]
+ },
+ {
+  "material": "chino",
+  "pairsWith": [
+   {
+    "material": "denimIndigo",
+    "score": 4,
+    "note": "치노↔인디고 데님: 재킷"
+   },
+   {
+    "material": "denimWashed",
+    "score": 4,
+    "note": "치노↔워시드 데님: 재킷"
+   },
+   {
+    "material": "denimBlack",
+    "score": 3,
+    "note": "치노↔블랙 데님: 재킷"
+   },
+   {
+    "material": "corduroy",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "chino",
+    "score": 3,
+    "note": "치노↔치노: 동일 톤 상하 2"
+   },
+   {
+    "material": "wool",
+    "score": 4,
+    "note": "치노↔울 슬랙스: 재킷"
+   },
+   {
+    "material": "flannel",
+    "score": 3,
+    "note": "치노↔플란넬: 겨울엔 코듀로이가 나음"
+   },
+   {
+    "material": "knitCotton",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "knitWool",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "knitCashmere",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "linen",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "jersey",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "leather",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "nylonTech",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "tweed",
+    "score": 4,
+    "note": ""
+   }
+  ],
+  "avoid": [],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ]
+ },
+ {
+  "material": "wool",
+  "pairsWith": [
+   {
+    "material": "denimIndigo",
+    "score": 4,
+    "note": "울 슬랙스↔인디고 데님: 재킷"
+   },
+   {
+    "material": "denimWashed",
+    "score": 2,
+    "note": "워시드 데님↔울 슬랙스: 격차; 울 슬랙스↔워시드 데님: 재킷"
+   },
+   {
+    "material": "denimBlack",
+    "score": 4,
+    "note": "울 슬랙스↔블랙 데님: 재킷"
+   },
+   {
+    "material": "corduroy",
+    "score": 3,
+    "note": "매끈 워스티드 재킷+골덴 바지는 질감 충돌 2, 반대(코듀로이 재킷+울 바지)는 4 → 3으로 절충(P3-10: R1 c20 라이트블루 셔츠+브라운 코듀로이+네이비 블레이저가 GG·HB classic). 재킷이 워스티드면 2; 코듀로이↔울 슬랙스: 매끈 워스티드 재킷 + 골덴 바지는 질감 충돌 2, 반대는 4"
+   },
+   {
+    "material": "chino",
+    "score": 4,
+    "note": "치노↔울 슬랙스: 재킷"
+   },
+   {
+    "material": "wool",
+    "score": 5,
+    "note": "울 슬랙스↔울 슬랙스: 수트"
+   },
+   {
+    "material": "flannel",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "knitCotton",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "knitWool",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "knitCashmere",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "linen",
+    "score": 3,
+    "note": "울 슬랙스↔린넨: 린넨 셔츠+울 슬랙스 여름 4, 린넨 바지+울 재킷 2; 린넨↔울 슬랙스: 셔츠로만"
+   },
+   {
+    "material": "jersey",
+    "score": 3,
+    "note": "울 슬랙스↔저지/스웻: 스웻셔츠+슬랙스는 2025 변주로 허용, 러닝화 동반 시 1; 저지/스웻↔울 슬랙스: 변주"
+   },
+   {
+    "material": "leather",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "nylonTech",
+    "score": 3,
+    "note": "나일론/테크↔울 슬랙스: 고프코어 변주"
+   },
+   {
+    "material": "tweed",
+    "score": 4,
+    "note": ""
+   }
+  ],
+  "avoid": [
+   {
+    "material": "denimWashed",
+    "score": 2,
+    "reason": "워시드 데님↔울 슬랙스: 격차; 울 슬랙스↔워시드 데님: 재킷"
+   }
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ]
+ },
+ {
+  "material": "flannel",
+  "pairsWith": [
+   {
+    "material": "denimIndigo",
+    "score": 4,
+    "note": "플란넬↔인디고 데님: 재킷"
+   },
+   {
+    "material": "denimWashed",
+    "score": 2,
+    "note": "워시드 데님↔플란넬: 포멀도 격차; 플란넬↔워시드 데님: 재킷"
+   },
+   {
+    "material": "denimBlack",
+    "score": 4,
+    "note": "플란넬↔블랙 데님: 재킷"
+   },
+   {
+    "material": "corduroy",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "chino",
+    "score": 3,
+    "note": "치노↔플란넬: 겨울엔 코듀로이가 나음"
+   },
+   {
+    "material": "wool",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "flannel",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "knitCotton",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "knitWool",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "knitCashmere",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "linen",
+    "score": 1,
+    "note": ""
+   },
+   {
+    "material": "jersey",
+    "score": 3,
+    "note": "플란넬↔저지/스웻: 스웻+플란넬 변주"
+   },
+   {
+    "material": "leather",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "nylonTech",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "tweed",
+    "score": 5,
+    "note": ""
+   }
+  ],
+  "avoid": [
+   {
+    "material": "denimWashed",
+    "score": 2,
+    "reason": "워시드 데님↔플란넬: 포멀도 격차; 플란넬↔워시드 데님: 재킷"
+   },
+   {
+    "material": "linen",
+    "score": 1,
+    "reason": "포멀도·계절·질감 격차"
+   }
+  ],
+  "seasons": [
+   "springFall",
+   "winter"
+  ]
+ },
+ {
+  "material": "knitCotton",
+  "pairsWith": [
+   {
+    "material": "denimIndigo",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimWashed",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimBlack",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "corduroy",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "chino",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "wool",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "flannel",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "knitCotton",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "knitWool",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "knitCashmere",
+    "score": 2,
+    "note": "코튼 니트↔캐시미어 니트: 격차"
+   },
+   {
+    "material": "linen",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "jersey",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "leather",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "nylonTech",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "tweed",
+    "score": 3,
+    "note": ""
+   }
+  ],
+  "avoid": [
+   {
+    "material": "knitCashmere",
+    "score": 2,
+    "reason": "코튼 니트↔캐시미어 니트: 격차"
+   }
+  ],
+  "seasons": [
+   "springFall",
+   "summer"
+  ]
+ },
+ {
+  "material": "knitWool",
+  "pairsWith": [
+   {
+    "material": "denimIndigo",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimWashed",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "denimBlack",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "corduroy",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "chino",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "wool",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "flannel",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "knitCotton",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "knitWool",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "knitCashmere",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "linen",
+    "score": 2,
+    "note": "울 니트↔린넨: 계절"
+   },
+   {
+    "material": "jersey",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "leather",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "nylonTech",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "tweed",
+    "score": 5,
+    "note": ""
+   }
+  ],
+  "avoid": [
+   {
+    "material": "linen",
+    "score": 2,
+    "reason": "울 니트↔린넨: 계절"
+   }
+  ],
+  "seasons": [
+   "springFall",
+   "winter"
+  ]
+ },
+ {
+  "material": "knitCashmere",
+  "pairsWith": [
+   {
+    "material": "denimIndigo",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "denimWashed",
+    "score": 2,
+    "note": ""
+   },
+   {
+    "material": "denimBlack",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "corduroy",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "chino",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "wool",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "flannel",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "knitCotton",
+    "score": 2,
+    "note": "코튼 니트↔캐시미어 니트: 격차"
+   },
+   {
+    "material": "knitWool",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "knitCashmere",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "linen",
+    "score": 2,
+    "note": ""
+   },
+   {
+    "material": "jersey",
+    "score": 2,
+    "note": ""
+   },
+   {
+    "material": "leather",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "nylonTech",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "tweed",
+    "score": 4,
+    "note": ""
+   }
+  ],
+  "avoid": [
+   {
+    "material": "denimWashed",
+    "score": 2,
+    "reason": "포멀도·계절·질감 격차"
+   },
+   {
+    "material": "knitCotton",
+    "score": 2,
+    "reason": "코튼 니트↔캐시미어 니트: 격차"
+   },
+   {
+    "material": "linen",
+    "score": 2,
+    "reason": "포멀도·계절·질감 격차"
+   },
+   {
+    "material": "jersey",
+    "score": 2,
+    "reason": "포멀도·계절·질감 격차"
+   }
+  ],
+  "seasons": [
+   "springFall",
+   "winter"
+  ]
+ },
+ {
+  "material": "linen",
+  "pairsWith": [
+   {
+    "material": "denimIndigo",
+    "score": 4,
+    "note": "린넨↔인디고 데님: 얇은 워시드·인디고"
+   },
+   {
+    "material": "denimWashed",
+    "score": 4,
+    "note": "린넨↔워시드 데님: 얇은 워시드·인디고"
+   },
+   {
+    "material": "denimBlack",
+    "score": 2,
+    "note": "블랙 데님↔린넨: 계절·무드 충돌; 린넨↔블랙 데님: 얇은 워시드·인디고"
+   },
+   {
+    "material": "corduroy",
+    "score": 1,
+    "note": "코듀로이↔린넨: 계절"
+   },
+   {
+    "material": "chino",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "wool",
+    "score": 3,
+    "note": "울 슬랙스↔린넨: 린넨 셔츠+울 슬랙스 여름 4, 린넨 바지+울 재킷 2; 린넨↔울 슬랙스: 셔츠로만"
+   },
+   {
+    "material": "flannel",
+    "score": 1,
+    "note": ""
+   },
+   {
+    "material": "knitCotton",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "knitWool",
+    "score": 2,
+    "note": "울 니트↔린넨: 계절"
+   },
+   {
+    "material": "knitCashmere",
+    "score": 2,
+    "note": ""
+   },
+   {
+    "material": "linen",
+    "score": 4,
+    "note": "린넨↔린넨: 셋업"
+   },
+   {
+    "material": "jersey",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "leather",
+    "score": 2,
+    "note": ""
+   },
+   {
+    "material": "nylonTech",
+    "score": 2,
+    "note": ""
+   },
+   {
+    "material": "tweed",
+    "score": 1,
+    "note": ""
+   }
+  ],
+  "avoid": [
+   {
+    "material": "denimBlack",
+    "score": 2,
+    "reason": "블랙 데님↔린넨: 계절·무드 충돌; 린넨↔블랙 데님: 얇은 워시드·인디고"
+   },
+   {
+    "material": "corduroy",
+    "score": 1,
+    "reason": "코듀로이↔린넨: 계절"
+   },
+   {
+    "material": "flannel",
+    "score": 1,
+    "reason": "포멀도·계절·질감 격차"
+   },
+   {
+    "material": "knitWool",
+    "score": 2,
+    "reason": "울 니트↔린넨: 계절"
+   },
+   {
+    "material": "knitCashmere",
+    "score": 2,
+    "reason": "포멀도·계절·질감 격차"
+   },
+   {
+    "material": "leather",
+    "score": 2,
+    "reason": "포멀도·계절·질감 격차"
+   },
+   {
+    "material": "nylonTech",
+    "score": 2,
+    "reason": "포멀도·계절·질감 격차"
+   },
+   {
+    "material": "tweed",
+    "score": 1,
+    "reason": "포멀도·계절·질감 격차"
+   }
+  ],
+  "seasons": [
+   "springFall",
+   "summer"
+  ]
+ },
+ {
+  "material": "jersey",
+  "pairsWith": [
+   {
+    "material": "denimIndigo",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimWashed",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimBlack",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "corduroy",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "chino",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "wool",
+    "score": 3,
+    "note": "울 슬랙스↔저지/스웻: 스웻셔츠+슬랙스는 2025 변주로 허용, 러닝화 동반 시 1; 저지/스웻↔울 슬랙스: 변주"
+   },
+   {
+    "material": "flannel",
+    "score": 3,
+    "note": "플란넬↔저지/스웻: 스웻+플란넬 변주"
+   },
+   {
+    "material": "knitCotton",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "knitWool",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "knitCashmere",
+    "score": 2,
+    "note": ""
+   },
+   {
+    "material": "linen",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "jersey",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "leather",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "nylonTech",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "tweed",
+    "score": 2,
+    "note": ""
+   }
+  ],
+  "avoid": [
+   {
+    "material": "knitCashmere",
+    "score": 2,
+    "reason": "포멀도·계절·질감 격차"
+   },
+   {
+    "material": "tweed",
+    "score": 2,
+    "reason": "포멀도·계절·질감 격차"
+   }
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ]
+ },
+ {
+  "material": "leather",
+  "pairsWith": [
+   {
+    "material": "denimIndigo",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimWashed",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "denimBlack",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "corduroy",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "chino",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "wool",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "flannel",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "knitCotton",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "knitWool",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "knitCashmere",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "linen",
+    "score": 2,
+    "note": ""
+   },
+   {
+    "material": "jersey",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "leather",
+    "score": 1,
+    "note": "가죽↔가죽: 전신 가죽"
+   },
+   {
+    "material": "nylonTech",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "tweed",
+    "score": 3,
+    "note": ""
+   }
+  ],
+  "avoid": [
+   {
+    "material": "linen",
+    "score": 2,
+    "reason": "포멀도·계절·질감 격차"
+   },
+   {
+    "material": "leather",
+    "score": 1,
+    "reason": "전신 가죽"
+   }
+  ],
+  "seasons": [
+   "springFall",
+   "winter"
+  ]
+ },
+ {
+  "material": "nylonTech",
+  "pairsWith": [
+   {
+    "material": "denimIndigo",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "denimWashed",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "denimBlack",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "corduroy",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "chino",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "wool",
+    "score": 3,
+    "note": "나일론/테크↔울 슬랙스: 고프코어 변주"
+   },
+   {
+    "material": "flannel",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "knitCotton",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "knitWool",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "knitCashmere",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "linen",
+    "score": 2,
+    "note": ""
+   },
+   {
+    "material": "jersey",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "leather",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "nylonTech",
+    "score": 4,
+    "note": "나일론/테크↔나일론/테크: 아웃도어 셋업"
+   },
+   {
+    "material": "tweed",
+    "score": 2,
+    "note": ""
+   }
+  ],
+  "avoid": [
+   {
+    "material": "linen",
+    "score": 2,
+    "reason": "포멀도·계절·질감 격차"
+   },
+   {
+    "material": "tweed",
+    "score": 2,
+    "reason": "포멀도·계절·질감 격차"
+   }
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ]
+ },
+ {
+  "material": "tweed",
+  "pairsWith": [
+   {
+    "material": "denimIndigo",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimWashed",
+    "score": 3,
+    "note": "워시드 데님↔트위드: 워크웨어 변주만"
+   },
+   {
+    "material": "denimBlack",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "corduroy",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "chino",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "wool",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "flannel",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "knitCotton",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "knitWool",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "knitCashmere",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "linen",
+    "score": 1,
+    "note": ""
+   },
+   {
+    "material": "jersey",
+    "score": 2,
+    "note": ""
+   },
+   {
+    "material": "leather",
+    "score": 3,
+    "note": ""
+   },
+   {
+    "material": "nylonTech",
+    "score": 2,
+    "note": ""
+   },
+   {
+    "material": "tweed",
+    "score": 3,
+    "note": "트위드↔트위드: 스리피스 과함"
+   }
+  ],
+  "avoid": [
+   {
+    "material": "linen",
+    "score": 1,
+    "reason": "포멀도·계절·질감 격차"
+   },
+   {
+    "material": "jersey",
+    "score": 2,
+    "reason": "포멀도·계절·질감 격차"
+   },
+   {
+    "material": "nylonTech",
+    "score": 2,
+    "reason": "포멀도·계절·질감 격차"
+   }
+  ],
+  "seasons": [
+   "springFall",
+   "winter"
+  ]
+ }
+]

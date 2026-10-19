@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 아침 코디 실루엣 레이어: 첼시 부츠 · viewBox 0 0 200 400 · 단색 fill, 그라데이션 없음 · 원본 제작(자체) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" role="img" aria-label="첼시 부츠">
+  <path data-slot="shoes" fill="var(--c-shoes, #222222)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"
+        d="M 68 338 L 98 338 L 98 392 L 50 392 Q 42 390 48 380 Q 56 370 68 364 Z M 48 386 L 98 386 M 80 342 L 80 364 M 88 342 L 88 364 M 132 338 L 102 338 L 102 392 L 150 392 Q 158 390 152 380 Q 144 370 132 364 Z M 152 386 L 102 386 M 120 342 L 120 364 M 112 342 L 112 364"/>
+</svg>

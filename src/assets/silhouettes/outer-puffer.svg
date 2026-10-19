@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 아침 코디 실루엣 레이어: 패딩 (레귤러) · viewBox 0 0 200 400 · 단색 fill, 그라데이션 없음 · 원본 제작(자체) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" role="img" aria-label="패딩 (레귤러)">
+  <path data-slot="outer" data-fit="regular" data-length="regular" fill="var(--c-outer, #555555)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"
+        d="M 54 84 L 86 68 L 90 78 L 110 78 L 114 68 L 146 84 L 162 206 L 140 206 L 142 212 L 58 212 L 60 206 L 38 206 Z M 100 78 L 100 212 M 60 110 L 140 110 M 60 136 L 140 136 M 60 162 L 140 162 M 60 188 L 140 188 M 140 206 L 136 112 M 60 206 L 64 112 M 142 130 L 156 130 M 44 130 L 58 130 M 143 160 L 158 160 M 42 160 L 57 160"/>
+</svg>

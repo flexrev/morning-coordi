@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>아침 코디 — 와이어프레임 (D1)</title>
+<style>
+  :root{
+    --ink:#222; --mute:#777; --line:#9a9a9a; --box:#ececec; --box2:#dcdcdc; --bg:#f6f6f6; --frame:#fff; --hl:#444;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;font-size:14px}
+  header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid #ddd;padding:10px 16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  header h1{font-size:16px;margin:0}
+  header small{color:var(--mute)}
+  header label{display:flex;gap:6px;align-items:center;cursor:pointer}
+  .legend{display:flex;gap:12px;flex-wrap:wrap;color:var(--mute);font-size:12px}
+  .legend span::before{content:"";display:inline-block;width:14px;height:10px;border:1px dashed var(--line);background:var(--box);margin-right:4px;vertical-align:-1px}
+  .legend .tap::before{border:2px solid var(--hl);background:#fff}
+  .strip{display:flex;gap:28px;padding:24px 16px 40px;overflow-x:auto;align-items:flex-start}
+  .shot{flex:0 0 auto;width:390px}
+  .shot h2{font-size:13px;margin:0 0 8px;color:var(--mute);font-weight:600}
+  .shot h2 b{color:var(--ink)}
+  .shot p.note{font-size:12px;color:var(--mute);margin:8px 0 0;line-height:1.5;width:390px}
+  .frame{position:relative;width:390px;height:844px;background:var(--frame);border:2px solid #333;border-radius:28px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s}
+  .frame.flash{box-shadow:0 0 0 4px #333}
+  .status{height:44px;flex:0 0 44px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;font-size:12px;color:var(--mute)}
+  .homebar{flex:0 0 34px;display:flex;align-items:center;justify-content:center}
+  .homebar i{width:134px;height:5px;border-radius:3px;background:#bbb}
+  .body{flex:1 1 auto;display:flex;flex-direction:column;overflow:hidden;padding:0 16px}
+  .topbar{display:flex;align-items:center;gap:8px;height:44px;flex:0 0 44px}
+  .topbar .back{width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-size:22px}
+  .topbar .title{font-size:17px;font-weight:700;flex:1}
+  .topbar .app{font-size:13px;color:var(--mute)}
+  .box{border:1px dashed var(--line);background:var(--box);border-radius:8px;display:flex;align-items:center;justify-content:center;text-align:center;color:#444;padding:6px}
+  .tap{cursor:pointer;border:2px solid var(--hl);background:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:600;user-select:none}
+  .tap:hover{background:#f0f0f0}
+  .tap.sm{font-weight:500}
+  .seg{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;height:40px}
+  .seg div{flex:1;display:flex;align-items:center;justify-content:center;font-size:14px;cursor:pointer}
+  .seg div.on{background:#333;color:#fff;font-weight:600}
+  .muted{color:var(--mute);font-size:12px}
+  .spacer{flex:1}
+  .thumb{position:absolute;left:0;right:0;bottom:0;height:40%;background:rgba(80,80,80,.10);border-top:1px dashed #555;pointer-events:none;display:none}
+  .thumb::after{content:"엄지 영역 (하단 40%)";position:absolute;left:10px;top:4px;font-size:10px;color:#555}
+  body.showthumb .thumb{display:block}
+  /* swatch */
+  .sw{width:24px;height:24px;border-radius:50%;border:1.5px solid #555;background:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:9px;color:#555;flex:0 0 24px}
+  .sw.base{box-shadow:0 0 0 2px #fff,0 0 0 3.5px #555}
+  .sw.swap{border-style:dashed}
+  .chips{display:flex;gap:6px;align-items:center}
+  /* card */
+  .card{border:1px solid var(--line);border-radius:12px;padding:10px;display:flex;gap:10px;cursor:pointer;background:#fff;position:relative}
+  .card:hover{background:#f4f4f4}
+  .card .ill{width:88px;height:108px;flex:0 0 88px}
+  .card .meta{display:flex;flex-direction:column;gap:6px;flex:1;min-width:0}
+  .card .lab{font-size:11px;color:var(--mute)}
+  .card .cap{font-size:13px;line-height:1.4}
+  .card .flag{position:absolute;right:10px;top:8px;font-size:12px;color:#666}
+  /* chip grid */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .chip{display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer}
+  .chip .c{width:56px;height:56px;border-radius:50%;border:2px solid #555;background:#fff}
+  .chip:hover .c{background:#eee}
+  .chip span{font-size:12px;text-align:center;line-height:1.2}
+  /* tabs */
+  .tabs{display:flex;border-bottom:1px solid var(--line);height:44px;flex:0 0 44px}
+  .tabs div{flex:1;display:flex;align-items:center;justify-content:center;font-size:15px;cursor:pointer;color:var(--mute)}
+  .tabs div.on{color:var(--ink);font-weight:700;border-bottom:3px solid #333}
+  .row{display:flex;gap:8px;overflow:hidden}
+  .pill{height:40px;padding:0 14px;border:1px solid var(--line);border-radius:20px;display:flex;align-items:center;font-size:13px;white-space:nowrap;cursor:pointer}
+  .pill.on{background:#333;color:#fff;border-color:#333}
+  /* bottom sticky */
+  .bottom{flex:0 0 auto;padding:10px 0 6px;border-top:1px dashed var(--line);display:flex;flex-direction:column;gap:8px;margin-top:8px}
+  .cats{display:flex;gap:8px}
+  .cats .tap{flex:1;height:48px;font-size:14px}
+  /* sheet */
+  .dim{position:absolute;inset:0;background:rgba(0,0,0,.25)}
+  .sheet{position:absolute;left:0;right:0;bottom:0;background:#fff;border-top:2px solid #333;border-radius:20px 20px 0 0;padding:10px 16px 40px;display:flex;flex-direction:column;gap:10px}
+  .sheet .grip{width:40px;height:4px;border-radius:2px;background:#bbb;margin:0 auto 4px}
+  .sheet h3{margin:0;font-size:16px}
+  .opt{display:flex;justify-content:space-between;align-items:center;height:48px;border:1px solid var(--line);border-radius:10px;padding:0 12px;cursor:pointer}
+  .opt.dim2{opacity:.45}
+  .opt b{font-size:11px;font-weight:600;color:var(--mute)}
+  .banner{border:1px solid var(--line);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:8px;background:#fafafa}
+  .banner .r{display:flex;gap:8px;align-items:center}
+  .steps{display:flex;gap:8px}
+  .steps .st{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;text-align:center}
+  .steps .st .box{width:100%;height:88px}
+  .detail{display:flex;flex-direction:column;gap:8px}
+  .drow{display:flex;align-items:center;gap:8px;height:48px;border:1px solid var(--line);border-radius:10px;padding:0 12px;cursor:pointer}
+  .drow .k{width:64px;font-size:13px;color:var(--mute)}
+  .drow .v{flex:1;font-size:14px}
+  .drow .a{color:var(--mute)}
+  .drow:hover{background:#f4f4f4}
+  .empty{border:1px dashed var(--line);border-radius:12px;padding:20px;text-align:center;display:flex;flex-direction:column;gap:10px;align-items:center}
+  .arrow{font-size:11px;color:var(--mute)}
+</style>
+</head>
+<body>
+<header>
+  <h1>아침 코디 — 모바일 와이어프레임</h1>
+  <small>D1 · v0.1 · 390×844 · 회색 박스만, 비주얼은 D2</small>
+  <div class="legend"><span>콘텐츠 자리</span><span class="tap">탭 가능 (클릭하면 다음 화면으로 이동)</span></div>
+  <label><input type="checkbox" id="thumbToggle"> 엄지 영역 표시</label>
+</header>
+
+<div class="strip">
+
+<!-- ================= S1 ================= -->
+<section class="shot" id="s1">
+  <h2><b>S1</b> 카테고리 선택 · 첫 실행 홈</h2>
+  <div class="frame">
+    <div class="status"><span>7:10</span><span>▮▮▮</span></div>
+    <div class="body">
+      <div class="topbar"><div class="title">아침 코디</div></div>
+      <div class="box" style="height:64px;margin-top:8px">오늘 입을 옷, 하나만 고르세요</div>
+      <div class="spacer"></div>
+      <div class="muted" style="margin-bottom:8px">색을 고르면 바로 조합이 나와요</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div class="tap" data-go="s2" style="height:88px;font-size:18px">하의</div>
+        <div class="tap" data-go="s2" style="height:88px;font-size:18px">상의</div>
+        <div class="tap" data-go="s2" style="height:88px;font-size:18px">신발</div>
+        <div class="tap" data-go="s2" style="height:88px;font-size:18px">아우터</div>
+      </div>
+      <div class="muted" style="margin-top:12px">최근 선택이 없으면 이 아래는 비워 둠 (빈 상태 문구 없음)</div>
+      <div style="height:16px"></div>
+    </div>
+    <div class="homebar"><i></i></div>
+    <div class="thumb"></div>
+  </div>
+  <p class="note">탭 ① — 2×2 버튼은 하단 40% 안. 재방문 시에는 이 화면을 거치지 않고 S3가 홈.</p>
+</section>
+
+<!-- ================= S2 ================= -->
+<section class="shot" id="s2">
+  <h2><b>S2</b> 색 칩 그리드 · 하의</h2>
+  <div class="frame">
+    <div class="status"><span>7:10</span><span>▮▮▮</span></div>
+    <div class="body">
+      <div class="topbar"><div class="back" data-go="s1">‹</div><div class="title">하의 색은?</div></div>
+      <div class="muted">카테고리당 최대 12칩 · 칩 56px · 이름 병기</div>
+      <div class="spacer"></div>
+      <div class="grid" style="margin-bottom:12px">
+        <div class="chip" data-go="s3"><div class="c"></div><span>인디고 데님</span></div>
+        <div class="chip" data-go="s3"><div class="c"></div><span>라이트워시 데님</span></div>
+        <div class="chip" data-go="s3"><div class="c"></div><span>블랙 데님</span></div>
+        <div class="chip" data-go="s3"><div class="c"></div><span>베이지 치노</span></div>
+        <div class="chip" data-go="s3"><div class="c"></div><span>카키 치노</span></div>
+        <div class="chip" data-go="s3"><div class="c"></div><span>네이비 치노</span></div>
+        <div class="chip" data-go="s3"><div class="c"></div><span>그레이 슬랙스</span></div>
+        <div class="chip" data-go="s3"><div class="c"></div><span>차콜 슬랙스</span></div>
+        <div class="chip" data-go="s3"><div class="c"></div><span>올리브 치노</span></div>
+        <div class="chip" data-go="s3"><div class="c"></div><span>브라운 코듀로이</span></div>
+        <div class="chip" data-go="s3"><div class="c"></div><span>블랙 슬랙스</span></div>
+        <div class="chip" data-go="s3"><div class="c"></div><span>화이트/크림</span></div>
+      </div>
+      <div style="height:8px"></div>
+    </div>
+    <div class="homebar"><i></i></div>
+    <div class="thumb"></div>
+  </div>
+  <p class="note">탭 ② — 칩을 누르면 확인 버튼 없이 바로 S3. 그리드는 아래쪽 정렬. 칩 색은 D2가 토큰으로 채움(여기선 테두리만).</p>
+</section>
+
+<!-- ================= S3 ================= -->
+<section class="shot" id="s3">
+  <h2><b>S3</b> 결과 · 재방문 홈</h2>
+  <div class="frame">
+    <div class="status"><span>7:10</span><span>▮▮▮</span></div>
+    <div class="body">
+      <div class="topbar"><div class="app">아침 코디</div><div class="spacer"></div>
+        <div class="seg" style="width:200px"><div class="on">봄가을</div><div>여름</div><div>겨울</div></div>
+      </div>
+      <div class="tap sm" data-go="s2" style="height:56px;justify-content:space-between;padding:0 12px;margin-top:6px">
+        <span class="chips"><span class="sw base"></span>&nbsp;하의 · 인디고 데님</span><span class="muted">색 바꾸기 ›</span>
+      </div>
+      <div class="row" style="margin-top:8px;height:40px">
+        <div class="pill on">인디고 데님</div><div class="pill" data-go="s3">베이지 치노</div><div class="pill" data-go="s3">네이비 니트</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:10px">
+        <div class="card" data-go="s5">
+          <div class="box ill">실루엣</div>
+          <div class="meta"><div class="lab">클래식 1/3</div>
+            <div class="chips"><span class="sw">상</span><span class="sw base">하</span><span class="sw">신</span></div>
+            <div class="cap">화이트 저지 티 · 인디고 데님 · 화이트 가죽 스니커즈</div></div>
+        </div>
+        <div class="card" data-go="s5">
+          <div class="box ill">실루엣</div>
+          <div class="meta"><div class="lab">클래식 2/3</div>
+            <div class="chips"><span class="sw">상</span><span class="sw base">하</span><span class="sw">신</span><span class="sw">아</span></div>
+            <div class="cap">화이트 저지 티 · 인디고 데님 · 브라운 척카 부츠 · 카멜 트렌치</div></div>
+        </div>
+        <div class="card" data-go="s5">
+          <div class="box ill">실루엣</div>
+          <div class="meta"><div class="lab">클래식 3/3</div>
+            <div class="chips"><span class="sw">상</span><span class="sw base">하</span><span class="sw">신</span><span class="sw">아</span></div>
+            <div class="cap">그레이 멜란지 맨투맨 · 인디고 데님 · 화이트 스니커즈 · 네이비 재킷</div></div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div class="bottom">
+        <div class="tap" data-go="s4" style="height:56px;font-size:17px">더 보기</div>
+        <div class="cats">
+          <div class="tap sm" data-go="s2">하의</div><div class="tap sm" data-go="s2">상의</div><div class="tap sm" data-go="s2">신발</div><div class="tap sm" data-go="s2">아우터</div>
+        </div>
+      </div>
+    </div>
+    <div class="homebar"><i></i></div>
+    <div class="thumb"></div>
+  </div>
+  <p class="note">탭 0 — 재방문은 여기서 시작. 클래식 3장은 스크롤 없이 한 화면. 계절 토글은 상단(저빈도), "더 보기"와 카테고리 줄은 하단(엄지). 카테고리 → 칩 = 2탭으로 기준 아이템 변경.</p>
+</section>
+
+<!-- ================= S4 톤별 ================= -->
+<section class="shot" id="s4">
+  <h2><b>S4</b> 더 보기 · 톤별</h2>
+  <div class="frame">
+    <div class="status"><span>7:11</span><span>▮▮▮</span></div>
+    <div class="body">
+      <div class="topbar"><div class="back" data-go="s3">‹</div><div class="title">더 보기</div><span class="chips"><span class="sw base"></span>&nbsp;<span class="muted">인디고 데님</span></span></div>
+      <div class="tabs"><div class="on">톤별</div><div data-go="s4" title="색상별">색상별</div><div data-go="s4b">변주</div></div>
+      <div class="row" style="margin-top:10px;height:40px">
+        <div class="pill" data-go="s4">뉴트럴</div><div class="pill" data-go="s4">어스톤</div><div class="pill" data-go="s4">모노톤</div><div class="pill on">네이비 베이스</div><div class="pill" data-go="s4">포인트</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:10px">
+        <div class="card" data-go="s5">
+          <div class="box ill">실루엣</div>
+          <div class="meta"><div class="lab">네이비 베이스</div>
+            <div class="chips"><span class="sw">상</span><span class="sw base">하</span><span class="sw">신</span></div>
+            <div class="cap">라이트블루 옥스포드 셔츠 · 인디고 데님 · 브라운 페니 로퍼</div></div>
+        </div>
+        <div class="card" data-go="s5">
+          <div class="box ill">실루엣</div>
+          <div class="meta"><div class="lab">네이비 베이스</div>
+            <div class="chips"><span class="sw">상</span><span class="sw base">하</span><span class="sw">신</span><span class="sw">아</span></div>
+            <div class="cap">네이비 울 니트 · 인디고 데님 · 탄 스웨이드 척카 부츠 · 네이비 블레이저</div></div>
+        </div>
+        <div class="card" data-go="s5">
+          <div class="flag" title="의견 갈림">⚑</div>
+          <div class="box ill">실루엣</div>
+          <div class="meta"><div class="lab">네이비 베이스</div>
+            <div class="chips"><span class="sw">상</span><span class="sw base">하</span><span class="sw">신</span></div>
+            <div class="cap">블랙 저지 티 · 인디고 데님 · 블랙 더비</div></div>
+        </div>
+        <div class="box" style="height:48px">이 아이템과 피할 것 2개 ▸</div>
+      </div>
+      <div class="spacer"></div>
+      <div class="muted" style="padding:8px 0">색상별 탭: 유사색 · 보색 · 무채색 칩 줄로 같은 구조</div>
+    </div>
+    <div class="homebar"><i></i></div>
+    <div class="thumb"></div>
+  </div>
+  <p class="note">탭 1 — 기본 선택은 기준 아이템의 톤 그룹. 목록 끝에 "피할 것"이 접힌 줄로. ⚑ = 의견 갈림 표식(차단 아님).</p>
+</section>
+
+<!-- ================= S4b 변주 ================= -->
+<section class="shot" id="s4b">
+  <h2><b>S4</b> 더 보기 · 변주</h2>
+  <div class="frame">
+    <div class="status"><span>7:11</span><span>▮▮▮</span></div>
+    <div class="body">
+      <div class="topbar"><div class="back" data-go="s3">‹</div><div class="title">더 보기</div><span class="chips"><span class="sw base"></span>&nbsp;<span class="muted">인디고 데님</span></span></div>
+      <div class="tabs"><div data-go="s4">톤별</div><div data-go="s4">색상별</div><div class="on">변주</div></div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:10px">
+        <div class="card" data-go="s5">
+          <div class="box ill">실루엣</div>
+          <div class="meta"><div class="lab">변주 · 클래식 1에서 <b>신발</b>만</div>
+            <div class="chips"><span class="sw">상</span><span class="sw base">하</span><span class="sw swap">신</span><span class="muted">바꿈</span></div>
+            <div class="cap">화이트 저지 티 · 인디고 데님 · <b>브라운 첼시 부츠</b></div></div>
+        </div>
+        <div class="card" data-go="s5">
+          <div class="box ill">실루엣</div>
+          <div class="meta"><div class="lab">변주 · 클래식 1에서 <b>상의</b>만</div>
+            <div class="chips"><span class="sw swap">상</span><span class="sw base">하</span><span class="sw">신</span><span class="muted">바꿈</span></div>
+            <div class="cap"><b>러스트 울 니트</b> · 인디고 데님 · 화이트 가죽 스니커즈</div></div>
+        </div>
+        <div class="card" data-go="s5">
+          <div class="flag" title="의견 갈림">⚑</div>
+          <div class="box ill">실루엣</div>
+          <div class="meta"><div class="lab">변주 · 클래식 3에서 <b>아우터</b>만</div>
+            <div class="chips"><span class="sw">상</span><span class="sw base">하</span><span class="sw">신</span><span class="sw swap">아</span><span class="muted">바꿈</span></div>
+            <div class="cap">그레이 멜란지 맨투맨 · 인디고 데님 · 화이트 스니커즈 · <b>블랙 가죽 재킷</b></div></div>
+        </div>
+        <div class="box" style="height:48px">이 아이템과 피할 것 2개 ▸</div>
+      </div>
+      <div class="spacer"></div>
+    </div>
+    <div class="homebar"><i></i></div>
+    <div class="thumb"></div>
+  </div>
+  <p class="note">탭 2 — 변주는 클래식에서 아이템 하나만 바꾼 것. 바뀐 칩은 점선 + "바꿈", 캡션에서 굵게.</p>
+</section>
+
+<!-- ================= S5 ================= -->
+<section class="shot" id="s5">
+  <h2><b>S5</b> 조합 상세</h2>
+  <div class="frame">
+    <div class="status"><span>7:11</span><span>▮▮▮</span></div>
+    <div class="body">
+      <div class="topbar"><div class="back" data-go="s3">‹</div><div class="title">클래식 1/3</div></div>
+      <div class="box" style="height:240px;width:60%;align-self:center;margin-top:4px">실루엣 (크게)</div>
+      <div class="chips" style="justify-content:center;margin-top:10px"><span class="sw">상</span><span class="sw base">하</span><span class="sw">신</span></div>
+      <div style="text-align:center;margin-top:6px;font-size:15px">화이트 저지 티 · 인디고 데님 · 화이트 가죽 스니커즈</div>
+      <div class="spacer"></div>
+      <div class="detail">
+        <div class="drow" data-go="s6"><span class="k">핏</span><span class="v">레귤러 상의 + 스트레이트 하의</span><span class="a">›</span></div>
+        <div class="drow" data-go="s6"><span class="k">소재</span><span class="v">저지 · 인디고 데님 · 가죽</span><span class="a">›</span></div>
+        <div class="drow" data-go="s6"><span class="k">신발 스타일</span><span class="v">흰 스니커즈</span><span class="a">›</span></div>
+        <div class="drow" data-go="s6"><span class="k">기장</span><span class="v">레귤러 상의 · 노브레이크</span><span class="a">›</span></div>
+      </div>
+      <div style="height:12px"></div>
+    </div>
+    <div class="homebar"><i></i></div>
+    <div class="thumb"></div>
+  </div>
+  <p class="note">카드 탭 1번으로 진입. 상세 칩 4줄은 하단 40% 안. 칩을 탭하면 화면 전환 없이 S6 시트.</p>
+</section>
+
+<!-- ================= S6 ================= -->
+<section class="shot" id="s6">
+  <h2><b>S6</b> 상세 시트 · 신발 스타일</h2>
+  <div class="frame">
+    <div class="status"><span>7:11</span><span>▮▮▮</span></div>
+    <div class="body">
+      <div class="topbar"><div class="back">‹</div><div class="title">클래식 1/3</div></div>
+      <div class="box" style="height:240px;width:60%;align-self:center;margin-top:4px">실루엣 (크게)</div>
+      <div class="chips" style="justify-content:center;margin-top:10px"><span class="sw">상</span><span class="sw base">하</span><span class="sw">신</span></div>
+    </div>
+    <div class="homebar"><i></i></div>
+    <div class="dim" data-go="s5" title="시트 밖 탭 = 닫기"></div>
+    <div class="sheet">
+      <div class="grip"></div>
+      <h3>신발 스타일 — 인디고 데님 · 스트레이트 · 노브레이크</h3>
+      <div class="muted">클래식 / 변주 라벨만 표시 (점수 숫자 노출 안 함)</div>
+      <div class="opt" data-go="s5"><span>흰 스니커즈 (지금)</span><b>클래식</b></div>
+      <div class="opt" data-go="s4b"><span>척카 부츠 · 브라운</span><b>클래식</b></div>
+      <div class="opt" data-go="s4b"><span>페니 로퍼 · 브라운</span><b>클래식</b></div>
+      <div class="opt" data-go="s4b"><span>첼시 부츠 · 블랙 ⚑</span><b>변주 · 진청엔 가능</b></div>
+      <div class="opt dim2"><span>러닝화</span><b>비추 · 스트레이트엔 둔탁</b></div>
+      <div class="muted">가죽형 흰 스니커즈면 슬랙스에도 OK</div>
+    </div>
+    <div class="thumb"></div>
+  </div>
+  <p class="note">대안을 탭하면 S5가 그 아이템으로 바뀐 변주로 갱신되고 시트는 닫힘. 차단(score 1)은 목록에서 제외, 비추는 흐리게.</p>
+</section>
+
+<!-- ================= O1 ================= -->
+<section class="shot" id="o1">
+  <h2><b>O1</b> 설치 안내 · iOS</h2>
+  <div class="frame">
+    <div class="status"><span>7:12</span><span>▮▮▮</span></div>
+    <div class="body">
+      <div class="topbar"><div class="app">아침 코디</div><div class="spacer"></div>
+        <div class="seg" style="width:200px"><div class="on">봄가을</div><div>여름</div><div>겨울</div></div>
+      </div>
+      <div class="banner" style="margin-top:6px">
+        <div class="r"><span style="flex:1;font-size:14px">홈 화면에 두면 아침에 1초 만에 열려요</span><span class="muted">✕</span></div>
+        <div class="r"><div class="tap sm" style="height:44px;flex:1">설치 방법</div></div>
+      </div>
+      <div class="tap sm" style="height:56px;justify-content:space-between;padding:0 12px;margin-top:8px">
+        <span class="chips"><span class="sw base"></span>&nbsp;하의 · 인디고 데님</span><span class="muted">색 바꾸기 ›</span>
+      </div>
+      <div class="card" style="margin-top:10px"><div class="box ill">실루엣</div><div class="meta"><div class="lab">클래식 1/3</div><div class="chips"><span class="sw">상</span><span class="sw base">하</span><span class="sw">신</span></div><div class="cap">…</div></div></div>
+    </div>
+    <div class="homebar"><i></i></div>
+    <div class="dim" data-go="s3" title="시트 밖 탭 = 닫기"></div>
+    <div class="sheet">
+      <div class="grip"></div>
+      <h3>홈 화면에 추가하기</h3>
+      <div class="steps">
+        <div class="st"><div class="box">공유 아이콘<br>그림</div><span>1. 아래 <b>공유</b> 버튼</span></div>
+        <div class="st"><div class="box">메뉴<br>그림</div><span>2. <b>홈 화면에 추가</b></span></div>
+        <div class="st"><div class="box">추가 버튼<br>그림</div><span>3. 오른쪽 위 <b>추가</b></span></div>
+      </div>
+      <div class="tap" data-go="s3" style="height:52px">다 했어요</div>
+      <div class="muted">Android: 배너 버튼이 [설치]로 바뀌고 탭 즉시 시스템 프롬프트. 2회차 방문 이후 · 하루 1회 · 닫으면 7일 숨김 · 설치 후 영구 숨김.</div>
+    </div>
+    <div class="thumb"></div>
+  </div>
+  <p class="note">배너는 S3 상단에 끼워 넣는 카드(모달 아님, 하단 엄지 영역 침범 금지). 시트는 [설치 방법]을 눌렀을 때만.</p>
+</section>
+
+</div>
+
+<script>
+  (function(){
+    var strip=document.querySelector('.strip');
+    document.querySelectorAll('[data-go]').forEach(function(el){
+      el.addEventListener('click',function(e){
+        e.stopPropagation();
+        var t=document.getElementById(el.getAttribute('data-go'));
+        if(!t) return;
+        var f=t.querySelector('.frame');
+        t.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
+        f.classList.add('flash');
+        setTimeout(function(){f.classList.remove('flash')},700);
+      });
+    });
+    document.getElementById('thumbToggle').addEventListener('change',function(){
+      document.body.classList.toggle('showthumb',this.checked);
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 아침 코디 실루엣 레이어: 하의 테이퍼드 · viewBox 0 0 200 400 · 단색 fill, 그라데이션 없음 · 원본 제작(자체) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" role="img" aria-label="하의 테이퍼드">
+  <path data-slot="bottom" data-fit="tapered" data-length="regular" fill="var(--c-bottom, #444444)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"
+        d="M 68 176 L 132 176 L 136 232 L 124 362 L 104 362 L 100 240 L 96 362 L 76 362 L 64 232 Z M 68 184 L 132 184 M 100 184 L 100 240"/>
+</svg>

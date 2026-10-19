@@ -1,0 +1,4307 @@
+{
+  "375x812": {
+    "s1": {
+      "hash": "#/",
+      "inner": [
+        375,
+        812
+      ],
+      "scrollW": 375,
+      "docH": 812,
+      "h1": [
+        "오늘 입을 옷, 하나만 고르세요"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": null,
+      "cardN": 0,
+      "cardH": [],
+      "bottom": null,
+      "cardsFit": null,
+      "caps": [],
+      "capLines": [],
+      "reasons": [],
+      "labels": [],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s2": {
+      "hash": "#/pick/bottom",
+      "inner": [
+        375,
+        812
+      ],
+      "scrollW": 375,
+      "docH": 812,
+      "h1": [
+        "하의 색은?"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": null,
+      "cardN": 0,
+      "cardH": [],
+      "bottom": null,
+      "cardsFit": null,
+      "caps": [],
+      "capLines": [],
+      "reasons": [],
+      "labels": [],
+      "chips": [
+        "올리브",
+        "인디고",
+        "네이비",
+        "베이지",
+        "화이트",
+        "크림",
+        "브라운",
+        "미드그레이",
+        "카키",
+        "차콜",
+        "블랙데님",
+        "연청",
+        "블랙"
+      ],
+      "grid": [
+        416,
+        804,
+        388,
+        343
+      ],
+      "chipH": [
+        82
+      ],
+      "chipW": 80,
+      "twoLineChips": [],
+      "chipBorder": "rgba(255, 255, 255, 0.4)",
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s3": {
+      "hash": "#/result",
+      "inner": [
+        375,
+        812
+      ],
+      "scrollW": 375,
+      "docH": 812,
+      "h1": [
+        "아침 코디"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": [
+        62,
+        118,
+        56,
+        343
+      ],
+      "recents": null,
+      "pills": [],
+      "cards": [
+        130,
+        572,
+        442,
+        343
+      ],
+      "cardN": 3,
+      "cardH": [
+        [
+          130,
+          272,
+          142,
+          343
+        ],
+        [
+          280,
+          422,
+          142,
+          343
+        ],
+        [
+          430,
+          572,
+          142,
+          343
+        ]
+      ],
+      "bottom": [
+        671,
+        812,
+        141,
+        375
+      ],
+      "cardsFit": true,
+      "caps": [
+        "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+        "오트밀 울 니트 · 인디고 데님 · 브라운 페니 로퍼",
+        "멜란지 맨투맨 · 인디고 데님 · 흰 스니커즈 · 네이비 셔츠 재킷"
+      ],
+      "capLines": [
+        2,
+        2,
+        2
+      ],
+      "reasons": [
+        "누구나 안전한 기본 조합",
+        "네이비 베이스+어스톤 조합",
+        "톤온톤 (네이비 베이스)"
+      ],
+      "labels": [
+        "클래식 1/3",
+        "클래식 2/3",
+        "클래식 3/3"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": [],
+      "historyState": "{\"mc\":true,\"depth\":0}"
+    },
+    "s3banner": {
+      "hash": "#/",
+      "inner": [
+        375,
+        812
+      ],
+      "scrollW": 375,
+      "docH": 812,
+      "h1": [
+        "아침 코디"
+      ],
+      "banner": [
+        70,
+        120,
+        50,
+        343
+      ],
+      "bannerBelow": false,
+      "bannerBtn": "설치",
+      "bannerClose": [
+        71,
+        119,
+        48,
+        48
+      ],
+      "basebar": [
+        120,
+        176,
+        56,
+        343
+      ],
+      "recents": null,
+      "pills": [],
+      "cards": [
+        188,
+        630,
+        442,
+        343
+      ],
+      "cardN": 3,
+      "cardH": [
+        [
+          188,
+          330,
+          142,
+          343
+        ],
+        [
+          338,
+          480,
+          142,
+          343
+        ],
+        [
+          488,
+          630,
+          142,
+          343
+        ]
+      ],
+      "bottom": [
+        671,
+        812,
+        141,
+        375
+      ],
+      "cardsFit": true,
+      "caps": [
+        "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+        "오트밀 울 니트 · 인디고 데님 · 브라운 페니 로퍼",
+        "멜란지 맨투맨 · 인디고 데님 · 흰 스니커즈 · 네이비 셔츠 재킷"
+      ],
+      "capLines": [
+        2,
+        2,
+        2
+      ],
+      "reasons": [
+        "누구나 안전한 기본 조합",
+        "네이비 베이스+어스톤 조합",
+        "톤온톤 (네이비 베이스)"
+      ],
+      "labels": [
+        "클래식 1/3",
+        "클래식 2/3",
+        "클래식 3/3"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s3bannerRecents": {
+      "hash": "#/result",
+      "inner": [
+        375,
+        812
+      ],
+      "scrollW": 375,
+      "docH": 829,
+      "h1": [
+        "아침 코디"
+      ],
+      "banner": [
+        638,
+        688,
+        50,
+        343
+      ],
+      "bannerBelow": true,
+      "bannerBtn": "설치",
+      "bannerClose": [
+        639,
+        687,
+        48,
+        48
+      ],
+      "basebar": [
+        62,
+        118,
+        56,
+        343
+      ],
+      "recents": [
+        126,
+        176,
+        50,
+        343
+      ],
+      "pills": [
+        "하의인디고",
+        "신발화이트",
+        "상의화이트"
+      ],
+      "cards": [
+        188,
+        630,
+        442,
+        343
+      ],
+      "cardN": 3,
+      "cardH": [
+        [
+          188,
+          330,
+          142,
+          343
+        ],
+        [
+          338,
+          480,
+          142,
+          343
+        ],
+        [
+          488,
+          630,
+          142,
+          343
+        ]
+      ],
+      "bottom": [
+        671,
+        812,
+        141,
+        375
+      ],
+      "cardsFit": true,
+      "caps": [
+        "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+        "오트밀 울 니트 · 인디고 데님 · 브라운 페니 로퍼",
+        "멜란지 맨투맨 · 인디고 데님 · 흰 스니커즈 · 네이비 셔츠 재킷"
+      ],
+      "capLines": [
+        2,
+        2,
+        2
+      ],
+      "reasons": [
+        "누구나 안전한 기본 조합",
+        "네이비 베이스+어스톤 조합",
+        "톤온톤 (네이비 베이스)"
+      ],
+      "labels": [
+        "클래식 1/3",
+        "클래식 2/3",
+        "클래식 3/3"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s3pillTap": {
+      "hash": "#/result",
+      "inner": [
+        375,
+        812
+      ],
+      "scrollW": 375,
+      "docH": 829,
+      "h1": [
+        "아침 코디"
+      ],
+      "banner": [
+        638,
+        688,
+        50,
+        343
+      ],
+      "bannerBelow": true,
+      "bannerBtn": "설치",
+      "bannerClose": [
+        639,
+        687,
+        48,
+        48
+      ],
+      "basebar": [
+        62,
+        118,
+        56,
+        343
+      ],
+      "recents": [
+        126,
+        176,
+        50,
+        343
+      ],
+      "pills": [
+        "하의인디고",
+        "신발화이트",
+        "상의화이트"
+      ],
+      "cards": [
+        188,
+        630,
+        442,
+        343
+      ],
+      "cardN": 3,
+      "cardH": [
+        [
+          188,
+          330,
+          142,
+          343
+        ],
+        [
+          338,
+          480,
+          142,
+          343
+        ],
+        [
+          488,
+          630,
+          142,
+          343
+        ]
+      ],
+      "bottom": [
+        671,
+        812,
+        141,
+        375
+      ],
+      "cardsFit": true,
+      "caps": [
+        "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+        "화이트 옥스포드 셔츠 · 네이비 치노 · 브라운 페니 로퍼",
+        "화이트 티셔츠 · 인디고 데님 · 브라운 척카 부츠 · 카멜 트렌치 코트"
+      ],
+      "capLines": [
+        2,
+        2,
+        2
+      ],
+      "reasons": [
+        "누구나 안전한 기본 조합",
+        "톤온톤 (뉴트럴)",
+        "네이비 베이스+어스톤 조합"
+      ],
+      "labels": [
+        "클래식 1/3",
+        "클래식 2/3",
+        "클래식 3/3"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s4tone": {
+      "hash": "#/more/tone",
+      "inner": [
+        375,
+        812
+      ],
+      "scrollW": 375,
+      "docH": 1092,
+      "h1": [
+        "더 보기"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": [
+        132,
+        870,
+        738,
+        343
+      ],
+      "cardN": 5,
+      "cardH": [
+        [
+          132,
+          274,
+          142,
+          343
+        ],
+        [
+          282,
+          424,
+          142,
+          343
+        ],
+        [
+          432,
+          574,
+          142,
+          343
+        ],
+        [
+          582,
+          724,
+          142,
+          343
+        ],
+        [
+          732,
+          870,
+          138,
+          343
+        ]
+      ],
+      "bottom": [
+        756,
+        812,
+        56,
+        375
+      ],
+      "cardsFit": false,
+      "caps": [
+        "네이비 코튼 니트 · 인디고 데님 · 브라운 척카 부츠 · 베이지 트렌치 코트",
+        "라이트블루 옥스포드 셔츠 · 인디고 데님 · 탄 척카 부츠 · 카멜 트렌치 코트",
+        "네이비 코튼 니트 · 인디고 데님 · 블랙 더비 · 올리브 블레이저",
+        "라이트블루 옥스포드 셔츠 · 인디고 데님 · 블랙 더비 · 올리브 블레이저",
+        "라이트블루 옥스포드 셔츠 · 인디고 데님 · 브라운 척카 부츠 · 베이지 트렌치 코트"
+      ],
+      "capLines": [
+        2,
+        2,
+        2,
+        2,
+        3
+      ],
+      "reasons": [
+        "톤온톤 (네이비 베이스)",
+        "톤온톤 (네이비 베이스)",
+        "톤온톤 (네이비 베이스)",
+        "톤온톤 (네이비 베이스)",
+        "톤온톤 (네이비 베이스)"
+      ],
+      "labels": [
+        "네이비 베이스",
+        "네이비 베이스",
+        "네이비 베이스",
+        "네이비 베이스",
+        "네이비 베이스"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": [
+        757,
+        812,
+        55,
+        343
+      ],
+      "tabTexts": [
+        "톤별*",
+        "색상별",
+        "변주"
+      ],
+      "pillrow": [
+        56,
+        120,
+        64,
+        343
+      ],
+      "pillrowN": 2,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s4beige": {
+      "hash": "#/more/tone",
+      "inner": [
+        375,
+        812
+      ],
+      "scrollW": 375,
+      "docH": 954,
+      "h1": [
+        "더 보기"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": [
+        132,
+        874,
+        742,
+        343
+      ],
+      "cardN": 5,
+      "cardH": [
+        [
+          132,
+          274,
+          142,
+          343
+        ],
+        [
+          282,
+          424,
+          142,
+          343
+        ],
+        [
+          432,
+          574,
+          142,
+          343
+        ],
+        [
+          582,
+          724,
+          142,
+          343
+        ],
+        [
+          732,
+          874,
+          142,
+          343
+        ]
+      ],
+      "bottom": [
+        756,
+        812,
+        56,
+        375
+      ],
+      "cardsFit": false,
+      "caps": [
+        "베이지 코튼 니트 · 네이비 치노 · 블랙 더비 · 카멜 트렌치 코트",
+        "베이지 코튼 니트 · 네이비 치노 · 블랙 더비 · 베이지 트렌치 코트",
+        "베이지 코튼 니트 · 네이비 치노 · 버건디 페니 로퍼 · 베이지 트렌치 코트",
+        "베이지 코튼 니트 · 올리브 치노 · 초콜릿 척카 부츠",
+        "베이지 코튼 니트 · 네이비 치노 · 초콜릿 척카 부츠"
+      ],
+      "capLines": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "reasons": [
+        "톤온톤 (뉴트럴)",
+        "톤온톤 (뉴트럴)",
+        "톤온톤 (뉴트럴)",
+        "톤온톤 (뉴트럴)",
+        "톤온톤 (뉴트럴)"
+      ],
+      "labels": [
+        "뉴트럴",
+        "뉴트럴",
+        "뉴트럴",
+        "뉴트럴",
+        "뉴트럴"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": [
+        757,
+        812,
+        55,
+        343
+      ],
+      "tabTexts": [
+        "톤별*",
+        "색상별",
+        "변주"
+      ],
+      "pillrow": [
+        56,
+        120,
+        64,
+        343
+      ],
+      "pillrowN": 3,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s3beige": {
+      "hash": "#/result",
+      "inner": [
+        375,
+        812
+      ],
+      "scrollW": 375,
+      "docH": 829,
+      "h1": [
+        "아침 코디"
+      ],
+      "banner": [
+        638,
+        688,
+        50,
+        343
+      ],
+      "bannerBelow": true,
+      "bannerBtn": "설치",
+      "bannerClose": [
+        639,
+        687,
+        48,
+        48
+      ],
+      "basebar": [
+        62,
+        118,
+        56,
+        343
+      ],
+      "recents": [
+        126,
+        176,
+        50,
+        343
+      ],
+      "pills": [
+        "상의베이지",
+        "하의인디고",
+        "신발화이트"
+      ],
+      "cards": [
+        188,
+        630,
+        442,
+        343
+      ],
+      "cardN": 3,
+      "cardH": [
+        [
+          188,
+          330,
+          142,
+          343
+        ],
+        [
+          338,
+          480,
+          142,
+          343
+        ],
+        [
+          488,
+          630,
+          142,
+          343
+        ]
+      ],
+      "bottom": [
+        671,
+        812,
+        141,
+        375
+      ],
+      "cardsFit": true,
+      "caps": [
+        "베이지 코튼 니트 · 올리브 치노 · 초콜릿 척카 부츠",
+        "베이지 코튼 니트 · 네이비 치노 · 초콜릿 척카 부츠",
+        "베이지 코튼 니트 · 인디고 데님 · 흰 스니커즈"
+      ],
+      "capLines": [
+        2,
+        2,
+        2
+      ],
+      "reasons": [
+        "톤온톤 (뉴트럴)",
+        "톤온톤 (뉴트럴)",
+        "네이비 베이스+어스톤 조합"
+      ],
+      "labels": [
+        "클래식 1/3",
+        "클래식 2/3",
+        "클래식 3/3"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s5": {
+      "hash": "#/outfit/classic.0",
+      "inner": [
+        375,
+        812
+      ],
+      "scrollW": 375,
+      "docH": 812,
+      "h1": [
+        "클래식 1/3"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": null,
+      "cardN": 0,
+      "cardH": [],
+      "bottom": null,
+      "cardsFit": null,
+      "caps": [],
+      "capLines": [],
+      "reasons": [],
+      "labels": [],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": [
+        64,
+        389,
+        325,
+        162
+      ],
+      "detail": [
+        568,
+        812,
+        244,
+        343
+      ],
+      "drows": [
+        [
+          580,
+          628,
+          48,
+          343
+        ],
+        [
+          636,
+          684,
+          48,
+          343
+        ],
+        [
+          692,
+          740,
+          48,
+          343
+        ],
+        [
+          748,
+          796,
+          48,
+          343
+        ]
+      ],
+      "s5why": "누구나 안전한 기본 조합",
+      "s5cap": "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s6shoe": {
+      "hash": "#/outfit/classic.0/shoe",
+      "inner": [
+        375,
+        812
+      ],
+      "scrollW": 375,
+      "docH": 812,
+      "h1": [
+        "클래식 1/3"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": null,
+      "cardN": 0,
+      "cardH": [],
+      "bottom": null,
+      "cardsFit": null,
+      "caps": [],
+      "capLines": [],
+      "reasons": [],
+      "labels": [],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": [
+        64,
+        389,
+        325,
+        162
+      ],
+      "detail": [
+        568,
+        812,
+        244,
+        343
+      ],
+      "drows": [
+        [
+          580,
+          628,
+          48,
+          343
+        ],
+        [
+          636,
+          684,
+          48,
+          343
+        ],
+        [
+          692,
+          740,
+          48,
+          343
+        ],
+        [
+          748,
+          796,
+          48,
+          343
+        ]
+      ],
+      "s5why": "누구나 안전한 기본 조합",
+      "s5cap": "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+      "sheetTitle": "신발 스타일",
+      "sheetClose": [
+        528,
+        576,
+        48,
+        48
+      ],
+      "sheetNotes": [
+        "인디고 데님 · 스트레이트 · 노브레이크",
+        "신발 조합 5/5"
+      ]
+    },
+    "s6fit": {
+      "hash": "#/outfit/classic.0/fit",
+      "inner": [
+        375,
+        812
+      ],
+      "scrollW": 375,
+      "docH": 812,
+      "h1": [
+        "클래식 1/3"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": null,
+      "cardN": 0,
+      "cardH": [],
+      "bottom": null,
+      "cardsFit": null,
+      "caps": [],
+      "capLines": [],
+      "reasons": [],
+      "labels": [],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": [
+        64,
+        389,
+        325,
+        162
+      ],
+      "detail": [
+        568,
+        812,
+        244,
+        343
+      ],
+      "drows": [
+        [
+          580,
+          628,
+          48,
+          343
+        ],
+        [
+          636,
+          684,
+          48,
+          343
+        ],
+        [
+          692,
+          740,
+          48,
+          343
+        ],
+        [
+          748,
+          796,
+          48,
+          343
+        ]
+      ],
+      "s5why": "누구나 안전한 기본 조합",
+      "s5cap": "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+      "sheetTitle": "핏 밸런스",
+      "sheetClose": [
+        696,
+        744,
+        48,
+        48
+      ],
+      "sheetNotes": [
+        "레귤러 상의 + 스트레이트 하의 · 핏 밸런스 5/5",
+        "대안 핏: 슬림 · 루즈 상의"
+      ]
+    },
+    "s2light": {
+      "hash": "#/pick/bottom",
+      "inner": [
+        375,
+        812
+      ],
+      "scrollW": 375,
+      "docH": 812,
+      "h1": [
+        "하의 색은?"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": null,
+      "cardN": 0,
+      "cardH": [],
+      "bottom": null,
+      "cardsFit": null,
+      "caps": [],
+      "capLines": [],
+      "reasons": [],
+      "labels": [],
+      "chips": [
+        "올리브",
+        "인디고",
+        "네이비",
+        "베이지",
+        "화이트",
+        "크림",
+        "브라운",
+        "미드그레이",
+        "카키",
+        "차콜",
+        "블랙데님",
+        "연청",
+        "블랙"
+      ],
+      "grid": [
+        416,
+        804,
+        388,
+        343
+      ],
+      "chipH": [
+        82
+      ],
+      "chipW": 80,
+      "twoLineChips": [],
+      "chipBorder": "rgba(0, 0, 0, 0.42)",
+      "theme": "light",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s2lightTop": {
+      "hash": "#/pick/top",
+      "inner": [
+        375,
+        812
+      ],
+      "scrollW": 375,
+      "docH": 812,
+      "h1": [
+        "상의 색은?"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": null,
+      "cardN": 0,
+      "cardH": [],
+      "bottom": null,
+      "cardsFit": null,
+      "caps": [],
+      "capLines": [],
+      "reasons": [],
+      "labels": [],
+      "chips": [
+        "멜란지",
+        "화이트",
+        "라이트블루",
+        "네이비",
+        "오트밀",
+        "블랙",
+        "버건디",
+        "크림",
+        "올리브",
+        "베이지",
+        "라이트그레이",
+        "브라운"
+      ],
+      "grid": [
+        492,
+        804,
+        312,
+        343
+      ],
+      "chipH": [
+        82,
+        100
+      ],
+      "chipW": 80,
+      "twoLineChips": [
+        "라이트그레이"
+      ],
+      "chipBorder": "rgba(0, 0, 0, 0.42)",
+      "theme": "light",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s3light": {
+      "hash": "#/",
+      "inner": [
+        375,
+        812
+      ],
+      "scrollW": 375,
+      "docH": 829,
+      "h1": [
+        "아침 코디"
+      ],
+      "banner": [
+        638,
+        688,
+        50,
+        343
+      ],
+      "bannerBelow": true,
+      "bannerBtn": "설치",
+      "bannerClose": [
+        639,
+        687,
+        48,
+        48
+      ],
+      "basebar": [
+        62,
+        118,
+        56,
+        343
+      ],
+      "recents": [
+        126,
+        176,
+        50,
+        343
+      ],
+      "pills": [
+        "하의인디고",
+        "상의베이지",
+        "신발화이트"
+      ],
+      "cards": [
+        188,
+        630,
+        442,
+        343
+      ],
+      "cardN": 3,
+      "cardH": [
+        [
+          188,
+          330,
+          142,
+          343
+        ],
+        [
+          338,
+          480,
+          142,
+          343
+        ],
+        [
+          488,
+          630,
+          142,
+          343
+        ]
+      ],
+      "bottom": [
+        671,
+        812,
+        141,
+        375
+      ],
+      "cardsFit": true,
+      "caps": [
+        "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+        "오트밀 울 니트 · 인디고 데님 · 브라운 페니 로퍼",
+        "멜란지 맨투맨 · 인디고 데님 · 흰 스니커즈 · 네이비 셔츠 재킷"
+      ],
+      "capLines": [
+        2,
+        2,
+        2
+      ],
+      "reasons": [
+        "누구나 안전한 기본 조합",
+        "네이비 베이스+어스톤 조합",
+        "톤온톤 (네이비 베이스)"
+      ],
+      "labels": [
+        "클래식 1/3",
+        "클래식 2/3",
+        "클래식 3/3"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "light",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    }
+  },
+  "360x780": {
+    "s1": {
+      "hash": "#/",
+      "inner": [
+        360,
+        780
+      ],
+      "scrollW": 360,
+      "docH": 780,
+      "h1": [
+        "오늘 입을 옷, 하나만 고르세요"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": null,
+      "cardN": 0,
+      "cardH": [],
+      "bottom": null,
+      "cardsFit": null,
+      "caps": [],
+      "capLines": [],
+      "reasons": [],
+      "labels": [],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s2": {
+      "hash": "#/pick/bottom",
+      "inner": [
+        360,
+        780
+      ],
+      "scrollW": 360,
+      "docH": 780,
+      "h1": [
+        "하의 색은?"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": null,
+      "cardN": 0,
+      "cardH": [],
+      "bottom": null,
+      "cardsFit": null,
+      "caps": [],
+      "capLines": [],
+      "reasons": [],
+      "labels": [],
+      "chips": [
+        "올리브",
+        "인디고",
+        "네이비",
+        "베이지",
+        "화이트",
+        "크림",
+        "브라운",
+        "미드그레이",
+        "카키",
+        "차콜",
+        "블랙데님",
+        "연청",
+        "블랙"
+      ],
+      "grid": [
+        384,
+        772,
+        388,
+        328
+      ],
+      "chipH": [
+        82
+      ],
+      "chipW": 76,
+      "twoLineChips": [],
+      "chipBorder": "rgba(255, 255, 255, 0.4)",
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s3": {
+      "hash": "#/result",
+      "inner": [
+        360,
+        780
+      ],
+      "scrollW": 360,
+      "docH": 780,
+      "h1": [
+        "아침 코디"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": [
+        62,
+        118,
+        56,
+        328
+      ],
+      "recents": null,
+      "pills": [],
+      "cards": [
+        130,
+        572,
+        442,
+        328
+      ],
+      "cardN": 3,
+      "cardH": [
+        [
+          130,
+          272,
+          142,
+          328
+        ],
+        [
+          280,
+          422,
+          142,
+          328
+        ],
+        [
+          430,
+          572,
+          142,
+          328
+        ]
+      ],
+      "bottom": [
+        639,
+        780,
+        141,
+        360
+      ],
+      "cardsFit": true,
+      "caps": [
+        "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+        "오트밀 울 니트 · 인디고 데님 · 브라운 페니 로퍼",
+        "멜란지 맨투맨 · 인디고 데님 · 흰 스니커즈 · 네이비 셔츠 재킷"
+      ],
+      "capLines": [
+        2,
+        2,
+        2
+      ],
+      "reasons": [
+        "누구나 안전한 기본 조합",
+        "네이비 베이스+어스톤 조합",
+        "톤온톤 (네이비 베이스)"
+      ],
+      "labels": [
+        "클래식 1/3",
+        "클래식 2/3",
+        "클래식 3/3"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": [],
+      "historyState": "{\"mc\":true,\"depth\":0}"
+    },
+    "s3banner": {
+      "hash": "#/",
+      "inner": [
+        360,
+        780
+      ],
+      "scrollW": 360,
+      "docH": 780,
+      "h1": [
+        "아침 코디"
+      ],
+      "banner": [
+        70,
+        120,
+        50,
+        328
+      ],
+      "bannerBelow": false,
+      "bannerBtn": "설치",
+      "bannerClose": [
+        71,
+        119,
+        48,
+        48
+      ],
+      "basebar": [
+        120,
+        176,
+        56,
+        328
+      ],
+      "recents": null,
+      "pills": [],
+      "cards": [
+        188,
+        630,
+        442,
+        328
+      ],
+      "cardN": 3,
+      "cardH": [
+        [
+          188,
+          330,
+          142,
+          328
+        ],
+        [
+          338,
+          480,
+          142,
+          328
+        ],
+        [
+          488,
+          630,
+          142,
+          328
+        ]
+      ],
+      "bottom": [
+        639,
+        780,
+        141,
+        360
+      ],
+      "cardsFit": true,
+      "caps": [
+        "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+        "오트밀 울 니트 · 인디고 데님 · 브라운 페니 로퍼",
+        "멜란지 맨투맨 · 인디고 데님 · 흰 스니커즈 · 네이비 셔츠 재킷"
+      ],
+      "capLines": [
+        2,
+        2,
+        2
+      ],
+      "reasons": [
+        "누구나 안전한 기본 조합",
+        "네이비 베이스+어스톤 조합",
+        "톤온톤 (네이비 베이스)"
+      ],
+      "labels": [
+        "클래식 1/3",
+        "클래식 2/3",
+        "클래식 3/3"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s3bannerRecents": {
+      "hash": "#/result",
+      "inner": [
+        360,
+        780
+      ],
+      "scrollW": 360,
+      "docH": 829,
+      "h1": [
+        "아침 코디"
+      ],
+      "banner": [
+        638,
+        688,
+        50,
+        328
+      ],
+      "bannerBelow": true,
+      "bannerBtn": "설치",
+      "bannerClose": [
+        639,
+        687,
+        48,
+        48
+      ],
+      "basebar": [
+        62,
+        118,
+        56,
+        328
+      ],
+      "recents": [
+        126,
+        176,
+        50,
+        328
+      ],
+      "pills": [
+        "하의인디고",
+        "신발화이트",
+        "상의화이트"
+      ],
+      "cards": [
+        188,
+        630,
+        442,
+        328
+      ],
+      "cardN": 3,
+      "cardH": [
+        [
+          188,
+          330,
+          142,
+          328
+        ],
+        [
+          338,
+          480,
+          142,
+          328
+        ],
+        [
+          488,
+          630,
+          142,
+          328
+        ]
+      ],
+      "bottom": [
+        639,
+        780,
+        141,
+        360
+      ],
+      "cardsFit": true,
+      "caps": [
+        "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+        "오트밀 울 니트 · 인디고 데님 · 브라운 페니 로퍼",
+        "멜란지 맨투맨 · 인디고 데님 · 흰 스니커즈 · 네이비 셔츠 재킷"
+      ],
+      "capLines": [
+        2,
+        2,
+        2
+      ],
+      "reasons": [
+        "누구나 안전한 기본 조합",
+        "네이비 베이스+어스톤 조합",
+        "톤온톤 (네이비 베이스)"
+      ],
+      "labels": [
+        "클래식 1/3",
+        "클래식 2/3",
+        "클래식 3/3"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s3pillTap": {
+      "hash": "#/result",
+      "inner": [
+        360,
+        780
+      ],
+      "scrollW": 360,
+      "docH": 829,
+      "h1": [
+        "아침 코디"
+      ],
+      "banner": [
+        638,
+        688,
+        50,
+        328
+      ],
+      "bannerBelow": true,
+      "bannerBtn": "설치",
+      "bannerClose": [
+        639,
+        687,
+        48,
+        48
+      ],
+      "basebar": [
+        62,
+        118,
+        56,
+        328
+      ],
+      "recents": [
+        126,
+        176,
+        50,
+        328
+      ],
+      "pills": [
+        "하의인디고",
+        "신발화이트",
+        "상의화이트"
+      ],
+      "cards": [
+        188,
+        630,
+        442,
+        328
+      ],
+      "cardN": 3,
+      "cardH": [
+        [
+          188,
+          330,
+          142,
+          328
+        ],
+        [
+          338,
+          480,
+          142,
+          328
+        ],
+        [
+          488,
+          630,
+          142,
+          328
+        ]
+      ],
+      "bottom": [
+        639,
+        780,
+        141,
+        360
+      ],
+      "cardsFit": true,
+      "caps": [
+        "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+        "화이트 옥스포드 셔츠 · 네이비 치노 · 브라운 페니 로퍼",
+        "화이트 티셔츠 · 인디고 데님 · 브라운 척카 부츠 · 카멜 트렌치 코트"
+      ],
+      "capLines": [
+        2,
+        2,
+        2
+      ],
+      "reasons": [
+        "누구나 안전한 기본 조합",
+        "톤온톤 (뉴트럴)",
+        "네이비 베이스+어스톤 조합"
+      ],
+      "labels": [
+        "클래식 1/3",
+        "클래식 2/3",
+        "클래식 3/3"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s4tone": {
+      "hash": "#/more/tone",
+      "inner": [
+        360,
+        780
+      ],
+      "scrollW": 360,
+      "docH": 1084,
+      "h1": [
+        "더 보기"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": [
+        132,
+        862,
+        730,
+        328
+      ],
+      "cardN": 5,
+      "cardH": [
+        [
+          132,
+          270,
+          138,
+          328
+        ],
+        [
+          278,
+          416,
+          138,
+          328
+        ],
+        [
+          424,
+          566,
+          142,
+          328
+        ],
+        [
+          574,
+          716,
+          142,
+          328
+        ],
+        [
+          724,
+          862,
+          138,
+          328
+        ]
+      ],
+      "bottom": [
+        724,
+        780,
+        56,
+        360
+      ],
+      "cardsFit": false,
+      "caps": [
+        "네이비 코튼 니트 · 인디고 데님 · 브라운 척카 부츠 · 베이지 트렌치 코트",
+        "라이트블루 옥스포드 셔츠 · 인디고 데님 · 탄 척카 부츠 · 카멜 트렌치 코트",
+        "네이비 코튼 니트 · 인디고 데님 · 블랙 더비 · 올리브 블레이저",
+        "라이트블루 옥스포드 셔츠 · 인디고 데님 · 블랙 더비 · 올리브 블레이저",
+        "라이트블루 옥스포드 셔츠 · 인디고 데님 · 브라운 척카 부츠 · 베이지 트렌치 코트"
+      ],
+      "capLines": [
+        3,
+        3,
+        2,
+        2,
+        3
+      ],
+      "reasons": [
+        "톤온톤 (네이비 베이스)",
+        "톤온톤 (네이비 베이스)",
+        "톤온톤 (네이비 베이스)",
+        "톤온톤 (네이비 베이스)",
+        "톤온톤 (네이비 베이스)"
+      ],
+      "labels": [
+        "네이비 베이스",
+        "네이비 베이스",
+        "네이비 베이스",
+        "네이비 베이스",
+        "네이비 베이스"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": [
+        725,
+        780,
+        55,
+        328
+      ],
+      "tabTexts": [
+        "톤별*",
+        "색상별",
+        "변주"
+      ],
+      "pillrow": [
+        56,
+        120,
+        64,
+        328
+      ],
+      "pillrowN": 2,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s4beige": {
+      "hash": "#/more/tone",
+      "inner": [
+        360,
+        780
+      ],
+      "scrollW": 360,
+      "docH": 950,
+      "h1": [
+        "더 보기"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": [
+        132,
+        870,
+        738,
+        328
+      ],
+      "cardN": 5,
+      "cardH": [
+        [
+          132,
+          274,
+          142,
+          328
+        ],
+        [
+          282,
+          424,
+          142,
+          328
+        ],
+        [
+          432,
+          570,
+          138,
+          328
+        ],
+        [
+          578,
+          720,
+          142,
+          328
+        ],
+        [
+          728,
+          870,
+          142,
+          328
+        ]
+      ],
+      "bottom": [
+        724,
+        780,
+        56,
+        360
+      ],
+      "cardsFit": false,
+      "caps": [
+        "베이지 코튼 니트 · 네이비 치노 · 블랙 더비 · 카멜 트렌치 코트",
+        "베이지 코튼 니트 · 네이비 치노 · 블랙 더비 · 베이지 트렌치 코트",
+        "베이지 코튼 니트 · 네이비 치노 · 버건디 페니 로퍼 · 베이지 트렌치 코트",
+        "베이지 코튼 니트 · 올리브 치노 · 초콜릿 척카 부츠",
+        "베이지 코튼 니트 · 네이비 치노 · 초콜릿 척카 부츠"
+      ],
+      "capLines": [
+        2,
+        2,
+        3,
+        2,
+        2
+      ],
+      "reasons": [
+        "톤온톤 (뉴트럴)",
+        "톤온톤 (뉴트럴)",
+        "톤온톤 (뉴트럴)",
+        "톤온톤 (뉴트럴)",
+        "톤온톤 (뉴트럴)"
+      ],
+      "labels": [
+        "뉴트럴",
+        "뉴트럴",
+        "뉴트럴",
+        "뉴트럴",
+        "뉴트럴"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": [
+        725,
+        780,
+        55,
+        328
+      ],
+      "tabTexts": [
+        "톤별*",
+        "색상별",
+        "변주"
+      ],
+      "pillrow": [
+        56,
+        120,
+        64,
+        328
+      ],
+      "pillrowN": 3,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s3beige": {
+      "hash": "#/result",
+      "inner": [
+        360,
+        780
+      ],
+      "scrollW": 360,
+      "docH": 829,
+      "h1": [
+        "아침 코디"
+      ],
+      "banner": [
+        638,
+        688,
+        50,
+        328
+      ],
+      "bannerBelow": true,
+      "bannerBtn": "설치",
+      "bannerClose": [
+        639,
+        687,
+        48,
+        48
+      ],
+      "basebar": [
+        62,
+        118,
+        56,
+        328
+      ],
+      "recents": [
+        126,
+        176,
+        50,
+        328
+      ],
+      "pills": [
+        "상의베이지",
+        "하의인디고",
+        "신발화이트"
+      ],
+      "cards": [
+        188,
+        630,
+        442,
+        328
+      ],
+      "cardN": 3,
+      "cardH": [
+        [
+          188,
+          330,
+          142,
+          328
+        ],
+        [
+          338,
+          480,
+          142,
+          328
+        ],
+        [
+          488,
+          630,
+          142,
+          328
+        ]
+      ],
+      "bottom": [
+        639,
+        780,
+        141,
+        360
+      ],
+      "cardsFit": true,
+      "caps": [
+        "베이지 코튼 니트 · 올리브 치노 · 초콜릿 척카 부츠",
+        "베이지 코튼 니트 · 네이비 치노 · 초콜릿 척카 부츠",
+        "베이지 코튼 니트 · 인디고 데님 · 흰 스니커즈"
+      ],
+      "capLines": [
+        2,
+        2,
+        2
+      ],
+      "reasons": [
+        "톤온톤 (뉴트럴)",
+        "톤온톤 (뉴트럴)",
+        "네이비 베이스+어스톤 조합"
+      ],
+      "labels": [
+        "클래식 1/3",
+        "클래식 2/3",
+        "클래식 3/3"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s5": {
+      "hash": "#/outfit/classic.0",
+      "inner": [
+        360,
+        780
+      ],
+      "scrollW": 360,
+      "docH": 780,
+      "h1": [
+        "클래식 1/3"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": null,
+      "cardN": 0,
+      "cardH": [],
+      "bottom": null,
+      "cardsFit": null,
+      "caps": [],
+      "capLines": [],
+      "reasons": [],
+      "labels": [],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": [
+        64,
+        376,
+        312,
+        156
+      ],
+      "detail": [
+        536,
+        780,
+        244,
+        328
+      ],
+      "drows": [
+        [
+          548,
+          596,
+          48,
+          328
+        ],
+        [
+          604,
+          652,
+          48,
+          328
+        ],
+        [
+          660,
+          708,
+          48,
+          328
+        ],
+        [
+          716,
+          764,
+          48,
+          328
+        ]
+      ],
+      "s5why": "누구나 안전한 기본 조합",
+      "s5cap": "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s6shoe": {
+      "hash": "#/outfit/classic.0/shoe",
+      "inner": [
+        360,
+        780
+      ],
+      "scrollW": 360,
+      "docH": 780,
+      "h1": [
+        "클래식 1/3"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": null,
+      "cardN": 0,
+      "cardH": [],
+      "bottom": null,
+      "cardsFit": null,
+      "caps": [],
+      "capLines": [],
+      "reasons": [],
+      "labels": [],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": [
+        64,
+        376,
+        312,
+        156
+      ],
+      "detail": [
+        536,
+        780,
+        244,
+        328
+      ],
+      "drows": [
+        [
+          548,
+          596,
+          48,
+          328
+        ],
+        [
+          604,
+          652,
+          48,
+          328
+        ],
+        [
+          660,
+          708,
+          48,
+          328
+        ],
+        [
+          716,
+          764,
+          48,
+          328
+        ]
+      ],
+      "s5why": "누구나 안전한 기본 조합",
+      "s5cap": "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+      "sheetTitle": "신발 스타일",
+      "sheetClose": [
+        496,
+        544,
+        48,
+        48
+      ],
+      "sheetNotes": [
+        "인디고 데님 · 스트레이트 · 노브레이크",
+        "신발 조합 5/5"
+      ]
+    },
+    "s6fit": {
+      "hash": "#/outfit/classic.0/fit",
+      "inner": [
+        360,
+        780
+      ],
+      "scrollW": 360,
+      "docH": 780,
+      "h1": [
+        "클래식 1/3"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": null,
+      "cardN": 0,
+      "cardH": [],
+      "bottom": null,
+      "cardsFit": null,
+      "caps": [],
+      "capLines": [],
+      "reasons": [],
+      "labels": [],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": [
+        64,
+        376,
+        312,
+        156
+      ],
+      "detail": [
+        536,
+        780,
+        244,
+        328
+      ],
+      "drows": [
+        [
+          548,
+          596,
+          48,
+          328
+        ],
+        [
+          604,
+          652,
+          48,
+          328
+        ],
+        [
+          660,
+          708,
+          48,
+          328
+        ],
+        [
+          716,
+          764,
+          48,
+          328
+        ]
+      ],
+      "s5why": "누구나 안전한 기본 조합",
+      "s5cap": "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+      "sheetTitle": "핏 밸런스",
+      "sheetClose": [
+        664,
+        712,
+        48,
+        48
+      ],
+      "sheetNotes": [
+        "레귤러 상의 + 스트레이트 하의 · 핏 밸런스 5/5",
+        "대안 핏: 슬림 · 루즈 상의"
+      ]
+    },
+    "s2light": {
+      "hash": "#/pick/bottom",
+      "inner": [
+        360,
+        780
+      ],
+      "scrollW": 360,
+      "docH": 780,
+      "h1": [
+        "하의 색은?"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": null,
+      "cardN": 0,
+      "cardH": [],
+      "bottom": null,
+      "cardsFit": null,
+      "caps": [],
+      "capLines": [],
+      "reasons": [],
+      "labels": [],
+      "chips": [
+        "올리브",
+        "인디고",
+        "네이비",
+        "베이지",
+        "화이트",
+        "크림",
+        "브라운",
+        "미드그레이",
+        "카키",
+        "차콜",
+        "블랙데님",
+        "연청",
+        "블랙"
+      ],
+      "grid": [
+        384,
+        772,
+        388,
+        328
+      ],
+      "chipH": [
+        82
+      ],
+      "chipW": 76,
+      "twoLineChips": [],
+      "chipBorder": "rgba(0, 0, 0, 0.42)",
+      "theme": "light",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s2lightTop": {
+      "hash": "#/pick/top",
+      "inner": [
+        360,
+        780
+      ],
+      "scrollW": 360,
+      "docH": 780,
+      "h1": [
+        "상의 색은?"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": null,
+      "cardN": 0,
+      "cardH": [],
+      "bottom": null,
+      "cardsFit": null,
+      "caps": [],
+      "capLines": [],
+      "reasons": [],
+      "labels": [],
+      "chips": [
+        "멜란지",
+        "화이트",
+        "라이트블루",
+        "네이비",
+        "오트밀",
+        "블랙",
+        "버건디",
+        "크림",
+        "올리브",
+        "베이지",
+        "라이트그레이",
+        "브라운"
+      ],
+      "grid": [
+        460,
+        772,
+        312,
+        328
+      ],
+      "chipH": [
+        82,
+        100
+      ],
+      "chipW": 76,
+      "twoLineChips": [
+        "라이트그레이"
+      ],
+      "chipBorder": "rgba(0, 0, 0, 0.42)",
+      "theme": "light",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s3light": {
+      "hash": "#/",
+      "inner": [
+        360,
+        780
+      ],
+      "scrollW": 360,
+      "docH": 829,
+      "h1": [
+        "아침 코디"
+      ],
+      "banner": [
+        638,
+        688,
+        50,
+        328
+      ],
+      "bannerBelow": true,
+      "bannerBtn": "설치",
+      "bannerClose": [
+        639,
+        687,
+        48,
+        48
+      ],
+      "basebar": [
+        62,
+        118,
+        56,
+        328
+      ],
+      "recents": [
+        126,
+        176,
+        50,
+        328
+      ],
+      "pills": [
+        "하의인디고",
+        "상의베이지",
+        "신발화이트"
+      ],
+      "cards": [
+        188,
+        630,
+        442,
+        328
+      ],
+      "cardN": 3,
+      "cardH": [
+        [
+          188,
+          330,
+          142,
+          328
+        ],
+        [
+          338,
+          480,
+          142,
+          328
+        ],
+        [
+          488,
+          630,
+          142,
+          328
+        ]
+      ],
+      "bottom": [
+        639,
+        780,
+        141,
+        360
+      ],
+      "cardsFit": true,
+      "caps": [
+        "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+        "오트밀 울 니트 · 인디고 데님 · 브라운 페니 로퍼",
+        "멜란지 맨투맨 · 인디고 데님 · 흰 스니커즈 · 네이비 셔츠 재킷"
+      ],
+      "capLines": [
+        2,
+        2,
+        2
+      ],
+      "reasons": [
+        "누구나 안전한 기본 조합",
+        "네이비 베이스+어스톤 조합",
+        "톤온톤 (네이비 베이스)"
+      ],
+      "labels": [
+        "클래식 1/3",
+        "클래식 2/3",
+        "클래식 3/3"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "light",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    }
+  },
+  "430x932": {
+    "s1": {
+      "hash": "#/",
+      "inner": [
+        430,
+        932
+      ],
+      "scrollW": 430,
+      "docH": 932,
+      "h1": [
+        "오늘 입을 옷, 하나만 고르세요"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": null,
+      "cardN": 0,
+      "cardH": [],
+      "bottom": null,
+      "cardsFit": null,
+      "caps": [],
+      "capLines": [],
+      "reasons": [],
+      "labels": [],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s2": {
+      "hash": "#/pick/bottom",
+      "inner": [
+        430,
+        932
+      ],
+      "scrollW": 430,
+      "docH": 932,
+      "h1": [
+        "하의 색은?"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": null,
+      "cardN": 0,
+      "cardH": [],
+      "bottom": null,
+      "cardsFit": null,
+      "caps": [],
+      "capLines": [],
+      "reasons": [],
+      "labels": [],
+      "chips": [
+        "올리브",
+        "인디고",
+        "네이비",
+        "베이지",
+        "화이트",
+        "크림",
+        "브라운",
+        "미드그레이",
+        "카키",
+        "차콜",
+        "블랙데님",
+        "연청",
+        "블랙"
+      ],
+      "grid": [
+        520,
+        924,
+        404,
+        398
+      ],
+      "chipH": [
+        86
+      ],
+      "chipW": 94,
+      "twoLineChips": [],
+      "chipBorder": "rgba(255, 255, 255, 0.4)",
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s3": {
+      "hash": "#/result",
+      "inner": [
+        430,
+        932
+      ],
+      "scrollW": 430,
+      "docH": 932,
+      "h1": [
+        "아침 코디"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": [
+        62,
+        118,
+        56,
+        398
+      ],
+      "recents": null,
+      "pills": [],
+      "cards": [
+        130,
+        560,
+        430,
+        398
+      ],
+      "cardN": 3,
+      "cardH": [
+        [
+          130,
+          260,
+          130,
+          398
+        ],
+        [
+          268,
+          410,
+          142,
+          398
+        ],
+        [
+          418,
+          560,
+          142,
+          398
+        ]
+      ],
+      "bottom": [
+        791,
+        932,
+        141,
+        430
+      ],
+      "cardsFit": true,
+      "caps": [
+        "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+        "오트밀 울 니트 · 인디고 데님 · 브라운 페니 로퍼",
+        "멜란지 맨투맨 · 인디고 데님 · 흰 스니커즈 · 네이비 셔츠 재킷"
+      ],
+      "capLines": [
+        1,
+        2,
+        2
+      ],
+      "reasons": [
+        "누구나 안전한 기본 조합",
+        "네이비 베이스+어스톤 조합",
+        "톤온톤 (네이비 베이스)"
+      ],
+      "labels": [
+        "클래식 1/3",
+        "클래식 2/3",
+        "클래식 3/3"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": [],
+      "historyState": "{\"mc\":true,\"depth\":0}"
+    },
+    "s3banner": {
+      "hash": "#/",
+      "inner": [
+        430,
+        932
+      ],
+      "scrollW": 430,
+      "docH": 932,
+      "h1": [
+        "아침 코디"
+      ],
+      "banner": [
+        70,
+        120,
+        50,
+        398
+      ],
+      "bannerBelow": false,
+      "bannerBtn": "설치",
+      "bannerClose": [
+        71,
+        119,
+        48,
+        48
+      ],
+      "basebar": [
+        120,
+        176,
+        56,
+        398
+      ],
+      "recents": null,
+      "pills": [],
+      "cards": [
+        188,
+        618,
+        430,
+        398
+      ],
+      "cardN": 3,
+      "cardH": [
+        [
+          188,
+          318,
+          130,
+          398
+        ],
+        [
+          326,
+          468,
+          142,
+          398
+        ],
+        [
+          476,
+          618,
+          142,
+          398
+        ]
+      ],
+      "bottom": [
+        791,
+        932,
+        141,
+        430
+      ],
+      "cardsFit": true,
+      "caps": [
+        "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+        "오트밀 울 니트 · 인디고 데님 · 브라운 페니 로퍼",
+        "멜란지 맨투맨 · 인디고 데님 · 흰 스니커즈 · 네이비 셔츠 재킷"
+      ],
+      "capLines": [
+        1,
+        2,
+        2
+      ],
+      "reasons": [
+        "누구나 안전한 기본 조합",
+        "네이비 베이스+어스톤 조합",
+        "톤온톤 (네이비 베이스)"
+      ],
+      "labels": [
+        "클래식 1/3",
+        "클래식 2/3",
+        "클래식 3/3"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s3bannerRecents": {
+      "hash": "#/result",
+      "inner": [
+        430,
+        932
+      ],
+      "scrollW": 430,
+      "docH": 932,
+      "h1": [
+        "아침 코디"
+      ],
+      "banner": [
+        70,
+        120,
+        50,
+        398
+      ],
+      "bannerBelow": false,
+      "bannerBtn": "설치",
+      "bannerClose": [
+        71,
+        119,
+        48,
+        48
+      ],
+      "basebar": [
+        120,
+        176,
+        56,
+        398
+      ],
+      "recents": [
+        184,
+        234,
+        50,
+        398
+      ],
+      "pills": [
+        "하의인디고",
+        "신발화이트",
+        "상의화이트"
+      ],
+      "cards": [
+        246,
+        676,
+        430,
+        398
+      ],
+      "cardN": 3,
+      "cardH": [
+        [
+          246,
+          376,
+          130,
+          398
+        ],
+        [
+          384,
+          526,
+          142,
+          398
+        ],
+        [
+          534,
+          676,
+          142,
+          398
+        ]
+      ],
+      "bottom": [
+        791,
+        932,
+        141,
+        430
+      ],
+      "cardsFit": true,
+      "caps": [
+        "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+        "오트밀 울 니트 · 인디고 데님 · 브라운 페니 로퍼",
+        "멜란지 맨투맨 · 인디고 데님 · 흰 스니커즈 · 네이비 셔츠 재킷"
+      ],
+      "capLines": [
+        1,
+        2,
+        2
+      ],
+      "reasons": [
+        "누구나 안전한 기본 조합",
+        "네이비 베이스+어스톤 조합",
+        "톤온톤 (네이비 베이스)"
+      ],
+      "labels": [
+        "클래식 1/3",
+        "클래식 2/3",
+        "클래식 3/3"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s3pillTap": {
+      "hash": "#/result",
+      "inner": [
+        430,
+        932
+      ],
+      "scrollW": 430,
+      "docH": 932,
+      "h1": [
+        "아침 코디"
+      ],
+      "banner": [
+        70,
+        120,
+        50,
+        398
+      ],
+      "bannerBelow": false,
+      "bannerBtn": "설치",
+      "bannerClose": [
+        71,
+        119,
+        48,
+        48
+      ],
+      "basebar": [
+        120,
+        176,
+        56,
+        398
+      ],
+      "recents": [
+        184,
+        234,
+        50,
+        398
+      ],
+      "pills": [
+        "하의인디고",
+        "신발화이트",
+        "상의화이트"
+      ],
+      "cards": [
+        246,
+        676,
+        430,
+        398
+      ],
+      "cardN": 3,
+      "cardH": [
+        [
+          246,
+          376,
+          130,
+          398
+        ],
+        [
+          384,
+          526,
+          142,
+          398
+        ],
+        [
+          534,
+          676,
+          142,
+          398
+        ]
+      ],
+      "bottom": [
+        791,
+        932,
+        141,
+        430
+      ],
+      "cardsFit": true,
+      "caps": [
+        "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+        "화이트 옥스포드 셔츠 · 네이비 치노 · 브라운 페니 로퍼",
+        "화이트 티셔츠 · 인디고 데님 · 브라운 척카 부츠 · 카멜 트렌치 코트"
+      ],
+      "capLines": [
+        1,
+        2,
+        2
+      ],
+      "reasons": [
+        "누구나 안전한 기본 조합",
+        "톤온톤 (뉴트럴)",
+        "네이비 베이스+어스톤 조합"
+      ],
+      "labels": [
+        "클래식 1/3",
+        "클래식 2/3",
+        "클래식 3/3"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s4tone": {
+      "hash": "#/more/tone",
+      "inner": [
+        430,
+        932
+      ],
+      "scrollW": 430,
+      "docH": 1096,
+      "h1": [
+        "더 보기"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": [
+        132,
+        874,
+        742,
+        398
+      ],
+      "cardN": 5,
+      "cardH": [
+        [
+          132,
+          274,
+          142,
+          398
+        ],
+        [
+          282,
+          424,
+          142,
+          398
+        ],
+        [
+          432,
+          574,
+          142,
+          398
+        ],
+        [
+          582,
+          724,
+          142,
+          398
+        ],
+        [
+          732,
+          874,
+          142,
+          398
+        ]
+      ],
+      "bottom": [
+        876,
+        932,
+        56,
+        430
+      ],
+      "cardsFit": true,
+      "caps": [
+        "네이비 코튼 니트 · 인디고 데님 · 브라운 척카 부츠 · 베이지 트렌치 코트",
+        "라이트블루 옥스포드 셔츠 · 인디고 데님 · 탄 척카 부츠 · 카멜 트렌치 코트",
+        "네이비 코튼 니트 · 인디고 데님 · 블랙 더비 · 올리브 블레이저",
+        "라이트블루 옥스포드 셔츠 · 인디고 데님 · 블랙 더비 · 올리브 블레이저",
+        "라이트블루 옥스포드 셔츠 · 인디고 데님 · 브라운 척카 부츠 · 베이지 트렌치 코트"
+      ],
+      "capLines": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "reasons": [
+        "톤온톤 (네이비 베이스)",
+        "톤온톤 (네이비 베이스)",
+        "톤온톤 (네이비 베이스)",
+        "톤온톤 (네이비 베이스)",
+        "톤온톤 (네이비 베이스)"
+      ],
+      "labels": [
+        "네이비 베이스",
+        "네이비 베이스",
+        "네이비 베이스",
+        "네이비 베이스",
+        "네이비 베이스"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": [
+        877,
+        932,
+        55,
+        398
+      ],
+      "tabTexts": [
+        "톤별*",
+        "색상별",
+        "변주"
+      ],
+      "pillrow": [
+        56,
+        120,
+        64,
+        398
+      ],
+      "pillrowN": 2,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s4beige": {
+      "hash": "#/more/tone",
+      "inner": [
+        430,
+        932
+      ],
+      "scrollW": 430,
+      "docH": 954,
+      "h1": [
+        "더 보기"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": [
+        132,
+        874,
+        742,
+        398
+      ],
+      "cardN": 5,
+      "cardH": [
+        [
+          132,
+          274,
+          142,
+          398
+        ],
+        [
+          282,
+          424,
+          142,
+          398
+        ],
+        [
+          432,
+          574,
+          142,
+          398
+        ],
+        [
+          582,
+          724,
+          142,
+          398
+        ],
+        [
+          732,
+          874,
+          142,
+          398
+        ]
+      ],
+      "bottom": [
+        876,
+        932,
+        56,
+        430
+      ],
+      "cardsFit": true,
+      "caps": [
+        "베이지 코튼 니트 · 네이비 치노 · 블랙 더비 · 카멜 트렌치 코트",
+        "베이지 코튼 니트 · 네이비 치노 · 블랙 더비 · 베이지 트렌치 코트",
+        "베이지 코튼 니트 · 네이비 치노 · 버건디 페니 로퍼 · 베이지 트렌치 코트",
+        "베이지 코튼 니트 · 올리브 치노 · 초콜릿 척카 부츠",
+        "베이지 코튼 니트 · 네이비 치노 · 초콜릿 척카 부츠"
+      ],
+      "capLines": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "reasons": [
+        "톤온톤 (뉴트럴)",
+        "톤온톤 (뉴트럴)",
+        "톤온톤 (뉴트럴)",
+        "톤온톤 (뉴트럴)",
+        "톤온톤 (뉴트럴)"
+      ],
+      "labels": [
+        "뉴트럴",
+        "뉴트럴",
+        "뉴트럴",
+        "뉴트럴",
+        "뉴트럴"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": [
+        877,
+        932,
+        55,
+        398
+      ],
+      "tabTexts": [
+        "톤별*",
+        "색상별",
+        "변주"
+      ],
+      "pillrow": [
+        56,
+        120,
+        64,
+        398
+      ],
+      "pillrowN": 3,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s3beige": {
+      "hash": "#/result",
+      "inner": [
+        430,
+        932
+      ],
+      "scrollW": 430,
+      "docH": 932,
+      "h1": [
+        "아침 코디"
+      ],
+      "banner": [
+        70,
+        120,
+        50,
+        398
+      ],
+      "bannerBelow": false,
+      "bannerBtn": "설치",
+      "bannerClose": [
+        71,
+        119,
+        48,
+        48
+      ],
+      "basebar": [
+        120,
+        176,
+        56,
+        398
+      ],
+      "recents": [
+        184,
+        234,
+        50,
+        398
+      ],
+      "pills": [
+        "상의베이지",
+        "하의인디고",
+        "신발화이트"
+      ],
+      "cards": [
+        246,
+        676,
+        430,
+        398
+      ],
+      "cardN": 3,
+      "cardH": [
+        [
+          246,
+          388,
+          142,
+          398
+        ],
+        [
+          396,
+          538,
+          142,
+          398
+        ],
+        [
+          546,
+          676,
+          130,
+          398
+        ]
+      ],
+      "bottom": [
+        791,
+        932,
+        141,
+        430
+      ],
+      "cardsFit": true,
+      "caps": [
+        "베이지 코튼 니트 · 올리브 치노 · 초콜릿 척카 부츠",
+        "베이지 코튼 니트 · 네이비 치노 · 초콜릿 척카 부츠",
+        "베이지 코튼 니트 · 인디고 데님 · 흰 스니커즈"
+      ],
+      "capLines": [
+        2,
+        2,
+        1
+      ],
+      "reasons": [
+        "톤온톤 (뉴트럴)",
+        "톤온톤 (뉴트럴)",
+        "네이비 베이스+어스톤 조합"
+      ],
+      "labels": [
+        "클래식 1/3",
+        "클래식 2/3",
+        "클래식 3/3"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s5": {
+      "hash": "#/outfit/classic.0",
+      "inner": [
+        430,
+        932
+      ],
+      "scrollW": 430,
+      "docH": 932,
+      "h1": [
+        "클래식 1/3"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": null,
+      "cardN": 0,
+      "cardH": [],
+      "bottom": null,
+      "cardsFit": null,
+      "caps": [],
+      "capLines": [],
+      "reasons": [],
+      "labels": [],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": [
+        64,
+        437,
+        373,
+        186
+      ],
+      "detail": [
+        688,
+        932,
+        244,
+        398
+      ],
+      "drows": [
+        [
+          700,
+          748,
+          48,
+          398
+        ],
+        [
+          756,
+          804,
+          48,
+          398
+        ],
+        [
+          812,
+          860,
+          48,
+          398
+        ],
+        [
+          868,
+          916,
+          48,
+          398
+        ]
+      ],
+      "s5why": "누구나 안전한 기본 조합",
+      "s5cap": "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s6shoe": {
+      "hash": "#/outfit/classic.0/shoe",
+      "inner": [
+        430,
+        932
+      ],
+      "scrollW": 430,
+      "docH": 932,
+      "h1": [
+        "클래식 1/3"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": null,
+      "cardN": 0,
+      "cardH": [],
+      "bottom": null,
+      "cardsFit": null,
+      "caps": [],
+      "capLines": [],
+      "reasons": [],
+      "labels": [],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": [
+        64,
+        437,
+        373,
+        186
+      ],
+      "detail": [
+        688,
+        932,
+        244,
+        398
+      ],
+      "drows": [
+        [
+          700,
+          748,
+          48,
+          398
+        ],
+        [
+          756,
+          804,
+          48,
+          398
+        ],
+        [
+          812,
+          860,
+          48,
+          398
+        ],
+        [
+          868,
+          916,
+          48,
+          398
+        ]
+      ],
+      "s5why": "누구나 안전한 기본 조합",
+      "s5cap": "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+      "sheetTitle": "신발 스타일",
+      "sheetClose": [
+        648,
+        696,
+        48,
+        48
+      ],
+      "sheetNotes": [
+        "인디고 데님 · 스트레이트 · 노브레이크",
+        "신발 조합 5/5"
+      ]
+    },
+    "s6fit": {
+      "hash": "#/outfit/classic.0/fit",
+      "inner": [
+        430,
+        932
+      ],
+      "scrollW": 430,
+      "docH": 932,
+      "h1": [
+        "클래식 1/3"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": null,
+      "cardN": 0,
+      "cardH": [],
+      "bottom": null,
+      "cardsFit": null,
+      "caps": [],
+      "capLines": [],
+      "reasons": [],
+      "labels": [],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": [
+        64,
+        437,
+        373,
+        186
+      ],
+      "detail": [
+        688,
+        932,
+        244,
+        398
+      ],
+      "drows": [
+        [
+          700,
+          748,
+          48,
+          398
+        ],
+        [
+          756,
+          804,
+          48,
+          398
+        ],
+        [
+          812,
+          860,
+          48,
+          398
+        ],
+        [
+          868,
+          916,
+          48,
+          398
+        ]
+      ],
+      "s5why": "누구나 안전한 기본 조합",
+      "s5cap": "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+      "sheetTitle": "핏 밸런스",
+      "sheetClose": [
+        816,
+        864,
+        48,
+        48
+      ],
+      "sheetNotes": [
+        "레귤러 상의 + 스트레이트 하의 · 핏 밸런스 5/5",
+        "대안 핏: 슬림 · 루즈 상의"
+      ]
+    },
+    "s2light": {
+      "hash": "#/pick/bottom",
+      "inner": [
+        430,
+        932
+      ],
+      "scrollW": 430,
+      "docH": 932,
+      "h1": [
+        "하의 색은?"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": null,
+      "cardN": 0,
+      "cardH": [],
+      "bottom": null,
+      "cardsFit": null,
+      "caps": [],
+      "capLines": [],
+      "reasons": [],
+      "labels": [],
+      "chips": [
+        "올리브",
+        "인디고",
+        "네이비",
+        "베이지",
+        "화이트",
+        "크림",
+        "브라운",
+        "미드그레이",
+        "카키",
+        "차콜",
+        "블랙데님",
+        "연청",
+        "블랙"
+      ],
+      "grid": [
+        520,
+        924,
+        404,
+        398
+      ],
+      "chipH": [
+        86
+      ],
+      "chipW": 94,
+      "twoLineChips": [],
+      "chipBorder": "rgba(0, 0, 0, 0.42)",
+      "theme": "light",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s2lightTop": {
+      "hash": "#/pick/top",
+      "inner": [
+        430,
+        932
+      ],
+      "scrollW": 430,
+      "docH": 932,
+      "h1": [
+        "상의 색은?"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": null,
+      "cardN": 0,
+      "cardH": [],
+      "bottom": null,
+      "cardsFit": null,
+      "caps": [],
+      "capLines": [],
+      "reasons": [],
+      "labels": [],
+      "chips": [
+        "멜란지",
+        "화이트",
+        "라이트블루",
+        "네이비",
+        "오트밀",
+        "블랙",
+        "버건디",
+        "크림",
+        "올리브",
+        "베이지",
+        "라이트그레이",
+        "브라운"
+      ],
+      "grid": [
+        618,
+        924,
+        306,
+        398
+      ],
+      "chipH": [
+        86
+      ],
+      "chipW": 94,
+      "twoLineChips": [],
+      "chipBorder": "rgba(0, 0, 0, 0.42)",
+      "theme": "light",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    },
+    "s3light": {
+      "hash": "#/",
+      "inner": [
+        430,
+        932
+      ],
+      "scrollW": 430,
+      "docH": 932,
+      "h1": [
+        "아침 코디"
+      ],
+      "banner": [
+        70,
+        120,
+        50,
+        398
+      ],
+      "bannerBelow": false,
+      "bannerBtn": "설치",
+      "bannerClose": [
+        71,
+        119,
+        48,
+        48
+      ],
+      "basebar": [
+        120,
+        176,
+        56,
+        398
+      ],
+      "recents": [
+        184,
+        234,
+        50,
+        398
+      ],
+      "pills": [
+        "하의인디고",
+        "상의베이지",
+        "신발화이트"
+      ],
+      "cards": [
+        246,
+        676,
+        430,
+        398
+      ],
+      "cardN": 3,
+      "cardH": [
+        [
+          246,
+          376,
+          130,
+          398
+        ],
+        [
+          384,
+          526,
+          142,
+          398
+        ],
+        [
+          534,
+          676,
+          142,
+          398
+        ]
+      ],
+      "bottom": [
+        791,
+        932,
+        141,
+        430
+      ],
+      "cardsFit": true,
+      "caps": [
+        "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+        "오트밀 울 니트 · 인디고 데님 · 브라운 페니 로퍼",
+        "멜란지 맨투맨 · 인디고 데님 · 흰 스니커즈 · 네이비 셔츠 재킷"
+      ],
+      "capLines": [
+        1,
+        2,
+        2
+      ],
+      "reasons": [
+        "누구나 안전한 기본 조합",
+        "네이비 베이스+어스톤 조합",
+        "톤온톤 (네이비 베이스)"
+      ],
+      "labels": [
+        "클래식 1/3",
+        "클래식 2/3",
+        "클래식 3/3"
+      ],
+      "chips": [],
+      "grid": null,
+      "chipH": [],
+      "twoLineChips": [],
+      "chipBorder": null,
+      "theme": "light",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    }
+  },
+  "320x568": {
+    "s2": {
+      "hash": "#/pick/top",
+      "inner": [
+        320,
+        568
+      ],
+      "scrollW": 320,
+      "docH": 568,
+      "h1": [
+        "상의 색은?"
+      ],
+      "banner": null,
+      "bannerBelow": false,
+      "bannerClose": null,
+      "basebar": null,
+      "recents": null,
+      "pills": [],
+      "cards": null,
+      "cardN": 0,
+      "cardH": [],
+      "bottom": null,
+      "cardsFit": null,
+      "caps": [],
+      "capLines": [],
+      "reasons": [],
+      "labels": [],
+      "chips": [
+        "멜란지",
+        "화이트",
+        "라이트블루",
+        "네이비",
+        "오트밀",
+        "블랙",
+        "버건디",
+        "크림",
+        "올리브",
+        "베이지",
+        "라이트그레이",
+        "브라운"
+      ],
+      "grid": [
+        230,
+        560,
+        330,
+        288
+      ],
+      "chipH": [
+        100,
+        82
+      ],
+      "chipW": 66,
+      "twoLineChips": [
+        "라이트블루",
+        "라이트그레이"
+      ],
+      "chipBorder": "rgba(255, 255, 255, 0.4)",
+      "theme": "dark",
+      "tabs": null,
+      "tabTexts": [],
+      "pillrow": null,
+      "pillrowN": 0,
+      "s5ill": null,
+      "detail": null,
+      "drows": [],
+      "sheetClose": null,
+      "sheetNotes": []
+    }
+  },
+  "manifestShot": {
+    "hash": "#/result",
+    "inner": [
+      375,
+      812
+    ],
+    "scrollW": 375,
+    "docH": 812,
+    "h1": [
+      "아침 코디"
+    ],
+    "banner": null,
+    "bannerBelow": false,
+    "bannerClose": null,
+    "basebar": [
+      62,
+      118,
+      56,
+      343
+    ],
+    "recents": [
+      126,
+      176,
+      50,
+      343
+    ],
+    "pills": [
+      "하의인디고",
+      "상의베이지",
+      "신발화이트"
+    ],
+    "cards": [
+      188,
+      630,
+      442,
+      343
+    ],
+    "cardN": 3,
+    "cardH": [
+      [
+        188,
+        330,
+        142,
+        343
+      ],
+      [
+        338,
+        480,
+        142,
+        343
+      ],
+      [
+        488,
+        630,
+        142,
+        343
+      ]
+    ],
+    "bottom": [
+      671,
+      812,
+      141,
+      375
+    ],
+    "cardsFit": true,
+    "caps": [
+      "화이트 티셔츠 · 인디고 데님 · 흰 스니커즈",
+      "오트밀 울 니트 · 인디고 데님 · 브라운 페니 로퍼",
+      "멜란지 맨투맨 · 인디고 데님 · 흰 스니커즈 · 네이비 셔츠 재킷"
+    ],
+    "capLines": [
+      2,
+      2,
+      2
+    ],
+    "reasons": [
+      "누구나 안전한 기본 조합",
+      "네이비 베이스+어스톤 조합",
+      "톤온톤 (네이비 베이스)"
+    ],
+    "labels": [
+      "클래식 1/3",
+      "클래식 2/3",
+      "클래식 3/3"
+    ],
+    "chips": [],
+    "grid": null,
+    "chipH": [],
+    "twoLineChips": [],
+    "chipBorder": null,
+    "theme": "dark",
+    "tabs": null,
+    "tabTexts": [],
+    "pillrow": null,
+    "pillrowN": 0,
+    "s5ill": null,
+    "detail": null,
+    "drows": [],
+    "sheetClose": null,
+    "sheetNotes": []
+  },
+  "console": []
+}

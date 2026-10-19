@@ -1,0 +1,551 @@
+[
+ {
+  "id": "white",
+  "labelKo": "화이트",
+  "labelEn": "White",
+  "hex": "#FFFFFF",
+  "hexSource": "css",
+  "tones": [
+   "neutral",
+   "mono"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": null,
+  "note": "CSS"
+ },
+ {
+  "id": "offWhite",
+  "labelKo": "오프화이트/에크루",
+  "labelEn": "Off-white / Ecru",
+  "hex": "#F2EDE4",
+  "hexSource": "approx",
+  "tones": [
+   "neutral"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": null,
+  "note": "근사값. Wikipedia 'Ecru' #C2B280은 의류 에크루보다 훨씬 어두워 미채택"
+ },
+ {
+  "id": "cream",
+  "labelKo": "크림",
+  "labelEn": "Cream",
+  "hex": "#FFFDD0",
+  "hexSource": "wikipedia",
+  "tones": [
+   "neutral",
+   "pastel"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": "겨울은 니트로, 여름은 치노·린넨",
+  "note": "Wikipedia"
+ },
+ {
+  "id": "oatmeal",
+  "labelKo": "오트밀",
+  "labelEn": "Oatmeal",
+  "hex": "#D9CFC1",
+  "hexSource": "approx",
+  "tones": [
+   "neutral",
+   "earth"
+  ],
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "seasonNote": null,
+  "note": "근사값(표준 없음). 니트 전용"
+ },
+ {
+  "id": "beige",
+  "labelKo": "베이지",
+  "labelEn": "Beige",
+  "hex": "#F5F5DC",
+  "hexSource": "css",
+  "tones": [
+   "neutral",
+   "earth"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": null,
+  "note": "CSS. 치노 표시용은 더 어둡게 조정 권장"
+ },
+ {
+  "id": "khaki",
+  "labelKo": "카키",
+  "labelEn": "Khaki",
+  "hex": "#C3B091",
+  "hexSource": "wikipedia",
+  "tones": [
+   "neutral",
+   "earth"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": null,
+  "note": "Wikipedia 'Khaki'. 한국에서 '카키'가 올리브를 뜻하기도 하나 본 문서는 **황갈색 치노색**으로 고정"
+ },
+ {
+  "id": "tan",
+  "labelKo": "탄",
+  "labelEn": "Tan",
+  "hex": "#D2B48C",
+  "hexSource": "css",
+  "tones": [
+   "neutral",
+   "earth"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": null,
+  "note": "CSS"
+ },
+ {
+  "id": "camel",
+  "labelKo": "카멜",
+  "labelEn": "Camel",
+  "hex": "#C19A6B",
+  "hexSource": "wikipedia",
+  "tones": [
+   "earth"
+  ],
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "seasonNote": null,
+  "note": "Wikipedia"
+ },
+ {
+  "id": "brown",
+  "labelKo": "브라운",
+  "labelEn": "Brown",
+  "hex": "#8B5A2B",
+  "hexSource": "approx",
+  "tones": [
+   "neutral",
+   "earth"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": null,
+  "note": "근사값(중간 갈색, 코듀로이·가죽)"
+ },
+ {
+  "id": "chocolate",
+  "labelKo": "초콜릿/다크브라운",
+  "labelEn": "Chocolate / Dark brown",
+  "hex": "#5C4033",
+  "hexSource": "wikipedia",
+  "tones": [
+   "earth"
+  ],
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "seasonNote": "한겨울 중량 색",
+  "note": "Wikipedia 'Dark brown'"
+ },
+ {
+  "id": "lightGrey",
+  "labelKo": "라이트 그레이",
+  "labelEn": "Light grey",
+  "hex": "#D3D3D3",
+  "hexSource": "css",
+  "tones": [
+   "neutral",
+   "mono"
+  ],
+  "seasons": [
+   "springFall",
+   "summer"
+  ],
+  "seasonNote": null,
+  "note": "CSS"
+ },
+ {
+  "id": "greyMelange",
+  "labelKo": "그레이 멜란지",
+  "labelEn": "Grey melange / Marl",
+  "hex": "#A9A9A9",
+  "hexSource": "approx",
+  "tones": [
+   "mono"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": null,
+  "note": "CSS 'darkgray' 근사. 티셔츠·맨투맨 전용"
+ },
+ {
+  "id": "midGrey",
+  "labelKo": "미드 그레이",
+  "labelEn": "Mid grey",
+  "hex": "#808080",
+  "hexSource": "css",
+  "tones": [
+   "neutral",
+   "mono"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": null,
+  "note": "CSS"
+ },
+ {
+  "id": "charcoal",
+  "labelKo": "차콜",
+  "labelEn": "Charcoal",
+  "hex": "#36454F",
+  "hexSource": "wikipedia",
+  "tones": [
+   "neutral",
+   "mono"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": null,
+  "note": "Wikipedia"
+ },
+ {
+  "id": "black",
+  "labelKo": "블랙",
+  "labelEn": "Black",
+  "hex": "#000000",
+  "hexSource": "css",
+  "tones": [
+   "neutral",
+   "mono"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": null,
+  "note": "CSS. 화면 표시는 #141414 권장"
+ },
+ {
+  "id": "navy",
+  "labelKo": "네이비",
+  "labelEn": "Navy",
+  "hex": "#1F2A44",
+  "hexSource": "approx",
+  "tones": [
+   "neutral",
+   "navyBase"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": null,
+  "note": "근사값. CSS navy #000080은 채도가 너무 높아 의류 네이비와 괴리"
+ },
+ {
+  "id": "indigo",
+  "labelKo": "인디고 데님",
+  "labelEn": "Indigo denim",
+  "hex": "#2E4A7D",
+  "hexSource": "approx",
+  "tones": [
+   "navyBase"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": null,
+  "note": "근사값(진청·원워시)"
+ },
+ {
+  "id": "midDenim",
+  "labelKo": "미드워시 데님",
+  "labelEn": "Mid-wash denim",
+  "hex": "#1560BD",
+  "hexSource": "wikipedia",
+  "tones": [
+   "navyBase"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": null,
+  "note": "Wikipedia 'Denim'"
+ },
+ {
+  "id": "lightDenim",
+  "labelKo": "라이트워시 데님",
+  "labelEn": "Light-wash denim",
+  "hex": "#9DB9D4",
+  "hexSource": "approx",
+  "tones": [
+   "navyBase",
+   "pastel"
+  ],
+  "seasons": [
+   "springFall",
+   "summer"
+  ],
+  "seasonNote": "겨울엔 계절감 어긋남",
+  "note": "근사값(연청)"
+ },
+ {
+  "id": "blackDenim",
+  "labelKo": "블랙 데님",
+  "labelEn": "Black denim",
+  "hex": "#2B2B2B",
+  "hexSource": "approx",
+  "tones": [
+   "mono"
+  ],
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "seasonNote": null,
+  "note": "근사값(워시드 블랙)"
+ },
+ {
+  "id": "lightBlue",
+  "labelKo": "라이트 블루",
+  "labelEn": "Light blue",
+  "hex": "#ADD8E6",
+  "hexSource": "css",
+  "tones": [
+   "neutral",
+   "navyBase",
+   "pastel"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": "옥스포드 셔츠색(연중)",
+  "note": "CSS. 옥스포드 셔츠"
+ },
+ {
+  "id": "skyBlue",
+  "labelKo": "스카이 블루",
+  "labelEn": "Sky blue",
+  "hex": "#87CEEB",
+  "hexSource": "css",
+  "tones": [
+   "navyBase",
+   "pastel"
+  ],
+  "seasons": [
+   "springFall",
+   "summer"
+  ],
+  "seasonNote": null,
+  "note": "CSS"
+ },
+ {
+  "id": "olive",
+  "labelKo": "올리브",
+  "labelEn": "Olive",
+  "hex": "#4B5320",
+  "hexSource": "wikipedia",
+  "tones": [
+   "neutral",
+   "earth"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": null,
+  "note": "Wikipedia 'Olive drab'"
+ },
+ {
+  "id": "forestGreen",
+  "labelKo": "포레스트 그린",
+  "labelEn": "Forest green",
+  "hex": "#228B22",
+  "hexSource": "css",
+  "tones": [
+   "accent"
+  ],
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "seasonNote": null,
+  "note": "CSS. 실제 의류는 더 어두운 #1F4D2B 권장"
+ },
+ {
+  "id": "sage",
+  "labelKo": "세이지",
+  "labelEn": "Sage",
+  "hex": "#BCB88A",
+  "hexSource": "wikipedia",
+  "tones": [
+   "earth",
+   "pastel"
+  ],
+  "seasons": [
+   "springFall",
+   "summer"
+  ],
+  "seasonNote": "봄 파스텔",
+  "note": "Wikipedia"
+ },
+ {
+  "id": "burgundy",
+  "labelKo": "버건디",
+  "labelEn": "Burgundy",
+  "hex": "#800020",
+  "hexSource": "wikipedia",
+  "tones": [
+   "accent"
+  ],
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "seasonNote": null,
+  "note": "Wikipedia"
+ },
+ {
+  "id": "rust",
+  "labelKo": "러스트/번트오렌지",
+  "labelEn": "Rust / Burnt orange",
+  "hex": "#B7410E",
+  "hexSource": "wikipedia",
+  "tones": [
+   "earth",
+   "accent"
+  ],
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "seasonNote": null,
+  "note": "Wikipedia 'Rust'"
+ },
+ {
+  "id": "mustard",
+  "labelKo": "머스터드",
+  "labelEn": "Mustard",
+  "hex": "#FFDB58",
+  "hexSource": "wikipedia",
+  "tones": [
+   "accent"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": "봄가을 중심(가을 포인트)",
+  "note": "Wikipedia"
+ },
+ {
+  "id": "dustyPink",
+  "labelKo": "더스티 핑크",
+  "labelEn": "Dusty pink",
+  "hex": "#D8A7A7",
+  "hexSource": "approx",
+  "tones": [
+   "pastel"
+  ],
+  "seasons": [
+   "springFall",
+   "summer"
+  ],
+  "seasonNote": "봄 파스텔",
+  "note": "근사값"
+ },
+ {
+  "id": "lavender",
+  "labelKo": "라벤더",
+  "labelEn": "Lavender",
+  "hex": "#E6E6FA",
+  "hexSource": "css",
+  "tones": [
+   "pastel"
+  ],
+  "seasons": [
+   "springFall",
+   "summer"
+  ],
+  "seasonNote": null,
+  "note": "CSS"
+ },
+ {
+  "id": "teal",
+  "labelKo": "틸",
+  "labelEn": "Teal",
+  "hex": "#008080",
+  "hexSource": "css",
+  "tones": [
+   "accent"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": "봄가을 중심",
+  "note": "CSS"
+ },
+ {
+  "id": "taupe",
+  "labelKo": "토프",
+  "labelEn": "Taupe",
+  "hex": "#483C32",
+  "hexSource": "wikipedia",
+  "tones": [
+   "earth"
+  ],
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "seasonNote": null,
+  "note": "Wikipedia"
+ }
+]

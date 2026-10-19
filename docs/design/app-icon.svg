@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  아침 코디 앱 아이콘 (maskable, 512×512)
+  - 전체 배경을 꽉 채움(마스크 형태가 원·스쿼클·물방울이어도 가장자리가 비지 않음).
+  - 안전 영역: 중심 (256,256) 반지름 204.8px(지름의 40%) 원. 해·티셔츠 모두 이 안에 들어감.
+  - 단색 fill만 사용, 그라데이션·외부 자산 없음. 티셔츠 path는 src/assets/silhouettes/top-tee-regular.svg와 같은 자체 제작 외곽선.
+  내보내기(C1):
+  - manifest icons: 192×192, 512×512 PNG, purpose "any maskable" (같은 SVG에서 렌더).
+  - apple-touch-icon: 180×180 PNG, 투명 없음(iOS가 자체 마스크를 씌우므로 모서리 둥글리기 금지),
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"> 로 연결.
+    예) npx sharp-cli -i docs/design/app-icon.svg -o public/apple-touch-icon.png resize 180 180
+       (또는 Inkscape: inkscape app-icon.svg -w 180 -h 180 -o apple-touch-icon.png)
+  - theme-color: 다크 #121212 / 라이트 #F6F5F1 (design-tokens.md 참조)
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="아침 코디">
+  <!-- 배경: 다크 상승면(순흑 아님) -->
+  <rect width="512" height="512" fill="#1C1C1E"/>
+  <!-- 아침 해: 저채도 앰버 액센트 -->
+  <circle cx="256" cy="244" r="152" fill="#E0BE7E"/>
+  <!-- 티셔츠 실루엣 (top-tee-regular 외곽선 ×2.2, 중앙 정렬) -->
+  <g transform="translate(36 -22) scale(2.2)">
+    <path d="M 88 70 Q 100 82 112 70 L 138 78 L 153 118 L 135 125 L 134 192 L 66 192 L 65 125 L 47 118 L 62 78 Z"
+          fill="#F2EDE4" stroke="#1C1C1E" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- 소매 솔기 -->
+    <path d="M 135 125 L 130 104 M 65 125 L 70 104" fill="none" stroke="#1C1C1E" stroke-opacity="0.35" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <!-- 인디고 하의 힌트: 티셔츠 아래 가로 띠 (안전 영역 안) -->
+  <rect x="182" y="402" width="148" height="26" rx="4" fill="#2C4270"/>
+</svg>

@@ -1,0 +1,232 @@
+{
+  "viewBox": "0 0 200 400",
+  "zOrder": [
+    "base",
+    "shoes",
+    "bottom",
+    "top",
+    "outer"
+  ],
+  "cropClip": {
+    "bottom": "rect 0 0 200 338 (clipPath id=clip-crop)"
+  },
+  "totalPaths": 28,
+  "layers": [
+    {
+      "file": "figure-base.svg",
+      "slot": "base",
+      "fit": null,
+      "length": null,
+      "labelKo": "기본 몸(머리·목·발목)",
+      "paths": 1
+    },
+    {
+      "file": "top-tee-regular.svg",
+      "slot": "top",
+      "fit": "regular",
+      "length": "regular",
+      "labelKo": "티셔츠 (레귤러)",
+      "paths": 1
+    },
+    {
+      "file": "top-tee-loose.svg",
+      "slot": "top",
+      "fit": "loose",
+      "length": "regular",
+      "labelKo": "티셔츠 (루즈)",
+      "paths": 1
+    },
+    {
+      "file": "top-shirt-regular.svg",
+      "slot": "top",
+      "fit": "regular",
+      "length": "regular",
+      "labelKo": "셔츠 (레귤러)",
+      "paths": 1
+    },
+    {
+      "file": "top-shirt-loose.svg",
+      "slot": "top",
+      "fit": "loose",
+      "length": "regular",
+      "labelKo": "셔츠 (루즈)",
+      "paths": 1
+    },
+    {
+      "file": "top-knit-regular.svg",
+      "slot": "top",
+      "fit": "regular",
+      "length": "regular",
+      "labelKo": "니트 (레귤러)",
+      "paths": 1
+    },
+    {
+      "file": "top-knit-loose.svg",
+      "slot": "top",
+      "fit": "loose",
+      "length": "regular",
+      "labelKo": "니트 (루즈)",
+      "paths": 1
+    },
+    {
+      "file": "top-hoodie-regular.svg",
+      "slot": "top",
+      "fit": "regular",
+      "length": "regular",
+      "labelKo": "후디 (레귤러)",
+      "paths": 1
+    },
+    {
+      "file": "top-hoodie-loose.svg",
+      "slot": "top",
+      "fit": "loose",
+      "length": "regular",
+      "labelKo": "후디 (루즈)",
+      "paths": 1
+    },
+    {
+      "file": "top-polo-regular.svg",
+      "slot": "top",
+      "fit": "regular",
+      "length": "regular",
+      "labelKo": "폴로 (레귤러)",
+      "paths": 1
+    },
+    {
+      "file": "top-polo-loose.svg",
+      "slot": "top",
+      "fit": "loose",
+      "length": "regular",
+      "labelKo": "폴로 (루즈)",
+      "paths": 1
+    },
+    {
+      "file": "bottom-straight.svg",
+      "slot": "bottom",
+      "fit": "straight",
+      "length": "regular",
+      "labelKo": "하의 스트레이트",
+      "paths": 1
+    },
+    {
+      "file": "bottom-tapered.svg",
+      "slot": "bottom",
+      "fit": "tapered",
+      "length": "regular",
+      "labelKo": "하의 테이퍼드",
+      "paths": 1
+    },
+    {
+      "file": "bottom-wide.svg",
+      "slot": "bottom",
+      "fit": "wide",
+      "length": "regular",
+      "labelKo": "하의 와이드",
+      "paths": 1
+    },
+    {
+      "file": "bottom-slim.svg",
+      "slot": "bottom",
+      "fit": "slim",
+      "length": "regular",
+      "labelKo": "하의 슬림",
+      "paths": 1
+    },
+    {
+      "file": "shoes-sneaker.svg",
+      "slot": "shoes",
+      "fit": null,
+      "length": null,
+      "labelKo": "스니커즈 (흰/컬러 공용)",
+      "paths": 1
+    },
+    {
+      "file": "shoes-running.svg",
+      "slot": "shoes",
+      "fit": null,
+      "length": null,
+      "labelKo": "러닝화",
+      "paths": 1
+    },
+    {
+      "file": "shoes-loafer.svg",
+      "slot": "shoes",
+      "fit": null,
+      "length": null,
+      "labelKo": "로퍼 (페니/태슬 공용)",
+      "paths": 2
+    },
+    {
+      "file": "shoes-derby.svg",
+      "slot": "shoes",
+      "fit": null,
+      "length": null,
+      "labelKo": "더비 / 옥스포드 공용",
+      "paths": 1
+    },
+    {
+      "file": "shoes-chelsea.svg",
+      "slot": "shoes",
+      "fit": null,
+      "length": null,
+      "labelKo": "첼시 부츠",
+      "paths": 1
+    },
+    {
+      "file": "shoes-workboot.svg",
+      "slot": "shoes",
+      "fit": null,
+      "length": null,
+      "labelKo": "워크 부츠",
+      "paths": 1
+    },
+    {
+      "file": "shoes-chukka.svg",
+      "slot": "shoes",
+      "fit": null,
+      "length": null,
+      "labelKo": "척카 부츠",
+      "paths": 1
+    },
+    {
+      "file": "shoes-sandal.svg",
+      "slot": "shoes",
+      "fit": null,
+      "length": null,
+      "labelKo": "샌들/슬리퍼",
+      "paths": 1
+    },
+    {
+      "file": "outer-short.svg",
+      "slot": "outer",
+      "fit": "regular",
+      "length": "short",
+      "labelKo": "블루종 / 데님 재킷 (숏)",
+      "paths": 1
+    },
+    {
+      "file": "outer-regular.svg",
+      "slot": "outer",
+      "fit": "regular",
+      "length": "regular",
+      "labelKo": "블레이저 / 셔츠 재킷 (레귤러)",
+      "paths": 1
+    },
+    {
+      "file": "outer-long.svg",
+      "slot": "outer",
+      "fit": "regular",
+      "length": "long",
+      "labelKo": "코트 / 트렌치 (롱)",
+      "paths": 1
+    },
+    {
+      "file": "outer-puffer.svg",
+      "slot": "outer",
+      "fit": "regular",
+      "length": "regular",
+      "labelKo": "패딩 (레귤러)",
+      "paths": 1
+    }
+  ]
+}

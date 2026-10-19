@@ -1,0 +1,31 @@
+[
+ {
+  "season": "springFall",
+  "maxLayers": 3,
+  "order": [
+   "base",
+   "mid",
+   "outer"
+  ],
+  "note": "안쪽일수록 얇고 매끈, 바깥일수록 두껍고 질감. 기장은 안 < 밖"
+ },
+ {
+  "season": "summer",
+  "maxLayers": 2,
+  "order": [
+   "base",
+   "outer"
+  ],
+  "note": "2겹 초과 금지. 아우터는 오버셔츠"
+ },
+ {
+  "season": "winter",
+  "maxLayers": 3,
+  "order": [
+   "base",
+   "mid",
+   "outer"
+  ],
+  "note": "니트 기장이 코트 밖으로 나오지 않게. 롱 코트 안 숏 아우터는 변주"
+ }
+]

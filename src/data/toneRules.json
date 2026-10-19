@@ -1,0 +1,305 @@
+{
+ "groups": [
+  {
+   "id": "neutral",
+   "labelKo": "뉴트럴",
+   "colors": [
+    "white",
+    "offWhite",
+    "cream",
+    "oatmeal",
+    "beige",
+    "lightGrey",
+    "midGrey",
+    "charcoal",
+    "black",
+    "navy",
+    "khaki",
+    "tan",
+    "brown",
+    "olive",
+    "lightBlue"
+   ],
+   "note": "옷장의 뼈대. 서로 거의 다 섞임"
+  },
+  {
+   "id": "earth",
+   "labelKo": "어스톤",
+   "colors": [
+    "beige",
+    "khaki",
+    "tan",
+    "camel",
+    "brown",
+    "chocolate",
+    "olive",
+    "sage",
+    "rust",
+    "taupe",
+    "oatmeal"
+   ],
+   "note": "따뜻하고 탁한 자연색. 서로 톤온톤이 쉬움"
+  },
+  {
+   "id": "mono",
+   "labelKo": "모노톤",
+   "colors": [
+    "white",
+    "lightGrey",
+    "greyMelange",
+    "midGrey",
+    "charcoal",
+    "black",
+    "blackDenim"
+   ],
+   "note": "무채색. 명도 차이·질감으로 변화를 줘야 함"
+  },
+  {
+   "id": "navyBase",
+   "labelKo": "네이비 베이스",
+   "colors": [
+    "navy",
+    "indigo",
+    "midDenim",
+    "lightDenim",
+    "lightBlue",
+    "skyBlue"
+   ],
+   "note": "블루 계열 톤온톤. 가장 실패가 적은 기반색"
+  },
+  {
+   "id": "accent",
+   "labelKo": "포인트 컬러",
+   "colors": [
+    "burgundy",
+    "rust",
+    "mustard",
+    "forestGreen",
+    "teal"
+   ],
+   "note": "한 아이템에만, 전체의 10~30% 이내"
+  },
+  {
+   "id": "pastel",
+   "labelKo": "파스텔",
+   "colors": [
+    "lightBlue",
+    "skyBlue",
+    "dustyPink",
+    "lavender",
+    "sage",
+    "lightDenim",
+    "cream"
+   ],
+   "note": "봄·여름용 저채도 밝은 색. 뉴트럴 위에 얹음"
+  }
+ ],
+ "rules": [
+  {
+   "id": "T1",
+   "from": "neutral",
+   "to": "neutral",
+   "modifier": 0,
+   "note": "뉴트럴+뉴트럴은 항상 OK. 같은 그룹 내 명도 차를 둘 것(올화이트·올그레이 주의)",
+   "sources": [
+    "RMRS1",
+    "MF",
+    "FB3"
+   ],
+   "flags": []
+  },
+  {
+   "id": "T2",
+   "from": "earth",
+   "to": "earth",
+   "modifier": 0,
+   "note": "어스+어스 = 톤온톤. 밝은 색을 한 점 끼우면 깔끔",
+   "sources": [
+    "VK2",
+    "AtG1",
+    "WK2"
+   ],
+   "flags": []
+  },
+  {
+   "id": "T3",
+   "from": "earth",
+   "to": "navyBase",
+   "modifier": 1,
+   "note": "가장 안정적인 교차 조합. 블루-브라운 보색 원리",
+   "sources": [
+    "GG",
+    "Acorn",
+    "Celio"
+   ],
+   "flags": []
+  },
+  {
+   "id": "T4",
+   "from": "mono",
+   "to": "navyBase",
+   "modifier": 0,
+   "note": "가능. 블랙과 네이비는 명도 차가 분명한 네이비를 쓸 것",
+   "sources": [
+    "MRP",
+    "FB4",
+    "Esq"
+   ],
+   "flags": [
+    "disputed"
+   ]
+  },
+  {
+   "id": "T5",
+   "from": "mono",
+   "to": "earth",
+   "modifier": -1,
+   "limitColors": [
+    "black",
+    "blackDenim"
+   ],
+   "note": "모노(블랙)+어스는 조건부. 블랙+브라운 가죽 혼용 금지. 블랙 상의+카멜 코트 같은 큰 면적 대비는 럭셔리. limitColors: 블랙 계열일 때만 적용(P3-09: 차콜은 초콜릿 더비·카멜 코트가 R1 classic이라 제외)",
+   "sources": [
+    "MM",
+    "WH2",
+    "VK2"
+   ],
+   "flags": [
+    "disputed"
+   ]
+  },
+  {
+   "id": "T6",
+   "from": "accent",
+   "to": "accent",
+   "modifier": 0,
+   "note": "포인트 컬러는 1개만. 감점(−2)은 toneRules.accentAccent 상수로 한 번만 적용",
+   "sources": [
+    "Vou1",
+    "WH1",
+    "RMRS1"
+   ],
+   "flags": []
+  },
+  {
+   "id": "T7",
+   "from": "pastel",
+   "to": "neutral",
+   "modifier": 0,
+   "note": "파스텔은 뉴트럴 하의 위에 상의로",
+   "sources": [
+    "WH1",
+    "AtG1"
+   ],
+   "flags": []
+  },
+  {
+   "id": "T8",
+   "from": "mono",
+   "to": "mono",
+   "modifier": 0,
+   "note": "무채색을 섞을 때 가죽(신발·벨트)은 한 색으로 통일",
+   "sources": [
+    "WH2",
+    "MM"
+   ],
+   "flags": []
+  },
+  {
+   "id": "T9",
+   "from": "pastel",
+   "to": "pastel",
+   "modifier": 0,
+   "note": "탁한 색은 여러 개 섞여도 괜찮지만 파스텔끼리 두 개 이상은 변주. 선명한 색은 하나만",
+   "sources": [
+    "WH1",
+    "RMRS 색상환"
+   ],
+   "flags": []
+  }
+ ],
+ "sameColorTopBottom": -2,
+ "accentAccent": -2,
+ "hue": {
+  "analogous": [
+   {
+    "id": "blue",
+    "labelKo": "블루 계열",
+    "colors": [
+     "navy",
+     "indigo",
+     "midDenim",
+     "lightDenim",
+     "lightBlue",
+     "skyBlue",
+     "lavender"
+    ]
+   },
+   {
+    "id": "green",
+    "labelKo": "그린 계열",
+    "colors": [
+     "olive",
+     "sage",
+     "mustard",
+     "forestGreen"
+    ]
+   },
+   {
+    "id": "brown",
+    "labelKo": "브라운 계열",
+    "colors": [
+     "brown",
+     "rust",
+     "camel",
+     "tan",
+     "chocolate",
+     "taupe",
+     "beige",
+     "khaki",
+     "oatmeal"
+    ]
+   }
+  ],
+  "complementary": [
+   {
+    "a": "blue",
+    "b": "brown",
+    "tag": "classic",
+    "note": "인디고+러스트, 네이비+카멜",
+    "sources": [
+     "WH1",
+     "GG"
+    ]
+   },
+   {
+    "a": "green",
+    "b": "burgundy",
+    "tag": "classic",
+    "note": "올리브+버건디",
+    "sources": [
+     "WH1"
+    ]
+   },
+   {
+    "a": "charcoal",
+    "b": "mustard",
+    "tag": "variation",
+    "note": "",
+    "sources": [
+     "RMRS 색상환"
+    ]
+   }
+  ],
+  "achromatic": [
+   "white",
+   "offWhite",
+   "lightGrey",
+   "greyMelange",
+   "midGrey",
+   "charcoal",
+   "black",
+   "blackDenim"
+  ]
+ }
+}

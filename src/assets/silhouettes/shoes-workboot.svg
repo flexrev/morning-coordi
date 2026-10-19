@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 아침 코디 실루엣 레이어: 워크 부츠 · viewBox 0 0 200 400 · 단색 fill, 그라데이션 없음 · 원본 제작(자체) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" role="img" aria-label="워크 부츠">
+  <path data-slot="shoes" fill="var(--c-shoes, #222222)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"
+        d="M 66 334 L 98 334 L 100 392 L 50 392 Q 40 390 46 378 Q 54 366 66 362 Z M 46 384 L 100 384 M 72 340 L 84 340 M 71 348 L 83 348 M 70 356 L 82 356 M 134 334 L 102 334 L 100 392 L 150 392 Q 160 390 154 378 Q 146 366 134 362 Z M 154 384 L 100 384 M 128 340 L 116 340 M 129 348 L 117 348 M 130 356 L 118 356"/>
+</svg>

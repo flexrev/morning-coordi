@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 아침 코디 실루엣 레이어: 셔츠 (루즈) · viewBox 0 0 200 400 · 단색 fill, 그라데이션 없음 · 원본 제작(자체) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" role="img" aria-label="셔츠 (루즈)">
+  <path data-slot="top" data-fit="loose" data-length="regular" fill="var(--c-top, #BBBBBB)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"
+        d="M 54 82 L 84 66 L 96 84 L 100 78 L 104 84 L 116 66 L 146 82 L 161 206 L 141 206 L 142 200 L 58 200 L 59 206 L 39 206 Z M 141 206 L 137 118 M 59 206 L 63 118 M 100 86 L 100 200 M 142 198 L 160 198 M 40 198 L 58 198"/>
+</svg>

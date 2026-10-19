@@ -1,0 +1,1483 @@
+[
+ {
+  "shoe": "sneakerWhite",
+  "bottoms": [
+   {
+    "material": "denimIndigo",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 5,
+    "note": "흰 티 + 인디고 + 흰 스니커즈 = 1순위 클래식",
+    "flags": []
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "straight",
+    "length": "nobreak",
+    "score": 5,
+    "note": "2025 기본",
+    "flags": []
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "wide",
+    "length": "half",
+    "score": 4,
+    "note": "슬림형 스니커즈면 발이 묻힘 → 볼륨형 권장",
+    "flags": []
+   },
+   {
+    "material": "denimWashed",
+    "fit": "straight",
+    "length": "crop",
+    "score": 5,
+    "note": "봄·여름",
+    "flags": []
+   },
+   {
+    "material": "denimBlack",
+    "fit": "slim",
+    "length": "nobreak",
+    "score": 4,
+    "note": "도시적",
+    "flags": []
+   },
+   {
+    "material": "chino",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 5,
+    "note": "봄가을 기본",
+    "flags": []
+   },
+   {
+    "material": "chino",
+    "fit": "wide",
+    "length": "nobreak",
+    "score": 4,
+    "note": "크롭 상의와",
+    "flags": []
+   },
+   {
+    "material": "wool",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 4,
+    "note": "가죽 미니멀 스니커즈만. 캔버스는 3",
+    "flags": []
+   },
+   {
+    "material": "wool",
+    "fit": "wide",
+    "length": "half",
+    "score": 3,
+    "note": "스니커즈가 가늘면 2",
+    "flags": []
+   },
+   {
+    "material": "corduroy",
+    "fit": "straight",
+    "length": "nobreak",
+    "score": 4,
+    "note": "가을",
+    "flags": []
+   },
+   {
+    "material": "linen",
+    "fit": "regular",
+    "length": "crop",
+    "score": 4,
+    "note": "여름. 캔버스형 5",
+    "flags": []
+   },
+   {
+    "material": "jersey",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 4,
+    "note": "트랙팬츠 — 스트릿",
+    "flags": []
+   }
+  ],
+  "lengths": [
+   {
+    "length": "crop",
+    "score": 4,
+    "note": "양말 또는 맨발목. 봄가을·여름"
+   },
+   {
+    "length": "nobreak",
+    "score": 5,
+    "note": "기본"
+   },
+   {
+    "length": "half",
+    "score": 4,
+    "note": "무난"
+   },
+   {
+    "length": "full",
+    "score": 2,
+    "note": "밑단이 신발 위에 뭉침"
+   }
+  ]
+ },
+ {
+  "shoe": "sneakerColor",
+  "bottoms": [
+   {
+    "material": "denimWashed",
+    "fit": "wide",
+    "length": "full",
+    "score": 4,
+    "note": "레트로 러닝 + 와이드 데님 스태킹 = 스트릿 클래식",
+    "flags": []
+   },
+   {
+    "material": "denimWashed",
+    "fit": "straight",
+    "length": "nobreak",
+    "score": 5,
+    "note": "가장 안전",
+    "flags": []
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "straight",
+    "length": "nobreak",
+    "score": 4,
+    "note": "",
+    "flags": []
+   },
+   {
+    "material": "chino",
+    "fit": "wide",
+    "length": "nobreak",
+    "score": 4,
+    "note": "2025 캐주얼",
+    "flags": []
+   },
+   {
+    "material": "jersey",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 5,
+    "note": "스웻팬츠 — 애슬레저 기본",
+    "flags": []
+   },
+   {
+    "material": "nylonTech",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 5,
+    "note": "고프코어",
+    "flags": []
+   },
+   {
+    "material": "wool",
+    "fit": "tapered",
+    "length": "crop",
+    "score": 3,
+    "note": "'슬랙스 + 레트로' 변주. 양말 포인트",
+    "flags": []
+   },
+   {
+    "material": "corduroy",
+    "fit": "wide",
+    "length": "half",
+    "score": 3,
+    "note": "변주",
+    "flags": []
+   }
+  ],
+  "lengths": [
+   {
+    "length": "crop",
+    "score": 4,
+    "note": "양말 색 포인트 가능"
+   },
+   {
+    "length": "nobreak",
+    "score": 5,
+    "note": "기본"
+   },
+   {
+    "length": "half",
+    "score": 4,
+    "note": "무난"
+   },
+   {
+    "length": "full",
+    "score": 3,
+    "note": "레트로 스니커즈 + 와이드 스태킹은 스트릿 변주"
+   }
+  ]
+ },
+ {
+  "shoe": "running",
+  "bottoms": [
+   {
+    "material": "jersey",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 5,
+    "note": "트랙·스웻 — 기본",
+    "flags": []
+   },
+   {
+    "material": "nylonTech",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 5,
+    "note": "고프코어 클래식",
+    "flags": []
+   },
+   {
+    "material": "denimWashed",
+    "fit": "straight",
+    "length": "nobreak",
+    "score": 4,
+    "note": "캐주얼",
+    "flags": []
+   },
+   {
+    "material": "chino",
+    "fit": "wide",
+    "length": "crop",
+    "score": 3,
+    "note": "변주",
+    "flags": []
+   },
+   {
+    "material": "wool",
+    "fit": "*",
+    "length": "*",
+    "score": 2,
+    "note": "포멀도 격차 경고 (\"러닝화 + 울 슬랙스\")",
+    "flags": [
+     "disputed"
+    ]
+   },
+   {
+    "material": "flannel",
+    "fit": "*",
+    "length": "*",
+    "score": 1,
+    "note": "피함",
+    "flags": []
+   },
+   {
+    "material": "tweed",
+    "fit": "*",
+    "length": "*",
+    "score": 1,
+    "note": "피함",
+    "flags": []
+   }
+  ],
+  "lengths": [
+   {
+    "length": "crop",
+    "score": 4,
+    "note": "러닝화는 발목이 보여야 덜 둔해 보임"
+   },
+   {
+    "length": "nobreak",
+    "score": 5,
+    "note": "기본"
+   },
+   {
+    "length": "half",
+    "score": 3,
+    "note": "두꺼운 밑창에 원단 걸림"
+   },
+   {
+    "length": "full",
+    "score": 2,
+    "note": "피함"
+   }
+  ]
+ },
+ {
+  "shoe": "loaferPenny",
+  "bottoms": [
+   {
+    "material": "chino",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 5,
+    "note": "계획서 예시 \"치노 + 로퍼\". 사계절",
+    "flags": []
+   },
+   {
+    "material": "chino",
+    "fit": "tapered",
+    "length": "crop",
+    "score": 5,
+    "note": "여름 노삭스",
+    "flags": []
+   },
+   {
+    "material": "chino",
+    "fit": "wide",
+    "length": "half",
+    "score": 4,
+    "note": "2025 와이드 치노 + 로퍼",
+    "flags": []
+   },
+   {
+    "material": "wool",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 5,
+    "note": "비즈니스 캐주얼 기본",
+    "flags": []
+   },
+   {
+    "material": "wool",
+    "fit": "wide",
+    "length": "half",
+    "score": 5,
+    "note": "2025 와이드 슬랙스 + 로퍼 (양말 또는 노삭스)",
+    "flags": []
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "straight",
+    "length": "nobreak",
+    "score": 5,
+    "note": "아이비 클래식",
+    "flags": []
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "tapered",
+    "length": "crop",
+    "score": 4,
+    "note": "봄가을",
+    "flags": []
+   },
+   {
+    "material": "denimWashed",
+    "fit": "straight",
+    "length": "nobreak",
+    "score": 3,
+    "note": "밝은 워시드는 로퍼와 격차. 스웨이드 로퍼면 4",
+    "flags": []
+   },
+   {
+    "material": "denimBlack",
+    "fit": "slim",
+    "length": "nobreak",
+    "score": 4,
+    "note": "블랙 로퍼",
+    "flags": []
+   },
+   {
+    "material": "corduroy",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 5,
+    "note": "가을 클래식 (W Korea: 코듀로이 + 브라운 로퍼)",
+    "flags": []
+   },
+   {
+    "material": "flannel",
+    "fit": "tapered",
+    "length": "half",
+    "score": 4,
+    "note": "겨울 + 양말",
+    "flags": []
+   },
+   {
+    "material": "linen",
+    "fit": "regular",
+    "length": "crop",
+    "score": 5,
+    "note": "여름 클래식",
+    "flags": []
+   }
+  ],
+  "lengths": [
+   {
+    "length": "crop",
+    "score": 5,
+    "note": "여름 클래식. 노삭스/페이크삭스"
+   },
+   {
+    "length": "nobreak",
+    "score": 5,
+    "note": "사계절 기본"
+   },
+   {
+    "length": "half",
+    "score": 4,
+    "note": "가을·겨울 울 슬랙스 + 양말"
+   },
+   {
+    "length": "full",
+    "score": 2,
+    "note": "로퍼 낮은 등판 위로 원단이 덮임"
+   }
+  ]
+ },
+ {
+  "shoe": "loaferTassel",
+  "bottoms": [
+   {
+    "material": "wool",
+    "fit": "tapered",
+    "length": "half",
+    "score": 5,
+    "note": "클래식",
+    "flags": []
+   },
+   {
+    "material": "wool",
+    "fit": "wide",
+    "length": "half",
+    "score": 5,
+    "note": "2025",
+    "flags": []
+   },
+   {
+    "material": "flannel",
+    "fit": "tapered",
+    "length": "half",
+    "score": 5,
+    "note": "겨울 클래식",
+    "flags": []
+   },
+   {
+    "material": "chino",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 4,
+    "note": "",
+    "flags": []
+   },
+   {
+    "material": "corduroy",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 4,
+    "note": "",
+    "flags": []
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "straight",
+    "length": "nobreak",
+    "score": 4,
+    "note": "생지·진청만",
+    "flags": []
+   },
+   {
+    "material": "denimWashed",
+    "fit": "*",
+    "length": "*",
+    "score": 2,
+    "note": "격차",
+    "flags": []
+   },
+   {
+    "material": "linen",
+    "fit": "regular",
+    "length": "crop",
+    "score": 3,
+    "note": "양말 없이 태슬은 어색. 변주",
+    "flags": []
+   }
+  ],
+  "lengths": [
+   {
+    "length": "crop",
+    "score": 4,
+    "note": "여름 OK. 페니보다 드레시하므로 양말 권장"
+   },
+   {
+    "length": "nobreak",
+    "score": 5,
+    "note": "기본"
+   },
+   {
+    "length": "half",
+    "score": 5,
+    "note": "슬랙스·플란넬 + 태슬 = 클래식"
+   },
+   {
+    "length": "full",
+    "score": 2,
+    "note": "피함"
+   }
+  ]
+ },
+ {
+  "shoe": "derby",
+  "bottoms": [
+   {
+    "material": "wool",
+    "fit": "tapered",
+    "length": "half",
+    "score": 5,
+    "note": "비즈니스 기본",
+    "flags": []
+   },
+   {
+    "material": "wool",
+    "fit": "straight",
+    "length": "half",
+    "score": 5,
+    "note": "",
+    "flags": []
+   },
+   {
+    "material": "wool",
+    "fit": "wide",
+    "length": "half",
+    "score": 4,
+    "note": "두꺼운 밑창 더비면 5",
+    "flags": []
+   },
+   {
+    "material": "flannel",
+    "fit": "tapered",
+    "length": "half",
+    "score": 5,
+    "note": "겨울 클래식",
+    "flags": []
+   },
+   {
+    "material": "chino",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 5,
+    "note": "사계절",
+    "flags": []
+   },
+   {
+    "material": "chino",
+    "fit": "straight",
+    "length": "nobreak",
+    "score": 4,
+    "note": "",
+    "flags": []
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "straight",
+    "length": "nobreak",
+    "score": 5,
+    "note": "두꺼운 밑창(플레인 토) 더비가 최적",
+    "flags": []
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "wide",
+    "length": "half",
+    "score": 4,
+    "note": "두꺼운 밑창",
+    "flags": []
+   },
+   {
+    "material": "denimBlack",
+    "fit": "slim",
+    "length": "nobreak",
+    "score": 5,
+    "note": "블랙 더비",
+    "flags": []
+   },
+   {
+    "material": "denimWashed",
+    "fit": "straight",
+    "length": "nobreak",
+    "score": 3,
+    "note": "스웨이드 더비면 4",
+    "flags": []
+   },
+   {
+    "material": "corduroy",
+    "fit": "straight",
+    "length": "half",
+    "score": 5,
+    "note": "가을·겨울",
+    "flags": []
+   },
+   {
+    "material": "tweed",
+    "fit": "straight",
+    "length": "half",
+    "score": 4,
+    "note": "바지",
+    "flags": []
+   }
+  ],
+  "lengths": [
+   {
+    "length": "crop",
+    "score": 3,
+    "note": "양말 보이기. 변주"
+   },
+   {
+    "length": "nobreak",
+    "score": 5,
+    "note": "기본"
+   },
+   {
+    "length": "half",
+    "score": 5,
+    "note": "클래식"
+   },
+   {
+    "length": "full",
+    "score": 3,
+    "note": "올드 포멀. 두꺼운 밑창 더비 + 와이드 데님이면 4"
+   }
+  ]
+ },
+ {
+  "shoe": "oxford",
+  "bottoms": [
+   {
+    "material": "wool",
+    "fit": "tapered",
+    "length": "half",
+    "score": 5,
+    "note": "수트 — 유일한 '기본'",
+    "flags": []
+   },
+   {
+    "material": "wool",
+    "fit": "slim",
+    "length": "nobreak",
+    "score": 4,
+    "note": "모던 포멀",
+    "flags": []
+   },
+   {
+    "material": "wool",
+    "fit": "wide",
+    "length": "half",
+    "score": 4,
+    "note": "",
+    "flags": []
+   },
+   {
+    "material": "flannel",
+    "fit": "tapered",
+    "length": "half",
+    "score": 4,
+    "note": "",
+    "flags": []
+   },
+   {
+    "material": "chino",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 3,
+    "note": "포멀도 격차. 다크 치노 + 블레이저일 때만",
+    "flags": []
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "*",
+    "length": "*",
+    "score": 2,
+    "note": "격차 경고",
+    "flags": []
+   },
+   {
+    "material": "denimWashed",
+    "fit": "*",
+    "length": "*",
+    "score": 1,
+    "note": "피함",
+    "flags": []
+   },
+   {
+    "material": "jersey",
+    "fit": "*",
+    "length": "*",
+    "score": 1,
+    "note": "피함",
+    "flags": []
+   },
+   {
+    "material": "nylonTech",
+    "fit": "*",
+    "length": "*",
+    "score": 1,
+    "note": "피함",
+    "flags": []
+   }
+  ],
+  "lengths": [
+   {
+    "length": "crop",
+    "score": 2,
+    "note": "포멀도 충돌"
+   },
+   {
+    "length": "nobreak",
+    "score": 4,
+    "note": "모던 포멀"
+   },
+   {
+    "length": "half",
+    "score": 5,
+    "note": "클래식 포멀 기장"
+   },
+   {
+    "length": "full",
+    "score": 3,
+    "note": "전통적이지만 올드"
+   }
+  ]
+ },
+ {
+  "shoe": "chelsea",
+  "bottoms": [
+   {
+    "material": "denimBlack",
+    "fit": "slim",
+    "length": "nobreak",
+    "score": 5,
+    "note": "첼시의 대표 조합",
+    "flags": []
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "slim",
+    "length": "nobreak",
+    "score": 5,
+    "note": "",
+    "flags": []
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 5,
+    "note": "",
+    "flags": []
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "straight",
+    "length": "half",
+    "score": 4,
+    "note": "",
+    "flags": []
+   },
+   {
+    "material": "wool",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 5,
+    "note": "겨울 비즈니스 캐주얼",
+    "flags": []
+   },
+   {
+    "material": "wool",
+    "fit": "slim",
+    "length": "nobreak",
+    "score": 5,
+    "note": "",
+    "flags": []
+   },
+   {
+    "material": "flannel",
+    "fit": "tapered",
+    "length": "half",
+    "score": 4,
+    "note": "",
+    "flags": []
+   },
+   {
+    "material": "chino",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 4,
+    "note": "",
+    "flags": []
+   },
+   {
+    "material": "corduroy",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 4,
+    "note": "",
+    "flags": []
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "wide",
+    "length": "*",
+    "score": 2,
+    "note": "부츠가 바지에 묻힘 (MR PORTER, Bootspy)",
+    "flags": []
+   },
+   {
+    "material": "denimWashed",
+    "fit": "wide",
+    "length": "*",
+    "score": 2,
+    "note": "부츠가 바지에 묻힘 (MR PORTER, Bootspy)",
+    "flags": []
+   },
+   {
+    "material": "denimBlack",
+    "fit": "wide",
+    "length": "*",
+    "score": 2,
+    "note": "부츠가 바지에 묻힘 (MR PORTER, Bootspy)",
+    "flags": []
+   },
+   {
+    "material": "corduroy",
+    "fit": "wide",
+    "length": "*",
+    "score": 2,
+    "note": "부츠가 바지에 묻힘 (MR PORTER, Bootspy)",
+    "flags": []
+   },
+   {
+    "material": "chino",
+    "fit": "wide",
+    "length": "*",
+    "score": 2,
+    "note": "부츠가 바지에 묻힘 (MR PORTER, Bootspy)",
+    "flags": []
+   },
+   {
+    "material": "wool",
+    "fit": "wide",
+    "length": "*",
+    "score": 2,
+    "note": "부츠가 바지에 묻힘 (MR PORTER, Bootspy)",
+    "flags": []
+   },
+   {
+    "material": "flannel",
+    "fit": "wide",
+    "length": "*",
+    "score": 2,
+    "note": "부츠가 바지에 묻힘 (MR PORTER, Bootspy)",
+    "flags": []
+   },
+   {
+    "material": "knitCotton",
+    "fit": "wide",
+    "length": "*",
+    "score": 2,
+    "note": "부츠가 바지에 묻힘 (MR PORTER, Bootspy)",
+    "flags": []
+   },
+   {
+    "material": "knitWool",
+    "fit": "wide",
+    "length": "*",
+    "score": 2,
+    "note": "부츠가 바지에 묻힘 (MR PORTER, Bootspy)",
+    "flags": []
+   },
+   {
+    "material": "knitCashmere",
+    "fit": "wide",
+    "length": "*",
+    "score": 2,
+    "note": "부츠가 바지에 묻힘 (MR PORTER, Bootspy)",
+    "flags": []
+   },
+   {
+    "material": "linen",
+    "fit": "wide",
+    "length": "*",
+    "score": 2,
+    "note": "부츠가 바지에 묻힘 (MR PORTER, Bootspy)",
+    "flags": []
+   },
+   {
+    "material": "jersey",
+    "fit": "wide",
+    "length": "*",
+    "score": 2,
+    "note": "부츠가 바지에 묻힘 (MR PORTER, Bootspy)",
+    "flags": []
+   },
+   {
+    "material": "leather",
+    "fit": "wide",
+    "length": "*",
+    "score": 2,
+    "note": "부츠가 바지에 묻힘 (MR PORTER, Bootspy)",
+    "flags": []
+   },
+   {
+    "material": "nylonTech",
+    "fit": "wide",
+    "length": "*",
+    "score": 2,
+    "note": "부츠가 바지에 묻힘 (MR PORTER, Bootspy)",
+    "flags": []
+   },
+   {
+    "material": "tweed",
+    "fit": "wide",
+    "length": "*",
+    "score": 2,
+    "note": "부츠가 바지에 묻힘 (MR PORTER, Bootspy)",
+    "flags": []
+   }
+  ],
+  "lengths": [
+   {
+    "length": "crop",
+    "score": 3,
+    "note": "부츠 입구가 드러남. 슬림·테이퍼드에서만 변주"
+   },
+   {
+    "length": "nobreak",
+    "score": 5,
+    "note": "기본. 밑단이 부츠 입구를 살짝 덮는 정도"
+   },
+   {
+    "length": "half",
+    "score": 4,
+    "note": "무난"
+   },
+   {
+    "length": "full",
+    "score": 3,
+    "note": "슬림 바지면 뭉침. 스트레이트면 4"
+   }
+  ]
+ },
+ {
+  "shoe": "workboot",
+  "bottoms": [
+   {
+    "material": "denimIndigo",
+    "fit": "straight",
+    "length": "half",
+    "score": 5,
+    "note": "계획서 예시 \"와이드 데님 + 묵직한 부츠\"의 안전판",
+    "flags": []
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "wide",
+    "length": "full",
+    "score": 5,
+    "note": "워크웨어 클래식 (스태킹)",
+    "flags": []
+   },
+   {
+    "material": "denimWashed",
+    "fit": "straight",
+    "length": "half",
+    "score": 4,
+    "note": "",
+    "flags": []
+   },
+   {
+    "material": "corduroy",
+    "fit": "straight",
+    "length": "half",
+    "score": 5,
+    "note": "늦가을·겨울",
+    "flags": []
+   },
+   {
+    "material": "corduroy",
+    "fit": "wide",
+    "length": "half",
+    "score": 4,
+    "note": "",
+    "flags": []
+   },
+   {
+    "material": "chino",
+    "fit": "straight",
+    "length": "half",
+    "score": 4,
+    "note": "두꺼운 트윌",
+    "flags": []
+   },
+   {
+    "material": "flannel",
+    "fit": "straight",
+    "length": "half",
+    "score": 3,
+    "note": "질감 OK, 포멀도 격차. 변주",
+    "flags": []
+   },
+   {
+    "material": "wool",
+    "fit": "*",
+    "length": "*",
+    "score": 2,
+    "note": "격차",
+    "flags": []
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "slim",
+    "length": "*",
+    "score": 2,
+    "note": "부츠 > 바지 폭. 다리 가늘어 보임",
+    "flags": []
+   },
+   {
+    "material": "denimWashed",
+    "fit": "slim",
+    "length": "*",
+    "score": 2,
+    "note": "부츠 > 바지 폭. 다리 가늘어 보임",
+    "flags": []
+   },
+   {
+    "material": "denimBlack",
+    "fit": "slim",
+    "length": "*",
+    "score": 2,
+    "note": "부츠 > 바지 폭. 다리 가늘어 보임",
+    "flags": []
+   },
+   {
+    "material": "corduroy",
+    "fit": "slim",
+    "length": "*",
+    "score": 2,
+    "note": "부츠 > 바지 폭. 다리 가늘어 보임",
+    "flags": []
+   },
+   {
+    "material": "chino",
+    "fit": "slim",
+    "length": "*",
+    "score": 2,
+    "note": "부츠 > 바지 폭. 다리 가늘어 보임",
+    "flags": []
+   },
+   {
+    "material": "wool",
+    "fit": "slim",
+    "length": "*",
+    "score": 2,
+    "note": "부츠 > 바지 폭. 다리 가늘어 보임",
+    "flags": []
+   },
+   {
+    "material": "flannel",
+    "fit": "slim",
+    "length": "*",
+    "score": 2,
+    "note": "부츠 > 바지 폭. 다리 가늘어 보임",
+    "flags": []
+   },
+   {
+    "material": "knitCotton",
+    "fit": "slim",
+    "length": "*",
+    "score": 2,
+    "note": "부츠 > 바지 폭. 다리 가늘어 보임",
+    "flags": []
+   },
+   {
+    "material": "knitWool",
+    "fit": "slim",
+    "length": "*",
+    "score": 2,
+    "note": "부츠 > 바지 폭. 다리 가늘어 보임",
+    "flags": []
+   },
+   {
+    "material": "knitCashmere",
+    "fit": "slim",
+    "length": "*",
+    "score": 2,
+    "note": "부츠 > 바지 폭. 다리 가늘어 보임",
+    "flags": []
+   },
+   {
+    "material": "linen",
+    "fit": "slim",
+    "length": "*",
+    "score": 2,
+    "note": "부츠 > 바지 폭. 다리 가늘어 보임",
+    "flags": []
+   },
+   {
+    "material": "jersey",
+    "fit": "slim",
+    "length": "*",
+    "score": 2,
+    "note": "부츠 > 바지 폭. 다리 가늘어 보임",
+    "flags": []
+   },
+   {
+    "material": "leather",
+    "fit": "slim",
+    "length": "*",
+    "score": 2,
+    "note": "부츠 > 바지 폭. 다리 가늘어 보임",
+    "flags": []
+   },
+   {
+    "material": "nylonTech",
+    "fit": "slim",
+    "length": "*",
+    "score": 2,
+    "note": "부츠 > 바지 폭. 다리 가늘어 보임",
+    "flags": []
+   },
+   {
+    "material": "tweed",
+    "fit": "slim",
+    "length": "*",
+    "score": 2,
+    "note": "부츠 > 바지 폭. 다리 가늘어 보임",
+    "flags": []
+   }
+  ],
+  "lengths": [
+   {
+    "length": "crop",
+    "score": 2,
+    "note": "부츠 목이 통째로 보임. 피함"
+   },
+   {
+    "length": "nobreak",
+    "score": 4,
+    "note": "스트레이트·와이드 데님에서"
+   },
+   {
+    "length": "half",
+    "score": 5,
+    "note": "기본. 밑단이 부츠 위에 한 번 걸침"
+   },
+   {
+    "length": "full",
+    "score": 4,
+    "note": "와이드 데님 스태킹. 워크웨어 클래식"
+   }
+  ]
+ },
+ {
+  "shoe": "chukka",
+  "bottoms": [
+   {
+    "material": "chino",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 5,
+    "note": "척카의 대표 조합",
+    "flags": []
+   },
+   {
+    "material": "chino",
+    "fit": "straight",
+    "length": "half",
+    "score": 5,
+    "note": "",
+    "flags": []
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 5,
+    "note": "",
+    "flags": []
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "straight",
+    "length": "half",
+    "score": 5,
+    "note": "",
+    "flags": []
+   },
+   {
+    "material": "denimWashed",
+    "fit": "straight",
+    "length": "nobreak",
+    "score": 4,
+    "note": "스웨이드 데저트 부츠",
+    "flags": []
+   },
+   {
+    "material": "corduroy",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 5,
+    "note": "가을",
+    "flags": []
+   },
+   {
+    "material": "wool",
+    "fit": "tapered",
+    "length": "nobreak",
+    "score": 4,
+    "note": "매끈한 가죽 척카만. 스웨이드 데저트 부츠 3",
+    "flags": []
+   },
+   {
+    "material": "flannel",
+    "fit": "tapered",
+    "length": "half",
+    "score": 3,
+    "note": "변주",
+    "flags": []
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "wide",
+    "length": "*",
+    "score": 3,
+    "note": "와이드엔 묻힘. 두꺼운 밑창이면 4",
+    "flags": []
+   },
+   {
+    "material": "denimWashed",
+    "fit": "wide",
+    "length": "*",
+    "score": 3,
+    "note": "와이드엔 묻힘. 두꺼운 밑창이면 4",
+    "flags": []
+   },
+   {
+    "material": "denimBlack",
+    "fit": "wide",
+    "length": "*",
+    "score": 3,
+    "note": "와이드엔 묻힘. 두꺼운 밑창이면 4",
+    "flags": []
+   },
+   {
+    "material": "corduroy",
+    "fit": "wide",
+    "length": "*",
+    "score": 3,
+    "note": "와이드엔 묻힘. 두꺼운 밑창이면 4",
+    "flags": []
+   },
+   {
+    "material": "chino",
+    "fit": "wide",
+    "length": "*",
+    "score": 3,
+    "note": "와이드엔 묻힘. 두꺼운 밑창이면 4",
+    "flags": []
+   },
+   {
+    "material": "wool",
+    "fit": "wide",
+    "length": "*",
+    "score": 3,
+    "note": "와이드엔 묻힘. 두꺼운 밑창이면 4",
+    "flags": []
+   },
+   {
+    "material": "flannel",
+    "fit": "wide",
+    "length": "*",
+    "score": 3,
+    "note": "와이드엔 묻힘. 두꺼운 밑창이면 4",
+    "flags": []
+   },
+   {
+    "material": "knitCotton",
+    "fit": "wide",
+    "length": "*",
+    "score": 3,
+    "note": "와이드엔 묻힘. 두꺼운 밑창이면 4",
+    "flags": []
+   },
+   {
+    "material": "knitWool",
+    "fit": "wide",
+    "length": "*",
+    "score": 3,
+    "note": "와이드엔 묻힘. 두꺼운 밑창이면 4",
+    "flags": []
+   },
+   {
+    "material": "knitCashmere",
+    "fit": "wide",
+    "length": "*",
+    "score": 3,
+    "note": "와이드엔 묻힘. 두꺼운 밑창이면 4",
+    "flags": []
+   },
+   {
+    "material": "linen",
+    "fit": "wide",
+    "length": "*",
+    "score": 3,
+    "note": "와이드엔 묻힘. 두꺼운 밑창이면 4",
+    "flags": []
+   },
+   {
+    "material": "jersey",
+    "fit": "wide",
+    "length": "*",
+    "score": 3,
+    "note": "와이드엔 묻힘. 두꺼운 밑창이면 4",
+    "flags": []
+   },
+   {
+    "material": "leather",
+    "fit": "wide",
+    "length": "*",
+    "score": 3,
+    "note": "와이드엔 묻힘. 두꺼운 밑창이면 4",
+    "flags": []
+   },
+   {
+    "material": "nylonTech",
+    "fit": "wide",
+    "length": "*",
+    "score": 3,
+    "note": "와이드엔 묻힘. 두꺼운 밑창이면 4",
+    "flags": []
+   },
+   {
+    "material": "tweed",
+    "fit": "wide",
+    "length": "*",
+    "score": 3,
+    "note": "와이드엔 묻힘. 두꺼운 밑창이면 4",
+    "flags": []
+   }
+  ],
+  "lengths": [
+   {
+    "length": "crop",
+    "score": 3,
+    "note": "봄가을 변주"
+   },
+   {
+    "length": "nobreak",
+    "score": 5,
+    "note": "기본"
+   },
+   {
+    "length": "half",
+    "score": 5,
+    "note": "치노·데님 + 척카 클래식"
+   },
+   {
+    "length": "full",
+    "score": 3,
+    "note": "뭉침"
+   }
+  ]
+ },
+ {
+  "shoe": "sandal",
+  "bottoms": [
+   {
+    "material": "linen",
+    "fit": "regular",
+    "length": "crop",
+    "score": 5,
+    "note": "여름 클래식",
+    "flags": []
+   },
+   {
+    "material": "linen",
+    "fit": "wide",
+    "length": "crop",
+    "score": 5,
+    "note": "",
+    "flags": []
+   },
+   {
+    "material": "chino",
+    "fit": "regular",
+    "length": "crop",
+    "score": 5,
+    "note": "쇼츠·크롭",
+    "flags": []
+   },
+   {
+    "material": "denimWashed",
+    "fit": "straight",
+    "length": "crop",
+    "score": 4,
+    "note": "캐주얼",
+    "flags": []
+   },
+   {
+    "material": "jersey",
+    "fit": "tapered",
+    "length": "crop",
+    "score": 4,
+    "note": "홈웨어 느낌 주의",
+    "flags": []
+   },
+   {
+    "material": "wool",
+    "fit": "wide",
+    "length": "crop",
+    "score": 3,
+    "note": "'슬랙스 + 샌들' 2025 변주. 가죽 샌들만",
+    "flags": []
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "*",
+    "length": "*",
+    "score": 2,
+    "note": "계절·무게 충돌",
+    "flags": [
+     "approx"
+    ]
+   },
+   {
+    "material": "corduroy",
+    "fit": "*",
+    "length": "*",
+    "score": 1,
+    "note": "계절·무게 충돌",
+    "flags": [
+     "approx"
+    ]
+   },
+   {
+    "material": "flannel",
+    "fit": "*",
+    "length": "*",
+    "score": 1,
+    "note": "계절·무게 충돌",
+    "flags": [
+     "approx"
+    ]
+   }
+  ],
+  "lengths": [
+   {
+    "length": "crop",
+    "score": 5,
+    "note": "여름 기본"
+   },
+   {
+    "length": "nobreak",
+    "score": 4,
+    "note": "무난"
+   },
+   {
+    "length": "half",
+    "score": 2,
+    "note": "발등이 가려져 답답"
+   },
+   {
+    "length": "full",
+    "score": 1,
+    "note": "피함"
+   }
+  ]
+ }
+]

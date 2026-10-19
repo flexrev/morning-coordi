@@ -1,0 +1,1465 @@
+[
+ {
+  "id": "color.white",
+  "label": "화이트",
+  "shortLabel": "화이트",
+  "aliases": [
+   "흰색",
+   "백색"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.offWhite",
+  "label": "오프화이트",
+  "shortLabel": "오프화이트",
+  "aliases": [
+   "에크루",
+   "아이보리"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.cream",
+  "label": "크림",
+  "shortLabel": "크림",
+  "aliases": [
+   "아이보리"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.oatmeal",
+  "label": "오트밀",
+  "shortLabel": "오트밀",
+  "aliases": [
+   "귀리색"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.beige",
+  "label": "베이지",
+  "shortLabel": "베이지",
+  "aliases": [
+   "연베이지"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.khaki",
+  "label": "카키",
+  "shortLabel": "카키",
+  "aliases": [
+   "황갈색",
+   "카키 베이지",
+   "베이지 계열"
+  ],
+  "help": "베이지 계열 황갈색. 한국에서 흔히 '카키'로 부르는 국방색은 '올리브'를 고르세요"
+ },
+ {
+  "id": "color.tan",
+  "label": "탄",
+  "shortLabel": "탄",
+  "aliases": [
+   "황토",
+   "연갈색"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.camel",
+  "label": "카멜",
+  "shortLabel": "카멜",
+  "aliases": [
+   "낙타색"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.brown",
+  "label": "브라운",
+  "shortLabel": "브라운",
+  "aliases": [
+   "갈색"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.chocolate",
+  "label": "초콜릿",
+  "shortLabel": "초콜릿",
+  "aliases": [
+   "다크 브라운",
+   "진갈색"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.lightGrey",
+  "label": "라이트 그레이",
+  "shortLabel": "라이트그레이",
+  "aliases": [
+   "연회색"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.greyMelange",
+  "label": "그레이 멜란지",
+  "shortLabel": "멜란지",
+  "aliases": [
+   "멜란지",
+   "마를"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.midGrey",
+  "label": "미드 그레이",
+  "shortLabel": "미드그레이",
+  "aliases": [
+   "회색",
+   "그레이"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.charcoal",
+  "label": "차콜",
+  "shortLabel": "차콜",
+  "aliases": [
+   "진회색"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.black",
+  "label": "블랙",
+  "shortLabel": "블랙",
+  "aliases": [
+   "검정"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.navy",
+  "label": "네이비",
+  "shortLabel": "네이비",
+  "aliases": [
+   "곤색",
+   "남색"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.indigo",
+  "label": "인디고",
+  "shortLabel": "인디고",
+  "aliases": [
+   "진청",
+   "생지",
+   "원워시",
+   "인디고 데님"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.midDenim",
+  "label": "미드워시 데님",
+  "shortLabel": "중청",
+  "aliases": [
+   "중청"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.lightDenim",
+  "label": "라이트워시 데님",
+  "shortLabel": "연청",
+  "aliases": [
+   "연청",
+   "라이트 워시"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.blackDenim",
+  "label": "블랙 데님",
+  "shortLabel": "블랙데님",
+  "aliases": [
+   "흑청"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.lightBlue",
+  "label": "라이트 블루",
+  "shortLabel": "라이트블루",
+  "aliases": [
+   "하늘색",
+   "옥스포드 블루"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.skyBlue",
+  "label": "스카이 블루",
+  "shortLabel": "스카이블루",
+  "aliases": [
+   "하늘색"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.olive",
+  "label": "올리브",
+  "shortLabel": "올리브",
+  "aliases": [
+   "카키그린",
+   "국방색",
+   "카키"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.forestGreen",
+  "label": "포레스트 그린",
+  "shortLabel": "포레스트",
+  "aliases": [
+   "딥그린",
+   "보틀그린"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.sage",
+  "label": "세이지",
+  "shortLabel": "세이지",
+  "aliases": [
+   "세이지 그린"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.burgundy",
+  "label": "버건디",
+  "shortLabel": "버건디",
+  "aliases": [
+   "와인",
+   "보르도"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.rust",
+  "label": "러스트",
+  "shortLabel": "러스트",
+  "aliases": [
+   "번트 오렌지",
+   "벽돌색"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.mustard",
+  "label": "머스터드",
+  "shortLabel": "머스터드",
+  "aliases": [
+   "겨자색"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.dustyPink",
+  "label": "더스티 핑크",
+  "shortLabel": "더스티핑크",
+  "aliases": [
+   "더스티 로즈"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.lavender",
+  "label": "라벤더",
+  "shortLabel": "라벤더",
+  "aliases": [
+   "연보라"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.teal",
+  "label": "틸",
+  "shortLabel": "틸",
+  "aliases": [
+   "청록"
+  ],
+  "help": ""
+ },
+ {
+  "id": "color.taupe",
+  "label": "토프",
+  "shortLabel": "토프",
+  "aliases": [
+   "회갈색"
+  ],
+  "help": ""
+ },
+ {
+  "id": "tone.neutral",
+  "label": "뉴트럴",
+  "shortLabel": "뉴트럴",
+  "aliases": [
+   "중립색"
+  ],
+  "help": ""
+ },
+ {
+  "id": "tone.earth",
+  "label": "어스톤",
+  "shortLabel": "어스톤",
+  "aliases": [
+   "흙색",
+   "자연색"
+  ],
+  "help": ""
+ },
+ {
+  "id": "tone.mono",
+  "label": "모노톤",
+  "shortLabel": "모노톤",
+  "aliases": [
+   "무채색"
+  ],
+  "help": ""
+ },
+ {
+  "id": "tone.navyBase",
+  "label": "네이비 베이스",
+  "shortLabel": "네이비",
+  "aliases": [
+   "블루 계열"
+  ],
+  "help": ""
+ },
+ {
+  "id": "tone.accent",
+  "label": "포인트 컬러",
+  "shortLabel": "포인트",
+  "aliases": [
+   "악센트"
+  ],
+  "help": ""
+ },
+ {
+  "id": "tone.pastel",
+  "label": "파스텔",
+  "shortLabel": "파스텔",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "season.springFall",
+  "label": "봄가을",
+  "shortLabel": "봄가을",
+  "aliases": [
+   "간절기"
+  ],
+  "help": "3~5월, 10~11월"
+ },
+ {
+  "id": "season.summer",
+  "label": "여름",
+  "shortLabel": "여름",
+  "aliases": [],
+  "help": "6~9월"
+ },
+ {
+  "id": "season.winter",
+  "label": "겨울",
+  "shortLabel": "겨울",
+  "aliases": [],
+  "help": "12~2월"
+ },
+ {
+  "id": "category.top",
+  "label": "상의",
+  "shortLabel": "상의",
+  "aliases": [
+   "탑"
+  ],
+  "help": ""
+ },
+ {
+  "id": "category.bottom",
+  "label": "하의",
+  "shortLabel": "하의",
+  "aliases": [
+   "바지",
+   "팬츠"
+  ],
+  "help": ""
+ },
+ {
+  "id": "category.shoes",
+  "label": "신발",
+  "shortLabel": "신발",
+  "aliases": [
+   "슈즈"
+  ],
+  "help": ""
+ },
+ {
+  "id": "category.outer",
+  "label": "아우터",
+  "shortLabel": "아우터",
+  "aliases": [
+   "겉옷",
+   "재킷",
+   "코트"
+  ],
+  "help": ""
+ },
+ {
+  "id": "material.denimIndigo",
+  "label": "인디고 데님",
+  "shortLabel": "인디고데님",
+  "aliases": [
+   "진청",
+   "생지",
+   "로우 데님",
+   "청바지"
+  ],
+  "help": "진청·생지. 가장 포멀한 데님"
+ },
+ {
+  "id": "material.denimWashed",
+  "label": "워시드 데님",
+  "shortLabel": "워시드데님",
+  "aliases": [
+   "연청",
+   "중청",
+   "청바지"
+  ],
+  "help": "연청·중청. 가장 캐주얼한 데님"
+ },
+ {
+  "id": "material.denimBlack",
+  "label": "블랙 데님",
+  "shortLabel": "블랙데님",
+  "aliases": [
+   "흑청"
+  ],
+  "help": ""
+ },
+ {
+  "id": "material.corduroy",
+  "label": "코듀로이",
+  "shortLabel": "코듀로이",
+  "aliases": [
+   "골덴",
+   "코르덴"
+  ],
+  "help": ""
+ },
+ {
+  "id": "material.chino",
+  "label": "치노",
+  "shortLabel": "치노",
+  "aliases": [
+   "면바지",
+   "치노 팬츠",
+   "코튼 팬츠"
+  ],
+  "help": "면바지"
+ },
+ {
+  "id": "material.wool",
+  "label": "울",
+  "shortLabel": "울",
+  "aliases": [
+   "울 슬랙스",
+   "슬랙스",
+   "정장 바지",
+   "트라우저",
+   "울 팬츠"
+  ],
+  "help": "하의로 쓰이면 울 슬랙스"
+ },
+ {
+  "id": "material.flannel",
+  "label": "플란넬",
+  "shortLabel": "플란넬",
+  "aliases": [
+   "후란넬",
+   "기모 울"
+  ],
+  "help": "바지는 플란넬 슬랙스(울). 코튼 플란넬 셔츠와 다름"
+ },
+ {
+  "id": "material.knitCotton",
+  "label": "코튼 니트",
+  "shortLabel": "코튼니트",
+  "aliases": [
+   "면 니트"
+  ],
+  "help": ""
+ },
+ {
+  "id": "material.knitWool",
+  "label": "울 니트",
+  "shortLabel": "울니트",
+  "aliases": [
+   "메리노",
+   "램스울"
+  ],
+  "help": ""
+ },
+ {
+  "id": "material.knitCashmere",
+  "label": "캐시미어 니트",
+  "shortLabel": "캐시미어",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "material.linen",
+  "label": "린넨",
+  "shortLabel": "린넨",
+  "aliases": [
+   "마"
+  ],
+  "help": ""
+ },
+ {
+  "id": "material.jersey",
+  "label": "저지/스웻",
+  "shortLabel": "저지",
+  "aliases": [
+   "티셔츠",
+   "스웻",
+   "트레이닝"
+  ],
+  "help": ""
+ },
+ {
+  "id": "material.leather",
+  "label": "가죽",
+  "shortLabel": "가죽",
+  "aliases": [
+   "레더",
+   "스웨이드"
+  ],
+  "help": ""
+ },
+ {
+  "id": "material.nylonTech",
+  "label": "나일론/테크",
+  "shortLabel": "나일론",
+  "aliases": [
+   "테크",
+   "셸",
+   "패딩"
+  ],
+  "help": ""
+ },
+ {
+  "id": "material.tweed",
+  "label": "트위드",
+  "shortLabel": "트위드",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "fit.top.slim",
+  "label": "슬림",
+  "shortLabel": "슬림",
+  "aliases": [
+   "스키니",
+   "타이트"
+  ],
+  "help": "몸에 붙음"
+ },
+ {
+  "id": "fit.top.regular",
+  "label": "레귤러",
+  "shortLabel": "레귤러",
+  "aliases": [
+   "정핏"
+  ],
+  "help": "손가락 2~3개 여유"
+ },
+ {
+  "id": "fit.top.loose",
+  "label": "루즈",
+  "shortLabel": "루즈",
+  "aliases": [
+   "루즈핏",
+   "릴렉스드",
+   "세미오버"
+  ],
+  "help": "어깨선이 2~5cm 내려감"
+ },
+ {
+  "id": "fit.top.oversized",
+  "label": "오버",
+  "shortLabel": "오버",
+  "aliases": [
+   "오버핏",
+   "오버사이즈",
+   "박시"
+  ],
+  "help": "어깨선 5cm 이상 드롭"
+ },
+ {
+  "id": "fit.bottom.slim",
+  "label": "슬림",
+  "shortLabel": "슬림",
+  "aliases": [
+   "스키니"
+  ],
+  "help": "밑단 단면 17cm 이하"
+ },
+ {
+  "id": "fit.bottom.tapered",
+  "label": "테이퍼드",
+  "shortLabel": "테이퍼드",
+  "aliases": [
+   "발목으로 좁아지는"
+  ],
+  "help": "허벅지 여유, 발목으로 좁아짐"
+ },
+ {
+  "id": "fit.bottom.regular",
+  "label": "레귤러",
+  "shortLabel": "레귤러",
+  "aliases": [
+   "정핏"
+  ],
+  "help": ""
+ },
+ {
+  "id": "fit.bottom.straight",
+  "label": "스트레이트",
+  "shortLabel": "스트레이트",
+  "aliases": [
+   "일자",
+   "세미와이드"
+  ],
+  "help": ""
+ },
+ {
+  "id": "fit.bottom.wide",
+  "label": "와이드",
+  "shortLabel": "와이드",
+  "aliases": [
+   "통바지",
+   "세미와이드",
+   "배기",
+   "벌룬"
+  ],
+  "help": ""
+ },
+ {
+  "id": "length.top.crop",
+  "label": "크롭",
+  "shortLabel": "크롭",
+  "aliases": [],
+  "help": "벨트 라인 또는 그 위"
+ },
+ {
+  "id": "length.top.regular",
+  "label": "레귤러",
+  "shortLabel": "레귤러",
+  "aliases": [],
+  "help": "엉덩이 중간"
+ },
+ {
+  "id": "length.top.long",
+  "label": "롱",
+  "shortLabel": "롱",
+  "aliases": [
+   "롱 셔츠",
+   "롱 니트"
+  ],
+  "help": "엉덩이 아래"
+ },
+ {
+  "id": "length.outer.short",
+  "label": "숏",
+  "shortLabel": "숏",
+  "aliases": [
+   "블루종 기장"
+  ],
+  "help": "허리~엉덩이 상단"
+ },
+ {
+  "id": "length.outer.regular",
+  "label": "레귤러",
+  "shortLabel": "레귤러",
+  "aliases": [
+   "하프 코트"
+  ],
+  "help": "엉덩이 덮음"
+ },
+ {
+  "id": "length.outer.long",
+  "label": "롱",
+  "shortLabel": "롱",
+  "aliases": [
+   "롱 코트"
+  ],
+  "help": "무릎 근처 이상"
+ },
+ {
+  "id": "length.trouser.crop",
+  "label": "크롭",
+  "shortLabel": "크롭",
+  "aliases": [
+   "9부",
+   "8부",
+   "앵클"
+  ],
+  "help": "발목 위 3~6cm"
+ },
+ {
+  "id": "length.trouser.nobreak",
+  "label": "노브레이크",
+  "shortLabel": "노브레이크",
+  "aliases": [
+   "발목 기장",
+   "정기장"
+  ],
+  "help": "밑단이 신발에 닿을락 말락"
+ },
+ {
+  "id": "length.trouser.half",
+  "label": "하프 브레이크",
+  "shortLabel": "하프",
+  "aliases": [
+   "원브레이크"
+  ],
+  "help": "신발에 살짝 닿아 주름 한 번"
+ },
+ {
+  "id": "length.trouser.full",
+  "label": "풀 브레이크",
+  "shortLabel": "풀",
+  "aliases": [
+   "기장 길게"
+  ],
+  "help": "신발 위로 원단이 쌓임"
+ },
+ {
+  "id": "shoe.sneakerWhite",
+  "label": "흰 스니커즈",
+  "shortLabel": "흰스니커즈",
+  "aliases": [
+   "운동화",
+   "화이트 스니커즈"
+  ],
+  "help": "가죽형이면 슬랙스 OK"
+ },
+ {
+  "id": "shoe.sneakerColor",
+  "label": "컬러 스니커즈",
+  "shortLabel": "컬러스니커즈",
+  "aliases": [
+   "레트로 스니커즈",
+   "운동화"
+  ],
+  "help": ""
+ },
+ {
+  "id": "shoe.running",
+  "label": "러닝화",
+  "shortLabel": "러닝화",
+  "aliases": [
+   "런닝화",
+   "러닝 슈즈"
+  ],
+  "help": ""
+ },
+ {
+  "id": "shoe.loaferPenny",
+  "label": "페니 로퍼",
+  "shortLabel": "페니로퍼",
+  "aliases": [
+   "로퍼"
+  ],
+  "help": ""
+ },
+ {
+  "id": "shoe.loaferTassel",
+  "label": "태슬 로퍼",
+  "shortLabel": "태슬로퍼",
+  "aliases": [
+   "비트 로퍼"
+  ],
+  "help": ""
+ },
+ {
+  "id": "shoe.derby",
+  "label": "더비",
+  "shortLabel": "더비",
+  "aliases": [
+   "구두",
+   "단화"
+  ],
+  "help": "끈 부분이 열린 구두"
+ },
+ {
+  "id": "shoe.oxford",
+  "label": "옥스포드",
+  "shortLabel": "옥스포드",
+  "aliases": [
+   "구두"
+  ],
+  "help": "끈 부분이 닫힌 구두"
+ },
+ {
+  "id": "shoe.chelsea",
+  "label": "첼시 부츠",
+  "shortLabel": "첼시부츠",
+  "aliases": [
+   "첼시",
+   "사이드고어"
+  ],
+  "help": ""
+ },
+ {
+  "id": "shoe.workboot",
+  "label": "워크 부츠",
+  "shortLabel": "워크부츠",
+  "aliases": [
+   "워커",
+   "레드윙",
+   "팀버랜드"
+  ],
+  "help": ""
+ },
+ {
+  "id": "shoe.chukka",
+  "label": "척카 부츠",
+  "shortLabel": "척카부츠",
+  "aliases": [
+   "데저트 부츠",
+   "클락스"
+  ],
+  "help": "데저트 부츠 포함"
+ },
+ {
+  "id": "shoe.sandal",
+  "label": "샌들/슬리퍼",
+  "shortLabel": "샌들",
+  "aliases": [
+   "쪼리",
+   "슬라이드",
+   "버켄"
+  ],
+  "help": ""
+ },
+ {
+  "id": "topType.dressShirtTie",
+  "label": "드레스 셔츠(타이)",
+  "shortLabel": "셔츠+타이",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "topType.dressShirt",
+  "label": "드레스 셔츠",
+  "shortLabel": "드레스셔츠",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "topType.oxfordShirt",
+  "label": "옥스포드 셔츠",
+  "shortLabel": "옥스포드",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "topType.poloWool",
+  "label": "울 폴로",
+  "shortLabel": "울폴로",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "topType.knitWool",
+  "label": "울 니트",
+  "shortLabel": "울니트",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "topType.knitCashmere",
+  "label": "캐시미어 니트",
+  "shortLabel": "캐시미어",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "topType.linenShirt",
+  "label": "린넨 셔츠",
+  "shortLabel": "린넨셔츠",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "topType.flannelShirt",
+  "label": "플란넬 셔츠",
+  "shortLabel": "플란넬셔츠",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "topType.knitCotton",
+  "label": "코튼 니트",
+  "shortLabel": "코튼니트",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "topType.poloPique",
+  "label": "피케 폴로",
+  "shortLabel": "피케폴로",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "topType.denimShirt",
+  "label": "데님 셔츠",
+  "shortLabel": "데님셔츠",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "topType.henley",
+  "label": "헨리넥",
+  "shortLabel": "헨리넥",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "topType.tee",
+  "label": "티셔츠",
+  "shortLabel": "티셔츠",
+  "aliases": [
+   "티",
+   "반팔"
+  ],
+  "help": ""
+ },
+ {
+  "id": "topType.sweatshirt",
+  "label": "맨투맨",
+  "shortLabel": "맨투맨",
+  "aliases": [
+   "맨투맨",
+   "스웻셔츠"
+  ],
+  "help": ""
+ },
+ {
+  "id": "topType.hoodie",
+  "label": "후디",
+  "shortLabel": "후디",
+  "aliases": [
+   "후드티"
+  ],
+  "help": ""
+ },
+ {
+  "id": "topType.tank",
+  "label": "탱크톱",
+  "shortLabel": "탱크톱",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "outerType.denimJacket",
+  "label": "데님 재킷",
+  "shortLabel": "데님재킷",
+  "aliases": [
+   "청자켓",
+   "트러커"
+  ],
+  "help": ""
+ },
+ {
+  "id": "outerType.coachJacket",
+  "label": "코치 재킷",
+  "shortLabel": "코치재킷",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "outerType.blouson",
+  "label": "블루종",
+  "shortLabel": "블루종",
+  "aliases": [
+   "항공점퍼",
+   "MA-1",
+   "봄버",
+   "해링턴"
+  ],
+  "help": "MA-1·해링턴"
+ },
+ {
+  "id": "outerType.cardigan",
+  "label": "가디건",
+  "shortLabel": "가디건",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "outerType.shirtJacket",
+  "label": "셔츠 재킷",
+  "shortLabel": "셔츠재킷",
+  "aliases": [
+   "셔켓",
+   "오버셔츠"
+  ],
+  "help": ""
+ },
+ {
+  "id": "outerType.trench",
+  "label": "트렌치 코트",
+  "shortLabel": "트렌치",
+  "aliases": [
+   "바바리"
+  ],
+  "help": ""
+ },
+ {
+  "id": "outerType.blazer",
+  "label": "블레이저",
+  "shortLabel": "블레이저",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "outerType.overshirt",
+  "label": "오버셔츠",
+  "shortLabel": "오버셔츠",
+  "aliases": [],
+  "help": "린넨·얇은 코튼"
+ },
+ {
+  "id": "outerType.chesterfield",
+  "label": "체스터필드 코트",
+  "shortLabel": "체스터필드",
+  "aliases": [
+   "롱코트",
+   "싱글 코트"
+  ],
+  "help": "싱글 코트"
+ },
+ {
+  "id": "outerType.balmacaan",
+  "label": "발마칸 코트",
+  "shortLabel": "발마칸",
+  "aliases": [
+   "롱코트",
+   "래글런 코트"
+  ],
+  "help": ""
+ },
+ {
+  "id": "outerType.duffle",
+  "label": "더플 코트",
+  "shortLabel": "더플코트",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "outerType.peacoat",
+  "label": "피코트",
+  "shortLabel": "피코트",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "outerType.shortPuffer",
+  "label": "숏 패딩",
+  "shortLabel": "숏패딩",
+  "aliases": [
+   "숏 패딩"
+  ],
+  "help": ""
+ },
+ {
+  "id": "outerType.longPuffer",
+  "label": "롱 패딩",
+  "shortLabel": "롱패딩",
+  "aliases": [
+   "벤치 파카",
+   "롱 패딩"
+  ],
+  "help": ""
+ },
+ {
+  "id": "outerType.fleece",
+  "label": "플리스",
+  "shortLabel": "플리스",
+  "aliases": [
+   "뽀글이",
+   "후리스"
+  ],
+  "help": ""
+ },
+ {
+  "id": "outerType.leatherJacket",
+  "label": "가죽 재킷",
+  "shortLabel": "가죽재킷",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "tag.neutral",
+  "label": "뉴트럴",
+  "shortLabel": "뉴트럴",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "tag.earth",
+  "label": "어스톤",
+  "shortLabel": "어스톤",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "tag.mono",
+  "label": "모노톤",
+  "shortLabel": "모노톤",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "tag.navyBase",
+  "label": "네이비 베이스",
+  "shortLabel": "네이비베이스",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "tag.accent",
+  "label": "포인트",
+  "shortLabel": "포인트",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "tag.pastel",
+  "label": "파스텔",
+  "shortLabel": "파스텔",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "tag.variation",
+  "label": "변주",
+  "shortLabel": "변주",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "tag.street",
+  "label": "스트릿",
+  "shortLabel": "스트릿",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "tag.business",
+  "label": "비즈니스",
+  "shortLabel": "비즈니스",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "tag.weekend",
+  "label": "주말",
+  "shortLabel": "주말",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "tag.resort",
+  "label": "휴양",
+  "shortLabel": "휴양",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.classic",
+  "label": "클래식",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.universal",
+  "label": "누구나 안전한 기본 조합",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.variation",
+  "label": "변주",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.sources2",
+  "label": "출처 {n}개 이상",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.toneOnTone",
+  "label": "톤온톤 ({tone})",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.analogous",
+  "label": "유사색",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.complementary",
+  "label": "보색(탁한)",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.achromatic",
+  "label": "무채색 조합",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.toneCross",
+  "label": "{from}+{to} 조합 (+1)",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.seasonOut",
+  "label": "{color|은는} {season}에 어색해요 ({delta})",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.seasonItem",
+  "label": "{item|은는} {season}용이 아니에요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.formalityGap",
+  "label": "격식 차이 {gap}단계 ({hi} ↔ {lo})",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.fourColors",
+  "label": "색이 4개 이상",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.sameColor",
+  "label": "상·하의 같은 색",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.fitScore",
+  "label": "핏 밸런스 {score}/5",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.shoeScore",
+  "label": "신발 조합 {score}/5",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.matScore",
+  "label": "소재 궁합 {score}/5",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.matClash",
+  "label": "{a}+{b|은는} 소재가 안 맞아요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.adventurous",
+  "label": "모험적인 조합",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.avoid",
+  "label": "피하는 조합: {reason}",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.disputed",
+  "label": "의견이 갈리는 조합",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.ruleMissing",
+  "label": "규칙 없음(기본 3)",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.adjust",
+  "label": "{reason} ({delta})",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.shoeLength",
+  "label": "바지 기장과 신발이 안 맞아요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.layerOver",
+  "label": "{season}에 겹이 너무 많아요 (−2)",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.accentAccent",
+  "label": "포인트 컬러가 둘 ({a}+{b}) (−2)",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.outerScore",
+  "label": "아우터 조합 {score}/5",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.lengthBlock",
+  "label": "기장 조합이 맞지 않아요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.seasonBlock",
+  "label": "{season}에 맞지 않는 아이템이 많아요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "ui.classicN",
+  "label": "클래식 {n}/3",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "ui.safety",
+  "label": "안전도 {percent}",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "ui.more",
+  "label": "더 보기",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "ui.byTone",
+  "label": "톤별",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "ui.byHue",
+  "label": "색상별",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "ui.variations",
+  "label": "변주",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "ui.disputed",
+  "label": "의견 갈림",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "ui.avoid",
+  "label": "피하기",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "ui.blocked",
+  "label": "추천하지 않는 조합",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ }
+]

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>아침 코디</title>
+    <meta name="description" content="출근 전 10초 안에 오늘 입을 옷 조합을 골라주는 남성 코디 가이드" />
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="#F5F3EE" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- iOS (docs/architecture/tech-stack.md 7절) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="아침 코디" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
+
+    <link rel="stylesheet" href="src/styles/tokens.css" />
+    <link rel="stylesheet" href="src/styles/base.css" />
+    <link rel="stylesheet" href="src/styles/app.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <noscript><p style="padding:24px 16px">자바스크립트를 켜야 해요.</p></noscript>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

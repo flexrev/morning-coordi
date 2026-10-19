@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 아침 코디 실루엣 레이어: 로퍼 (페니/태슬 공용) · viewBox 0 0 200 400 · 단색 fill, 그라데이션 없음 · 원본 제작(자체) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" role="img" aria-label="로퍼 (페니/태슬 공용)">
+  <path data-slot="shoes" fill="var(--c-shoes, #222222)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"
+        d="M 72 362 L 98 362 L 98 392 L 52 392 Q 44 390 50 378 Q 58 366 72 362 Z M 48 386 L 98 386 M 62 372 L 84 366 M 128 362 L 102 362 L 102 392 L 148 392 Q 156 390 150 378 Q 142 366 128 362 Z M 152 386 L 102 386 M 138 372 L 116 366"/>
+  <path data-slot="shoes" data-detail="tassel" fill="var(--c-shoes, #222222)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"
+        d="M 70 366 L 73 377 L 67 377 Z M 76 365 L 79 376 L 73 376 Z M 130 366 L 127 377 L 133 377 Z M 124 365 L 121 376 L 127 376 Z"/>
+</svg>

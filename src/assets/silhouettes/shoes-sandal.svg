@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 아침 코디 실루엣 레이어: 샌들/슬리퍼 · viewBox 0 0 200 400 · 단색 fill, 그라데이션 없음 · 원본 제작(자체) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" role="img" aria-label="샌들/슬리퍼">
+  <path data-slot="shoes" fill="var(--c-shoes, #222222)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"
+        d="M 52 382 L 98 382 L 98 392 L 54 392 Q 46 392 52 382 Z M 54 384 L 68 370 L 74 370 L 62 384 Z M 94 384 L 80 370 L 74 370 L 86 384 Z M 148 382 L 102 382 L 102 392 L 146 392 Q 154 392 148 382 Z M 146 384 L 132 370 L 126 370 L 138 384 Z M 106 384 L 120 370 L 126 370 L 114 384 Z"/>
+</svg>

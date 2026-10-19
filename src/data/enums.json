@@ -1,0 +1,341 @@
+{
+ "categories": [
+  "top",
+  "bottom",
+  "shoes",
+  "outer"
+ ],
+ "seasons": [
+  "springFall",
+  "summer",
+  "winter"
+ ],
+ "tones": [
+  "neutral",
+  "earth",
+  "mono",
+  "navyBase",
+  "accent",
+  "pastel"
+ ],
+ "topFits": [
+  "slim",
+  "regular",
+  "loose",
+  "oversized"
+ ],
+ "bottomFits": [
+  "slim",
+  "tapered",
+  "regular",
+  "straight",
+  "wide"
+ ],
+ "topLengths": [
+  "crop",
+  "regular",
+  "long"
+ ],
+ "outerLengths": [
+  "short",
+  "regular",
+  "long"
+ ],
+ "trouserLengths": [
+  "crop",
+  "nobreak",
+  "half",
+  "full"
+ ],
+ "tags": [
+  "neutral",
+  "earth",
+  "mono",
+  "navyBase",
+  "accent",
+  "pastel",
+  "variation",
+  "street",
+  "business",
+  "weekend",
+  "resort"
+ ],
+ "topTypes": [
+  {
+   "id": "dressShirtTie",
+   "labelKo": "드레스 셔츠+타이",
+   "material": null,
+   "formality": 8
+  },
+  {
+   "id": "dressShirt",
+   "labelKo": "드레스 셔츠",
+   "material": null,
+   "formality": 7
+  },
+  {
+   "id": "oxfordShirt",
+   "labelKo": "옥스포드 셔츠",
+   "material": null,
+   "formality": 6
+  },
+  {
+   "id": "poloWool",
+   "labelKo": "울 폴로",
+   "material": "knitWool",
+   "formality": 6
+  },
+  {
+   "id": "knitWool",
+   "labelKo": "울 니트",
+   "material": "knitWool",
+   "formality": 5
+  },
+  {
+   "id": "knitCashmere",
+   "labelKo": "캐시미어 니트",
+   "material": "knitCashmere",
+   "formality": 7
+  },
+  {
+   "id": "linenShirt",
+   "labelKo": "린넨 셔츠",
+   "material": "linen",
+   "formality": 5
+  },
+  {
+   "id": "flannelShirt",
+   "labelKo": "플란넬 셔츠",
+   "material": null,
+   "formality": 5
+  },
+  {
+   "id": "knitCotton",
+   "labelKo": "코튼 니트",
+   "material": "knitCotton",
+   "formality": 4
+  },
+  {
+   "id": "poloPique",
+   "labelKo": "피케 폴로",
+   "material": "jersey",
+   "formality": 4
+  },
+  {
+   "id": "denimShirt",
+   "labelKo": "데님 셔츠",
+   "material": "denimWashed",
+   "formality": 4
+  },
+  {
+   "id": "henley",
+   "labelKo": "헨리넥/긴팔 티",
+   "material": "jersey",
+   "formality": 3
+  },
+  {
+   "id": "tee",
+   "labelKo": "티셔츠",
+   "material": "jersey",
+   "formality": 2
+  },
+  {
+   "id": "sweatshirt",
+   "labelKo": "맨투맨/스웻셔츠",
+   "material": "jersey",
+   "formality": 2
+  },
+  {
+   "id": "hoodie",
+   "labelKo": "후디",
+   "material": "jersey",
+   "formality": 1
+  },
+  {
+   "id": "tank",
+   "labelKo": "탱크톱",
+   "material": "jersey",
+   "formality": 1
+  }
+ ],
+ "outerTypes": [
+  {
+   "id": "denimJacket",
+   "labelKo": "데님 재킷",
+   "length": "short",
+   "material": "denimIndigo",
+   "formality": 4,
+   "formalityNote": null,
+   "seasons": [
+    "springFall"
+   ]
+  },
+  {
+   "id": "coachJacket",
+   "labelKo": "코치 재킷",
+   "length": "short",
+   "material": "nylonTech",
+   "formality": 3,
+   "formalityNote": null,
+   "seasons": [
+    "springFall"
+   ]
+  },
+  {
+   "id": "blouson",
+   "labelKo": "블루종(MA-1·해링턴)",
+   "length": "short",
+   "material": "nylonTech",
+   "formality": 4,
+   "formalityNote": "3~5 (나일론 MA-1 3, 울 블루종 4~5)",
+   "seasons": [
+    "springFall"
+   ]
+  },
+  {
+   "id": "cardigan",
+   "labelKo": "가디건",
+   "length": "regular",
+   "material": "knitWool",
+   "formality": 5,
+   "formalityNote": null,
+   "seasons": [
+    "springFall"
+   ]
+  },
+  {
+   "id": "shirtJacket",
+   "labelKo": "셔츠 재킷",
+   "length": "regular",
+   "material": null,
+   "formality": 5,
+   "formalityNote": "4~6 (코튼 4, 울 6)",
+   "seasons": [
+    "springFall"
+   ]
+  },
+  {
+   "id": "trench",
+   "labelKo": "트렌치 코트",
+   "length": "long",
+   "material": null,
+   "formality": 7,
+   "formalityNote": "R2 원문 8. 캐주얼 착용이 일상적이라 1단계 하향(통합 결정 D1)",
+   "seasons": [
+    "springFall"
+   ]
+  },
+  {
+   "id": "blazer",
+   "labelKo": "블레이저",
+   "length": "regular",
+   "material": "wool",
+   "formality": 7,
+   "formalityNote": "R2 원문 8. 캐주얼 착용이 일상적이라 1단계 하향(통합 결정 D1)",
+   "seasons": [
+    "springFall",
+    "summer"
+   ]
+  },
+  {
+   "id": "overshirt",
+   "labelKo": "오버셔츠(린넨)",
+   "length": "regular",
+   "material": "linen",
+   "formality": 4,
+   "formalityNote": "4~5",
+   "seasons": [
+    "summer"
+   ]
+  },
+  {
+   "id": "chesterfield",
+   "labelKo": "체스터필드·싱글 코트",
+   "length": "long",
+   "material": "wool",
+   "formality": 8,
+   "formalityNote": "R2 원문 9. 캐주얼 착용이 일상적이라 1단계 하향(통합 결정 D1)",
+   "seasons": [
+    "winter"
+   ]
+  },
+  {
+   "id": "balmacaan",
+   "labelKo": "발마칸 코트",
+   "length": "long",
+   "material": "wool",
+   "formality": 7,
+   "formalityNote": null,
+   "seasons": [
+    "winter"
+   ]
+  },
+  {
+   "id": "duffle",
+   "labelKo": "더플 코트",
+   "length": "long",
+   "material": "wool",
+   "formality": 6,
+   "formalityNote": null,
+   "seasons": [
+    "winter"
+   ]
+  },
+  {
+   "id": "peacoat",
+   "labelKo": "피코트",
+   "length": "regular",
+   "material": "wool",
+   "formality": 7,
+   "formalityNote": null,
+   "seasons": [
+    "winter"
+   ]
+  },
+  {
+   "id": "shortPuffer",
+   "labelKo": "숏 패딩",
+   "length": "regular",
+   "material": "nylonTech",
+   "formality": 2,
+   "formalityNote": null,
+   "seasons": [
+    "winter"
+   ]
+  },
+  {
+   "id": "longPuffer",
+   "labelKo": "롱 패딩",
+   "length": "long",
+   "material": "nylonTech",
+   "formality": 1,
+   "formalityNote": null,
+   "seasons": [
+    "winter"
+   ]
+  },
+  {
+   "id": "fleece",
+   "labelKo": "플리스",
+   "length": "regular",
+   "material": "nylonTech",
+   "formality": 2,
+   "formalityNote": "2~3",
+   "seasons": [
+    "winter"
+   ]
+  },
+  {
+   "id": "leatherJacket",
+   "labelKo": "가죽 재킷",
+   "length": "short",
+   "material": "leather",
+   "formality": 5,
+   "formalityNote": null,
+   "seasons": [
+    "springFall",
+    "winter"
+   ]
+  }
+ ]
+}

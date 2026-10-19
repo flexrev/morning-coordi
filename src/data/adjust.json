@@ -1,0 +1,222 @@
+[
+ {
+  "id": "adjCropSummerLoafer",
+  "when": {
+   "trouserLength": "crop",
+   "season": "summer",
+   "shoe": [
+    "loaferPenny",
+    "loaferTassel",
+    "sandal"
+   ]
+  },
+  "delta": 1,
+  "reason": "발목 노출이 여름 클래식",
+  "sources": [
+   "R2 2-5"
+  ],
+  "flags": []
+ },
+ {
+  "id": "adjCropWinter",
+  "when": {
+   "trouserLength": "crop",
+   "season": "winter"
+  },
+  "delta": -1,
+  "reason": "겨울 발목 노출은 비실용",
+  "sources": [
+   "R2 2-5"
+  ],
+  "flags": []
+ },
+ {
+  "id": "adjWideThinShoe",
+  "when": {
+   "bottomFit": "wide",
+   "shoe": [
+    "sneakerWhite",
+    "loaferPenny",
+    "loaferTassel"
+   ]
+  },
+  "delta": 0,
+  "reason": "와이드 하의에 가는 신발 — 슬림 신발(MR PORTER) vs 볼륨 신발(FashionBeans) 의견 갈림",
+  "sources": [
+   "MRPWIDE",
+   "FBWIDE",
+   "R2 4-3"
+  ],
+  "flags": [
+   "disputed"
+  ]
+ },
+ {
+  "id": "adjWideFullThinShoe",
+  "when": {
+   "bottomFit": "wide",
+   "trouserLength": "full",
+   "shoe": [
+    "sneakerWhite",
+    "loaferPenny",
+    "loaferTassel",
+    "chelsea",
+    "chukka"
+   ]
+  },
+  "delta": -1,
+  "reason": "와이드+풀 기장에 가는 신발은 발이 원단에 묻힘",
+  "sources": [
+   "R2 2-5",
+   "R2 4-3"
+  ],
+  "flags": []
+ },
+ {
+  "id": "adjSlimWorkboot",
+  "when": {
+   "bottomFit": "slim",
+   "shoe": "workboot"
+  },
+  "delta": -1,
+  "reason": "부츠가 바지보다 넓어 다리가 가늘어 보임",
+  "sources": [
+   "R2 2-5"
+  ],
+  "flags": []
+ },
+ {
+  "id": "adjLongOuterCrop",
+  "when": {
+   "outerLength": "long",
+   "trouserLength": "crop"
+  },
+  "delta": -1,
+  "reason": "긴 위 + 짧은 아래 = 비율 불균형",
+  "sources": [
+   "R2 2-5"
+  ],
+  "flags": []
+ },
+ {
+  "id": "adjShortCropWide",
+  "when": {
+   "outerLength": "short",
+   "topLength": "crop",
+   "bottomFit": "wide"
+  },
+  "delta": 0,
+  "reason": "숏 아우터+크롭 상의+와이드 = 2025 스트릿 기본형",
+  "sources": [
+   "R2 2-5"
+  ],
+  "flags": []
+ },
+ {
+  "id": "adjHeavyLight",
+  "when": {
+   "bottomMaterial": [
+    "corduroy",
+    "flannel",
+    "tweed"
+   ],
+   "topMaterial": [
+    "linen",
+    "jersey"
+   ]
+  },
+  "delta": -1,
+  "reason": "무거운 소재(코듀로이·플란넬·트위드)+가벼운 소재(린넨·저지) 혼합",
+  "sources": [
+   "MASHBURN",
+   "BALTSUN",
+   "R2 3-4"
+  ],
+  "flags": []
+ },
+ {
+  "id": "adjHeavyLightOuter",
+  "when": {
+   "outerMaterial": [
+    "tweed",
+    "leather"
+   ],
+   "bottomMaterial": [
+    "linen",
+    "jersey"
+   ]
+  },
+  "delta": -1,
+  "reason": "무거운 아우터(트위드·가죽)+가벼운 하의(린넨·저지) 혼합",
+  "sources": [
+   "MASHBURN",
+   "BALTSUN",
+   "R2 3-4"
+  ],
+  "flags": []
+ },
+ {
+  "id": "adjHeavyShoe",
+  "when": {
+   "bottomWeight": "heavy",
+   "shoe": [
+    "derby",
+    "chelsea",
+    "workboot",
+    "chukka",
+    "loaferTassel"
+   ]
+  },
+  "delta": 1,
+  "reason": "무거운 하의 + 무거운 신발",
+  "sources": [
+   "FBSHOES",
+   "R2 3-4"
+  ],
+  "flags": []
+ },
+ {
+  "id": "adjFourColors",
+  "when": {
+   "colorCountMin": 4
+  },
+  "delta": -1,
+  "reason": "색이 4개 이상(3색 규칙)",
+  "sources": [
+   "Vou1",
+   "WH1"
+  ],
+  "flags": []
+ },
+ {
+  "id": "adjSummerBlackBlack",
+  "when": {
+   "season": "summer",
+   "topColor": "black",
+   "bottomColor": [
+    "black",
+    "blackDenim"
+   ]
+  },
+  "delta": -1,
+  "reason": "여름 블랙 상의+블랙 하의는 웨이터 룩",
+  "sources": [
+   "FB1"
+  ],
+  "flags": []
+ },
+ {
+  "id": "adjSameColorTopBottom",
+  "when": {
+   "sameColorTopBottom": true
+  },
+  "delta": -2,
+  "reason": "상·하의 같은 색(올화이트·올블랙·같은 워시 더블데님)",
+  "sources": [
+   "FB2",
+   "FB3",
+   "AtG3"
+  ],
+  "flags": []
+ }
+]

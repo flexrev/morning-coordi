@@ -1,0 +1,1290 @@
+[
+ {
+  "outer": "denimJacket",
+  "labelKo": "데님 재킷",
+  "length": "short",
+  "material": "denimIndigo",
+  "materialNote": "데님",
+  "formality": 4,
+  "seasons": [
+   "springFall"
+  ],
+  "bottoms": [
+   {
+    "material": "chino",
+    "fit": "tapered",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "chino",
+    "fit": "straight",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "wool",
+    "fit": "tapered",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "corduroy",
+    "fit": "straight",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "denimWashed",
+    "fit": "*",
+    "score": 3,
+    "note": "다른 톤 데님"
+   },
+   {
+    "material": "denimBlack",
+    "fit": "*",
+    "score": 3,
+    "note": "다른 톤 데님"
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "*",
+    "score": 1,
+    "note": "같은 톤 데님 상하"
+   }
+  ],
+  "shoes": [
+   {
+    "shoe": "sneakerWhite",
+    "score": 4
+   },
+   {
+    "shoe": "chukka",
+    "score": 4
+   },
+   {
+    "shoe": "derby",
+    "score": 4
+   },
+   {
+    "shoe": "loaferPenny",
+    "score": 4
+   },
+   {
+    "shoe": "workboot",
+    "score": 4
+   },
+   {
+    "shoe": "oxford",
+    "score": 1
+   }
+  ],
+  "avoid": [
+   {
+    "material": "denimIndigo",
+    "reason": "같은 톤 데님 상하 1"
+   }
+  ],
+  "sources": [
+   "R2 6"
+  ],
+  "flags": []
+ },
+ {
+  "outer": "coachJacket",
+  "labelKo": "코치 재킷",
+  "length": "short",
+  "material": "nylonTech",
+  "materialNote": "나일론",
+  "formality": 3,
+  "seasons": [
+   "springFall"
+  ],
+  "bottoms": [
+   {
+    "material": "denimWashed",
+    "fit": "straight",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "chino",
+    "fit": "wide",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "jersey",
+    "fit": "*",
+    "score": 4,
+    "note": "트랙팬츠"
+   },
+   {
+    "material": "wool",
+    "fit": "*",
+    "score": 3,
+    "note": "슬랙스는 변주"
+   }
+  ],
+  "shoes": [
+   {
+    "shoe": "sneakerWhite",
+    "score": 4
+   },
+   {
+    "shoe": "sneakerColor",
+    "score": 4
+   },
+   {
+    "shoe": "running",
+    "score": 4
+   },
+   {
+    "shoe": "oxford",
+    "score": 1
+   },
+   {
+    "shoe": "loaferTassel",
+    "score": 1
+   }
+  ],
+  "avoid": [],
+  "sources": [
+   "ESQKCOACH",
+   "R2 6"
+  ],
+  "flags": []
+ },
+ {
+  "outer": "blouson",
+  "labelKo": "블루종(MA-1·해링턴)",
+  "length": "short",
+  "material": "nylonTech",
+  "materialNote": "나일론 / 코튼 / 울",
+  "formality": 4,
+  "seasons": [
+   "springFall"
+  ],
+  "bottoms": [
+   {
+    "material": "denimIndigo",
+    "fit": "tapered",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "chino",
+    "fit": "tapered",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "wool",
+    "fit": "tapered",
+    "score": 4,
+    "note": "해링턴"
+   },
+   {
+    "material": "denimBlack",
+    "fit": "slim",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "*",
+    "fit": "wide",
+    "score": 4,
+    "note": "wide+숏 블루종+crop은 OK, full 기장은 2"
+   }
+  ],
+  "shoes": [
+   {
+    "shoe": "sneakerWhite",
+    "score": 4
+   },
+   {
+    "shoe": "loaferPenny",
+    "score": 4
+   },
+   {
+    "shoe": "chelsea",
+    "score": 4
+   },
+   {
+    "shoe": "derby",
+    "score": 4
+   }
+  ],
+  "avoid": [],
+  "sources": [
+   "R2 6"
+  ],
+  "flags": []
+ },
+ {
+  "outer": "cardigan",
+  "labelKo": "가디건",
+  "length": "regular",
+  "material": "knitWool",
+  "materialNote": "울 니트 / 코튼 니트",
+  "formality": 5,
+  "seasons": [
+   "springFall"
+  ],
+  "bottoms": [
+   {
+    "material": "chino",
+    "fit": "tapered",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "wool",
+    "fit": "tapered",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "straight",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "corduroy",
+    "fit": "*",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "jersey",
+    "fit": "*",
+    "score": 2,
+    "note": "스웻팬츠"
+   }
+  ],
+  "shoes": [
+   {
+    "shoe": "loaferPenny",
+    "score": 4
+   },
+   {
+    "shoe": "loaferTassel",
+    "score": 4
+   },
+   {
+    "shoe": "derby",
+    "score": 4
+   },
+   {
+    "shoe": "sneakerWhite",
+    "score": 4
+   }
+  ],
+  "avoid": [
+   {
+    "material": "jersey",
+    "reason": "스웻팬츠 2"
+   }
+  ],
+  "sources": [
+   "R2 6"
+  ],
+  "flags": []
+ },
+ {
+  "outer": "shirtJacket",
+  "labelKo": "셔츠 재킷",
+  "length": "regular",
+  "material": null,
+  "materialNote": "코튼 트윌 / 울 / 코듀로이",
+  "formality": 5,
+  "seasons": [
+   "springFall"
+  ],
+  "bottoms": [
+   {
+    "material": "chino",
+    "fit": "*",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "*",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "wool",
+    "fit": "*",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "corduroy",
+    "fit": "*",
+    "score": 4,
+    "note": "코듀로이 셔츠 재킷이면 상하 골덴 2"
+   },
+   {
+    "material": "linen",
+    "fit": "*",
+    "score": 3,
+    "note": "코듀로이 셔츠 재킷일 때 피함"
+   }
+  ],
+  "shoes": [
+   {
+    "shoe": "derby",
+    "score": 4
+   },
+   {
+    "shoe": "chukka",
+    "score": 4
+   },
+   {
+    "shoe": "loaferPenny",
+    "score": 4
+   },
+   {
+    "shoe": "sneakerWhite",
+    "score": 4
+   }
+  ],
+  "avoid": [
+   {
+    "material": "linen",
+    "reason": "코듀로이 셔츠 재킷일 때"
+   }
+  ],
+  "sources": [
+   "R2 6"
+  ],
+  "flags": []
+ },
+ {
+  "outer": "trench",
+  "labelKo": "트렌치 코트",
+  "length": "long",
+  "material": null,
+  "materialNote": "코튼 개버딘",
+  "formality": 7,
+  "seasons": [
+   "springFall"
+  ],
+  "bottoms": [
+   {
+    "material": "wool",
+    "fit": "tapered",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "slim",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "straight",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "chino",
+    "fit": "tapered",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimBlack",
+    "fit": "*",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "jersey",
+    "fit": "*",
+    "score": 1,
+    "note": "스웻팬츠"
+   },
+   {
+    "material": "*",
+    "fit": "wide",
+    "score": 3,
+    "note": ""
+   }
+  ],
+  "shoes": [
+   {
+    "shoe": "derby",
+    "score": 5
+   },
+   {
+    "shoe": "loaferPenny",
+    "score": 5
+   },
+   {
+    "shoe": "loaferTassel",
+    "score": 5
+   },
+   {
+    "shoe": "chelsea",
+    "score": 5
+   },
+   {
+    "shoe": "oxford",
+    "score": 4
+   },
+   {
+    "shoe": "running",
+    "score": 1
+   },
+   {
+    "shoe": "sandal",
+    "score": 1
+   }
+  ],
+  "avoid": [
+   {
+    "material": "jersey",
+    "reason": "스웻팬츠"
+   }
+  ],
+  "sources": [
+   "R2 6"
+  ],
+  "flags": []
+ },
+ {
+  "outer": "blazer",
+  "labelKo": "블레이저",
+  "length": "regular",
+  "material": "wool",
+  "materialNote": "울 / 코튼 / 린넨(초여름)",
+  "formality": 7,
+  "seasons": [
+   "springFall",
+   "summer"
+  ],
+  "bottoms": [
+   {
+    "material": "wool",
+    "fit": "*",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "chino",
+    "fit": "*",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "*",
+    "score": 4,
+    "note": "재킷과 대비되는 색 데님(GQ Korea)"
+   },
+   {
+    "material": "flannel",
+    "fit": "*",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "denimWashed",
+    "fit": "*",
+    "score": 2,
+    "note": ""
+   },
+   {
+    "material": "jersey",
+    "fit": "*",
+    "score": 2,
+    "note": ""
+   }
+  ],
+  "shoes": [
+   {
+    "shoe": "loaferPenny",
+    "score": 4
+   },
+   {
+    "shoe": "loaferTassel",
+    "score": 4
+   },
+   {
+    "shoe": "derby",
+    "score": 4
+   },
+   {
+    "shoe": "oxford",
+    "score": 4
+   },
+   {
+    "shoe": "sneakerWhite",
+    "score": 3
+   },
+   {
+    "shoe": "running",
+    "score": 1
+   }
+  ],
+  "avoid": [
+   {
+    "material": "denimWashed",
+    "reason": "워시드 데님 2"
+   }
+  ],
+  "sources": [
+   "GQKOUTER",
+   "R2 6"
+  ],
+  "flags": []
+ },
+ {
+  "outer": "overshirt",
+  "labelKo": "오버셔츠(린넨)",
+  "length": "regular",
+  "material": "linen",
+  "materialNote": "린넨 / 얇은 코튼",
+  "formality": 4,
+  "seasons": [
+   "summer"
+  ],
+  "bottoms": [
+   {
+    "material": "linen",
+    "fit": "wide",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "linen",
+    "fit": "regular",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "chino",
+    "fit": "tapered",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimWashed",
+    "fit": "straight",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "wool",
+    "fit": "wide",
+    "score": 4,
+    "note": "트로피컬 울"
+   }
+  ],
+  "shoes": [
+   {
+    "shoe": "loaferPenny",
+    "score": 4
+   },
+   {
+    "shoe": "sandal",
+    "score": 4
+   },
+   {
+    "shoe": "sneakerWhite",
+    "score": 4
+   }
+  ],
+  "avoid": [],
+  "sources": [
+   "R2 6"
+  ],
+  "flags": []
+ },
+ {
+  "outer": "chesterfield",
+  "labelKo": "체스터필드·싱글 코트",
+  "length": "long",
+  "material": "wool",
+  "materialNote": "울 / 캐시미어",
+  "formality": 8,
+  "seasons": [
+   "winter"
+  ],
+  "bottoms": [
+   {
+    "material": "wool",
+    "fit": "tapered",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "flannel",
+    "fit": "tapered",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "slim",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "straight",
+    "score": 5,
+    "note": "회색 코트+연청도 허용(Vogue Korea)"
+   },
+   {
+    "material": "denimBlack",
+    "fit": "*",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "jersey",
+    "fit": "*",
+    "score": 1,
+    "note": "스웻팬츠"
+   },
+   {
+    "material": "*",
+    "fit": "wide",
+    "score": 3,
+    "note": ""
+   }
+  ],
+  "shoes": [
+   {
+    "shoe": "derby",
+    "score": 4
+   },
+   {
+    "shoe": "oxford",
+    "score": 4
+   },
+   {
+    "shoe": "chelsea",
+    "score": 4
+   },
+   {
+    "shoe": "loaferTassel",
+    "score": 4
+   },
+   {
+    "shoe": "sneakerWhite",
+    "score": 3
+   },
+   {
+    "shoe": "running",
+    "score": 1
+   }
+  ],
+  "avoid": [
+   {
+    "material": "jersey",
+    "reason": "스웻팬츠 1"
+   }
+  ],
+  "sources": [
+   "VKCOATJEAN",
+   "R2 6"
+  ],
+  "flags": []
+ },
+ {
+  "outer": "balmacaan",
+  "labelKo": "발마칸 코트",
+  "length": "long",
+  "material": "wool",
+  "materialNote": "울 / 코튼",
+  "formality": 7,
+  "seasons": [
+   "winter"
+  ],
+  "bottoms": [
+   {
+    "material": "wool",
+    "fit": "*",
+    "score": 4,
+    "note": "4~5"
+   },
+   {
+    "material": "flannel",
+    "fit": "*",
+    "score": 4,
+    "note": "4~5"
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "*",
+    "score": 4,
+    "note": "4~5"
+   },
+   {
+    "material": "chino",
+    "fit": "*",
+    "score": 4,
+    "note": "4~5"
+   },
+   {
+    "material": "corduroy",
+    "fit": "*",
+    "score": 4,
+    "note": "4~5"
+   }
+  ],
+  "shoes": [
+   {
+    "shoe": "derby",
+    "score": 4
+   },
+   {
+    "shoe": "chukka",
+    "score": 4
+   },
+   {
+    "shoe": "chelsea",
+    "score": 4
+   },
+   {
+    "shoe": "loaferPenny",
+    "score": 4
+   },
+   {
+    "shoe": "loaferTassel",
+    "score": 4
+   },
+   {
+    "shoe": "sneakerWhite",
+    "score": 4
+   },
+   {
+    "shoe": "running",
+    "score": 2
+   }
+  ],
+  "avoid": [],
+  "sources": [
+   "R2 6"
+  ],
+  "flags": []
+ },
+ {
+  "outer": "duffle",
+  "labelKo": "더플 코트",
+  "length": "long",
+  "material": "wool",
+  "materialNote": "울 멜턴",
+  "formality": 6,
+  "seasons": [
+   "winter"
+  ],
+  "bottoms": [
+   {
+    "material": "corduroy",
+    "fit": "straight",
+    "score": 5,
+    "note": "국내 매체 기준 클래식"
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "straight",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "chino",
+    "fit": "*",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "flannel",
+    "fit": "*",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "wool",
+    "fit": "slim",
+    "score": 3,
+    "note": "슬림 슬랙스"
+   }
+  ],
+  "shoes": [
+   {
+    "shoe": "workboot",
+    "score": 4
+   },
+   {
+    "shoe": "chukka",
+    "score": 4
+   },
+   {
+    "shoe": "derby",
+    "score": 4
+   },
+   {
+    "shoe": "sneakerWhite",
+    "score": 4
+   },
+   {
+    "shoe": "oxford",
+    "score": 2
+   }
+  ],
+  "avoid": [],
+  "sources": [
+   "R2 6"
+  ],
+  "flags": []
+ },
+ {
+  "outer": "peacoat",
+  "labelKo": "피코트",
+  "length": "regular",
+  "material": "wool",
+  "materialNote": "울 멜턴",
+  "formality": 7,
+  "seasons": [
+   "winter"
+  ],
+  "bottoms": [
+   {
+    "material": "denimIndigo",
+    "fit": "slim",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "tapered",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "wool",
+    "fit": "tapered",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimBlack",
+    "fit": "*",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "corduroy",
+    "fit": "*",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "*",
+    "fit": "wide",
+    "score": 2,
+    "note": "숏 코트+와이드는 하체가 과함"
+   }
+  ],
+  "shoes": [
+   {
+    "shoe": "chelsea",
+    "score": 4
+   },
+   {
+    "shoe": "derby",
+    "score": 4
+   },
+   {
+    "shoe": "workboot",
+    "score": 4
+   },
+   {
+    "shoe": "chukka",
+    "score": 4
+   }
+  ],
+  "avoid": [],
+  "sources": [
+   "R2 6"
+  ],
+  "flags": []
+ },
+ {
+  "outer": "shortPuffer",
+  "labelKo": "숏 패딩",
+  "length": "regular",
+  "material": "nylonTech",
+  "materialNote": "나일론",
+  "formality": 2,
+  "seasons": [
+   "winter"
+  ],
+  "bottoms": [
+   {
+    "material": "denimIndigo",
+    "fit": "straight",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "wide",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimWashed",
+    "fit": "straight",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimWashed",
+    "fit": "wide",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimBlack",
+    "fit": "straight",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimBlack",
+    "fit": "wide",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "jersey",
+    "fit": "tapered",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "chino",
+    "fit": "*",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "wool",
+    "fit": "*",
+    "score": 3,
+    "note": "블랙 팬츠로 안정감(Elle Korea)"
+   }
+  ],
+  "shoes": [
+   {
+    "shoe": "sneakerWhite",
+    "score": 4
+   },
+   {
+    "shoe": "sneakerColor",
+    "score": 4
+   },
+   {
+    "shoe": "running",
+    "score": 4
+   },
+   {
+    "shoe": "workboot",
+    "score": 4
+   },
+   {
+    "shoe": "oxford",
+    "score": 1
+   },
+   {
+    "shoe": "loaferTassel",
+    "score": 1
+   }
+  ],
+  "avoid": [],
+  "sources": [
+   "ELLEK",
+   "R2 6"
+  ],
+  "flags": []
+ },
+ {
+  "outer": "longPuffer",
+  "labelKo": "롱 패딩",
+  "length": "long",
+  "material": "nylonTech",
+  "materialNote": "나일론",
+  "formality": 1,
+  "seasons": [
+   "winter"
+  ],
+  "bottoms": [
+   {
+    "material": "jersey",
+    "fit": "*",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "*",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "denimWashed",
+    "fit": "*",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "denimBlack",
+    "fit": "*",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "nylonTech",
+    "fit": "*",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "wool",
+    "fit": "*",
+    "score": 2,
+    "note": "슬랙스"
+   }
+  ],
+  "shoes": [
+   {
+    "shoe": "running",
+    "score": 4
+   },
+   {
+    "shoe": "sneakerWhite",
+    "score": 4
+   },
+   {
+    "shoe": "sneakerColor",
+    "score": 4
+   },
+   {
+    "shoe": "workboot",
+    "score": 4
+   },
+   {
+    "shoe": "derby",
+    "score": 1
+   },
+   {
+    "shoe": "oxford",
+    "score": 1
+   },
+   {
+    "shoe": "loaferPenny",
+    "score": 1
+   },
+   {
+    "shoe": "loaferTassel",
+    "score": 1
+   },
+   {
+    "shoe": "chelsea",
+    "score": 1
+   }
+  ],
+  "avoid": [
+   {
+    "material": "wool",
+    "reason": "슬랙스 2"
+   }
+  ],
+  "sources": [
+   "R2 6"
+  ],
+  "flags": []
+ },
+ {
+  "outer": "fleece",
+  "labelKo": "플리스",
+  "length": "regular",
+  "material": "nylonTech",
+  "materialNote": "플리스",
+  "formality": 2,
+  "seasons": [
+   "winter"
+  ],
+  "bottoms": [
+   {
+    "material": "chino",
+    "fit": "straight",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "*",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimWashed",
+    "fit": "*",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimBlack",
+    "fit": "*",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "jersey",
+    "fit": "*",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "corduroy",
+    "fit": "wide",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "wool",
+    "fit": "*",
+    "score": 3,
+    "note": "플리스+슬림 팬츠+블랙 더비 변주(Elle)"
+   }
+  ],
+  "shoes": [
+   {
+    "shoe": "sneakerWhite",
+    "score": 4
+   },
+   {
+    "shoe": "sneakerColor",
+    "score": 4
+   },
+   {
+    "shoe": "running",
+    "score": 4
+   },
+   {
+    "shoe": "workboot",
+    "score": 4
+   },
+   {
+    "shoe": "chukka",
+    "score": 4
+   },
+   {
+    "shoe": "oxford",
+    "score": 1
+   }
+  ],
+  "avoid": [],
+  "sources": [
+   "ELLEK",
+   "ALLUREK2",
+   "R2 6"
+  ],
+  "flags": []
+ },
+ {
+  "outer": "leatherJacket",
+  "labelKo": "가죽 재킷",
+  "length": "short",
+  "material": "leather",
+  "materialNote": "가죽",
+  "formality": 5,
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "bottoms": [
+   {
+    "material": "denimIndigo",
+    "fit": "slim",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimIndigo",
+    "fit": "tapered",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "denimBlack",
+    "fit": "slim",
+    "score": 5,
+    "note": ""
+   },
+   {
+    "material": "wool",
+    "fit": "tapered",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "corduroy",
+    "fit": "*",
+    "score": 4,
+    "note": ""
+   },
+   {
+    "material": "linen",
+    "fit": "*",
+    "score": 1,
+    "note": ""
+   },
+   {
+    "material": "*",
+    "fit": "wide",
+    "score": 3,
+    "note": ""
+   }
+  ],
+  "shoes": [
+   {
+    "shoe": "chelsea",
+    "score": 4
+   },
+   {
+    "shoe": "derby",
+    "score": 4
+   },
+   {
+    "shoe": "workboot",
+    "score": 4
+   },
+   {
+    "shoe": "sneakerWhite",
+    "score": 4
+   }
+  ],
+  "avoid": [
+   {
+    "material": "linen",
+    "reason": "린넨 1"
+   }
+  ],
+  "sources": [
+   "R2 6"
+  ],
+  "flags": []
+ }
+]

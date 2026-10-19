@@ -1,0 +1,11 @@
+node_modules/
+dist/
+dev-dist/
+.vite/
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.*
+# 프로덕션 고정값(VITE_USE_MOCK=false)은 저장소에 들어가야 한다 (P2-09)
+!.env.production

@@ -1,0 +1,3393 @@
+[
+ {
+  "id": "o01",
+  "mergedFrom": [
+   "c01",
+   "s01"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": "jersey",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "tee",
+    "itemName": "화이트 티셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "indigo",
+    "material": "denimIndigo",
+    "fit": "straight",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "인디고 데님",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "sneakerWhite",
+    "itemType": null,
+    "itemName": "흰 스니커즈",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "tags": [
+   "neutral",
+   "navyBase"
+  ],
+  "isClassic": true,
+  "universal": true,
+  "sources": [
+   "WK1",
+   "GQK",
+   "AtG1",
+   "R2 7"
+  ],
+  "flags": [],
+  "note": "1순위 기본 / 1순위 기본"
+ },
+ {
+  "id": "o02",
+  "mergedFrom": [
+   "c02"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": "jersey",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "tee",
+    "itemName": "화이트 티셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "indigo",
+    "material": "denimIndigo",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "인디고 데님",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "chukka",
+    "itemType": null,
+    "itemName": "브라운 부츠",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "camel",
+    "material": null,
+    "fit": null,
+    "length": "long",
+    "shoeType": null,
+    "itemType": "trench",
+    "itemName": "카멜 트렌치 코트",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "springFall"
+  ],
+  "tags": [
+   "navyBase",
+   "earth"
+  ],
+  "isClassic": true,
+  "universal": true,
+  "sources": [
+   "VK1",
+   "GG"
+  ],
+  "flags": [
+   "mapped",
+   "styleAssigned"
+  ],
+  "note": "포멀도 격차 5(티셔츠 2 ↔ 트렌치 7) 경고. 통합 결정 D1로 R1대로 universal 복원"
+ },
+ {
+  "id": "o03",
+  "mergedFrom": [
+   "c03"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "greyMelange",
+    "material": "jersey",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "sweatshirt",
+    "itemName": "그레이 멜란지 맨투맨",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "indigo",
+    "material": "denimIndigo",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "인디고 데님",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "sneakerWhite",
+    "itemType": null,
+    "itemName": "흰 스니커즈",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "material": null,
+    "fit": null,
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "shirtJacket",
+    "itemName": "네이비 필드 재킷",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "springFall"
+  ],
+  "tags": [
+   "mono",
+   "navyBase"
+  ],
+  "isClassic": true,
+  "universal": true,
+  "sources": [
+   "Hack",
+   "FB1"
+  ],
+  "flags": [
+   "mapped",
+   "styleAssigned"
+  ],
+  "note": ""
+ },
+ {
+  "id": "o04",
+  "mergedFrom": [
+   "c04"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": null,
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "oxfordShirt",
+    "itemName": "화이트 옥스포드 셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "navy",
+    "material": "chino",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "네이비 치노",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "loaferPenny",
+    "itemType": null,
+    "itemName": "브라운 로퍼",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "tags": [
+   "neutral",
+   "business"
+  ],
+  "isClassic": true,
+  "universal": true,
+  "sources": [
+   "Celio",
+   "WH2"
+  ],
+  "flags": [
+   "mapped",
+   "styleAssigned"
+  ],
+  "note": ""
+ },
+ {
+  "id": "o05",
+  "mergedFrom": [
+   "c05",
+   "s03"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "lightBlue",
+    "material": null,
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "oxfordShirt",
+    "itemName": "라이트 블루 옥스포드 셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "beige",
+    "material": "chino",
+    "fit": "tapered",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "베이지 치노",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "loaferPenny",
+    "itemType": null,
+    "itemName": "브라운 로퍼",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "material": "wool",
+    "fit": null,
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "blazer",
+    "itemName": "네이비 블레이저",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "springFall"
+  ],
+  "tags": [
+   "neutral",
+   "navyBase",
+   "business"
+  ],
+  "isClassic": true,
+  "universal": true,
+  "sources": [
+   "AtG2",
+   "MF",
+   "R2 7"
+  ],
+  "flags": [
+   "mapped"
+  ],
+  "note": "비즈니스 캐주얼 기본(턱인)"
+ },
+ {
+  "id": "o06",
+  "mergedFrom": [
+   "c06"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "navy",
+    "material": "knitWool",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "knitWool",
+    "itemName": "네이비 니트",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "beige",
+    "material": "chino",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "베이지 치노",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "chukka",
+    "itemType": null,
+    "itemName": "브라운 부츠",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "springFall"
+  ],
+  "tags": [
+   "navyBase",
+   "earth"
+  ],
+  "isClassic": true,
+  "universal": true,
+  "sources": [
+   "Celio",
+   "AtG2"
+  ],
+  "flags": [
+   "mapped",
+   "styleAssigned"
+  ],
+  "note": ""
+ },
+ {
+  "id": "o07",
+  "mergedFrom": [
+   "c07"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": "jersey",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "tee",
+    "itemName": "화이트 티셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "olive",
+    "material": "chino",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "올리브 치노",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "sneakerWhite",
+    "itemType": null,
+    "itemName": "흰 스니커즈",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "tags": [
+   "earth",
+   "neutral"
+  ],
+  "isClassic": true,
+  "universal": true,
+  "sources": [
+   "AtG2",
+   "MM",
+   "Celio"
+  ],
+  "flags": [
+   "styleAssigned"
+  ],
+  "note": ""
+ },
+ {
+  "id": "o08",
+  "mergedFrom": [
+   "c10"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": "jersey",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "tee",
+    "itemName": "화이트 티셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "blackDenim",
+    "material": "denimBlack",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "블랙 데님",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "sneakerWhite",
+    "itemType": null,
+    "itemName": "흰 스니커즈",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "black",
+    "material": "leather",
+    "fit": null,
+    "length": "short",
+    "shoeType": null,
+    "itemType": "leatherJacket",
+    "itemName": "블랙 가죽 재킷",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "springFall"
+  ],
+  "tags": [
+   "mono"
+  ],
+  "isClassic": true,
+  "universal": true,
+  "sources": [
+   "AtG1",
+   "FB1"
+  ],
+  "flags": [
+   "styleAssigned"
+  ],
+  "note": ""
+ },
+ {
+  "id": "o09",
+  "mergedFrom": [
+   "c15"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "oatmeal",
+    "material": "knitWool",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "knitWool",
+    "itemName": "오트밀 니트",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "indigo",
+    "material": "denimIndigo",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "인디고 데님",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "loaferPenny",
+    "itemType": null,
+    "itemName": "브라운 로퍼",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "springFall"
+  ],
+  "tags": [
+   "earth",
+   "navyBase"
+  ],
+  "isClassic": true,
+  "universal": true,
+  "sources": [
+   "VK1",
+   "AtG4"
+  ],
+  "flags": [
+   "mapped",
+   "styleAssigned"
+  ],
+  "note": ""
+ },
+ {
+  "id": "o10",
+  "mergedFrom": [
+   "c16",
+   "s16"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "lightBlue",
+    "material": null,
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "oxfordShirt",
+    "itemName": "라이트 블루 셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "charcoal",
+    "material": "wool",
+    "fit": "tapered",
+    "length": "half",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "차콜 울 슬랙스",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "derby",
+    "itemType": null,
+    "itemName": "블랙 더비",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "material": "wool",
+    "fit": null,
+    "length": "long",
+    "shoeType": null,
+    "itemType": "chesterfield",
+    "itemName": "네이비 코트",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "tags": [
+   "mono",
+   "navyBase",
+   "business"
+  ],
+  "isClassic": true,
+  "universal": true,
+  "sources": [
+   "MF",
+   "Vou1",
+   "R2 7"
+  ],
+  "flags": [
+   "mapped"
+  ],
+  "note": "겨울 출근"
+ },
+ {
+  "id": "o11",
+  "mergedFrom": [
+   "c17"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": null,
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "oxfordShirt",
+    "itemName": "화이트 셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "midGrey",
+    "material": "flannel",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "미드 그레이 플란넬",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "chukka",
+    "itemType": null,
+    "itemName": "브라운 척카",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "material": "wool",
+    "fit": null,
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "blazer",
+    "itemName": "네이비 블레이저",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "springFall"
+  ],
+  "tags": [
+   "mono",
+   "navyBase",
+   "business"
+  ],
+  "isClassic": true,
+  "universal": true,
+  "sources": [
+   "MF",
+   "RMRS2"
+  ],
+  "flags": [
+   "styleAssigned"
+  ],
+  "note": ""
+ },
+ {
+  "id": "o12",
+  "mergedFrom": [
+   "c22"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": "jersey",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "tee",
+    "itemName": "화이트 티셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "lightDenim",
+    "material": "denimWashed",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "라이트워시 데님",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "sneakerWhite",
+    "itemType": null,
+    "itemName": "흰 스니커즈",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "material": "wool",
+    "fit": null,
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "blazer",
+    "itemName": "네이비 블레이저",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "springFall"
+  ],
+  "tags": [
+   "navyBase",
+   "neutral"
+  ],
+  "isClassic": true,
+  "universal": true,
+  "sources": [
+   "PM"
+  ],
+  "flags": [
+   "styleAssigned"
+  ],
+  "note": "포멀도 격차 5(티셔츠 2 ↔ 블레이저 7) 경고. 통합 결정 D1로 R1대로 universal 복원"
+ },
+ {
+  "id": "o13",
+  "mergedFrom": [
+   "c08"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": null,
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "oxfordShirt",
+    "itemName": "화이트 옥스포드 셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "olive",
+    "material": "chino",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "올리브 치노",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "derby",
+    "itemType": null,
+    "itemName": "블랙 더비 부츠",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "midGrey",
+    "material": "wool",
+    "fit": null,
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "blazer",
+    "itemName": "미드 그레이 블레이저",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "springFall"
+  ],
+  "tags": [
+   "earth",
+   "mono"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "AtG2"
+  ],
+  "flags": [
+   "mapped",
+   "styleAssigned"
+  ],
+  "note": "더비 부츠는 더비로 근사"
+ },
+ {
+  "id": "o14",
+  "mergedFrom": [
+   "c09"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "midGrey",
+    "material": "knitWool",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "knitWool",
+    "itemName": "미드 그레이 크루넥 니트",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "blackDenim",
+    "material": "denimBlack",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "블랙 데님",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "chukka",
+    "itemType": null,
+    "itemName": "블랙 스웨이드 척카",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "material": "nylonTech",
+    "fit": null,
+    "length": "short",
+    "shoeType": null,
+    "itemType": "blouson",
+    "itemName": "네이비 봄버",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "tags": [
+   "mono",
+   "navyBase"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "FB1"
+  ],
+  "flags": [
+   "mapped",
+   "styleAssigned"
+  ],
+  "note": "R1 원문은 화이트 옥스포드 위에 미드 그레이 크루넥 레이어. MVP는 상의 1개라 보이는 니트만 기록"
+ },
+ {
+  "id": "o15",
+  "mergedFrom": [
+   "c11"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "black",
+    "material": "knitWool",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "knitWool",
+    "itemName": "블랙 롤넥 니트",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "navy",
+    "material": "chino",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "네이비 치노",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "derby",
+    "itemType": null,
+    "itemName": "블랙 더비",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "midGrey",
+    "material": "wool",
+    "fit": null,
+    "length": "long",
+    "shoeType": null,
+    "itemType": "chesterfield",
+    "itemName": "미드 그레이 더블브레스트 코트",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "tags": [
+   "mono",
+   "navyBase",
+   "variation"
+  ],
+  "isClassic": false,
+  "universal": false,
+  "sources": [
+   "AtG2"
+  ],
+  "flags": [
+   "mapped",
+   "styleAssigned"
+  ],
+  "note": "네이비+블랙 변주"
+ },
+ {
+  "id": "o16",
+  "mergedFrom": [
+   "c12"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "navy",
+    "material": "knitCotton",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "knitCotton",
+    "itemName": "네이비 크루넥 니트",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "white",
+    "material": "denimWashed",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "화이트 데님",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "loaferPenny",
+    "itemType": null,
+    "itemName": "브라운 로퍼",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "tags": [
+   "navyBase",
+   "neutral"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "FB2",
+   "HSS"
+  ],
+  "flags": [
+   "mapped",
+   "styleAssigned"
+  ],
+  "note": "화이트 데님은 워시드 데님 소재로 매핑"
+ },
+ {
+  "id": "o17",
+  "mergedFrom": [
+   "c13"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "lightBlue",
+    "material": "denimWashed",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "denimShirt",
+    "itemName": "샴브레이 셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "white",
+    "material": "chino",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "화이트 치노",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "chukka",
+    "itemType": null,
+    "itemName": "브라운 스웨이드 데저트 부츠",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "tags": [
+   "pastel",
+   "neutral"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "AtG2"
+  ],
+  "flags": [
+   "styleAssigned"
+  ],
+  "note": ""
+ },
+ {
+  "id": "o18",
+  "mergedFrom": [
+   "c14"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "cream",
+    "material": "knitWool",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "knitWool",
+    "itemName": "크림 니트",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "olive",
+    "material": "chino",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "올리브 치노",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "chukka",
+    "itemType": null,
+    "itemName": "브라운 부츠",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "brown",
+    "material": null,
+    "fit": null,
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "shirtJacket",
+    "itemName": "브라운 재킷",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "springFall"
+  ],
+  "tags": [
+   "earth"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "Vou1"
+  ],
+  "flags": [
+   "mapped",
+   "styleAssigned"
+  ],
+  "note": "종류 없는 \"재킷\"은 셔츠 재킷으로 매핑"
+ },
+ {
+  "id": "o19",
+  "mergedFrom": [
+   "c18"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "burgundy",
+    "material": "knitWool",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "knitWool",
+    "itemName": "버건디 니트",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "midGrey",
+    "material": "wool",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "미드 그레이 울 슬랙스",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "loaferPenny",
+    "itemType": null,
+    "itemName": "브라운 로퍼",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "tags": [
+   "accent",
+   "mono"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "Burgundy-guides"
+  ],
+  "flags": [
+   "mapped",
+   "styleAssigned"
+  ],
+  "note": ""
+ },
+ {
+  "id": "o20",
+  "mergedFrom": [
+   "c19"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "burgundy",
+    "material": "knitWool",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "knitWool",
+    "itemName": "버건디 니트",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "indigo",
+    "material": "denimIndigo",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "인디고 데님",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "workboot",
+    "itemType": null,
+    "itemName": "브라운 부츠",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "tags": [
+   "accent",
+   "navyBase"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "AtG4",
+   "Studio"
+  ],
+  "flags": [
+   "mapped",
+   "styleAssigned"
+  ],
+  "note": ""
+ },
+ {
+  "id": "o21",
+  "mergedFrom": [
+   "c20"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "lightBlue",
+    "material": null,
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "oxfordShirt",
+    "itemName": "라이트 블루 셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "brown",
+    "material": "corduroy",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "브라운 코듀로이",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "chocolate",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "chelsea",
+    "itemType": null,
+    "itemName": "초콜릿 부츠",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "material": "wool",
+    "fit": null,
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "blazer",
+    "itemName": "네이비 블레이저",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "tags": [
+   "earth",
+   "navyBase"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "GG",
+   "HB"
+  ],
+  "flags": [
+   "mapped",
+   "styleAssigned"
+  ],
+  "note": "겨울 부츠, 옥스포드 셔츠(포멀도 6) 문맥이라 첼시로 매핑"
+ },
+ {
+  "id": "o22",
+  "mergedFrom": [
+   "c21"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "cream",
+    "material": "knitWool",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "knitWool",
+    "itemName": "크림 청키 니트",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "brown",
+    "material": "corduroy",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "브라운 코듀로이",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "tan",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "loaferPenny",
+    "itemType": null,
+    "itemName": "탄 스웨이드 로퍼",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "tags": [
+   "earth"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "HB",
+   "Brown-guides"
+  ],
+  "flags": [
+   "mapped",
+   "styleAssigned"
+  ],
+  "note": ""
+ },
+ {
+  "id": "o23",
+  "mergedFrom": [
+   "c23"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "greyMelange",
+    "material": "jersey",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "tee",
+    "itemName": "그레이 멜란지 티셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "lightDenim",
+    "material": "denimWashed",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "라이트워시 데님",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "tan",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "chukka",
+    "itemType": null,
+    "itemName": "탄 스웨이드 부츠",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "olive",
+    "material": null,
+    "fit": null,
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "shirtJacket",
+    "itemName": "올리브 필드 재킷",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "springFall"
+  ],
+  "tags": [
+   "earth",
+   "navyBase"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "PM",
+   "MM"
+  ],
+  "flags": [
+   "mapped",
+   "styleAssigned"
+  ],
+  "note": ""
+ },
+ {
+  "id": "o24",
+  "mergedFrom": [
+   "c24"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "navy",
+    "material": "jersey",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "tee",
+    "itemName": "브레통 스트라이프 티",
+    "pattern": "breton"
+   },
+   {
+    "category": "bottom",
+    "color": "indigo",
+    "material": "denimIndigo",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "인디고 데님",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "sneakerWhite",
+    "itemType": null,
+    "itemName": "흰 스니커즈",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "tags": [
+   "navyBase"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "Dalm"
+  ],
+  "flags": [
+   "styleAssigned"
+  ],
+  "note": ""
+ },
+ {
+  "id": "o25",
+  "mergedFrom": [
+   "c25"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "navy",
+    "material": "jersey",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "tee",
+    "itemName": "브레통 스트라이프 티",
+    "pattern": "breton"
+   },
+   {
+    "category": "bottom",
+    "color": "beige",
+    "material": "chino",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "베이지 치노",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "loaferPenny",
+    "itemType": null,
+    "itemName": "브라운 로퍼",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "material": "wool",
+    "fit": null,
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "peacoat",
+    "itemName": "네이비 피코트",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "springFall"
+  ],
+  "tags": [
+   "navyBase",
+   "neutral"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "Dalm",
+   "MRP-stripes"
+  ],
+  "flags": [
+   "mapped",
+   "styleAssigned"
+  ],
+  "note": "포멀도 격차 5(티셔츠 2 ↔ 피코트 7) 경고. 통합 결정 D1로 클래식 복원"
+ },
+ {
+  "id": "o26",
+  "mergedFrom": [
+   "c26"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "black",
+    "material": "knitWool",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "knitWool",
+    "itemName": "블랙 롤넥 니트",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "black",
+    "material": "wool",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "블랙 울 슬랙스",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "chelsea",
+    "itemType": null,
+    "itemName": "블랙 첼시 부츠",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "forestGreen",
+    "material": "wool",
+    "fit": null,
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "blazer",
+    "itemName": "포레스트 그린 블레이저",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "tags": [
+   "mono",
+   "accent"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "AtG1"
+  ],
+  "flags": [
+   "styleAssigned"
+  ],
+  "note": ""
+ },
+ {
+  "id": "o27",
+  "mergedFrom": [
+   "c27"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": "jersey",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "tee",
+    "itemName": "화이트 티셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "beige",
+    "material": "chino",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "베이지 카고/치노",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "sneakerWhite",
+    "itemType": null,
+    "itemName": "흰 스니커즈",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "olive",
+    "material": null,
+    "fit": null,
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "shirtJacket",
+    "itemName": "올리브 초어 재킷",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "springFall"
+  ],
+  "tags": [
+   "earth",
+   "neutral"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "AtG1"
+  ],
+  "flags": [
+   "mapped",
+   "styleAssigned"
+  ],
+  "note": ""
+ },
+ {
+  "id": "o28",
+  "mergedFrom": [
+   "c28"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "lightGrey",
+    "material": "jersey",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "tee",
+    "itemName": "라이트 그레이 티셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "charcoal",
+    "material": "wool",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "차콜 울 슬랙스",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "sneakerWhite",
+    "itemType": null,
+    "itemName": "흰 스니커즈",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "tags": [
+   "mono"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "AtG1",
+   "MF"
+  ],
+  "flags": [
+   "styleAssigned"
+  ],
+  "note": "그레이 톤온톤. 포멀도 격차 5(티셔츠 2 ↔ 울 슬랙스 7) 경고. 통합 결정 D1로 클래식 복원"
+ },
+ {
+  "id": "o29",
+  "mergedFrom": [
+   "c29"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "greyMelange",
+    "material": "jersey",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "hoodie",
+    "itemName": "그레이 멜란지 후디",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "indigo",
+    "material": "denimIndigo",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "인디고 데님",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "sneakerWhite",
+    "itemType": null,
+    "itemName": "흰 스니커즈",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "brown",
+    "material": "wool",
+    "fit": null,
+    "length": "long",
+    "shoeType": null,
+    "itemType": "chesterfield",
+    "itemName": "브라운 코트",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "tags": [
+   "earth",
+   "navyBase",
+   "variation"
+  ],
+  "isClassic": false,
+  "universal": false,
+  "sources": [
+   "AtG1"
+  ],
+  "flags": [
+   "mapped",
+   "styleAssigned"
+  ],
+  "note": "종류 없는 겨울 \"코트\"는 체스터필드로 매핑. R1 태그에 variation 포함"
+ },
+ {
+  "id": "o30",
+  "mergedFrom": [
+   "c29v"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "forestGreen",
+    "material": "jersey",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "hoodie",
+    "itemName": "포레스트 그린 후디",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "indigo",
+    "material": "denimIndigo",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "인디고 데님",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "sneakerWhite",
+    "itemType": null,
+    "itemName": "흰 스니커즈",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "brown",
+    "material": "wool",
+    "fit": null,
+    "length": "long",
+    "shoeType": null,
+    "itemType": "chesterfield",
+    "itemName": "브라운 코트",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "tags": [
+   "earth",
+   "navyBase",
+   "accent",
+   "variation"
+  ],
+  "isClassic": false,
+  "universal": false,
+  "sources": [
+   "AtG1"
+  ],
+  "flags": [
+   "mapped",
+   "styleAssigned"
+  ],
+  "note": "c29의 괄호 변주(브라운+그린)"
+ },
+ {
+  "id": "o31",
+  "mergedFrom": [
+   "c30"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "dustyPink",
+    "material": "linen",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "linenShirt",
+    "itemName": "더스티 핑크 린넨 셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "white",
+    "material": "chino",
+    "fit": "regular",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "화이트 치노",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "loaferPenny",
+    "itemType": null,
+    "itemName": "브라운 로퍼",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "tags": [
+   "pastel",
+   "neutral",
+   "variation"
+  ],
+  "isClassic": false,
+  "universal": false,
+  "sources": [
+   "AtG1",
+   "WH1"
+  ],
+  "flags": [
+   "mapped",
+   "styleAssigned"
+  ],
+  "note": ""
+ },
+ {
+  "id": "o32",
+  "mergedFrom": [
+   "s02"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": "knitCotton",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "knitCotton",
+    "itemName": "화이트 코튼 니트",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "beige",
+    "material": "chino",
+    "fit": "tapered",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "베이지 치노",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "chukka",
+    "itemType": null,
+    "itemName": "브라운 척카 부츠",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "indigo",
+    "material": "denimIndigo",
+    "fit": null,
+    "length": "short",
+    "shoeType": null,
+    "itemType": "denimJacket",
+    "itemName": "인디고 데님 재킷",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "springFall"
+  ],
+  "tags": [
+   "neutral"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "R2 7"
+  ],
+  "flags": [
+   "colorAssigned"
+  ],
+  "note": "봄가을 캐주얼 기본"
+ },
+ {
+  "id": "o33",
+  "mergedFrom": [
+   "s04"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": "knitWool",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "knitWool",
+    "itemName": "화이트 울 니트",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "midGrey",
+    "material": "wool",
+    "fit": "tapered",
+    "length": "half",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "미드 그레이 울 슬랙스",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "derby",
+    "itemType": null,
+    "itemName": "브라운 더비",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "material": null,
+    "fit": null,
+    "length": "long",
+    "shoeType": null,
+    "itemType": "trench",
+    "itemName": "네이비 트렌치 코트",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "springFall"
+  ],
+  "tags": [
+   "neutral",
+   "mono",
+   "business"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "R2 7"
+  ],
+  "flags": [
+   "colorAssigned"
+  ],
+  "note": "출근 클래식"
+ },
+ {
+  "id": "o34",
+  "mergedFrom": [
+   "s05"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": "jersey",
+    "fit": "loose",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "sweatshirt",
+    "itemName": "화이트 맨투맨",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "lightDenim",
+    "material": "denimWashed",
+    "fit": "straight",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "라이트워시 데님",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "navy",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "sneakerColor",
+    "itemType": null,
+    "itemName": "네이비 컬러 스니커즈",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "material": "nylonTech",
+    "fit": null,
+    "length": "short",
+    "shoeType": null,
+    "itemType": "coachJacket",
+    "itemName": "네이비 코치 재킷",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "springFall"
+  ],
+  "tags": [
+   "navyBase",
+   "neutral",
+   "street"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "R2 7"
+  ],
+  "flags": [
+   "colorAssigned"
+  ],
+  "note": "스트릿 기본"
+ },
+ {
+  "id": "o35",
+  "mergedFrom": [
+   "s06"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": null,
+    "fit": "slim",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "oxfordShirt",
+    "itemName": "화이트 옥스포드 셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "midGrey",
+    "material": "wool",
+    "fit": "wide",
+    "length": "half",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "미드 그레이 울 슬랙스",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "loaferPenny",
+    "itemType": null,
+    "itemName": "브라운 페니 로퍼",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "springFall"
+  ],
+  "tags": [
+   "neutral",
+   "mono",
+   "variation"
+  ],
+  "isClassic": false,
+  "universal": false,
+  "sources": [
+   "R2 7"
+  ],
+  "flags": [
+   "colorAssigned"
+  ],
+  "note": "2025 \"큰 바지 + 작은 상의\"(턱인)"
+ },
+ {
+  "id": "o36",
+  "mergedFrom": [
+   "s07"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": "jersey",
+    "fit": "regular",
+    "length": "crop",
+    "shoeType": null,
+    "itemType": "tee",
+    "itemName": "화이트 티셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "beige",
+    "material": "chino",
+    "fit": "wide",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "베이지 치노",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "sneakerWhite",
+    "itemType": null,
+    "itemName": "흰 스니커즈",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "material": "nylonTech",
+    "fit": null,
+    "length": "short",
+    "shoeType": null,
+    "itemType": "blouson",
+    "itemName": "네이비 블루종",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "springFall"
+  ],
+  "tags": [
+   "neutral",
+   "variation",
+   "street"
+  ],
+  "isClassic": false,
+  "universal": false,
+  "sources": [
+   "R2 7"
+  ],
+  "flags": [
+   "colorAssigned"
+  ],
+  "note": "숏 위 + 와이드 아래"
+ },
+ {
+  "id": "o37",
+  "mergedFrom": [
+   "s08"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": null,
+    "fit": "loose",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "oxfordShirt",
+    "itemName": "화이트 코튼 셔츠 재킷",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "indigo",
+    "material": "denimIndigo",
+    "fit": "tapered",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "인디고 데님",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "derby",
+    "itemType": null,
+    "itemName": "브라운 더비",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "springFall"
+  ],
+  "tags": [
+   "navyBase",
+   "neutral"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "R2 7"
+  ],
+  "flags": [
+   "colorAssigned",
+   "mapped"
+  ],
+  "note": "루즈 상의 + 테이퍼드(계획서 예시). 셔츠 재킷을 상의로 입음 → oxfordShirt로 매핑"
+ },
+ {
+  "id": "o38",
+  "mergedFrom": [
+   "s09"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "cream",
+    "material": "knitWool",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "knitWool",
+    "itemName": "크림 울 니트",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "brown",
+    "material": "corduroy",
+    "fit": "tapered",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "브라운 코듀로이",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "chocolate",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "loaferPenny",
+    "itemType": null,
+    "itemName": "초콜릿 페니 로퍼",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "material": "knitWool",
+    "fit": null,
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "cardigan",
+    "itemName": "네이비 가디건",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "springFall"
+  ],
+  "tags": [
+   "neutral"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "R2 7",
+   "WKCORD"
+  ],
+  "flags": [
+   "colorAssigned"
+  ],
+  "note": "늦가을(W Korea 조합)"
+ },
+ {
+  "id": "o39",
+  "mergedFrom": [
+   "s10"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": "linen",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "linenShirt",
+    "itemName": "화이트 린넨 셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "beige",
+    "material": "chino",
+    "fit": "tapered",
+    "length": "crop",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "베이지 치노",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "loaferPenny",
+    "itemType": null,
+    "itemName": "브라운 페니 로퍼",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "tags": [
+   "neutral"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "R2 7"
+  ],
+  "flags": [
+   "colorAssigned"
+  ],
+  "note": "여름 기본(노삭스)"
+ },
+ {
+  "id": "o40",
+  "mergedFrom": [
+   "s11"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": "jersey",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "tee",
+    "itemName": "화이트 티셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "lightDenim",
+    "material": "denimWashed",
+    "fit": "straight",
+    "length": "crop",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "라이트워시 데님",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "material": null,
+    "fit": null,
+    "length": null,
+    "shoeType": "sneakerWhite",
+    "itemType": null,
+    "itemName": "흰 스니커즈",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "tags": [
+   "navyBase",
+   "neutral"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "R2 7"
+  ],
+  "flags": [
+   "colorAssigned"
+  ],
+  "note": "캔버스 스니커즈"
+ },
+ {
+  "id": "o41",
+  "mergedFrom": [
+   "s12"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": "jersey",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "poloPique",
+    "itemName": "화이트 피케 폴로",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "midGrey",
+    "material": "wool",
+    "fit": "wide",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "미드 그레이 울 슬랙스",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "loaferTassel",
+    "itemType": null,
+    "itemName": "브라운 태슬 로퍼",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "tags": [
+   "neutral",
+   "mono",
+   "business"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "R2 7"
+  ],
+  "flags": [
+   "colorAssigned"
+  ],
+  "note": "여름 출근(트로피컬 울)"
+ },
+ {
+  "id": "o42",
+  "mergedFrom": [
+   "s13"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "navy",
+    "material": "jersey",
+    "fit": "slim",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "tank",
+    "itemName": "네이비 탱크톱",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "white",
+    "material": "linen",
+    "fit": "wide",
+    "length": "crop",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "화이트 린넨 팬츠",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "material": "nylonTech",
+    "fit": null,
+    "length": null,
+    "shoeType": "sandal",
+    "itemType": null,
+    "itemName": "브라운 샌들",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "cream",
+    "material": "linen",
+    "fit": null,
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "overshirt",
+    "itemName": "크림 린넨 오버셔츠",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "tags": [
+   "neutral",
+   "variation",
+   "resort",
+   "weekend"
+  ],
+  "isClassic": false,
+  "universal": false,
+  "sources": [
+   "R2 7"
+  ],
+  "flags": [
+   "colorAssigned"
+  ],
+  "note": "휴양·주말"
+ },
+ {
+  "id": "o43",
+  "mergedFrom": [
+   "s14"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": "jersey",
+    "fit": "regular",
+    "length": "crop",
+    "shoeType": null,
+    "itemType": "tee",
+    "itemName": "화이트 티셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "black",
+    "material": "nylonTech",
+    "fit": "tapered",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "블랙 테크 팬츠",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "material": "nylonTech",
+    "fit": null,
+    "length": null,
+    "shoeType": "running",
+    "itemType": null,
+    "itemName": "블랙 러닝화",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "tags": [
+   "neutral",
+   "mono",
+   "street"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "R2 7"
+  ],
+  "flags": [
+   "colorAssigned"
+  ],
+  "note": "고프코어"
+ },
+ {
+  "id": "o44",
+  "mergedFrom": [
+   "s15"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": "linen",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "linenShirt",
+    "itemName": "화이트 반팔 셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "beige",
+    "material": "chino",
+    "fit": "wide",
+    "length": "crop",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "베이지 치노",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "sneakerWhite",
+    "itemType": null,
+    "itemName": "흰 스니커즈",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "tags": [
+   "neutral"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "R2 7"
+  ],
+  "flags": [
+   "colorAssigned",
+   "mapped"
+  ],
+  "note": "2025 여름 기본. 반팔 셔츠 → linenShirt로 매핑"
+ },
+ {
+  "id": "o45",
+  "mergedFrom": [
+   "s17"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": "knitCashmere",
+    "fit": "slim",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "knitCashmere",
+    "itemName": "화이트 캐시미어 니트",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "blackDenim",
+    "material": "denimBlack",
+    "fit": "slim",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "블랙 데님",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "chelsea",
+    "itemType": null,
+    "itemName": "블랙 첼시 부츠",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "black",
+    "material": "wool",
+    "fit": null,
+    "length": "long",
+    "shoeType": null,
+    "itemType": "chesterfield",
+    "itemName": "블랙 싱글 코트",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "tags": [
+   "mono"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "R2 7"
+  ],
+  "flags": [
+   "colorAssigned"
+  ],
+  "note": "롱 코트 + 슬림"
+ },
+ {
+  "id": "o46",
+  "mergedFrom": [
+   "s18"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "cream",
+    "material": null,
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "flannelShirt",
+    "itemName": "크림 플란넬 셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "brown",
+    "material": "corduroy",
+    "fit": "straight",
+    "length": "half",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "브라운 코듀로이",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "chocolate",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "workboot",
+    "itemType": null,
+    "itemName": "초콜릿 워크 부츠",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "material": "wool",
+    "fit": null,
+    "length": "long",
+    "shoeType": null,
+    "itemType": "duffle",
+    "itemName": "네이비 더플 코트",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "tags": [
+   "neutral",
+   "weekend"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "R2 7"
+  ],
+  "flags": [
+   "colorAssigned"
+  ],
+  "note": "겨울 캐주얼"
+ },
+ {
+  "id": "o47",
+  "mergedFrom": [
+   "s19"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": "knitWool",
+    "fit": "loose",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "knitWool",
+    "itemName": "화이트 울 니트",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "indigo",
+    "material": "denimIndigo",
+    "fit": "tapered",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "인디고 데님",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "brown",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "chelsea",
+    "itemType": null,
+    "itemName": "브라운 첼시 부츠",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "material": "wool",
+    "fit": null,
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "peacoat",
+    "itemName": "네이비 피코트",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "tags": [
+   "navyBase",
+   "neutral"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "R2 7"
+  ],
+  "flags": [
+   "colorAssigned"
+  ],
+  "note": ""
+ },
+ {
+  "id": "o48",
+  "mergedFrom": [
+   "s20"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": "jersey",
+    "fit": "oversized",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "hoodie",
+    "itemName": "화이트 후디",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "indigo",
+    "material": "denimIndigo",
+    "fit": "wide",
+    "length": "full",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "인디고 데님",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "navy",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "sneakerColor",
+    "itemType": null,
+    "itemName": "네이비 컬러 스니커즈",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "material": "nylonTech",
+    "fit": null,
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "shortPuffer",
+    "itemName": "네이비 숏 패딩",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "tags": [
+   "navyBase",
+   "neutral",
+   "variation",
+   "street"
+  ],
+  "isClassic": false,
+  "universal": false,
+  "sources": [
+   "R2 7"
+  ],
+  "flags": [
+   "colorAssigned"
+  ],
+  "note": "스트릿 겨울"
+ },
+ {
+  "id": "o49",
+  "mergedFrom": [
+   "s21"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": "jersey",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "tee",
+    "itemName": "화이트 티셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "beige",
+    "material": "chino",
+    "fit": "straight",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "베이지 치노",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "white",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "sneakerWhite",
+    "itemType": null,
+    "itemName": "흰 스니커즈",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "material": "nylonTech",
+    "fit": null,
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "fleece",
+    "itemName": "네이비 플리스",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "tags": [
+   "neutral",
+   "weekend"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "R2 7"
+  ],
+  "flags": [
+   "colorAssigned",
+   "mapped"
+  ],
+  "note": "겨울 주말. 플리스를 상의로 입음 → 티셔츠 + 플리스 아우터로 매핑"
+ },
+ {
+  "id": "o50",
+  "mergedFrom": [
+   "s22"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": "jersey",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "tee",
+    "itemName": "화이트 티셔츠",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "blackDenim",
+    "material": "denimBlack",
+    "fit": "slim",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "블랙 데님",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "chelsea",
+    "itemType": null,
+    "itemName": "블랙 첼시 부츠",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "black",
+    "material": "leather",
+    "fit": null,
+    "length": "short",
+    "shoeType": null,
+    "itemType": "leatherJacket",
+    "itemName": "블랙 가죽 재킷",
+    "pattern": null,
+    "layer": 1
+   },
+   {
+    "category": "outer",
+    "color": "midGrey",
+    "material": "wool",
+    "fit": null,
+    "length": "long",
+    "shoeType": null,
+    "itemType": "chesterfield",
+    "itemName": "미드 그레이 롱 코트",
+    "pattern": null,
+    "layer": 2
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "tags": [
+   "mono",
+   "variation"
+  ],
+  "isClassic": false,
+  "universal": false,
+  "sources": [
+   "R2 7"
+  ],
+  "flags": [
+   "colorAssigned"
+  ],
+  "note": "2겹 아우터"
+ },
+ {
+  "id": "o51",
+  "mergedFrom": [
+   "s23"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "white",
+    "material": "knitWool",
+    "fit": "regular",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "knitWool",
+    "itemName": "화이트 울 니트",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "charcoal",
+    "material": "flannel",
+    "fit": "tapered",
+    "length": "half",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "차콜 플란넬 슬랙스",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "material": "leather",
+    "fit": null,
+    "length": null,
+    "shoeType": "loaferTassel",
+    "itemType": null,
+    "itemName": "블랙 태슬 로퍼",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "navy",
+    "material": "wool",
+    "fit": null,
+    "length": "long",
+    "shoeType": null,
+    "itemType": "balmacaan",
+    "itemName": "네이비 발마칸 코트",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "tags": [
+   "neutral",
+   "mono",
+   "business"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "R2 7"
+  ],
+  "flags": [
+   "colorAssigned"
+  ],
+  "note": "드레시 겨울(양말)"
+ },
+ {
+  "id": "o52",
+  "mergedFrom": [
+   "s24"
+  ],
+  "items": [
+   {
+    "category": "top",
+    "color": "black",
+    "material": "jersey",
+    "fit": "loose",
+    "length": "regular",
+    "shoeType": null,
+    "itemType": "sweatshirt",
+    "itemName": "블랙 맨투맨",
+    "pattern": null
+   },
+   {
+    "category": "bottom",
+    "color": "greyMelange",
+    "material": "jersey",
+    "fit": "tapered",
+    "length": "nobreak",
+    "shoeType": null,
+    "itemType": null,
+    "itemName": "그레이 멜란지 스웻팬츠",
+    "pattern": null
+   },
+   {
+    "category": "shoes",
+    "color": "black",
+    "material": "nylonTech",
+    "fit": null,
+    "length": null,
+    "shoeType": "running",
+    "itemType": null,
+    "itemName": "블랙 러닝화",
+    "pattern": null
+   },
+   {
+    "category": "outer",
+    "color": "black",
+    "material": "nylonTech",
+    "fit": null,
+    "length": "long",
+    "shoeType": null,
+    "itemType": "longPuffer",
+    "itemName": "블랙 롱 패딩",
+    "pattern": null
+   }
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "tags": [
+   "mono",
+   "weekend"
+  ],
+  "isClassic": true,
+  "universal": false,
+  "sources": [
+   "R2 7"
+  ],
+  "flags": [
+   "colorAssigned"
+  ],
+  "note": "한파·동네"
+ }
+]

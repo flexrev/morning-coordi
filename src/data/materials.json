@@ -1,0 +1,219 @@
+[
+ {
+  "id": "denimIndigo",
+  "labelKo": "인디고 데님",
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": "여름은 얇은 것만",
+  "weight": "heavy",
+  "texture": "rough",
+  "formality": 4,
+  "note": "가장 범용. 블레이저·니트·가죽과 모두 OK",
+  "flags": []
+ },
+ {
+  "id": "denimWashed",
+  "labelKo": "워시드 데님",
+  "seasons": [
+   "springFall",
+   "summer"
+  ],
+  "seasonNote": null,
+  "weight": "mid",
+  "texture": "smooth",
+  "formality": 3,
+  "note": "캐주얼 전용. 옥스포드·플란넬 재킷과 충돌",
+  "flags": []
+ },
+ {
+  "id": "denimBlack",
+  "labelKo": "블랙 데님",
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "seasonNote": null,
+  "weight": "mid",
+  "texture": "smooth",
+  "formality": 5,
+  "note": "블랙 가죽 신발·첼시 부츠와 최상. 도시적",
+  "flags": []
+ },
+ {
+  "id": "corduroy",
+  "labelKo": "코듀로이",
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "seasonNote": "봄가을은 늦가을",
+  "weight": "heavy",
+  "texture": "fuzzy",
+  "formality": 4,
+  "note": "울 니트·트위드·플란넬 등 '보송한' 질감과 묶음. 린넨 금지",
+  "flags": []
+ },
+ {
+  "id": "chino",
+  "labelKo": "치노",
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": "겨울은 두꺼운 것",
+  "weight": "light",
+  "texture": "smooth",
+  "formality": 5,
+  "note": "사계절 기본. 무엇과도 무난하나 '밋밋' 경고",
+  "flags": []
+ },
+ {
+  "id": "wool",
+  "labelKo": "울 슬랙스",
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": "여름은 트로피컬 울",
+  "weight": "mid",
+  "texture": "smooth",
+  "formality": 7,
+  "note": "가장 드레시한 하의. 저지·러닝화와 격차 큼",
+  "flags": []
+ },
+ {
+  "id": "flannel",
+  "labelKo": "플란넬",
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "seasonNote": "봄가을은 늦가을",
+  "weight": "heavy",
+  "texture": "fuzzy",
+  "formality": 7,
+  "note": "겨울 울 니트·캐시미어·트위드와 최상",
+  "flags": []
+ },
+ {
+  "id": "knitCotton",
+  "labelKo": "코튼 니트",
+  "seasons": [
+   "springFall",
+   "summer"
+  ],
+  "seasonNote": "여름은 얇은 것",
+  "weight": "light",
+  "texture": "fuzzy",
+  "formality": 4,
+  "note": "치노·린넨·워시드 데님",
+  "flags": []
+ },
+ {
+  "id": "knitWool",
+  "labelKo": "울 니트",
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "seasonNote": null,
+  "weight": "mid",
+  "texture": "fuzzy",
+  "formality": 5,
+  "note": "모든 겨울 하의와 OK. 가죽 재킷 안에",
+  "flags": []
+ },
+ {
+  "id": "knitCashmere",
+  "labelKo": "캐시미어 니트",
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "seasonNote": null,
+  "weight": "light",
+  "texture": "smooth",
+  "formality": 7,
+  "note": "플란넬·울 슬랙스·블랙 데님. 워시드 데님·스웻과는 격차",
+  "flags": []
+ },
+ {
+  "id": "linen",
+  "labelKo": "린넨",
+  "seasons": [
+   "springFall",
+   "summer"
+  ],
+  "seasonNote": "봄가을은 5·9월만",
+  "weight": "light",
+  "texture": "rough",
+  "formality": 4,
+  "note": "여름 전용. 울 니트·코듀로이·트위드·플란넬과 계절 충돌. 출처 갈림: 레이어링하면 가을도 가능(Sumissura)",
+  "flags": [
+   "disputed"
+  ]
+ },
+ {
+  "id": "jersey",
+  "labelKo": "저지/스웻",
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": null,
+  "weight": "light",
+  "texture": "smooth",
+  "formality": 2,
+  "note": "티셔츠·스웻. 데님·치노·나일론. 플란넬·옥스포드와 격차",
+  "flags": []
+ },
+ {
+  "id": "leather",
+  "labelKo": "가죽",
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "seasonNote": null,
+  "weight": "heavy",
+  "texture": "glossy",
+  "formality": 5,
+  "note": "아우터로서 데님·울 니트·블랙 데님과 최상. 전신 가죽 금지",
+  "flags": []
+ },
+ {
+  "id": "nylonTech",
+  "labelKo": "나일론/테크",
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "seasonNote": "여름은 얇은 셸, 겨울은 패딩",
+  "weight": "light",
+  "texture": "glossy",
+  "formality": 3,
+  "note": "스웻·데님·치노. 플란넬·옥스포드와 격차",
+  "flags": []
+ },
+ {
+  "id": "tweed",
+  "labelKo": "트위드",
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "seasonNote": "봄가을은 늦가을",
+  "weight": "heavy",
+  "texture": "rough",
+  "formality": 6,
+  "note": "코듀로이·플란넬·데님·울 니트. 린넨·저지 금지",
+  "flags": []
+ }
+]
