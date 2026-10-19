@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="블레이저 / 셔츠 재킷 (레귤러)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="outer" data-type="blazer" data-fit="regular" data-length="regular" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-outer,#555555)" vector-effect="non-scaling-stroke" d="M84 70L56 78Q42 110 36 152L36 220L58 220L60 214L140 214L142 220L164 220L164 152Q158 110 144 78L116 70L110 72L100 150L90 72Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.18)" stroke="none" d="M126 100L140 214L130 214L124 100ZM156 120L164 152L164 220L157 220L156 152ZM60 214L140 214L140 220L60 220ZM100 150L104 150L94 74L90 72Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M86 70L76 96M80 100L100 150M114 70L124 96M120 100L100 150M100 150L100 214M66 118L84 118M62 170L88 170L87 178L63 178ZM112 170L138 170L137 178L113 178ZM56 78Q68 110 66 140L60 214M144 78Q132 110 134 140L140 214M40 206L46 206M154 206L160 206"/>
+<path data-part="detail" data-kind="buttons" fill="none" stroke-opacity=".5" stroke-width="3" stroke-dasharray="0.1 16" d="M100 156L100 172"/>
+</g>
+</svg>

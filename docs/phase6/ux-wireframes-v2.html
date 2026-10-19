@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>아침 코디 v1.1 와이어프레임</title>
+<style>
+  :root { --ink:#222; --mute:#777; --line:#9a9a9a; --box:#d9d9d9; --box2:#c4c4c4; --box3:#ececec; --acc:#8a6a2e; --paper:#f4f4f2; }
+  * { box-sizing:border-box; }
+  body { margin:0; padding:24px; background:var(--paper); color:var(--ink); font:14px/1.45 -apple-system,BlinkMacSystemFont,system-ui,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif; word-break:keep-all; }
+  h1 { font-size:20px; margin:0 0 4px; }
+  .sub { color:var(--mute); margin:0 0 20px; font-size:13px; }
+  .grid { display:flex; flex-wrap:wrap; gap:28px 24px; align-items:flex-start; }
+  .wf { width:390px; }
+  .wf h2 { font-size:15px; margin:0 0 8px; }
+  .wf h2 span { color:var(--mute); font-weight:400; font-size:12px; margin-left:6px; }
+  .frame { position:relative; width:390px; height:844px; background:#fff; border:2px solid var(--ink); border-radius:28px; overflow:hidden; display:flex; flex-direction:column; }
+  .notes { margin:10px 0 0; padding:0 0 0 18px; font-size:12px; color:#444; }
+  .notes li { margin:2px 0; }
+  .notes b { color:var(--ink); }
+
+  /* 공통 조각 */
+  .top { height:52px; display:flex; align-items:center; gap:8px; padding:0 12px; flex:0 0 auto; }
+  .top .ttl { font-size:14px; font-weight:600; color:var(--mute); flex:1; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .top .ttl.big { font-size:20px; color:var(--ink); font-weight:700; }
+  .back { width:40px; height:40px; display:grid; place-items:center; font-size:24px; }
+  .seg { display:inline-flex; border:1.5px solid var(--line); border-radius:999px; padding:2px; }
+  .seg { flex:0 0 auto; }
+  .seg i { font-style:normal; text-align:center; padding:9px 7px; border-radius:999px; font-size:12px; font-weight:600; color:var(--mute); white-space:nowrap; }
+  .seg i.on { background:#eee; outline:1.5px solid var(--acc); color:var(--ink); }
+  .ico { position:relative; flex:0 0 40px; width:40px; height:40px; border-radius:10px; display:grid; place-items:center; font-size:18px; color:var(--ink); }
+  .ico .num { position:absolute; top:-2px; left:-4px; }
+  .body { flex:1 1 auto; padding:0 16px; display:flex; flex-direction:column; min-height:0; }
+  .bar { height:56px; border:1.5px solid var(--line); border-radius:12px; display:flex; align-items:center; gap:12px; padding:0 12px; font-weight:600; }
+  .dot { width:24px; height:24px; border-radius:50%; background:var(--box2); border:1px solid var(--line); flex:0 0 24px; }
+  .dot.base { box-shadow:0 0 0 2px #fff, 0 0 0 3.5px var(--mute); }
+  .dot.sm { width:18px; height:18px; flex-basis:18px; }
+  .bar .cta { margin-left:auto; font-weight:400; color:var(--mute); font-size:13px; }
+  .row { display:flex; gap:8px; margin-top:8px; height:48px; overflow:hidden; }
+  .pill { display:inline-flex; align-items:center; gap:6px; padding:0 12px; height:48px; border:1.5px solid var(--line); border-radius:999px; font-size:13px; color:var(--mute); white-space:nowrap; }
+  .pill.on { background:#eee; border-color:var(--acc); color:var(--ink); font-weight:600; }
+  .pill.favpill { border-color:var(--ink); color:var(--ink); font-weight:600; }
+  .cards { display:flex; flex-direction:column; gap:8px; margin-top:12px; }
+  .card { position:relative; min-height:142px; border:1.5px solid var(--line); border-radius:12px; padding:12px; display:flex; gap:12px; background:#fff; }
+  .card.today { border-left:4px solid var(--acc); }
+  .ill { width:60px; height:104px; background:var(--box); border-radius:8px; align-self:center; flex:0 0 60px; display:grid; place-items:center; font-size:10px; color:var(--mute); }
+  .meta { flex:1; min-width:0; display:flex; flex-direction:column; gap:6px; justify-content:center; }
+  .lab { font-size:12px; color:var(--mute); display:flex; align-items:center; gap:6px; padding-right:40px; }
+  .lab .t { font-size:11px; padding:1px 6px; background:var(--box3); border-radius:999px; color:#555; }
+  .lab .more { margin-left:auto; }
+  .dots { display:flex; gap:6px; }
+  .cap { font-size:14px; }
+  .why { font-size:13px; color:#666; }
+  .fav { position:absolute; top:4px; right:4px; width:48px; height:48px; display:grid; place-items:center; font-size:20px; color:var(--mute); }
+  .fav.on { color:var(--acc); }
+  .bottom { flex:0 0 auto; border-top:1.5px solid var(--line); padding:12px 16px 24px; display:flex; flex-direction:column; gap:8px; background:#fff; }
+  .btn { height:48px; border:1.5px solid var(--line); border-radius:12px; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:14px; background:#fff; }
+  .btn.pri { height:56px; background:var(--box); border-color:var(--box); flex-direction:column; gap:0; font-size:17px; font-weight:700; }
+  .btn.pri small { font-size:12px; font-weight:400; color:#555; line-height:14px; }
+  .btn.on { background:#eee; border-color:var(--acc); }
+  .cats { display:flex; gap:8px; }
+  .cats .btn { flex:1; }
+  .spacer { flex:1; }
+  .coach { position:absolute; left:16px; right:16px; bottom:150px; background:#fff; border:1.5px solid var(--ink); border-radius:12px; padding:10px 12px; font-size:13px; }
+  .coach::after { content:""; position:absolute; left:50%; bottom:-8px; width:14px; height:14px; background:#fff; border-right:1.5px solid var(--ink); border-bottom:1.5px solid var(--ink); transform:translateX(-50%) rotate(45deg); }
+  .num { display:inline-grid; place-items:center; width:18px; height:18px; border-radius:50%; background:var(--ink); color:#fff; font-size:11px; font-weight:700; margin-right:4px; vertical-align:middle; }
+  .pin { position:absolute; z-index:5; }
+
+  /* 시트 */
+  .scrim { position:absolute; inset:0; background:rgba(0,0,0,.35); }
+  .sheet { position:absolute; left:0; right:0; bottom:0; background:#fff; border-radius:16px 16px 0 0; padding:8px 16px 24px; border-top:2px solid var(--ink); display:flex; flex-direction:column; gap:8px; }
+  .grip { width:40px; height:4px; border-radius:2px; background:var(--line); margin:0 auto 8px; }
+  .sh { display:flex; align-items:center; gap:8px; }
+  .sh h3 { margin:0; font-size:18px; flex:1; }
+  .x { width:40px; height:40px; display:grid; place-items:center; font-size:20px; color:var(--mute); }
+  .opt { height:48px; border:1.5px solid var(--line); border-radius:12px; display:flex; align-items:center; gap:10px; padding:0 12px; font-size:14px; }
+  .opt .r { margin-left:auto; color:var(--mute); font-size:12px; }
+  .note { font-size:13px; color:#666; }
+
+  /* S1 온보딩 */
+  .hero { padding:24px 0 12px; }
+  .hero h1 { font-size:28px; line-height:36px; margin:0; }
+  .steps { margin-top:16px; border:1.5px dashed var(--line); border-radius:12px; padding:12px; display:flex; flex-direction:column; gap:10px; }
+  .step { display:flex; align-items:center; gap:12px; font-size:14px; }
+  .step .pic { width:44px; height:44px; border-radius:10px; background:var(--box); flex:0 0 44px; display:grid; place-items:center; font-size:11px; color:var(--mute); }
+  .step small { display:block; color:var(--mute); font-size:12px; }
+  .s1grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .s1grid .btn { height:88px; font-size:20px; border-radius:16px; }
+  .hint { color:var(--mute); font-size:14px; margin:0 0 12px; }
+
+  /* 설정 */
+  .set { display:flex; flex-direction:column; gap:12px; padding-top:8px; }
+  .srow { display:flex; flex-direction:column; gap:6px; }
+  .srow .k { font-size:13px; color:var(--mute); }
+  .srow .seg i { min-width:0; flex:1; }
+  .srow .seg { display:flex; }
+  .srow .btn { justify-content:flex-start; padding:0 12px; font-weight:500; }
+  .danger { color:#a3372c; border-color:#a3372c; }
+
+  /* 공유 */
+  .share-img { width:100%; aspect-ratio:4/5; background:#121212; border-radius:12px; color:#ddd; display:flex; padding:14px; gap:12px; }
+  .share-img .sil { width:38%; background:#2a2a2a; border-radius:8px; display:grid; place-items:center; font-size:11px; color:#888; }
+  .share-img .txt { flex:1; display:flex; flex-direction:column; gap:8px; justify-content:center; font-size:12px; }
+  .share-img .txt .dd { display:flex; gap:6px; }
+  .share-img .txt .dd i { width:20px; height:20px; border-radius:50%; background:#777; border:1px solid #aaa; }
+  .share-img .txt .cap2 { font-size:15px; color:#fff; font-weight:600; }
+  .share-img .txt .mark { margin-top:auto; font-size:10px; color:#999; }
+  .s5ill { height:300px; background:var(--box); border-radius:12px; margin:8px auto 0; width:60%; display:grid; place-items:center; color:var(--mute); font-size:12px; }
+  .drow { height:48px; border:1.5px solid var(--line); border-radius:12px; display:flex; align-items:center; padding:0 12px; gap:8px; font-size:13px; }
+  .drow b { color:var(--mute); font-weight:500; width:64px; }
+
+  /* S4 탭 */
+  .tabs { display:flex; height:56px; border-top:3px solid transparent; }
+  .tab { flex:1; display:grid; place-items:center; font-size:16px; color:var(--mute); border-top:3px solid transparent; margin-top:-3px; }
+  .tab.on { color:var(--ink); font-weight:700; border-top-color:var(--acc); }
+  .chips { display:flex; gap:8px; overflow:hidden; padding:8px 0; }
+  .chips .k { font-size:12px; color:var(--mute); align-self:center; flex:0 0 36px; }
+  .chip { height:40px; padding:0 12px; border:1.5px solid var(--line); border-radius:999px; display:inline-flex; align-items:center; font-size:13px; color:var(--mute); white-space:nowrap; }
+  .chip.on { background:#eee; border-color:var(--acc); color:var(--ink); font-weight:600; }
+  .legend { margin-top:28px; font-size:12px; color:#555; border-top:1px solid var(--line); padding-top:12px; }
+  @media print { body { padding:0; } }
+</style>
+</head>
+<body>
+<h1>아침 코디 v1.1 — UX 와이어프레임 (Phase 6-A)</h1>
+<p class="sub">390×844 · 회색 상자 = 자리만 · 번호 = 아래 주석 · 근거: <code>docs/phase6/ux-enhancement.md</code>, 모션은 <code>motion-spec.md</code>. 파일에서 바로 열립니다(외부 자원 없음).</p>
+
+<div class="grid">
+
+<!-- ===================== 1. 오늘의 추천 홈 ===================== -->
+<section class="wf">
+  <h2>1. 오늘의 추천 홈 (S3′) <span>재방문 · 탭 0 · 스크롤 0</span></h2>
+  <div class="frame">
+    <div class="top">
+      <div class="ttl"><span class="num">1</span>10월 19일 · 아침 코디</div>
+      <div class="seg"><i class="on">봄가을</i><i>여름</i><i>겨울</i></div>
+      <div class="ico"><span class="num">2</span>⋯</div>
+    </div>
+    <div class="body">
+      <div class="bar"><span class="dot base"></span>하의 · 인디고<span class="cta">색 바꾸기 ›</span></div>
+      <div class="row">
+        <span class="pill favpill"><span class="num">3</span>♥ 저장 3</span>
+        <span class="pill on"><span class="dot sm"></span>하의 · 인디고</span>
+        <span class="pill"><span class="dot sm"></span>신발 · 화이트</span>
+      </div>
+      <div class="cards">
+        <div class="card today">
+          <div class="ill">실루엣</div>
+          <div class="meta">
+            <div class="lab"><span class="num">4</span>오늘의 추천 · 클래식 2/3 <span class="more">자세히 ›</span></div>
+            <div class="dots"><span class="dot"></span><span class="dot base"></span><span class="dot"></span></div>
+            <div class="cap">오트밀 울 니트 · 인디고 데님 · 브라운 페니 로퍼</div>
+            <div class="why">네이비 베이스+어스톤 조합</div>
+          </div>
+          <div class="fav"><span class="num">5</span>♡</div>
+        </div>
+        <div class="card">
+          <div class="ill">실루엣</div>
+          <div class="meta">
+            <div class="lab">클래식 1/3 <span class="more">자세히 ›</span></div>
+            <div class="dots"><span class="dot"></span><span class="dot base"></span><span class="dot"></span></div>
+            <div class="cap">화이트 티셔츠 · 인디고 데님 · 흰 스니커즈</div>
+            <div class="why">누구나 안전한 기본 조합</div>
+          </div>
+          <div class="fav on">♥</div>
+        </div>
+        <div class="card">
+          <div class="ill">실루엣</div>
+          <div class="meta">
+            <div class="lab">클래식 3/3 <span class="more">자세히 ›</span></div>
+            <div class="dots"><span class="dot"></span><span class="dot base"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="cap">멜란지 맨투맨 · 인디고 데님 · 흰 스니커즈 · 네이비 셔츠 재킷</div>
+            <div class="why">톤온톤 (네이비 베이스)</div>
+          </div>
+          <div class="fav">♡</div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+    </div>
+    <div class="bottom">
+      <div class="btn pri"><span class="num">6</span>더 보기<small>톤별 · 색상별 · 변주</small></div>
+      <div class="cats"><div class="btn on">하의</div><div class="btn">상의</div><div class="btn">신발</div><div class="btn">아우터</div></div>
+    </div>
+  </div>
+  <ol class="notes">
+    <li><b>날짜 제목</b> — 앱 이름 자리에 오늘 날짜. 인사말 없음. 320 폭에선 숨김(h1 유지).</li>
+    <li><b>⋯ 메뉴</b> 48px — 즐겨찾기·설정·앱으로 두기·처음 안내. 저빈도라 상단.</li>
+    <li><b>바로가기 줄</b> = 기존 최근 선택 줄. 즐겨찾기 ≥1 이면 첫 칩 <b>♥ 저장 N</b>. 높이 추가 0.</li>
+    <li><b>오늘 카드</b> — 날짜로 정한 클래식 1장이 맨 위, 왼쪽 앰버 선. ref 는 원래 인덱스(classic.1).</li>
+    <li><b>♥</b> 48×48 탭 영역, 시각 24px. 카드 본체와 분리된 버튼. ⚑ 는 라벨 줄로 이동.</li>
+    <li><b>더 보기 부제</b> — 56px 버튼 안 두 줄. 발견성 장치, 높이 추가 0.</li>
+  </ol>
+</section>
+
+<!-- ===================== 2. S3 + 태그 칩 + 코치마크 ===================== -->
+<section class="wf">
+  <h2>2. S3 — 하트 · 스타일 태그 · 코치마크 A <span>2회차 방문 첫 S3</span></h2>
+  <div class="frame">
+    <div class="top">
+      <div class="ttl">10월 20일 · 아침 코디</div>
+      <div class="seg"><i>봄가을</i><i class="on">여름</i><i>겨울</i></div>
+      <div class="ico">⋯</div>
+    </div>
+    <div class="body">
+      <div class="bar"><span class="dot base"></span>상의 · 화이트<span class="cta">색 바꾸기 ›</span></div>
+      <div class="cards">
+        <div class="card today">
+          <div class="ill">실루엣</div>
+          <div class="meta">
+            <div class="lab">오늘의 추천 · 클래식 1/3 <span class="t"><span class="num">1</span>미니멀</span><span class="t">출근</span><span class="more">자세히 ›</span></div>
+            <div class="dots"><span class="dot base"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="cap">화이트 옥스포드 셔츠 · 베이지 치노 · 브라운 로퍼</div>
+            <div class="why">누구나 안전한 기본 조합</div>
+          </div>
+          <div class="fav on"><span class="num">2</span>♥</div>
+        </div>
+        <div class="card">
+          <div class="ill">실루엣</div>
+          <div class="meta">
+            <div class="lab">클래식 2/3 <span class="t">시티보이</span><span class="more">자세히 ›</span></div>
+            <div class="dots"><span class="dot base"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="cap">화이트 티셔츠 · 연청 데님 · 흰 스니커즈</div>
+            <div class="why">톤온톤 (뉴트럴)</div>
+          </div>
+          <div class="fav">♡</div>
+        </div>
+        <div class="card">
+          <div class="ill">실루엣</div>
+          <div class="meta">
+            <div class="lab">클래식 3/3 ⚑ <span class="t">아메카지</span><span class="more">자세히 ›</span></div>
+            <div class="dots"><span class="dot base"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="cap">화이트 티셔츠 · 올리브 치노 · 브라운 척카 부츠</div>
+            <div class="why">뉴트럴+어스톤 조합</div>
+          </div>
+          <div class="fav">♡</div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+    </div>
+    <div class="coach"><span class="num">3</span>세 장이 전부가 아니에요 — 톤별·변주는 여기에</div>
+    <div class="bottom">
+      <div class="btn pri">더 보기<small>톤별 · 색상별 · 변주 · 스타일</small></div>
+      <div class="cats"><div class="btn">하의</div><div class="btn on">상의</div><div class="btn">신발</div><div class="btn">아우터</div></div>
+    </div>
+  </div>
+  <ol class="notes">
+    <li><b>태그 칩</b> 11px, 최대 2개, CX 의 <code>candidate.tags</code> 가 있을 때만. 라벨 줄 안이라 높이 0. 컴팩트 모드(200% 글자)에선 숨김.</li>
+    <li><b>채워진 ♥</b> = 앰버. 탭 → 팝 모션 + 토스트 “저장했어요”. 다시 탭 → 해제, 모션 없음.</li>
+    <li><b>코치마크 A</b> — 2회차 방문 첫 S3 에서 1회. 스크림 없음, 하단 40% 안, 아무 탭·6초에 사라짐. 설치 배너가 있는 날엔 다음 방문으로.</li>
+  </ol>
+</section>
+
+<!-- ===================== 3. 즐겨찾기 시트 ===================== -->
+<section class="wf">
+  <h2>3. 즐겨찾기 시트 (F1) <span>#/result/fav · 1탭</span></h2>
+  <div class="frame">
+    <div class="top">
+      <div class="ttl">10월 19일 · 아침 코디</div>
+      <div class="seg"><i class="on">봄가을</i><i>여름</i><i>겨울</i></div>
+      <div class="ico">⋯</div>
+    </div>
+    <div class="body">
+      <div class="bar"><span class="dot base"></span>하의 · 인디고<span class="cta">색 바꾸기 ›</span></div>
+      <div class="row"><span class="pill favpill">♥ 저장 3</span><span class="pill on"><span class="dot sm"></span>하의 · 인디고</span></div>
+      <div class="cards"><div class="card"><div class="ill"></div><div class="meta"><div class="lab">오늘의 추천 · 클래식 2/3</div><div class="cap">…</div></div></div></div>
+    </div>
+    <div class="scrim"></div>
+    <div class="sheet" style="height:72%">
+      <div class="grip"></div>
+      <div class="sh"><h3><span class="num">1</span>저장한 조합 3</h3><div class="x">✕</div></div>
+      <div class="cards" style="margin-top:0">
+        <div class="card">
+          <div class="ill">실루엣</div>
+          <div class="meta">
+            <div class="lab"><span class="num">2</span>하의 · 인디고 · 봄가을</div>
+            <div class="dots"><span class="dot"></span><span class="dot base"></span><span class="dot"></span></div>
+            <div class="cap">화이트 티셔츠 · 인디고 데님 · 흰 스니커즈</div>
+          </div>
+          <div class="fav on">♥</div>
+        </div>
+        <div class="card">
+          <div class="ill">실루엣</div>
+          <div class="meta">
+            <div class="lab">상의 · 화이트 · 여름</div>
+            <div class="dots"><span class="dot base"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="cap">화이트 옥스포드 셔츠 · 베이지 치노 · 브라운 로퍼</div>
+          </div>
+          <div class="fav on">♥</div>
+        </div>
+        <div class="card" style="opacity:.5">
+          <div class="ill">실루엣</div>
+          <div class="meta">
+            <div class="lab">신발 · 화이트 · 겨울</div>
+            <div class="cap"><span class="num">3</span>지금 버전엔 없는 조합이에요</div>
+          </div>
+          <div class="fav on">♥</div>
+        </div>
+      </div>
+      <div class="note" style="margin-top:auto">아래로 끌거나 뒤로 가기로 닫혀요</div>
+    </div>
+  </div>
+  <ol class="notes">
+    <li>제목에 개수. 최신 저장순, 최대 30. 필터·검색 없음.</li>
+    <li>라벨 = <b>카테고리 · 색 · 계절</b>(저장 당시 기준). 카드 탭 → S5(현재 기준 아이템은 바꾸지 않음). ♥ 탭 → 해제·제거.</li>
+    <li>데이터 버전이 바뀌어 못 찾는 항목은 흐리게 + 해제만 가능.</li>
+    <li>빈 상태(메뉴로 열었을 때만): “아직 저장한 조합이 없어요 / 카드의 ♥ 를 누르면 여기에 모여요”.</li>
+  </ol>
+</section>
+
+<!-- ===================== 4. 공유 미리보기 ===================== -->
+<section class="wf">
+  <h2>4. 공유 미리보기 (SH1) <span>S5 → 공유 · 총 3탭</span></h2>
+  <div class="frame">
+    <div class="top"><div class="back">‹</div><div class="ttl big">클래식 2/3</div></div>
+    <div class="body">
+      <div class="s5ill">실루엣 (36dvh)</div>
+      <div class="dots" style="justify-content:center;margin-top:8px"><span class="dot"></span><span class="dot base"></span><span class="dot"></span></div>
+      <div class="cap" style="text-align:center;margin-top:8px">오트밀 울 니트 · 인디고 데님 · 브라운 페니 로퍼</div>
+      <div class="drow" style="margin-top:12px"><b>핏</b>레귤러 상의 + 스트레이트 하의</div>
+      <div class="drow" style="margin-top:8px"><b>소재</b>울 · 데님 · 가죽</div>
+    </div>
+    <div class="bottom" style="flex-direction:row"><div class="btn" style="flex:1"><span class="num">1</span>♥ 저장</div><div class="btn" style="flex:1">공유</div></div>
+    <div class="scrim"></div>
+    <div class="sheet">
+      <div class="grip"></div>
+      <div class="sh"><h3>공유</h3><div class="x">✕</div></div>
+      <div class="share-img">
+        <div class="sil"><span class="num">2</span>실루엣 460×920</div>
+        <div class="txt">
+          <div class="dd"><i></i><i></i><i></i></div>
+          <div class="cap2">오트밀 울 니트 · 인디고 데님 · 브라운 페니 로퍼</div>
+          <div>클래식 2/3 · 봄가을</div>
+          <div class="mark">아침 코디 · 2026.10.19</div>
+        </div>
+      </div>
+      <div class="btn pri" style="flex-direction:row"><span class="num">3</span>공유하기</div>
+      <div class="btn">이미지 저장</div>
+      <div class="note"><span class="num">4</span>이미지를 길게 눌러 저장할 수 있어요 (iOS 홈 화면 앱에서만)</div>
+    </div>
+  </div>
+  <ol class="notes">
+    <li><b>S5 하단 줄</b> 신설: ♥ 저장 · 공유 (각 48px). 일러스트 높이 40→36dvh 로 상세 4줄 보존.</li>
+    <li><b>1080×1350 PNG</b>, 배경 #121212 고정. 캔버스에서 기기 안에서만 생성. 서버 없음.</li>
+    <li><code>navigator.share({files})</code>. 파일 공유 불가면 텍스트+딥링크 공유, <code>share</code> 자체가 없으면 버튼 숨김.</li>
+    <li>iOS standalone 은 <code>download</code> 가 안 되므로 “이미지 저장” 대신 안내 한 줄.</li>
+  </ol>
+</section>
+
+<!-- ===================== 5. 온보딩 (S1 첫 실행) ===================== -->
+<section class="wf">
+  <h2>5. 온보딩 — S1 첫 실행 변형 (ON) <span>추가 탭 0 · 한 번만</span></h2>
+  <div class="frame">
+    <div class="top"><div class="ttl">아침 코디</div></div>
+    <div class="body">
+      <div class="hero"><h1>오늘 입을 옷,<br>하나만 고르세요</h1></div>
+      <div class="steps">
+        <div class="step"><div class="pic">①</div><div>하나 고르면<small>하의·상의·신발·아우터 중 하나</small></div></div>
+        <div class="step"><div class="pic">②</div><div>바로 세 가지 조합<small>색만 고르면 끝</small></div></div>
+        <div class="step"><div class="pic">③</div><div>더 보기에서 톤별·변주<small>저장·공유는 카드에서</small></div></div>
+      </div>
+      <div class="note" style="margin-top:8px"><span class="num">1</span>스트립은 장식 — 누를 것 없음</div>
+      <div class="spacer"></div>
+      <p class="hint">색을 고르면 바로 조합이 나와요</p>
+      <div class="s1grid"><div class="btn">하의</div><div class="btn">상의</div><div class="btn">신발</div><div class="btn">아우터</div></div>
+      <div style="height:24px"></div>
+    </div>
+  </div>
+  <ol class="notes">
+    <li>별도 온보딩 화면 없음 — 첫 결과까지 탭을 더하지 않는다. <b>건너뛰기 = 카테고리 탭</b>.</li>
+    <li>첫 S3 렌더 시 <code>mc.v1.onboarded = true</code>. 이후 S1 은 스트립 없이 현재 모습. 설정 “처음 안내 다시 보기”로 재노출.</li>
+    <li>아이콘은 AS 아이콘 세트(없으면 회색 원). 라이트·다크 동일 구조.</li>
+  </ol>
+</section>
+
+<!-- ===================== 6. 설정 ===================== -->
+<section class="wf">
+  <h2>6. 설정 (ST1) <span>#/settings · ⋯ → 설정 (2탭)</span></h2>
+  <div class="frame">
+    <div class="top"><div class="back">‹</div><div class="ttl big">설정</div></div>
+    <div class="body set">
+      <div class="srow"><div class="k">화면</div><div class="seg"><i class="on">다크</i><i>라이트</i><i>자동</i></div></div>
+      <div class="srow"><div class="k">움직임 <span class="num">1</span></div><div class="seg"><i class="on">시스템 따름</i><i>줄이기</i></div><div class="note">지금 시스템 설정: 줄이지 않음</div></div>
+      <div class="srow"><div class="k">계절</div><div class="seg"><i class="on">봄가을</i><i>여름</i><i>겨울</i></div><div class="note">자동으로 되돌리기 ›</div></div>
+      <div class="srow"><div class="k">안내</div><div class="btn">처음 안내 다시 보기</div></div>
+      <div class="srow"><div class="k">앱</div><div class="btn">홈 화면에 두는 방법</div></div>
+      <div class="srow"><div class="k">저장</div><div class="btn danger"><span class="num">2</span>모든 저장 지우기</div></div>
+      <div class="spacer"></div>
+      <div class="note">버전 1.1.0 · 오프라인에서도 열려요<br>공유는 기기 안에서 만들어져요. 서버로 보내지 않아요</div>
+      <div style="height:24px"></div>
+    </div>
+    <div class="scrim"></div>
+    <div class="sheet">
+      <div class="grip"></div>
+      <div class="sh"><h3>모든 저장 지우기</h3><div class="x">✕</div></div>
+      <div class="note">즐겨찾기 3개, 최근 선택, 계절, 화면 설정이 지워져요</div>
+      <div class="btn danger" style="font-weight:700">지우기</div>
+      <div class="btn">취소</div>
+    </div>
+  </div>
+  <ol class="notes">
+    <li><b>움직임</b>: 기본 “시스템 따름”(OS <code>prefers-reduced-motion</code>). “모두 켜기”는 없음. 부제에 현재 OS 값.</li>
+    <li>되돌릴 수 없는 유일한 동작 — 확인 시트(<code>#/settings/reset</code>)까지 4탭. 지운 뒤 S1(+온보딩).</li>
+    <li>테마 전환은 모션 없음(밝은 중간 프레임 금지).</li>
+  </ol>
+</section>
+
+<!-- ===================== 7. 스타일·상황 (S4+) ===================== -->
+<section class="wf">
+  <h2>7. 스타일·상황 — 더 보기 4번째 탭 (S4+) <span>#/more/style · 2탭 · CX 슬롯</span></h2>
+  <div class="frame">
+    <div class="top"><div class="back">‹</div><div class="ttl big">더 보기</div><span class="dot base"></span><span style="font-size:13px;color:#555">인디고</span></div>
+    <div class="body">
+      <div class="chips"><span class="k">스타일</span><span class="chip on"><span class="num">1</span>미니멀</span><span class="chip">아메카지</span><span class="chip">시티보이</span><span class="chip">비즈캐주얼</span></div>
+      <div class="chips" style="padding-top:0"><span class="k">상황</span><span class="chip">출근</span><span class="chip on">주말</span><span class="chip">데이트</span><span class="chip" style="border-style:dashed">해제</span></div>
+      <div class="cards" style="margin-top:4px">
+        <div class="card">
+          <div class="ill">실루엣</div>
+          <div class="meta">
+            <div class="lab">미니멀 · 주말 <span class="more">자세히 ›</span></div>
+            <div class="dots"><span class="dot"></span><span class="dot base"></span><span class="dot"></span></div>
+            <div class="cap">화이트 티셔츠 · 인디고 데님 · 흰 스니커즈</div>
+            <div class="why">같은 톤 2색, 포인트 없음</div>
+          </div>
+          <div class="fav">♡</div>
+        </div>
+        <div class="card">
+          <div class="ill">실루엣</div>
+          <div class="meta">
+            <div class="lab">미니멀 · 주말 <span class="more">자세히 ›</span></div>
+            <div class="dots"><span class="dot"></span><span class="dot base"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="cap">블랙 니트 · 인디고 데님 · 블랙 더비 · 차콜 코트</div>
+            <div class="why">무채색 + 네이비</div>
+          </div>
+          <div class="fav">♡</div>
+        </div>
+        <div class="card" style="min-height:100px;border-style:dashed;align-items:center;justify-content:center;color:#666;font-size:13px"><span class="num">2</span>이 조합은 아직 없어요 — 상황 해제</div>
+      </div>
+    </div>
+    <div class="bottom" style="padding:0 16px 24px">
+      <div class="tabs"><div class="tab">톤별</div><div class="tab">색상별</div><div class="tab">변주</div><div class="tab on"><span class="num">3</span>스타일</div></div>
+    </div>
+  </div>
+  <ol class="notes">
+    <li>칩 줄 2개(sticky): 스타일(CX 순서 고정, 있는 것만) · 상황. 각 줄 하나씩, 둘 다 고르면 교집합. 기본 = 첫 스타일, 상황 없음.</li>
+    <li>교집합이 비면 빈 상태 1장 + “상황 해제”. 스타일 데이터가 아예 없으면 탭은 <code>disabled</code> + “없음”(기존 규칙).</li>
+    <li>하단 탭 4개(각 ≈ 90px @360). S3 에는 진입점 없음 — Quick 불변. 데이터 계약: <code>result.byStyle / byOccasion / candidate.tags</code>.</li>
+  </ol>
+</section>
+
+<!-- ===================== 8. 메뉴 시트 ===================== -->
+<section class="wf">
+  <h2>8. 메뉴 시트 (O2) <span>#/result/menu · ⋯ 1탭</span></h2>
+  <div class="frame">
+    <div class="top">
+      <div class="ttl">10월 19일 · 아침 코디</div>
+      <div class="seg"><i class="on">봄가을</i><i>여름</i><i>겨울</i></div>
+      <div class="ico" style="outline:2px solid var(--acc);outline-offset:2px">⋯</div>
+    </div>
+    <div class="body">
+      <div class="bar"><span class="dot base"></span>하의 · 인디고<span class="cta">색 바꾸기 ›</span></div>
+      <div class="cards"><div class="card"><div class="ill"></div><div class="meta"><div class="lab">오늘의 추천 · 클래식 2/3</div><div class="cap">…</div></div></div></div>
+    </div>
+    <div class="scrim"></div>
+    <div class="sheet">
+      <div class="grip"></div>
+      <div class="sh"><h3>메뉴</h3><div class="x">✕</div></div>
+      <div class="opt">♥ 즐겨찾기 <span class="r">3</span></div>
+      <div class="opt">⚙ 설정</div>
+      <div class="opt">⤓ 앱으로 두기 <span class="r">미설치·모바일만</span></div>
+      <div class="opt">? 처음 안내 다시 보기</div>
+    </div>
+  </div>
+  <ol class="notes">
+    <li>저빈도 기능의 집. 4줄 고정, 코치마크 없음(시트 안에서 자연히 발견).</li>
+    <li>“앱으로 두기”는 기존 O1 설치 시트로 연결. 설치된 standalone 에선 줄 자체를 숨김.</li>
+  </ol>
+</section>
+
+</div>
+
+<div class="legend">
+  탭 수 요약 — Quick: 첫 실행 2 · 재방문 0 · 기준 변경 2 (불변). 새 표면: 오늘의 추천 0 · ♥ 저장 1 · 즐겨찾기 목록 1(메뉴 경유 2) · 공유 3 · 온보딩 0 · 코치마크 0 · 스타일 탭 2(+칩 2) · 설정 2 · 초기화 4.
+  홈 높이 예산(375×812): 52 + 64 + 56 + 454 + 141 = 767 ≤ 812. v1.1 추가 요소의 높이 기여 = 0.
+</div>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>아침 코디 · 시안 B — 스튜디오 다크</title>
+<style>
+/* =====================================================================
+   시안 B · 스튜디오 다크
+   - 깊은 차콜, 인물에만 떨어지는 부드러운 스포트라이트, 글래스 표면, 앰버 액센트, 미세 그레인
+   - 그라데이션은 "배경·조명"에만. 옷(실루엣)은 단색 fill 그대로
+   - @font-face 는 포함하지 않음 (Pretendard Variable 셀프호스팅 전제, 폴백 스택으로 렌더)
+   ===================================================================== */
+:root{
+  --font-sans:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,Roboto,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","Helvetica Neue",Arial,sans-serif;
+
+  /* 테마 토큰 (B) */
+  --bg-0:#0E0F12;                       /* 깊은 차콜(푸른기 1단계) */
+  --bg-1:rgba(255,255,255,.045);        /* 글래스 카드 */
+  --bg-1-solid:#1A1B1F;                 /* backdrop-filter 미지원 폴백 */
+  --bg-2:rgba(255,255,255,.08);         /* 눌림·선택 */
+  --glass-border:rgba(255,255,255,.09);
+  --glass-hi:rgba(255,255,255,.16);     /* 상단 1px 하이라이트 */
+  --text-1:#F4F2ED;                     /* 본문 18.2:1 */
+  --text-2:#B9B6AF;                     /* 보조 9.6:1 */
+  --text-3:#8E8B85;                     /* 캡션 5.6:1 */
+  --accent:#E8B964;                     /* 앰버(아침 해) 10.9:1 */
+  --on-accent:#14120C;
+  --accent-soft:rgba(232,185,100,.14);
+  --accent-glow:rgba(232,185,100,.28);
+  --spot:rgba(255,230,190,.17);         /* 스포트라이트 중심 */
+  --chip-border:rgba(255,255,255,.28);
+  --c-skin:#C9A98C;
+
+  /* 의류 색 (design-tokens 4-3) */
+  --g-white:#FFFFFF; --g-oatmeal:#CFC4B4; --g-greyMelange:#A6A7AB; --g-indigo:#2C4270; --g-navy:#1F2E50;
+  --g-brown:#8B5A2B; --g-olive:#4B5320; --g-beige:#E3D5B5; --g-cream:#F4ECC9; --g-midGrey:#808080;
+  --g-khaki:#BFAE8A; --g-charcoal:#36454F; --g-blackDenim:#2E2F33; --g-lightDenim:#A3B9CF; --g-black:#141414;
+
+  --ease-out:cubic-bezier(.2,.8,.2,1);
+  --ease-spring:cubic-bezier(.34,1.3,.5,1);
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#07080A;color:var(--text-1);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+body{padding:28px 24px 48px;word-break:keep-all;overflow-wrap:anywhere}
+
+/* ---------- 데모 페이지 ---------- */
+.stage{display:flex;gap:40px;align-items:flex-start;justify-content:center;flex-wrap:wrap}
+.stage > figure{display:flex;flex-direction:column;gap:12px;align-items:center}
+.stage figcaption{color:#8E8B85;font-size:12px;letter-spacing:.08em}
+.stage figcaption b{color:#F4F2ED;font-weight:600;margin-right:8px}
+.page-title{display:flex;align-items:baseline;gap:14px;justify-content:center;margin-bottom:28px;color:#8E8B85;font-size:13px;letter-spacing:.06em}
+.page-title h1{font-size:15px;font-weight:600;color:#F4F2ED;letter-spacing:0}
+.page-title em{font-style:normal;color:#E8B964}
+.note{max-width:860px;margin:36px auto 0;color:#8E8B85;font-size:12px;line-height:18px;border-top:1px solid #1E1F24;padding-top:14px}
+.note code{color:#B9B6AF}
+
+/* ---------- 폰 프레임 ---------- */
+.phone{width:390px;height:844px;border-radius:44px;background:var(--bg-0);position:relative;overflow:hidden;
+  box-shadow:0 0 0 1px #24262C,0 30px 80px rgba(0,0,0,.7)}
+/* 아침 빛: 좌상단에서 들어오는 아주 옅은 앰버 */
+.phone::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 60% at 15% -10%,rgba(232,185,100,.11),transparent 55%)}
+/* 그레인: 화면 전체에 7%, 겹침(overlay) */
+.phone::after{content:"";position:absolute;inset:0;background-image:var(--grain);opacity:.07;mix-blend-mode:overlay;pointer-events:none}
+.screen{position:absolute;inset:0;display:flex;flex-direction:column;padding:52px 20px 0;z-index:1}
+.screen > .notch{position:absolute;top:14px;left:50%;transform:translateX(-50%);width:120px;height:32px;border-radius:20px;background:#000}
+.homebar{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:134px;height:5px;border-radius:3px;background:#3A3C42}
+
+/* ---------- 글래스 공통 ---------- */
+.glass{background:var(--bg-1);border:1px solid var(--glass-border);box-shadow:inset 0 1px 0 var(--glass-hi);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+@supports not (backdrop-filter:blur(1px)){.glass{background:var(--bg-1-solid)}}
+
+/* ---------- 상단 ---------- */
+.topbar{display:flex;align-items:center;justify-content:space-between;height:52px}
+.brand{font-size:14px;font-weight:700;letter-spacing:-.01em;color:var(--text-1);display:flex;align-items:center;gap:8px}
+.brand::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent-glow)}
+.seg{display:flex;padding:3px;border-radius:999px;position:relative}
+.seg button{appearance:none;background:none;border:0;color:var(--text-2);font:inherit;font-size:13px;font-weight:600;height:42px;min-width:56px;padding:0 12px;border-radius:999px;position:relative;cursor:pointer;z-index:1;transition:color 160ms}
+.seg button::after{content:"";position:absolute;inset:-3px 0} /* hit ≥ 48 */
+.seg button[aria-pressed="true"]{color:var(--on-accent);background:var(--accent);box-shadow:0 4px 14px var(--accent-glow)}
+
+/* ---------- 기준 아이템 바 ---------- */
+.basebar{margin-top:10px;height:64px;border-radius:20px;display:flex;align-items:center;gap:14px;padding:0 14px 0 12px;cursor:pointer}
+.basebar:active{background:var(--bg-2)}
+.basebar .sw{width:36px;height:36px;border-radius:50%;background:var(--g-indigo);box-shadow:inset 0 0 0 1px var(--chip-border),0 0 0 2px var(--bg-0),0 0 0 3.5px var(--accent),0 0 18px var(--accent-glow)}
+.basebar .t{flex:1;min-width:0}
+.basebar .t small{display:block;font-size:11px;letter-spacing:.10em;color:var(--accent);font-weight:700;margin-bottom:2px}
+.basebar .t b{display:block;font-size:17px;font-weight:700;letter-spacing:-.01em}
+.basebar .cta{font-size:13px;color:var(--text-2);font-weight:600;white-space:nowrap}
+
+/* ---------- 카드 ---------- */
+.cards{display:flex;flex-direction:column;gap:10px;margin-top:14px;flex:1 1 auto}
+.card{border-radius:22px;display:flex;align-items:stretch;gap:14px;padding:10px 14px 10px 10px;min-height:150px;position:relative;cursor:pointer;transition:transform 140ms var(--ease-out)}
+.card:active{transform:scale(.985);background:var(--bg-2)}
+/* 스포트라이트 플레이트: 인물 뒤 타원광 + 바닥 그림자 */
+.plate{width:92px;flex:0 0 92px;border-radius:16px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;
+  background:radial-gradient(70% 60% at 50% 34%,var(--spot),rgba(255,230,190,0) 72%),rgba(0,0,0,.28)}
+.plate::after{content:"";position:absolute;left:22%;right:22%;bottom:9px;height:8px;border-radius:50%;background:rgba(0,0,0,.55);filter:blur(4px)}
+.fig{width:66px;height:132px;color:var(--text-1);position:relative;z-index:1;filter:drop-shadow(0 6px 10px rgba(0,0,0,.45))}
+.meta{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:7px}
+.label{font-size:11px;line-height:16px;letter-spacing:.12em;color:var(--accent);font-weight:700;font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:6px}
+.label::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.dots{display:flex;gap:7px;align-items:center}
+.dot{width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 1px var(--chip-border),inset 0 1px 0 rgba(255,255,255,.18)}
+.dot--base{box-shadow:inset 0 0 0 1px var(--chip-border),0 0 0 2px var(--bg-0),0 0 0 3.5px var(--accent)}
+.cap{font-size:15px;line-height:22px;font-weight:600;color:var(--text-1);letter-spacing:-.005em}
+.why{font-size:13px;line-height:18px;color:var(--text-2)}
+
+/* ---------- 하단 ---------- */
+.bottom{padding:12px 0 28px;display:flex;flex-direction:column;gap:10px}
+.btn-primary{height:56px;border:0;border-radius:18px;background:var(--accent);color:var(--on-accent);font:inherit;font-size:17px;font-weight:800;letter-spacing:-.01em;cursor:pointer;
+  box-shadow:0 10px 30px var(--accent-glow),inset 0 1px 0 rgba(255,255,255,.35);transition:transform 140ms var(--ease-out),box-shadow 140ms}
+.btn-primary:active{transform:scale(.98);box-shadow:0 4px 12px var(--accent-glow)}
+.cats{display:flex;padding:4px;border-radius:16px;gap:4px}
+.cats button{flex:1;appearance:none;background:none;border:0;color:var(--text-2);font:inherit;font-size:14px;font-weight:600;height:48px;border-radius:12px;cursor:pointer;transition:background 160ms,color 160ms}
+.cats button[aria-current]{color:var(--text-1);background:var(--bg-2);box-shadow:inset 0 0 0 1px var(--glass-border)}
+
+/* ---------- S2 ---------- */
+.back{appearance:none;background:none;border:0;color:var(--text-1);font-size:26px;line-height:1;width:48px;height:48px;margin-left:-14px;cursor:pointer}
+.s2-head{padding:14px 0 0}
+.eyebrow{font-size:11px;letter-spacing:.12em;color:var(--accent);font-weight:700;margin-bottom:8px}
+.title{font-size:30px;line-height:38px;font-weight:800;letter-spacing:-.025em}
+.s2-help{color:var(--text-2);font-size:14px;line-height:20px;margin-top:10px}
+.spacer{flex:1 1 auto}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px 10px;padding-bottom:26px}
+.chip{appearance:none;background:none;border:0;color:var(--text-2);font:inherit;display:flex;flex-direction:column;align-items:center;gap:8px;min-height:88px;cursor:pointer;transition:transform 120ms var(--ease-spring)}
+.chip:active{transform:scale(.93)}
+.chip i{display:block;width:62px;height:62px;border-radius:20px;box-shadow:inset 0 0 0 1px var(--chip-border),inset 0 1px 0 rgba(255,255,255,.22),0 6px 14px rgba(0,0,0,.35);transition:box-shadow 160ms}
+.chip span{font-size:13px;line-height:18px}
+.chip[aria-checked="true"] i{box-shadow:inset 0 0 0 1px var(--chip-border),inset 0 1px 0 rgba(255,255,255,.22),0 0 0 3px var(--bg-0),0 0 0 5px var(--accent),0 0 22px var(--accent-glow)}
+.chip[aria-checked="true"] span{color:var(--text-1);font-weight:700}
+.chip--dim{opacity:.55}
+
+/* ---------- 모션 (B): 조명이 먼저 켜지고, 카드가 살짝 떠오르며 또렷해진다 ---------- */
+@keyframes rise{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes lightOn{from{opacity:0}to{opacity:1}}
+@keyframes popIn{from{opacity:0;transform:scale(.88)}to{opacity:1;transform:none}}
+.basebar{animation:rise 360ms var(--ease-out) both}
+.card{animation:rise 420ms var(--ease-out) both;animation-delay:calc(80ms + var(--i) * 80ms)}
+.plate{animation:lightOn 600ms ease-out both;animation-delay:calc(220ms + var(--i) * 80ms)}
+.grid .chip{animation:popIn 260ms var(--ease-spring) both;animation-delay:calc(var(--i) * 22ms)}
+@media (prefers-reduced-motion: reduce){
+  .basebar,.card,.plate,.grid .chip{animation:none}
+  .chip,.card,.btn-primary,.seg button{transition:none}
+  .chip:active,.card:active,.btn-primary:active{transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- 실루엣 레이어 (src/assets/silhouettes/*.svg 원본 path 그대로) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<defs>
+  <pattern id="pat-denim" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <line x1="1" y1="0" x2="1" y2="6" stroke="currentColor" stroke-opacity="0.18" stroke-width="1.2"/>
+  </pattern>
+  <pattern id="pat-knit" width="6" height="4" patternUnits="userSpaceOnUse">
+    <path d="M0 0 L3 3 L6 0" fill="none" stroke="currentColor" stroke-opacity="0.18" stroke-width="0.9" stroke-linejoin="round"/>
+  </pattern>
+  <symbol id="l-base"><path data-slot="base" fill="var(--c-skin,#C9A98C)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" d="M 76 34 a 24 24 0 1 0 48 0 a 24 24 0 1 0 -48 0 Z M 90 54 L 110 54 L 110 82 L 90 82 Z M 74 330 L 96 330 L 96 366 L 74 366 Z M 104 330 L 126 330 L 126 366 L 104 366 Z"/></symbol>
+  <symbol id="l-tee"><path data-slot="top" fill="var(--c-top,#BBBBBB)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" d="M 88 70 Q 100 82 112 70 L 138 78 L 153 118 L 135 125 L 134 192 L 66 192 L 65 125 L 47 118 L 62 78 Z M 135 125 L 130 104 M 65 125 L 70 104"/></symbol>
+  <symbol id="l-knit"><path data-slot="top" fill="var(--c-top,#BBBBBB)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" d="M 86 70 Q 100 86 114 70 L 138 80 L 152 198 L 134 198 L 134 192 L 66 192 L 66 198 L 48 198 L 62 80 Z M 134 198 L 130 112 M 66 198 L 70 112 M 66 184 L 134 184 M 136 190 L 151 190 M 49 190 L 64 190"/></symbol>
+  <symbol id="l-knit-pat"><path fill="url(#pat-knit)" stroke="none" d="M 86 70 Q 100 86 114 70 L 138 80 L 152 198 L 134 198 L 134 192 L 66 192 L 66 198 L 48 198 L 62 80 Z"/></symbol>
+  <symbol id="l-sweat"><path data-slot="top" fill="var(--c-top,#BBBBBB)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" d="M 84 70 Q 100 88 116 70 L 148 86 L 162 208 L 140 208 L 142 206 L 58 206 L 60 208 L 38 208 L 52 86 Z M 140 208 L 136 120 M 60 208 L 64 120 M 58 196 L 142 196 M 142 200 L 161 200 M 39 200 L 58 200"/></symbol>
+  <symbol id="l-bottom"><path data-slot="bottom" fill="var(--c-bottom,#444444)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" d="M 68 176 L 132 176 L 134 362 L 102 362 L 100 240 L 98 362 L 66 362 Z M 68 184 L 132 184 M 100 184 L 100 240"/></symbol>
+  <symbol id="l-bottom-denim"><path fill="url(#pat-denim)" stroke="none" d="M 68 176 L 132 176 L 134 362 L 102 362 L 100 240 L 98 362 L 66 362 Z"/></symbol>
+  <symbol id="l-sneaker"><path data-slot="shoes" fill="var(--c-shoes,#222222)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" d="M 70 356 L 98 356 L 98 392 L 56 392 Q 46 388 54 372 Q 60 358 70 356 Z M 50 384 L 98 384 M 74 364 L 90 364 M 72 372 L 90 372 M 130 356 L 102 356 L 102 392 L 144 392 Q 154 388 146 372 Q 140 358 130 356 Z M 150 384 L 102 384 M 126 364 L 110 364 M 128 372 L 110 372"/></symbol>
+  <symbol id="l-loafer"><path data-slot="shoes" fill="var(--c-shoes,#222222)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" d="M 72 362 L 98 362 L 98 392 L 52 392 Q 44 390 50 378 Q 58 366 72 362 Z M 48 386 L 98 386 M 62 372 L 84 366 M 128 362 L 102 362 L 102 392 L 148 392 Q 156 390 150 378 Q 142 366 128 362 Z M 152 386 L 102 386 M 138 372 L 116 366"/></symbol>
+  <symbol id="l-outer"><path data-slot="outer" fill="var(--c-outer,#555555)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" d="M 58 80 L 84 70 L 88 86 L 100 150 L 112 86 L 116 70 L 142 80 L 156 204 L 138 204 L 138 215 L 62 215 L 62 204 L 44 204 Z M 88 86 L 76 92 M 112 86 L 124 92 M 66 170 L 86 170 M 114 170 L 134 170 M 138 204 L 134 110 M 62 204 L 66 110 M 100 150 L 100 215"/></symbol>
+</defs>
+</svg>
+
+<div class="page-title"><h1>시안 B · 스튜디오 다크</h1><span>깊은 차콜 · 스포트라이트 · 글래스 · 그레인</span><em>앰버 액센트</em></div>
+
+<div class="stage">
+
+<!-- ===================== S3 결과 ===================== -->
+<figure>
+<div class="phone"><div class="screen"><div class="notch"></div>
+  <div class="topbar">
+    <span class="brand">아침 코디</span>
+    <div class="seg glass" role="group" aria-label="계절">
+      <button aria-pressed="true">봄가을</button><button>여름</button><button>겨울</button>
+    </div>
+  </div>
+
+  <div class="basebar glass" role="button" aria-label="기준 아이템: 하의 인디고 데님. 색 바꾸기">
+    <i class="sw" aria-hidden="true"></i>
+    <div class="t"><small>하의 · 기준</small><b>인디고 데님</b></div>
+    <span class="cta">바꾸기 ›</span>
+  </div>
+
+  <div class="cards">
+    <article class="card glass" style="--i:0">
+      <div class="plate">
+        <svg class="fig" viewBox="0 0 200 400" role="img" aria-label="화이트 티셔츠, 인디고 데님, 흰 스니커즈" style="--c-top:var(--g-white);--c-bottom:var(--g-indigo);--c-shoes:var(--g-white)">
+          <use href="#l-base"/><use href="#l-sneaker"/><use href="#l-bottom"/><use href="#l-bottom-denim"/><use href="#l-tee"/>
+        </svg>
+      </div>
+      <div class="meta">
+        <div class="label">클래식 01</div>
+        <div class="dots"><i class="dot" style="background:var(--g-white)"></i><i class="dot dot--base" style="background:var(--g-indigo)"></i><i class="dot" style="background:var(--g-white)"></i></div>
+        <p class="cap">화이트 티셔츠 · 인디고 데님 · 흰 스니커즈</p>
+        <p class="why">누구나 안전한 기본 조합</p>
+      </div>
+    </article>
+
+    <article class="card glass" style="--i:1">
+      <div class="plate">
+        <svg class="fig" viewBox="0 0 200 400" role="img" aria-label="오트밀 울 니트, 인디고 데님, 브라운 페니 로퍼" style="--c-top:var(--g-oatmeal);--c-bottom:var(--g-indigo);--c-shoes:var(--g-brown)">
+          <use href="#l-base"/><use href="#l-loafer"/><use href="#l-bottom"/><use href="#l-bottom-denim"/><use href="#l-knit"/><use href="#l-knit-pat"/>
+        </svg>
+      </div>
+      <div class="meta">
+        <div class="label">클래식 02</div>
+        <div class="dots"><i class="dot" style="background:var(--g-oatmeal)"></i><i class="dot dot--base" style="background:var(--g-indigo)"></i><i class="dot" style="background:var(--g-brown)"></i></div>
+        <p class="cap">오트밀 울 니트 · 인디고 데님 · 브라운 페니 로퍼</p>
+        <p class="why">네이비 베이스 + 어스톤</p>
+      </div>
+    </article>
+
+    <article class="card glass" style="--i:2">
+      <div class="plate">
+        <svg class="fig" viewBox="0 0 200 400" role="img" aria-label="멜란지 맨투맨, 인디고 데님, 흰 스니커즈, 네이비 셔츠 재킷" style="--c-top:var(--g-greyMelange);--c-bottom:var(--g-indigo);--c-shoes:var(--g-white);--c-outer:var(--g-navy)">
+          <use href="#l-base"/><use href="#l-sneaker"/><use href="#l-bottom"/><use href="#l-bottom-denim"/><use href="#l-sweat"/><use href="#l-outer"/>
+        </svg>
+      </div>
+      <div class="meta">
+        <div class="label">클래식 03</div>
+        <div class="dots"><i class="dot" style="background:var(--g-greyMelange)"></i><i class="dot dot--base" style="background:var(--g-indigo)"></i><i class="dot" style="background:var(--g-white)"></i><i class="dot" style="background:var(--g-navy)"></i></div>
+        <p class="cap">멜란지 맨투맨 · 인디고 데님 · 흰 스니커즈 · 네이비 셔츠 재킷</p>
+        <p class="why">톤온톤 (네이비 베이스)</p>
+      </div>
+    </article>
+  </div>
+
+  <div class="bottom">
+    <button class="btn-primary">더 보기</button>
+    <div class="cats glass">
+      <button aria-current="true">하의</button><button>상의</button><button>신발</button><button>아우터</button>
+    </div>
+  </div>
+  <div class="homebar"></div>
+</div></div>
+<figcaption><b>S3</b>결과 · 390×844</figcaption>
+</figure>
+
+<!-- ===================== S2 색 칩 ===================== -->
+<figure>
+<div class="phone"><div class="screen"><div class="notch"></div>
+  <div class="topbar">
+    <button class="back" aria-label="뒤로">‹</button>
+    <span style="font-size:13px;color:var(--text-2);font-weight:600">하의</span>
+    <span style="width:34px"></span>
+  </div>
+  <div class="s2-head">
+    <div class="eyebrow">2 / 2 · 색 고르기</div>
+    <div class="title">하의 색은?</div>
+    <p class="s2-help">탭하면 바로 조합 3가지가 나와요.</p>
+  </div>
+  <div class="spacer"></div>
+  <div class="grid" role="radiogroup" aria-label="하의 색">
+    <button class="chip" role="radio" aria-checked="false" style="--i:0"><i style="background:var(--g-olive)"></i><span>올리브</span></button>
+    <button class="chip" role="radio" aria-checked="true" style="--i:1"><i style="background:var(--g-indigo)"></i><span>인디고</span></button>
+    <button class="chip" role="radio" aria-checked="false" style="--i:2"><i style="background:var(--g-navy)"></i><span>네이비</span></button>
+    <button class="chip" role="radio" aria-checked="false" style="--i:3"><i style="background:var(--g-beige)"></i><span>베이지</span></button>
+    <button class="chip" role="radio" aria-checked="false" style="--i:4"><i style="background:var(--g-white)"></i><span>화이트</span></button>
+    <button class="chip" role="radio" aria-checked="false" style="--i:5"><i style="background:var(--g-cream)"></i><span>크림</span></button>
+    <button class="chip" role="radio" aria-checked="false" style="--i:6"><i style="background:var(--g-brown)"></i><span>브라운</span></button>
+    <button class="chip" role="radio" aria-checked="false" style="--i:7"><i style="background:var(--g-midGrey)"></i><span>미드그레이</span></button>
+    <button class="chip" role="radio" aria-checked="false" style="--i:8"><i style="background:var(--g-khaki)"></i><span>카키</span></button>
+    <button class="chip" role="radio" aria-checked="false" style="--i:9"><i style="background:var(--g-charcoal)"></i><span>차콜</span></button>
+    <button class="chip" role="radio" aria-checked="false" style="--i:10"><i style="background:var(--g-blackDenim)"></i><span>블랙데님</span></button>
+    <button class="chip chip--dim" role="radio" aria-checked="false" style="--i:11"><i style="background:var(--g-lightDenim)"></i><span>연청</span></button>
+    <button class="chip" role="radio" aria-checked="false" style="--i:12"><i style="background:var(--g-black)"></i><span>블랙</span></button>
+  </div>
+  <div class="homebar"></div>
+</div></div>
+<figcaption><b>S2</b>색 칩 그리드 · 390×844</figcaption>
+</figure>
+
+</div>
+
+<p class="note">
+모션 데모: 새로고침하면 기준 바 → 카드 3장이 80ms 간격으로 떠오르고(살짝 scale .97→1), 각 카드의 스포트라이트가 600ms에 걸쳐 켜집니다. 칩은 누르는 동안 <code>scale(.93)</code>(스프링 이징), 선택 시 앰버 링+글로우. 인물(실루엣)은 절대 움직이지 않습니다. <code>prefers-reduced-motion: reduce</code>면 전부 정지.
+글래스는 <code>backdrop-filter</code> 미지원 시 단색 <code>#1A1B1F</code>로 폴백. 그레인은 인라인 SVG feTurbulence(외부 파일 없음) 7%.
+폰트는 Pretendard Variable(OFL) 셀프호스팅 전제이며 <code>@font-face</code>는 넣지 않았습니다. 실루엣은 <code>src/assets/silhouettes/</code> 원본 path 그대로.
+</p>
+</body>
+</html>

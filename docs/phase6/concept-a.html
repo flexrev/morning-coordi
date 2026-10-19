@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>아침 코디 · 시안 A — 에디토리얼 미니멀</title>
+<style>
+/* =====================================================================
+   시안 A · 에디토리얼 미니멀
+   - 매트 다크, 큰 타이포, 헤어라인(1px) 구조, 액센트는 거의 쓰지 않음
+   - @font-face 는 의도적으로 포함하지 않음 (Pretendard Variable 셀프호스팅 전제, 여기선 폴백 스택으로 렌더)
+   ===================================================================== */
+:root{
+  --font-sans:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,Roboto,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","Helvetica Neue",Arial,sans-serif;
+
+  /* 테마 토큰 (A) */
+  --bg-0:#141414;          /* 매트 베이스 */
+  --bg-1:#191919;          /* 일러스트 플레이트 */
+  --bg-2:#222222;          /* 눌림·선택 배경 */
+  --text-1:#F3F1EC;        /* 본문 · 대비 16.9:1 */
+  --text-2:#B8B5AE;        /* 보조 · 9.3:1 */
+  --text-3:#8F8C85;        /* 캡션 · 5.6:1 */
+  --rule:#2A2A2A;          /* 헤어라인 */
+  --rule-strong:#3C3C3C;   /* 입력·칩 테두리 */
+  --ink:#F3F1EC;           /* 1차 버튼 = 잉크(반전) */
+  --on-ink:#141414;
+  --accent:#D9C6A0;        /* 모래빛 — 기준 아이템 표시·선택 링에만 (10.1:1) */
+  --chip-border:rgba(255,255,255,.26);
+  --c-skin:#C9A98C;
+
+  /* 의류 색 (design-tokens 4-3) */
+  --g-white:#FFFFFF; --g-oatmeal:#CFC4B4; --g-greyMelange:#A6A7AB; --g-indigo:#2C4270; --g-navy:#1F2E50;
+  --g-brown:#8B5A2B; --g-olive:#4B5320; --g-beige:#E3D5B5; --g-cream:#F4ECC9; --g-midGrey:#808080;
+  --g-khaki:#BFAE8A; --g-charcoal:#36454F; --g-blackDenim:#2E2F33; --g-lightDenim:#A3B9CF; --g-black:#141414;
+
+  --ease-out:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#0B0B0B;color:var(--text-1);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+body{padding:28px 24px 48px;word-break:keep-all;overflow-wrap:anywhere}
+
+/* ---------- 데모 페이지 레이아웃 (폰 2대) ---------- */
+.stage{display:flex;gap:40px;align-items:flex-start;justify-content:center;flex-wrap:wrap}
+.stage > figure{display:flex;flex-direction:column;gap:12px;align-items:center}
+.stage figcaption{color:#8F8C85;font-size:12px;letter-spacing:.08em}
+.stage figcaption b{color:#F3F1EC;font-weight:600;margin-right:8px}
+.page-title{display:flex;align-items:baseline;gap:14px;justify-content:center;margin-bottom:28px;color:#8F8C85;font-size:13px;letter-spacing:.06em}
+.page-title h1{font-size:15px;font-weight:600;color:#F3F1EC;letter-spacing:0}
+.page-title em{font-style:normal;color:#D9C6A0}
+.note{max-width:860px;margin:36px auto 0;color:#8F8C85;font-size:12px;line-height:18px;border-top:1px solid #222;padding-top:14px}
+.note code{color:#B8B5AE}
+
+/* ---------- 폰 프레임 ---------- */
+.phone{width:390px;height:844px;border-radius:44px;background:var(--bg-0);position:relative;overflow:hidden;
+  box-shadow:0 0 0 1px #2A2A2A,0 30px 80px rgba(0,0,0,.6)}
+.screen{position:absolute;inset:0;display:flex;flex-direction:column;padding:52px 20px 0}
+.screen::before{content:"";position:absolute;top:14px;left:50%;transform:translateX(-50%);width:120px;height:32px;border-radius:20px;background:#000}
+.homebar{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:134px;height:5px;border-radius:3px;background:#3A3A3A}
+
+/* ---------- 공통 컴포넌트 (A) ---------- */
+.topbar{display:flex;align-items:center;justify-content:space-between;height:48px}
+.brand{font-size:11px;letter-spacing:.14em;color:var(--text-3);font-weight:600}
+.seg{display:flex;gap:4px}
+.seg button{appearance:none;background:none;border:0;color:var(--text-3);font:inherit;font-size:13px;font-weight:600;min-height:48px;min-width:48px;padding:0 6px;position:relative;cursor:pointer}
+.seg button[aria-pressed="true"]{color:var(--text-1)}
+.seg button[aria-pressed="true"]::after{content:"";position:absolute;left:6px;right:6px;bottom:12px;height:1px;background:var(--text-1)}
+
+.hero{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:16px 0 18px;border-bottom:1px solid var(--rule);min-height:96px;cursor:pointer}
+.eyebrow{font-size:12px;line-height:16px;letter-spacing:.10em;color:var(--text-3);font-weight:600;margin-bottom:8px}
+.display{font-size:34px;line-height:40px;font-weight:700;letter-spacing:-.03em}
+.hero__swatch{display:flex;flex-direction:column;align-items:flex-end;gap:8px;min-width:48px;min-height:48px;justify-content:flex-end}
+.hero__swatch i{display:block;width:40px;height:40px;background:var(--g-indigo);box-shadow:inset 0 0 0 1px var(--chip-border),0 0 0 1px var(--bg-0),0 0 0 2px var(--accent)}
+.hero__swatch span{font-size:12px;color:var(--text-2);letter-spacing:.02em}
+
+.list{display:flex;flex-direction:column;flex:1 1 auto}
+.card{display:flex;align-items:stretch;gap:16px;padding:12px 0;border-bottom:1px solid var(--rule);min-height:160px;position:relative;cursor:pointer}
+.card:last-child{border-bottom:0}
+.card:active{background:var(--bg-2);margin:0 -20px;padding-left:20px;padding-right:20px}
+.card__no{font-size:11px;letter-spacing:.14em;color:var(--text-3);font-variant-numeric:tabular-nums;writing-mode:vertical-rl;transform:rotate(180deg);text-align:left;padding-top:4px}
+.plate{width:72px;flex:0 0 72px;background:var(--bg-1);box-shadow:inset 0 0 0 1px var(--rule);display:flex;align-items:center;justify-content:center;position:relative}
+.plate::after{content:"";position:absolute;left:8px;right:8px;bottom:12px;height:1px;background:var(--rule-strong)} /* 바닥선 */
+.fig{width:60px;height:128px;color:var(--text-1)}
+.meta{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:8px}
+.label{font-size:12px;line-height:16px;letter-spacing:.08em;color:var(--text-3);font-weight:600;font-variant-numeric:tabular-nums}
+.dots{display:flex;gap:6px;align-items:center}
+.dot{width:18px;height:18px;border-radius:50%;box-shadow:inset 0 0 0 1px var(--chip-border)}
+.dot--base{box-shadow:inset 0 0 0 1px var(--chip-border),0 0 0 2px var(--bg-0),0 0 0 3px var(--accent)}
+.cap{font-size:15px;line-height:22px;font-weight:500;color:var(--text-1)}
+.why{font-size:13px;line-height:18px;color:var(--text-2)}
+
+.bottom{padding:12px 0 28px;display:flex;flex-direction:column;gap:8px}
+.btn-primary{height:56px;border:0;border-radius:4px;background:var(--ink);color:var(--on-ink);font:inherit;font-size:17px;font-weight:700;letter-spacing:-.01em;cursor:pointer}
+.btn-primary:active{transform:scale(.985)}
+.cats{display:flex;border-top:1px solid var(--rule)}
+.cats button{flex:1;appearance:none;background:none;border:0;color:var(--text-3);font:inherit;font-size:14px;font-weight:600;min-height:48px;position:relative;cursor:pointer}
+.cats button[aria-current]{color:var(--text-1)}
+.cats button[aria-current]::after{content:"";position:absolute;left:12px;right:12px;top:-1px;height:1px;background:var(--text-1)}
+
+/* ---------- S2 ---------- */
+.back{appearance:none;background:none;border:0;color:var(--text-1);font-size:26px;line-height:1;width:48px;height:48px;margin-left:-14px;cursor:pointer}
+.s2-head{padding:8px 0 0}
+.s2-help{color:var(--text-2);font-size:14px;line-height:20px;margin-top:10px}
+.spacer{flex:1 1 auto}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px 12px;padding-bottom:24px}
+.chip{appearance:none;background:none;border:0;color:var(--text-2);font:inherit;display:flex;flex-direction:column;align-items:center;gap:8px;min-height:88px;cursor:pointer;transition:transform 120ms var(--ease-out)}
+.chip:active{transform:scale(.96)}
+.chip i{display:block;width:64px;height:64px;border-radius:4px;box-shadow:inset 0 0 0 1px var(--chip-border)}
+.chip span{font-size:13px;line-height:18px}
+.chip[aria-checked="true"] i{box-shadow:inset 0 0 0 1px var(--chip-border),0 0 0 3px var(--bg-0),0 0 0 4px var(--text-1)}
+.chip[aria-checked="true"] span{color:var(--text-1);font-weight:600}
+.chip--dim{opacity:.55}
+
+/* ---------- 모션 (A): 헤어라인이 그려지고, 카드가 12px 떠오른다 ---------- */
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes drawRule{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.card{animation:rise 360ms var(--ease-out) both;animation-delay:calc(var(--i) * 70ms)}
+.card::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--rule);transform-origin:left;animation:drawRule 420ms var(--ease-out) both;animation-delay:calc(var(--i) * 70ms + 120ms)}
+.hero{animation:rise 300ms var(--ease-out) both}
+.grid .chip{animation:rise 280ms var(--ease-out) both;animation-delay:calc(var(--i) * 24ms)}
+@media (prefers-reduced-motion: reduce){
+  .card,.card::after,.hero,.grid .chip{animation:none}
+  .chip,.btn-primary{transition:none}
+  .chip:active,.btn-primary:active{transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- 실루엣 레이어 (src/assets/silhouettes/*.svg 원본 path 그대로) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<defs>
+  <pattern id="pat-denim" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+    <line x1="1" y1="0" x2="1" y2="6" stroke="currentColor" stroke-opacity="0.18" stroke-width="1.2"/>
+  </pattern>
+  <pattern id="pat-knit" width="6" height="4" patternUnits="userSpaceOnUse">
+    <path d="M0 0 L3 3 L6 0" fill="none" stroke="currentColor" stroke-opacity="0.18" stroke-width="0.9" stroke-linejoin="round"/>
+  </pattern>
+  <symbol id="l-base"><path data-slot="base" fill="var(--c-skin,#C9A98C)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" d="M 76 34 a 24 24 0 1 0 48 0 a 24 24 0 1 0 -48 0 Z M 90 54 L 110 54 L 110 82 L 90 82 Z M 74 330 L 96 330 L 96 366 L 74 366 Z M 104 330 L 126 330 L 126 366 L 104 366 Z"/></symbol>
+  <symbol id="l-tee"><path data-slot="top" fill="var(--c-top,#BBBBBB)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" d="M 88 70 Q 100 82 112 70 L 138 78 L 153 118 L 135 125 L 134 192 L 66 192 L 65 125 L 47 118 L 62 78 Z M 135 125 L 130 104 M 65 125 L 70 104"/></symbol>
+  <symbol id="l-knit"><path data-slot="top" fill="var(--c-top,#BBBBBB)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" d="M 86 70 Q 100 86 114 70 L 138 80 L 152 198 L 134 198 L 134 192 L 66 192 L 66 198 L 48 198 L 62 80 Z M 134 198 L 130 112 M 66 198 L 70 112 M 66 184 L 134 184 M 136 190 L 151 190 M 49 190 L 64 190"/></symbol>
+  <symbol id="l-knit-pat"><path fill="url(#pat-knit)" stroke="none" d="M 86 70 Q 100 86 114 70 L 138 80 L 152 198 L 134 198 L 134 192 L 66 192 L 66 198 L 48 198 L 62 80 Z"/></symbol>
+  <symbol id="l-sweat"><path data-slot="top" fill="var(--c-top,#BBBBBB)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" d="M 84 70 Q 100 88 116 70 L 148 86 L 162 208 L 140 208 L 142 206 L 58 206 L 60 208 L 38 208 L 52 86 Z M 140 208 L 136 120 M 60 208 L 64 120 M 58 196 L 142 196 M 142 200 L 161 200 M 39 200 L 58 200"/></symbol>
+  <symbol id="l-bottom"><path data-slot="bottom" fill="var(--c-bottom,#444444)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" d="M 68 176 L 132 176 L 134 362 L 102 362 L 100 240 L 98 362 L 66 362 Z M 68 184 L 132 184 M 100 184 L 100 240"/></symbol>
+  <symbol id="l-bottom-denim"><path fill="url(#pat-denim)" stroke="none" d="M 68 176 L 132 176 L 134 362 L 102 362 L 100 240 L 98 362 L 66 362 Z"/></symbol>
+  <symbol id="l-sneaker"><path data-slot="shoes" fill="var(--c-shoes,#222222)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" d="M 70 356 L 98 356 L 98 392 L 56 392 Q 46 388 54 372 Q 60 358 70 356 Z M 50 384 L 98 384 M 74 364 L 90 364 M 72 372 L 90 372 M 130 356 L 102 356 L 102 392 L 144 392 Q 154 388 146 372 Q 140 358 130 356 Z M 150 384 L 102 384 M 126 364 L 110 364 M 128 372 L 110 372"/></symbol>
+  <symbol id="l-loafer"><path data-slot="shoes" fill="var(--c-shoes,#222222)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" d="M 72 362 L 98 362 L 98 392 L 52 392 Q 44 390 50 378 Q 58 366 72 362 Z M 48 386 L 98 386 M 62 372 L 84 366 M 128 362 L 102 362 L 102 392 L 148 392 Q 156 390 150 378 Q 142 366 128 362 Z M 152 386 L 102 386 M 138 372 L 116 366"/></symbol>
+  <symbol id="l-outer"><path data-slot="outer" fill="var(--c-outer,#555555)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" d="M 58 80 L 84 70 L 88 86 L 100 150 L 112 86 L 116 70 L 142 80 L 156 204 L 138 204 L 138 215 L 62 215 L 62 204 L 44 204 Z M 88 86 L 76 92 M 112 86 L 124 92 M 66 170 L 86 170 M 114 170 L 134 170 M 138 204 L 134 110 M 62 204 L 66 110 M 100 150 L 100 215"/></symbol>
+</defs>
+</svg>
+
+<div class="page-title"><h1>시안 A · 에디토리얼 미니멀</h1><span>매트 다크 · 큰 타이포 · 헤어라인</span><em>액센트 최소</em></div>
+
+<div class="stage">
+
+<!-- ===================== S3 결과 ===================== -->
+<figure>
+<div class="phone"><div class="screen">
+  <div class="topbar">
+    <span class="brand">아침 코디</span>
+    <div class="seg" role="group" aria-label="계절">
+      <button aria-pressed="true">봄가을</button><button>여름</button><button>겨울</button>
+    </div>
+  </div>
+
+  <div class="hero" role="button" aria-label="기준 아이템: 하의 인디고 데님. 색 바꾸기">
+    <div>
+      <div class="eyebrow">하의 · 기준 아이템</div>
+      <div class="display">인디고 데님</div>
+    </div>
+    <div class="hero__swatch"><i aria-hidden="true"></i><span>색 바꾸기 ›</span></div>
+  </div>
+
+  <div class="list">
+    <article class="card" style="--i:0">
+      <div class="card__no">01 / 03</div>
+      <div class="plate">
+        <svg class="fig" viewBox="0 0 200 400" role="img" aria-label="화이트 티셔츠, 인디고 데님, 흰 스니커즈" style="--c-top:var(--g-white);--c-bottom:var(--g-indigo);--c-shoes:var(--g-white)">
+          <use href="#l-base"/><use href="#l-sneaker"/><use href="#l-bottom"/><use href="#l-bottom-denim"/><use href="#l-tee"/>
+        </svg>
+      </div>
+      <div class="meta">
+        <div class="label">클래식</div>
+        <div class="dots"><i class="dot" style="background:var(--g-white)"></i><i class="dot dot--base" style="background:var(--g-indigo)"></i><i class="dot" style="background:var(--g-white)"></i></div>
+        <p class="cap">화이트 티셔츠 · 인디고 데님 · 흰 스니커즈</p>
+        <p class="why">누구나 안전한 기본 조합</p>
+      </div>
+    </article>
+
+    <article class="card" style="--i:1">
+      <div class="card__no">02 / 03</div>
+      <div class="plate">
+        <svg class="fig" viewBox="0 0 200 400" role="img" aria-label="오트밀 울 니트, 인디고 데님, 브라운 페니 로퍼" style="--c-top:var(--g-oatmeal);--c-bottom:var(--g-indigo);--c-shoes:var(--g-brown)">
+          <use href="#l-base"/><use href="#l-loafer"/><use href="#l-bottom"/><use href="#l-bottom-denim"/><use href="#l-knit"/><use href="#l-knit-pat"/>
+        </svg>
+      </div>
+      <div class="meta">
+        <div class="label">클래식</div>
+        <div class="dots"><i class="dot" style="background:var(--g-oatmeal)"></i><i class="dot dot--base" style="background:var(--g-indigo)"></i><i class="dot" style="background:var(--g-brown)"></i></div>
+        <p class="cap">오트밀 울 니트 · 인디고 데님 · 브라운 페니 로퍼</p>
+        <p class="why">네이비 베이스 + 어스톤</p>
+      </div>
+    </article>
+
+    <article class="card" style="--i:2">
+      <div class="card__no">03 / 03</div>
+      <div class="plate">
+        <svg class="fig" viewBox="0 0 200 400" role="img" aria-label="멜란지 맨투맨, 인디고 데님, 흰 스니커즈, 네이비 셔츠 재킷" style="--c-top:var(--g-greyMelange);--c-bottom:var(--g-indigo);--c-shoes:var(--g-white);--c-outer:var(--g-navy)">
+          <use href="#l-base"/><use href="#l-sneaker"/><use href="#l-bottom"/><use href="#l-bottom-denim"/><use href="#l-sweat"/><use href="#l-outer"/>
+        </svg>
+      </div>
+      <div class="meta">
+        <div class="label">클래식</div>
+        <div class="dots"><i class="dot" style="background:var(--g-greyMelange)"></i><i class="dot dot--base" style="background:var(--g-indigo)"></i><i class="dot" style="background:var(--g-white)"></i><i class="dot" style="background:var(--g-navy)"></i></div>
+        <p class="cap">멜란지 맨투맨 · 인디고 데님 · 흰 스니커즈 · 네이비 셔츠 재킷</p>
+        <p class="why">톤온톤 (네이비 베이스)</p>
+      </div>
+    </article>
+  </div>
+
+  <div class="bottom">
+    <button class="btn-primary">더 보기</button>
+    <div class="cats">
+      <button aria-current="true">하의</button><button>상의</button><button>신발</button><button>아우터</button>
+    </div>
+  </div>
+  <div class="homebar"></div>
+</div></div>
+<figcaption><b>S3</b>결과 · 390×844</figcaption>
+</figure>
+
+<!-- ===================== S2 색 칩 ===================== -->
+<figure>
+<div class="phone"><div class="screen">
+  <div class="topbar">
+    <button class="back" aria-label="뒤로">‹</button>
+    <span class="brand">하의</span>
+    <span style="width:34px"></span>
+  </div>
+  <div class="s2-head">
+    <div class="eyebrow">둘 중 두 번째</div>
+    <div class="display">하의 색은?</div>
+    <p class="s2-help">탭하면 바로 조합 3가지가 나와요.</p>
+  </div>
+  <div class="spacer"></div>
+  <div class="grid" role="radiogroup" aria-label="하의 색">
+    <button class="chip" role="radio" aria-checked="false" style="--i:0"><i style="background:var(--g-olive)"></i><span>올리브</span></button>
+    <button class="chip" role="radio" aria-checked="true" style="--i:1"><i style="background:var(--g-indigo)"></i><span>인디고</span></button>
+    <button class="chip" role="radio" aria-checked="false" style="--i:2"><i style="background:var(--g-navy)"></i><span>네이비</span></button>
+    <button class="chip" role="radio" aria-checked="false" style="--i:3"><i style="background:var(--g-beige)"></i><span>베이지</span></button>
+    <button class="chip" role="radio" aria-checked="false" style="--i:4"><i style="background:var(--g-white)"></i><span>화이트</span></button>
+    <button class="chip" role="radio" aria-checked="false" style="--i:5"><i style="background:var(--g-cream)"></i><span>크림</span></button>
+    <button class="chip" role="radio" aria-checked="false" style="--i:6"><i style="background:var(--g-brown)"></i><span>브라운</span></button>
+    <button class="chip" role="radio" aria-checked="false" style="--i:7"><i style="background:var(--g-midGrey)"></i><span>미드그레이</span></button>
+    <button class="chip" role="radio" aria-checked="false" style="--i:8"><i style="background:var(--g-khaki)"></i><span>카키</span></button>
+    <button class="chip" role="radio" aria-checked="false" style="--i:9"><i style="background:var(--g-charcoal)"></i><span>차콜</span></button>
+    <button class="chip" role="radio" aria-checked="false" style="--i:10"><i style="background:var(--g-blackDenim)"></i><span>블랙데님</span></button>
+    <button class="chip chip--dim" role="radio" aria-checked="false" style="--i:11"><i style="background:var(--g-lightDenim)"></i><span>연청</span></button>
+    <button class="chip" role="radio" aria-checked="false" style="--i:12"><i style="background:var(--g-black)"></i><span>블랙</span></button>
+  </div>
+  <div class="homebar"></div>
+</div></div>
+<figcaption><b>S2</b>색 칩 그리드 · 390×844</figcaption>
+</figure>
+
+</div>
+
+<p class="note">
+모션 데모: 페이지를 새로고침하면 히어로 → 카드 3장이 70ms 간격으로 떠오르고 헤어라인이 왼쪽에서 그려집니다. 칩은 누르는 동안 <code>scale(.96)</code>. <code>prefers-reduced-motion: reduce</code>면 전부 정지.
+폰트는 Pretendard Variable(OFL) 셀프호스팅 전제이며 이 파일에는 <code>@font-face</code>를 넣지 않아 시스템 폴백(Apple SD Gothic Neo / Malgun Gothic 등)으로 렌더됩니다.
+실루엣은 <code>src/assets/silhouettes/</code> 원본 path를 그대로 인라인했고 색은 CSS 변수로만 주입합니다.
+</p>
+</body>
+</html>

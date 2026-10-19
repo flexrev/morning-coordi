@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="하의 스트레이트">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="bottom" data-type="trouser" data-fit="straight" data-length="regular" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-bottom,#444444)" vector-effect="non-scaling-stroke" d="M68 176L132 176L134 214L133 362L103 362L100 220L97 362L67 362L66 214Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.18)" stroke="none" d="M100 220L108 226L107 362L103 362ZM126 216L134 214L133 362L127 362Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M68 184L132 184M100 184Q102 198 100 218M70 186Q80 194 84 212M130 186Q120 194 116 212M78 176L78 184M122 176L122 184M67 356L97 356M103 356L133 356"/>
+</g>
+</svg>

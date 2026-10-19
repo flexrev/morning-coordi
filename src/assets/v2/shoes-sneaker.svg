@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="스니커즈 (흰/컬러 공용·흰 밑창)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="shoes" data-type="sneaker" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-shoes,#222222)" vector-effect="non-scaling-stroke" d="M72 356L98 356L98 388L54 388Q44 386 46 378Q50 366 72 356ZM128 356L102 356L102 388L146 388Q156 386 154 378Q150 366 128 356Z"/>
+<path data-part="main" data-kind="sole" fill="var(--c-sole,#ECE9E2)" vector-effect="non-scaling-stroke" d="M46 381L98 381L98 392L54 392Q43 391 46 381ZM154 381L102 381L102 392L146 392Q157 391 154 381Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.18)" stroke="none" d="M90 356L98 356L98 381L90 381ZM148 370L154 378Q155 384 150 387L146 381ZM72 356L82 356L80 380L68 380Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M74 361L92 361M73 367L92 367M72 373L92 373M72 356Q68 370 66 381M48 378Q58 372 68 378M126 361L108 361M127 367L108 367M128 373L108 373M128 356Q132 370 134 381M152 378Q142 372 132 378"/>
+</g>
+</svg>

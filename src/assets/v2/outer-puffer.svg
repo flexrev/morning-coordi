@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="패딩 (레귤러)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="outer" data-type="puffer" data-fit="regular" data-length="regular" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-outer,#555555)" vector-effect="non-scaling-stroke" d="M86 68L60 76Q46 84 42 100L32 156L32 220L58 220L58 212L142 212L142 220L168 220L168 156L158 100Q154 84 140 76L114 68L110 72L100 92L90 72Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.18)" stroke="none" d="M128 100L142 212L132 212L126 100ZM158 120L166 156L168 220L161 220L158 156ZM58 212L142 212L142 218L58 218ZM58 112Q100 122 142 112Q100 128 58 112ZM58 138Q100 148 142 138Q100 154 58 138ZM58 164Q100 174 142 164Q100 180 58 164ZM58 190Q100 200 142 190Q100 206 58 190Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M86 68Q100 76 114 68M100 92L100 212M58 112Q100 122 142 112M58 138Q100 148 142 138M58 164Q100 174 142 164M58 190Q100 200 142 190M40 128L58 130M37 154L57 156M35 180L57 182M33 206L57 208M160 128L142 130M163 154L143 156M165 180L143 182M167 206L143 208M60 76Q66 104 60 140L58 212M140 76Q134 104 140 140L142 212M88 72L90 92L110 92L112 72"/>
+</g>
+</svg>

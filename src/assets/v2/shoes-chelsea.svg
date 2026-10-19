@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="첼시 부츠">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="shoes" data-type="chelsea" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-shoes,#222222)" vector-effect="non-scaling-stroke" d="M70 338L98 338L98 390L50 390Q40 388 44 380Q52 368 68 362ZM130 338L102 338L102 390L150 390Q160 388 156 380Q148 368 132 362Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.22)" stroke="none" d="M80 342L92 342L92 366L80 366ZM108 342L120 342L120 366L108 366ZM42 386L98 386L98 390L50 390Q41 389 42 386ZM158 386L102 386L102 390L150 390Q159 389 158 386ZM92 338L98 338L98 386L92 386ZM152 372L156 380Q158 385 152 386L148 380Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M80 342L92 342L92 366L80 366ZM86 338L86 346M108 342L120 342L120 366L108 366ZM114 338L114 346M54 378Q68 370 80 372M146 378Q132 370 120 372"/>
+</g>
+</svg>

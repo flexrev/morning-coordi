@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="토트백 (오른어깨 = 그림 왼쪽)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="bag" data-type="tote" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-bag,#CFC4B4)" vector-effect="non-scaling-stroke" d="M57 82L63 84Q51 130 51 178L46 178Q47 128 57 82ZM26 178Q47 174 68 178L66 242L28 242Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.18)" stroke="none" d="M59 178L68 178L66 242L28 242L28 236L59 236Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M30 185L64 185M28 236L66 236M60 84Q49 130 48.5 178"/>
+</g>
+</svg>

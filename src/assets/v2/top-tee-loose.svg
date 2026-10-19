@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="티셔츠 (루즈)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="top" data-type="tee" data-fit="loose" data-length="regular" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-top,#BBBBBB)" vector-effect="non-scaling-stroke" d="M82 74L54 80Q40 104 34 128L60 138L58 204L142 204L140 138L166 128Q160 104 146 80L118 74Q100 92 82 74Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.18)" stroke="none" d="M128 104L140 138L142 204L130 204ZM86 76Q100 90 114 76Q100 97 86 76ZM58 204L142 204L142 210L58 210ZM52 131L64 136L62 141L50 136ZM136 136L148 131L150 136L138 141ZM142 136L166 128L164 133L142 142Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M84 77Q100 94 116 77M54 80Q66 110 60 138M146 80Q134 110 140 138M37 125L59 133M163 125L141 133M60 199L140 199"/>
+</g>
+</svg>

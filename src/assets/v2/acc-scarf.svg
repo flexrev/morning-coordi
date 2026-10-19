@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="머플러">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="scarf" data-type="scarf" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-scarf,#722F37)" vector-effect="non-scaling-stroke" d="M82 58Q100 54 118 58L120 80Q100 92 80 80ZM90 80L106 80L110 142L92 142Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.18)" stroke="none" d="M110 58L118 58L120 80L112 80ZM80 80Q100 92 120 80L120 86Q100 98 80 86ZM104 80L106 80L110 142L106 142Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M84 68Q100 76 116 68M93 136L109 136"/>
+<path data-part="detail" data-kind="rib" fill="none" stroke-opacity=".22" stroke-width="5" stroke-dasharray="1 2.5" d="M93 139.5L109 139.5"/>
+</g>
+</svg>

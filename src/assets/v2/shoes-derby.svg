@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="더비 / 옥스포드 공용">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="shoes" data-type="derby" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-shoes,#222222)" vector-effect="non-scaling-stroke" d="M72 360L98 360L98 390L50 390Q40 388 44 380Q54 368 72 360ZM128 360L102 360L102 390L150 390Q160 388 156 380Q146 368 128 360Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.25)" stroke="none" d="M42 386L98 386L98 390L50 390Q41 389 42 386ZM158 386L102 386L102 390L150 390Q159 389 158 386ZM92 360L98 360L98 386L92 386ZM152 372L156 380Q158 385 152 386L148 380Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M48 380Q58 372 68 382M72 360Q78 374 90 380M76 365L90 365M77 371L91 371M152 380Q142 372 132 382M128 360Q122 374 110 380M124 365L110 365M123 371L109 371"/>
+</g>
+</svg>

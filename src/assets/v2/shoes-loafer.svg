@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="로퍼 (페니/태슬 공용)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="shoes" data-type="loafer" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-shoes,#222222)" vector-effect="non-scaling-stroke" d="M72 362L98 362L98 390L52 390Q42 388 46 380Q54 368 72 362ZM128 362L102 362L102 390L148 390Q158 388 154 380Q146 368 128 362Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.25)" stroke="none" d="M44 386L98 386L98 390L52 390Q43 389 44 386ZM156 386L102 386L102 390L148 390Q157 389 156 386ZM92 362L98 362L98 386L92 386ZM150 372L154 380Q156 385 150 386L146 380Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M58 376Q72 364 90 368M64 374L88 368M66 380L90 374M142 376Q128 364 110 368M136 374L112 368M134 380L110 374"/>
+<path data-part="main" data-detail="tassel" fill="var(--c-shoes,#222222)" vector-effect="non-scaling-stroke" d="M72 369L75 379L69 379ZM78 368L81 378L75 378ZM128 369L125 379L131 379ZM122 368L119 378L125 378Z"/>
+</g>
+</svg>

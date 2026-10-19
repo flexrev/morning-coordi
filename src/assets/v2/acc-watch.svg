@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="손목시계 (왼손목 = 그림 오른쪽)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="watch" data-type="watch" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-watch,#2A2622)" vector-effect="non-scaling-stroke" d="M141 214L159 214L159 225L141 225Z"/>
+<path data-part="main" data-kind="metal" fill="var(--c-metal,#C8C6C0)" vector-effect="non-scaling-stroke" d="M144 219.5a6 6 0 1 0 12 0a6 6 0 1 0-12 0Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.4)" stroke="none" d="M146 219.5a4 4 0 1 0 8 0a4 4 0 1 0-8 0ZM155 214L159 214L159 225L155 225Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".7" stroke-width="1" vector-effect="non-scaling-stroke" d="M150 219.5L150 216.5M150 219.5L152.5 219.5"/>
+</g>
+</svg>

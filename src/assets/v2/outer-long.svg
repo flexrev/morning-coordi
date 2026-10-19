@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="코트 / 트렌치 (롱)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="outer" data-type="coat" data-fit="regular" data-length="long" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-outer,#555555)" vector-effect="non-scaling-stroke" d="M84 70L56 78Q40 110 34 152L34 220L58 220L60 300L140 300L142 220L166 220L166 152Q160 110 144 78L116 70L110 72L100 150L90 72Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.18)" stroke="none" d="M126 100L140 300L130 300L124 100ZM158 120L166 152L166 220L159 220L158 152ZM60 300L140 300L140 306L60 306ZM60 184L140 184L140 190L60 190ZM100 150L104 150L94 74L90 72Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M86 70L76 96M80 100L100 150M114 70L124 96M120 100L100 150M104 150L104 300M60 172L140 172M60 184L140 184M96 170L104 170L104 186L96 186ZM62 82L84 76M138 82L116 76M62 216L86 216L85 224L63 224ZM114 216L138 216L137 224L115 224ZM35 206L58 206M142 206L165 206M56 78Q68 110 66 140L60 220M144 78Q132 110 134 140L140 220"/>
+<path data-part="detail" data-kind="buttons" fill="none" stroke-opacity=".5" stroke-width="3" stroke-dasharray="0.1 36" d="M92 160L92 232M112 160L112 232"/>
+</g>
+</svg>

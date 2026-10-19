@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="볼캡">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="cap" data-type="cap" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-cap,#1F2E50)" vector-effect="non-scaling-stroke" d="M80 29C80 12 88 5 100 5C112 5 120 12 120 29ZM76 29Q100 46 124 29Q100 37 76 29Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.25)" stroke="none" d="M78 30Q100 44 122 30Q100 40 78 30ZM112 8C118 13 120 20 120 29L114 29C114 20 114 13 112 8Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M100 5L100 29M90 7L92 29M110 7L108 29"/>
+</g>
+</svg>

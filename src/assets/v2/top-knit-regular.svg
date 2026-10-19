@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="니트 (레귤러)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="top" data-type="knit" data-fit="regular" data-length="regular" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-top,#BBBBBB)" vector-effect="non-scaling-stroke" d="M84 74Q70 75 58 80Q46 110 40 150L40 214L60 214L66 192L134 192L140 214L160 214L160 150Q154 110 142 80Q130 75 116 74Q100 92 84 74Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.18)" stroke="none" d="M122 100L134 192L124 192L120 100ZM87 77Q100 90 113 77Q100 97 87 77ZM152 120L160 150L160 214L154 214L152 152ZM66 192L134 192L134 198L66 198Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M86 78Q100 95 114 78M66 184L134 184M58 80Q70 108 68 134L66 192M142 80Q130 108 132 134L134 192M41 206L60 206M140 206L159 206"/>
+<path data-part="detail" data-kind="rib" fill="none" stroke-opacity=".22" stroke-width="5" stroke-dasharray="1 2.5" d="M68 188.5L132 188.5M42 210L59 210M141 210L158 210M88 82Q100 97 112 82"/>
+</g>
+</svg>

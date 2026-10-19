@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="벨트">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="belt" data-type="belt" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-belt,#3B2F26)" vector-effect="non-scaling-stroke" d="M68 176L132 176L132 186L68 186Z"/>
+<path data-part="main" data-kind="metal" fill="var(--c-metal,#B5B3AE)" vector-effect="non-scaling-stroke" d="M93 174L107 174L107 188L93 188Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.18)" stroke="none" d="M68 184L132 184L132 190L68 190ZM126 176L132 176L132 184L126 184Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M100 176L100 186"/>
+<path data-part="detail" data-kind="buttons" fill="none" stroke-opacity=".5" stroke-width="2" stroke-dasharray="0.1 7" d="M112 181L126 181"/>
+</g>
+</svg>

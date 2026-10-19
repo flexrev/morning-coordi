@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="블루종 / 데님 재킷 (숏)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="outer" data-type="jacket" data-fit="regular" data-length="short" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-outer,#555555)" vector-effect="non-scaling-stroke" d="M90 66L82 74L56 78Q42 110 36 152L36 218L58 218L62 198L138 198L142 218L164 218L164 152Q158 110 144 78L118 74L110 66L104 72L100 100L96 72Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.18)" stroke="none" d="M124 104L138 198L128 198L122 104ZM84 92L100 100L116 92L115 102Q100 108 85 102ZM156 120L164 152L164 218L157 218L156 152ZM62 198L138 198L138 204L62 204ZM62 190L138 190L138 193L62 193Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M90 66L84 92L100 100L116 92L110 66M100 100L100 198M68 118L90 118L90 127L68 127ZM110 118L132 118L132 127L110 127ZM62 190L138 190M37 210L58 210M142 210L163 210M56 78Q68 110 66 140L62 198M144 78Q132 110 134 140L138 198M66 108L96 108M104 108L134 108"/>
+<path data-part="detail" data-kind="buttons" fill="none" stroke-opacity=".5" stroke-width="3" stroke-dasharray="0.1 14" d="M100 112L100 184"/>
+</g>
+</svg>
