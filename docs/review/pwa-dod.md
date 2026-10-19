@@ -45,3 +45,13 @@
 - `.env.production` `VITE_USE_MOCK=false`; `dist/assets/*.js`에 "mock" 문자열 0건(목 청크 트리셰이킹됨).
 - 브라우저 워크(모바일 프리셋): S1 → 하의 → 인디고 데님 → S3 클래식 3장(o01·o09·o03, 실루엣 렌더) → 더 보기 톤별/색상별/변주 → 카드 → S5 → S6 신발(대안 탄/초콜릿 척카) → 뒤로. 상의 화이트(o01·o04·**o02 복원**), 신발 화이트(역조회 o01·o03·o08), 아우터 네이비(o05·o11·생성 1) 모두 3장. 콘솔 오류 0.
 - 스크린샷: `docs/design/screenshots/s3-real-indigo.png`, `s3-real-whitetee.png`, `s4-real-tone.png`, `s5-real.png`, `s6-real-shoe.png`.
+
+## 배포 후 갱신 (2026-10-19, PM)
+
+| 항목 | 결과 |
+|---|---|
+| #1 HTTPS 배포 URL | **pass** — https://flexrev.github.io/morning-coordi/ (GitHub Pages, Actions 워크플로). index/manifest/sw.js/아이콘 200, 자산 경로 `/morning-coordi/` 접두사, manifest `start_url: ./` `scope: ./` |
+| #8 SW 캐시 (배포 환경) | **pass** — 서비스워커 activated, 캐시 키 `workbox-precache-v2-https://flexrev.github.io/morning-coordi/`, 프리캐시 11항목(데이터 청크 포함) |
+| Quick 경로 (배포 환경) | **pass** — 하의 → 인디고 2탭, 클래식 3장 + 실루엣, 콘솔 오류 0 |
+| #14 실기기 (iOS Safari / Android Chrome 홈화면 추가 → 비행기 모드) | **pending** — 사용자 실기기 확인 필요. 절차는 README "핸드폰 홈화면 추가" |
+| #15 DevTools Application 패널 | **pending** — 데스크톱 Chrome에서 URL 열고 Application > Manifest/Service Workers 경고 0 확인 |

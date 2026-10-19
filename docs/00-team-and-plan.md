@@ -236,3 +236,10 @@ outfit    { id, items[], tags[], isClassic }   // 예시 조합 (리서치에서
 - 검증 0오류(경고 40), 테스트 48건, 빌드 393KB, Lighthouse 99/100/100, 콘텐츠 재확인 기준 4개 PASS
 - 클래식 3 선정 로직 재작성(계절·변주·avoid 제외), 역참조 후보 생성 전 카테고리 확장, 칩 정렬·상한 변경, 라벨·배너·점수 노출 정리
 - **Phase 5 전 필요한 결정: 호스팅(GitHub Pages vs Cloudflare Pages)**. 프로젝트는 아직 git 미초기화
+
+### v1.0-rc (2026-10-19) — Phase 5 배포 완료
+
+- GitHub 저장소 `flexrev/morning-coordi`(공개) 생성, Actions 워크플로로 GitHub Pages 배포
+- 공개 URL **https://flexrev.github.io/morning-coordi/** — 배포 환경에서 서비스워커·프리캐시·Quick 경로 확인(콘솔 오류 0)
+- 남은 것: 실기기(iOS·Android) 홈화면 추가 → 비행기 모드 실행 확인(사용자), DevTools 패널 확인. 통과하면 MVP 1.0
+- 2차 후보: 게이트 4 이월 5건, 내 옷장·날씨·상황별 프리셋(계획 2-2)

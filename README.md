@@ -43,3 +43,16 @@ Git Bash(Windows)는 `/morning-coordi/`를 Windows 경로로 바꿔버리므로 
 
 `public/icons/*.png`는 `npm run icons`가 `docs/design/app-icon.svg`에서 래스터화한다(192 · 512 · 512 maskable · 180 apple-touch, 전부 불투명).
 sharp가 설치되지 않는 환경에서는 `npm run icons:placeholder`로 단색 임시 파일을 만들 수 있다.
+
+## 배포
+
+- 공개 URL: **https://flexrev.github.io/morning-coordi/**
+- 저장소: https://github.com/flexrev/morning-coordi
+- 배포 방식: `main` 브랜치에 푸시하면 `.github/workflows/pages.yml`이 validate → test → `BASE_PATH=/morning-coordi/ npm run build` → GitHub Pages 배포를 실행한다. 수동 실행은 Actions 탭의 `pages` 워크플로에서 "Run workflow".
+- 배포 확인(2026-10-19): index·manifest·sw.js·아이콘 200, 프리캐시 11항목, 서비스워커 activated, 하의 → 인디고 2탭에 클래식 3장 표시.
+
+### 핸드폰 홈화면 추가
+
+- **iPhone (Safari)**: 위 URL 열기 → 하단 공유 버튼 → "홈 화면에 추가" → 추가. 앱 안의 "설치 방법" 배너에도 같은 안내가 있다.
+- **Android (Chrome)**: 위 URL 열기 → 주소창 오른쪽 메뉴(⋮) → "홈 화면에 추가" 또는 "앱 설치". 앱 안의 설치 버튼을 눌러도 된다.
+- 오프라인 확인: 홈화면 아이콘으로 한 번 연 뒤 비행기 모드에서 다시 열어 결과 화면이 나오면 정상.
