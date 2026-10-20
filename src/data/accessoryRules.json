@@ -48,6 +48,27 @@
   "flags": []
  },
  {
+  "id": "acBeltBurgundyShoes",
+  "accessory": [
+   "beltLeather"
+  ],
+  "when": {
+   "shoesMaterial": "leather",
+   "shoesColor": "burgundy"
+  },
+  "pick": {
+   "color": "chocolate",
+   "finish": "shoes"
+  },
+  "delta": 1,
+  "severity": "info",
+  "note": "버건디·옥스블러드 구두엔 다크 브라운 또는 같은 버건디 벨트(C6-14)",
+  "sources": [
+   "MYRQ"
+  ],
+  "flags": []
+ },
+ {
   "id": "acBeltBrownBlack",
   "accessory": [
    "beltLeather"
@@ -189,6 +210,14 @@
   ],
   "when": {
    "shoesMaterial": "leather",
+   "shoesColor": [
+    "brown",
+    "chocolate",
+    "tan",
+    "camel",
+    "black",
+    "burgundy"
+   ],
    "belt": "beltLeather"
   },
   "pick": {
@@ -246,6 +275,10 @@
    "socksMatch"
   ],
   "when": {
+   "season": [
+    "springFall",
+    "winter"
+   ],
    "bottomMaterial": [
     "wool",
     "flannel"
@@ -263,7 +296,7 @@
   },
   "delta": 1,
   "severity": "info",
-  "note": "바지색 양말이 다리를 길어 보이게. 포멀웨어 기본",
+  "note": "바지색 양말이 다리를 길어 보이게. 포멀웨어 기본(여름 로퍼는 페이크삭스, C6-18)",
   "sources": [
    "EGSOCK",
    "WHSOCK"
@@ -313,7 +346,7 @@
     "charcoal"
    ]
   },
-  "delta": 0,
+  "delta": 1,
   "severity": "info",
   "note": "겨울 로퍼는 양말 노출. 바지색 또는 네이비·차콜",
   "sources": [
@@ -393,21 +426,62 @@
   "flags": []
  },
  {
+  "id": "acSocksPlainDefault",
+  "accessory": [
+   "socksNeutral"
+  ],
+  "when": {
+   "shoeType": [
+    "derby",
+    "oxford",
+    "loaferPenny",
+    "loaferTassel",
+    "chelsea",
+    "chukka",
+    "workboot"
+   ],
+   "season": [
+    "springFall",
+    "winter"
+   ]
+  },
+  "pick": {
+   "color": [
+    "bottomDarker",
+    "navy",
+    "charcoal"
+   ]
+  },
+  "delta": 0,
+  "severity": "info",
+  "note": "구두·부츠의 기본은 바지보다 한 톤 어두운 무지 양말(C6-07)",
+  "sources": [
+   "EGSOCK",
+   "R2 4-1"
+  ],
+  "flags": []
+ },
+ {
   "id": "acSocksPatternOnce",
   "accessory": [
    "socksPattern"
   ],
   "when": {
    "patternCount": 0,
-   "formalityMax": 7
+   "formalityMax": 5,
+   "season": "springFall",
+   "shoeType": [
+    "sneakerWhite",
+    "sneakerColor"
+   ]
   },
   "pick": {
    "scale": "small",
-   "color": "outfit"
+   "color": "bottomDarker"
   },
   "delta": 0,
   "severity": "info",
-  "note": "코디에 패턴이 없을 때만, 작은 패턴",
+  "note": "패턴 양말은 봄가을 스니커즈에, 코디에 패턴이 없을 때만 작은 패턴(C6-07)",
   "sources": [
    "EGSOCK",
    "FBPAT"
@@ -540,14 +614,22 @@
   ],
   "when": {
    "material": "leather",
-   "shoesMaterial": "leather"
+   "shoesMaterial": "leather",
+   "shoesColor": [
+    "brown",
+    "chocolate",
+    "tan",
+    "camel",
+    "black",
+    "burgundy"
+   ]
   },
   "pick": {
    "color": "shoesFamily"
   },
   "delta": 1,
   "severity": "info",
-  "note": "가죽 가방은 신발 가죽 색 계열(T8)",
+  "note": "가죽 가방은 신발 가죽 색 계열(T8). 흰 스니커즈엔 발화 안 함(C6-06)",
   "sources": [
    "WH2",
    "MOMBAG"
@@ -570,6 +652,33 @@
   "delta": -1,
   "severity": "warn",
   "note": "포멀도 7 이상엔 볼캡·비니·버킷햇 생략",
+  "sources": [
+   "LAIRD1",
+   "CX"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acHatTailoredNone",
+  "accessory": [
+   "cap",
+   "bucketHat"
+  ],
+  "when": {
+   "outerType": [
+    "blazer",
+    "trench",
+    "chesterfield",
+    "balmacaan",
+    "peacoat"
+   ]
+  },
+  "pick": {
+   "skip": true
+  },
+  "delta": 0,
+  "severity": "info",
+  "note": "테일러드 아우터엔 볼캡·버킷햇 생략(C6-08)",
   "sources": [
    "LAIRD1",
    "CX"
@@ -632,10 +741,7 @@
   ],
   "when": {
    "outerPattern": null,
-   "season": [
-    "winter",
-    "springFall"
-   ]
+   "season": "winter"
   },
   "pick": {
    "color": "free",
@@ -644,6 +750,33 @@
   "delta": 1,
   "severity": "info",
   "note": "무지 코트엔 어떤 색·패턴 머플러도 OK",
+  "sources": [
+   "ANSIN",
+   "ASOSSCARF"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acScarfSfCoat",
+  "accessory": [
+   "scarf"
+  ],
+  "when": {
+   "outerPattern": null,
+   "season": "springFall",
+   "outerType": [
+    "trench",
+    "balmacaan",
+    "chesterfield"
+   ]
+  },
+  "pick": {
+   "color": "free",
+   "pattern": "allowed"
+  },
+  "delta": 1,
+  "severity": "info",
+  "note": "봄가을 머플러는 코트(트렌치·발마칸·체스터필드)에만(C6-15)",
   "sources": [
    "ANSIN",
    "ASOSSCARF"
@@ -681,7 +814,12 @@
    "scarf"
   ],
   "when": {
-   "accentCount": 1
+   "accentCount": 1,
+   "hasOuter": true,
+   "season": [
+    "winter",
+    "springFall"
+   ]
   },
   "pick": {
    "color": "neutral"
@@ -701,7 +839,12 @@
    "scarf"
   ],
   "when": {
-   "formalityMin": 6
+   "formalityMin": 6,
+   "hasOuter": true,
+   "season": [
+    "winter",
+    "springFall"
+   ]
   },
   "pick": {
    "material": [

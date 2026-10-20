@@ -1,7 +1,8 @@
 // 라우트 → 화면 조립 (motion-spec 4-1·4-2). 밑 화면은 키(`screen/a`)로 재사용하고 시트만 추가·제거한다 → 시트 닫힘 모션·스크롤·라이브 리전 유지.
 // 키가 바뀌면 viewTransition(앞으로 슬라이드 / 뒤로 크로스페이드). popstate 는 항상 뒤로.
 import * as nav from './nav.js';
-import { get as getState, getResult, selectBase } from './state.js';
+import { get as getState, getResult, selectBase, ensureExpansion } from './state.js';
+import { read, KEYS } from './storage.js';
 import { takeFocusRequest } from './components.js';
 import { s1Category } from './screens/s1Category.js';
 import { s2Color } from './screens/s2Color.js';
@@ -70,14 +71,23 @@ function compose(r, st, rerender) {
     case 'settings':
       return { key: 'st1', main: settingsScreen, sheet: r.a === 'reset' ? resetSheet : null };
     default:
-      return st.base ? { key: 's3', main: () => s3Result({ rerender }) } : { key: 's1', main: s1Category };
+      // U6-04: "처음 안내 다시 보기"가 onboarded 를 지우면 기본 경로는 S1(온보딩 스트립)로. 첫 S3 가 다시 onboarded=true 를 쓴다
+      return st.base && read(KEYS.onboarded) ? { key: 's3', main: () => s3Result({ rerender }) } : { key: 's1', main: s1Category };
   }
 }
+
+/** 확장 데이터(스타일·상황·소품)가 필요한 화면: S4 더 보기 · S5 상세(소품 줄) · 공유 */
+const needsExpansion = (r) => r.screen === 'more' || r.screen === 'outfit';
 
 function render(route, { pop = false } = {}) {
   lastRoute = route || lastRoute;
   const r = lastRoute;
   const st = getState();
+  if (needsExpansion(r) && !st.expanded) {
+    // 지연 청크를 기다렸다가 그린다 (SW 캐시 ≈ 수 ms, 첫 온라인 ≈ 100ms). 실패하면 핵심 엔진으로 그대로 진행
+    ensureExpansion().then(() => { if (lastRoute === r) render(r, { pop }); });
+    return;
+  }
   const rerender = () => { lastKey = null; render(r); };
   const plan = compose(r, st, rerender);
   if (plan.redirect) return nav.replace(plan.redirect);

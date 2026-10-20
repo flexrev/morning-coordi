@@ -1,0 +1,149 @@
+# 6. Deep + layering:true — mid 카드 (8 bases × 3 seasons). 검사: 여름 0, quick 0, 포멀도 경고, mid 기장/무게
+
+## bottom/indigo 봄가을 — 후보 383, 화면에 실린 mid 카드 4 (classic 0)
+  g-1jr907f 네이비 코튼 니트[4] · 올리브 퀼팅 베스트[3] · 인디고 데님[4] · 브라운 척카 부츠[5] | F top4 mid3 outer- | layer 4 rule=midLayer | final 5 C=1 | in byTone
+  g-jnuumw 라이트 블루 옥스포드 셔츠[6] · 화이트 니트 베스트[5] · 인디고 데님[4] · 블랙 더비[7] · 올리브 블레이저[7] | F top6 mid5 outer7 | layer 5 rule=midLayer | final 4.6 C=0 | in byHue
+  g-1ueqo6z 라이트 블루 옥스포드 셔츠[6] · 네이비 퀼팅 베스트[3] · 인디고 데님[4] · 브라운 척카 부츠[5] | F top6 mid3 outer- | layer 4 rule=midLayer | final 5 C=1 | in byHue
+  g-1aen6aq 베이지 코튼 니트[4] · 네이비 퀼팅 베스트[3] · 인디고 데님[4] · 흰 스니커즈[3] | F top4 mid3 outer- | layer 4 rule=midLayer | final 4.93 C=1 | in byStyle
+
+## bottom/indigo 여름 — 후보 112, 화면에 실린 mid 카드 0 (classic 0)
+
+## bottom/indigo 겨울 — 후보 400, 화면에 실린 mid 카드 8 (classic 0)
+  g-10l11cm 라이트 블루 옥스포드 셔츠[6] · 포레스트 그린 이너 니트[5] · 인디고 데님[4] · 브라운 워크 부츠[4] | F top6 mid5 outer- | layer 4 rule=midLayer | final 5 C=1 | in byTone
+  g-10snjfk 라이트 블루 옥스포드 셔츠[6] · 러스트 이너 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.95 C=1 | in byTone
+  g-1948zrt 라이트 블루 옥스포드 셔츠[6] · 올리브 이너 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.95 C=1 | in byTone
+  g-116jfrh 라이트 블루 옥스포드 셔츠[6] · 차콜 이너 니트[5] · 인디고 데님[4] · 브라운 워크 부츠[4] | F top6 mid5 outer- | layer 4 rule=midLayer | final 5 C=1 | in byHue
+  g-1o345nq 라이트 블루 옥스포드 셔츠[6] · 브라운 이너 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.95 C=1 | in byHue
+  g-5dsd6c 라이트 블루 옥스포드 셔츠[6] · 초콜릿 이너 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.95 C=1 | in byHue
+  g-16zxzxv 화이트 옥스포드 셔츠[6] · 라이트 블루 이너 니트[5] · 인디고 데님[4] · 브라운 워크 부츠[4] | F top6 mid5 outer- | layer 4 rule=midLayer | final 5 C=1 | in byHue
+  g-x67158 라이트 블루 옥스포드 셔츠[6] · 베이지 이너 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.95 C=1 | in byStyle
+
+## bottom/beige 봄가을 — 후보 400, 화면에 실린 mid 카드 6 (classic 0)
+  g-1djotsc 브라운 코튼 니트[4] · 네이비 퀼팅 베스트[3] · 베이지 치노[5] · 흰 스니커즈[3] | F top4 mid3 outer- | layer 4 rule=midLayer | final 4.91 C=1 | in byTone,byHue
+  g-e9nnyn 올리브 코튼 니트[4] · 네이비 퀼팅 베스트[3] · 베이지 치노[5] · 브라운 척카 부츠[5] | F top4 mid3 outer- | layer 4 rule=midLayer | final 4.91 C=1 | in byTone
+  g-1dho63i 초콜릿 코튼 니트[4] · 네이비 퀼팅 베스트[3] · 베이지 치노[5] · 흰 스니커즈[3] | F top4 mid3 outer- | layer 4 rule=midLayer | final 4.91 C=1 | in byTone,byHue
+  g-1tyeawe 러스트 코튼 니트[4] · 올리브 퀼팅 베스트[3] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] | F top4 mid3 outer- | layer 4 rule=midLayer | final 4.48 C=0 | in byStyle
+  g-1lyxv8w 브라운 코튼 니트[4] · 네이비 퀼팅 베스트[3] · 베이지 치노[5] · 브라운 척카 부츠[5] | F top4 mid3 outer- | layer 4 rule=midLayer | final 4.91 C=1 | in byStyle,byOccasion
+  g-1po5gqb 올리브 코튼 니트[4] · 네이비 퀼팅 베스트[3] · 베이지 치노[5] · 흰 스니커즈[3] | F top4 mid3 outer- | layer 4 rule=midLayer | final 4.91 C=1 | in byStyle,byOccasion
+
+## bottom/beige 여름 — 후보 90, 화면에 실린 mid 카드 0 (classic 0)
+
+## bottom/beige 겨울 — 후보 400, 화면에 실린 mid 카드 5 (classic 0)
+  g-1pgqcte 라이트 블루 옥스포드 셔츠[6] · 브라운 이너 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.88 C=1 | in byTone,byHue
+  g-ddjkps 라이트 블루 옥스포드 셔츠[6] · 버건디 이너 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.88 C=1 | in byTone
+  g-ov0gkk 화이트 옥스포드 셔츠[6] · 라이트 블루 이너 니트[5] · 베이지 치노[5] · 버건디 페니 로퍼[6] · 네이비 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.66 C=0 | in byHue
+  g-mpeliy 라이트 블루 옥스포드 셔츠[6] · 네이비 이너 니트[5] · 베이지 치노[5] · 버건디 페니 로퍼[6] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.6 C=0 | in byStyle,byOccasion
+  g-pr6kp0 라이트 블루 옥스포드 셔츠[6] · 네이비 이너 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.88 C=1 | in byStyle
+
+## bottom/charcoal 봄가을 — 후보 164, 화면에 실린 mid 카드 2 (classic 0)
+  g-sc0agp 화이트 옥스포드 셔츠[6] · 라이트 블루 가디건[5] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] · 카멜 트렌치 코트[7] | F top6 mid5 outer7 | layer 5 rule=midLayer | final 4.47 C=0 | in byTone
+  g-1naq6vr 화이트 옥스포드 셔츠[6] · 라이트 블루 가디건[5] · 차콜 울 슬랙스[7] · 초콜릿 척카 부츠[5] · 카멜 트렌치 코트[7] | F top6 mid5 outer7 | layer 5 rule=midLayer | final 4.68 C=1 | in byOccasion
+
+## bottom/charcoal 여름 — 후보 36, 화면에 실린 mid 카드 0 (classic 0)
+
+## bottom/charcoal 겨울 — 후보 209, 화면에 실린 mid 카드 8 (classic 0)
+  g-dclaeq 라이트 블루 옥스포드 셔츠[6] · 오트밀 이너 니트[5] · 차콜 울 슬랙스[7] · 초콜릿 첼시 부츠[6] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.72 C=1 | in byOccasion,byTone
+  g-o1b26t 화이트 옥스포드 셔츠[6] · 라이트 블루 이너 니트[5] · 차콜 울 슬랙스[7] · 초콜릿 첼시 부츠[6] · 카멜 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.81 C=1 | in byTone
+  g-1dh9ynq 라이트 블루 옥스포드 셔츠[6] · 버건디 이너 니트[5] · 차콜 울 슬랙스[7] · 초콜릿 첼시 부츠[6] · 카멜 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.81 C=1 | in byTone,byHue
+  g-ldbri0 라이트 블루 옥스포드 셔츠[6] · 버건디 이너 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 카멜 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.75 C=1 | in byTone
+  g-1o34d2l 라이트 블루 옥스포드 셔츠[6] · 버건디 이너 니트[5] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] | F top6 mid5 outer- | layer 4 rule=midLayer | final 3.93 C=0 | in byStyle,byTone
+  g-1hexhsm 라이트 블루 옥스포드 셔츠[6] · 오트밀 이너 니트[5] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.53 C=0 | in byStyle
+  g-ux3s56 라이트 블루 옥스포드 셔츠[6] · 더스티 핑크 이너 니트[5] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] | F top6 mid5 outer- | layer 4 rule=midLayer | final 3.33 C=0 | in byStyle
+  g-1jprolu 라이트 블루 옥스포드 셔츠[6] · 네이비 이너 니트[5] · 차콜 울 슬랙스[7] · 초콜릿 첼시 부츠[6] · 카멜 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.81 C=1 | in byOccasion
+
+## bottom/blackDenim 봄가을 — 후보 394, 화면에 실린 mid 카드 1 (classic 0)
+  g-17du8me 버건디 코튼 니트[4] · 블랙 퀼팅 베스트[3] · 블랙 데님[5] · 흰 스니커즈[3] | F top4 mid3 outer- | layer 4 rule=midLayer | final 3.9 C=0 | in byTone
+
+## bottom/blackDenim 여름 — 후보 65, 화면에 실린 mid 카드 0 (classic 0)
+
+## bottom/blackDenim 겨울 — 후보 400, 화면에 실린 mid 카드 6 (classic 0)
+  g-1eb28ex 화이트 옥스포드 셔츠[6] · 카멜 이너 니트[5] · 블랙 데님[5] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.73 C=1 | in byOccasion,byTone
+  g-1hy19c2 화이트 옥스포드 셔츠[6] · 버건디 이너 니트[5] · 블랙 데님[5] · 블랙 더비[7] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.64 C=1 | in byTone
+  g-17pgisb 화이트 옥스포드 셔츠[6] · 버건디 이너 니트[5] · 블랙 데님[5] · 미드 그레이 페니 로퍼[6] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.16 C=0 | in byTone
+  g-1k6eb2z 화이트 옥스포드 셔츠[6] · 버건디 이너 니트[5] · 블랙 데님[5] · 미드 그레이 페니 로퍼[6] · 차콜 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.05 C=0 | in byTone
+  g-2qb5ly 화이트 옥스포드 셔츠[6] · 올리브 이너 니트[5] · 블랙 데님[5] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.73 C=1 | in byHue
+  g-wbxt03 화이트 옥스포드 셔츠[6] · 베이지 이너 니트[5] · 블랙 데님[5] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.73 C=1 | in byOccasion
+
+## bottom/olive 봄가을 — 후보 384, 화면에 실린 mid 카드 4 (classic 0)
+  g-17ou3yn 세이지 코튼 니트[4] · 네이비 퀼팅 베스트[3] · 올리브 치노[5] · 흰 스니커즈[3] | F top4 mid3 outer- | layer 4 rule=midLayer | final 4.79 C=0 | in byHue
+  g-sofinv 버건디 코튼 니트[4] · 네이비 퀼팅 베스트[3] · 올리브 치노[5] · 흰 스니커즈[3] | F top4 mid3 outer- | layer 4 rule=midLayer | final 4.43 C=1 | in byHue
+  g-147wkjr 버건디 코튼 니트[4] · 네이비 퀼팅 베스트[3] · 올리브 치노[5] · 브라운 척카 부츠[5] | F top4 mid3 outer- | layer 4 rule=midLayer | final 4.43 C=1 | in byStyle
+  g-6pgjli 라이트 블루 옥스포드 셔츠[6] · 네이비 퀼팅 베스트[3] · 올리브 치노[5] · 흰 스니커즈[3] | F top6 mid3 outer- | layer 4 rule=midLayer | final 4.88 C=1 | in byStyle
+
+## bottom/olive 여름 — 후보 80, 화면에 실린 mid 카드 0 (classic 0)
+
+## bottom/olive 겨울 — 후보 400, 화면에 실린 mid 카드 7 (classic 0)
+  g-af12tx 라이트 블루 옥스포드 셔츠[6] · 버건디 이너 니트[5] · 올리브 치노[5] · 흰 스니커즈[3] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.88 C=1 | in byTone
+  g-pzpypt 라이트 블루 옥스포드 셔츠[6] · 버건디 이너 니트[5] · 올리브 치노[5] · 브라운 워크 부츠[4] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.78 C=1 | in byTone
+  g-1b18142 화이트 옥스포드 셔츠[6] · 라이트 블루 이너 니트[5] · 올리브 치노[5] · 브라운 워크 부츠[4] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.54 C=1 | in byHue
+  g-p9tkth 라이트 블루 옥스포드 셔츠[6] · 네이비 이너 니트[5] · 올리브 치노[5] · 브라운 워크 부츠[4] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.78 C=1 | in byStyle
+  g-17rnw4x 라이트 블루 옥스포드 셔츠[6] · 네이비 이너 니트[5] · 올리브 치노[5] · 흰 스니커즈[3] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.88 C=1 | in byStyle
+  g-1fnz4zq 화이트 옥스포드 셔츠[6] · 라이트 블루 이너 니트[5] · 올리브 치노[5] · 탄 워크 부츠[4] · 네이비 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.48 C=1 | in byStyle
+  g-1qk9q7v 라이트 블루 옥스포드 셔츠[6] · 네이비 이너 니트[5] · 올리브 치노[5] · 블랙 더비[7] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.16 C=1 | in byOccasion
+
+## top/white 봄가을 — 후보 372, 화면에 실린 mid 카드 1 (classic 0)
+  g-17o7whc 화이트 옥스포드 셔츠[6] · 그레이 멜란지 가디건[5] · 인디고 데님[4] · 블랙 더비[7] · 베이지 트렌치 코트[7] | F top6 mid5 outer7 | layer 5 rule=midLayer | final 4.92 C=0 | in byOccasion
+
+## top/white 여름 — 후보 65, 화면에 실린 mid 카드 0 (classic 0)
+
+## top/white 겨울 — 후보 357, 화면에 실린 mid 카드 11 (classic 0)
+  g-1h8nhx 라이트 블루 옥스포드 셔츠[6] · 화이트 이너 니트[5] · 브라운 코듀로이[4] · 브라운 워크 부츠[4] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.95 C=1 | in byTone
+  g-tqzs9f 라이트 블루 옥스포드 셔츠[6] · 화이트 이너 니트[5] · 인디고 데님[4] · 브라운 워크 부츠[4] | F top6 mid5 outer- | layer 4 rule=midLayer | final 5 C=1 | in byStyle,byOccasion,byTone,byHue
+  g-10zk7da 라이트 블루 옥스포드 셔츠[6] · 화이트 이너 니트[5] · 인디고 데님[4] · 탄 워크 부츠[4] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.88 C=1 | in byTone
+  g-ebsnlc 라이트 블루 옥스포드 셔츠[6] · 화이트 이너 니트[5] · 네이비 치노[5] · 블랙 더비[7] · 베이지 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.74 C=1 | in byTone
+  g-w7y1tm 라이트 블루 옥스포드 셔츠[6] · 화이트 이너 니트[5] · 네이비 치노[5] · 블랙 더비[7] · 카멜 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.74 C=1 | in byTone
+  g-1sqqo6n 라이트 블루 옥스포드 셔츠[6] · 화이트 이너 니트[5] · 네이비 치노[5] · 흰 스니커즈[3] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.64 C=1 | in byStyle,byTone
+  g-1g4qp7o 라이트 블루 옥스포드 셔츠[6] · 화이트 이너 니트[5] · 네이비 치노[5] · 버건디 페니 로퍼[6] · 베이지 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.66 C=0 | in byStyle,byTone
+  g-1pij6d7 라이트 블루 옥스포드 셔츠[6] · 화이트 이너 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 카멜 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.75 C=1 | in byStyle,byOccasion
+  g-jmfv6l 라이트 블루 옥스포드 셔츠[6] · 화이트 이너 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.34 C=1 | in byStyle
+  g-5w03n 라이트 블루 옥스포드 셔츠[6] · 화이트 이너 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.88 C=1 | in byStyle,byOccasion
+  g-qd7fed 라이트 블루 옥스포드 셔츠[6] · 화이트 이너 니트[5] · 차콜 울 슬랙스[7] · 초콜릿 첼시 부츠[6] · 카멜 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.81 C=1 | in byOccasion
+
+## top/navy 봄가을 — 후보 342, 화면에 실린 mid 카드 5 (classic 0)
+  g-1jr907f 네이비 코튼 니트[4] · 올리브 퀼팅 베스트[3] · 인디고 데님[4] · 브라운 척카 부츠[5] | F top4 mid3 outer- | layer 4 rule=midLayer | final 5 C=1 | in byTone
+  g-f3ragn 네이비 코튼 니트[4] · 올리브 퀼팅 베스트[3] · 인디고 데님[4] · 흰 스니커즈[3] | F top4 mid3 outer- | layer 4 rule=midLayer | final 4.93 C=1 | in byStyle,byOccasion,byTone
+  g-ipbhhq 네이비 코튼 니트[4] · 올리브 퀼팅 베스트[3] · 라이트워시 데님[3] · 흰 스니커즈[3] | F top4 mid3 outer- | layer 4 rule=midLayer | final 4.84 C=1 | in byOccasion,byTone
+  g-16ztp65 네이비 코튼 니트[4] · 차콜 퀼팅 베스트[3] · 브라운 코듀로이[4] · 브라운 척카 부츠[5] | F top4 mid3 outer- | layer 4 rule=midLayer | final 4.99 C=1 | in byHue
+  g-5f21l6 네이비 코튼 니트[4] · 올리브 퀼팅 베스트[3] · 인디고 데님[4] · 네이비 컬러 스니커즈[2] | F top4 mid3 outer- | layer 4 rule=midLayer | final 4.5 C=0 | in byStyle
+
+## top/navy 여름 — 후보 61, 화면에 실린 mid 카드 0 (classic 0)
+
+## top/navy 겨울 — 후보 363, 화면에 실린 mid 카드 15 (classic 0)
+  g-1fq73ua 라이트 블루 옥스포드 셔츠[6] · 네이비 이너 니트[5] · 브라운 코듀로이[4] · 브라운 워크 부츠[4] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.95 C=1 | in byTone,byHue
+  g-cxuqac 라이트 블루 옥스포드 셔츠[6] · 네이비 이너 니트[5] · 인디고 데님[4] · 브라운 워크 부츠[4] | F top6 mid5 outer- | layer 4 rule=midLayer | final 5 C=1 | in byStyle,byOccasion,byTone
+  g-1kmxo8o 라이트 블루 옥스포드 셔츠[6] · 네이비 이너 니트[5] · 미드 그레이 울 슬랙스[7] · 버건디 페니 로퍼[6] · 카멜 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.72 C=0 | in byTone
+  g-ff6hw 라이트 블루 옥스포드 셔츠[6] · 네이비 이너 니트[5] · 크림 치노[5] · 브라운 워크 부츠[4] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.54 C=1 | in byTone
+  g-uvn9wl 라이트 블루 옥스포드 셔츠[6] · 네이비 이너 니트[5] · 크림 치노[5] · 흰 스니커즈[3] · 베이지 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.51 C=1 | in byTone
+  g-dkg569 라이트 블루 옥스포드 셔츠[6] · 네이비 이너 니트[5] · 크림 치노[5] · 브라운 워크 부츠[4] · 베이지 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.48 C=1 | in byTone
+  g-1ir6uls 라이트 블루 옥스포드 셔츠[6] · 네이비 이너 니트[5] · 크림 치노[5] · 흰 스니커즈[3] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.4 C=1 | in byTone
+  g-ifu9ik 라이트 블루 옥스포드 셔츠[6] · 네이비 이너 니트[5] · 크림 치노[5] · 탄 워크 부츠[4] · 베이지 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.41 C=1 | in byTone
+  g-1narax5 라이트 블루 옥스포드 셔츠[6] · 네이비 이너 니트[5] · 인디고 데님[4] · 탄 워크 부츠[4] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.88 C=1 | in byHue
+  g-11k8ts 라이트 블루 옥스포드 셔츠[6] · 네이비 이너 니트[5] · 미드 그레이 울 슬랙스[7] · 브라운 첼시 부츠[6] · 카멜 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.81 C=1 | in byOccasion,byHue
+  g-1mqb6l8 라이트 블루 옥스포드 셔츠[6] · 네이비 이너 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 카멜 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.75 C=1 | in byStyle,byOccasion
+  g-1jprolu 라이트 블루 옥스포드 셔츠[6] · 네이비 이너 니트[5] · 차콜 울 슬랙스[7] · 초콜릿 첼시 부츠[6] · 카멜 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.81 C=1 | in byStyle
+  g-81uuc6 라이트 블루 옥스포드 셔츠[6] · 네이비 이너 니트[5] · 카키 치노[5] · 버건디 페니 로퍼[6] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.6 C=0 | in byStyle
+  g-pr6kp0 라이트 블루 옥스포드 셔츠[6] · 네이비 이너 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.88 C=1 | in byStyle,byOccasion
+  g-spzfxk 라이트 블루 옥스포드 셔츠[6] · 네이비 이너 니트[5] · 카키 치노[5] · 흰 스니커즈[3] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.88 C=1 | in byStyle
+
+## shoes/white 봄가을 — 후보 400, 화면에 실린 mid 카드 7 (classic 0)
+  g-1djotsc 브라운 코튼 니트[4] · 네이비 퀼팅 베스트[3] · 베이지 치노[5] · 흰 스니커즈[3] | F top4 mid3 outer- | layer 4 rule=midLayer | final 4.91 C=1 | in byTone
+  g-1ahyh4c 화이트 옥스포드 셔츠[6] · 블랙 퀼팅 베스트[3] · 블랙 데님[5] · 흰 스니커즈[3] | F top6 mid3 outer- | layer 4 rule=midLayer | final 4.4 C=1 | in byTone
+  g-1y7rtud 라이트 그레이 코튼 니트[4] · 블랙 퀼팅 베스트[3] · 블랙 데님[5] · 흰 스니커즈[3] | F top4 mid3 outer- | layer 4 rule=midLayer | final 4.38 C=1 | in byTone
+  g-f3ragn 네이비 코튼 니트[4] · 올리브 퀼팅 베스트[3] · 인디고 데님[4] · 흰 스니커즈[3] | F top4 mid3 outer- | layer 4 rule=midLayer | final 4.93 C=1 | in byTone
+  g-o0fnjq 라이트 블루 옥스포드 셔츠[6] · 올리브 퀼팅 베스트[3] · 네이비 치노[5] · 흰 스니커즈[3] | F top6 mid3 outer- | layer 4 rule=midLayer | final 4.88 C=1 | in byTone
+  g-ipbhhq 네이비 코튼 니트[4] · 올리브 퀼팅 베스트[3] · 라이트워시 데님[3] · 흰 스니커즈[3] | F top4 mid3 outer- | layer 4 rule=midLayer | final 4.84 C=1 | in byTone
+  g-1kkoa7b 세이지 코튼 니트[4] · 네이비 퀼팅 베스트[3] · 라이트워시 데님[3] · 흰 스니커즈[3] | F top4 mid3 outer- | layer 4 rule=midLayer | final 4.72 C=0 | in byTone
+
+## shoes/white 여름 — 후보 173, 화면에 실린 mid 카드 0 (classic 0)
+
+## shoes/white 겨울 — 후보 400, 화면에 실린 mid 카드 7 (classic 0)
+  g-10snjfk 라이트 블루 옥스포드 셔츠[6] · 러스트 이너 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.95 C=1 | in byTone
+  g-1948zrt 라이트 블루 옥스포드 셔츠[6] · 올리브 이너 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.95 C=1 | in byTone
+  g-1o345nq 라이트 블루 옥스포드 셔츠[6] · 브라운 이너 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.95 C=1 | in byTone
+  g-15o9u6o 라이트 블루 옥스포드 셔츠[6] · 올리브 이너 니트[5] · 크림 치노[5] · 흰 스니커즈[3] · 네이비 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.57 C=1 | in byTone
+  g-19vjl2n 라이트 블루 옥스포드 셔츠[6] · 브라운 이너 니트[5] · 크림 치노[5] · 흰 스니커즈[3] · 네이비 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.57 C=1 | in byTone
+  g-1bohh9y 라이트 블루 옥스포드 셔츠[6] · 오트밀 이너 니트[5] · 크림 치노[5] · 흰 스니커즈[3] · 네이비 체스터필드 코트[8] | F top6 mid5 outer8 | layer 5 rule=midLayer | final 4.57 C=1 | in byTone
+  g-1vbbjms 라이트 블루 옥스포드 셔츠[6] · 베이지 이너 니트[5] · 네이비 치노[5] · 흰 스니커즈[3] | F top6 mid5 outer- | layer 4 rule=midLayer | final 4.88 C=1 | in byStyle
+
+## 합계: mid 카드 97, quick mid 0. 계절별: 봄가을 30 · 여름 0 · 겨울 67. 종류별: quiltedVest 26 · knitVest 1 · knitOverShirt 67 · cardigan 3
+## 위반/경고 0

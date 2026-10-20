@@ -1,7 +1,7 @@
 // 아침 코디 — 앱 부트스트랩 (C3·C1 → 6-B). 토큰/스타일은 index.html <link>, 화면은 src/ui/, 엔진은 아래 USE_MOCK 한 줄에서 선택.
-import { registerSW } from 'virtual:pwa-register';
 import * as state from './ui/state.js';
 import { createCatalog } from './ui/catalog.js';
+import { nextFrame } from './ui/motion.js';
 import { ensurePatternDefs } from './ui/patternDefs.js';
 import { mount } from './ui/app.js';
 import { countVisit, dismissBanner } from './ui/install.js';
@@ -16,37 +16,49 @@ import { applyThemeAttr } from './ui/screens/settings.js';
  */
 const USE_MOCK = import.meta.env.VITE_USE_MOCK === 'true';
 
+/**
+ * 데이터는 두 청크 (게이트 6 번들 분할): 핵심(src/ui/dataCore.js — 색·규칙·코디·라벨)은 첫 화면과 함께,
+ * 확장(src/data/expansion.js — 스타일·상황·소품·무늬·미드)은 S3 첫 페인트 뒤 유휴 시간에(또는 S4·S5 진입 직전에) 불러와 엔진을 다시 만든다.
+ * 핵심 엔진만으로도 classic 3장은 같은 결과(pickClassic 은 확장 데이터를 안 쓴다) → ref classic.N 유지.
+ */
 async function loadEngine() {
   if (USE_MOCK) {
     const mod = await import('./mock/index.js');
     const engine = mod.createEngine(mod.data);
-    return { engine, catalog: createCatalog(mod.data, engine) };
+    return { engine, catalog: createCatalog(mod.data, engine), expanded: true };
   }
-  const [{ createEngine }, { data }] = await Promise.all([import('./engine/index.js'), import('./data/index.js')]);
-  const engine = createEngine(data);
-  return { engine, catalog: createCatalog(data, engine) };
+  const [{ createEngine }, { data: core }] = await Promise.all([import('./engine/index.js'), import('./ui/dataCore.js')]);
+  const engine = createEngine(core);
+  state.registerExpansionLoader(async () => {
+    const { expansion } = await import('./data/expansion.js');
+    const full = { ...core, ...expansion };
+    const next = createEngine(full);
+    state.setEngine({ engine: next, catalog: createCatalog(full, next), expanded: true });
+  });
+  return { engine, catalog: createCatalog(core, engine), expanded: false };
 }
 
 function applyPrefs() {
   const st = state.get();
   applyThemeAttr(st.theme);
   applyMotionPref(st.motion);
-  // 그레인(시안 B 7% 상한 → 5%): 다크에서만, 저사양(data-perf=low)·투명도 줄이기면 끔
+  // 그레인 overlay 는 제거(2x 확대에서도 식별 불가 — 리뷰 4절). 저사양 표시만 남긴다
   const html = document.documentElement;
-  let noTransparency = false;
-  try { noTransparency = matchMedia('(prefers-reduced-transparency: reduce)').matches; } catch { /* noop */ }
   const lowPerf = html.dataset.perf === 'low' || (navigator.deviceMemory && navigator.deviceMemory <= 2);
   if (lowPerf) html.dataset.perf = 'low';
-  if (!noTransparency && !lowPerf) html.dataset.grain = 'on'; else delete html.dataset.grain;
+  delete html.dataset.grain;
 }
 
 async function boot() {
   applyPrefs();
   ensurePatternDefs();
-  const { engine, catalog } = await loadEngine();
-  state.set({ engine, catalog });
+  const { engine, catalog, expanded } = await loadEngine();
+  state.set({ engine, catalog, expanded });
   countVisit();
   mount(document.getElementById('app'));
+  // 확장 청크: 첫 페인트 뒤 유휴 시간에 (S4·S5 는 app.js 가 ensureExpansion 을 기다린다)
+  const idle = (fn) => (typeof requestIdleCallback === 'function' ? requestIdleCallback(fn, { timeout: 1500 }) : setTimeout(fn, 600));
+  nextFrame(() => idle(() => state.ensureExpansion()));
 }
 
 // Android: beforeinstallprompt 를 저장해 두고 배너 버튼을 [설치]로 (ux-flow 6-3)
@@ -71,11 +83,18 @@ boot().catch((err) => {
   app.append(box);
 });
 
-// 서비스워커: 'prompt' 모드. 새 버전은 다음 실행에 적용(사용 중 리로드 없음). tech-stack.md 1-2절.
+// 서비스워커: 'prompt' 모드 — 새 SW 는 대기(waiting) 상태로 두고 다음 실행에 적용(사용 중 리로드 없음). tech-stack.md 1-2절.
+// virtual:pwa-register(workbox-window 2.4 KB gzip) 대신 직접 등록: 같은 동작(installed + 기존 controller → 토스트), SKIP_WAITING 은 보내지 않는다.
 if ('serviceWorker' in navigator) {
-  registerSW({
-    immediate: true,
-    onNeedRefresh() { toast('새 버전은 다음 실행에 적용돼요'); },
-    onOfflineReady() { /* 조용히 */ },
+  window.addEventListener('load', async () => {
+    try {
+      const reg = await navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`, { scope: import.meta.env.BASE_URL });
+      const watch = (w) => w && w.addEventListener('statechange', () => {
+        if (w.state === 'installed' && navigator.serviceWorker.controller) toast('새 버전은 다음 실행에 적용돼요');
+      });
+      if (reg.waiting && navigator.serviceWorker.controller) toast('새 버전은 다음 실행에 적용돼요');
+      watch(reg.installing);
+      reg.addEventListener('updatefound', () => watch(reg.installing));
+    } catch { /* 등록 실패는 조용히 (온라인에서 그대로 동작) */ }
   });
 }

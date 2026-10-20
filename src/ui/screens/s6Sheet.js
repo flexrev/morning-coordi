@@ -1,6 +1,6 @@
 // S6 상세 시트 — 핏 · 소재 · 신발 스타일 · 기장 · 의견 갈림. 대안 탭 → 그 변주 카드(S5)로 교체, 시트 닫힘.
 import { h } from '../dom.js';
-import { sheet, dot, isDisputed } from '../components.js';
+import { sheet, dot, isDisputed, userReasons } from '../components.js';
 import * as nav from '../nav.js';
 import { get as getState, getResult, findCandidate } from '../state.js';
 
@@ -38,7 +38,7 @@ export function s6Sheet(ref, kind) {
   }
   if (kind === 'fit') {
     const line = `${top ? cat.label(`fit.top.${top.fit || 'regular'}`) + ' 상의' : ''}${top && bottom ? ' + ' : ''}${bottom ? cat.label(`fit.bottom.${bottom.fit || 'regular'}`) + ' 하의' : ''}`;
-    const fitReason = (candidate.explain || []).find((s) => /핏/.test(s));
+    const fitReason = userReasons(candidate).find((s) => /핏/.test(s)); // 점수 '4/5' 는 거른다 (U6-09)
     const alts = alternatives({ st, ref, category: 'top', pick: (it) => it.fit && it.fit !== top?.fit });
     const body = [h('p', { class: 'sheet__note', text: `${line}${fitReason ? ` · ${fitReason}` : ''}` })];
     if (alts.length) {
@@ -59,7 +59,7 @@ export function s6Sheet(ref, kind) {
         h('span', { class: 'seasons', 'aria-label': `어울리는 계절: ${seasons.map((s) => cat.label(`season.${s}`)).join(', ')}` },
           ...['springFall', 'summer', 'winter'].map((s) => h('span', { class: seasons.includes(s) ? 'is-on' : '', text: cat.label(`season.${s}`) })))));
     }
-    const matReason = (candidate.explain || []).find((s) => /소재/.test(s));
+    const matReason = userReasons(candidate).find((s) => /소재/.test(s));
     if (matReason) body.push(h('p', { class: 'sheet__note', text: matReason }));
     const alts = alternatives({ st, ref, category: 'top', pick: (it) => it.material && it.material !== top?.material });
     if (alts.length) { body.push(h('p', { class: 'caption', text: '어울리는 다른 소재' })); body.push(...alts.map(altOpt)); }
@@ -106,7 +106,7 @@ function shoeSheet({ ref, candidate, shoes, bottom, st, cat }) {
   }
   const alts = alternatives({ st, ref, category: 'shoes' });
   body.push(...alts.map(altOpt));
-  const shoeReason = (candidate.explain || []).find((s) => /신발/.test(s));
+  const shoeReason = userReasons(candidate).find((s) => /신발/.test(s)); // '신발 조합 4/5' 제외 (U6-09)
   const fallback = shoes?.shoeType === 'sneakerWhite' ? '가죽형 흰 스니커즈면 슬랙스에도 OK' : '';
   if (shoeReason || fallback) body.push(h('p', { class: 'sheet__note', text: shoeReason || fallback }));
   // 제목은 "신발 스타일" 한 줄, 하의 정보는 본문 첫 줄로 (P1-16 · P2-04)

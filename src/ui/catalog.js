@@ -26,6 +26,8 @@ const FALLBACK = {
 };
 
 const SEASON_ORDER = ['springFall', 'summer', 'winter'];
+/** 하의는 품목 enum 이 없어 소재가 이름이 된다. 소재만으로 품목이 안 읽히는 것엔 명사를 붙인다 (U6-16: "차콜 울" → "차콜 울 슬랙스") */
+const BOTTOM_NOUN = { wool: '울 슬랙스', flannel: '플란넬 슬랙스', corduroy: '코듀로이 팬츠', linen: '린넨 팬츠', nylonTech: '나일론 팬츠', jersey: '저지 팬츠', tweed: '트위드 팬츠', leather: '가죽 팬츠' };
 const TONE_ORDER = ['neutral', 'earth', 'mono', 'navyBase', 'pastel', 'accent'];
 
 /**
@@ -125,7 +127,7 @@ export function createCatalog(data, engine) {
     const kind = it.category === 'shoes' ? label(`shoe.${it.shoeType}`)
       : it.category === 'top' ? label(`topType.${it.itemType}`)
       : it.category === 'outer' ? label(`outerType.${it.itemType}`)
-      : (it.material ? label(`material.${it.material}`) : label('category.bottom'));
+      : (it.material ? (BOTTOM_NOUN[it.material] || label(`material.${it.material}`)) : label('category.bottom'));
     return `${c} ${kind}`;
   }
 
@@ -149,7 +151,7 @@ export function createCatalog(data, engine) {
     const c = shortLabel(it.color);
     const kindId = it.category === 'shoes' ? `shoe.${it.shoeType}` : it.category === 'top' ? `topType.${it.itemType}` : it.category === 'outer' ? `outerType.${it.itemType}` : (it.material ? `material.${it.material}` : null);
     if (!kindId) return `${c} ${label('category.bottom')}`;
-    const kind = plain(kindId);
+    const kind = (it.category === 'bottom' && !it.itemType && BOTTOM_NOUN[it.material]) || plain(kindId);
     const squash = (t) => t.replace(/\s+/g, '');
     if (squash(kind).includes(squash(c)) || (it.shoeType === 'sneakerWhite' && it.color === 'white')) return kind;
     return `${c} ${kind}`;

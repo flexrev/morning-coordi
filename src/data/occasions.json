@@ -140,7 +140,7 @@
    "targetHi": 7
   },
   "styleBoost": {
-   "minimal": 2,
+   "minimal": 3,
    "cityboy": 1,
    "ivy": 1
   },
@@ -150,7 +150,8 @@
     "tank",
     "sweatshirt",
     "longPuffer",
-    "fleece"
+    "fleece",
+    "dressShirt"
    ],
    "shoeTypes": [
     "running",
@@ -172,7 +173,6 @@
     "linenShirt",
     "poloPique",
     "cardigan",
-    "blazer",
     "balmacaan"
    ],
    "shoeTypes": [
@@ -298,10 +298,8 @@
     "sweatshirt",
     "tank",
     "henley",
-    "poloPique",
     "denimShirt",
     "flannelShirt",
-    "linenShirt",
     "knitCotton",
     "denimJacket",
     "coachJacket",

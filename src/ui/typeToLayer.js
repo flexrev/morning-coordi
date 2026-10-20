@@ -154,3 +154,17 @@ export function patternForPrint(pattern) {
   if (/hound/.test(p)) return 'pat2-houndstooth';
   return null;
 }
+
+/** 카드(size < 240)에 그리는 액세서리 슬롯 — 윤곽을 바꾸지 않는 벨트·양말만 (U6-02). S5·공유(≥ 240)는 전부 */
+export const CARD_ACC_SLOTS = new Set(['belt', 'socks']);
+export const ACC_FULL_SIZE = 240;
+/**
+ * 크기 게이트: 그릴 액세서리만 남긴다. 캡·스카프·가방·시계는 60px 폭에서 멜빵·헬멧·넥타이로 읽히므로 카드에서 뺀다.
+ * @param {Array<object>} list  AccessoryPick 또는 items[] 액세서리 항목
+ * @param {number} size  렌더 높이(px)
+ */
+export function accessoriesForSize(list, size) {
+  const arr = Array.isArray(list) ? list.filter(Boolean) : [];
+  if (size >= ACC_FULL_SIZE) return arr;
+  return arr.filter((a) => CARD_ACC_SLOTS.has(accessorySlot(a)));
+}

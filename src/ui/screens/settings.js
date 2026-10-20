@@ -1,12 +1,12 @@
-// ST1 설정 — 화면(다크·라이트·자동) · 움직임(시스템 따름·줄이기) · 계절 · 처음 안내 · 홈 화면 · 모든 저장 지우기 · 정보.
+// ST1 설정 — 화면(다크·라이트·자동) · 움직임(시스템 따름·줄이기) · 계절(자동으로 되돌리기 한 줄) · 처음 안내 · 모든 저장 지우기 · 정보.
+// U6-15: 계절 세그먼트(S3 와 중복)·앱 행(O2 "앱으로 두기"와 중복) 제거.
 import { h } from '../dom.js';
 import { topbar, segment } from '../components.js';
 import * as nav from '../nav.js';
-import { get as getState, setTheme, setMotion, setSeason, resetSeason, seasonForMonth } from '../state.js';
+import { get as getState, setTheme, setMotion, resetSeason, seasonForMonth } from '../state.js';
 import { applyMotionPref } from '../motion.js';
 import { write, KEYS, available } from '../storage.js';
 import { resetAll as resetCoach } from '../coach.js';
-import { isStandalone, isIOS, isAndroid } from '../install.js';
 
 const VERSION = '1.1.0';
 
@@ -30,20 +30,25 @@ export function settingsScreen() {
   let osReduce = false;
   try { osReduce = matchMedia('(prefers-reduced-motion: reduce)').matches; } catch { /* noop */ }
   body.append(row('움직임', segment({ label: '움직임', value: st.motion, name: 'motion', options: [['auto', '시스템 따름'], ['reduce', '줄이기']], onChange: (m) => { setMotion(m); applyMotionPref(m); } }),
-    `지금 시스템 설정: ${osReduce ? '줄이기' : '줄이지 않음'}`));
+    `시스템은 ${osReduce ? '줄이기' : '줄이지 않음'}`));
 
-  // 계절
-  const seasonSeg = segment({ label: '계절', value: st.season, name: 'season', options: ['springFall', 'summer', 'winter'].map((s) => [s, cat.label(`season.${s}`)]), onChange: (s) => setSeason(s) });
-  const auto = h('button', { class: 'btn btn--ghost btn--sm-text', type: 'button', text: '자동으로 되돌리기', onClick: () => { resetSeason(); seasonSeg.setValue(seasonForMonth()); } });
-  body.append(row('계절', h('div', { class: 'srow__stack' }, seasonSeg, auto)));
+  // 계절 — 세그먼트는 S3 상단에 이미 있다. 남는 가치는 "자동으로 되돌리기" 한 줄뿐 (U6-15)
+  const seasonNote = h('p', { class: 'caption srow__note' });
+  const autoBtn = h('button', { class: 'btn btn--block glass', type: 'button', text: '계절 자동으로 되돌리기' });
+  const paintSeason = () => {
+    const s = getState();
+    const auto = s.seasonIsAuto || s.season === seasonForMonth();
+    seasonNote.textContent = `지금 ${cat.label(`season.${s.season}`)}${auto ? ' · 이번 달 기준' : ''}`;
+    autoBtn.disabled = auto;
+    autoBtn.setAttribute('aria-disabled', String(auto));
+  };
+  autoBtn.addEventListener('click', () => { resetSeason(); paintSeason(); });
+  paintSeason();
+  body.append(row('계절', autoBtn, ''));
+  autoBtn.after(seasonNote);
 
   // 처음 안내
   body.append(row('안내', h('button', { class: 'btn btn--block glass', type: 'button', text: '처음 안내 다시 보기', onClick: () => { write(KEYS.onboarded, null); resetCoach(); nav.replace('/'); } })));
-
-  // 홈 화면 (미설치·모바일만)
-  if (!isStandalone() && (isIOS() || isAndroid())) {
-    body.append(row('앱', h('button', { class: 'btn btn--block glass', type: 'button', text: '홈 화면에 두는 방법', onClick: () => nav.go('/result/install') })));
-  }
 
   // 저장
   body.append(row('저장', h('button', { class: 'btn btn--block btn--danger-text glass', type: 'button', 'data-focus-key': 'st1:reset', text: '모든 저장 지우기', onClick: () => nav.go('/settings/reset') }),

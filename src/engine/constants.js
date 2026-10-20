@@ -27,9 +27,26 @@ export const RESERVE_COLORS = ['teal', 'taupe'];
 // ---------------------------------------------------------------- Phase 6-B (CX) 콘텐츠 확장 — content-expansion.md 7-2
 export const K_STYLE = 0.5;                // 스타일 선택 시 final + K_STYLE × styleNorm[style] (재정렬만, D-1)
 export const K_OCC = 0.4;                  // 상황 styleBoost 가중 합 × K_OCC
-export const OCC_WINDOW_PENALTY = -0.3;    // 상황 포멀도 창 밖 아이템당
-export const OCC_WINDOW_FLOOR = -0.9;
+export const OCC_WINDOW_PENALTY = -0.3;    // 상황 포멀도 창 밖 아이템당 × 창 경계까지의 거리(단계) — C6-01: 티셔츠(4단계 밖)가 린넨 셔츠(1단계 밖)보다 더 깎인다
+export const OCC_WINDOW_FLOOR = -1.5;
 export const OCC_TARGET_BONUS = 0.2;       // 코디 평균 포멀도가 목표 창 안
+export const OCC_PREFER_BONUS = 0.1;       // occasions.prefer 품목·신발 1개당 (C6-09: 데이트는 니트·로퍼, 출근은 셔츠·블레이저가 앞서게)
+export const OCC_PREFER_MAX = 0.3;
+// C6-01·02: 상황별 완화 상한 단계 (RELAX_STAGES 인덱스). 없는 상황은 끝까지(4). 격식·운동은 itemTypes·shoeTypes를 끝까지 지키고 3장 미만(shortfall)을 허용한다
+export const OCC_RELAX_MAX_STAGE = { formal: 2, active: 2 };
+// C6-01·02: 상황별 대체 구체화 — 베이스 색은 그대로, 소재·품목만 바꾼 후보를 그 상황의 풀에 더한다
+//  active.bottomMaterials: 울·플란넬 하의 → 스웻팬츠·테크 팬츠 ("차콜 테크 팬츠 + 러닝화") · active.tops: 봄가을 옥스포드 셔츠 → 티셔츠
+//  formal.tops: 여름 티셔츠 → 린넨 셔츠(셔츠 허용색)·피케 폴로, 봄가을 코튼 니트 → 울(메리노) 니트 · formal.shoeTypes: 척카·워크 부츠 → 더비 · formal.outers: 여름 오버셔츠 → 블레이저 (수트 없는 격식 근사 — 창 감점만 받는다)
+//  tops[season] = { from: 기본 품목, shirt?: 셔츠 허용색일 때 [itemType, material], other: 그 외 [itemType, material] }
+export const OCC_ALT = {
+  active: { bottomMaterials: { from: ['wool', 'flannel'], to: ['jersey', 'nylonTech'] }, tops: { springFall: { from: ['oxfordShirt'], other: ['tee', 'jersey'] } } },
+  formal: {
+    tops: { summer: { from: ['tee'], shirt: ['linenShirt', 'linen'], other: ['poloPique', 'jersey'] }, springFall: { from: ['knitCotton'], other: ['knitWool', 'knitWool'] } },
+    shoeTypes: { from: ['chukka', 'workboot'], to: 'derby' },   // 브라운 척카·워크 부츠 → 브라운 더비
+    outers: { summer: { from: ['overshirt'], to: 'blazer' } },  // 여름 오버셔츠 → 블레이저
+  },
+};
+export const BY_STYLE_MAX_OVERLAP = 2;     // C6-03: 스타일 그룹 쌍의 공통 카드 상한 (5장 중)
 export const STYLE_TAG_MIN = 0.4;          // styleNorm ≥ 이면 태그 후보
 export const STYLE_TAG_RATIO = 0.8;        // 최대값의 80% 이상만
 export const STYLE_TAGS_MAX = 2;           // 카드 태그 상위 2개 (gate-5 지시: top-2)
@@ -53,11 +70,16 @@ export const AFFINITY_KINDS = ['topType', 'outerType', 'shoeType', 'material', '
 export const ACCESSORY_WHEN_KEYS = ['season', 'shoeType', 'shoesColor', 'shoesMaterial', 'shoesFinish', 'bottomMaterial', 'topType', 'outerType', 'outerPattern', 'trouserLength', 'hasOuter', 'formalityMin', 'formalityMax', 'patternCount', 'accentCount', 'style', 'tuckIn', 'belt', 'watch', 'beltColor', 'material'];
 export const ACCESSORY_PICK_KEYS = ['color', 'finish', 'material', 'width', 'metal', 'pattern', 'scale', 'knit', 'skip'];
 export const ACCESSORY_COLOR_DERIVED = ['shoesFamily', 'bottomDarker', 'outfit', 'outfitSecondary', 'outerTone2', 'outerPick', 'neutral', 'free'];
-export const PATTERN_WHEN_KEYS = ['mode', 'patternCount', 'sameFamily', 'scaleDiff', 'sharedColor', 'pattern', 'otherPattern', 'category', 'bottomColor', 'bottomPattern', 'outerType', 'outfitTones', 'formalityMin', 'formalityMax', 'accentCount'];
+export const PATTERN_WHEN_KEYS = ['mode', 'patternCount', 'sameFamily', 'scaleDiff', 'sharedColor', 'pattern', 'otherPattern', 'category', 'bottomColor', 'bottomPattern', 'outerType', 'shoeType', 'outfitTones', 'formalityMin', 'formalityMax', 'accentCount'];
+export const PATTERN_FORMALITY_TOL = 2;    // C6-11: 패턴 변주는 코디 평균 포멀도가 패턴 포멀도 ±2 안일 때만 (3 → 2)
 export const PATTERN_EFFECTS = ['exclude', 'penalty', 'bonus', 'countAs'];
 // 한 톤 어두운 색(양말 bottomDarker 파생) — 없으면 같은 색
 export const DARKER_OF = { white: 'lightGrey', offWhite: 'lightGrey', cream: 'beige', oatmeal: 'beige', beige: 'khaki', khaki: 'brown', tan: 'brown', camel: 'brown', brown: 'chocolate', lightGrey: 'midGrey', greyMelange: 'midGrey', midGrey: 'charcoal', charcoal: 'black', navy: 'navy', indigo: 'navy', midDenim: 'indigo', lightDenim: 'midDenim', blackDenim: 'black', lightBlue: 'navy', skyBlue: 'navy', olive: 'forestGreen', sage: 'olive', burgundy: 'burgundy', rust: 'brown', mustard: 'brown', dustyPink: 'burgundy', lavender: 'navy', teal: 'navy', taupe: 'chocolate' };
 export const NEUTRAL_ACCESSORY_COLOR = 'charcoal';
+// C6-06: 가죽 소품(벨트·가죽 시계·가죽 가방)이 따라가는 '신발 가죽 계열'. 밖의 신발 색(흰 스니커즈·네이비 컬러 스니커즈)은 shoesFamily로 색을 내지 않는다
+export const LEATHER_FAMILY = ['brown', 'chocolate', 'tan', 'camel', 'black', 'burgundy'];
+export const LEATHER_FAMILY_COLOR = { burgundy: 'chocolate' }; // C6-14: 버건디 구두의 가죽 소품은 다크 브라운
+export const LEATHER_ACCESSORY_DEFAULT = 'black';              // 가죽 계열 밖 신발에서 상황 기본 가죽 소품 색
 
 // data-schema 4-14: adjust.when 허용 키
 export const ADJUST_WHEN_KEYS = ['season', 'trouserLength', 'topLength', 'outerLength', 'bottomFit', 'topFit', 'shoe', 'bottomMaterial', 'topMaterial', 'outerMaterial', 'bottomWeight', 'materialWeights', 'colorCountMin', 'sameColorTopBottom', 'topColor', 'bottomColor', 'shoesColor', 'outerColor', 'hasOuter'];
@@ -118,4 +140,8 @@ export const DEFAULTS = {
   outerCoatBySeason: { springFall: 'trench', winter: 'chesterfield', summer: 'overshirt' },
   outerDenimColors: ['indigo', 'lightDenim', 'midDenim'],
   outerDenim: 'denimJacket', // P3-05 ③·P3-23: 데님색 아우터는 여름(오버셔츠) 외엔 항상 데님 재킷 — '인디고 체스터필드' 방지
+  // Phase 6-B-3 (C6-04): 겨울 Deep+layering — 니트 상의 코디를 '셔츠(topShirtColors) + 셔츠 위 니트(원래 니트 색) + 코트'로 다시 쌓는다
+  layeringKnitTops: ['knitWool', 'knitCotton', 'knitCashmere'],
+  layeringShirt: 'oxfordShirt',
+  layeringKnitMid: 'knitOverShirt',
 };

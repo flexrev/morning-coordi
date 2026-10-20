@@ -33,10 +33,14 @@ export const FALLBACK = {
   // Phase 6-B (CX) — 스타일·상황·소품·패턴·레이어. S3 카드 줄에는 올리지 않는다(candidate.explain 불변, candidate.styleExplain·accessories에만)
   'explain.style.boost': '{style} 스타일 {delta}',
   'explain.style.tag': '{style} 느낌',
-  'explain.occasion.adj': '{occasion}에 {delta}',
-  'explain.occasion.window': '{occasion} 격식 창 밖 아이템 {n}개 ({delta})',
-  'explain.occasion.target': '{occasion}에 딱 맞는 격식 (+0.2)',
+  'explain.occasion.adj': '{occasion} 분위기와 잘 맞아요 ({delta})',
+  'explain.occasion.adjNeg': '{occasion} 분위기와는 조금 멀어요 ({delta})',
+  'explain.occasion.prefer': '{occasion}에 어울리는 아이템 {n}개 ({delta})',
+  'explain.occasion.window': '{occasion} 기준에서 벗어난 아이템 {n}개 ({delta})',
+  'explain.occasion.target': '전체 수준이 {occasion}에 딱 맞아요 (+0.2)',
   'explain.occasion.relaxed': '{occasion} 조건을 일부 완화했어요 ({stages})',
+  'explain.occasion.shortfall': '{occasion}에 맞는 조합이 더 없어요',
+  'explain.acc.occasion': '{occasion} 기본 소품',
   'explain.acc': '{accessory}: {reason}',
   'explain.pattern': '{reason} ({delta})',
   'explain.midLayer': '{mid|은는} {reason} ({score}/5)',
@@ -91,7 +95,8 @@ const SEV = { block: 0, warn: 1, info: 2 };
 const LAST = ['explain.ruleMissing'];
 const rank = (r) => { if (LAST.includes(r.key)) return 1000; const i = PRIORITY.indexOf(r.key); return i >= 0 ? i : 100 + SEV[r.severity] * 10; };
 // P3-19: 격차 4(info로 강등된 것)는 allClassic 카드 문구에서 숨김 — score.reasons에는 남아 S6가 쓴다
-const hidden = (r) => r.key === 'explain.formalityGap' && r.severity === 'info';
+// C6-21: 미드 쌍(top↔mid·mid↔outer)의 '규칙 없음(기본 3)'도 숨김 — 미드 색 쌍 규칙은 없는 게 정상
+const hidden = (r) => (r.key === 'explain.formalityGap' && r.severity === 'info') || (r.key === 'explain.ruleMissing' && (r.params?.aCategory === 'mid' || r.params?.bCategory === 'mid'));
 
 /** @returns {string[]}  한국어 문장 배열, 우선순위 정렬 (classic/universal → 톤·색상환 → 출처 → 경고·차단 → 상세) */
 export function explainScore(score, labels, outfit) {

@@ -17,7 +17,7 @@
   ],
   "score": 5,
   "tag": "classic",
-  "note": "봄가을 기본 3겹. 안쪽 얇고 매끈, 바깥 두껍고 질감",
+  "note": "봄가을 기본 3겹이에요. 안쪽은 얇고 매끈하게, 바깥은 두껍게",
   "sources": [
    "R2 6-4",
    "ESQLAY",
@@ -41,7 +41,7 @@
   ],
   "score": 5,
   "tag": "classic",
-  "note": "아이비 정석. 베스트는 재킷 밑단 안에",
+  "note": "아이비 정석이에요. 베스트는 재킷 밑단 안에 들어가게",
   "sources": [
    "OPUMOIVY",
    "STUIVY"
@@ -65,7 +65,7 @@
   ],
   "score": 4,
   "tag": "classic",
-  "note": "초봄·늦가을 미드. 팔 부피 없어 재킷 안에도",
+  "note": "초봄·늦가을에 좋은 겹옷이에요. 팔이 두꺼워지지 않아요",
   "sources": [
    "PTOMID",
    "OPUMOLAY"
@@ -88,7 +88,7 @@
   ],
   "score": 4,
   "tag": "classic",
-  "note": "오버셔츠를 코트 안 미드로. 밑단 < 코트",
+  "note": "코트 안에 오버셔츠를 겹쳐요. 밑단이 코트보다 짧게",
   "sources": [
    "OPUMOLAY",
    "IHLAY"
@@ -113,10 +113,75 @@
   ],
   "score": 5,
   "tag": "classic",
-  "note": "겨울 기본. 니트 기장이 코트 밖으로 안 나오게",
+  "note": "겨울 기본 3겹이에요. 니트 기장이 코트 밖으로 나오지 않게",
   "sources": [
    "R2 6-4",
    "KHLAY"
+  ],
+  "flags": []
+ },
+ {
+  "id": "mlWiKnitOverShirtNoCoat",
+  "season": "winter",
+  "base": [
+   "oxfordShirt",
+   "dressShirt"
+  ],
+  "mid": [
+   "knitOverShirt"
+  ],
+  "outer": "none",
+  "score": 4,
+  "tag": "classic",
+  "note": "셔츠 위에 니트만 겹친 실내용 2겹이에요",
+  "sources": [
+   "R2 6-4",
+   "KHLAY"
+  ],
+  "flags": []
+ },
+ {
+  "id": "mlWiKnitVestCoat",
+  "season": "winter",
+  "base": [
+   "oxfordShirt",
+   "dressShirt"
+  ],
+  "mid": [
+   "knitVest"
+  ],
+  "outer": [
+   "chesterfield",
+   "balmacaan",
+   "blazer"
+  ],
+  "score": 4,
+  "tag": "classic",
+  "note": "셔츠 위 니트 베스트, 코트 안에 들어가요",
+  "sources": [
+   "OPUMOIVY",
+   "STUIVY"
+  ],
+  "flags": []
+ },
+ {
+  "id": "mlWiCardiganUnderCoatKnit",
+  "season": "winter",
+  "base": [
+   "tee"
+  ],
+  "mid": [
+   "cardigan"
+  ],
+  "outer": [
+   "chesterfield"
+  ],
+  "score": 4,
+  "tag": "classic",
+  "note": "티 위에 가디건, 그 위에 코트예요",
+  "sources": [
+   "ESQLAY",
+   "ALLCARD"
   ],
   "flags": []
  },
@@ -137,7 +202,7 @@
   ],
   "score": 5,
   "tag": "classic",
-  "note": "가디건은 코트·패딩 안 레이어 기본",
+  "note": "가디건은 코트·패딩 안에 겹치는 기본이에요",
   "sources": [
    "ESQLAY",
    "ALLCARD"
@@ -158,7 +223,7 @@
   ],
   "score": 4,
   "tag": "classic",
-  "note": "로키 쓰리피스 효과. 가디건 톤은 코트보다 밝게",
+  "note": "쓰리피스 느낌이에요. 가디건은 코트보다 밝은 톤으로",
   "sources": [
    "OPUMOLAY",
    "PTOMID"
@@ -180,7 +245,7 @@
   ],
   "score": 3,
   "tag": "variation",
-  "note": "니트+퀼팅+코트는 부피 과다 → 변주",
+  "note": "니트+퀼팅 베스트+코트는 부피가 커요(변주)",
   "sources": [
    "PTOMID"
   ],

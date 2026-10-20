@@ -1,0 +1,535 @@
+# 2. byStyle (Deep, 옵션 없음) — 8 bases × 3 seasons × 1차 4스타일. 카드: id | caption | norm(그룹 스타일) | 전체 norm
+
+## bottom/indigo 봄가을 — groups: minimal(5) · amekaji(4) · bizcasual(3) · ivy(4)
+  [minimal]
+    g-1m3o0dq 차콜 코튼 니트[4] · 인디고 데님[4] · 블랙 더비[7] · 베이지 트렌치 코트[7] | norm=0.63 dom=minimal tags=minimal,bizcasual | final 4.92 | mini0.63 bizc0.55 ivy0.39 amek0.35
+    g-174egke 베이지 코튼 니트[4] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.60 dom=minimal tags=minimal,amekaji | final 5 | mini0.60 bizc0.39 ivy0.49 amek0.54
+    g-4glqct 오트밀 코튼 니트[4] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.60 dom=minimal tags=minimal,amekaji | final 5 | mini0.60 bizc0.35 ivy0.46 amek0.51
+    g-1ahthet 크림 코튼 니트[4] · 인디고 데님[4] · 블랙 더비[7] · 카멜 트렌치 코트[7] | norm=0.60 dom=minimal tags=minimal,bizcasual | final 4.92 | mini0.60 bizc0.49 ivy0.39 amek0.35
+    g-1txv5v2 블랙 코튼 니트[4] · 인디고 데님[4] · 브라운 척카 부츠[5] · 네이비 블레이저[7] | norm=0.52 dom=minimal tags=minimal,ivy | final 4.98 | mini0.52 bizc0.44 ivy0.47 amek0.43
+  [amekaji]
+    g-1qudia2 올리브 코튼 니트[4] · 인디고 데님[4] · 탄 척카 부츠[5] | norm=0.67 dom=amekaji tags=amekaji,workwear | final 5 | mini0.47 bizc0.30 ivy0.46 amek0.67
+    g-1dw1sgv 베이지 코튼 니트[4] · 인디고 데님[4] · 탄 척카 부츠[5] | norm=0.63 dom=amekaji tags=amekaji,workwear | final 5 | mini0.51 bizc0.37 ivy0.49 amek0.63
+    g-1lurkti 초콜릿 코튼 니트[4] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.54 dom=minimal tags=minimal,amekaji | final 5 | mini0.56 bizc0.35 ivy0.46 amek0.54
+    g-1uitzci 러스트 코튼 니트[4] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.54 dom=amekaji tags=amekaji,minimal | final 5 | mini0.53 bizc0.32 ivy0.42 amek0.54
+  [bizcasual]
+    g-15oc789 화이트 옥스포드 셔츠[6] · 인디고 데님[4] · 블랙 더비[7] · 베이지 트렌치 코트[7] | norm=0.55 dom=minimal tags=minimal,bizcasual | final 5 | mini0.57 bizc0.55 ivy0.44 amek0.37
+    g-1m3o0dq 차콜 코튼 니트[4] · 인디고 데님[4] · 블랙 더비[7] · 베이지 트렌치 코트[7] | norm=0.55 dom=minimal tags=minimal,bizcasual | final 4.92 | mini0.63 bizc0.55 ivy0.39 amek0.35
+    g-1xaq7gg 라이트 블루 옥스포드 셔츠[6] · 인디고 데님[4] · 브라운 척카 부츠[5] · 네이비 블레이저[7] | norm=0.49 dom=ivy tags=ivy,bizcasual | final 5 | mini0.44 bizc0.49 ivy0.60 amek0.43
+  [ivy]
+    g-1yzl1gd 라이트 블루 옥스포드 셔츠[6] · 인디고 데님[4] · 탄 척카 부츠[5] · 네이비 블레이저[7] | norm=0.61 dom=ivy tags=ivy,bizcasual | final 5 | mini0.44 bizc0.49 ivy0.61 amek0.43
+    g-15ara6y 화이트 옥스포드 셔츠[6] · 인디고 데님[4] · 탄 척카 부츠[5] · 네이비 블레이저[7] | norm=0.59 dom=ivy tags=ivy,bizcasual | final 5 | mini0.47 bizc0.49 ivy0.59 amek0.45
+    g-167q7f2 더스티 핑크 코튼 니트[4] · 인디고 데님[4] · 흰 스니커즈[3] · 베이지 트렌치 코트[7] | norm=0.48 dom=minimal tags=minimal,ivy | final 4.77 | mini0.56 bizc0.43 ivy0.48 amek0.33
+    g-1egk09r 포레스트 그린 코튼 니트[4] · 인디고 데님[4] · 흰 스니커즈[3] · 베이지 트렌치 코트[7] | norm=0.48 dom=minimal tags=minimal,ivy | final 4.77 | mini0.56 bizc0.43 ivy0.48 amek0.39
+  overlap: minimal∩amekaji=0 · minimal∩bizcasual=1 · minimal∩ivy=0 · amekaji∩bizcasual=0 · amekaji∩ivy=0 · bizcasual∩ivy=0
+
+## bottom/indigo 여름 — groups: minimal(4) · amekaji(5) · ivy(5)
+  [minimal]
+    g-2yjmqm 베이지 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.60 dom=minimal tags=minimal,amekaji | final 5 | mini0.60 bizc0.28 ivy0.46 amek0.58
+    g-pq685x 화이트 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.60 dom=minimal tags=minimal,amekaji | final 5 | mini0.60 bizc0.28 ivy0.46 amek0.54
+    g-12h2bka 차콜 티셔츠[2] · 인디고 데님[4] · 탄 페니 로퍼[6] | norm=0.58 dom=minimal tags=minimal,amekaji | final 4.81 | mini0.58 bizc0.37 ivy0.46 amek0.53
+    g-1qrpvmc 블랙 티셔츠[2] · 인디고 데님[4] · 탄 페니 로퍼[6] | norm=0.58 dom=minimal tags=minimal,amekaji | final 4.81 | mini0.58 bizc0.30 ivy0.39 amek0.53
+  [amekaji]
+    g-o6snna 올리브 티셔츠[2] · 인디고 데님[4] · 네이비 컬러 스니커즈[2] | norm=0.68 dom=amekaji tags=amekaji,workwear | final 4.62 | mini0.42 bizc0.12 ivy0.37 amek0.68
+    g-15zl5nn 베이지 티셔츠[2] · 인디고 데님[4] · 네이비 컬러 스니커즈[2] | norm=0.65 dom=amekaji tags=amekaji,workwear | final 4.62 | mini0.46 bizc0.19 ivy0.40 amek0.65
+    g-8d2pjc 브라운 티셔츠[2] · 인디고 데님[4] · 브라운 페니 로퍼[6] | norm=0.60 dom=amekaji tags=amekaji,workwear | final 4.81 | mini0.51 bizc0.30 ivy0.44 amek0.60
+    g-1fk8kq1 화이트 티셔츠[2] · 인디고 데님[4] · 브라운 페니 로퍼[6] | norm=0.56 dom=amekaji tags=amekaji,minimal | final 4.81 | mini0.54 bizc0.33 ivy0.47 amek0.56
+    g-15ietiq 그레이 멜란지 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.54 dom=minimal tags=minimal,amekaji | final 5 | mini0.56 bizc0.18 ivy0.42 amek0.54
+  [ivy]
+    g-suk7ir 라이트 블루 티셔츠[2] · 인디고 데님[4] · 탄 페니 로퍼[6] | norm=0.53 dom=amekaji tags=amekaji,ivy | final 4.81 | mini0.51 bizc0.33 ivy0.53 amek0.53
+    g-1irbucg 더스티 핑크 티셔츠[2] · 인디고 데님[4] · 탄 페니 로퍼[6] | norm=0.49 dom=amekaji tags=amekaji,ivy | final 4.51 | mini0.47 bizc0.26 ivy0.49 amek0.49
+    g-1pgs187 버건디 티셔츠[2] · 인디고 데님[4] · 탄 페니 로퍼[6] | norm=0.49 dom=amekaji tags=amekaji,ivy | final 3.61 | mini0.47 bizc0.30 ivy0.49 amek0.53
+    g-1958ipa 포레스트 그린 티셔츠[2] · 인디고 데님[4] · 버건디 페니 로퍼[6] | norm=0.49 dom=amekaji tags=amekaji,ivy | final 2.41 | mini0.46 bizc0.26 ivy0.49 amek0.53
+    g-10gf5fw 라이트 블루 티셔츠[2] · 인디고 데님[4] · 버건디 페니 로퍼[6] | norm=0.53 dom=ivy tags=ivy,minimal | final 2.71 | mini0.49 bizc0.33 ivy0.53 amek0.49
+  overlap: minimal∩amekaji=0 · minimal∩ivy=0 · amekaji∩ivy=0
+
+## bottom/indigo 겨울 — groups: minimal(4) · amekaji(5) · bizcasual(5) · ivy(3)
+  [minimal]
+    g-11krp3h 차콜 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] · 베이지 체스터필드 코트[8] | norm=0.67 dom=minimal tags=minimal | final 4.75 | mini0.67 bizc0.53 ivy0.45 amek0.33
+    g-4pwuer 화이트 울 니트[5] · 인디고 데님[4] · 블랙 더비[7] · 카멜 체스터필드 코트[8] | norm=0.63 dom=minimal tags=minimal,bizcasual | final 4.94 | mini0.63 bizc0.55 ivy0.39 amek0.32
+    g-4ljd1p 베이지 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.60 dom=minimal tags=minimal,amekaji | final 5 | mini0.60 bizc0.42 ivy0.49 amek0.54
+    g-l5kkk4 오트밀 울 니트[5] · 인디고 데님[4] · 블랙 더비[7] | norm=0.58 dom=minimal tags=minimal,workwear | final 4.7 | mini0.58 bizc0.44 ivy0.37 amek0.49
+  [amekaji]
+    g-1voofws 올리브 울 니트[5] · 인디고 데님[4] · 브라운 워크 부츠[4] | norm=0.70 dom=amekaji tags=amekaji,workwear | final 5 | mini0.40 bizc0.23 ivy0.33 amek0.70
+    g-15qatd3 러스트 울 니트[5] · 인디고 데님[4] · 초콜릿 워크 부츠[4] | norm=0.67 dom=amekaji tags=amekaji,workwear | final 5 | mini0.37 bizc0.23 ivy0.30 amek0.67
+    g-1u8uj91 초콜릿 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.54 dom=minimal tags=minimal,amekaji | final 5 | mini0.56 bizc0.39 ivy0.46 amek0.54
+    g-4ljd1p 베이지 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.54 dom=minimal tags=minimal,amekaji | final 5 | mini0.60 bizc0.42 ivy0.49 amek0.54
+    g-28jznk 오트밀 울 니트[5] · 인디고 데님[4] · 버건디 페니 로퍼[6] | norm=0.49 dom=minimal tags=minimal,amekaji | final 4.7 | mini0.53 bizc0.44 ivy0.49 amek0.49
+  [bizcasual]
+    g-1j89pr2 베이지 울 니트[5] · 인디고 데님[4] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | norm=0.57 dom=minimal tags=minimal,bizcasual | final 4.86 | mini0.63 bizc0.57 ivy0.44 amek0.35
+    g-1jicdot 차콜 울 니트[5] · 인디고 데님[4] · 블랙 더비[7] · 카멜 체스터필드 코트[8] | norm=0.57 dom=minimal tags=minimal,bizcasual | final 4.86 | mini0.65 bizc0.57 ivy0.36 amek0.29
+    g-99lmfy 네이비 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] · 카멜 체스터필드 코트[8] | norm=0.53 dom=minimal tags=minimal,bizcasual | final 4.75 | mini0.64 bizc0.53 ivy0.48 amek0.33
+    g-1661bho 초콜릿 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] · 네이비 체스터필드 코트[8] | norm=0.51 dom=minimal tags=minimal,bizcasual | final 4.75 | mini0.61 bizc0.51 ivy0.48 amek0.36
+    g-14lg186 화이트 울 니트[5] · 인디고 데님[4] · 탄 워크 부츠[4] · 네이비 체스터필드 코트[8] | norm=0.44 dom=minimal tags=minimal,bizcasual | final 4.82 | mini0.52 bizc0.44 ivy0.43 amek0.43
+  [ivy]
+    g-1yo2n29 네이비 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.53 dom=minimal tags=minimal,ivy | final 4.7 | mini0.60 bizc0.46 ivy0.53 amek0.51
+    g-xq684h 라이트 블루 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.53 dom=minimal tags=minimal,ivy | final 4.7 | mini0.56 bizc0.42 ivy0.53 amek0.47
+    g-ppmuqd 버건디 울 니트[5] · 인디고 데님[4] · 탄 워크 부츠[4] · 네이비 체스터필드 코트[8] | norm=0.43 dom=minimal tags=minimal,ivy | final 4.82 | mini0.47 bizc0.41 ivy0.43 amek0.40
+  overlap: minimal∩amekaji=1 · minimal∩bizcasual=0 · minimal∩ivy=0 · amekaji∩bizcasual=0 · amekaji∩ivy=0 · bizcasual∩ivy=0
+
+## bottom/beige 봄가을 — groups: minimal(5) · bizcasual(5) · ivy(5)
+  [minimal]
+    g-1g1h8ra 네이비 코튼 니트[4] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,bizcasual | final 4.96 | mini0.70 bizc0.67 ivy0.67 amek0.33
+    g-86t1y7 미드 그레이 코튼 니트[4] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,bizcasual | final 4.66 | mini0.70 bizc0.63 ivy0.60 amek0.30
+    g-3y2pc4 오트밀 코튼 니트[4] · 베이지 치노[5] · 블랙 더비[7] · 네이비 블레이저[7] | norm=0.63 dom=bizcasual tags=bizcasual,minimal | final 4.65 | mini0.63 bizc0.68 ivy0.57 amek0.24
+    g-1jbcn6l 브라운 코튼 니트[4] · 베이지 치노[5] · 블랙 더비[7] · 네이비 블레이저[7] | norm=0.60 dom=bizcasual tags=bizcasual,minimal | final 4.82 | mini0.60 bizc0.68 ivy0.57 amek0.27
+    g-hjjmn2 초콜릿 코튼 니트[4] · 베이지 치노[5] · 브라운 척카 부츠[5] | norm=0.58 dom=minimal tags=minimal,bizcasual | final 4.66 | mini0.58 bizc0.58 ivy0.58 amek0.46
+  [bizcasual]
+    g-16gyzg2 라이트 블루 옥스포드 셔츠[6] · 베이지 치노[5] · 블랙 더비[7] · 네이비 블레이저[7] | norm=0.73 dom=bizcasual tags=bizcasual,ivy | final 4.91 | mini0.57 bizc0.73 ivy0.65 amek0.21
+    g-1rwbnxr 네이비 코튼 니트[4] · 베이지 치노[5] · 버건디 페니 로퍼[6] · 네이비 블레이저[7] | norm=0.73 dom=bizcasual tags=bizcasual,ivy | final 4.91 | mini0.59 bizc0.73 ivy0.72 amek0.24
+    g-1o4ti9k 화이트 옥스포드 셔츠[6] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal,bizcasual | final 4.92 | mini0.67 bizc0.67 ivy0.67 amek0.33
+    g-86t1y7 미드 그레이 코튼 니트[4] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.63 dom=minimal tags=minimal,bizcasual | final 4.66 | mini0.70 bizc0.63 ivy0.60 amek0.30
+    g-1qaizke 브라운 코튼 니트[4] · 베이지 치노[5] · 버건디 페니 로퍼[6] | norm=0.65 dom=bizcasual tags=bizcasual,ivy | final 4.06 | mini0.60 bizc0.65 ivy0.63 amek0.35
+  [ivy]
+    g-1cgo6pt 라이트 블루 옥스포드 셔츠[6] · 베이지 치노[5] · 버건디 페니 로퍼[6] | norm=0.74 dom=ivy tags=ivy,bizcasual | final 4.92 | mini0.56 bizc0.72 ivy0.74 amek0.28
+    g-1rwbnxr 네이비 코튼 니트[4] · 베이지 치노[5] · 버건디 페니 로퍼[6] · 네이비 블레이저[7] | norm=0.72 dom=bizcasual tags=bizcasual,ivy | final 4.91 | mini0.59 bizc0.73 ivy0.72 amek0.24
+    g-67weu6 화이트 옥스포드 셔츠[6] · 베이지 치노[5] · 탄 척카 부츠[5] · 네이비 블레이저[7] | norm=0.69 dom=ivy tags=ivy,bizcasual | final 4.88 | mini0.55 bizc0.68 ivy0.69 amek0.32
+    g-1mtzj5e 버건디 코튼 니트[4] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.63 dom=minimal tags=minimal,ivy | final 4.66 | mini0.63 bizc0.60 ivy0.63 amek0.30
+    g-qlrf67 올리브 코튼 니트[4] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.60 dom=minimal tags=minimal,ivy | final 4.66 | mini0.67 bizc0.56 ivy0.60 amek0.40
+  overlap: minimal∩bizcasual=1 · minimal∩ivy=0 · bizcasual∩ivy=1
+
+## bottom/beige 여름 — groups: minimal(5) · amekaji(2) · bizcasual(5) · ivy(5)
+  [minimal]
+    g-17fadu9 화이트 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,ivy | final 4.92 | mini0.70 bizc0.53 ivy0.60 amek0.37
+    g-1qyxe6u 네이비 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,ivy | final 4.92 | mini0.70 bizc0.56 ivy0.63 amek0.37
+    g-k6pelf 미드 그레이 티셔츠[2] · 베이지 치노[5] · 브라운 페니 로퍼[6] | norm=0.65 dom=minimal tags=minimal,bizcasual | final 4.43 | mini0.65 bizc0.58 ivy0.58 amek0.35
+    g-13vuimv 라이트 블루 티셔츠[2] · 베이지 치노[5] · 탄 페니 로퍼[6] | norm=0.61 dom=ivy tags=ivy,minimal | final 4.73 | mini0.61 bizc0.58 ivy0.67 amek0.35
+    g-1is9u2z 그레이 멜란지 티셔츠[2] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] | norm=0.53 dom=minimal tags=minimal,ivy | final 4.85 | mini0.53 bizc0.33 ivy0.51 amek0.44
+  [amekaji]
+    g-1wefr76 올리브 티셔츠[2] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] | norm=0.51 dom=minimal tags=minimal,amekaji | final 4.85 | mini0.53 bizc0.37 ivy0.51 amek0.51
+    g-13pnzfv 러스트 티셔츠[2] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] | norm=0.47 dom=minimal tags=minimal,amekaji | final 3.35 | mini0.49 bizc0.37 ivy0.47 amek0.47
+  [bizcasual]
+    g-k6pelf 미드 그레이 티셔츠[2] · 베이지 치노[5] · 브라운 페니 로퍼[6] | norm=0.58 dom=minimal tags=minimal,bizcasual | final 4.43 | mini0.65 bizc0.58 ivy0.58 amek0.35
+    g-7wlt3f 네이비 티셔츠[2] · 베이지 치노[5] · 블랙 페니 로퍼[6] | norm=0.61 dom=minimal tags=minimal,bizcasual | final 4.13 | mini0.68 bizc0.61 ivy0.61 amek0.35
+    g-1s8ilv0 화이트 티셔츠[2] · 베이지 치노[5] · 블랙 페니 로퍼[6] | norm=0.58 dom=minimal tags=minimal,bizcasual | final 3.53 | mini0.68 bizc0.58 ivy0.58 amek0.35
+    g-1s5k5zh 브라운 티셔츠[2] · 베이지 치노[5] · 블랙 페니 로퍼[6] | norm=0.54 dom=minimal tags=minimal,bizcasual | final 3.23 | mini0.65 bizc0.54 ivy0.54 amek0.39
+    g-wjew67 초콜릿 티셔츠[2] · 베이지 치노[5] · 블랙 페니 로퍼[6] | norm=0.54 dom=minimal tags=minimal,bizcasual | final 2.63 | mini0.65 bizc0.54 ivy0.54 amek0.39
+  [ivy]
+    g-13vuimv 라이트 블루 티셔츠[2] · 베이지 치노[5] · 탄 페니 로퍼[6] | norm=0.67 dom=ivy tags=ivy,minimal | final 4.73 | mini0.61 bizc0.58 ivy0.67 amek0.35
+    g-7gbct3 네이비 티셔츠[2] · 베이지 치노[5] · 탄 페니 로퍼[6] | norm=0.67 dom=ivy tags=ivy,minimal | final 4.73 | mini0.65 bizc0.61 ivy0.67 amek0.39
+    g-17fadu9 화이트 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.60 dom=minimal tags=minimal,ivy | final 4.92 | mini0.70 bizc0.53 ivy0.60 amek0.37
+    g-1gz33hq 크림 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.60 dom=minimal tags=minimal,ivy | final 4.32 | mini0.70 bizc0.49 ivy0.60 amek0.37
+    g-1gbiaw2 미드 그레이 티셔츠[2] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] | norm=0.51 dom=minimal tags=minimal,ivy | final 4.85 | mini0.56 bizc0.44 ivy0.51 amek0.40
+  overlap: minimal∩amekaji=0 · minimal∩bizcasual=1 · minimal∩ivy=2 · amekaji∩bizcasual=0 · amekaji∩ivy=0 · bizcasual∩ivy=0
+
+## bottom/beige 겨울 — groups: minimal(5) · amekaji(5) · bizcasual(5) · ivy(5)
+  [minimal]
+    g-kr3f5i 네이비 울 니트[5] · 베이지 치노[5] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | norm=0.71 dom=bizcasual tags=bizcasual,minimal | final 4.89 | mini0.71 bizc0.79 ivy0.57 amek0.19
+    g-14i3d8i 화이트 울 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,bizcasual | final 4.96 | mini0.70 bizc0.67 ivy0.63 amek0.33
+    g-3saij9 미드 그레이 울 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] · 네이비 체스터필드 코트[8] | norm=0.72 dom=minimal tags=minimal,bizcasual | final 4.7 | mini0.72 bizc0.72 ivy0.59 amek0.17
+    g-hnfyrz 라이트 블루 울 니트[5] · 베이지 치노[5] · 블랙 더비[7] | norm=0.65 dom=bizcasual tags=bizcasual,minimal | final 4.36 | mini0.65 bizc0.72 ivy0.58 amek0.28
+    g-o538rl 올리브 울 니트[5] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] | norm=0.53 dom=ivy tags=ivy,minimal | final 4.88 | mini0.53 bizc0.51 ivy0.54 amek0.47
+  [amekaji]
+    g-1m4gi88 올리브 울 니트[5] · 베이지 치노[5] · 브라운 워크 부츠[4] | norm=0.53 dom=amekaji tags=amekaji,workwear | final 4.55 | mini0.51 bizc0.47 ivy0.47 amek0.53
+    g-1v0p9bl 러스트 울 니트[5] · 베이지 치노[5] · 브라운 워크 부츠[4] | norm=0.49 dom=amekaji tags=amekaji,workwear | final 4.25 | mini0.47 bizc0.47 ivy0.44 amek0.49
+    g-2g29hc 그레이 멜란지 맨투맨[2] · 베이지 치노[5] · 브라운 워크 부츠[4] | norm=0.46 dom=minimal tags=minimal,amekaji | final 4.51 | mini0.47 bizc0.30 ivy0.40 amek0.46
+    g-1m1cnhx 올리브 울 니트[5] · 베이지 치노[5] · 탄 워크 부츠[4] | norm=0.53 dom=amekaji tags=amekaji,workwear | final 4.25 | mini0.51 bizc0.47 ivy0.49 amek0.53
+    g-jr7ht8 러스트 울 니트[5] · 베이지 치노[5] · 탄 워크 부츠[4] | norm=0.49 dom=amekaji tags=amekaji,workwear | final 3.95 | mini0.47 bizc0.47 ivy0.46 amek0.49
+  [bizcasual]
+    g-kr3f5i 네이비 울 니트[5] · 베이지 치노[5] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | norm=0.79 dom=bizcasual tags=bizcasual,minimal | final 4.89 | mini0.71 bizc0.79 ivy0.57 amek0.19
+    g-1x33g8m 라이트 블루 울 니트[5] · 베이지 치노[5] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | norm=0.76 dom=bizcasual tags=bizcasual,minimal | final 4.89 | mini0.68 bizc0.76 ivy0.57 amek0.16
+    g-14i3d8i 화이트 울 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal,bizcasual | final 4.96 | mini0.70 bizc0.67 ivy0.63 amek0.33
+    g-d89g5o 미드 그레이 울 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal,bizcasual | final 4.66 | mini0.70 bizc0.67 ivy0.60 amek0.30
+    g-7jy1an 초콜릿 울 니트[5] · 베이지 치노[5] · 버건디 페니 로퍼[6] | norm=0.68 dom=bizcasual tags=bizcasual,ivy | final 4.06 | mini0.60 bizc0.68 ivy0.63 amek0.35
+  [ivy]
+    g-1iaoa3f 라이트 블루 울 니트[5] · 베이지 치노[5] · 버건디 페니 로퍼[6] | norm=0.70 dom=bizcasual tags=bizcasual,ivy | final 4.96 | mini0.60 bizc0.72 ivy0.70 amek0.28
+    g-1jmhta3 네이비 울 니트[5] · 베이지 치노[5] · 버건디 페니 로퍼[6] | norm=0.70 dom=bizcasual tags=bizcasual,ivy | final 4.96 | mini0.63 bizc0.75 ivy0.70 amek0.32
+    g-1s8aq9o 버건디 울 니트[5] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] | norm=0.58 dom=ivy tags=ivy,bizcasual | final 4.88 | mini0.49 bizc0.54 ivy0.58 amek0.37
+    g-zqpe2n 화이트 울 니트[5] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] | norm=0.58 dom=bizcasual tags=bizcasual,ivy | final 4.88 | mini0.56 bizc0.58 ivy0.58 amek0.40
+    g-1t1naja 더스티 핑크 울 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.63 dom=minimal tags=minimal,ivy | final 3.76 | mini0.63 bizc0.60 ivy0.63 amek0.26
+  overlap: minimal∩amekaji=0 · minimal∩bizcasual=2 · minimal∩ivy=0 · amekaji∩bizcasual=0 · amekaji∩ivy=0 · bizcasual∩ivy=0
+
+## bottom/charcoal 봄가을 — groups: minimal(5) · bizcasual(5) · ivy(3)
+  [minimal]
+    g-1xsvsic 네이비 코튼 니트[4] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 카멜 트렌치 코트[7] | norm=0.71 dom=bizcasual tags=bizcasual,minimal | final 4.83 | mini0.71 bizc0.79 ivy0.47 amek0.05
+    g-3rlwhi 블랙 코튼 니트[4] · 차콜 울 슬랙스[7] · 블랙 더비[7] | norm=0.75 dom=minimal tags=minimal,bizcasual | final 4.21 | mini0.75 bizc0.72 ivy0.37 amek0.07
+    g-c16pef 라이트 블루 옥스포드 셔츠[6] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] · 카멜 트렌치 코트[7] | norm=0.67 dom=bizcasual tags=bizcasual,minimal | final 4.65 | mini0.67 bizc0.75 ivy0.56 amek0.04
+    g-1133zlv 오트밀 코튼 니트[4] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] · 네이비 블레이저[7] | norm=0.67 dom=bizcasual tags=bizcasual,minimal | final 4.55 | mini0.67 bizc0.69 ivy0.59 amek0.09
+    g-6gfdjh 크림 코튼 니트[4] · 차콜 울 슬랙스[7] · 초콜릿 척카 부츠[5] | norm=0.65 dom=minimal tags=minimal,bizcasual | final 4.21 | mini0.65 bizc0.65 ivy0.54 amek0.21
+  [bizcasual]
+    g-mav1dp 라이트 블루 옥스포드 셔츠[6] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 카멜 트렌치 코트[7] | norm=0.79 dom=bizcasual tags=bizcasual,minimal | final 4.86 | mini0.65 bizc0.79 ivy0.49 amek0.03
+    g-1v5vc7z 화이트 옥스포드 셔츠[6] · 차콜 울 슬랙스[7] · 블랙 더비[7] | norm=0.79 dom=bizcasual tags=bizcasual,minimal | final 4.85 | mini0.68 bizc0.79 ivy0.51 amek0.11
+    g-10im4ou 네이비 코튼 니트[4] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] · 카멜 트렌치 코트[7] | norm=0.75 dom=bizcasual tags=bizcasual,minimal | final 4.53 | mini0.72 bizc0.75 ivy0.53 amek0.07
+    g-1133zlv 오트밀 코튼 니트[4] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] · 네이비 블레이저[7] | norm=0.69 dom=bizcasual tags=bizcasual,minimal | final 4.55 | mini0.67 bizc0.69 ivy0.59 amek0.09
+    g-1kah5uy 크림 코튼 니트[4] · 차콜 울 슬랙스[7] · 초콜릿 척카 부츠[5] · 네이비 블레이저[7] | norm=0.68 dom=bizcasual tags=bizcasual,minimal | final 4.11 | mini0.60 bizc0.68 ivy0.60 amek0.16
+  [ivy]
+    g-1ldthn9 라이트 블루 옥스포드 셔츠[6] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] · 네이비 블레이저[7] | norm=0.67 dom=bizcasual tags=bizcasual,ivy | final 4.17 | mini0.61 bizc0.75 ivy0.67 amek0.07
+    g-19zwzp8 화이트 옥스포드 셔츠[6] · 차콜 울 슬랙스[7] · 초콜릿 척카 부츠[5] · 네이비 블레이저[7] | norm=0.63 dom=bizcasual tags=bizcasual,ivy | final 4.34 | mini0.57 bizc0.73 ivy0.63 amek0.16
+    g-1fvw3b0 라이트 블루 옥스포드 셔츠[6] · 차콜 울 슬랙스[7] · 초콜릿 척카 부츠[5] | norm=0.61 dom=bizcasual tags=bizcasual,ivy | final 4.55 | mini0.58 bizc0.72 ivy0.61 amek0.18
+  overlap: minimal∩bizcasual=1 · minimal∩ivy=0 · bizcasual∩ivy=0
+
+## bottom/charcoal 여름 — groups: minimal(4) · bizcasual(4) · ivy(2)
+  [minimal]
+    g-y1yow1 화이트 티셔츠[2] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | norm=0.72 dom=minimal tags=minimal,bizcasual | final 4.69 | mini0.72 bizc0.65 ivy0.51 amek0.14
+    g-xx5l1v 화이트 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | norm=0.68 dom=bizcasual tags=bizcasual,minimal | final 4.88 | mini0.68 bizc0.75 ivy0.51 amek0.07
+    g-5k0rln 라이트 블루 티셔츠[2] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,bizcasual | final 4.02 | mini0.70 bizc0.60 ivy0.56 amek0.12
+    g-17xmvy4 블랙 피케 폴로[4] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] | norm=0.74 dom=minimal tags=minimal,bizcasual | final 3.42 | mini0.74 bizc0.67 ivy0.49 amek0.09
+  [bizcasual]
+    g-nio9vq 네이비 피케 폴로[4] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | norm=0.79 dom=bizcasual tags=bizcasual,minimal | final 4.58 | mini0.68 bizc0.79 ivy0.61 amek0.11
+    g-1jjsavo 라이트 블루 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | norm=0.75 dom=bizcasual tags=bizcasual,minimal | final 4.88 | mini0.65 bizc0.75 ivy0.54 amek0.04
+    g-1mhxkmm 화이트 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,bizcasual | final 4.02 | mini0.70 bizc0.70 ivy0.53 amek0.09
+    g-cazso3 크림 피케 폴로[4] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal,bizcasual | final 3.72 | mini0.70 bizc0.67 ivy0.60 amek0.12
+  [ivy]
+    g-rbkhc6 더스티 핑크 피케 폴로[4] · 차콜 울 슬랙스[7] · 초콜릿 페니 로퍼[6] | norm=0.61 dom=bizcasual tags=bizcasual,ivy | final 3.38 | mini0.58 bizc0.68 ivy0.61 amek0.07
+    g-1avkw29 버건디 피케 폴로[4] · 차콜 울 슬랙스[7] · 초콜릿 페니 로퍼[6] | norm=0.61 dom=bizcasual tags=bizcasual,ivy | final 3.08 | mini0.58 bizc0.72 ivy0.61 amek0.11
+  overlap: minimal∩bizcasual=0 · minimal∩ivy=0 · bizcasual∩ivy=0
+
+## bottom/charcoal 겨울 — groups: minimal(5) · bizcasual(5)
+  [minimal]
+    g-1pxsdh9 네이비 울 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 카멜 체스터필드 코트[8] | norm=0.73 dom=bizcasual tags=bizcasual,minimal | final 4.89 | mini0.73 bizc0.81 ivy0.47 amek0.03
+    g-6i19qc 오트밀 울 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | norm=0.73 dom=bizcasual tags=bizcasual,minimal | final 4.89 | mini0.73 bizc0.79 ivy0.47 amek0.03
+    g-1fkrlfz 화이트 울 니트[5] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] | norm=0.74 dom=minimal tags=minimal,bizcasual | final 4.09 | mini0.74 bizc0.74 ivy0.56 amek0.12
+    g-18am3mz 블랙 울 니트[5] · 차콜 울 슬랙스[7] · 초콜릿 첼시 부츠[6] | norm=0.72 dom=minimal tags=minimal,bizcasual | final 4.06 | mini0.72 bizc0.72 ivy0.37 amek0.11
+    g-1cnu7sg 크림 울 니트[5] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] | norm=0.74 dom=minimal tags=minimal,bizcasual | final 3.79 | mini0.74 bizc0.70 ivy0.56 amek0.12
+  [bizcasual]
+    g-1pxsdh9 네이비 울 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 카멜 체스터필드 코트[8] | norm=0.81 dom=bizcasual tags=bizcasual,minimal | final 4.89 | mini0.73 bizc0.81 ivy0.47 amek0.03
+    g-5d91a4 화이트 울 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | norm=0.81 dom=bizcasual tags=bizcasual,minimal | final 4.72 | mini0.73 bizc0.81 ivy0.49 amek0.03
+    g-lctq5o 라이트 블루 울 니트[5] · 차콜 울 슬랙스[7] · 초콜릿 첼시 부츠[6] | norm=0.75 dom=bizcasual tags=bizcasual,minimal | final 4.66 | mini0.65 bizc0.75 ivy0.51 amek0.11
+    g-1m6u14 버건디 울 니트[5] · 차콜 울 슬랙스[7] · 초콜릿 첼시 부츠[6] | norm=0.72 dom=bizcasual tags=bizcasual,minimal | final 4.36 | mini0.61 bizc0.72 ivy0.47 amek0.11
+    g-1cnu7sg 크림 울 니트[5] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,bizcasual | final 3.79 | mini0.74 bizc0.70 ivy0.56 amek0.12
+  overlap: minimal∩bizcasual=2
+
+## bottom/blackDenim 봄가을 — groups: minimal(5) · amekaji(2) · bizcasual(5)
+  [minimal]
+    g-1mvm956 차콜 코튼 니트[4] · 블랙 데님[5] · 블랙 더비[7] | norm=0.68 dom=minimal tags=minimal,bizcasual | final 4.62 | mini0.68 bizc0.58 ivy0.23 amek0.25
+    g-g0phck 블랙 코튼 니트[4] · 블랙 데님[5] · 블랙 더비[7] | norm=0.68 dom=minimal tags=minimal | final 4.62 | mini0.68 bizc0.51 ivy0.16 amek0.25
+    g-19ftub2 라이트 그레이 코튼 니트[4] · 블랙 데님[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal | final 4.62 | mini0.67 bizc0.46 ivy0.32 amek0.26
+    g-1wef3ow 미드 그레이 코튼 니트[4] · 블랙 데님[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal | final 4.32 | mini0.67 bizc0.49 ivy0.32 amek0.26
+    g-or80ys 화이트 옥스포드 셔츠[6] · 블랙 데님[5] · 미드 그레이 페니 로퍼[6] | norm=0.60 dom=minimal tags=minimal,bizcasual | final 4.32 | mini0.60 bizc0.60 ivy0.40 amek0.28
+  [amekaji]
+    g-r3fq8e 올리브 코튼 니트[4] · 블랙 데님[5] · 초콜릿 척카 부츠[5] | norm=0.46 dom=minimal tags=minimal,amekaji | final 2.82 | mini0.54 bizc0.40 ivy0.30 amek0.46
+    g-w1m7rw 올리브 코튼 니트[4] · 블랙 데님[5] · 브라운 척카 부츠[5] | norm=0.46 dom=minimal tags=minimal,amekaji | final 2.82 | mini0.54 bizc0.40 ivy0.30 amek0.46
+  [bizcasual]
+    g-1yx1geb 화이트 옥스포드 셔츠[6] · 블랙 데님[5] · 블랙 더비[7] · 차콜 블레이저[7] | norm=0.63 dom=bizcasual tags=bizcasual,minimal | final 4.65 | mini0.60 bizc0.63 ivy0.36 amek0.19
+    g-1e7sqes 차콜 코튼 니트[4] · 블랙 데님[5] · 블랙 더비[7] · 차콜 블레이저[7] | norm=0.63 dom=minimal tags=minimal,bizcasual | final 4.47 | mini0.65 bizc0.63 ivy0.31 amek0.16
+    g-1dneyjn 라이트 블루 옥스포드 셔츠[6] · 블랙 데님[5] · 미드 그레이 페니 로퍼[6] | norm=0.60 dom=bizcasual tags=bizcasual,minimal | final 3.72 | mini0.56 bizc0.60 ivy0.44 amek0.25
+    g-ogemru 네이비 코튼 니트[4] · 블랙 데님[5] · 미드 그레이 페니 로퍼[6] | norm=0.60 dom=minimal tags=minimal,bizcasual | final 3.72 | mini0.63 bizc0.60 ivy0.40 amek0.28
+    g-1diojf0 미드 그레이 코튼 니트[4] · 블랙 데님[5] · 브라운 척카 부츠[5] | norm=0.47 dom=minimal tags=minimal,bizcasual | final 3.42 | mini0.58 bizc0.47 ivy0.30 amek0.35
+  overlap: minimal∩amekaji=0 · minimal∩bizcasual=0 · amekaji∩bizcasual=0
+
+## bottom/blackDenim 여름 — groups: minimal(4)
+  [minimal]
+    g-9fe0zi 화이트 티셔츠[2] · 블랙 데님[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal | final 3.75 | mini0.67 bizc0.39 ivy0.32 amek0.33
+    g-9so23y 라이트 그레이 티셔츠[2] · 블랙 데님[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal | final 3.75 | mini0.67 bizc0.35 ivy0.28 amek0.30
+    g-1qiulml 차콜 티셔츠[2] · 블랙 데님[5] · 블랙 페니 로퍼[6] | norm=0.68 dom=minimal tags=minimal | final 3.56 | mini0.68 bizc0.47 ivy0.26 amek0.28
+    g-typr9f 블랙 티셔츠[2] · 블랙 데님[5] · 블랙 페니 로퍼[6] | norm=0.68 dom=minimal tags=minimal | final 3.37 | mini0.68 bizc0.40 ivy0.19 amek0.28
+  overlap: 
+
+## bottom/blackDenim 겨울 — groups: minimal(5) · amekaji(4) · bizcasual(5)
+  [minimal]
+    g-1lbs2h3 블랙 울 니트[5] · 블랙 데님[5] · 블랙 더비[7] · 차콜 체스터필드 코트[8] | norm=0.73 dom=minimal tags=minimal,bizcasual | final 4.53 | mini0.73 bizc0.63 ivy0.20 amek0.11
+    g-bfk2jr 차콜 울 니트[5] · 블랙 데님[5] · 블랙 더비[7] · 블랙 체스터필드 코트[8] | norm=0.73 dom=minimal tags=minimal,bizcasual | final 4.53 | mini0.73 bizc0.63 ivy0.20 amek0.11
+    g-16irqy5 화이트 울 니트[5] · 블랙 데님[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal | final 4.62 | mini0.67 bizc0.53 ivy0.35 amek0.30
+    g-pzzoo3 미드 그레이 울 니트[5] · 블랙 데님[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal | final 4.32 | mini0.67 bizc0.53 ivy0.32 amek0.26
+    g-bkmmxa 라이트 그레이 울 니트[5] · 블랙 데님[5] · 미드 그레이 페니 로퍼[6] | norm=0.63 dom=minimal tags=minimal,bizcasual | final 3.72 | mini0.63 bizc0.56 ivy0.33 amek0.25
+  [amekaji]
+    g-1hqisqd 올리브 울 니트[5] · 블랙 데님[5] · 초콜릿 워크 부츠[4] | norm=0.49 dom=workwear tags=workwear,amekaji | final 2.78 | mini0.47 bizc0.33 ivy0.19 amek0.49
+    g-e9ps16 카멜 울 니트[5] · 블랙 데님[5] · 초콜릿 워크 부츠[4] | norm=0.42 dom=minimal tags=minimal,amekaji | final 2.48 | mini0.51 bizc0.40 ivy0.19 amek0.42
+    g-1vtudnr 올리브 울 니트[5] · 블랙 데님[5] · 브라운 워크 부츠[4] | norm=0.49 dom=workwear tags=workwear,amekaji | final 2.78 | mini0.47 bizc0.33 ivy0.19 amek0.49
+    g-yes8o 카멜 울 니트[5] · 블랙 데님[5] · 브라운 워크 부츠[4] | norm=0.42 dom=minimal tags=minimal,amekaji | final 2.48 | mini0.51 bizc0.40 ivy0.19 amek0.42
+  [bizcasual]
+    g-gldcp 차콜 울 니트[5] · 블랙 데님[5] · 블랙 더비[7] · 차콜 체스터필드 코트[8] | norm=0.68 dom=minimal tags=minimal,bizcasual | final 4.53 | mini0.73 bizc0.68 ivy0.25 amek0.11
+    g-nzd78n 화이트 울 니트[5] · 블랙 데님[5] · 블랙 더비[7] · 차콜 체스터필드 코트[8] | norm=0.65 dom=minimal tags=minimal,bizcasual | final 4.7 | mini0.71 bizc0.65 ivy0.28 amek0.13
+    g-1rmt8wg 미드 그레이 울 니트[5] · 블랙 데님[5] · 미드 그레이 페니 로퍼[6] | norm=0.60 dom=minimal tags=minimal,bizcasual | final 4.02 | mini0.63 bizc0.60 ivy0.33 amek0.25
+    g-xec57d 네이비 울 니트[5] · 블랙 데님[5] · 미드 그레이 페니 로퍼[6] | norm=0.63 dom=minimal tags=minimal,bizcasual | final 3.72 | mini0.63 bizc0.63 ivy0.40 amek0.28
+    g-j61yyy 라이트 블루 울 니트[5] · 블랙 데님[5] · 흰 스니커즈[3] | norm=0.53 dom=minimal tags=minimal,bizcasual | final 4.02 | mini0.63 bizc0.53 ivy0.39 amek0.26
+  overlap: minimal∩amekaji=0 · minimal∩bizcasual=0 · amekaji∩bizcasual=0
+
+## bottom/olive 봄가을 — groups: minimal(5) · amekaji(4) · bizcasual(3) · ivy(4)
+  [minimal]
+    g-13fwhhn 오프화이트 코튼 니트[4] · 올리브 치노[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal,ivy | final 4.96 | mini0.67 bizc0.53 ivy0.60 amek0.37
+    g-1i1r8q7 베이지 코튼 니트[4] · 올리브 치노[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal,ivy | final 4.96 | mini0.67 bizc0.56 ivy0.60 amek0.40
+    g-279frd 네이비 코튼 니트[4] · 올리브 치노[5] · 블랙 더비[7] | norm=0.65 dom=minimal tags=minimal,bizcasual | final 4.66 | mini0.65 bizc0.65 ivy0.54 amek0.35
+    g-zrj8nl 오트밀 코튼 니트[4] · 올리브 치노[5] · 블랙 더비[7] · 네이비 블레이저[7] | norm=0.60 dom=bizcasual tags=bizcasual,minimal | final 4.91 | mini0.60 bizc0.63 ivy0.55 amek0.27
+    g-1hfa4fp 크림 코튼 니트[4] · 올리브 치노[5] · 초콜릿 척카 부츠[5] | norm=0.58 dom=minimal tags=minimal,ivy | final 4.66 | mini0.58 bizc0.51 ivy0.58 amek0.46
+  [amekaji]
+    g-1k4b0bx 베이지 코튼 니트[4] · 올리브 치노[5] · 브라운 척카 부츠[5] · 인디고 데님 재킷[4] | norm=0.59 dom=amekaji tags=amekaji,workwear | final 4.93 | mini0.47 bizc0.33 ivy0.47 amek0.59
+    g-1k58muf 탄 코튼 니트[4] · 올리브 치노[5] · 탄 척카 부츠[5] · 인디고 데님 재킷[4] | norm=0.59 dom=amekaji tags=amekaji,workwear | final 4.93 | mini0.44 bizc0.31 ivy0.48 amek0.59
+    g-7ywlnt 초콜릿 코튼 니트[4] · 올리브 치노[5] · 흰 스니커즈[3] · 인디고 데님 재킷[4] | norm=0.52 dom=amekaji tags=amekaji,minimal | final 4.93 | mini0.51 bizc0.32 ivy0.45 amek0.52
+    g-ucq2ez 브라운 코튼 니트[4] · 올리브 치노[5] · 흰 스니커즈[3] · 인디고 데님 재킷[4] | norm=0.52 dom=amekaji tags=amekaji,minimal | final 4.93 | mini0.51 bizc0.32 ivy0.45 amek0.52
+  [bizcasual]
+    g-18knbd3 라이트 블루 옥스포드 셔츠[6] · 올리브 치노[5] · 블랙 더비[7] · 네이비 블레이저[7] | norm=0.68 dom=bizcasual tags=bizcasual,ivy | final 4.91 | mini0.55 bizc0.68 ivy0.63 amek0.24
+    g-1v220ku 네이비 코튼 니트[4] · 올리브 치노[5] · 블랙 더비[7] · 네이비 블레이저[7] | norm=0.68 dom=bizcasual tags=bizcasual,minimal | final 4.91 | mini0.60 bizc0.68 ivy0.60 amek0.27
+    g-1ynk5dv 화이트 옥스포드 셔츠[6] · 올리브 치노[5] · 초콜릿 척카 부츠[5] | norm=0.58 dom=ivy tags=ivy,bizcasual | final 4.92 | mini0.54 bizc0.58 ivy0.61 amek0.46
+  [ivy]
+    g-5rlsss 라이트 블루 옥스포드 셔츠[6] · 올리브 치노[5] · 탄 척카 부츠[5] · 네이비 블레이저[7] | norm=0.69 dom=ivy tags=ivy,bizcasual | final 4.88 | mini0.49 bizc0.63 ivy0.69 amek0.32
+    g-cqlvnv 화이트 옥스포드 셔츠[6] · 올리브 치노[5] · 탄 척카 부츠[5] · 네이비 블레이저[7] | norm=0.67 dom=ivy tags=ivy,bizcasual | final 4.88 | mini0.52 bizc0.63 ivy0.67 amek0.35
+    g-ka4lz7 네이비 코튼 니트[4] · 올리브 치노[5] · 흰 스니커즈[3] | norm=0.63 dom=minimal tags=minimal,ivy | final 4.96 | mini0.67 bizc0.60 ivy0.63 amek0.37
+    g-13fwhhn 오프화이트 코튼 니트[4] · 올리브 치노[5] · 흰 스니커즈[3] | norm=0.60 dom=minimal tags=minimal,ivy | final 4.96 | mini0.67 bizc0.53 ivy0.60 amek0.37
+  overlap: minimal∩amekaji=0 · minimal∩bizcasual=0 · minimal∩ivy=1 · amekaji∩bizcasual=0 · amekaji∩ivy=0 · bizcasual∩ivy=0
+
+## bottom/olive 여름 — groups: minimal(4) · ivy(4)
+  [minimal]
+    g-1yymtgk 화이트 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal,ivy | final 4.92 | mini0.67 bizc0.46 ivy0.56 amek0.40
+    g-5rjt37 네이비 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal,ivy | final 4.92 | mini0.67 bizc0.49 ivy0.60 amek0.40
+    g-10x9k1f 베이지 티셔츠[2] · 올리브 치노[5] · 브라운 페니 로퍼[6] | norm=0.61 dom=minimal tags=minimal,ivy | final 4.73 | mini0.61 bizc0.51 ivy0.58 amek0.46
+    g-ofqajb 오프화이트 티셔츠[2] · 올리브 치노[5] · 브라운 페니 로퍼[6] | norm=0.61 dom=minimal tags=minimal,ivy | final 4.73 | mini0.61 bizc0.47 ivy0.58 amek0.42
+  [ivy]
+    g-1fq5ybm 라이트 블루 티셔츠[2] · 올리브 치노[5] · 탄 페니 로퍼[6] | norm=0.63 dom=ivy tags=ivy,minimal | final 4.73 | mini0.58 bizc0.51 ivy0.63 amek0.39
+    g-1lse1r6 네이비 티셔츠[2] · 올리브 치노[5] · 탄 페니 로퍼[6] | norm=0.63 dom=ivy tags=ivy,minimal | final 4.73 | mini0.61 bizc0.54 ivy0.63 amek0.42
+    g-1yymtgk 화이트 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | norm=0.56 dom=minimal tags=minimal,ivy | final 4.92 | mini0.67 bizc0.46 ivy0.56 amek0.40
+    g-8hdw33 베이지 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | norm=0.56 dom=minimal tags=minimal,ivy | final 4.92 | mini0.67 bizc0.46 ivy0.56 amek0.44
+  overlap: minimal∩ivy=1
+
+## bottom/olive 겨울 — groups: minimal(5) · amekaji(2) · bizcasual(4) · ivy(4)
+  [minimal]
+    g-1i3hqrn 네이비 울 니트[5] · 올리브 치노[5] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | norm=0.68 dom=bizcasual tags=bizcasual,minimal | final 4.89 | mini0.68 bizc0.73 ivy0.55 amek0.21
+    g-cym93j 베이지 울 니트[5] · 올리브 치노[5] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | norm=0.68 dom=bizcasual tags=bizcasual,minimal | final 4.89 | mini0.68 bizc0.71 ivy0.52 amek0.24
+    g-5d5k7s 오프화이트 울 니트[5] · 올리브 치노[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal,ivy | final 4.96 | mini0.67 bizc0.56 ivy0.60 amek0.37
+    g-z015kn 화이트 울 니트[5] · 올리브 치노[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal,bizcasual | final 4.96 | mini0.67 bizc0.60 ivy0.60 amek0.37
+    g-1a6j1xq 크림 울 니트[5] · 올리브 치노[5] · 초콜릿 워크 부츠[4] | norm=0.51 dom=minimal tags=minimal,amekaji | final 4.55 | mini0.51 bizc0.44 ivy0.47 amek0.49
+  [amekaji]
+    g-15wsmqk 탄 울 니트[5] · 올리브 치노[5] · 탄 워크 부츠[4] · 인디고 데님 재킷[4] | norm=0.61 dom=amekaji tags=amekaji,workwear | final 4.83 | mini0.39 bizc0.25 ivy0.40 amek0.61
+    g-5z9i0s 브라운 울 니트[5] · 올리브 치노[5] · 브라운 워크 부츠[4] · 인디고 데님 재킷[4] | norm=0.61 dom=amekaji tags=amekaji,workwear | final 4.83 | mini0.39 bizc0.25 ivy0.36 amek0.61
+  [bizcasual]
+    g-1i3hqrn 네이비 울 니트[5] · 올리브 치노[5] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | norm=0.73 dom=bizcasual tags=bizcasual,minimal | final 4.89 | mini0.68 bizc0.73 ivy0.55 amek0.21
+    g-1af8vab 라이트 블루 울 니트[5] · 올리브 치노[5] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | norm=0.71 dom=bizcasual tags=bizcasual,minimal | final 4.89 | mini0.65 bizc0.71 ivy0.55 amek0.19
+    g-10ktu4c 베이지 울 니트[5] · 올리브 치노[5] · 흰 스니커즈[3] | norm=0.60 dom=minimal tags=minimal,bizcasual | final 4.96 | mini0.67 bizc0.60 ivy0.60 amek0.40
+    g-z015kn 화이트 울 니트[5] · 올리브 치노[5] · 흰 스니커즈[3] | norm=0.60 dom=minimal tags=minimal,bizcasual | final 4.96 | mini0.67 bizc0.60 ivy0.60 amek0.37
+  [ivy]
+    g-1954he8 라이트 블루 울 니트[5] · 올리브 치노[5] · 흰 스니커즈[3] | norm=0.63 dom=minimal tags=minimal,ivy | final 4.96 | mini0.63 bizc0.60 ivy0.63 amek0.33
+    g-5d5k7s 오프화이트 울 니트[5] · 올리브 치노[5] · 흰 스니커즈[3] | norm=0.60 dom=minimal tags=minimal,ivy | final 4.96 | mini0.67 bizc0.56 ivy0.60 amek0.37
+    g-1lxcel5 네이비 울 니트[5] · 올리브 치노[5] · 탄 워크 부츠[4] | norm=0.53 dom=ivy tags=ivy,minimal | final 4.85 | mini0.51 bizc0.51 ivy0.53 amek0.49
+    g-142f50y 버건디 울 니트[5] · 올리브 치노[5] · 초콜릿 워크 부츠[4] | norm=0.47 dom=ivy tags=ivy,amekaji | final 4.55 | mini0.44 bizc0.44 ivy0.47 amek0.46
+  overlap: minimal∩amekaji=0 · minimal∩bizcasual=2 · minimal∩ivy=1 · amekaji∩bizcasual=0 · amekaji∩ivy=0 · bizcasual∩ivy=0
+
+## top/white 봄가을 — groups: minimal(5) · amekaji(4) · bizcasual(5) · ivy(5)
+  [minimal]
+    g-1v5vc7z 화이트 옥스포드 셔츠[6] · 차콜 울 슬랙스[7] · 블랙 더비[7] | norm=0.68 dom=bizcasual tags=bizcasual,minimal | final 4.85 | mini0.68 bizc0.79 ivy0.51 amek0.11
+    g-ihy0x 화이트 옥스포드 셔츠[6] · 블랙 울 슬랙스[7] · 블랙 더비[7] | norm=0.68 dom=bizcasual tags=bizcasual,minimal | final 4.85 | mini0.68 bizc0.72 ivy0.44 amek0.11
+    g-1o4ti9k 화이트 옥스포드 셔츠[6] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal,bizcasual | final 4.92 | mini0.67 bizc0.67 ivy0.67 amek0.33
+    g-1kstm9d 화이트 옥스포드 셔츠[6] · 네이비 치노[5] · 흰 스니커즈[3] · 카멜 트렌치 코트[7] | norm=0.67 dom=bizcasual tags=bizcasual,minimal | final 4.72 | mini0.67 bizc0.72 ivy0.61 amek0.20
+    g-7z0159 화이트 옥스포드 셔츠[6] · 네이비 치노[5] · 브라운 척카 부츠[5] · 카멜 트렌치 코트[7] | norm=0.60 dom=bizcasual tags=bizcasual,minimal | final 4.88 | mini0.60 bizc0.71 ivy0.60 amek0.27
+  [amekaji]
+    g-1gw6m8t 화이트 옥스포드 셔츠[6] · 인디고 데님[4] · 탄 척카 부츠[5] | norm=0.60 dom=amekaji tags=amekaji,workwear | final 5 | mini0.47 bizc0.40 ivy0.53 amek0.60
+    g-1xjx7cw 화이트 옥스포드 셔츠[6] · 인디고 데님[4] · 브라운 척카 부츠[5] | norm=0.60 dom=amekaji tags=amekaji,workwear | final 5 | mini0.47 bizc0.40 ivy0.51 amek0.60
+    g-5tsug1 화이트 옥스포드 셔츠[6] · 인디고 데님[4] · 네이비 컬러 스니커즈[2] | norm=0.58 dom=amekaji tags=amekaji,ivy | final 4.13 | mini0.42 bizc0.33 ivy0.47 amek0.58
+    g-17t4xnb 화이트 옥스포드 셔츠[6] · 카키 치노[5] · 네이비 컬러 스니커즈[2] · 인디고 데님 재킷[4] | norm=0.52 dom=amekaji tags=amekaji,ivy | final 4.63 | mini0.40 bizc0.33 ivy0.49 amek0.52
+  [bizcasual]
+    g-1v5vc7z 화이트 옥스포드 셔츠[6] · 차콜 울 슬랙스[7] · 블랙 더비[7] | norm=0.79 dom=bizcasual tags=bizcasual,minimal | final 4.85 | mini0.68 bizc0.79 ivy0.51 amek0.11
+    g-1wuxjso 화이트 옥스포드 셔츠[6] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 네이비 블레이저[7] | norm=0.79 dom=bizcasual tags=bizcasual | final 4.7 | mini0.63 bizc0.79 ivy0.57 amek0.08
+    g-15t9phr 화이트 옥스포드 셔츠[6] · 네이비 치노[5] · 버건디 페니 로퍼[6] · 카멜 트렌치 코트[7] | norm=0.76 dom=bizcasual tags=bizcasual,ivy | final 4.76 | mini0.61 bizc0.76 ivy0.64 amek0.19
+    g-1gytccl 화이트 옥스포드 셔츠[6] · 네이비 치노[5] · 버건디 페니 로퍼[6] · 베이지 트렌치 코트[7] | norm=0.76 dom=bizcasual tags=bizcasual,ivy | final 4.76 | mini0.61 bizc0.76 ivy0.67 amek0.21
+    g-1glwjuz 화이트 옥스포드 셔츠[6] · 네이비 치노[5] · 탄 척카 부츠[5] · 차콜 블레이저[7] | norm=0.71 dom=bizcasual tags=bizcasual,ivy | final 4.88 | mini0.57 bizc0.71 ivy0.67 amek0.27
+  [ivy]
+    g-1qbmsml 화이트 옥스포드 셔츠[6] · 카키 치노[5] · 버건디 페니 로퍼[6] · 네이비 블레이저[7] | norm=0.72 dom=ivy tags=ivy,bizcasual | final 4.74 | mini0.53 bizc0.71 ivy0.72 amek0.24
+    g-zzubr5 화이트 옥스포드 셔츠[6] · 베이지 치노[5] · 버건디 페니 로퍼[6] · 네이비 블레이저[7] | norm=0.72 dom=bizcasual tags=bizcasual,ivy | final 4.74 | mini0.56 bizc0.73 ivy0.72 amek0.24
+    g-1o5bg2c 화이트 옥스포드 셔츠[6] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=bizcasual tags=bizcasual,ivy | final 4.92 | mini0.67 bizc0.70 ivy0.70 amek0.30
+    g-s4ikc5 화이트 옥스포드 셔츠[6] · 네이비 치노[5] · 탄 척카 부츠[5] | norm=0.70 dom=ivy tags=ivy,bizcasual | final 4.92 | mini0.58 bizc0.68 ivy0.70 amek0.39
+    g-1nmhboo 화이트 옥스포드 셔츠[6] · 네이비 치노[5] · 브라운 척카 부츠[5] | norm=0.68 dom=bizcasual tags=bizcasual,ivy | final 4.92 | mini0.58 bizc0.68 ivy0.68 amek0.39
+  overlap: minimal∩amekaji=0 · minimal∩bizcasual=1 · minimal∩ivy=0 · amekaji∩bizcasual=0 · amekaji∩ivy=0 · bizcasual∩ivy=0
+
+## top/white 여름 — groups: minimal(5) · amekaji(5) · bizcasual(4) · ivy(5)
+  [minimal]
+    g-17fadu9 화이트 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,ivy | final 4.92 | mini0.70 bizc0.53 ivy0.60 amek0.37
+    g-8444zx 화이트 린넨 셔츠[5] · 블랙 울 슬랙스[7] · 블랙 페니 로퍼[6] | norm=0.68 dom=minimal tags=minimal,bizcasual | final 4.88 | mini0.68 bizc0.68 ivy0.44 amek0.07
+    g-jfi6kd 화이트 티셔츠[2] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,ivy | final 4.92 | mini0.70 bizc0.56 ivy0.63 amek0.33
+    g-l0xbof 화이트 티셔츠[2] · 블랙 울 슬랙스[7] · 블랙 페니 로퍼[6] | norm=0.72 dom=minimal tags=minimal,bizcasual | final 4.69 | mini0.72 bizc0.58 ivy0.44 amek0.14
+    g-7zoj3g 화이트 티셔츠[2] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] | norm=0.56 dom=minimal tags=minimal,ivy | final 4.85 | mini0.56 bizc0.44 ivy0.54 amek0.44
+  [amekaji]
+    g-1rb082w 화이트 티셔츠[2] · 인디고 데님[4] · 네이비 컬러 스니커즈[2] | norm=0.61 dom=amekaji tags=amekaji,workwear | final 4.32 | mini0.46 bizc0.19 ivy0.40 amek0.61
+    g-1fk8kq1 화이트 티셔츠[2] · 인디고 데님[4] · 브라운 페니 로퍼[6] | norm=0.56 dom=amekaji tags=amekaji,minimal | final 4.81 | mini0.54 bizc0.33 ivy0.47 amek0.56
+    g-hqp663 화이트 티셔츠[2] · 인디고 데님[4] · 초콜릿 페니 로퍼[6] | norm=0.56 dom=amekaji tags=amekaji,minimal | final 4.81 | mini0.54 bizc0.33 ivy0.47 amek0.56
+    g-pq685x 화이트 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.54 dom=minimal tags=minimal,amekaji | final 5 | mini0.60 bizc0.28 ivy0.46 amek0.54
+    g-okujpt 화이트 티셔츠[2] · 라이트워시 데님[3] · 네이비 컬러 스니커즈[2] | norm=0.54 dom=amekaji tags=amekaji,cityboy | final 4.36 | mini0.39 bizc0.05 ivy0.33 amek0.54
+  [bizcasual]
+    g-xx5l1v 화이트 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | norm=0.75 dom=bizcasual tags=bizcasual,minimal | final 4.88 | mini0.68 bizc0.75 ivy0.51 amek0.07
+    g-y1yow1 화이트 티셔츠[2] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | norm=0.65 dom=minimal tags=minimal,bizcasual | final 4.69 | mini0.72 bizc0.65 ivy0.51 amek0.14
+    g-1d04ori 화이트 린넨 셔츠[5] · 미드 그레이 울 슬랙스[7] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal,bizcasual | final 4.32 | mini0.67 bizc0.67 ivy0.53 amek0.09
+    g-1mhxkmm 화이트 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,bizcasual | final 4.02 | mini0.70 bizc0.70 ivy0.53 amek0.09
+  [ivy]
+    g-6vkroc 화이트 티셔츠[2] · 네이비 치노[5] · 탄 페니 로퍼[6] | norm=0.67 dom=ivy tags=ivy,minimal | final 4.73 | mini0.65 bizc0.61 ivy0.67 amek0.35
+    g-104scnn 화이트 티셔츠[2] · 네이비 치노[5] · 초콜릿 페니 로퍼[6] | norm=0.65 dom=minimal tags=minimal,ivy | final 4.73 | mini0.65 bizc0.61 ivy0.65 amek0.35
+    g-18uuybh 화이트 티셔츠[2] · 카키 치노[5] · 흰 스니커즈[3] | norm=0.60 dom=minimal tags=minimal,ivy | final 4.92 | mini0.67 bizc0.49 ivy0.60 amek0.37
+    g-1yymtgk 화이트 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | norm=0.56 dom=minimal tags=minimal,ivy | final 4.92 | mini0.67 bizc0.46 ivy0.56 amek0.40
+    g-p8cosg 화이트 티셔츠[2] · 카키 치노[5] · 네이비 컬러 스니커즈[2] | norm=0.54 dom=ivy tags=ivy,minimal | final 4.85 | mini0.53 bizc0.40 ivy0.54 amek0.44
+  overlap: minimal∩amekaji=0 · minimal∩bizcasual=0 · minimal∩ivy=0 · amekaji∩bizcasual=0 · amekaji∩ivy=0 · bizcasual∩ivy=0
+
+## top/white 겨울 — groups: minimal(5) · amekaji(5) · bizcasual(5) · ivy(5)
+  [minimal]
+    g-1api1az 화이트 울 니트[5] · 블랙 울 슬랙스[7] · 블랙 더비[7] · 차콜 체스터필드 코트[8] | norm=0.76 dom=minimal tags=minimal,bizcasual | final 4.72 | mini0.76 bizc0.76 ivy0.39 amek0.00
+    g-epukbp 화이트 울 니트[5] · 블랙 울 슬랙스[7] · 블랙 더비[7] · 블랙 체스터필드 코트[8] | norm=0.76 dom=minimal tags=minimal,bizcasual | final 4.72 | mini0.76 bizc0.71 ivy0.33 amek0.00
+    g-14i3d8i 화이트 울 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,bizcasual | final 4.96 | mini0.70 bizc0.67 ivy0.63 amek0.33
+    g-2g1dpq 화이트 울 니트[5] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,bizcasual | final 4.96 | mini0.70 bizc0.70 ivy0.67 amek0.30
+    g-kshy09 화이트 울 니트[5] · 미드 그레이 울 슬랙스[7] · 브라운 첼시 부츠[6] | norm=0.65 dom=bizcasual tags=bizcasual,minimal | final 4.96 | mini0.65 bizc0.72 ivy0.47 amek0.14
+  [amekaji]
+    g-1dm5o0i 화이트 울 니트[5] · 인디고 데님[4] · 브라운 워크 부츠[4] | norm=0.63 dom=amekaji tags=amekaji,workwear | final 5 | mini0.44 bizc0.30 ivy0.37 amek0.63
+    g-1v39c00 화이트 울 니트[5] · 인디고 데님[4] · 초콜릿 워크 부츠[4] | norm=0.63 dom=amekaji tags=amekaji,workwear | final 5 | mini0.44 bizc0.30 ivy0.37 amek0.63
+    g-wmay7v 화이트 울 니트[5] · 인디고 데님[4] · 네이비 컬러 스니커즈[2] | norm=0.58 dom=amekaji tags=amekaji,workwear | final 4.32 | mini0.46 bizc0.33 ivy0.44 amek0.58
+    g-7ctkp2 화이트 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.51 dom=minimal tags=minimal,amekaji | final 5 | mini0.60 bizc0.42 ivy0.49 amek0.51
+    g-1umxv2l 화이트 울 니트[5] · 카키 치노[5] · 네이비 컬러 스니커즈[2] · 인디고 데님 재킷[4] | norm=0.52 dom=amekaji tags=amekaji,ivy | final 4.84 | mini0.43 bizc0.33 ivy0.47 amek0.52
+  [bizcasual]
+    g-5d91a4 화이트 울 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | norm=0.81 dom=bizcasual tags=bizcasual,minimal | final 4.72 | mini0.73 bizc0.81 ivy0.49 amek0.03
+    g-9sxah1 화이트 울 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] | norm=0.79 dom=bizcasual tags=bizcasual,minimal | final 4.88 | mini0.72 bizc0.79 ivy0.47 amek0.11
+    g-hffl8w 화이트 울 니트[5] · 미드 그레이 울 슬랙스[7] · 브라운 첼시 부츠[6] · 네이비 체스터필드 코트[8] | norm=0.76 dom=bizcasual tags=bizcasual,minimal | final 4.79 | mini0.68 bizc0.76 ivy0.49 amek0.05
+    g-kshy09 화이트 울 니트[5] · 미드 그레이 울 슬랙스[7] · 브라운 첼시 부츠[6] | norm=0.72 dom=bizcasual tags=bizcasual,minimal | final 4.96 | mini0.65 bizc0.72 ivy0.47 amek0.14
+    g-2g1dpq 화이트 울 니트[5] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,bizcasual | final 4.96 | mini0.70 bizc0.70 ivy0.67 amek0.30
+  [ivy]
+    g-v64pow 화이트 울 니트[5] · 네이비 치노[5] · 버건디 페니 로퍼[6] | norm=0.70 dom=bizcasual tags=bizcasual,ivy | final 4.36 | mini0.63 bizc0.75 ivy0.70 amek0.28
+    g-1crcplc 화이트 울 니트[5] · 카키 치노[5] · 버건디 페니 로퍼[6] | norm=0.67 dom=bizcasual tags=bizcasual,ivy | final 4.36 | mini0.60 bizc0.68 ivy0.67 amek0.32
+    g-15u7ekz 화이트 울 니트[5] · 카키 치노[5] · 네이비 컬러 스니커즈[2] | norm=0.58 dom=ivy tags=ivy,bizcasual | final 4.88 | mini0.53 bizc0.54 ivy0.58 amek0.40
+    g-zqpe2n 화이트 울 니트[5] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] | norm=0.58 dom=bizcasual tags=bizcasual,ivy | final 4.88 | mini0.56 bizc0.58 ivy0.58 amek0.40
+    g-16a1e87 화이트 울 니트[5] · 네이비 치노[5] · 탄 워크 부츠[4] | norm=0.56 dom=bizcasual tags=bizcasual,ivy | final 4.85 | mini0.54 bizc0.58 ivy0.56 amek0.42
+  overlap: minimal∩amekaji=0 · minimal∩bizcasual=2 · minimal∩ivy=0 · amekaji∩bizcasual=0 · amekaji∩ivy=0 · bizcasual∩ivy=0
+
+## top/navy 봄가을 — groups: minimal(5) · amekaji(4) · bizcasual(5) · ivy(5)
+  [minimal]
+    g-1g1h8ra 네이비 코튼 니트[4] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,bizcasual | final 4.96 | mini0.70 bizc0.67 ivy0.67 amek0.33
+    g-1xsvsic 네이비 코튼 니트[4] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 카멜 트렌치 코트[7] | norm=0.71 dom=bizcasual tags=bizcasual,minimal | final 4.83 | mini0.71 bizc0.79 ivy0.47 amek0.05
+    g-10im4ou 네이비 코튼 니트[4] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] · 카멜 트렌치 코트[7] | norm=0.72 dom=bizcasual tags=bizcasual,minimal | final 4.53 | mini0.72 bizc0.75 ivy0.53 amek0.07
+    g-s1o41d 네이비 코튼 니트[4] · 차콜 울 슬랙스[7] · 블랙 더비[7] | norm=0.72 dom=bizcasual tags=bizcasual,minimal | final 4.51 | mini0.72 bizc0.79 ivy0.51 amek0.11
+    g-14616n2 네이비 코튼 니트[4] · 크림 치노[5] · 브라운 척카 부츠[5] | norm=0.61 dom=ivy tags=ivy,minimal | final 4.96 | mini0.61 bizc0.61 ivy0.65 amek0.39
+  [amekaji]
+    g-bpox6b 네이비 코튼 니트[4] · 인디고 데님[4] · 탄 척카 부츠[5] | norm=0.60 dom=amekaji tags=amekaji,workwear | final 5 | mini0.51 bizc0.40 ivy0.53 amek0.60
+    g-y9e8ku 네이비 코튼 니트[4] · 인디고 데님[4] · 브라운 척카 부츠[5] | norm=0.60 dom=amekaji tags=amekaji,workwear | final 5 | mini0.51 bizc0.40 ivy0.51 amek0.60
+    g-1rquuyh 네이비 코튼 니트[4] · 카키 치노[5] · 네이비 컬러 스니커즈[2] · 인디고 데님 재킷[4] | norm=0.52 dom=amekaji tags=amekaji,ivy | final 4.84 | mini0.43 bizc0.33 ivy0.49 amek0.52
+    g-1qp5mz3 네이비 코튼 니트[4] · 인디고 데님[4] · 네이비 컬러 스니커즈[2] | norm=0.58 dom=amekaji tags=amekaji,ivy | final 4.02 | mini0.46 bizc0.33 ivy0.47 amek0.58
+  [bizcasual]
+    g-1xsvsic 네이비 코튼 니트[4] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 카멜 트렌치 코트[7] | norm=0.79 dom=bizcasual tags=bizcasual,minimal | final 4.83 | mini0.71 bizc0.79 ivy0.47 amek0.05
+    g-kaqgkk 네이비 코튼 니트[4] · 미드 그레이 울 슬랙스[7] · 블랙 더비[7] · 카멜 트렌치 코트[7] | norm=0.76 dom=bizcasual tags=bizcasual,minimal | final 4.83 | mini0.68 bizc0.76 ivy0.47 amek0.05
+    g-1rwbnxr 네이비 코튼 니트[4] · 베이지 치노[5] · 버건디 페니 로퍼[6] · 네이비 블레이저[7] | norm=0.73 dom=bizcasual tags=bizcasual,ivy | final 4.91 | mini0.59 bizc0.73 ivy0.72 amek0.24
+    g-1as11rc 네이비 코튼 니트[4] · 베이지 치노[5] · 버건디 페니 로퍼[6] | norm=0.72 dom=bizcasual tags=bizcasual,ivy | final 4.96 | mini0.63 bizc0.72 ivy0.70 amek0.32
+    g-gg7omo 네이비 코튼 니트[4] · 미드 그레이 울 슬랙스[7] · 브라운 척카 부츠[5] · 네이비 블레이저[7] | norm=0.71 dom=bizcasual tags=bizcasual,ivy | final 4.63 | mini0.57 bizc0.71 ivy0.63 amek0.16
+  [ivy]
+    g-1rwbnxr 네이비 코튼 니트[4] · 베이지 치노[5] · 버건디 페니 로퍼[6] · 네이비 블레이저[7] | norm=0.72 dom=bizcasual tags=bizcasual,ivy | final 4.91 | mini0.59 bizc0.73 ivy0.72 amek0.24
+    g-c44seb 네이비 코튼 니트[4] · 카키 치노[5] · 버건디 페니 로퍼[6] · 네이비 블레이저[7] | norm=0.72 dom=ivy tags=ivy,bizcasual | final 4.91 | mini0.56 bizc0.71 ivy0.72 amek0.24
+    g-18zcut6 네이비 코튼 니트[4] · 카키 치노[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal,ivy | final 4.96 | mini0.67 bizc0.63 ivy0.67 amek0.33
+    g-1d1rkxj 네이비 코튼 니트[4] · 베이지 치노[5] · 탄 척카 부츠[5] | norm=0.67 dom=ivy tags=ivy,bizcasual | final 4.96 | mini0.61 bizc0.65 ivy0.67 amek0.42
+    g-ljvsyj 네이비 코튼 니트[4] · 카키 치노[5] · 탄 척카 부츠[5] | norm=0.67 dom=ivy tags=ivy,bizcasual | final 4.96 | mini0.58 bizc0.61 ivy0.67 amek0.42
+  overlap: minimal∩amekaji=0 · minimal∩bizcasual=1 · minimal∩ivy=0 · amekaji∩bizcasual=0 · amekaji∩ivy=0 · bizcasual∩ivy=1
+
+## top/navy 여름 — groups: minimal(5) · amekaji(5) · bizcasual(4) · ivy(5)
+  [minimal]
+    g-1qyxe6u 네이비 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,ivy | final 4.92 | mini0.70 bizc0.56 ivy0.63 amek0.37
+    g-nio9vq 네이비 피케 폴로[4] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | norm=0.68 dom=bizcasual tags=bizcasual,minimal | final 4.58 | mini0.68 bizc0.79 ivy0.61 amek0.11
+    g-1atd3ss 네이비 티셔츠[2] · 브라운 치노[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal,ivy | final 4.92 | mini0.67 bizc0.53 ivy0.60 amek0.37
+    g-ysquwm 네이비 피케 폴로[4] · 미드 그레이 울 슬랙스[7] · 블랙 페니 로퍼[6] | norm=0.65 dom=bizcasual tags=bizcasual,minimal | final 4.88 | mini0.65 bizc0.75 ivy0.61 amek0.11
+    g-1q5xwqz 네이비 티셔츠[2] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] | norm=0.56 dom=ivy tags=ivy,minimal | final 4.85 | mini0.56 bizc0.47 ivy0.58 amek0.44
+  [amekaji]
+    g-1t8gbzi 네이비 티셔츠[2] · 인디고 데님[4] · 브라운 페니 로퍼[6] | norm=0.56 dom=amekaji tags=amekaji,minimal | final 4.81 | mini0.54 bizc0.37 ivy0.51 amek0.56
+    g-i2u0ur 네이비 티셔츠[2] · 인디고 데님[4] · 탄 페니 로퍼[6] | norm=0.56 dom=amekaji tags=amekaji,minimal | final 4.81 | mini0.54 bizc0.37 ivy0.53 amek0.56
+    g-v61xzj 네이비 티셔츠[2] · 인디고 데님[4] · 네이비 컬러 스니커즈[2] | norm=0.61 dom=amekaji tags=amekaji,workwear | final 4.02 | mini0.46 bizc0.23 ivy0.44 amek0.61
+    g-1knu6oi 네이비 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.54 dom=minimal tags=minimal,amekaji | final 4.7 | mini0.60 bizc0.32 ivy0.49 amek0.54
+    g-1hpwwnq 네이비 티셔츠[2] · 라이트워시 데님[3] · 네이비 컬러 스니커즈[2] | norm=0.54 dom=amekaji tags=amekaji,cityboy | final 4.06 | mini0.39 bizc0.09 ivy0.37 amek0.54
+  [bizcasual]
+    g-nio9vq 네이비 피케 폴로[4] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | norm=0.79 dom=bizcasual tags=bizcasual,minimal | final 4.58 | mini0.68 bizc0.79 ivy0.61 amek0.11
+    g-7wlt3f 네이비 티셔츠[2] · 베이지 치노[5] · 블랙 페니 로퍼[6] | norm=0.61 dom=minimal tags=minimal,bizcasual | final 4.13 | mini0.68 bizc0.61 ivy0.61 amek0.35
+    g-y15rt7 네이비 피케 폴로[4] · 미드 그레이 울 슬랙스[7] · 흰 스니커즈[3] | norm=0.70 dom=bizcasual tags=bizcasual,minimal | final 4.32 | mini0.67 bizc0.70 ivy0.63 amek0.12
+    g-1k7q9rv 네이비 피케 폴로[4] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] | norm=0.74 dom=bizcasual tags=bizcasual,minimal | final 3.72 | mini0.70 bizc0.74 ivy0.63 amek0.12
+  [ivy]
+    g-7gbct3 네이비 티셔츠[2] · 베이지 치노[5] · 탄 페니 로퍼[6] | norm=0.67 dom=ivy tags=ivy,minimal | final 4.73 | mini0.65 bizc0.61 ivy0.67 amek0.39
+    g-1lrr6af 네이비 피케 폴로[4] · 미드 그레이 울 슬랙스[7] · 브라운 페니 로퍼[6] | norm=0.65 dom=bizcasual tags=bizcasual,ivy | final 4.88 | mini0.61 bizc0.75 ivy0.65 amek0.14
+    g-1qyxe6u 네이비 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.63 dom=minimal tags=minimal,ivy | final 4.92 | mini0.70 bizc0.56 ivy0.63 amek0.37
+    g-85864a 네이비 티셔츠[2] · 카키 치노[5] · 흰 스니커즈[3] | norm=0.63 dom=minimal tags=minimal,ivy | final 4.92 | mini0.67 bizc0.53 ivy0.63 amek0.37
+    g-1a7p1d3 네이비 티셔츠[2] · 카키 치노[5] · 네이비 컬러 스니커즈[2] | norm=0.58 dom=ivy tags=ivy,minimal | final 4.85 | mini0.53 bizc0.44 ivy0.58 amek0.44
+  overlap: minimal∩amekaji=0 · minimal∩bizcasual=1 · minimal∩ivy=1 · amekaji∩bizcasual=0 · amekaji∩ivy=0 · bizcasual∩ivy=0
+
+## top/navy 겨울 — groups: minimal(5) · amekaji(4) · bizcasual(5) · ivy(5)
+  [minimal]
+    g-1pxsdh9 네이비 울 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 카멜 체스터필드 코트[8] | norm=0.73 dom=bizcasual tags=bizcasual,minimal | final 4.89 | mini0.73 bizc0.81 ivy0.47 amek0.03
+    g-6n0xcn 네이비 울 니트[5] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] · 카멜 체스터필드 코트[8] | norm=0.75 dom=bizcasual tags=bizcasual,minimal | final 4.61 | mini0.75 bizc0.77 ivy0.53 amek0.04
+    g-1ned3b9 네이비 울 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,bizcasual | final 4.96 | mini0.70 bizc0.70 ivy0.67 amek0.33
+    g-oyrlia 네이비 울 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] | norm=0.72 dom=bizcasual tags=bizcasual,minimal | final 4.58 | mini0.72 bizc0.82 ivy0.51 amek0.11
+    g-1ffns0e 네이비 울 니트[5] · 미드 그레이 울 슬랙스[7] · 브라운 첼시 부츠[6] | norm=0.65 dom=bizcasual tags=bizcasual,minimal | final 4.96 | mini0.65 bizc0.75 ivy0.51 amek0.14
+  [amekaji]
+    g-7qodn9 네이비 울 니트[5] · 인디고 데님[4] · 브라운 워크 부츠[4] | norm=0.63 dom=amekaji tags=amekaji,workwear | final 5 | mini0.44 bizc0.33 ivy0.40 amek0.63
+    g-kyvmh3 네이비 울 니트[5] · 인디고 데님[4] · 초콜릿 워크 부츠[4] | norm=0.63 dom=amekaji tags=amekaji,workwear | final 5 | mini0.44 bizc0.33 ivy0.40 amek0.63
+    g-yfnjvu 네이비 울 니트[5] · 카키 치노[5] · 네이비 컬러 스니커즈[2] · 인디고 데님 재킷[4] | norm=0.52 dom=amekaji tags=amekaji,ivy | final 4.84 | mini0.43 bizc0.36 ivy0.49 amek0.52
+    g-1rj6v18 네이비 울 니트[5] · 인디고 데님[4] · 네이비 컬러 스니커즈[2] | norm=0.58 dom=amekaji tags=amekaji,workwear | final 4.02 | mini0.46 bizc0.37 ivy0.47 amek0.58
+  [bizcasual]
+    g-1pxsdh9 네이비 울 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 카멜 체스터필드 코트[8] | norm=0.81 dom=bizcasual tags=bizcasual,minimal | final 4.89 | mini0.73 bizc0.81 ivy0.47 amek0.03
+    g-y1lr7f 네이비 울 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | norm=0.84 dom=bizcasual tags=bizcasual,minimal | final 4.55 | mini0.73 bizc0.84 ivy0.52 amek0.03
+    g-1ffns0e 네이비 울 니트[5] · 미드 그레이 울 슬랙스[7] · 브라운 첼시 부츠[6] | norm=0.75 dom=bizcasual tags=bizcasual,minimal | final 4.96 | mini0.65 bizc0.75 ivy0.51 amek0.14
+    g-1jmhta3 네이비 울 니트[5] · 베이지 치노[5] · 버건디 페니 로퍼[6] | norm=0.75 dom=bizcasual tags=bizcasual,ivy | final 4.96 | mini0.63 bizc0.75 ivy0.70 amek0.32
+    g-1r4do4m 네이비 울 니트[5] · 미드 그레이 울 슬랙스[7] · 버건디 페니 로퍼[6] | norm=0.79 dom=bizcasual tags=bizcasual | final 4.36 | mini0.63 bizc0.79 ivy0.63 amek0.11
+  [ivy]
+    g-1gfan87 네이비 울 니트[5] · 카키 치노[5] · 버건디 페니 로퍼[6] | norm=0.70 dom=bizcasual tags=bizcasual,ivy | final 4.96 | mini0.60 bizc0.72 ivy0.70 amek0.32
+    g-1jmhta3 네이비 울 니트[5] · 베이지 치노[5] · 버건디 페니 로퍼[6] | norm=0.70 dom=bizcasual tags=bizcasual,ivy | final 4.96 | mini0.63 bizc0.75 ivy0.70 amek0.32
+    g-12cpyyc 네이비 울 니트[5] · 카키 치노[5] · 네이비 컬러 스니커즈[2] | norm=0.61 dom=ivy tags=ivy,bizcasual | final 4.88 | mini0.53 bizc0.58 ivy0.61 amek0.40
+    g-h28xnc 네이비 울 니트[5] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] | norm=0.61 dom=bizcasual tags=bizcasual,ivy | final 4.88 | mini0.56 bizc0.61 ivy0.61 amek0.40
+    g-t42vs7 네이비 울 니트[5] · 브라운 코듀로이[4] · 흰 스니커즈[3] | norm=0.60 dom=ivy tags=ivy,minimal | final 4.88 | mini0.56 bizc0.53 ivy0.60 amek0.37
+  overlap: minimal∩amekaji=0 · minimal∩bizcasual=2 · minimal∩ivy=0 · amekaji∩bizcasual=0 · amekaji∩ivy=0 · bizcasual∩ivy=1
+
+## shoes/white 봄가을 — groups: minimal(5) · amekaji(5) · bizcasual(5) · ivy(5)
+  [minimal]
+    g-1dzrvp2 베이지 코튼 니트[4] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,bizcasual | final 4.96 | mini0.70 bizc0.67 ivy0.67 amek0.33
+    g-1g1h8ra 네이비 코튼 니트[4] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,bizcasual | final 4.96 | mini0.70 bizc0.67 ivy0.67 amek0.33
+    g-1n86rcy 크림 코튼 니트[4] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,ivy | final 4.96 | mini0.70 bizc0.63 ivy0.67 amek0.30
+    g-2q8lc5 오트밀 코튼 니트[4] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,bizcasual | final 4.96 | mini0.70 bizc0.63 ivy0.63 amek0.30
+    g-13fwhhn 오프화이트 코튼 니트[4] · 올리브 치노[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal,ivy | final 4.96 | mini0.67 bizc0.53 ivy0.60 amek0.37
+  [amekaji]
+    g-hh3c97 올리브 코튼 니트[4] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.58 dom=amekaji tags=amekaji,minimal | final 5 | mini0.56 bizc0.32 ivy0.46 amek0.58
+    g-174egke 베이지 코튼 니트[4] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.54 dom=minimal tags=minimal,amekaji | final 5 | mini0.60 bizc0.39 ivy0.49 amek0.54
+    g-1lurkti 초콜릿 코튼 니트[4] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.54 dom=minimal tags=minimal,amekaji | final 5 | mini0.56 bizc0.35 ivy0.46 amek0.54
+    g-1uitzci 러스트 코튼 니트[4] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.54 dom=amekaji tags=amekaji,minimal | final 5 | mini0.53 bizc0.32 ivy0.42 amek0.54
+    g-pks3ec 브라운 코튼 니트[4] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.54 dom=minimal tags=minimal,amekaji | final 5 | mini0.56 bizc0.35 ivy0.46 amek0.54
+  [bizcasual]
+    g-c16pef 라이트 블루 옥스포드 셔츠[6] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] · 카멜 트렌치 코트[7] | norm=0.75 dom=bizcasual tags=bizcasual,minimal | final 4.65 | mini0.67 bizc0.75 ivy0.56 amek0.04
+    g-1o5bg2c 화이트 옥스포드 셔츠[6] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=bizcasual tags=bizcasual,ivy | final 4.92 | mini0.67 bizc0.70 ivy0.70 amek0.30
+    g-1hoi232 네이비 코튼 니트[4] · 미드 그레이 울 슬랙스[7] · 흰 스니커즈[3] · 카멜 트렌치 코트[7] | norm=0.72 dom=bizcasual tags=bizcasual,minimal | final 4.61 | mini0.69 bizc0.72 ivy0.53 amek0.07
+    g-1dzrvp2 베이지 코튼 니트[4] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal,bizcasual | final 4.96 | mini0.70 bizc0.67 ivy0.67 amek0.33
+    g-1133zlv 오트밀 코튼 니트[4] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] · 네이비 블레이저[7] | norm=0.69 dom=bizcasual tags=bizcasual,minimal | final 4.55 | mini0.67 bizc0.69 ivy0.59 amek0.09
+  [ivy]
+    g-c71wsz 라이트 블루 옥스포드 셔츠[6] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.74 dom=ivy tags=ivy,bizcasual | final 4.92 | mini0.63 bizc0.70 ivy0.74 amek0.26
+    g-1o5bg2c 화이트 옥스포드 셔츠[6] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=bizcasual tags=bizcasual,ivy | final 4.92 | mini0.67 bizc0.70 ivy0.70 amek0.30
+    g-18zcut6 네이비 코튼 니트[4] · 카키 치노[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal,ivy | final 4.96 | mini0.67 bizc0.63 ivy0.67 amek0.33
+    g-1n86rcy 크림 코튼 니트[4] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal,ivy | final 4.96 | mini0.70 bizc0.63 ivy0.67 amek0.30
+    g-11ufpbp 버건디 코튼 니트[4] · 베이지 치노[5] · 흰 스니커즈[3] · 네이비 블레이저[7] | norm=0.67 dom=ivy tags=ivy,bizcasual | final 4.72 | mini0.59 bizc0.64 ivy0.67 amek0.23
+  overlap: minimal∩amekaji=0 · minimal∩bizcasual=1 · minimal∩ivy=1 · amekaji∩bizcasual=0 · amekaji∩ivy=0 · bizcasual∩ivy=1
+
+## shoes/white 여름 — groups: minimal(5) · amekaji(5) · bizcasual(5) · ivy(5)
+  [minimal]
+    g-15pu9tx 오트밀 티셔츠[2] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,ivy | final 4.92 | mini0.70 bizc0.53 ivy0.60 amek0.33
+    g-17fadu9 화이트 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,ivy | final 4.92 | mini0.70 bizc0.53 ivy0.60 amek0.37
+    g-1qyxe6u 네이비 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,ivy | final 4.92 | mini0.70 bizc0.56 ivy0.63 amek0.37
+    g-1yab98i 크림 티셔츠[2] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,ivy | final 4.92 | mini0.70 bizc0.53 ivy0.63 amek0.33
+    g-6nyv5i 베이지 티셔츠[2] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,ivy | final 4.92 | mini0.70 bizc0.56 ivy0.63 amek0.37
+  [amekaji]
+    g-10grqff 올리브 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.61 dom=amekaji tags=amekaji,workwear | final 5 | mini0.56 bizc0.21 ivy0.42 amek0.61
+    g-2yjmqm 베이지 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.58 dom=minimal tags=minimal,amekaji | final 5 | mini0.60 bizc0.28 ivy0.46 amek0.58
+    g-jura2c 브라운 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.58 dom=amekaji tags=amekaji,workwear | final 5 | mini0.56 bizc0.25 ivy0.42 amek0.58
+    g-15ietiq 그레이 멜란지 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.54 dom=minimal tags=minimal,amekaji | final 5 | mini0.56 bizc0.18 ivy0.42 amek0.54
+    g-pq685x 화이트 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.54 dom=minimal tags=minimal,amekaji | final 5 | mini0.60 bizc0.28 ivy0.46 amek0.54
+  [bizcasual]
+    g-y15rt7 네이비 피케 폴로[4] · 미드 그레이 울 슬랙스[7] · 흰 스니커즈[3] | norm=0.70 dom=bizcasual tags=bizcasual,minimal | final 4.32 | mini0.67 bizc0.70 ivy0.63 amek0.12
+    g-1d04ori 화이트 린넨 셔츠[5] · 미드 그레이 울 슬랙스[7] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal,bizcasual | final 4.32 | mini0.67 bizc0.67 ivy0.53 amek0.09
+    g-px9bh5 라이트 블루 린넨 셔츠[5] · 미드 그레이 울 슬랙스[7] · 흰 스니커즈[3] | norm=0.67 dom=bizcasual tags=bizcasual,minimal | final 4.32 | mini0.63 bizc0.67 ivy0.56 amek0.05
+    g-1ulks0k 스카이 블루 피케 폴로[4] · 미드 그레이 울 슬랙스[7] · 흰 스니커즈[3] | norm=0.63 dom=bizcasual tags=bizcasual,minimal | final 4.32 | mini0.60 bizc0.63 ivy0.60 amek0.09
+    g-3tetto 차콜 피케 폴로[4] · 블랙 울 슬랙스[7] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal,bizcasual | final 3.72 | mini0.74 bizc0.67 ivy0.49 amek0.09
+  [ivy]
+    g-s5m78a 라이트 블루 티셔츠[2] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal,ivy | final 4.92 | mini0.67 bizc0.56 ivy0.67 amek0.30
+    g-85864a 네이비 티셔츠[2] · 카키 치노[5] · 흰 스니커즈[3] | norm=0.63 dom=minimal tags=minimal,ivy | final 4.92 | mini0.67 bizc0.53 ivy0.63 amek0.37
+    g-jfi6kd 화이트 티셔츠[2] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.63 dom=minimal tags=minimal,ivy | final 4.92 | mini0.70 bizc0.56 ivy0.63 amek0.33
+    g-1uhvp0j 올리브 티셔츠[2] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.60 dom=minimal tags=minimal,ivy | final 4.92 | mini0.67 bizc0.49 ivy0.60 amek0.40
+    g-1heeu1m 그레이 멜란지 티셔츠[2] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.60 dom=minimal tags=minimal,ivy | final 4.62 | mini0.67 bizc0.46 ivy0.60 amek0.33
+  overlap: minimal∩amekaji=0 · minimal∩bizcasual=0 · minimal∩ivy=0 · amekaji∩bizcasual=0 · amekaji∩ivy=0 · bizcasual∩ivy=0
+
+## shoes/white 겨울 — groups: minimal(5) · amekaji(5) · bizcasual(5) · ivy(5)
+  [minimal]
+    g-18apysl 베이지 울 니트[5] · 네이비 치노[5] · 흰 스니커즈[3] · 차콜 체스터필드 코트[8] | norm=0.75 dom=minimal tags=minimal,bizcasual | final 4.7 | mini0.75 bizc0.75 ivy0.59 amek0.17
+    g-co1iqe 오트밀 울 니트[5] · 네이비 치노[5] · 흰 스니커즈[3] · 차콜 체스터필드 코트[8] | norm=0.75 dom=minimal tags=minimal,bizcasual | final 4.7 | mini0.75 bizc0.72 ivy0.56 amek0.15
+    g-14i3d8i 화이트 울 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,bizcasual | final 4.96 | mini0.70 bizc0.67 ivy0.63 amek0.33
+    g-1ned3b9 네이비 울 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,bizcasual | final 4.96 | mini0.70 bizc0.70 ivy0.67 amek0.33
+    g-1t8kbdd 크림 울 니트[5] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,bizcasual | final 4.96 | mini0.70 bizc0.67 ivy0.67 amek0.30
+  [amekaji]
+    g-gstcd4 올리브 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.58 dom=amekaji tags=amekaji,workwear | final 5 | mini0.56 bizc0.35 ivy0.46 amek0.58
+    g-1hqncgx 러스트 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.54 dom=amekaji tags=amekaji,workwear | final 5 | mini0.53 bizc0.35 ivy0.42 amek0.54
+    g-1u8uj91 초콜릿 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.54 dom=minimal tags=minimal,amekaji | final 5 | mini0.56 bizc0.39 ivy0.46 amek0.54
+    g-4ljd1p 베이지 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.54 dom=minimal tags=minimal,amekaji | final 5 | mini0.60 bizc0.42 ivy0.49 amek0.54
+    g-4mr5nr 브라운 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | norm=0.54 dom=minimal tags=minimal,amekaji | final 5 | mini0.56 bizc0.39 ivy0.46 amek0.54
+  [bizcasual]
+    g-6n0xcn 네이비 울 니트[5] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] · 카멜 체스터필드 코트[8] | norm=0.77 dom=bizcasual tags=bizcasual,minimal | final 4.61 | mini0.75 bizc0.77 ivy0.53 amek0.04
+    g-18apysl 베이지 울 니트[5] · 네이비 치노[5] · 흰 스니커즈[3] · 차콜 체스터필드 코트[8] | norm=0.75 dom=minimal tags=minimal,bizcasual | final 4.7 | mini0.75 bizc0.75 ivy0.59 amek0.17
+    g-1411kax 라이트 블루 울 니트[5] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=bizcasual tags=bizcasual,ivy | final 4.96 | mini0.67 bizc0.70 ivy0.70 amek0.26
+    g-2g1dpq 화이트 울 니트[5] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=minimal tags=minimal,bizcasual | final 4.96 | mini0.70 bizc0.70 ivy0.67 amek0.30
+    g-1t8kbdd 크림 울 니트[5] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.67 dom=minimal tags=minimal,bizcasual | final 4.96 | mini0.70 bizc0.67 ivy0.67 amek0.30
+  [ivy]
+    g-1411kax 라이트 블루 울 니트[5] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.70 dom=bizcasual tags=bizcasual,ivy | final 4.96 | mini0.67 bizc0.70 ivy0.70 amek0.26
+    g-17yqb9p 버건디 울 니트[5] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.67 dom=bizcasual tags=bizcasual,ivy | final 4.66 | mini0.63 bizc0.67 ivy0.67 amek0.26
+    g-14lesob 포레스트 그린 울 니트[5] · 네이비 치노[5] · 흰 스니커즈[3] | norm=0.67 dom=ivy tags=ivy,minimal | final 4.36 | mini0.63 bizc0.63 ivy0.67 amek0.30
+    g-5d5k7s 오프화이트 울 니트[5] · 올리브 치노[5] · 흰 스니커즈[3] | norm=0.60 dom=minimal tags=minimal,ivy | final 4.96 | mini0.67 bizc0.56 ivy0.60 amek0.37
+    g-813m2z 탄 울 니트[5] · 올리브 치노[5] · 흰 스니커즈[3] | norm=0.60 dom=minimal tags=minimal,ivy | final 4.96 | mini0.63 bizc0.56 ivy0.60 amek0.40
+  overlap: minimal∩amekaji=0 · minimal∩bizcasual=2 · minimal∩ivy=0 · amekaji∩bizcasual=0 · amekaji∩ivy=0 · bizcasual∩ivy=1
+
+## 합계: 그룹 83, 카드 376, 그룹 스타일이 카드 태그에 포함 376 (100%), norm<0.5 카드 21
+overlap 합계(24 base×season): minimal∩amekaji=1 · minimal∩bizcasual=20 · minimal∩ivy=7 · amekaji∩bizcasual=0 · amekaji∩ivy=0 · bizcasual∩ivy=5

@@ -1504,7 +1504,7 @@
    "아메리칸 캐주얼",
    "빈티지 워크웨어"
   ],
-  "help": "인디고 데님·플란넬·워크 부츠, 질감과 빈티지 워시"
+  "help": "인디고 데님·플란넬·워크 부츠"
  },
  {
   "id": "style.cityboy",
@@ -1514,18 +1514,18 @@
    "시티보이 룩",
    "포파이"
   ],
-  "help": "루즈·박시 실루엣, 와이드 치노·로퍼·캔버스 토트"
+  "help": "루즈 실루엣, 와이드 치노·로퍼"
  },
  {
   "id": "style.bizcasual",
-  "label": "비즈니스 캐주얼",
+  "label": "비즈캐주얼",
   "shortLabel": "비즈캐주얼",
   "aliases": [
-   "비즈캐주얼",
+   "비즈니스 캐주얼",
    "오피스룩",
    "출근룩"
   ],
-  "help": "타이 없는 셔츠·니트 + 슬랙스 + 로퍼·블레이저"
+  "help": "셔츠·니트 + 슬랙스 + 로퍼·블레이저"
  },
  {
   "id": "style.street",
@@ -1534,7 +1534,7 @@
   "aliases": [
    "스트리트"
   ],
-  "help": "오버핏 후디·맨투맨, 와이드 데님, 컬러 스니커즈"
+  "help": "오버핏 후디·맨투맨, 컬러 스니커즈"
  },
  {
   "id": "style.gorpcore",
@@ -1544,14 +1544,14 @@
    "아웃도어 룩",
    "고프"
   ],
-  "help": "플리스·셸·테크 팬츠·트레일 러닝화를 일상복으로"
+  "help": "플리스·테크 팬츠·트레일 러닝화"
  },
  {
   "id": "style.ivy",
-  "label": "클래식·아이비",
+  "label": "아이비",
   "shortLabel": "아이비",
   "aliases": [
-   "아이비",
+   "클래식 아이비",
    "프레피",
    "클래식"
   ],
@@ -1565,7 +1565,7 @@
    "초어 재킷",
    "작업복"
   ],
-  "help": "초어·데님 재킷, 헨리·데님 셔츠, 워크 부츠"
+  "help": "초어·데님 재킷, 헨리, 워크 부츠"
  },
  {
   "id": "occasion.work",
@@ -1599,10 +1599,10 @@
  },
  {
   "id": "occasion.active",
-  "label": "운동·산책",
-  "shortLabel": "운동·산책",
+  "label": "운동",
+  "shortLabel": "운동",
   "aliases": [
-   "운동",
+   "운동·산책",
    "산책",
    "액티브"
   ],
@@ -1618,7 +1618,7 @@
    "면접",
    "포멀"
   ],
-  "help": "드레스 셔츠 + 블레이저 + 울 슬랙스 + 더비. 수트는 2차"
+  "help": "셔츠 + 블레이저 + 울 슬랙스 + 더비"
  },
  {
   "id": "pattern.breton",
@@ -1704,77 +1704,77 @@
   "label": "가디건",
   "shortLabel": "가디건",
   "aliases": [],
-  "help": "outerTypes.cardigan과 같은 품목. 아우터 밑에 들어가면 mid"
+  "help": "코트 안에 입는 가디건"
  },
  {
   "id": "midType.knitVest",
   "label": "니트 베스트",
   "shortLabel": "니트 베스트",
   "aliases": [],
-  "help": "셔츠 위. 아이비·시티보이"
+  "help": "셔츠 위에 입는 니트 베스트"
  },
  {
   "id": "midType.quiltedVest",
   "label": "퀼팅 베스트",
   "shortLabel": "퀼팅 베스트",
   "aliases": [],
-  "help": "팔 부피 없음. 코트 안 OK"
+  "help": "코트·재킷 안에 입는 얇은 조끼"
  },
  {
   "id": "midType.overshirtMid",
   "label": "오버셔츠(미드)",
   "shortLabel": "오버셔츠",
   "aliases": [],
-  "help": "shirtJacket·overshirt가 코트 안에 들어갈 때"
+  "help": "코트 안에 입는 오버셔츠"
  },
  {
   "id": "midType.knitOverShirt",
-  "label": "셔츠 위 니트",
-  "shortLabel": "셔츠위 니트",
+  "label": "이너 니트",
+  "shortLabel": "이너 니트",
   "aliases": [],
-  "help": "top=oxfordShirt + mid=knitWool. 겨울 기본 3겹"
+  "help": "셔츠 위에 겹쳐 입는 니트"
  },
  {
   "id": "accessory.beltLeather",
   "label": "가죽 벨트",
   "shortLabel": "가죽 벨트",
   "aliases": [],
-  "help": "신발 가죽 색·마감과 같은 계열"
+  "help": "신발과 같은 가죽 색"
  },
  {
   "id": "accessory.beltBraided",
   "label": "브레이디드 벨트",
   "shortLabel": "브레이디드",
   "aliases": [],
-  "help": "치노·린넨·로퍼. 수트 금지"
+  "help": "치노·린넨·로퍼에"
  },
  {
   "id": "accessory.beltWebbing",
   "label": "웨빙·캔버스 벨트",
   "shortLabel": "웨빙 벨트",
   "aliases": [],
-  "help": "스니커즈·부츠·카고"
+  "help": "스니커즈·부츠·카고에"
  },
  {
   "id": "accessory.watchLeather",
   "label": "가죽 스트랩 시계",
   "shortLabel": "가죽 시계",
   "aliases": [],
-  "help": "벨트·신발과 가죽 통일(T8)"
+  "help": "벨트·신발과 같은 가죽 색"
  },
  {
   "id": "accessory.watchMetal",
   "label": "메탈 시계",
   "shortLabel": "메탈 시계",
   "aliases": [],
-  "help": "버클 금속과 통일"
+  "help": "벨트 버클 금속과 통일"
  },
  {
   "id": "accessory.watchNato",
   "label": "나토·러버 시계",
   "shortLabel": "나토 시계",
   "aliases": [],
-  "help": "캐주얼만"
+  "help": "캐주얼 코디에만"
  },
  {
   "id": "accessory.socksMatch",
@@ -1795,28 +1795,28 @@
   "label": "페이크삭스",
   "shortLabel": "페이크삭스",
   "aliases": [],
-  "help": "로퍼·스니커즈 여름"
+  "help": "여름 로퍼·스니커즈에"
  },
  {
   "id": "accessory.socksWhite",
   "label": "흰 운동 양말",
   "shortLabel": "흰 양말",
   "aliases": [],
-  "help": "스니커즈·러닝화만"
+  "help": "스니커즈·러닝화에만"
  },
  {
   "id": "accessory.socksPattern",
   "label": "패턴 양말",
   "shortLabel": "패턴 양말",
   "aliases": [],
-  "help": "작은 패턴만. 코디 패턴 0개일 때"
+  "help": "작은 패턴, 코디에 패턴이 없을 때"
  },
  {
   "id": "accessory.bagTote",
   "label": "토트백",
   "shortLabel": "토트백",
   "aliases": [],
-  "help": "가죽은 신발 계열, 캔버스는 자유"
+  "help": "가죽은 신발 색, 캔버스는 자유"
  },
  {
   "id": "accessory.bagBackpack",
@@ -1837,14 +1837,14 @@
   "label": "브리프케이스",
   "shortLabel": "브리프케이스",
   "aliases": [],
-  "help": "가죽, 신발 계열"
+  "help": "가죽, 신발과 같은 색"
  },
  {
   "id": "accessory.cap",
   "label": "볼캡",
   "shortLabel": "볼캡",
   "aliases": [],
-  "help": "아우터와 2~3톤 이내"
+  "help": "아우터와 비슷한 톤"
  },
  {
   "id": "accessory.beanie",
@@ -1865,7 +1865,7 @@
   "label": "머플러",
   "shortLabel": "머플러",
   "aliases": [],
-  "help": "포인트 컬러 1개로 계산"
+  "help": "포인트 컬러 1개로 쳐요"
  },
  {
   "id": "accessoryGroup.belt",
@@ -1918,49 +1918,49 @@
  },
  {
   "id": "explain.style.amekaji",
-  "label": "아메카지 — 인디고 데님·플란넬·워크 부츠, 질감과 빈티지 워시",
+  "label": "아메카지 — 인디고 데님·플란넬·워크 부츠",
   "shortLabel": null,
   "aliases": [],
   "help": ""
  },
  {
   "id": "explain.style.cityboy",
-  "label": "시티보이 — 루즈·박시 실루엣, 와이드 치노·로퍼·캔버스 토트",
+  "label": "시티보이 — 루즈 실루엣, 와이드 치노·로퍼",
   "shortLabel": null,
   "aliases": [],
   "help": ""
  },
  {
   "id": "explain.style.bizcasual",
-  "label": "비즈니스 캐주얼 — 타이 없는 셔츠·니트 + 슬랙스 + 로퍼·블레이저",
+  "label": "비즈캐주얼 — 셔츠·니트 + 슬랙스 + 로퍼·블레이저",
   "shortLabel": null,
   "aliases": [],
   "help": ""
  },
  {
   "id": "explain.style.street",
-  "label": "스트릿 — 오버핏 후디·맨투맨, 와이드 데님, 컬러 스니커즈",
+  "label": "스트릿 — 오버핏 후디·맨투맨, 컬러 스니커즈",
   "shortLabel": null,
   "aliases": [],
   "help": ""
  },
  {
   "id": "explain.style.gorpcore",
-  "label": "고프코어 — 플리스·셸·테크 팬츠·트레일 러닝화를 일상복으로",
+  "label": "고프코어 — 플리스·테크 팬츠·트레일 러닝화",
   "shortLabel": null,
   "aliases": [],
   "help": ""
  },
  {
   "id": "explain.style.ivy",
-  "label": "클래식·아이비 — 옥스포드·치노·페니 로퍼·네이비 블레이저",
+  "label": "아이비 — 옥스포드·치노·페니 로퍼·네이비 블레이저",
   "shortLabel": null,
   "aliases": [],
   "help": ""
  },
  {
   "id": "explain.style.workwear",
-  "label": "워크웨어 — 초어·데님 재킷, 헨리·데님 셔츠, 워크 부츠",
+  "label": "워크웨어 — 초어·데님 재킷, 헨리, 워크 부츠",
   "shortLabel": null,
   "aliases": [],
   "help": ""
@@ -1981,21 +1981,35 @@
  },
  {
   "id": "explain.occasion.adj",
-  "label": "{occasion}에 {delta}",
+  "label": "{occasion} 분위기와 잘 맞아요 ({delta})",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.occasion.adjNeg",
+  "label": "{occasion} 분위기와는 조금 멀어요 ({delta})",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.occasion.prefer",
+  "label": "{occasion}에 어울리는 아이템 {n}개 ({delta})",
   "shortLabel": null,
   "aliases": [],
   "help": ""
  },
  {
   "id": "explain.occasion.window",
-  "label": "{occasion} 격식 창 밖 아이템 {n}개 ({delta})",
+  "label": "{occasion} 기준에서 벗어난 아이템 {n}개 ({delta})",
   "shortLabel": null,
   "aliases": [],
   "help": ""
  },
  {
   "id": "explain.occasion.target",
-  "label": "{occasion}에 딱 맞는 격식 (+0.2)",
+  "label": "전체 수준이 {occasion}에 딱 맞아요 (+0.2)",
   "shortLabel": null,
   "aliases": [],
   "help": ""
@@ -2008,8 +2022,22 @@
   "help": ""
  },
  {
+  "id": "explain.occasion.shortfall",
+  "label": "{occasion}에 맞는 조합이 더 없어요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
   "id": "explain.acc",
   "label": "{accessory}: {reason}",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.occasion",
+  "label": "{occasion} 기본 소품",
   "shortLabel": null,
   "aliases": [],
   "help": ""
@@ -2071,6 +2099,258 @@
   "help": ""
  },
  {
+  "id": "explain.acc.acBeltBrownShoes",
+  "label": "브라운 구두엔 브라운 계열 벨트",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acBeltBlackShoes",
+  "label": "블랙 구두엔 블랙 벨트",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acBeltBurgundyShoes",
+  "label": "버건디 구두엔 다크 브라운 벨트",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acBeltBrownBlack",
+  "label": "브라운 구두에 블랙 벨트는 피해요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acBeltSneaker",
+  "label": "스니커즈엔 캔버스·브레이디드 벨트가 편해요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acBeltSuede",
+  "label": "스웨이드 신발엔 스웨이드 벨트",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acBeltFormalWidth",
+  "label": "드레시한 날엔 좁고 매끈한 벨트",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acBeltHiddenTee",
+  "label": "상의가 벨트를 가려요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acBeltBuckleMetal",
+  "label": "버클 금속은 시계와 맞춰요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acWatchLeatherUnify",
+  "label": "시계줄도 신발·벨트와 같은 가죽 색으로",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acWatchNatoCasual",
+  "label": "캐주얼 코디엔 나토·러버 스트랩도 좋아요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acWatchNatoFormal",
+  "label": "드레시한 코디에 나토 스트랩은 어색해요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acSocksMatchTrousers",
+  "label": "바지색 양말이 다리를 길어 보이게 해요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acSocksNoShowSummerLoafer",
+  "label": "여름 로퍼·스니커즈엔 페이크삭스",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acSocksWinterLoafer",
+  "label": "겨울 로퍼엔 바지색이나 네이비·차콜 양말",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acSocksWhiteSneakerOnly",
+  "label": "흰 운동 양말은 스니커즈·러닝화에만",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acSocksWhiteDress",
+  "label": "구두에 흰 운동 양말은 피해요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acSocksCropSneaker",
+  "label": "크롭 바지+스니커즈엔 페이크삭스나 흰 양말",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acSocksPlainDefault",
+  "label": "구두·부츠엔 바지보다 한 톤 어두운 무지 양말",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acSocksPatternOnce",
+  "label": "코디에 패턴이 없으니 작은 패턴 양말도 좋아요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acSocksSandal",
+  "label": "샌들엔 양말 없이",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acBagFormalLeather",
+  "label": "드레시한 코디엔 가죽 가방, 신발과 같은 색",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acBagCasualNylon",
+  "label": "나일론·캔버스 백팩, 블랙·올리브·네이비·차콜 중 하나",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acBagBackpackFormal",
+  "label": "코트·블레이저에 백팩은 어색해요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acBagCanvasTote",
+  "label": "캔버스 토트가 이 스타일의 시그니처예요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acBagLeatherUnify",
+  "label": "가죽 가방은 신발과 같은 가죽 색으로",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acHatFormalNone",
+  "label": "드레시한 코디엔 모자를 빼요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acHatTailoredNone",
+  "label": "재킷·코트엔 볼캡을 빼요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acCapColorRange",
+  "label": "모자는 아우터와 비슷한 톤이나 코디 안의 색으로",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acBeanieCasualOuter",
+  "label": "캐주얼 겨울 아우터엔 비니가 잘 어울려요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acScarfSolidCoat",
+  "label": "무지 코트엔 어떤 색·패턴 머플러도 좋아요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acScarfSfCoat",
+  "label": "봄가을 코트엔 얇은 머플러",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acScarfPatternCoat",
+  "label": "패턴 코트엔 무지 머플러, 코트 속 한 색으로",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acScarfAccentOnce",
+  "label": "포인트 컬러가 이미 있으니 머플러는 뉴트럴로",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acScarfFormalMaterial",
+  "label": "드레시한 코디엔 얇은 울·캐시미어 머플러",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc.acMetalUnify",
+  "label": "시계와 버클 금속은 실버·골드 한 가지로",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
   "id": "ui.byStyle",
   "label": "스타일",
   "shortLabel": null,
@@ -2114,7 +2394,7 @@
  },
  {
   "id": "ui.formalApprox",
-  "label": "재킷+슬랙스 기준. 수트는 2차",
+  "label": "재킷+슬랙스 기준",
   "shortLabel": null,
   "aliases": [],
   "help": ""

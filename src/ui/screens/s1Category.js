@@ -10,7 +10,7 @@ const CATS = ['bottom', 'top', 'shoes', 'outer'];
 const STEPS = [
   ['하나 고르면', '하의·상의·신발·아우터 중 하나'],
   ['바로 세 가지 조합', '색만 고르면 끝'],
-  ['더 보기에서 톤별·변주', '저장·공유는 카드에서'],
+  ['더 보기에서 더 많은 조합', '톤별·색상별·변주'],
 ];
 
 export function s1Category() {
@@ -22,17 +22,6 @@ export function s1Category() {
   body.append(h('div', { class: 's1__hero' },
     h('div', { class: 'eyebrow', text: '오늘 아침' }),
     h('h1', { text: '오늘 입을 옷, 하나만 고르세요' })));
-
-  // 온보딩 스트립 (ON): 첫 실행만. 장식 — 누를 것 없음, 건너뛰기 = 카테고리 탭
-  if (!read(KEYS.onboarded)) {
-    const strip = h('ol', { class: 'onb', 'aria-label': '처음 안내' });
-    STEPS.forEach(([t, s], i) => {
-      strip.append(h('li', { class: 'onb__step', style: `--i:${i}` },
-        h('span', { class: 'onb__num', 'aria-hidden': 'true', text: String(i + 1) }),
-        h('span', { class: 'onb__text' }, h('b', { text: t }), h('small', { text: s }))));
-    });
-    body.append(strip);
-  }
 
   if (st.recents.length) {
     const rec = h('div', { class: 's1__recents' });
@@ -48,6 +37,16 @@ export function s1Category() {
   }
 
   body.append(h('div', { class: 'spacer' }));
+  // 온보딩 스트립 (ON): 첫 실행만. 장식 — 누를 것 없음, 건너뛰기 = 카테고리 탭. 힌트 바로 위(U6-17: 빈 216px 제거, 눈이 타일로 이어짐)
+  if (!read(KEYS.onboarded)) {
+    const strip = h('ol', { class: 'onb', 'aria-label': '처음 안내' });
+    STEPS.forEach(([t, s], i) => {
+      strip.append(h('li', { class: 'onb__step', style: `--i:${i}` },
+        h('span', { class: 'onb__num', 'aria-hidden': 'true', text: String(i + 1) }),
+        h('span', { class: 'onb__text' }, h('b', { text: t }), h('small', { text: s }))));
+    });
+    body.append(strip);
+  }
   body.append(h('p', { class: 's1__hint', text: '색을 고르면 바로 조합이 나와요' }));
   const grid = h('div', { class: 's1__grid', role: 'group', 'aria-label': '기준 아이템 종류' });
   for (const c of CATS) {

@@ -1,9 +1,9 @@
 // 진입점 — engine-spec.md 1·5절. 구현: C2. Phase 6-B (CX): style·occasion·accessories·layering·patterns 옵션 (content-expansion.md 7절)
 import { generateCandidates, pickClassic, quickPool, selectQuick, toCandidate, compareOutfits } from './candidates.js';
-import { groupByTone, groupByHue, makeVariations, groupByStyle, groupByOccasion, makePatternVariations, RELAX_STAGES } from './groups.js';
+import { groupByTone, groupByHue, makeVariations, groupByStyle, groupByOccasion, makePatternVariations, RELAX_STAGES, relaxMaxStage } from './groups.js';
 import { materialize } from './candidates.js';
 import { formalityLevel } from './lookup.js';
-import { FORMALITY_BLOCK, QUICK_CARDS } from './constants.js';
+import { FORMALITY_BLOCK, QUICK_CARDS, CANDIDATE_MAX, OCC_ALT } from './constants.js';
 import { hasStyles, hasOccasions, styleVector, styleTags, styleBoost, occasionAdjust, occasionAvoidHit, occasionFit, suggestAccessories, patternExcluded } from './style.js';
 import { formatReason } from './explain.js';
 
@@ -91,22 +91,29 @@ export function decorateCandidate(index, c, season, opts, occ) {
   if (opts.style && sv) reasons.push({ key: 'explain.style.boost', params: { style: opts.style, delta: boost }, delta: boost, severity: 'info' });
   else if (c.styleTags[0]) reasons.push({ key: 'explain.style.tag', params: { style: c.styleTags[0].id }, severity: 'info' });
   if (oa) {
-    if (oa.styleAdj) reasons.push({ key: 'explain.occasion.adj', params: { occasion: occ.id, delta: oa.styleAdj }, delta: oa.styleAdj, severity: 'info' });
+    // C6-13: 분위기(+)·안 맞음(−)을 다른 문장으로, 창 밖 아이템이 있으면 '딱 맞아요'는 생략(모순 방지)
+    if (oa.styleAdj > 0) reasons.push({ key: 'explain.occasion.adj', params: { occasion: occ.id, delta: oa.styleAdj }, delta: oa.styleAdj, severity: 'info' });
+    else if (oa.styleAdj < 0) reasons.push({ key: 'explain.occasion.adjNeg', params: { occasion: occ.id, delta: oa.styleAdj }, delta: oa.styleAdj, severity: 'info' });
+    if (oa.preferBonus) reasons.push({ key: 'explain.occasion.prefer', params: { occasion: occ.id, n: oa.preferN, delta: oa.preferBonus }, delta: oa.preferBonus, severity: 'info' });
     if (oa.outside) reasons.push({ key: 'explain.occasion.window', params: { occasion: occ.id, n: oa.outside, delta: oa.windowPenalty }, delta: oa.windowPenalty, severity: 'warn' });
-    if (oa.targetBonus) reasons.push({ key: 'explain.occasion.target', params: { occasion: occ.id }, delta: oa.targetBonus, severity: 'info' });
+    else if (oa.targetBonus) reasons.push({ key: 'explain.occasion.target', params: { occasion: occ.id }, delta: oa.targetBonus, severity: 'info' });
   }
   c.styleReasons = reasons;
   c.styleExplain = reasons.map((r) => formatReason(r, L));
   return c;
 }
 
-/** 소품 제안 첨부 — 결과에 실리는 카드에만(후보 300장 전부가 아니라) */
+/**
+ * 소품 제안 첨부 — 결과에 실리는 카드에만(후보 300장 전부가 아니라).
+ * C6-10: 문장은 labels `explain.acc.<ruleId>`(사용자 문장) 우선, 없으면 규칙 note. 상황 기본값은 `explain.acc.occasion`({occasion} 치환)
+ */
 export function attachAccessories(index, c, season, opts, occ) {
   if (!opts.accessories || c.accessories) return c;
   const L = index.labelMap;
   const forced = typeof opts.accessories === 'object' ? opts.accessories : {};
+  const sentence = (a) => (L[a.key] ? formatReason({ key: a.key, params: { occasion: occ?.id ?? '' } }, L) : a.note);
   c.accessories = suggestAccessories(index, c.outfit, season, c.styleVec ?? null, { ...forced, occasion: occ?.id ?? null })
-    .map((a) => ({ ...a, text: formatReason({ key: 'explain.acc', params: { accessory: a.id, reason: a.color ? `${L[`color.${a.color}`] ?? a.color} — ${a.note}` : a.note } }, L) }));
+    .map((a) => { const s = sentence(a); return { ...a, reason: s, text: formatReason({ key: 'explain.acc', params: { accessory: a.id, reason: a.color ? `${L[`color.${a.color}`] ?? a.color} — ${s}` : s } }, L) }; });
   return c;
 }
 
@@ -122,20 +129,28 @@ export function recommend(index, query) {
   const sv = (o) => styleVectorCached(index, o);
   const rankAdj = (o) => styleBoost(sv(o), opts.style) + (occ ? occasionAdjust(index, o, occ, sv(o)).total : 0);
   const decorate = (c) => decorateCandidate(index, c, season, opts, occ);
-  const applied = { style: opts.style, occasion: opts.occasion, accessories: !!opts.accessories, layering: opts.layering, patterns: opts.patterns, relaxed: [] };
+  const L = index.labelMap;
+  // applied: UI 계약 — relaxed(완화 단계 배열), shortfall(격식·운동 완화 상한에서 3장 미만), shortfallText("격식에 맞는 조합이 더 없어요")
+  const applied = { style: opts.style, occasion: opts.occasion, accessories: !!opts.accessories, layering: opts.layering, patterns: opts.patterns, relaxed: [], shortfall: false, shortfallText: null };
+  const alt = occ ? OCC_ALT[occ.id] ?? null : null; // C6-01·02: 상황별 대체 구체화 (운동: 테크 팬츠, 여름 격식: 린넨 셔츠)
 
-  // Quick 3장: 옵션 없으면 Phase 4와 동일(pickClassic). 옵션 있으면 같은 풀을 finalRanked로 재정렬 + 상황 avoid 단계 완화(항상 3장, D-2)
+  // Quick 3장: 옵션 없으면 Phase 4와 동일(pickClassic). 옵션 있으면 같은 풀을 finalRanked로 재정렬 + 상황 avoid 단계 완화(D-2).
+  // C6-01·02: 완화 상한 OCC_RELAX_MAX_STAGE(격식·운동 2) — 상한에서 3장 미만이면 그대로 두고 applied.shortfall = true (스니커즈 '격식' 카드 금지)
   let classic;
   if (opts.style || occ) {
-    const pool = quickPool(index, base, season);
-    const stages = occ ? RELAX_STAGES.map((_, i) => i) : [null];
+    const pool = quickPool(index, base, season, alt ? { alt } : {});
+    const maxStage = occ ? relaxMaxStage(occ.id) : 0;
+    const stages = occ ? RELAX_STAGES.map((_, i) => i).filter((i) => i <= maxStage) : [null];
     for (const stage of stages) {
       const exclude = occ ? (o) => !!occasionAvoidHit(o, occ, stage) : undefined;
       classic = selectQuick(index, base, season, pool, QUICK_CARDS, { rankAdj, exclude, noFallback: true });
       applied.relaxed = occ ? RELAX_STAGES[stage] : [];
       if (classic.length >= QUICK_CARDS) break;
     }
-    if (!classic?.length) classic = pickClassic(index, base, season);
+    if (occ && classic.length < QUICK_CARDS) {
+      applied.shortfall = true;
+      applied.shortfallText = formatReason({ key: 'explain.occasion.shortfall', params: { occasion: occ.id } }, L);
+    } else if (!classic?.length) classic = pickClassic(index, base, season);
   } else classic = pickClassic(index, base, season);
   classic.forEach(decorate);
 
@@ -143,6 +158,14 @@ export function recommend(index, query) {
   if (mode === 'deep') {
     const outfits = generateCandidates(index, base, season, { layering: opts.layering }).filter((o) => !patternExcluded(index, o, season, 'deep'));
     const candidates = outfits.map((o) => decorate(toCandidate(index, o, season)));
+    // C6-01·02: 상황 그룹 전용 대체 후보(OCC_ALT) — 그 상황 그룹이 완화 상한에서 3장 미만일 때만 생성(지연, 성능). byTone·byHue·byStyle·variations 집합은 그대로(E-21b)
+    const baseIds = new Set(outfits.map((o) => o.id));
+    const extraFor = (occId) => {
+      if (!OCC_ALT[occId]) return [];
+      return generateCandidates(index, base, season, { alts: { [occId]: OCC_ALT[occId] }, altOnly: true, max: CANDIDATE_MAX })
+        .filter((o) => !baseIds.has(o.id) && !patternExcluded(index, o, season, 'deep'))
+        .map((o) => decorate(toCandidate(index, o, season)));
+    };
     const reorder = (list) => (opts.style || occ ? [...list].sort((a, b) => b.rank.finalRanked - a.rank.finalRanked || compareOutfits(index, a.outfit, b.outfit, season)) : list);
     result.byTone = groupByTone(index, candidates, base).map((g) => ({ ...g, candidates: reorder(g.candidates) }));
     result.byHue = groupByHue(index, candidates, base, 5, { toneGroups: result.byTone }).map((g) => ({ ...g, candidates: reorder(g.candidates) })); // P1-06: 유사색 ≠ 톤별 같은 5장
@@ -151,7 +174,7 @@ export function recommend(index, query) {
     variations.forEach((v) => decorate(v.candidate));
     result.variations = opts.style || occ ? [...variations].sort((a, b) => b.candidate.rank.finalRanked - a.candidate.rank.finalRanked || compareOutfits(index, a.candidate.outfit, b.candidate.outfit, season)) : variations;
     result.byStyle = groupByStyle(index, candidates, { style: opts.style });
-    result.byOccasion = groupByOccasion(index, candidates);
+    result.byOccasion = groupByOccasion(index, candidates, { extraFor });
     result.avoid = avoidList(index, base, season);
     result.stats.candidates = candidates.length;
     const shown = [...result.byTone, ...result.byHue, ...result.byStyle, ...result.byOccasion].flatMap((g) => g.candidates).concat(result.variations.map((v) => v.candidate));

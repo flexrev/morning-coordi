@@ -1,10 +1,10 @@
-// 코치마크 — ux-enhancement 7-2 · motion-spec 3-15. 평생 2개(more·fav), role=status, 포커스 안 뺏음, 스크림 없음.
+// 코치마크 — ux-enhancement 7-2 · motion-spec 3-15. 평생 1개(more), role=status, 포커스 안 뺏음, 스크림 없음.
+// 코치마크 B(저장)는 제거(U6-11: 버튼에 이미 "저장" 글자, 기장 행을 가림). 문구는 1줄 규칙(U6-16).
 import { h } from './dom.js';
 import { read, write, KEYS } from './storage.js';
 
 export const TEXT = {
-  more: '세 장이 전부가 아니에요 — 톤별·변주는 여기에',
-  fav: '마음에 들면 여기에 모아 두세요',
+  more: '톤별·변주는 여기에',
 };
 
 export function seen(key) { return !!(read(KEYS.hints, {}) || {})[key]; }
@@ -15,12 +15,12 @@ let current = null;
 
 /**
  * 대상 위에 말풍선 1개. 아무 탭·6초·화면 전환(노드 분리)에 사라짐.
- * @param {'more'|'fav'} key
+ * @param {'more'} key
  * @param {HTMLElement} target  하단 40% 안의 요소 (더 보기 버튼 · ♥ 저장)
  * @param {{delay?:number}} [opts]
  */
 export function showCoach(key, target, { delay = 0 } = {}) {
-  if (!target || seen(key) || current) return;
+  if (!target || !TEXT[key] || seen(key) || current) return;
   markSeen(key);
   const el = h('div', { class: 'coach', role: 'status', text: TEXT[key] });
   current = el;

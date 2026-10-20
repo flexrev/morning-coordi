@@ -28,7 +28,6 @@
   --shadow-1:0 1px 2px rgba(0,0,0,.5); --shadow-2:0 16px 40px rgba(0,0,0,.6);
   --shadow-chip:0 6px 14px rgba(0,0,0,.35);
   --scrim:rgba(0,0,0,.55);
-  --grain-opacity:.05;
   --sil-ink:#F4F2ED;                    /* 실루엣 선(currentColor) */
   /* 실루엣 보조 색 (asset-system 4-1) — 테마 공통, metal 만 라이트에서 어둡게 */
   --c-skin:#C9A98C; --c-hair:#2B2420; --c-sole:#ECE9E2; --c-metal:#C8C6C0;
@@ -55,7 +54,6 @@
   --shadow-1:0 1px 2px rgba(60,42,20,.06); --shadow-2:0 12px 32px rgba(60,42,20,.14);
   --shadow-chip:0 4px 10px rgba(60,42,20,.12);
   --scrim:rgba(0,0,0,.35);
-  --grain-opacity:0;
   --sil-ink:#1F1C18;
   --c-metal:#A8A6A0;
 }
@@ -71,7 +69,7 @@
     --border:var(--glass-border); --border-strong:rgba(60,42,20,.24); --chip-border:rgba(0,0,0,.42);
     --focus:#7E5F26;
     --shadow-1:0 1px 2px rgba(60,42,20,.06); --shadow-2:0 12px 32px rgba(60,42,20,.14); --shadow-chip:0 4px 10px rgba(60,42,20,.12);
-    --scrim:rgba(0,0,0,.35); --grain-opacity:0; --sil-ink:#1F1C18; --c-metal:#A8A6A0;
+    --scrim:rgba(0,0,0,.35); --sil-ink:#1F1C18; --c-metal:#A8A6A0;
   }
 }
 
@@ -98,8 +96,6 @@
   --safe-bottom:max(env(safe-area-inset-bottom, 0px), 0px);
   /* 실루엣 색 슬롯 (renderOutfit 이 인라인 style 로 덮어씀) */
   --c-top:#BBBBBB; --c-bottom:#444444; --c-shoes:#222222; --c-outer:#555555; --c-mid:#999999;
-  /* 그레인 (인라인 SVG feTurbulence, 외부 파일 없음) — html[data-grain] 일 때만 body::after 에 깔린다 */
-  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 /* 모션 토큰 — motion-spec 2-1. 모든 animation/transition 값은 반드시 var(--dur-*)·var(--ease-*) 를 쓴다 (R6). */

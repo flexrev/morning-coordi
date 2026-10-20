@@ -1,0 +1,592 @@
+# 3. byOccasion (Deep) — 8 bases × 3 seasons. 각 상황 3장 + relaxed 단계. 뒤에 quick+occasion applied.relaxed 전수
+
+## bottom/indigo 봄가을
+  [work] relaxed=none (stage 0)
+    g-15oc789 화이트 옥스포드 셔츠[6] · 인디고 데님[4] · 블랙 더비[7] · 베이지 트렌치 코트[7] | avgF 6.00 tags=work,weekend,date final 5
+    g-bo2wpq 라이트 블루 옥스포드 셔츠[6] · 인디고 데님[4] · 블랙 더비[7] · 베이지 트렌치 코트[7] | avgF 6.00 tags=work,weekend,date final 4.92
+    g-3xav1w 네이비 코튼 니트[4] · 인디고 데님[4] · 탄 척카 부츠[5] · 네이비 블레이저[7] | avgF 5.00 tags=work,weekend,date final 4.98
+  [weekend] relaxed=none (stage 0)
+    g-b0tfx0 그레이 멜란지 맨투맨[2] · 인디고 데님[4] · 탄 척카 부츠[5] | avgF 3.67 tags=weekend final 5
+    g-1qudia2 올리브 코튼 니트[4] · 인디고 데님[4] · 탄 척카 부츠[5] | avgF 4.33 tags=weekend,date final 5
+    g-174egke 베이지 코튼 니트[4] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.67 tags=weekend,active final 5
+  [date] relaxed=none (stage 0)
+    g-jfa8sc 화이트 옥스포드 셔츠[6] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 4.33 tags=weekend,date final 5
+    g-1m3o0dq 차콜 코튼 니트[4] · 인디고 데님[4] · 블랙 더비[7] · 베이지 트렌치 코트[7] | avgF 5.50 tags=work,weekend,date final 4.92
+    g-1rva4qf 네이비 코튼 니트[4] · 인디고 데님[4] · 블랙 더비[7] · 베이지 트렌치 코트[7] | avgF 5.50 tags=work,weekend,date final 4.92
+  [active] relaxed=none (stage 0)
+    g-zmxfmd 그레이 멜란지 맨투맨[2] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.00 tags=weekend,active final 5
+    g-hh3c97 올리브 코튼 니트[4] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.67 tags=weekend,active final 5
+    g-174egke 베이지 코튼 니트[4] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.67 tags=weekend,active final 5
+  [formal] relaxed=patterns>materials (stage 2)
+    g-15oc789 화이트 옥스포드 셔츠[6] · 인디고 데님[4] · 블랙 더비[7] · 베이지 트렌치 코트[7] | avgF 6.00 tags=work,weekend,date final 5 **FORMAL-CASUAL**
+    g-1c71b60 라이트 블루 옥스포드 셔츠[6] · 인디고 데님[4] · 탄 더비[7] · 카멜 트렌치 코트[7] | avgF 6.00 tags=work,weekend,date final 5 **FORMAL-CASUAL**
+    g-10h4vws 차콜 울 니트[5] · 인디고 데님[4] · 탄 더비[7] · 네이비 블레이저[7] | avgF 5.75 tags=work,weekend,date final 5 **FORMAL-CASUAL**
+  date∩work = 0/3
+
+## bottom/indigo 여름
+  [work] relaxed=patterns>materials (stage 2)
+    g-2yjmqm 베이지 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.00 tags=weekend,active final 5
+    g-pq685x 화이트 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.00 tags=weekend,active final 5
+    g-12h2bka 차콜 티셔츠[2] · 인디고 데님[4] · 탄 페니 로퍼[6] | avgF 4.00 tags=weekend final 4.81
+  [weekend] relaxed=none (stage 0)
+    g-10grqff 올리브 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.00 tags=weekend,active final 5
+    g-15ietiq 그레이 멜란지 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.00 tags=weekend,active final 5
+    g-1ksdptr 베이지 티셔츠[2] · 인디고 데님[4] · 탄 페니 로퍼[6] | avgF 4.00 tags=weekend final 4.81
+  [date] relaxed=patterns>materials (stage 2)
+    g-14dvlrr 차콜 티셔츠[2] · 인디고 데님[4] · 브라운 페니 로퍼[6] | avgF 4.00 tags=weekend final 4.81
+    g-1fk8kq1 화이트 티셔츠[2] · 인디고 데님[4] · 브라운 페니 로퍼[6] | avgF 4.00 tags=weekend final 4.81
+    g-10grqff 올리브 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.00 tags=weekend,active final 5
+  [active] relaxed=none (stage 0)
+    g-10grqff 올리브 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.00 tags=weekend,active final 5
+    g-15ietiq 그레이 멜란지 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.00 tags=weekend,active final 5
+    g-15zl5nn 베이지 티셔츠[2] · 인디고 데님[4] · 네이비 컬러 스니커즈[2] | avgF 2.67 tags=weekend,active final 4.62
+  [formal] relaxed=patterns>materials (stage 2)
+    g-v1rme4 네이비 린넨 셔츠[5] · 인디고 데님[4] · 브라운 페니 로퍼[6] | avgF 5.00 tags=work,weekend,date final 4.96 **FORMAL-CASUAL**
+    g-1fss96j 화이트 린넨 셔츠[5] · 인디고 데님[4] · 브라운 페니 로퍼[6] | avgF 5.00 tags=work,weekend,date final 4.96 **FORMAL-CASUAL**
+    g-jvpfr5 라이트 블루 린넨 셔츠[5] · 인디고 데님[4] · 탄 페니 로퍼[6] | avgF 5.00 tags=work,weekend,date final 4.96 **FORMAL-CASUAL**
+  date∩work = 0/3
+
+## bottom/indigo 겨울
+  [work] relaxed=none (stage 0)
+    g-4pwuer 화이트 울 니트[5] · 인디고 데님[4] · 블랙 더비[7] · 카멜 체스터필드 코트[8] | avgF 6.00 tags=work,date final 4.94
+    g-1j89pr2 베이지 울 니트[5] · 인디고 데님[4] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | avgF 6.00 tags=work,date final 4.86
+    g-1u8uj91 초콜릿 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 5
+  [weekend] relaxed=none (stage 0)
+    g-1877iex 그레이 멜란지 맨투맨[2] · 인디고 데님[4] · 탄 워크 부츠[4] | avgF 3.33 tags=weekend,active final 5
+    g-17uykys 베이지 울 니트[5] · 인디고 데님[4] · 탄 워크 부츠[4] | avgF 4.33 tags=weekend,date final 5
+    g-gstcd4 올리브 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 5
+  [date] relaxed=none (stage 0)
+    g-4ljd1p 베이지 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 5
+    g-7ctkp2 화이트 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 5
+    g-1lwpj7r 차콜 울 니트[5] · 인디고 데님[4] · 블랙 더비[7] · 베이지 체스터필드 코트[8] | avgF 6.00 tags=work,date final 4.86
+  [active] relaxed=none (stage 0)
+    g-18hhq8g 그레이 멜란지 맨투맨[2] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.00 tags=weekend,active final 5
+    g-gstcd4 올리브 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 5
+    g-1dvjci7 블랙 울 니트[5] · 인디고 데님[4] · 탄 워크 부츠[4] | avgF 4.33 tags=weekend,date final 5
+  [formal] relaxed=patterns>materials (stage 2)
+    g-1ceh5pq 네이비 울 니트[5] · 인디고 데님[4] · 탄 더비[7] · 네이비 체스터필드 코트[8] | avgF 6.00 tags=work,date final 4.94 **FORMAL-CASUAL**
+    g-o4qmdm 차콜 울 니트[5] · 인디고 데님[4] · 브라운 더비[7] · 네이비 체스터필드 코트[8] | avgF 6.00 tags=work,date final 4.94 **FORMAL-CASUAL**
+    g-1js68mr 베이지 울 니트[5] · 인디고 데님[4] · 버건디 페니 로퍼[6] | avgF 5.00 tags=work,weekend,date final 4.7 **FORMAL-CASUAL**
+  date∩work = 0/3
+
+## bottom/beige 봄가을
+  [work] relaxed=none (stage 0)
+    g-16gyzg2 라이트 블루 옥스포드 셔츠[6] · 베이지 치노[5] · 블랙 더비[7] · 네이비 블레이저[7] | avgF 6.25 tags=work,date final 4.91
+    g-1rwbnxr 네이비 코튼 니트[4] · 베이지 치노[5] · 버건디 페니 로퍼[6] · 네이비 블레이저[7] | avgF 5.50 tags=work,weekend,date final 4.91
+    g-jbcsw4 화이트 옥스포드 셔츠[6] · 베이지 치노[5] · 브라운 척카 부츠[5] | avgF 5.33 tags=work,weekend,date final 4.92
+  [weekend] relaxed=none (stage 0)
+    g-1d1rkxj 네이비 코튼 니트[4] · 베이지 치노[5] · 탄 척카 부츠[5] | avgF 4.67 tags=weekend,date final 4.96
+    g-1x6ch2q 올리브 코튼 니트[4] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] | avgF 3.67 tags=weekend final 4.88
+    g-1d1gvfj 초콜릿 코튼 니트[4] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] | avgF 3.67 tags=weekend final 4.88
+  [date] relaxed=none (stage 0)
+    g-1g1h8ra 네이비 코튼 니트[4] · 베이지 치노[5] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 4.96
+    g-1o4ti9k 화이트 옥스포드 셔츠[6] · 베이지 치노[5] · 흰 스니커즈[3] | avgF 4.67 tags=weekend,date final 4.92
+    g-1cgo6pt 라이트 블루 옥스포드 셔츠[6] · 베이지 치노[5] · 버건디 페니 로퍼[6] | avgF 5.67 tags=work,weekend,date final 4.92
+  [active] relaxed=none (stage 0)
+    g-7sq2jw 그레이 멜란지 맨투맨[2] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] | avgF 3.00 tags=weekend final 4.85
+    g-1g1h8ra 네이비 코튼 니트[4] · 베이지 치노[5] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 4.96
+    g-1x6ch2q 올리브 코튼 니트[4] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] | avgF 3.67 tags=weekend final 4.88
+  [formal] relaxed=none (stage 0)
+    g-16gyzg2 라이트 블루 옥스포드 셔츠[6] · 베이지 치노[5] · 블랙 더비[7] · 네이비 블레이저[7] | avgF 6.25 tags=work,date final 4.91
+    g-zzubr5 화이트 옥스포드 셔츠[6] · 베이지 치노[5] · 버건디 페니 로퍼[6] · 네이비 블레이저[7] | avgF 6.00 tags=work,weekend,date final 4.74
+    g-1cgo6pt 라이트 블루 옥스포드 셔츠[6] · 베이지 치노[5] · 버건디 페니 로퍼[6] | avgF 5.67 tags=work,weekend,date final 4.92
+  date∩work = 0/3
+
+## bottom/beige 여름
+  [work] relaxed=patterns>materials (stage 2)
+    g-1qyxe6u 네이비 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.92
+    g-12kpewm 라이트 블루 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.92
+    g-5ntd4d 화이트 티셔츠[2] · 베이지 치노[5] · 브라운 페니 로퍼[6] | avgF 4.33 tags=weekend final 4.73
+  [weekend] relaxed=none (stage 0)
+    g-17fadu9 화이트 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.92
+    g-1qyxe6u 네이비 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.92
+    g-1wefr76 올리브 티셔츠[2] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] | avgF 3.00 tags=weekend final 4.85
+  [date] relaxed=patterns>materials (stage 2)
+    g-13vuimv 라이트 블루 티셔츠[2] · 베이지 치노[5] · 탄 페니 로퍼[6] | avgF 4.33 tags=weekend final 4.73
+    g-1dkznu2 네이비 티셔츠[2] · 베이지 치노[5] · 브라운 페니 로퍼[6] | avgF 4.33 tags=weekend final 4.73
+    g-17fadu9 화이트 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.92
+  [active] relaxed=none (stage 0)
+    g-17fadu9 화이트 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.92
+    g-1qyxe6u 네이비 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.92
+    g-1wefr76 올리브 티셔츠[2] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] | avgF 3.00 tags=weekend final 4.85
+  [formal] relaxed=patterns>materials (stage 2)
+    g-1atmo05 네이비 린넨 셔츠[5] · 베이지 치노[5] · 탄 페니 로퍼[6] | avgF 5.33 tags=work,weekend,date final 4.96
+    g-lunn0f 화이트 린넨 셔츠[5] · 베이지 치노[5] · 브라운 페니 로퍼[6] | avgF 5.33 tags=work,weekend,date final 4.96
+    g-19wacat 라이트 블루 린넨 셔츠[5] · 베이지 치노[5] · 탄 페니 로퍼[6] | avgF 5.33 tags=work,weekend,date final 4.96
+  date∩work = 0/3
+
+## bottom/beige 겨울
+  [work] relaxed=none (stage 0)
+    g-kr3f5i 네이비 울 니트[5] · 베이지 치노[5] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | avgF 6.25 tags=work,date final 4.89
+    g-1x33g8m 라이트 블루 울 니트[5] · 베이지 치노[5] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | avgF 6.25 tags=work,date final 4.89
+    g-14i3d8i 화이트 울 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] | avgF 4.33 tags=weekend,date final 4.96
+  [weekend] relaxed=none (stage 0)
+    g-1ku14a1 그레이 멜란지 맨투맨[2] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] | avgF 3.00 tags=weekend final 4.85
+    g-14i3d8i 화이트 울 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] | avgF 4.33 tags=weekend,date final 4.96
+    g-1ned3b9 네이비 울 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] | avgF 4.33 tags=weekend,date final 4.96
+  [date] relaxed=none (stage 0)
+    g-14i3d8i 화이트 울 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] | avgF 4.33 tags=weekend,date final 4.96
+    g-1ned3b9 네이비 울 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] | avgF 4.33 tags=weekend,date final 4.96
+    g-1iaoa3f 라이트 블루 울 니트[5] · 베이지 치노[5] · 버건디 페니 로퍼[6] | avgF 5.33 tags=work,weekend,date final 4.96
+  [active] relaxed=none (stage 0)
+    g-1ku14a1 그레이 멜란지 맨투맨[2] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] | avgF 3.00 tags=weekend final 4.85
+    g-o538rl 올리브 울 니트[5] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] | avgF 4.00 tags=weekend final 4.88
+    g-14i3d8i 화이트 울 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] | avgF 4.33 tags=weekend,date final 4.96
+  [formal] relaxed=none (stage 0)
+    g-kr3f5i 네이비 울 니트[5] · 베이지 치노[5] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | avgF 6.25 tags=work,date final 4.89
+    g-1x33g8m 라이트 블루 울 니트[5] · 베이지 치노[5] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | avgF 6.25 tags=work,date final 4.89
+    g-77idz0 화이트 울 니트[5] · 베이지 치노[5] · 버건디 페니 로퍼[6] | avgF 5.33 tags=work,weekend,date final 4.36
+  date∩work = 1/3
+
+## bottom/charcoal 봄가을
+  [work] relaxed=none (stage 0)
+    g-mav1dp 라이트 블루 옥스포드 셔츠[6] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 카멜 트렌치 코트[7] | avgF 6.75 tags=work,date final 4.86
+    g-1v5vc7z 화이트 옥스포드 셔츠[6] · 차콜 울 슬랙스[7] · 블랙 더비[7] | avgF 6.67 tags=work,date final 4.85
+    g-1133zlv 오트밀 코튼 니트[4] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] · 네이비 블레이저[7] | avgF 5.25 tags=work,weekend,date final 4.55
+  [weekend] relaxed=none (stage 0)
+    g-182rtgt 오트밀 코튼 니트[4] · 차콜 울 슬랙스[7] · 초콜릿 척카 부츠[5] · 네이비 블레이저[7] | avgF 5.75 tags=work,weekend,date final 4.63
+    g-1sps8pc 네이비 코튼 니트[4] · 차콜 울 슬랙스[7] · 초콜릿 척카 부츠[5] · 카멜 트렌치 코트[7] | avgF 5.75 tags=work,weekend,date final 4.61
+    g-c16pef 라이트 블루 옥스포드 셔츠[6] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] · 카멜 트렌치 코트[7] | avgF 5.75 tags=work,weekend,date final 4.65
+  [date] relaxed=none (stage 0)
+    g-1lajz14 라이트 블루 옥스포드 셔츠[6] · 차콜 울 슬랙스[7] · 블랙 더비[7] | avgF 6.67 tags=work,date final 4.85
+    g-1xsvsic 네이비 코튼 니트[4] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 카멜 트렌치 코트[7] | avgF 6.25 tags=work,date final 4.83
+    g-182rtgt 오트밀 코튼 니트[4] · 차콜 울 슬랙스[7] · 초콜릿 척카 부츠[5] · 네이비 블레이저[7] | avgF 5.75 tags=work,weekend,date final 4.63
+  [active] relaxed=none (stage 0)
+    g-7cjcg0 화이트 티셔츠[2] · 차콜 테크 팬츠[3] · 흰 스니커즈[3] | avgF 2.67 tags=weekend,active final 4.25
+    g-ohr1rb 라이트 블루 티셔츠[2] · 차콜 테크 팬츠[3] · 흰 스니커즈[3] | avgF 2.67 tags=weekend,active final 4.25
+    g-1110xbb 그레이 멜란지 맨투맨[2] · 차콜 테크 팬츠[3] · 흰 스니커즈[3] | avgF 2.67 tags=weekend,active final 3.95
+  [formal] relaxed=none (stage 0)
+    g-mav1dp 라이트 블루 옥스포드 셔츠[6] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 카멜 트렌치 코트[7] | avgF 6.75 tags=work,date final 4.86
+    g-1v5vc7z 화이트 옥스포드 셔츠[6] · 차콜 울 슬랙스[7] · 블랙 더비[7] | avgF 6.67 tags=work,date final 4.85
+    g-1lajz14 라이트 블루 옥스포드 셔츠[6] · 차콜 울 슬랙스[7] · 블랙 더비[7] | avgF 6.67 tags=work,date final 4.85
+  date∩work = 0/3
+
+## bottom/charcoal 여름
+  [work] relaxed=none (stage 0)
+    g-1jjsavo 라이트 블루 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | avgF 6.00 tags=work,weekend,date final 4.88
+    g-xx5l1v 화이트 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | avgF 6.00 tags=work,weekend,date final 4.88
+    g-1mhxkmm 화이트 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] | avgF 5.00 tags=work,weekend,date final 4.02
+  [weekend] relaxed=none (stage 0)
+    g-xx5l1v 화이트 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | avgF 6.00 tags=work,weekend,date final 4.88
+    g-1jjsavo 라이트 블루 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | avgF 6.00 tags=work,weekend,date final 4.88
+    g-1bl27a4 화이트 티셔츠[2] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] | avgF 4.00 tags=weekend final 4.02
+  [date] relaxed=none (stage 0)
+    g-1yy0vah 라이트 블루 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] | avgF 5.00 tags=work,weekend,date final 4.02
+    g-18fl2cg 화이트 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 초콜릿 페니 로퍼[6] | avgF 6.00 tags=work,weekend,date final 3.98
+    g-15d6i93 라이트 블루 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 초콜릿 페니 로퍼[6] | avgF 6.00 tags=work,weekend,date final 3.98
+  [active] relaxed=none (stage 0)
+    g-1hgv2qv 화이트 티셔츠[2] · 차콜 테크 팬츠[3] · 흰 스니커즈[3] | avgF 2.67 tags=weekend,active final 4.25
+    g-ebasn4 라이트 블루 티셔츠[2] · 차콜 테크 팬츠[3] · 흰 스니커즈[3] | avgF 2.67 tags=weekend,active final 4.25
+    g-ltmjk0 그레이 멜란지 티셔츠[2] · 차콜 테크 팬츠[3] · 흰 스니커즈[3] | avgF 2.67 tags=weekend,active final 3.95
+  [formal] relaxed=patterns>materials (stage 2)
+    g-1jjsavo 라이트 블루 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | avgF 6.00 tags=work,weekend,date final 4.88
+    g-xx5l1v 화이트 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | avgF 6.00 tags=work,weekend,date final 4.88
+    g-nio9vq 네이비 피케 폴로[4] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | avgF 5.67 tags=weekend final 4.58
+  date∩work = 0/3
+
+## bottom/charcoal 겨울
+  [work] relaxed=none (stage 0)
+    g-1pxsdh9 네이비 울 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 카멜 체스터필드 코트[8] | avgF 6.75 tags=work,date final 4.89
+    g-6i19qc 오트밀 울 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | avgF 6.75 tags=work,date final 4.89
+    g-1wsz1or 화이트 울 니트[5] · 차콜 울 슬랙스[7] · 초콜릿 첼시 부츠[6] | avgF 6.00 tags=work,weekend,date final 4.66
+  [weekend] relaxed=none (stage 0)
+    g-9sxah1 화이트 울 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] | avgF 6.33 tags=work,date final 4.88
+    g-1k9wdgi 라이트 블루 울 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] | avgF 6.33 tags=work,date final 4.88
+    g-2z0lta 오트밀 울 니트[5] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] · 네이비 체스터필드 코트[8] | avgF 5.75 tags=work,date final 4.61
+  [date] relaxed=none (stage 0)
+    g-ruyye5 라이트 블루 울 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 카멜 체스터필드 코트[8] | avgF 6.75 tags=work,date final 4.89
+    g-9sxah1 화이트 울 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] | avgF 6.33 tags=work,date final 4.88
+    g-o88xhm 오트밀 울 니트[5] · 차콜 울 슬랙스[7] · 초콜릿 첼시 부츠[6] · 네이비 체스터필드 코트[8] | avgF 6.50 tags=work,date final 4.79
+  [active] relaxed=none (stage 0)
+    g-h1lox0 그레이 멜란지 맨투맨[2] · 차콜 테크 팬츠[3] · 초콜릿 워크 부츠[4] | avgF 3.00 tags=weekend,active final 4.21
+    g-1epuhki 화이트 울 니트[5] · 차콜 테크 팬츠[3] · 초콜릿 워크 부츠[4] | avgF 4.00 tags=weekend,date final 4.47
+    g-e5r34j 라이트 블루 울 니트[5] · 차콜 테크 팬츠[3] · 흰 스니커즈[3] | avgF 3.67 tags=weekend final 4.21
+  [formal] relaxed=none (stage 0)
+    g-1pxsdh9 네이비 울 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 카멜 체스터필드 코트[8] | avgF 6.75 tags=work,date final 4.89
+    g-6i19qc 오트밀 울 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | avgF 6.75 tags=work,date final 4.89
+    g-1wsz1or 화이트 울 니트[5] · 차콜 울 슬랙스[7] · 초콜릿 첼시 부츠[6] | avgF 6.00 tags=work,weekend,date final 4.66
+  date∩work = 0/3
+
+## bottom/blackDenim 봄가을
+  [work] relaxed=none (stage 0)
+    g-1qk658d 화이트 옥스포드 셔츠[6] · 블랙 데님[5] · 블랙 더비[7] | avgF 6.00 tags=work,weekend,date final 4.92
+    g-1to6pd0 라이트 그레이 코튼 니트[4] · 블랙 데님[5] · 블랙 더비[7] | avgF 5.33 tags=work,weekend,date final 4.92
+    g-1wwnwh9 차콜 코튼 니트[4] · 블랙 데님[5] · 미드 그레이 페니 로퍼[6] · 차콜 블레이저[7] | avgF 5.50 tags=work,weekend,date final 4.13
+  [weekend] relaxed=none (stage 0)
+    g-1to6pd0 라이트 그레이 코튼 니트[4] · 블랙 데님[5] · 블랙 더비[7] | avgF 5.33 tags=work,weekend,date final 4.92
+    g-1qk658d 화이트 옥스포드 셔츠[6] · 블랙 데님[5] · 블랙 더비[7] | avgF 6.00 tags=work,weekend,date final 4.92
+    g-kqbuta 그레이 멜란지 맨투맨[2] · 블랙 데님[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.58
+  [date] relaxed=none (stage 0)
+    g-1yx1geb 화이트 옥스포드 셔츠[6] · 블랙 데님[5] · 블랙 더비[7] · 차콜 블레이저[7] | avgF 6.25 tags=work,date final 4.65
+    g-p3lgd6 라이트 그레이 코튼 니트[4] · 블랙 데님[5] · 블랙 더비[7] · 차콜 블레이저[7] | avgF 5.75 tags=work,weekend,date final 4.64
+    g-xnfsjk 차콜 코튼 니트[4] · 블랙 데님[5] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 4.32
+  [active] relaxed=none (stage 0)
+    g-kqbuta 그레이 멜란지 맨투맨[2] · 블랙 데님[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.58
+    g-19ftub2 라이트 그레이 코튼 니트[4] · 블랙 데님[5] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 4.62
+    g-ktjtge 블랙 코튼 니트[4] · 블랙 데님[5] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 4.32
+  [formal] relaxed=none (stage 0)
+    g-1qk658d 화이트 옥스포드 셔츠[6] · 블랙 데님[5] · 블랙 더비[7] | avgF 6.00 tags=work,weekend,date final 4.92
+    g-uc8amc 라이트 블루 옥스포드 셔츠[6] · 블랙 데님[5] · 블랙 더비[7] · 차콜 블레이저[7] | avgF 6.25 tags=work,date final 4.31
+    g-dq5rve 화이트 옥스포드 셔츠[6] · 블랙 데님[5] · 미드 그레이 페니 로퍼[6] · 차콜 블레이저[7] | avgF 6.00 tags=work,weekend,date final 4.31
+  date∩work = 0/3
+
+## bottom/blackDenim 여름
+  [work] relaxed=patterns>materials (stage 2)
+    g-1du26qr 화이트 티셔츠[2] · 블랙 데님[5] · 블랙 페니 로퍼[6] | avgF 4.33 tags=weekend final 3.86
+    g-2cht6b 라이트 그레이 티셔츠[2] · 블랙 데님[5] · 블랙 페니 로퍼[6] | avgF 4.33 tags=weekend final 3.86
+    g-m2v595 그레이 멜란지 티셔츠[2] · 블랙 데님[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 3.75
+  [weekend] relaxed=none (stage 0)
+    g-9fe0zi 화이트 티셔츠[2] · 블랙 데님[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 3.75
+    g-m2v595 그레이 멜란지 티셔츠[2] · 블랙 데님[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 3.75
+    g-2cht6b 라이트 그레이 티셔츠[2] · 블랙 데님[5] · 블랙 페니 로퍼[6] | avgF 4.33 tags=weekend final 3.86
+  [date] relaxed=patterns>materials (stage 2)
+    g-w5nzwk 그레이 멜란지 티셔츠[2] · 블랙 데님[5] · 블랙 페니 로퍼[6] | avgF 4.33 tags=weekend final 3.86
+    g-9fe0zi 화이트 티셔츠[2] · 블랙 데님[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 3.75
+    g-1qiulml 차콜 티셔츠[2] · 블랙 데님[5] · 블랙 페니 로퍼[6] | avgF 4.33 tags=weekend final 3.56
+  [active] relaxed=none (stage 0)
+    g-m2v595 그레이 멜란지 티셔츠[2] · 블랙 데님[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 3.75
+    g-9fe0zi 화이트 티셔츠[2] · 블랙 데님[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 3.75
+    g-9so23y 라이트 그레이 티셔츠[2] · 블랙 데님[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 3.75
+  [formal] relaxed=patterns>materials (stage 2)
+    g-nqi7w1 화이트 린넨 셔츠[5] · 블랙 데님[5] · 블랙 페니 로퍼[6] | avgF 5.33 tags=work,weekend,date final 3.98
+    g-m7cwx 라이트 그레이 린넨 셔츠[5] · 블랙 데님[5] · 블랙 페니 로퍼[6] | avgF 5.33 tags=work,weekend,date final 3.98
+    g-11ppdjl 블랙 린넨 셔츠[5] · 블랙 데님[5] · 블랙 페니 로퍼[6] | avgF 5.33 tags=work,weekend,date final 3.48
+  date∩work = 0/3
+
+## bottom/blackDenim 겨울
+  [work] relaxed=none (stage 0)
+    g-yybl2f 화이트 울 니트[5] · 블랙 데님[5] · 블랙 더비[7] | avgF 5.67 tags=work,weekend,date final 4.92
+    g-16voikp 차콜 울 니트[5] · 블랙 데님[5] · 블랙 더비[7] · 미드 그레이 체스터필드 코트[8] | avgF 6.25 tags=work,date final 4.53
+    g-1xl6mds 미드 그레이 울 니트[5] · 블랙 데님[5] · 미드 그레이 페니 로퍼[6] · 차콜 체스터필드 코트[8] | avgF 6.00 tags=work,date final 4.17
+  [weekend] relaxed=none (stage 0)
+    g-yybl2f 화이트 울 니트[5] · 블랙 데님[5] · 블랙 더비[7] | avgF 5.67 tags=work,weekend,date final 4.92
+    g-ru9ur5 그레이 멜란지 맨투맨[2] · 블랙 데님[5] · 블랙 더비[7] | avgF 4.67 tags=weekend final 4.69
+    g-lkv6ml 블랙 울 니트[5] · 블랙 데님[5] · 흰 스니커즈[3] | avgF 4.33 tags=weekend,date final 4.32
+  [date] relaxed=none (stage 0)
+    g-yybl2f 화이트 울 니트[5] · 블랙 데님[5] · 블랙 더비[7] | avgF 5.67 tags=work,weekend,date final 4.92
+    g-16vdt21 차콜 울 니트[5] · 블랙 데님[5] · 블랙 더비[7] | avgF 5.67 tags=work,weekend,date final 4.62
+    g-lkv6ml 블랙 울 니트[5] · 블랙 데님[5] · 흰 스니커즈[3] | avgF 4.33 tags=weekend,date final 4.32
+  [active] relaxed=none (stage 0)
+    g-or3zgb 그레이 멜란지 맨투맨[2] · 블랙 데님[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.58
+    g-16irqy5 화이트 울 니트[5] · 블랙 데님[5] · 흰 스니커즈[3] | avgF 4.33 tags=weekend,date final 4.62
+    g-1fgqff 블랙 울 니트[5] · 블랙 데님[5] · 초콜릿 워크 부츠[4] | avgF 4.67 tags=weekend,date final 3.38
+  [formal] relaxed=none (stage 0)
+    g-yybl2f 화이트 울 니트[5] · 블랙 데님[5] · 블랙 더비[7] | avgF 5.67 tags=work,weekend,date final 4.92
+    g-gldcp 차콜 울 니트[5] · 블랙 데님[5] · 블랙 더비[7] · 차콜 체스터필드 코트[8] | avgF 6.25 tags=work,date final 4.53
+    g-1xl6mds 미드 그레이 울 니트[5] · 블랙 데님[5] · 미드 그레이 페니 로퍼[6] · 차콜 체스터필드 코트[8] | avgF 6.00 tags=work,date final 4.17
+  date∩work = 1/3
+
+## bottom/olive 봄가을
+  [work] relaxed=none (stage 0)
+    g-18knbd3 라이트 블루 옥스포드 셔츠[6] · 올리브 치노[5] · 블랙 더비[7] · 네이비 블레이저[7] | avgF 6.25 tags=work,date final 4.91
+    g-1v220ku 네이비 코튼 니트[4] · 올리브 치노[5] · 블랙 더비[7] · 네이비 블레이저[7] | avgF 5.75 tags=work,weekend,date final 4.91
+    g-1ynk5dv 화이트 옥스포드 셔츠[6] · 올리브 치노[5] · 초콜릿 척카 부츠[5] | avgF 5.33 tags=work,weekend,date final 4.92
+  [weekend] relaxed=none (stage 0)
+    g-1dl50ll 오프화이트 코튼 니트[4] · 올리브 치노[5] · 브라운 척카 부츠[5] · 인디고 데님 재킷[4] | avgF 4.50 tags=weekend,date final 4.93
+    g-1fdd2u4 네이비 코튼 니트[4] · 올리브 치노[5] · 탄 척카 부츠[5] · 인디고 데님 재킷[4] | avgF 4.50 tags=weekend,date final 4.93
+    g-1i1r8q7 베이지 코튼 니트[4] · 올리브 치노[5] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 4.96
+  [date] relaxed=none (stage 0)
+    g-13fwhhn 오프화이트 코튼 니트[4] · 올리브 치노[5] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 4.96
+    g-1i1r8q7 베이지 코튼 니트[4] · 올리브 치노[5] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 4.96
+    g-1v220ku 네이비 코튼 니트[4] · 올리브 치노[5] · 블랙 더비[7] · 네이비 블레이저[7] | avgF 5.75 tags=work,weekend,date final 4.91
+  [active] relaxed=none (stage 0)
+    g-2yo3dm 그레이 멜란지 맨투맨[2] · 올리브 치노[5] · 흰 스니커즈[3] · 인디고 데님 재킷[4] | avgF 3.50 tags=weekend final 4.91
+    g-1i1r8q7 베이지 코튼 니트[4] · 올리브 치노[5] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 4.96
+    g-e45ymw 탄 코튼 니트[4] · 올리브 치노[5] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 4.96
+  [formal] relaxed=none (stage 0)
+    g-18knbd3 라이트 블루 옥스포드 셔츠[6] · 올리브 치노[5] · 블랙 더비[7] · 네이비 블레이저[7] | avgF 6.25 tags=work,date final 4.91
+    g-1jzjls0 화이트 옥스포드 셔츠[6] · 올리브 치노[5] · 블랙 더비[7] · 네이비 블레이저[7] | avgF 6.25 tags=work,date final 4.57
+    g-1bfur1c 라이트 블루 옥스포드 셔츠[6] · 올리브 치노[5] · 블랙 더비[7] | avgF 6.00 tags=work,weekend,date final 4.32
+  date∩work = 1/3
+
+## bottom/olive 여름
+  [work] relaxed=patterns>materials (stage 2)
+    g-5rjt37 네이비 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.92
+    g-1yymtgk 화이트 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.92
+    g-10x9k1f 베이지 티셔츠[2] · 올리브 치노[5] · 브라운 페니 로퍼[6] | avgF 4.33 tags=weekend final 4.73
+  [weekend] relaxed=none (stage 0)
+    g-1yymtgk 화이트 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.92
+    g-5rjt37 네이비 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.92
+    g-10x9k1f 베이지 티셔츠[2] · 올리브 치노[5] · 브라운 페니 로퍼[6] | avgF 4.33 tags=weekend final 4.73
+  [date] relaxed=patterns>materials (stage 2)
+    g-1lse1r6 네이비 티셔츠[2] · 올리브 치노[5] · 탄 페니 로퍼[6] | avgF 4.33 tags=weekend final 4.73
+    g-1yymtgk 화이트 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.92
+    g-8hdw33 베이지 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.92
+  [active] relaxed=none (stage 0)
+    g-8hdw33 베이지 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.92
+    g-hgu3rs 탄 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.92
+    g-1yymtgk 화이트 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.92
+  [formal] relaxed=patterns>materials (stage 2)
+    g-1662jnx 네이비 린넨 셔츠[5] · 올리브 치노[5] · 브라운 페니 로퍼[6] | avgF 5.33 tags=work,weekend,date final 4.96
+    g-1hhand9 라이트 블루 린넨 셔츠[5] · 올리브 치노[5] · 브라운 페니 로퍼[6] | avgF 5.33 tags=work,weekend,date final 4.96
+    g-vptxhm 화이트 린넨 셔츠[5] · 올리브 치노[5] · 브라운 페니 로퍼[6] | avgF 5.33 tags=work,weekend,date final 4.96
+  date∩work = 1/3
+
+## bottom/olive 겨울
+  [work] relaxed=none (stage 0)
+    g-1i3hqrn 네이비 울 니트[5] · 올리브 치노[5] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | avgF 6.25 tags=work,date final 4.89
+    g-1af8vab 라이트 블루 울 니트[5] · 올리브 치노[5] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | avgF 6.25 tags=work,date final 4.89
+    g-10ktu4c 베이지 울 니트[5] · 올리브 치노[5] · 흰 스니커즈[3] | avgF 4.33 tags=weekend,date final 4.96
+  [weekend] relaxed=none (stage 0)
+    g-1hnpnbz 그레이 멜란지 맨투맨[2] · 올리브 치노[5] · 흰 스니커즈[3] · 인디고 데님 재킷[4] | avgF 3.50 tags=weekend final 4.91
+    g-18hv1j6 베이지 울 니트[5] · 올리브 치노[5] · 흰 스니커즈[3] · 인디고 데님 재킷[4] | avgF 4.25 tags=weekend,date final 4.93
+    g-1eopekk 네이비 울 니트[5] · 올리브 치노[5] · 브라운 워크 부츠[4] | avgF 4.67 tags=weekend,date final 4.85
+  [date] relaxed=none (stage 0)
+    g-10ktu4c 베이지 울 니트[5] · 올리브 치노[5] · 흰 스니커즈[3] | avgF 4.33 tags=weekend,date final 4.96
+    g-1954he8 라이트 블루 울 니트[5] · 올리브 치노[5] · 흰 스니커즈[3] | avgF 4.33 tags=weekend,date final 4.96
+    g-813t7o 네이비 울 니트[5] · 올리브 치노[5] · 블랙 더비[7] · 인디고 데님 재킷[4] | avgF 5.25 tags=work,weekend,date final 4.93
+  [active] relaxed=none (stage 0)
+    g-1hnpnbz 그레이 멜란지 맨투맨[2] · 올리브 치노[5] · 흰 스니커즈[3] · 인디고 데님 재킷[4] | avgF 3.50 tags=weekend final 4.91
+    g-10ktu4c 베이지 울 니트[5] · 올리브 치노[5] · 흰 스니커즈[3] | avgF 4.33 tags=weekend,date final 4.96
+    g-1uxxpi7 탄 울 니트[5] · 올리브 치노[5] · 브라운 워크 부츠[4] | avgF 4.67 tags=weekend,date final 4.85
+  [formal] relaxed=none (stage 0)
+    g-1i3hqrn 네이비 울 니트[5] · 올리브 치노[5] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | avgF 6.25 tags=work,date final 4.89
+    g-1af8vab 라이트 블루 울 니트[5] · 올리브 치노[5] · 블랙 더비[7] · 네이비 체스터필드 코트[8] | avgF 6.25 tags=work,date final 4.89
+    g-1xxtn7a 베이지 울 니트[5] · 올리브 치노[5] · 블랙 더비[7] | avgF 5.67 tags=work,weekend,date final 4.06
+  date∩work = 1/3
+
+## top/white 봄가을
+  [work] relaxed=none (stage 0)
+    g-15oc789 화이트 옥스포드 셔츠[6] · 인디고 데님[4] · 블랙 더비[7] · 베이지 트렌치 코트[7] | avgF 6.00 tags=work,weekend,date final 5
+    g-1npig9f 화이트 옥스포드 셔츠[6] · 인디고 데님[4] · 블랙 더비[7] · 카멜 트렌치 코트[7] | avgF 6.00 tags=work,weekend,date final 5
+    g-15ara6y 화이트 옥스포드 셔츠[6] · 인디고 데님[4] · 탄 척카 부츠[5] · 네이비 블레이저[7] | avgF 5.50 tags=work,weekend,date final 5
+  [weekend] relaxed=none (stage 0)
+    g-1gw6m8t 화이트 옥스포드 셔츠[6] · 인디고 데님[4] · 탄 척카 부츠[5] | avgF 5.00 tags=work,weekend,date final 5
+    g-1xjx7cw 화이트 옥스포드 셔츠[6] · 인디고 데님[4] · 브라운 척카 부츠[5] | avgF 5.00 tags=work,weekend,date final 5
+    g-jfa8sc 화이트 옥스포드 셔츠[6] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 4.33 tags=weekend,date final 5
+  [date] relaxed=none (stage 0)
+    g-jfa8sc 화이트 옥스포드 셔츠[6] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 4.33 tags=weekend,date final 5
+    g-1o4ti9k 화이트 옥스포드 셔츠[6] · 베이지 치노[5] · 흰 스니커즈[3] | avgF 4.67 tags=weekend,date final 4.92
+    g-12s0xrl 화이트 옥스포드 셔츠[6] · 네이비 치노[5] · 블랙 더비[7] · 베이지 트렌치 코트[7] | avgF 6.25 tags=work,date final 4.93
+  [active] relaxed=none (stage 0)
+    g-16br41e 화이트 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.00 tags=weekend,active final 5
+    g-q1pbqj 화이트 티셔츠[2] · 라이트워시 데님[3] · 흰 스니커즈[3] | avgF 2.67 tags=weekend,active final 4.88
+    g-1e3mco7 화이트 티셔츠[2] · 카키 치노[5] · 네이비 컬러 스니커즈[2] | avgF 3.00 tags=weekend final 4.85
+  [formal] relaxed=none (stage 0)
+    g-1v5vc7z 화이트 옥스포드 셔츠[6] · 차콜 울 슬랙스[7] · 블랙 더비[7] | avgF 6.67 tags=work,date final 4.85
+    g-1qe0xin 화이트 옥스포드 셔츠[6] · 미드 그레이 울 슬랙스[7] · 블랙 더비[7] | avgF 6.67 tags=work,date final 4.85
+    g-15t9phr 화이트 옥스포드 셔츠[6] · 네이비 치노[5] · 버건디 페니 로퍼[6] · 카멜 트렌치 코트[7] | avgF 6.00 tags=work,weekend,date final 4.76
+  date∩work = 0/3
+
+## top/white 여름
+  [work] relaxed=none (stage 0)
+    g-xx5l1v 화이트 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | avgF 6.00 tags=work,weekend,date final 4.88
+    g-641ig3 화이트 린넨 셔츠[5] · 미드 그레이 울 슬랙스[7] · 블랙 페니 로퍼[6] | avgF 6.00 tags=work,weekend,date final 4.88
+    g-1d04ori 화이트 린넨 셔츠[5] · 미드 그레이 울 슬랙스[7] · 흰 스니커즈[3] | avgF 5.00 tags=work,weekend,date final 4.32
+  [weekend] relaxed=none (stage 0)
+    g-pq685x 화이트 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.00 tags=weekend,active final 5
+    g-641ig3 화이트 린넨 셔츠[5] · 미드 그레이 울 슬랙스[7] · 블랙 페니 로퍼[6] | avgF 6.00 tags=work,weekend,date final 4.88
+    g-1yymtgk 화이트 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.92
+  [date] relaxed=none (stage 0)
+    g-8444zx 화이트 린넨 셔츠[5] · 블랙 울 슬랙스[7] · 블랙 페니 로퍼[6] | avgF 6.00 tags=work,weekend,date final 4.88
+    g-r8pmq 화이트 린넨 셔츠[5] · 미드 그레이 울 슬랙스[7] · 브라운 페니 로퍼[6] | avgF 6.00 tags=work,weekend,date final 4.88
+    g-1mhxkmm 화이트 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] | avgF 5.00 tags=work,weekend,date final 4.02
+  [active] relaxed=none (stage 0)
+    g-pq685x 화이트 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.00 tags=weekend,active final 5
+    g-13jquto 화이트 티셔츠[2] · 라이트워시 데님[3] · 흰 스니커즈[3] | avgF 2.67 tags=weekend,active final 4.88
+    g-p8cosg 화이트 티셔츠[2] · 카키 치노[5] · 네이비 컬러 스니커즈[2] | avgF 3.00 tags=weekend final 4.85
+  [formal] relaxed=patterns>materials (stage 2)
+    g-xx5l1v 화이트 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | avgF 6.00 tags=work,weekend,date final 4.88
+    g-641ig3 화이트 린넨 셔츠[5] · 미드 그레이 울 슬랙스[7] · 블랙 페니 로퍼[6] | avgF 6.00 tags=work,weekend,date final 4.88
+    g-r8pmq 화이트 린넨 셔츠[5] · 미드 그레이 울 슬랙스[7] · 브라운 페니 로퍼[6] | avgF 6.00 tags=work,weekend,date final 4.88
+  date∩work = 0/3
+
+## top/white 겨울
+  [work] relaxed=none (stage 0)
+    g-1n637f5 화이트 울 니트[5] · 네이비 치노[5] · 블랙 더비[7] · 베이지 체스터필드 코트[8] | avgF 6.25 tags=work,date final 4.89
+    g-16hj7iz 화이트 울 니트[5] · 네이비 치노[5] · 블랙 더비[7] · 카멜 체스터필드 코트[8] | avgF 6.25 tags=work,date final 4.89
+    g-kshy09 화이트 울 니트[5] · 미드 그레이 울 슬랙스[7] · 브라운 첼시 부츠[6] | avgF 6.00 tags=work,weekend,date final 4.96
+  [weekend] relaxed=none (stage 0)
+    g-puo8y1 화이트 울 니트[5] · 올리브 치노[5] · 흰 스니커즈[3] · 인디고 데님 재킷[4] | avgF 4.25 tags=weekend,date final 4.93
+    g-v1w4mo 화이트 울 니트[5] · 카키 치노[5] · 흰 스니커즈[3] · 인디고 데님 재킷[4] | avgF 4.25 tags=weekend,date final 4.93
+    g-1dm5o0i 화이트 울 니트[5] · 인디고 데님[4] · 브라운 워크 부츠[4] | avgF 4.33 tags=weekend,date final 5
+  [date] relaxed=none (stage 0)
+    g-7ctkp2 화이트 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 5
+    g-14i3d8i 화이트 울 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] | avgF 4.33 tags=weekend,date final 4.96
+    g-kshy09 화이트 울 니트[5] · 미드 그레이 울 슬랙스[7] · 브라운 첼시 부츠[6] | avgF 6.00 tags=work,weekend,date final 4.96
+  [active] relaxed=none (stage 0)
+    g-7ctkp2 화이트 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 5
+    g-1dm5o0i 화이트 울 니트[5] · 인디고 데님[4] · 브라운 워크 부츠[4] | avgF 4.33 tags=weekend,date final 5
+    g-1gnwmk4 화이트 울 니트[5] · 브라운 코듀로이[4] · 브라운 워크 부츠[4] | avgF 4.33 tags=weekend,date final 5
+  [formal] relaxed=none (stage 0)
+    g-9sxah1 화이트 울 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] | avgF 6.33 tags=work,date final 4.88
+    g-11nfe2d 화이트 울 니트[5] · 미드 그레이 울 슬랙스[7] · 블랙 더비[7] | avgF 6.33 tags=work,date final 4.88
+    g-kshy09 화이트 울 니트[5] · 미드 그레이 울 슬랙스[7] · 브라운 첼시 부츠[6] | avgF 6.00 tags=work,weekend,date final 4.96
+  date∩work = 1/3
+
+## top/navy 봄가을
+  [work] relaxed=none (stage 0)
+    g-1rwbnxr 네이비 코튼 니트[4] · 베이지 치노[5] · 버건디 페니 로퍼[6] · 네이비 블레이저[7] | avgF 5.50 tags=work,weekend,date final 4.91
+    g-6adw2j 네이비 코튼 니트[4] · 베이지 치노[5] · 블랙 더비[7] · 네이비 블레이저[7] | avgF 5.75 tags=work,weekend,date final 4.91
+    g-1as11rc 네이비 코튼 니트[4] · 베이지 치노[5] · 버건디 페니 로퍼[6] | avgF 5.00 tags=work,weekend,date final 4.96
+  [weekend] relaxed=none (stage 0)
+    g-1fdd2u4 네이비 코튼 니트[4] · 올리브 치노[5] · 탄 척카 부츠[5] · 인디고 데님 재킷[4] | avgF 4.50 tags=weekend,date final 4.93
+    g-1fkerk1 네이비 코튼 니트[4] · 올리브 치노[5] · 브라운 척카 부츠[5] · 인디고 데님 재킷[4] | avgF 4.50 tags=weekend,date final 4.93
+    g-ka4lz7 네이비 코튼 니트[4] · 올리브 치노[5] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 4.96
+  [date] relaxed=none (stage 0)
+    g-1g1h8ra 네이비 코튼 니트[4] · 베이지 치노[5] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 4.96
+    g-18zcut6 네이비 코튼 니트[4] · 카키 치노[5] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 4.96
+    g-1as11rc 네이비 코튼 니트[4] · 베이지 치노[5] · 버건디 페니 로퍼[6] | avgF 5.00 tags=work,weekend,date final 4.96
+  [active] relaxed=none (stage 0)
+    g-mp9ees 네이비 코튼 니트[4] · 브라운 코듀로이[4] · 흰 스니커즈[3] | avgF 3.67 tags=weekend,active final 4.85
+    g-1ioj55e 네이비 코튼 니트[4] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.67 tags=weekend,active final 4.7
+    g-kdgbxj 네이비 코튼 니트[4] · 카키 치노[5] · 네이비 컬러 스니커즈[2] | avgF 3.67 tags=weekend final 4.88
+  [formal] relaxed=none (stage 0)
+    g-12gjeia 네이비 울 니트[5] · 미드 그레이 울 슬랙스[7] · 블랙 더비[7] · 카멜 트렌치 코트[7] | avgF 6.50 tags=work,date final 4.9
+    g-dzide 네이비 울 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 카멜 트렌치 코트[7] | avgF 6.50 tags=work,date final 4.9
+    g-11ra2bd 네이비 울 니트[5] · 베이지 치노[5] · 버건디 페니 로퍼[6] · 네이비 블레이저[7] | avgF 5.75 tags=work,weekend,date final 4.94
+  date∩work = 1/3
+
+## top/navy 여름
+  [work] relaxed=patterns>materials (stage 2)
+    g-1lrr6af 네이비 피케 폴로[4] · 미드 그레이 울 슬랙스[7] · 브라운 페니 로퍼[6] | avgF 5.67 tags=weekend final 4.88
+    g-1qyxe6u 네이비 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.92
+    g-ysquwm 네이비 피케 폴로[4] · 미드 그레이 울 슬랙스[7] · 블랙 페니 로퍼[6] | avgF 5.67 tags=weekend final 4.88
+  [weekend] relaxed=none (stage 0)
+    g-5rjt37 네이비 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.92
+    g-1lrr6af 네이비 피케 폴로[4] · 미드 그레이 울 슬랙스[7] · 브라운 페니 로퍼[6] | avgF 5.67 tags=weekend final 4.88
+    g-1atd3ss 네이비 티셔츠[2] · 브라운 치노[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.92
+  [date] relaxed=patterns>materials (stage 2)
+    g-nio9vq 네이비 피케 폴로[4] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | avgF 5.67 tags=weekend final 4.58
+    g-1t8gbzi 네이비 티셔츠[2] · 인디고 데님[4] · 브라운 페니 로퍼[6] | avgF 4.00 tags=weekend final 4.81
+    g-1atd3ss 네이비 티셔츠[2] · 브라운 치노[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.92
+  [active] relaxed=none (stage 0)
+    g-1knu6oi 네이비 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.00 tags=weekend,active final 4.7
+    g-5rjt37 네이비 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | avgF 3.33 tags=weekend final 4.92
+    g-1a7p1d3 네이비 티셔츠[2] · 카키 치노[5] · 네이비 컬러 스니커즈[2] | avgF 3.00 tags=weekend final 4.85
+  [formal] relaxed=patterns>materials (stage 2)
+    g-1atmo05 네이비 린넨 셔츠[5] · 베이지 치노[5] · 탄 페니 로퍼[6] | avgF 5.33 tags=work,weekend,date final 4.96
+    g-1lrr6af 네이비 피케 폴로[4] · 미드 그레이 울 슬랙스[7] · 브라운 페니 로퍼[6] | avgF 5.67 tags=weekend final 4.88
+    g-1kvirbs 네이비 린넨 셔츠[5] · 베이지 치노[5] · 브라운 페니 로퍼[6] | avgF 5.33 tags=work,weekend,date final 4.96
+  date∩work = 0/3
+
+## top/navy 겨울
+  [work] relaxed=none (stage 0)
+    g-1cg4qlo 네이비 울 니트[5] · 미드 그레이 울 슬랙스[7] · 탄 첼시 부츠[6] · 카멜 체스터필드 코트[8] | avgF 6.50 tags=work,date final 4.96
+    g-hjesi9 네이비 울 니트[5] · 미드 그레이 울 슬랙스[7] · 브라운 첼시 부츠[6] · 카멜 체스터필드 코트[8] | avgF 6.50 tags=work,date final 4.96
+    g-1jmhta3 네이비 울 니트[5] · 베이지 치노[5] · 버건디 페니 로퍼[6] | avgF 5.33 tags=work,weekend,date final 4.96
+  [weekend] relaxed=none (stage 0)
+    g-1j7kd2m 네이비 울 니트[5] · 올리브 치노[5] · 흰 스니커즈[3] · 인디고 데님 재킷[4] | avgF 4.25 tags=weekend,date final 4.93
+    g-7qodn9 네이비 울 니트[5] · 인디고 데님[4] · 브라운 워크 부츠[4] | avgF 4.33 tags=weekend,date final 5
+    g-kyvmh3 네이비 울 니트[5] · 인디고 데님[4] · 초콜릿 워크 부츠[4] | avgF 4.33 tags=weekend,date final 5
+  [date] relaxed=none (stage 0)
+    g-1ned3b9 네이비 울 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] | avgF 4.33 tags=weekend,date final 4.96
+    g-1xaw2i1 네이비 울 니트[5] · 카키 치노[5] · 흰 스니커즈[3] | avgF 4.33 tags=weekend,date final 4.96
+    g-1jmhta3 네이비 울 니트[5] · 베이지 치노[5] · 버건디 페니 로퍼[6] | avgF 5.33 tags=work,weekend,date final 4.96
+  [active] relaxed=none (stage 0)
+    g-t42vs7 네이비 울 니트[5] · 브라운 코듀로이[4] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 4.88
+    g-1uuh772 네이비 울 니트[5] · 브라운 코듀로이[4] · 탄 워크 부츠[4] | avgF 4.33 tags=weekend,date final 5
+    g-7qodn9 네이비 울 니트[5] · 인디고 데님[4] · 브라운 워크 부츠[4] | avgF 4.33 tags=weekend,date final 5
+  [formal] relaxed=none (stage 0)
+    g-1pxsdh9 네이비 울 니트[5] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 카멜 체스터필드 코트[8] | avgF 6.75 tags=work,date final 4.89
+    g-10t6o99 네이비 울 니트[5] · 미드 그레이 울 슬랙스[7] · 블랙 더비[7] · 카멜 체스터필드 코트[8] | avgF 6.75 tags=work,date final 4.89
+    g-1ffns0e 네이비 울 니트[5] · 미드 그레이 울 슬랙스[7] · 브라운 첼시 부츠[6] | avgF 6.00 tags=work,weekend,date final 4.96
+  date∩work = 1/3
+
+## shoes/white 봄가을
+  [work] relaxed=none (stage 0)
+    g-11ivv7a 라이트 블루 옥스포드 셔츠[6] · 네이비 치노[5] · 흰 스니커즈[3] · 카멜 트렌치 코트[7] | avgF 5.25 tags=work,weekend,date final 4.72
+    g-1kstm9d 화이트 옥스포드 셔츠[6] · 네이비 치노[5] · 흰 스니커즈[3] · 카멜 트렌치 코트[7] | avgF 5.25 tags=work,weekend,date final 4.72
+    g-1dzrvp2 베이지 코튼 니트[4] · 네이비 치노[5] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 4.96
+  [weekend] relaxed=none (stage 0)
+    g-1igsiw6 탄 코튼 니트[4] · 올리브 치노[5] · 흰 스니커즈[3] · 인디고 데님 재킷[4] | avgF 4.00 tags=weekend,date final 4.93
+    g-4ugtgl 크림 코튼 니트[4] · 올리브 치노[5] · 흰 스니커즈[3] · 인디고 데님 재킷[4] | avgF 4.00 tags=weekend,date final 4.93
+    g-hh3c97 올리브 코튼 니트[4] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.67 tags=weekend,active final 5
+  [date] relaxed=none (stage 0)
+    g-1dzrvp2 베이지 코튼 니트[4] · 네이비 치노[5] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 4.96
+    g-1g1h8ra 네이비 코튼 니트[4] · 베이지 치노[5] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 4.96
+    g-1n86rcy 크림 코튼 니트[4] · 네이비 치노[5] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 4.96
+  [active] relaxed=none (stage 0)
+    g-zmxfmd 그레이 멜란지 맨투맨[2] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.00 tags=weekend,active final 5
+    g-hh3c97 올리브 코튼 니트[4] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.67 tags=weekend,active final 5
+    g-174egke 베이지 코튼 니트[4] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.67 tags=weekend,active final 5
+  date∩work = 1/3
+
+## shoes/white 여름
+  [work] relaxed=none (stage 0)
+    g-7s7nsb 인디고 데님 셔츠[4] · 브라운 치노[5] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 4.92
+    g-1d04ori 화이트 린넨 셔츠[5] · 미드 그레이 울 슬랙스[7] · 흰 스니커즈[3] | avgF 5.00 tags=work,weekend,date final 4.32
+    g-px9bh5 라이트 블루 린넨 셔츠[5] · 미드 그레이 울 슬랙스[7] · 흰 스니커즈[3] | avgF 5.00 tags=work,weekend,date final 4.32
+  [weekend] relaxed=none (stage 0)
+    g-10grqff 올리브 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.00 tags=weekend,active final 5
+    g-15ietiq 그레이 멜란지 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.00 tags=weekend,active final 5
+    g-2yjmqm 베이지 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.00 tags=weekend,active final 5
+  [date] relaxed=none (stage 0)
+    g-1mhxkmm 화이트 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] | avgF 5.00 tags=work,weekend,date final 4.02
+    g-1yy0vah 라이트 블루 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] | avgF 5.00 tags=work,weekend,date final 4.02
+    g-7s7nsb 인디고 데님 셔츠[4] · 브라운 치노[5] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 4.92
+  [active] relaxed=none (stage 0)
+    g-10grqff 올리브 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.00 tags=weekend,active final 5
+    g-15ietiq 그레이 멜란지 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.00 tags=weekend,active final 5
+    g-2yjmqm 베이지 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.00 tags=weekend,active final 5
+  date∩work = 1/3
+
+## shoes/white 겨울
+  [work] relaxed=none (stage 0)
+    g-3mnh6k 네이비 울 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] · 네이비 체스터필드 코트[8] | avgF 5.25 tags=work,date final 4.7
+    g-18apysl 베이지 울 니트[5] · 네이비 치노[5] · 흰 스니커즈[3] · 차콜 체스터필드 코트[8] | avgF 5.25 tags=work,date final 4.7
+    g-1411kax 라이트 블루 울 니트[5] · 네이비 치노[5] · 흰 스니커즈[3] | avgF 4.33 tags=weekend,date final 4.96
+  [weekend] relaxed=none (stage 0)
+    g-18hhq8g 그레이 멜란지 맨투맨[2] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.00 tags=weekend,active final 5
+    g-18hv1j6 베이지 울 니트[5] · 올리브 치노[5] · 흰 스니커즈[3] · 인디고 데님 재킷[4] | avgF 4.25 tags=weekend,date final 4.93
+    g-18vczl2 오프화이트 울 니트[5] · 올리브 치노[5] · 흰 스니커즈[3] · 인디고 데님 재킷[4] | avgF 4.25 tags=weekend,date final 4.93
+  [date] relaxed=none (stage 0)
+    g-4ljd1p 베이지 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 5
+    g-7ctkp2 화이트 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 5
+    g-qfqo72 오트밀 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 5
+  [active] relaxed=none (stage 0)
+    g-18hhq8g 그레이 멜란지 맨투맨[2] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 3.00 tags=weekend,active final 5
+    g-gstcd4 올리브 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 5
+    g-1hqncgx 러스트 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | avgF 4.00 tags=weekend,date final 5
+  date∩work = 0/3
+
+## Deep byOccasion stage 분포 (그룹 117): stage0=98 · stage1=0 · stage2=19 · stage3=0 · stage4=0
+
+## 격식 위반 (사람이 보면 이상한 카드)
+  bottom/indigo 봄가을 formal stage2: 화이트 옥스포드 셔츠[6] · 인디고 데님[4] · 블랙 더비[7] · 베이지 트렌치 코트[7] — FORMAL-CASUAL
+  bottom/indigo 봄가을 formal stage2: 라이트 블루 옥스포드 셔츠[6] · 인디고 데님[4] · 탄 더비[7] · 카멜 트렌치 코트[7] — FORMAL-CASUAL
+  bottom/indigo 봄가을 formal stage2: 차콜 울 니트[5] · 인디고 데님[4] · 탄 더비[7] · 네이비 블레이저[7] — FORMAL-CASUAL
+  bottom/indigo 여름 formal stage2: 네이비 린넨 셔츠[5] · 인디고 데님[4] · 브라운 페니 로퍼[6] — FORMAL-CASUAL
+  bottom/indigo 여름 formal stage2: 화이트 린넨 셔츠[5] · 인디고 데님[4] · 브라운 페니 로퍼[6] — FORMAL-CASUAL
+  bottom/indigo 여름 formal stage2: 라이트 블루 린넨 셔츠[5] · 인디고 데님[4] · 탄 페니 로퍼[6] — FORMAL-CASUAL
+  bottom/indigo 겨울 formal stage2: 네이비 울 니트[5] · 인디고 데님[4] · 탄 더비[7] · 네이비 체스터필드 코트[8] — FORMAL-CASUAL
+  bottom/indigo 겨울 formal stage2: 차콜 울 니트[5] · 인디고 데님[4] · 브라운 더비[7] · 네이비 체스터필드 코트[8] — FORMAL-CASUAL
+  bottom/indigo 겨울 formal stage2: 베이지 울 니트[5] · 인디고 데님[4] · 버건디 페니 로퍼[6] — FORMAL-CASUAL
+
+## relaxed ≥ stage 2 사례
+  bottom/indigo 봄가을 formal stage2(patterns>materials) → 화이트 옥스포드 셔츠[6] · 인디고 데님[4] · 블랙 더비[7] · 베이지 트렌치 코트[7] / 라이트 블루 옥스포드 셔츠[6] · 인디고 데님[4] · 탄 더비[7] · 카멜 트렌치 코트[7] / 차콜 울 니트[5] · 인디고 데님[4] · 탄 더비[7] · 네이비 블레이저[7]
+  bottom/indigo 여름 work stage2(patterns>materials) → 베이지 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] / 화이트 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] / 차콜 티셔츠[2] · 인디고 데님[4] · 탄 페니 로퍼[6]
+  bottom/indigo 여름 date stage2(patterns>materials) → 차콜 티셔츠[2] · 인디고 데님[4] · 브라운 페니 로퍼[6] / 화이트 티셔츠[2] · 인디고 데님[4] · 브라운 페니 로퍼[6] / 올리브 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3]
+  bottom/indigo 여름 formal stage2(patterns>materials) → 네이비 린넨 셔츠[5] · 인디고 데님[4] · 브라운 페니 로퍼[6] / 화이트 린넨 셔츠[5] · 인디고 데님[4] · 브라운 페니 로퍼[6] / 라이트 블루 린넨 셔츠[5] · 인디고 데님[4] · 탄 페니 로퍼[6]
+  bottom/indigo 겨울 formal stage2(patterns>materials) → 네이비 울 니트[5] · 인디고 데님[4] · 탄 더비[7] · 네이비 체스터필드 코트[8] / 차콜 울 니트[5] · 인디고 데님[4] · 브라운 더비[7] · 네이비 체스터필드 코트[8] / 베이지 울 니트[5] · 인디고 데님[4] · 버건디 페니 로퍼[6]
+  bottom/beige 여름 work stage2(patterns>materials) → 네이비 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3] / 라이트 블루 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3] / 화이트 티셔츠[2] · 베이지 치노[5] · 브라운 페니 로퍼[6]
+  bottom/beige 여름 date stage2(patterns>materials) → 라이트 블루 티셔츠[2] · 베이지 치노[5] · 탄 페니 로퍼[6] / 네이비 티셔츠[2] · 베이지 치노[5] · 브라운 페니 로퍼[6] / 화이트 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3]
+  bottom/beige 여름 formal stage2(patterns>materials) → 네이비 린넨 셔츠[5] · 베이지 치노[5] · 탄 페니 로퍼[6] / 화이트 린넨 셔츠[5] · 베이지 치노[5] · 브라운 페니 로퍼[6] / 라이트 블루 린넨 셔츠[5] · 베이지 치노[5] · 탄 페니 로퍼[6]
+  bottom/charcoal 여름 formal stage2(patterns>materials) → 라이트 블루 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] / 화이트 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] / 네이비 피케 폴로[4] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6]
+  bottom/blackDenim 여름 work stage2(patterns>materials) → 화이트 티셔츠[2] · 블랙 데님[5] · 블랙 페니 로퍼[6] / 라이트 그레이 티셔츠[2] · 블랙 데님[5] · 블랙 페니 로퍼[6] / 그레이 멜란지 티셔츠[2] · 블랙 데님[5] · 흰 스니커즈[3]
+  bottom/blackDenim 여름 date stage2(patterns>materials) → 그레이 멜란지 티셔츠[2] · 블랙 데님[5] · 블랙 페니 로퍼[6] / 화이트 티셔츠[2] · 블랙 데님[5] · 흰 스니커즈[3] / 차콜 티셔츠[2] · 블랙 데님[5] · 블랙 페니 로퍼[6]
+  bottom/blackDenim 여름 formal stage2(patterns>materials) → 화이트 린넨 셔츠[5] · 블랙 데님[5] · 블랙 페니 로퍼[6] / 라이트 그레이 린넨 셔츠[5] · 블랙 데님[5] · 블랙 페니 로퍼[6] / 블랙 린넨 셔츠[5] · 블랙 데님[5] · 블랙 페니 로퍼[6]
+  bottom/olive 여름 work stage2(patterns>materials) → 네이비 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] / 화이트 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] / 베이지 티셔츠[2] · 올리브 치노[5] · 브라운 페니 로퍼[6]
+  bottom/olive 여름 date stage2(patterns>materials) → 네이비 티셔츠[2] · 올리브 치노[5] · 탄 페니 로퍼[6] / 화이트 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] / 베이지 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3]
+  bottom/olive 여름 formal stage2(patterns>materials) → 네이비 린넨 셔츠[5] · 올리브 치노[5] · 브라운 페니 로퍼[6] / 라이트 블루 린넨 셔츠[5] · 올리브 치노[5] · 브라운 페니 로퍼[6] / 화이트 린넨 셔츠[5] · 올리브 치노[5] · 브라운 페니 로퍼[6]
+  top/white 여름 formal stage2(patterns>materials) → 화이트 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] / 화이트 린넨 셔츠[5] · 미드 그레이 울 슬랙스[7] · 블랙 페니 로퍼[6] / 화이트 린넨 셔츠[5] · 미드 그레이 울 슬랙스[7] · 브라운 페니 로퍼[6]
+  top/navy 여름 work stage2(patterns>materials) → 네이비 피케 폴로[4] · 미드 그레이 울 슬랙스[7] · 브라운 페니 로퍼[6] / 네이비 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3] / 네이비 피케 폴로[4] · 미드 그레이 울 슬랙스[7] · 블랙 페니 로퍼[6]
+  top/navy 여름 date stage2(patterns>materials) → 네이비 피케 폴로[4] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] / 네이비 티셔츠[2] · 인디고 데님[4] · 브라운 페니 로퍼[6] / 네이비 티셔츠[2] · 브라운 치노[5] · 흰 스니커즈[3]
+  top/navy 여름 formal stage2(patterns>materials) → 네이비 린넨 셔츠[5] · 베이지 치노[5] · 탄 페니 로퍼[6] / 네이비 피케 폴로[4] · 미드 그레이 울 슬랙스[7] · 브라운 페니 로퍼[6] / 네이비 린넨 셔츠[5] · 베이지 치노[5] · 브라운 페니 로퍼[6]
+
+## date≈work
+
+# 3b. Quick + occasion — 전 칩(baseColors × 3계절 × 5상황) applied.relaxed
+quick 호출 840: stage0=647 · stage1=0 · stage2=182 · stage3=8 · stage4=3 · 3장 미만 60
+## quick stage ≥3 사례
+  bottom/tan 봄가을 work stage3(patterns>materials>itemTypes) n=3 → 그레이 멜란지 맨투맨[2] · 탄 치노[5] · 흰 스니커즈[3] / 그레이 멜란지 맨투맨[2] · 탄 치노[5] · 블랙 더비[7] / 그레이 멜란지 맨투맨[2] · 탄 치노[5] · 브라운 척카 부츠[5]
+  bottom/tan 봄가을 date stage3(patterns>materials>itemTypes) n=3 → 그레이 멜란지 맨투맨[2] · 탄 치노[5] · 블랙 더비[7] / 그레이 멜란지 맨투맨[2] · 탄 치노[5] · 브라운 척카 부츠[5] / 그레이 멜란지 맨투맨[2] · 탄 치노[5] · 흰 스니커즈[3]
+  bottom/tan 겨울 work stage3(patterns>materials>itemTypes) n=3 → 그레이 멜란지 맨투맨[2] · 탄 치노[5] · 흰 스니커즈[3] / 그레이 멜란지 맨투맨[2] · 탄 치노[5] · 블랙 더비[7] / 그레이 멜란지 맨투맨[2] · 탄 치노[5] · 브라운 워크 부츠[4]
+  bottom/tan 겨울 date stage3(patterns>materials>itemTypes) n=3 → 그레이 멜란지 맨투맨[2] · 탄 치노[5] · 블랙 더비[7] / 그레이 멜란지 맨투맨[2] · 탄 치노[5] · 흰 스니커즈[3] / 그레이 멜란지 맨투맨[2] · 탄 치노[5] · 브라운 워크 부츠[4]
+  top/greyMelange 봄가을 work stage3(patterns>materials>itemTypes) n=3 → 그레이 멜란지 맨투맨[2] · 인디고 데님[4] · 흰 스니커즈[3] · 네이비 필드 재킷[5] / 그레이 멜란지 맨투맨[2] · 블랙 울 슬랙스[7] · 블랙 더비[7] · 차콜 블레이저[7] / 그레이 멜란지 맨투맨[2] · 인디고 데님[4] · 흰 스니커즈[3] · 베이지 트렌치 코트[7]
+  top/greyMelange 봄가을 date stage3(patterns>materials>itemTypes) n=3 → 그레이 멜란지 맨투맨[2] · 인디고 데님[4] · 흰 스니커즈[3] · 네이비 필드 재킷[5] / 그레이 멜란지 맨투맨[2] · 인디고 데님[4] · 흰 스니커즈[3] · 베이지 트렌치 코트[7] / 그레이 멜란지 맨투맨[2] · 블랙 울 슬랙스[7] · 블랙 더비[7]
+  top/greyMelange 겨울 work stage3(patterns>materials>itemTypes) n=3 → 그레이 멜란지 맨투맨[2] · 올리브 치노[5] · 흰 스니커즈[3] · 인디고 데님 재킷[4] / 그레이 멜란지 맨투맨[2] · 카키 치노[5] · 흰 스니커즈[3] · 인디고 데님 재킷[4] / 그레이 멜란지 맨투맨[2] · 올리브 치노[5] · 블랙 더비[7] · 인디고 데님 재킷[4]
+  top/greyMelange 겨울 date stage3(patterns>materials>itemTypes) n=3 → 그레이 멜란지 맨투맨[2] · 올리브 치노[5] · 블랙 더비[7] · 인디고 데님 재킷[4] / 그레이 멜란지 맨투맨[2] · 올리브 치노[5] · 흰 스니커즈[3] · 인디고 데님 재킷[4] / 그레이 멜란지 맨투맨[2] · 카키 치노[5] · 흰 스니커즈[3] · 인디고 데님 재킷[4]
+  shoes/navy 봄가을 work stage4(patterns>materials>itemTypes>shoeTypes) n=3 → 화이트 옥스포드 셔츠[6] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] · 네이비 블레이저[7] / 브라운 코튼 니트[4] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] · 네이비 블레이저[7] / 버건디 코튼 니트[4] · 카키 치노[5] · 네이비 컬러 스니커즈[2] · 네이비 블레이저[7]
+  shoes/navy 여름 work stage4(patterns>materials>itemTypes>shoeTypes) n=3 → 네이비 티셔츠[2] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] / 네이비 티셔츠[2] · 카키 치노[5] · 네이비 컬러 스니커즈[2] / 미드 그레이 티셔츠[2] · 베이지 치노[5] · 네이비 컬러 스니커즈[2]
+  shoes/navy 겨울 work stage4(patterns>materials>itemTypes>shoeTypes) n=3 → 네이비 울 니트[5] · 베이지 치노[5] · 네이비 컬러 스니커즈[2] / 버건디 울 니트[5] · 카키 치노[5] · 네이비 컬러 스니커즈[2] / 라이트 블루 울 니트[5] · 카키 치노[5] · 네이비 컬러 스니커즈[2] · 인디고 데님 재킷[4]

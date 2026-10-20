@@ -2,7 +2,7 @@
 // docs/phase6/asset-demo.html 생성기 — v1(src/assets/silhouettes)·v2(src/assets/v2) SVG를 문자열로 인라인해
 // 디스크에서 바로 열리는 단일 HTML을 만든다. 자산을 고치면 `node scripts/build-asset-demo.mjs` 로 재생성.
 // 6-B: mid 슬롯, stage 레이어(스튜디오 다크), 패턴 5종(pat2-stripe/pinstripe/gingham/plaid/houndstooth) 추가.
-import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { readdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -10,7 +10,7 @@ const ROOT = join(fileURLToPath(import.meta.url), '..', '..');
 const read = (dir) => Object.fromEntries(
   readdirSync(join(ROOT, dir)).filter((f) => f.endsWith('.svg')).map((f) => [f.replace(/\.svg$/, ''), readFileSync(join(ROOT, dir, f), 'utf8')]),
 );
-const V1 = read('src/assets/silhouettes');
+const V1 = existsSync(join(ROOT, 'src/assets/silhouettes')) ? read('src/assets/silhouettes') : {}; // v1은 6-B에서 삭제됨
 const V2 = read('src/assets/v2');
 const INDEX = JSON.parse(readFileSync(join(ROOT, 'src/assets/v2/index-v2.json'), 'utf8'));
 const js = (o) => JSON.stringify(o).replace(/<\//g, '<\\/');

@@ -22,11 +22,7 @@ body::before {
   content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
   background: radial-gradient(120% 60% at 15% -10%, var(--morning), transparent 55%);
 }
-/* 그레인: html[data-grain] 일 때만 (OLED·저사양 고려해 opt-in, 상한 7%) */
-html[data-grain] body::after {
-  content: ""; position: fixed; inset: 0; z-index: 40; pointer-events: none;
-  background-image: var(--grain); opacity: var(--grain-opacity); mix-blend-mode: overlay;
-}
+/* 그레인 overlay 는 제거했다 (P1 리뷰 4절: 2x 확대에서도 식별 불가, 전면 overlay 레이어 페인트 비용만) */
 h1, h2, h3, p { margin: 0; }
 h1 { font-size: var(--fs-title); line-height: var(--lh-title); font-weight: 800; letter-spacing: -0.02em; }
 h2 { font-size: var(--fs-section); line-height: var(--lh-section); font-weight: 700; letter-spacing: -0.01em; }

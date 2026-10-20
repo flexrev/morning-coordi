@@ -28,7 +28,17 @@ export function countVisit() {
   write(KEYS.install, { ...s, visits: (s.visits || 0) + 1 });
 }
 
+let deferredThisSession = false;
+/** U6-03: 배너가 하단 고정 영역 뒤로 들어가면 지우고 다음 방문에 다시 시도 (shownAt 되돌림, 이 세션은 더 안 띄움) */
+export function deferBanner() {
+  deferredThisSession = true;
+  const s = read(KEYS.install, {}) || {};
+  write(KEYS.install, { ...s, shownAt: null, showing: false });
+}
+export function _resetDeferForTest() { deferredThisSession = false; }
+
 export function shouldShowBanner() {
+  if (deferredThisSession) return false;
   if (isStandalone()) return false;
   if (!isIOS() && !isAndroid()) return false; // MVP는 모바일만
   const s = read(KEYS.install, {}) || {};
@@ -108,7 +118,7 @@ export function installSheet() {
   const prompt = getState().installPrompt;
   const body = [];
   if (prompt) {
-    body.push(h('p', { class: 'sheet__note', text: '버튼을 누르면 설치 창이 떠요.' }));
+    body.push(h('p', { class: 'sheet__note', text: '버튼을 누르면 설치 창이 떠요' }));
     body.push(h('button', { class: 'btn btn--primary btn--block', type: 'button', text: '설치', onClick: () => triggerAndroidInstall(() => nav.back()) }));
   } else {
     body.push(h('div', { class: 'steps' },

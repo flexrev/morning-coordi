@@ -1,0 +1,13 @@
+quick cards checked: 504 (168 chip×season)
+PASS ① SEASON! (베이스 자체 원인 제외) = 0 (0)
+PASS ② gap5 + lo ∈ {sneakerColor, running, sandal} = 0 (0)
+PASS ③ 라벨에 'a-z'·'인디고 데님 울'·'(울슬랙스)' = 0 (0)
+PASS ④ 모든 칩(baseColors × 3계절) 3장 (0)
+PASS ⑤ 스타일 태그 분포: 3% ≤ 스타일별 코디 비율 ≤ 60%, 태그 없는 코디 0 (0)
+   분포 (outfits 52): minimal* 31(60%)/24 · amekaji* 6(12%)/5 · cityboy 6(12%)/2 · bizcasual* 21(40%)/8 · street 3(6%)/3 · gorpcore 2(4%)/0 · ivy* 17(33%)/10 · workwear 7(13%)/0
+PASS ⑥ 상황: 전 칩×3계절×5상황에서 3장 + relaxed ≤ stage 2 비율 ≥ 90% (quick 칩 경로 · deep byOccasion) (0)
+   quick+occasion 769/840 = 91.5% (stage0..4 = 647/0/182/8/3) · 상황별 work 96% · weekend 100% · date 98% · active 77% · formal 88%
+   deep byOccasion 769/840 = 91.5% (stage0..4 = 647/0/132/8/53) · 상황별 work 96% · weekend 100% · date 98% · active 77% · formal 88%
+PASS ⑦ 소품: 가죽 소품(벨트·시계·가방) 색이 신발 가죽 계열을 어기거나 흰·네이비인 제안 0, 내부 문구 0 (0)
+   deep 카드 7886, 벨트 제안 5039, 가죽 소품 제안 7989
+   ⑥ shortfall(격식·운동 완화 상한 stage 2에서 3장 미만): quick 60 · deep 60 — 상황별 quick work 0 · weekend 0 · date 0 · active 39 · formal 21

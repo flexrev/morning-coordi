@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- 아침 코디 실루엣 레이어: 셔츠 (레귤러) · viewBox 0 0 200 400 · 단색 fill, 그라데이션 없음 · 원본 제작(자체) -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" role="img" aria-label="셔츠 (레귤러)">
-  <path data-slot="top" data-fit="regular" data-length="regular" fill="var(--c-top, #BBBBBB)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"
-        d="M 62 78 L 86 66 L 96 82 L 100 76 L 104 82 L 114 66 L 138 78 L 151 198 L 135 198 L 134 192 L 66 192 L 65 198 L 49 198 Z M 135 198 L 131 112 M 65 198 L 69 112 M 100 84 L 100 192 M 136 190 L 150 190 M 50 190 L 64 190"/>
-</svg>

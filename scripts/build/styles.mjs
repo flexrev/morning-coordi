@@ -122,7 +122,7 @@ export function buildPatternRules() {
 export function buildMidTypes() {
   return table('6-1').map((r) => ({
     id: r.id, labelKo: r.labelKo, material: nullable(r.material), formality: int(r.formality, `${r.id}.formality`),
-    length: r.length, weight: r.weight, seasons: sortSeasons(list(r.seasons)), note: empty(r.note) ? '' : r.note,
+    length: r.length, weight: r.weight, seasons: sortSeasons(list(r.seasons)), colors: list(r.colors ?? ''), note: empty(r.note) ? '' : r.note,
   }));
 }
 const anyOrList = (v) => (v === 'any' || v === 'none' ? v : list(v));

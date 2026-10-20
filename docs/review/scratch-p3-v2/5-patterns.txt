@@ -1,0 +1,117 @@
+# 5. Deep + patterns:true — 패턴 변주 카드 전수 (8 bases × 3 seasons + extra). 검사: 패턴 ≤1(quick) ≤2(deep), 브레통 하의 0, 패턴+패턴
+
+## bottom/indigo 봄가을 — 패턴 변주 1 / 변주 14
+  g-w7j6h4 ← o01 | 화이트 브레통 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | top.itemName="화이트 브레통 티셔츠" | avgF 3 | rules=ptSolidGround(1),ptBretonPairs(1) | final 5
+
+## bottom/indigo 여름 — 패턴 변주 2 / 변주 14
+  g-30anvz ← o01 | 화이트 브레통 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | top.itemName="화이트 브레통 티셔츠" | avgF 3 | rules=ptSolidGround(1),ptBretonPairs(1) | final 5
+  g-z1ud77 ← g-1fk8kq1 | 화이트 브레통 티셔츠[2] · 인디고 데님[4] · 브라운 페니 로퍼[6] | top.itemName="화이트 브레통 티셔츠" | avgF 4 | rules=ptSolidGround(1),ptBretonPairs(1) | final 5
+
+## bottom/indigo 겨울 — 패턴 변주 0 / 변주 13
+
+## bottom/beige 봄가을 — 패턴 변주 2 / 변주 15
+  g-1j10m77 ← o05 | 라이트 블루 잔줄 셔츠[6] · 베이지 치노[5] · 브라운 로퍼[6] · 네이비 블레이저[7] | top.itemName="라이트 블루 잔줄 셔츠" | avgF 6 | rules=ptSolidGround(1),ptStripeShirtBlazer(1) | final 5
+  g-1c7fk8c ← g-1g1h8ra | 네이비 브레통 코튼 니트[4] · 베이지 치노[5] · 흰 스니커즈[3] | top.itemName="네이비 브레통 코튼 니트" | avgF 4 | rules=ptSolidGround(1),ptBretonPairs(1) | final 5
+
+## bottom/beige 여름 — 패턴 변주 1 / 변주 13
+  g-nk6ugb ← g-17fadu9 | 화이트 브레통 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3] | top.itemName="화이트 브레통 티셔츠" | avgF 3.33 | rules=ptSolidGround(1),ptBretonPairs(1) | final 5
+
+## bottom/beige 겨울 — 패턴 변주 0 / 변주 13
+
+## bottom/charcoal 봄가을 — 패턴 변주 2 / 변주 13
+  g-j7yuey ← g-mav1dp | 라이트 블루 잔줄 셔츠[6] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 카멜 트렌치 코트[7] | top.itemName="라이트 블루 잔줄 셔츠" | avgF 6.75 | rules=ptSolidGround(1),ptStripeShirtBlazer(1) | final 5
+  g-6q2d20 ← g-1v5vc7z | 화이트 잔줄 셔츠[6] · 차콜 울 슬랙스[7] · 블랙 더비[7] | top.itemName="화이트 잔줄 셔츠" | avgF 6.67 | rules=ptSolidGround(1) | final 5
+
+## bottom/charcoal 여름 — 패턴 변주 2 / 변주 14
+  g-1x56843 ← g-1jjsavo | 라이트 블루 잔줄 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | top.itemName="라이트 블루 잔줄 셔츠" | avgF 6 | rules=ptSolidGround(1) | final 5
+  g-1s9nil0 ← g-xx5l1v | 화이트 잔줄 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | top.itemName="화이트 잔줄 셔츠" | avgF 6 | rules=ptSolidGround(1) | final 5
+
+## bottom/charcoal 겨울 — 패턴 변주 2 / 변주 15
+  g-1k60ev7 ← o10 | 라이트 블루 잔줄 셔츠[6] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 네이비 코트[8] | top.itemName="라이트 블루 잔줄 셔츠" | avgF 7 | rules=ptSolidGround(1),ptStripeShirtBlazer(1) | final 4.83
+  g-1klau6q ← g-1wsz1or | 화이트 하운드투스 울 니트[5] · 차콜 울 슬랙스[7] · 초콜릿 첼시 부츠[6] | top.itemName="화이트 하운드투스 울 니트" | avgF 6 | rules=ptSolidGround(1),ptHoundstoothMono(1) | final 4.7
+
+## bottom/blackDenim 봄가을 — 패턴 변주 2 / 변주 15
+  g-1vttz4g ← o08 | 화이트 브레통 티셔츠[2] · 블랙 데님[5] · 흰 스니커즈[3] · 블랙 가죽 재킷[5] | top.itemName="화이트 브레통 티셔츠" | avgF 3.75 | rules=ptSolidGround(1) | final 4.65
+  g-1q0epmi ← g-1qk658d | 화이트 잔줄 셔츠[6] · 블랙 데님[5] · 블랙 더비[7] | top.itemName="화이트 잔줄 셔츠" | avgF 6 | rules=ptSolidGround(1) | final 5
+
+## bottom/blackDenim 여름 — 패턴 변주 2 / 변주 13
+  g-spew61 ← g-1du26qr | 화이트 브레통 티셔츠[2] · 블랙 데님[5] · 블랙 페니 로퍼[6] | top.itemName="화이트 브레통 티셔츠" | avgF 4.33 | rules=ptSolidGround(1) | final 4.05
+  g-5g9kkk ← g-9fe0zi | 화이트 브레통 티셔츠[2] · 블랙 데님[5] · 흰 스니커즈[3] | top.itemName="화이트 브레통 티셔츠" | avgF 3.33 | rules=ptSolidGround(1) | final 3.95
+
+## bottom/blackDenim 겨울 — 패턴 변주 2 / 변주 14
+  g-5sqe7y ← g-yybl2f | 화이트 하운드투스 울 니트[5] · 블랙 데님[5] · 블랙 더비[7] | top.itemName="화이트 하운드투스 울 니트" | avgF 5.67 | rules=ptSolidGround(1),ptHoundstoothMono(1) | final 5
+  g-13jfvhq ← g-1xm7vsn | 화이트 하운드투스 울 니트[5] · 블랙 데님[5] · 블랙 더비[7] · 미드 그레이 체스터필드 코트[8] | top.itemName="화이트 하운드투스 울 니트" | avgF 6.25 | rules=ptSolidGround(1),ptHoundstoothMono(1) | final 4.83
+
+## bottom/olive 봄가을 — 패턴 변주 0 / 변주 12
+
+## bottom/olive 여름 — 패턴 변주 3 / 변주 14
+  g-iq0mta ← o07 | 화이트 브레통 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | top.itemName="화이트 브레통 티셔츠" | avgF 3.33 | rules=ptSolidGround(1) | final 5
+  g-w0t52a ← g-1y1cqew | 화이트 브레통 티셔츠[2] · 올리브 치노[5] · 브라운 페니 로퍼[6] | top.itemName="화이트 브레통 티셔츠" | avgF 4.33 | rules=ptSolidGround(1) | final 4.92
+  g-1ju2mih ← g-5rjt37 | 네이비 브레통 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | top.itemName="네이비 브레통 티셔츠" | avgF 3.33 | rules=ptSolidGround(1) | final 5
+
+## bottom/olive 겨울 — 패턴 변주 0 / 변주 13
+
+## top/white 봄가을 — 패턴 변주 3 / 변주 16
+  g-w7j6h4 ← o01 | 화이트 브레통 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | top.itemName="화이트 브레통 티셔츠" | avgF 3 | rules=ptSolidGround(1),ptBretonPairs(1) | final 5
+  g-pcj5rj ← o04 | 화이트 잔줄 셔츠[6] · 네이비 치노[5] · 브라운 로퍼[6] | top.itemName="화이트 잔줄 셔츠" | avgF 5.67 | rules=ptSolidGround(1) | final 5
+  g-1oluxht ← o02 | 화이트 브레통 티셔츠[2] · 인디고 데님[4] · 브라운 부츠[5] · 카멜 트렌치 코트[7] | top.itemName="화이트 브레통 티셔츠" | avgF 4.5 | rules=ptSolidGround(1),ptBretonPairs(1) | final 4.99
+
+## top/white 여름 — 패턴 변주 3 / 변주 15
+  g-30anvz ← o01 | 화이트 브레통 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | top.itemName="화이트 브레통 티셔츠" | avgF 3 | rules=ptSolidGround(1),ptBretonPairs(1) | final 5
+  g-iq0mta ← o07 | 화이트 브레통 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | top.itemName="화이트 브레통 티셔츠" | avgF 3.33 | rules=ptSolidGround(1) | final 5
+  g-1ulycp4 ← o04 | 화이트 잔줄 셔츠[6] · 네이비 치노[5] · 브라운 로퍼[6] | top.itemName="화이트 잔줄 셔츠" | avgF 5.67 | rules=ptSolidGround(1) | final 5
+
+## top/white 겨울 — 패턴 변주 2 / 변주 15
+  g-1wnqxyi ← o04 | 화이트 잔줄 셔츠[6] · 네이비 치노[5] · 브라운 로퍼[6] | top.itemName="화이트 잔줄 셔츠" | avgF 5.67 | rules=ptSolidGround(1) | final 5
+  g-kxzpcj ← g-12ya07e | 화이트 하운드투스 울 니트[5] · 미드 그레이 울 슬랙스[7] · 블랙 더비[7] · 카멜 체스터필드 코트[8] | top.itemName="화이트 하운드투스 울 니트" | avgF 6.75 | rules=ptSolidGround(1),ptHoundstoothMono(1) | final 4.83
+
+## top/navy 봄가을 — 패턴 변주 2 / 변주 15
+  g-1hqlc6q ← g-12jyljc | 네이비 브레통 코튼 니트[4] · 브라운 코듀로이[4] · 브라운 척카 부츠[5] | top.itemName="네이비 브레통 코튼 니트" | avgF 4.33 | rules=ptSolidGround(1) | final 5
+  g-18wtq0d ← g-kcqy5z | 네이비 브레통 코튼 니트[4] · 인디고 데님[4] · 흰 스니커즈[3] · 카멜 트렌치 코트[7] | top.itemName="네이비 브레통 코튼 니트" | avgF 4.5 | rules=ptSolidGround(1),ptBretonPairs(1) | final 4.94
+
+## top/navy 여름 — 패턴 변주 3 / 변주 15
+  g-1fvharw ← g-1qyxe6u | 네이비 브레통 티셔츠[2] · 베이지 치노[5] · 흰 스니커즈[3] | top.itemName="네이비 브레통 티셔츠" | avgF 3.33 | rules=ptSolidGround(1),ptBretonPairs(1) | final 5
+  g-1k6l12s ← g-1t8gbzi | 네이비 브레통 티셔츠[2] · 인디고 데님[4] · 브라운 페니 로퍼[6] | top.itemName="네이비 브레통 티셔츠" | avgF 4 | rules=ptSolidGround(1),ptBretonPairs(1) | final 5
+  g-1ju2mih ← g-5rjt37 | 네이비 브레통 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | top.itemName="네이비 브레통 티셔츠" | avgF 3.33 | rules=ptSolidGround(1) | final 5
+
+## top/navy 겨울 — 패턴 변주 0 / 변주 13
+
+## shoes/white 봄가을 — 패턴 변주 2 / 변주 16
+  g-w7j6h4 ← o01 | 화이트 브레통 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | top.itemName="화이트 브레통 티셔츠" | avgF 3 | rules=ptSolidGround(1),ptBretonPairs(1) | final 5
+  g-1vttz4g ← o08 | 화이트 브레통 티셔츠[2] · 블랙 데님[5] · 흰 스니커즈[3] · 블랙 가죽 재킷[5] | top.itemName="화이트 브레통 티셔츠" | avgF 3.75 | rules=ptSolidGround(1) | final 4.65
+
+## shoes/white 여름 — 패턴 변주 2 / 변주 12
+  g-30anvz ← o01 | 화이트 브레통 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | top.itemName="화이트 브레통 티셔츠" | avgF 3 | rules=ptSolidGround(1),ptBretonPairs(1) | final 5
+  g-iq0mta ← o07 | 화이트 브레통 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | top.itemName="화이트 브레통 티셔츠" | avgF 3.33 | rules=ptSolidGround(1) | final 5
+
+## shoes/white 겨울 — 패턴 변주 0 / 변주 11
+
+## bottom/black 봄가을 — 패턴 변주 1 / 변주 10
+  g-rezl6u ← g-ihy0x | 화이트 잔줄 셔츠[6] · 블랙 울 슬랙스[7] · 블랙 더비[7] | top.itemName="화이트 잔줄 셔츠" | avgF 6.67 | rules=ptSolidGround(1) | final 5
+
+## bottom/navy 봄가을 — 패턴 변주 2 / 변주 15
+  g-pcj5rj ← o04 | 화이트 잔줄 셔츠[6] · 네이비 치노[5] · 브라운 로퍼[6] | top.itemName="화이트 잔줄 셔츠" | avgF 5.67 | rules=ptSolidGround(1) | final 5
+  g-1tbk4o8 ← g-11ubbov | 라이트 블루 잔줄 셔츠[6] · 네이비 치노[5] · 브라운 척카 부츠[5] | top.itemName="라이트 블루 잔줄 셔츠" | avgF 5.33 | rules=ptSolidGround(1) | final 5
+
+## outer/camel 봄가을 — 패턴 변주 3 / 변주 18
+  g-1oluxht ← o02 | 화이트 브레통 티셔츠[2] · 인디고 데님[4] · 브라운 부츠[5] · 카멜 트렌치 코트[7] | top.itemName="화이트 브레통 티셔츠" | avgF 4.5 | rules=ptSolidGround(1),ptBretonPairs(1) | final 4.99
+  g-1fvo4f6 ← g-aguvfp | 화이트 잔줄 셔츠[6] · 인디고 데님[4] · 브라운 척카 부츠[5] · 카멜 트렌치 코트[7] | top.itemName="화이트 잔줄 셔츠" | avgF 5.5 | rules=ptSolidGround(1),ptStripeShirtBlazer(1) | final 5
+  g-j7yuey ← g-mav1dp | 라이트 블루 잔줄 셔츠[6] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 카멜 트렌치 코트[7] | top.itemName="라이트 블루 잔줄 셔츠" | avgF 6.75 | rules=ptSolidGround(1),ptStripeShirtBlazer(1) | final 5
+
+## shoes/brown 봄가을 — 패턴 변주 2 / 변주 15
+  g-1j10m77 ← o05 | 라이트 블루 잔줄 셔츠[6] · 베이지 치노[5] · 브라운 로퍼[6] · 네이비 블레이저[7] | top.itemName="라이트 블루 잔줄 셔츠" | avgF 6 | rules=ptSolidGround(1),ptStripeShirtBlazer(1) | final 5
+  g-pcj5rj ← o04 | 화이트 잔줄 셔츠[6] · 네이비 치노[5] · 브라운 로퍼[6] | top.itemName="화이트 잔줄 셔츠" | avgF 5.67 | rules=ptSolidGround(1) | final 5
+
+## top/lightBlue 봄가을 — 패턴 변주 3 / 변주 16
+  g-1j10m77 ← o05 | 라이트 블루 잔줄 셔츠[6] · 베이지 치노[5] · 브라운 로퍼[6] · 네이비 블레이저[7] | top.itemName="라이트 블루 잔줄 셔츠" | avgF 6 | rules=ptSolidGround(1),ptStripeShirtBlazer(1) | final 5
+  g-vrh59w ← g-1dki43 | 라이트 블루 잔줄 셔츠[6] · 브라운 코듀로이[4] · 초콜릿 척카 부츠[5] | top.itemName="라이트 블루 잔줄 셔츠" | avgF 5 | rules=ptSolidGround(1) | final 5
+  g-cxou9c ← g-1ryir93 | 라이트 블루 잔줄 셔츠[6] · 크림 치노[5] · 브라운 척카 부츠[5] | top.itemName="라이트 블루 잔줄 셔츠" | avgF 5.33 | rules=ptSolidGround(1) | final 5
+
+## bottom/khaki 봄가을 — 패턴 변주 2 / 변주 15
+  g-17ubebk ← g-18zcut6 | 네이비 브레통 코튼 니트[4] · 카키 치노[5] · 흰 스니커즈[3] | top.itemName="네이비 브레통 코튼 니트" | avgF 4 | rules=ptSolidGround(1) | final 5
+  g-icrrlo ← g-1cfagna | 네이비 브레통 코튼 니트[4] · 카키 치노[5] · 브라운 척카 부츠[5] | top.itemName="네이비 브레통 코튼 니트" | avgF 4.67 | rules=ptSolidGround(1) | final 5
+
+## 합계: 패턴 변주 51. 패턴별: top:breton 27 · top:stripeShirt 20 · top:houndstooth 4
+quick(patterns:true) 비브레통 패턴 카드: 0
+outfits.json 패턴 코디: o24 top:breton · o25 top:breton
+## 위반 0

@@ -1,0 +1,289 @@
+# 7. 신규 라벨 — shortLabel 길이(공백·중점 포함 ≤6?), label, help
+style.minimal | label="미니멀" | short="미니멀"(3) | help="무채색·뉴트럴, 장식 없는 기본템" | aliases=미니멀리즘,콰이어트 럭셔리
+style.amekaji | label="아메카지" | short="아메카지"(4) | help="인디고 데님·플란넬·워크 부츠" | aliases=아메리칸 캐주얼,빈티지 워크웨어
+style.cityboy | label="시티보이" | short="시티보이"(4) | help="루즈 실루엣, 와이드 치노·로퍼" | aliases=시티보이 룩,포파이
+style.bizcasual | label="비즈캐주얼" | short="비즈캐주얼"(5) | help="셔츠·니트 + 슬랙스 + 로퍼·블레이저" | aliases=비즈니스 캐주얼,오피스룩,출근룩
+style.street | label="스트릿" | short="스트릿"(3) | help="오버핏 후디·맨투맨, 컬러 스니커즈" | aliases=스트리트
+style.gorpcore | label="고프코어" | short="고프코어"(4) | help="플리스·테크 팬츠·트레일 러닝화" | aliases=아웃도어 룩,고프
+style.ivy | label="아이비" | short="아이비"(3) | help="옥스포드·치노·페니 로퍼·네이비 블레이저" | aliases=클래식 아이비,프레피,클래식
+style.workwear | label="워크웨어" | short="워크웨어"(4) | help="초어·데님 재킷, 헨리, 워크 부츠" | aliases=초어 재킷,작업복
+occasion.work | label="출근" | short="출근"(2) | help="셔츠·니트 + 슬랙스·치노 + 로퍼·더비" | aliases=오피스,회사,오피스 캐주얼
+occasion.weekend | label="주말" | short="주말"(2) | help="티·플란넬·데님, 스니커즈·부츠" | aliases=휴일,캐주얼
+occasion.date | label="데이트" | short="데이트"(3) | help="니트·셔츠, 로퍼·흰 스니커즈, 여유 핏" | aliases=소개팅
+occasion.active | label="운동" | short="운동"(2) | help="티·후디·플리스, 러닝화" | aliases=운동·산책,산책,액티브
+occasion.formal | label="격식" | short="격식"(2) | help="셔츠 + 블레이저 + 울 슬랙스 + 더비" | aliases=결혼식,하객,면접,포멀
+pattern.breton | label="브레통 스트라이프" | short="브레통"(3) | help="가로 줄무늬. 하의는 무지" | aliases=가로 줄무늬,마린
+pattern.stripeShirt | label="펜슬·캔디 스트라이프 셔츠" | short="잔줄 셔츠"(5) | help="세로 잔줄. 블레이저 안 OK" | aliases=펜슬 스트라이프,캔디 스트라이프,세로 줄무늬
+pattern.pinstripe | label="핀스트라이프" | short="핀스트라이프"(6) | help="울 슬랙스·블레이저만" | aliases=
+pattern.gingham | label="깅엄 체크" | short="깅엄 체크"(5) | help="2색 체크. 아이비 시그니처" | aliases=체크 셔츠
+pattern.plaid | label="플란넬·타탄 체크" | short="타탄 체크"(5) | help="아메카지·워크웨어. 하의는 무지" | aliases=플란넬 체크,버팔로 체크,타탄
+pattern.windowpane | label="윈도페인 체크" | short="윈도페인"(4) | help="테일러링 아우터만" | aliases=
+pattern.houndstooth | label="하운드투스" | short="하운드투스"(5) | help="모노 팔레트와. 테일러링" | aliases=
+pattern.herringbone | label="헤링본" | short="헤링본"(3) | help="질감으로 취급(패턴 수에 세지 않음)" | aliases=
+pattern.camo | label="카모" | short="카모"(2) | help="스트릿·고프코어. 1개만" | aliases=카무플라주,위장 무늬
+midType.cardigan | label="가디건" | short="가디건"(3) | help="코트 안에 입는 가디건" | aliases=
+midType.knitVest | label="니트 베스트" | short="니트 베스트"(6) | help="셔츠 위에 입는 니트 베스트" | aliases=
+midType.quiltedVest | label="퀼팅 베스트" | short="퀼팅 베스트"(6) | help="코트·재킷 안에 입는 얇은 조끼" | aliases=
+midType.overshirtMid | label="오버셔츠(미드)" | short="오버셔츠"(4) | help="코트 안에 입는 오버셔츠" | aliases=
+midType.knitOverShirt | label="이너 니트" | short="이너 니트"(5) | help="셔츠 위에 겹쳐 입는 니트" | aliases=
+accessory.beltLeather | label="가죽 벨트" | short="가죽 벨트"(5) | help="신발과 같은 가죽 색" | aliases=
+accessory.beltBraided | label="브레이디드 벨트" | short="브레이디드"(5) | help="치노·린넨·로퍼에" | aliases=
+accessory.beltWebbing | label="웨빙·캔버스 벨트" | short="웨빙 벨트"(5) | help="스니커즈·부츠·카고에" | aliases=
+accessory.watchLeather | label="가죽 스트랩 시계" | short="가죽 시계"(5) | help="벨트·신발과 같은 가죽 색" | aliases=
+accessory.watchMetal | label="메탈 시계" | short="메탈 시계"(5) | help="벨트 버클 금속과 통일" | aliases=
+accessory.watchNato | label="나토·러버 시계" | short="나토 시계"(5) | help="캐주얼 코디에만" | aliases=
+accessory.socksMatch | label="바지색 양말" | short="바지색 양말"(6) | help="바지보다 한 톤 어둡게" | aliases=
+accessory.socksNeutral | label="뉴트럴 양말" | short="뉴트럴 양말"(6) | help="네이비·차콜·그레이" | aliases=
+accessory.socksNoShow | label="페이크삭스" | short="페이크삭스"(5) | help="여름 로퍼·스니커즈에" | aliases=
+accessory.socksWhite | label="흰 운동 양말" | short="흰 양말"(4) | help="스니커즈·러닝화에만" | aliases=
+accessory.socksPattern | label="패턴 양말" | short="패턴 양말"(5) | help="작은 패턴, 코디에 패턴이 없을 때" | aliases=
+accessory.bagTote | label="토트백" | short="토트백"(3) | help="가죽은 신발 색, 캔버스는 자유" | aliases=
+accessory.bagBackpack | label="백팩" | short="백팩"(2) | help="블랙·올리브·네이비·차콜" | aliases=
+accessory.bagCrossbody | label="크로스바디" | short="크로스바디"(5) | help="나일론·캔버스" | aliases=
+accessory.bagBriefcase | label="브리프케이스" | short="브리프케이스"(6) | help="가죽, 신발과 같은 색" | aliases=
+accessory.cap | label="볼캡" | short="볼캡"(2) | help="아우터와 비슷한 톤" | aliases=
+accessory.beanie | label="비니" | short="비니"(2) | help="캐주얼 아우터와" | aliases=
+accessory.bucketHat | label="버킷햇" | short="버킷햇"(3) | help="고프코어·스트릿" | aliases=
+accessory.scarf | label="머플러" | short="머플러"(3) | help="포인트 컬러 1개로 쳐요" | aliases=
+accessoryGroup.belt | label="벨트" | short="벨트"(2) | help="" | aliases=
+accessoryGroup.watch | label="시계" | short="시계"(2) | help="" | aliases=
+accessoryGroup.socks | label="양말" | short="양말"(2) | help="" | aliases=
+accessoryGroup.bag | label="가방" | short="가방"(2) | help="" | aliases=
+accessoryGroup.hat | label="모자" | short="모자"(2) | help="" | aliases=
+accessoryGroup.scarf | label="머플러" | short="머플러"(3) | help="" | aliases=
+
+## explain.* 신규
+explain.accentAccent | "포인트 컬러가 둘 ({a}+{b}) (−2)"
+explain.style.minimal | "미니멀 — 무채색·뉴트럴, 장식 없는 기본템"
+explain.style.amekaji | "아메카지 — 인디고 데님·플란넬·워크 부츠"
+explain.style.cityboy | "시티보이 — 루즈 실루엣, 와이드 치노·로퍼"
+explain.style.bizcasual | "비즈캐주얼 — 셔츠·니트 + 슬랙스 + 로퍼·블레이저"
+explain.style.street | "스트릿 — 오버핏 후디·맨투맨, 컬러 스니커즈"
+explain.style.gorpcore | "고프코어 — 플리스·테크 팬츠·트레일 러닝화"
+explain.style.ivy | "아이비 — 옥스포드·치노·페니 로퍼·네이비 블레이저"
+explain.style.workwear | "워크웨어 — 초어·데님 재킷, 헨리, 워크 부츠"
+explain.style.boost | "{style} 스타일 {delta}"
+explain.style.tag | "{style} 느낌"
+explain.occasion.adj | "{occasion} 분위기와 잘 맞아요 ({delta})"
+explain.occasion.adjNeg | "{occasion} 분위기와는 조금 멀어요 ({delta})"
+explain.occasion.prefer | "{occasion}에 어울리는 아이템 {n}개 ({delta})"
+explain.occasion.window | "{occasion} 기준에서 벗어난 아이템 {n}개 ({delta})"
+explain.occasion.target | "전체 수준이 {occasion}에 딱 맞아요 (+0.2)"
+explain.occasion.relaxed | "{occasion} 조건을 일부 완화했어요 ({stages})"
+explain.occasion.shortfall | "{occasion}에 맞는 조합이 더 없어요"
+explain.acc | "{accessory}: {reason}"
+explain.acc.occasion | "{occasion} 기본 소품"
+explain.pattern | "{reason} ({delta})"
+explain.midLayer | "{mid|은는} {reason} ({score}/5)"
+explain.midLength | "{mid|이가} {outer}보다 길어요"
+explain.midWeight | "{mid|이가} {outer}보다 두꺼워요"
+explain.midFormality | "{mid} 격식이 베이스·아우터와 안 맞아요"
+explain.twoOuter | "{inner}+{outer}: {reason} ({score}/5)"
+explain.twoOuterLength | "안쪽 {inner|이가} 바깥 {outer}보다 짧지 않아요 ({delta})"
+explain.acc.acBeltBrownShoes | "브라운 구두엔 브라운 계열 벨트"
+explain.acc.acBeltBlackShoes | "블랙 구두엔 블랙 벨트"
+explain.acc.acBeltBurgundyShoes | "버건디 구두엔 다크 브라운 벨트"
+explain.acc.acBeltBrownBlack | "브라운 구두에 블랙 벨트는 피해요"
+explain.acc.acBeltSneaker | "스니커즈엔 캔버스·브레이디드 벨트가 편해요"
+explain.acc.acBeltSuede | "스웨이드 신발엔 스웨이드 벨트"
+explain.acc.acBeltFormalWidth | "드레시한 날엔 좁고 매끈한 벨트"
+explain.acc.acBeltHiddenTee | "상의가 벨트를 가려요"
+explain.acc.acBeltBuckleMetal | "버클 금속은 시계와 맞춰요"
+explain.acc.acWatchLeatherUnify | "시계줄도 신발·벨트와 같은 가죽 색으로"
+explain.acc.acWatchNatoCasual | "캐주얼 코디엔 나토·러버 스트랩도 좋아요"
+explain.acc.acWatchNatoFormal | "드레시한 코디에 나토 스트랩은 어색해요"
+explain.acc.acSocksMatchTrousers | "바지색 양말이 다리를 길어 보이게 해요"
+explain.acc.acSocksNoShowSummerLoafer | "여름 로퍼·스니커즈엔 페이크삭스"
+explain.acc.acSocksWinterLoafer | "겨울 로퍼엔 바지색이나 네이비·차콜 양말"
+explain.acc.acSocksWhiteSneakerOnly | "흰 운동 양말은 스니커즈·러닝화에만"
+explain.acc.acSocksWhiteDress | "구두에 흰 운동 양말은 피해요"
+explain.acc.acSocksCropSneaker | "크롭 바지+스니커즈엔 페이크삭스나 흰 양말"
+explain.acc.acSocksPlainDefault | "구두·부츠엔 바지보다 한 톤 어두운 무지 양말"
+explain.acc.acSocksPatternOnce | "코디에 패턴이 없으니 작은 패턴 양말도 좋아요"
+explain.acc.acSocksSandal | "샌들엔 양말 없이"
+explain.acc.acBagFormalLeather | "드레시한 코디엔 가죽 가방, 신발과 같은 색"
+explain.acc.acBagCasualNylon | "나일론·캔버스 백팩, 블랙·올리브·네이비·차콜 중 하나"
+explain.acc.acBagBackpackFormal | "코트·블레이저에 백팩은 어색해요"
+explain.acc.acBagCanvasTote | "캔버스 토트가 이 스타일의 시그니처예요"
+explain.acc.acBagLeatherUnify | "가죽 가방은 신발과 같은 가죽 색으로"
+explain.acc.acHatFormalNone | "드레시한 코디엔 모자를 빼요"
+explain.acc.acHatTailoredNone | "재킷·코트엔 볼캡을 빼요"
+explain.acc.acCapColorRange | "모자는 아우터와 비슷한 톤이나 코디 안의 색으로"
+explain.acc.acBeanieCasualOuter | "캐주얼 겨울 아우터엔 비니가 잘 어울려요"
+explain.acc.acScarfSolidCoat | "무지 코트엔 어떤 색·패턴 머플러도 좋아요"
+explain.acc.acScarfSfCoat | "봄가을 코트엔 얇은 머플러"
+explain.acc.acScarfPatternCoat | "패턴 코트엔 무지 머플러, 코트 속 한 색으로"
+explain.acc.acScarfAccentOnce | "포인트 컬러가 이미 있으니 머플러는 뉴트럴로"
+explain.acc.acScarfFormalMaterial | "드레시한 코디엔 얇은 울·캐시미어 머플러"
+explain.acc.acMetalUnify | "시계와 버클 금속은 실버·골드 한 가지로"
+
+## 실제 문구 샘플 (styleExplain · accessories.text)
+-- bottom/beige 봄가을 {"style":"ivy","occasion":"work"} relaxed=none
+   라이트 블루 옥스포드 셔츠[6] · 베이지 치노[5] · 브라운 로퍼[6] · 네이비 블레이저[7] | tagLabels=비즈캐주얼/아이비/출근/주말/데이트
+      style: 아이비 스타일 +0.37
+      style: 출근 분위기와 잘 맞아요 (+0.27)
+      style: 출근에 어울리는 아이템 3개 (+0.3)
+      style: 전체 수준이 출근에 딱 맞아요 (+0.2)
+      acc: 가죽 벨트: 브라운 — 브라운 구두엔 브라운 계열 벨트
+      acc: 뉴트럴 양말: 카키 — 구두·부츠엔 바지보다 한 톤 어두운 무지 양말
+      acc: 가죽 스트랩 시계: 브라운 — 시계줄도 신발·벨트와 같은 가죽 색으로
+      acc: 브리프케이스: 브라운 — 출근 기본 소품
+      acc: 머플러: 드레시한 코디엔 얇은 울·캐시미어 머플러
+   네이비 니트[5] · 베이지 치노[5] · 브라운 부츠[5] | tagLabels=아이비/비즈캐주얼/출근/주말/데이트
+      style: 아이비 스타일 +0.33
+      style: 출근 분위기와 잘 맞아요 (+0.25)
+      style: 출근에 어울리는 아이템 1개 (+0.1)
+      style: 전체 수준이 출근에 딱 맞아요 (+0.2)
+      acc: 가죽 벨트: 브라운 — 브라운 구두엔 브라운 계열 벨트
+      acc: 뉴트럴 양말: 카키 — 구두·부츠엔 바지보다 한 톤 어두운 무지 양말
+      acc: 가죽 스트랩 시계: 브라운 — 시계줄도 신발·벨트와 같은 가죽 색으로
+      acc: 토트백: 오프화이트 — 캔버스 토트가 이 스타일의 시그니처예요
+   라이트 블루 옥스포드 셔츠[6] · 베이지 치노[5] · 흰 스니커즈[3] · 네이비 블레이저[7] | tagLabels=아이비/비즈캐주얼/출근/주말/데이트
+      style: 아이비 스타일 +0.36
+      style: 출근 분위기와 잘 맞아요 (+0.27)
+      style: 출근에 어울리는 아이템 3개 (+0.3)
+      style: 전체 수준이 출근에 딱 맞아요 (+0.2)
+      acc: 브레이디드 벨트: 스니커즈엔 캔버스·브레이디드 벨트가 편해요
+      acc: 가죽 스트랩 시계: 블랙 — 출근 기본 소품
+      acc: 토트백: 오프화이트 — 캔버스 토트가 이 스타일의 시그니처예요
+-- bottom/indigo 겨울 {"style":"amekaji","occasion":"weekend"} relaxed=none
+   화이트 울 니트[5] · 인디고 데님[4] · 브라운 워크 부츠[4] | tagLabels=아메카지/워크웨어/주말/데이트
+      style: 아메카지 스타일 +0.32
+      style: 주말 분위기와 잘 맞아요 (+0.18)
+      style: 주말에 어울리는 아이템 1개 (+0.1)
+      style: 전체 수준이 주말에 딱 맞아요 (+0.2)
+      acc: 가죽 벨트: 브라운 — 브라운 구두엔 브라운 계열 벨트
+      acc: 뉴트럴 양말: 네이비 — 구두·부츠엔 바지보다 한 톤 어두운 무지 양말
+      acc: 가죽 스트랩 시계: 브라운 — 시계줄도 신발·벨트와 같은 가죽 색으로
+      acc: 크로스바디: 차콜 — 주말 기본 소품
+      acc: 볼캡: 화이트 — 주말 기본 소품
+   버건디 울 니트[5] · 인디고 데님[4] · 흰 스니커즈[3] | tagLabels=미니멀/아이비/주말/데이트
+      style: 아메카지 스타일 +0.24
+      style: 주말 분위기와 잘 맞아요 (+0.16)
+      style: 주말에 어울리는 아이템 1개 (+0.1)
+      style: 전체 수준이 주말에 딱 맞아요 (+0.2)
+      acc: 웨빙·캔버스 벨트: 스니커즈엔 캔버스·브레이디드 벨트가 편해요
+      acc: 나토·러버 시계: 인디고 — 캐주얼 코디엔 나토·러버 스트랩도 좋아요
+      acc: 백팩: 블랙 — 나일론·캔버스 백팩, 블랙·올리브·네이비·차콜 중 하나
+      acc: 볼캡: 버건디 — 주말 기본 소품
+   화이트 울 니트[5] · 인디고 데님[4] · 브라운 워크 부츠[4] · 베이지 체스터필드 코트[8] | tagLabels=미니멀/아메카지/출근/데이트
+      style: 아메카지 스타일 +0.23
+      style: 주말 분위기와 잘 맞아요 (+0.14)
+      style: 주말에 어울리는 아이템 1개 (+0.1)
+      style: 주말 기준에서 벗어난 아이템 1개 (−0.3)
+      acc: 가죽 벨트: 브라운 — 브라운 구두엔 브라운 계열 벨트
+      acc: 뉴트럴 양말: 네이비 — 구두·부츠엔 바지보다 한 톤 어두운 무지 양말
+      acc: 가죽 스트랩 시계: 브라운 — 시계줄도 신발·벨트와 같은 가죽 색으로
+      acc: 머플러: 무지 코트엔 어떤 색·패턴 머플러도 좋아요
+-- bottom/charcoal 여름 {"occasion":"formal"} relaxed=patterns>materials
+   라이트 블루 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | tagLabels=비즈캐주얼/미니멀/출근/주말/데이트
+      style: 비즈캐주얼 느낌
+      style: 격식 분위기와 잘 맞아요 (+0.29)
+      style: 격식에 어울리는 아이템 1개 (+0.1)
+      style: 격식 기준에서 벗어난 아이템 1개 (−0.3)
+      acc: 가죽 벨트: 블랙 — 블랙 구두엔 블랙 벨트
+      acc: 페이크삭스: 여름 로퍼·스니커즈엔 페이크삭스
+      acc: 가죽 스트랩 시계: 블랙 — 시계줄도 신발·벨트와 같은 가죽 색으로
+   화이트 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | tagLabels=비즈캐주얼/미니멀/출근/주말/데이트
+      style: 비즈캐주얼 느낌
+      style: 격식 분위기와 잘 맞아요 (+0.29)
+      style: 격식에 어울리는 아이템 1개 (+0.1)
+      style: 격식 기준에서 벗어난 아이템 1개 (−0.3)
+      acc: 가죽 벨트: 블랙 — 블랙 구두엔 블랙 벨트
+      acc: 페이크삭스: 여름 로퍼·스니커즈엔 페이크삭스
+      acc: 가죽 스트랩 시계: 블랙 — 시계줄도 신발·벨트와 같은 가죽 색으로
+   네이비 피케 폴로[4] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] | tagLabels=비즈캐주얼/미니멀/주말
+      style: 비즈캐주얼 느낌
+      style: 격식 분위기와 잘 맞아요 (+0.31)
+      style: 격식에 어울리는 아이템 1개 (+0.1)
+      style: 격식 기준에서 벗어난 아이템 1개 (−0.6)
+      acc: 가죽 벨트: 블랙 — 블랙 구두엔 블랙 벨트
+      acc: 페이크삭스: 여름 로퍼·스니커즈엔 페이크삭스
+      acc: 가죽 스트랩 시계: 블랙 — 시계줄도 신발·벨트와 같은 가죽 색으로
+-- top/white 여름 {"occasion":"active"} relaxed=none
+   화이트 티셔츠[2] · 인디고 데님[4] · 흰 스니커즈[3] | tagLabels=미니멀/아메카지/주말/운동
+      style: 미니멀 느낌
+      style: 운동 분위기와 잘 맞아요 (+0.09)
+      style: 운동에 어울리는 아이템 2개 (+0.2)
+      style: 전체 수준이 운동에 딱 맞아요 (+0.2)
+      acc: 페이크삭스: 여름 로퍼·스니커즈엔 페이크삭스
+      acc: 나토·러버 시계: 인디고 — 캐주얼 코디엔 나토·러버 스트랩도 좋아요
+      acc: 백팩: 블랙 — 나일론·캔버스 백팩, 블랙·올리브·네이비·차콜 중 하나
+      acc: 볼캡: 화이트 — 운동 기본 소품
+   화이트 티셔츠[2] · 올리브 치노[5] · 흰 스니커즈[3] | tagLabels=미니멀/아이비/주말
+      style: 미니멀 느낌
+      style: 운동 분위기와 잘 맞아요 (+0.13)
+      style: 운동에 어울리는 아이템 2개 (+0.2)
+      style: 운동 기준에서 벗어난 아이템 1개 (−0.3)
+      acc: 페이크삭스: 여름 로퍼·스니커즈엔 페이크삭스
+      acc: 나토·러버 시계: 올리브 — 캐주얼 코디엔 나토·러버 스트랩도 좋아요
+      acc: 백팩: 블랙 — 나일론·캔버스 백팩, 블랙·올리브·네이비·차콜 중 하나
+      acc: 볼캡: 화이트 — 운동 기본 소품
+   화이트 티셔츠[2] · 카키 치노[5] · 네이비 컬러 스니커즈[2] | tagLabels=아이비/미니멀/주말
+      style: 아이비 느낌
+      style: 운동 분위기와 잘 맞아요 (+0.13)
+      style: 운동에 어울리는 아이템 2개 (+0.2)
+      style: 운동 기준에서 벗어난 아이템 1개 (−0.3)
+      acc: 흰 운동 양말: 화이트 — 흰 운동 양말은 스니커즈·러닝화에만
+      acc: 나토·러버 시계: 카키 — 캐주얼 코디엔 나토·러버 스트랩도 좋아요
+      acc: 토트백: 오프화이트 — 캔버스 토트가 이 스타일의 시그니처예요
+      acc: 볼캡: 화이트 — 운동 기본 소품
+   mid: 브라운 코튼 니트[4] · 네이비 퀼팅 베스트[3] · 베이지 치노[5] · 흰 스니커즈[3]
+      explain: 클래식
+      explain: 톤온톤 (뉴트럴)
+      explain: 어스톤+네이비 베이스 조합 (+1)
+      explain: 출처 2개 이상
+      explain: 핏 밸런스 5/5
+      explain: 소재 궁합 4.33/5
+      explain: 신발 조합 5/5
+      explain: 레이어링 4/5
+      explain: 퀼팅 베스트는 초봄·늦가을에 좋은 겹옷이에요. 팔이 두꺼워지지 않아요 (4/5)
+   mid: 올리브 코튼 니트[4] · 네이비 퀼팅 베스트[3] · 베이지 치노[5] · 브라운 척카 부츠[5]
+      explain: 클래식
+      explain: 톤온톤 (뉴트럴)
+      explain: 어스톤+네이비 베이스 조합 (+1)
+      explain: 출처 2개 이상
+      explain: 핏 밸런스 5/5
+      explain: 소재 궁합 4.33/5
+      explain: 신발 조합 5/5
+      explain: 레이어링 4/5
+      explain: 퀼팅 베스트는 초봄·늦가을에 좋은 겹옷이에요. 팔이 두꺼워지지 않아요 (4/5)
+   mid: 초콜릿 코튼 니트[4] · 네이비 퀼팅 베스트[3] · 베이지 치노[5] · 흰 스니커즈[3]
+      explain: 클래식
+      explain: 톤온톤 (어스톤)
+      explain: 톤온톤 (뉴트럴)
+      explain: 어스톤+네이비 베이스 조합 (+1)
+      explain: 출처 2개 이상
+      explain: 핏 밸런스 5/5
+      explain: 소재 궁합 4.33/5
+      explain: 신발 조합 5/5
+      explain: 레이어링 4/5
+      explain: 퀼팅 베스트는 초봄·늦가을에 좋은 겹옷이에요. 팔이 두꺼워지지 않아요 (4/5)
+   pattern: 라이트 블루 잔줄 셔츠[6] · 베이지 치노[5] · 브라운 로퍼[6] · 네이비 블레이저[7]
+      explain: 클래식
+      explain: 변주
+      explain: 톤온톤 (뉴트럴)
+      explain: 어스톤+네이비 베이스 조합 (+1)
+      explain: 출처 2개 이상
+      explain: 핏 밸런스 5/5
+      explain: 소재 궁합 4/5
+      explain: 신발 조합 5/5
+      explain: 아우터 조합 4.5/5
+      explain: 패턴 1개 + 나머지 무지가 기본. 미니멀 룩의 킥 (+1)
+      explain: 잔줄 셔츠는 테일러링 아우터 안에서 가장 안전 (+1)
+      explain: 규칙 없음(기본 3)
+   pattern: 네이비 브레통 코튼 니트[4] · 베이지 치노[5] · 흰 스니커즈[3]
+      explain: 클래식
+      explain: 변주
+      explain: 톤온톤 (뉴트럴)
+      explain: 어스톤+네이비 베이스 조합 (+1)
+      explain: 출처 2개 이상
+      explain: 핏 밸런스 5/5
+      explain: 소재 궁합 4.5/5
+      explain: 신발 조합 5/5
+      explain: 패턴 1개 + 나머지 무지가 기본. 미니멀 룩의 킥 (+1)
+      explain: 브레통 + 네이비·인디고·베이지·화이트 하의 (+1)
+
+## engine.styles()/occasions()
+[{"id":"minimal","label":"미니멀","shortLabel":"미니멀","help":"무채색·뉴트럴, 장식 없는 기본템","phase":1},{"id":"amekaji","label":"아메카지","shortLabel":"아메카지","help":"인디고 데님·플란넬·워크 부츠","phase":1},{"id":"cityboy","label":"시티보이","shortLabel":"시티보이","help":"루즈 실루엣, 와이드 치노·로퍼","phase":2},{"id":"bizcasual","label":"비즈캐주얼","shortLabel":"비즈캐주얼","help":"셔츠·니트 + 슬랙스 + 로퍼·블레이저","phase":1},{"id":"street","label":"스트릿","shortLabel":"스트릿","help":"오버핏 후디·맨투맨, 컬러 스니커즈","phase":2},{"id":"gorpcore","label":"고프코어","shortLabel":"고프코어","help":"플리스·테크 팬츠·트레일 러닝화","phase":2},{"id":"ivy","label":"아이비","shortLabel":"아이비","help":"옥스포드·치노·페니 로퍼·네이비 블레이저","phase":1},{"id":"workwear","label":"워크웨어","shortLabel":"워크웨어","help":"초어·데님 재킷, 헨리, 워크 부츠","phase":2}]
+[{"id":"work","label":"출근","shortLabel":"출근","help":"셔츠·니트 + 슬랙스·치노 + 로퍼·더비"},{"id":"weekend","label":"주말","shortLabel":"주말","help":"티·플란넬·데님, 스니커즈·부츠"},{"id":"date","label":"데이트","shortLabel":"데이트","help":"니트·셔츠, 로퍼·흰 스니커즈, 여유 핏"},{"id":"active","label":"운동","shortLabel":"운동","help":"티·후디·플리스, 러닝화"},{"id":"formal","label":"격식","shortLabel":"격식","help":"셔츠 + 블레이저 + 울 슬랙스 + 더비"}]

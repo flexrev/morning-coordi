@@ -106,8 +106,7 @@
     "flannelShirt",
     "denimShirt",
     "henley",
-    "tee",
-    "sweatshirt"
+    "tee"
    ],
    "bottom": [
     "denimIndigo",
@@ -222,7 +221,7 @@
  },
  {
   "id": "bizcasual",
-  "labelKo": "비즈니스 캐주얼",
+  "labelKo": "비즈캐주얼",
   "labelEn": "Business casual",
   "phase": 1,
   "formality": {
@@ -447,7 +446,7 @@
  },
  {
   "id": "ivy",
-  "labelKo": "클래식·아이비",
+  "labelKo": "아이비",
   "labelEn": "Classic Ivy",
   "phase": 1,
   "formality": {

@@ -1,8 +1,9 @@
 // Phase 6-B (CX) 콘텐츠 확장 — 스타일 벡터·상황 적합·액세서리·패턴·미드 레이어. 순수 함수. 설계: docs/phase6/content-expansion.md 1~5·7절.
 // 빌드(scripts/build-data.mjs)와 런타임이 같은 함수를 쓴다 (outfits.styles[]·occasions[] = styleTags()·occasionFit(), V-31).
 import {
-  K_STYLE, K_OCC, OCC_WINDOW_PENALTY, OCC_WINDOW_FLOOR, OCC_TARGET_BONUS, STYLE_TAG_MIN, STYLE_TAG_RATIO, STYLE_TAGS_MAX, STYLE_SHOES_COLOR_WEIGHT, STYLE_NORM_DIV,
-  PATTERN_DELTA_MIN, PATTERN_DELTA_MAX, ACCESSORY_GROUP_ORDER, ACCESSORY_LINES_MAX, DARKER_OF, NEUTRAL_ACCESSORY_COLOR, DEFAULT_SCORE, MID_FORMALITY_TOL,
+  K_STYLE, K_OCC, OCC_WINDOW_PENALTY, OCC_WINDOW_FLOOR, OCC_TARGET_BONUS, OCC_PREFER_BONUS, OCC_PREFER_MAX, STYLE_TAG_MIN, STYLE_TAG_RATIO, STYLE_TAGS_MAX, STYLE_SHOES_COLOR_WEIGHT, STYLE_NORM_DIV,
+  PATTERN_DELTA_MIN, PATTERN_DELTA_MAX, PATTERN_FORMALITY_TOL, ACCESSORY_GROUP_ORDER, ACCESSORY_LINES_MAX, DARKER_OF, NEUTRAL_ACCESSORY_COLOR, DEFAULT_SCORE, MID_FORMALITY_TOL,
+  LEATHER_FAMILY, LEATHER_FAMILY_COLOR, LEATHER_ACCESSORY_DEFAULT,
 } from './constants.js';
 import { formalityLevel } from './lookup.js';
 
@@ -109,16 +110,33 @@ export function occasionAvoidHit(outfit, occ, stage = 0) {
   return null;
 }
 
-/** 상황 창 평가: 창 밖 아이템 수·목표 안 여부·보정값 */
+/**
+ * 상황 창 평가: 창 밖 아이템 수·거리 합·목표 안 여부·보정값.
+ * C6-01: 감점은 창 경계까지의 거리(단계)에 비례 — Σ max(1, 거리) × OCC_WINDOW_PENALTY, 하한 OCC_WINDOW_FLOOR. 티셔츠(2, 격식 창 6~10에서 4단계 밖)는 −1.2, 린넨 셔츠(5)는 −0.3
+ */
 export function occasionWindow(index, outfit, occ) {
   const f = outfitFormality(index, outfit);
-  const outside = f.levels.filter(([, l]) => l < occ.formality.min || l > occ.formality.max).length;
+  const dist = (l) => (l < occ.formality.min ? occ.formality.min - l : l > occ.formality.max ? l - occ.formality.max : 0);
+  const outsideLevels = f.levels.map(([, l]) => dist(l)).filter((d) => d > 0);
+  const outside = outsideLevels.length;
+  const distance = outsideLevels.reduce((a, d) => a + Math.max(1, d), 0);
   const inTarget = f.avg !== null && f.avg >= occ.formality.targetLo && f.avg <= occ.formality.targetHi;
-  const penalty = Math.max(OCC_WINDOW_FLOOR, outside * OCC_WINDOW_PENALTY);
-  return { outside, inTarget, avg: f.avg, penalty: round2(penalty), bonus: inTarget ? OCC_TARGET_BONUS : 0 };
+  const penalty = Math.max(OCC_WINDOW_FLOOR, distance * OCC_WINDOW_PENALTY);
+  return { outside, distance, inTarget, avg: f.avg, penalty: round2(penalty), bonus: inTarget ? OCC_TARGET_BONUS : 0 };
 }
 
-/** occasionAdj = K_OCC × Σ(boost_s × styleNorm[s]) / Σboost_s + windowPenalty + targetBonus */
+/** occasions.prefer 품목·신발 수 (C6-09) */
+export function occasionPreferCount(outfit, occ) {
+  const p = occ.prefer ?? {};
+  let n = 0;
+  for (const it of outfit.items) {
+    if (it.category === 'shoes') { if ((p.shoeTypes ?? []).includes(it.shoeType)) n++; continue; }
+    if (it.itemType && (p.itemTypes ?? []).includes(it.itemType)) n++;
+  }
+  return n;
+}
+
+/** occasionAdj = K_OCC × Σ(boost_s × styleNorm[s]) / Σboost_s + preferBonus + windowPenalty + targetBonus */
 export function occasionAdjust(index, outfit, occ, sv) {
   const w = occasionWindow(index, outfit, occ);
   let styleAdj = 0;
@@ -127,7 +145,9 @@ export function occasionAdjust(index, outfit, occ, sv) {
     const sum = boosts.reduce((a, [, b]) => a + b, 0);
     styleAdj = sum ? (K_OCC * boosts.reduce((a, [s, b]) => a + b * (sv.norm[s] ?? 0), 0)) / sum : 0;
   }
-  return { styleAdj: round2(styleAdj), windowPenalty: w.penalty, targetBonus: w.bonus, outside: w.outside, avg: w.avg, total: round2(styleAdj + w.penalty + w.bonus) };
+  const preferN = occasionPreferCount(outfit, occ);
+  const preferBonus = round2(Math.min(OCC_PREFER_MAX, preferN * OCC_PREFER_BONUS));
+  return { styleAdj: round2(styleAdj), preferN, preferBonus, windowPenalty: w.penalty, targetBonus: w.bonus, outside: w.outside, distance: w.distance, avg: w.avg, total: round2(styleAdj + preferBonus + w.penalty + w.bonus) };
 }
 
 /** @returns {string[]} 빌드 타임 occasions[]: avoid에 안 걸리고(완화 0), 전 아이템 창 안, 평균이 목표 안 (6-4) */
@@ -173,13 +193,13 @@ export function evalPatterns(index, outfit, season, mode = null, extra = {}) {
   if (!pis.length) return none;
   const counted = pis.filter(({ pattern }) => !countAsTexture(index, pattern));
   const count = counted.length;
-  const bottom = item(outfit, 'bottom'); const outer = outerOf(outfit);
+  const bottom = item(outfit, 'bottom'); const outer = outerOf(outfit); const shoes = item(outfit, 'shoes');
   const f = outfitFormality(index, outfit);
   const accentCount = outfit.items.filter((it) => index.colors.get(it.color)?.tones.includes('accent')).length;
   const tones = outfit.tags?.filter((t) => ['neutral', 'earth', 'mono', 'navyBase', 'accent', 'pastel'].includes(t)) ?? [];
   const pair = counted.length === 2 ? counted : null;
   const common = {
-    mode, patternCount: count, accentCount, bottomColor: bottom?.color ?? null, bottomPattern: bottom?.pattern ?? null, outerType: outer?.itemType ?? null, outfitTones: tones,
+    mode, patternCount: count, accentCount, bottomColor: bottom?.color ?? null, bottomPattern: bottom?.pattern ?? null, outerType: outer?.itemType ?? null, shoeType: shoes?.shoeType ?? null, outfitTones: tones,
     sameFamily: pair ? pair[0].pattern.family === pair[1].pattern.family : null,
     scaleDiff: pair ? Math.abs(SCALE_IDX[pair[0].pattern.scale] - SCALE_IDX[pair[1].pattern.scale]) : null,
     sharedColor: pair ? sharedColor(pair[0], pair[1]) : (count === 1 && extra.accentColor ? counted[0].pattern.colorsTypical.includes(extra.accentColor) || counted[0].item.color === extra.accentColor : null),
@@ -242,7 +262,7 @@ export function patternFor(index, top, season, formalityAvg) {
   for (const p of index.patterns.values()) {
     if (!p.categories.includes('top') || !p.itemTypes.includes(top.itemType)) continue;
     if (!p.seasons.includes(season) || !p.colorsTypical.includes(top.color)) continue;
-    if (formalityAvg !== null && Math.abs(formalityAvg - p.formality) > 3) continue;
+    if (formalityAvg !== null && Math.abs(formalityAvg - p.formality) > PATTERN_FORMALITY_TOL) continue; // C6-11: ±2 (하운드투스 7 ↔ 데님+워크 부츠 4.3 제외)
     return p;
   }
   return null;
@@ -319,14 +339,16 @@ export function midTypesFor(index, outfit, season) {
 
 // ================================================================ 5. 액세서리 (content-expansion 3절)
 
-const BROWN_FAMILY = ['brown', 'chocolate', 'tan', 'camel'];
-/** 파생 색 계산: shoesFamily·bottomDarker·outfit·outfitSecondary·outerTone2·outerPick·neutral·free·색 id */
+/**
+ * 파생 색 계산: shoesFamily·bottomDarker·outfit·outfitSecondary·outerTone2·outerPick·neutral·free·색 id. 배열이면 값을 내는 첫 항목.
+ * C6-06: shoesFamily는 신발 색이 가죽 계열(LEATHER_FAMILY)일 때만 — 흰 스니커즈에 '화이트' 가죽 토트·시계줄을 내지 않는다(다음 항목으로, 없으면 null). 버건디는 다크 브라운(C6-14)
+ */
 export function deriveAccessoryColor(index, outfit, spec) {
   if (!spec) return null;
   const top = item(outfit, 'top'); const bottom = item(outfit, 'bottom'); const shoes = item(outfit, 'shoes'); const outer = outerOf(outfit);
   for (const s of arr(spec)) {
     if (s === 'free') return null;
-    if (s === 'shoesFamily') return shoes?.color ?? null;
+    if (s === 'shoesFamily') { if (shoes && LEATHER_FAMILY.includes(shoes.color)) return LEATHER_FAMILY_COLOR[shoes.color] ?? shoes.color; continue; }
     if (s === 'bottomDarker') return bottom ? DARKER_OF[bottom.color] ?? bottom.color : null;
     if (s === 'outfit') return top?.color ?? null;
     if (s === 'outfitSecondary') return bottom?.color ?? null;
@@ -356,7 +378,7 @@ function accWhen(when, props) {
     if (k === 'formalityMin') { if (props.formality === null || props.formality < v) return false; continue; }
     if (k === 'formalityMax') { if (props.formality === null || props.formality > v) return false; continue; }
     if (k === 'outerPattern') { if (!props.hasOuter) return false; if (v === null) { if (props.outerPattern !== null) return false; continue; } if (!arr(v).includes(props.outerPattern)) return false; continue; }
-    if (k === 'material') { if (props.material !== null && !arr(v).includes(props.material)) return false; continue; }
+    if (k === 'material') { if (props.material === null || !arr(v).includes(props.material)) return false; continue; } // C6-06: 가방 소재가 안 정해졌으면(null) 가죽 통일 규칙은 발화하지 않는다
     const p = props[k];
     if (p === undefined) return false;
     if (Array.isArray(v)) { if (!v.includes(p)) return false; continue; }
@@ -376,7 +398,9 @@ export function suggestAccessories(index, outfit, season, sv, opts = {}) {
   const forced = typeof opts === 'object' && opts !== null ? opts : {};
   const occ = forced.occasion && index.occasions?.get(forced.occasion);
   const typeOf = (id) => index.accessoryTypes.get(id);
-  const fits = (t) => t && t.seasons.includes(season);
+  const fAvg = outfitFormality(index, outfit).avg;
+  // C6-08: 소품 종류의 계절 + 포멀도 창(accessoryTypes.formality)을 규칙 경로에서도 지킨다 — 볼캡(≤5)은 트렌치·블레이저 카드에, 웨빙 벨트(≤4)는 옥스포드+치노 카드에 안 나온다
+  const fits = (t) => !!t && t.seasons.includes(season) && (fAvg === null || (fAvg >= t.formality.min && fAvg <= t.formality.max));
   const cands = new Map(); // group → [{...}]
   const negatives = []; // delta < 0 규칙: 그 소품이 실제로 골라졌거나(forced·pick) 강제됐을 때만 경고
   const consider = (rule, props) => {
@@ -406,12 +430,12 @@ export function suggestAccessories(index, outfit, season, sv, opts = {}) {
   const warnings = negatives
     .filter((n) => forcedIds.has(n.id) || best(n.group)?.id === n.id || (n.group === 'belt' && forced.beltColor && (best('belt')?.id === n.id || belt === n.id)))
     .map((n) => ({ group: n.group, id: n.id, color: n.group === 'belt' ? (forced.beltColor ?? beltColor ?? null) : null, note: n.note, severity: 'warn', ruleId: n.ruleId, delta: n.delta, key: `explain.acc.${n.ruleId}` }));
-  // 상황 기본값: 그룹이 비었으면 occasions.accessories에서 창·계절 맞는 것
+  // 상황 기본값: 그룹이 비었으면 occasions.accessories에서 창·계절 맞는 것. colorFrom shoes는 가죽 계열 신발 색, 아니면 블랙(C6-06: 흰 스니커즈 → '화이트 가죽 시계' 금지)
   if (occ) for (const accId of occ.accessories) {
     const t = typeOf(accId);
     if (!t || cands.has(t.group) || !fits(t)) continue;
-    if (props1.formality !== null && (props1.formality < t.formality.min || props1.formality > t.formality.max)) continue;
-    cands.set(t.group, [{ group: t.group, id: accId, color: deriveAccessoryColor(index, outfit, t.colorFrom === 'shoes' ? 'shoesFamily' : t.colorFrom === 'bottom' ? 'bottomDarker' : t.colorFrom), note: t.note, severity: 'info', ruleId: `occasion.${occ.id}`, delta: 0, sources: 0, key: `explain.acc.occasion`, pick: {} }]);
+    const colorSpec = t.colorFrom === 'shoes' ? ['shoesFamily', LEATHER_ACCESSORY_DEFAULT] : t.colorFrom === 'bottom' ? 'bottomDarker' : t.colorFrom;
+    cands.set(t.group, [{ group: t.group, id: accId, color: deriveAccessoryColor(index, outfit, colorSpec), note: t.note, severity: 'info', ruleId: `occasion.${occ.id}`, delta: 0, sources: 0, key: `explain.acc.occasion`, pick: {} }]);
   }
   const out = [];
   for (const group of ACCESSORY_GROUP_ORDER) {

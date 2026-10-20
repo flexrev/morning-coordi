@@ -1,0 +1,36 @@
+
+## 현행
+  분포: minimal 31(60%) · amekaji 6(12%) · cityboy 6(12%) · bizcasual 21(40%) · street 3(6%) · gorpcore 2(4%) · ivy 17(33%) · workwear 7(13%) · 태그 없음 0
+  오태그 7건 중 해결 6 [o03,o27,o30,o34,o49,o50], 잔존 1 [o12] · 경계 7건 중 변경 1 [o02]
+  태그가 바뀐 코디 0: 
+  오태그·경계 밖에서 바뀐 코디(회귀 점검) 0: 
+
+## A: 핏·기장 가중 0.5
+  분포: minimal 25(48%) · amekaji 8(15%) · cityboy 7(13%) · bizcasual 20(38%) · street 5(10%) · gorpcore 2(4%) · ivy 20(38%) · workwear 7(13%) · 태그 없음 0
+  오태그 7건 중 해결 6 [o03,o27,o30,o34,o49,o50], 잔존 1 [o12] · 경계 7건 중 변경 3 [o02,o37,o41]
+  태그가 바뀐 코디 15: o02 minimal→minimal/amekaji · o05 bizcasual/ivy→ivy/bizcasual · o08 minimal→minimal/street · o11 bizcasual/ivy→ivy/bizcasual · o12 minimal/ivy→ivy/minimal · o13 bizcasual/minimal→bizcasual/ivy · o22 ivy/minimal→ivy · o24 minimal/ivy→ivy/minimal · o25 ivy/minimal→ivy · o27 minimal/workwear→minimal/cityboy · o35 bizcasual/minimal→bizcasual/ivy · o37 minimal/bizcasual→workwear/minimal · o41 minimal/bizcasual→bizcasual/ivy · o43 minimal/gorpcore→street/gorpcore · o48 street→street/amekaji
+  오태그·경계 밖에서 바뀐 코디(회귀 점검) 9: o05 bizcasual/ivy→ivy/bizcasual · o08 minimal→minimal/street · o11 bizcasual/ivy→ivy/bizcasual · o13 bizcasual/minimal→bizcasual/ivy · o22 ivy/minimal→ivy · o25 ivy/minimal→ivy · o35 bizcasual/minimal→bizcasual/ivy · o43 minimal/gorpcore→street/gorpcore · o48 street→street/amekaji
+
+## B: 셀 10개 수정
+  분포: minimal 31(60%) · amekaji 6(12%) · cityboy 6(12%) · bizcasual 21(40%) · street 3(6%) · gorpcore 2(4%) · ivy 17(33%) · workwear 7(13%) · 태그 없음 0
+  오태그 7건 중 해결 6 [o03,o27,o30,o34,o49,o50], 잔존 1 [o12] · 경계 7건 중 변경 1 [o02]
+  태그가 바뀐 코디 0: 
+  오태그·경계 밖에서 바뀐 코디(회귀 점검) 0: 
+
+## A+B
+  분포: minimal 25(48%) · amekaji 8(15%) · cityboy 7(13%) · bizcasual 20(38%) · street 5(10%) · gorpcore 2(4%) · ivy 20(38%) · workwear 7(13%) · 태그 없음 0
+  오태그 7건 중 해결 6 [o03,o27,o30,o34,o49,o50], 잔존 1 [o12] · 경계 7건 중 변경 3 [o02,o37,o41]
+  태그가 바뀐 코디 15: o02 minimal→minimal/amekaji · o05 bizcasual/ivy→ivy/bizcasual · o08 minimal→minimal/street · o11 bizcasual/ivy→ivy/bizcasual · o12 minimal/ivy→ivy/minimal · o13 bizcasual/minimal→bizcasual/ivy · o22 ivy/minimal→ivy · o24 minimal/ivy→ivy/minimal · o25 ivy/minimal→ivy · o27 minimal/workwear→minimal/cityboy · o35 bizcasual/minimal→bizcasual/ivy · o37 minimal/bizcasual→workwear/minimal · o41 minimal/bizcasual→bizcasual/ivy · o43 minimal/gorpcore→street/gorpcore · o48 street→street/amekaji
+  오태그·경계 밖에서 바뀐 코디(회귀 점검) 9: o05 bizcasual/ivy→ivy/bizcasual · o08 minimal→minimal/street · o11 bizcasual/ivy→ivy/bizcasual · o13 bizcasual/minimal→bizcasual/ivy · o22 ivy/minimal→ivy · o25 ivy/minimal→ivy · o35 bizcasual/minimal→bizcasual/ivy · o43 minimal/gorpcore→street/gorpcore · o48 street→street/amekaji
+
+## 생성 카드 예: 화이트 티셔츠 · 네이비 치노 · 흰 스니커즈 (여름)
+  현행: minimal 0.7 · amekaji 0.33 · cityboy 0.42 · bizcasual 0.56 · street 0.26 · gorpcore 0.25 · ivy 0.63 · workwear 0.33
+  A: 핏·기장 가중 0.5: minimal 0.71 · amekaji 0.36 · cityboy 0.49 · bizcasual 0.51 · street 0.31 · gorpcore 0.24 · ivy 0.67 · workwear 0.36
+  B: 셀 10개 수정: minimal 0.7 · amekaji 0.33 · cityboy 0.42 · bizcasual 0.56 · street 0.26 · gorpcore 0.25 · ivy 0.63 · workwear 0.33
+  A+B: minimal 0.71 · amekaji 0.36 · cityboy 0.49 · bizcasual 0.51 · street 0.31 · gorpcore 0.24 · ivy 0.67 · workwear 0.36
+
+## 생성 카드 예: 화이트 옥스포드 셔츠 · 차콜 울 슬랙스 · 블랙 더비 (봄가을)
+  현행: minimal 0.68 · amekaji 0.11 · cityboy 0.35 · bizcasual 0.79 · street 0.05 · gorpcore -0.04 · ivy 0.51 · workwear 0.16
+  A: 핏·기장 가중 0.5: minimal 0.69 · amekaji 0.07 · cityboy 0.4 · bizcasual 0.8 · street 0.04 · gorpcore -0.11 · ivy 0.51 · workwear 0.13
+  B: 셀 10개 수정: minimal 0.68 · amekaji 0.11 · cityboy 0.35 · bizcasual 0.79 · street 0.05 · gorpcore -0.04 · ivy 0.51 · workwear 0.16
+  A+B: minimal 0.69 · amekaji 0.07 · cityboy 0.4 · bizcasual 0.8 · street 0.04 · gorpcore -0.11 · ivy 0.51 · workwear 0.13

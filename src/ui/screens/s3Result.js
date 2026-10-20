@@ -1,14 +1,15 @@
 // S3 결과 / S3′ 오늘의 추천 홈 — 날짜 제목 · 계절 세그먼트 · ⋯ 메뉴 · 기준 아이템 바(히어로급) · 바로가기 줄(♥ 저장 N + 최근) ·
 // 클래식 3장(오늘 카드 맨 위) · 하단 더 보기(부제) + 카테고리 4. 제자리 갱신(계절·pill·♥)은 카드 영역만 교체 + 스태거.
 import { h } from '../dom.js';
-import { topbar, outfitCard, seasonSegment } from '../components.js';
+import { topbar, outfitCard, seasonSegment, styleTagsOf } from '../components.js';
 import { icon } from '../icons.js';
 import * as nav from '../nav.js';
 import { get as getState, getResult, selectBase, setSeason, seasonForMonth, wasSlow } from '../state.js';
 import { colorValue } from '../silhouette.js';
-import { shouldShowBanner, installBanner } from '../install.js';
+import { shouldShowBanner, installBanner, deferBanner } from '../install.js';
 import { moreTab } from './s4More.js';
-import { todayIndex, dateLabel } from '../today.js';
+import { todayIndex, dateLabel, classicLabels, classicOrder } from '../today.js';
+import { guardStep } from '../fit.js';
 import { read, write, KEYS } from '../storage.js';
 import * as favorites from '../favorites.js';
 import { stagger, nextFrame } from '../motion.js';
@@ -36,8 +37,11 @@ export function s3Result({ rerender }) {
   const body = h('div', { class: 'screen__body screen__body--scroll' });
   const live = h('div', { class: 'visually-hidden', 'aria-live': 'polite', id: 's3-live' });
   body.append(live);
-  const banner = shouldShowBanner() ? installBanner({ onChange: rerender }) : null;
-  if (banner) body.append(banner);
+  // 배너는 슬롯(div)에 담는다 — .banner 자체는 banner-in(translateY) 애니메이션 중이라 getBoundingClientRect 가 8px 어긋난다. 가드는 슬롯을 잰다
+  let banner = shouldShowBanner() ? installBanner({ onChange: rerender }) : null;
+  const bannerSlot = banner ? h('div', { class: 'banner-slot' }, banner) : null;
+  if (bannerSlot) body.append(bannerSlot);
+  let shownBase = null; // 마지막으로 그린 기준 (U6-14: 같은 키 딥링크 → __update 에서 비교)
 
   const head = h('div', { class: 's3__head' });   // 기준 바 + 바로가기 줄 (제자리 갱신 대상)
   const cards = h('div', { class: 'cards', role: 'list', 'aria-label': '클래식 조합' });
@@ -61,6 +65,7 @@ export function s3Result({ rerender }) {
 
   function renderHead() {
     const base = getState().base;
+    shownBase = base;
     head.replaceChildren();
     // 기준 아이템 바 — 히어로 타이틀급 (A의 위계)
     head.append(h('button', { class: 'basebar glass', type: 'button', 'aria-label': `${cat.baseName(base)}. 색 바꾸기`, 'data-focus-key': 's3:base', onClick: () => nav.go(`/pick/${base.category}`) },
@@ -107,14 +112,15 @@ export function s3Result({ rerender }) {
       if (nv) empty.append(h('button', { class: 'btn btn--ghost', type: 'button', text: `변주 ${nv}개 보기`, onClick: () => nav.go('/more/var') }));
       cards.append(empty);
     } else {
-      // 오늘 카드: 날짜로 정한 1장이 맨 위 (표시 순서만, ref 는 원래 인덱스)
+      // 오늘 카드: 날짜로 정한 1장이 맨 위 (표시 순서만, ref 는 원래 인덱스). 라벨은 "오늘의 추천" / "다른 클래식 k/2" (U6-01)
       const ti = todayIndex(base, s.season, classic.length);
-      const order = ti >= 0 ? [ti, ...classic.map((_, i) => i).filter((i) => i !== ti)] : classic.map((_, i) => i);
-      for (const i of order) {
+      const labels = classicLabels(classic.length, ti);
+      // 세 장의 dominant 태그가 전부 같으면 정보 0 → 숨김 (U6-10)
+      const firstTags = classic.map((c) => styleTagsOf(c, 1)[0] || null);
+      const sameTag = classic.length > 1 && firstTags.every((t) => t === firstTags[0]);
+      for (const i of classicOrder(classic.length, ti)) {
         const li = h('div', { role: 'listitem' });
-        const n = `클래식 ${i + 1}/${classic.length}`;
-        const isToday = i === ti;
-        li.append(outfitCard(classic[i], { label: isToday ? `오늘의 추천 · ${n}` : n, ref: `classic.${i}`, today: isToday }));
+        li.append(outfitCard(classic[i], { label: labels[i], ref: `classic.${i}`, today: i === ti, tags: !sameTag }));
         cards.append(li);
       }
       // 클래식이 3장 미만이면 변주(점수순)로 채우고 "변주" 라벨 (P1-18)
@@ -143,18 +149,30 @@ export function s3Result({ rerender }) {
     renderCards();
   }
 
-  /** 높이 가드: 배너가 있으면 카드 3장이 하단 위에 다 들어가야(P1-01 b) · 안 들어가면 컴팩트 모드(ux-enhancement 12-4) */
+  /**
+   * 높이 가드 (fit.js guardStep): 배너 아래로(P1-01 b) → 여백 줄이기 is-tight(U6-08, −16px) → 배너 다음 방문으로(U6-03: 겹침·스크롤 0)
+   * → 컴팩트 모드(ux-enhancement 12-4). 단계마다 두 프레임 뒤 다시 잰다(카드 이유 줄 생략이 먼저 끝나야).
+   */
   function guard() {
-    // 카드의 이유 줄 생략(outfitCard 의 nextFrame)이 먼저 끝난 뒤 재는다 → 두 프레임 뒤
     nextFrame(() => nextFrame(() => {
       if (!screen.isConnected) return;
-      const cb = cards.getBoundingClientRect().bottom;
-      const bt = bottom.getBoundingClientRect().top;
-      if (cb > bt + 0.5 && banner && !banner.classList.contains('banner--below')) {
-        banner.classList.add('banner--below'); body.insertBefore(banner, spacer); window.scrollTo(0, 0);
-        return guard();
-      }
-      if (cb > bt + 0.5 && !screen.classList.contains('is-compact')) { screen.classList.add('is-compact'); return guard(); }
+      const m = {
+        cardsBottom: cards.getBoundingClientRect().bottom,
+        bottomTop: bottom.getBoundingClientRect().top,
+        hasBanner: !!banner && !!bannerSlot?.isConnected,
+        bannerBelow: !!banner && banner.classList.contains('banner--below'),
+        bannerBottom: bannerSlot?.isConnected ? bannerSlot.getBoundingClientRect().bottom : 0,
+        tight: screen.classList.contains('is-tight'),
+        compact: screen.classList.contains('is-compact'),
+      };
+      const step = guardStep(m);
+      if (step === 'ok' || step === 'give-up') return;
+      if (step === 'banner-below') { banner.classList.add('banner--below'); body.insertBefore(bannerSlot, spacer); }
+      else if (step === 'tight') screen.classList.add('is-tight');
+      else if (step === 'defer-banner') { bannerSlot.remove(); banner = null; deferBanner(); }
+      else if (step === 'compact') screen.classList.add('is-compact');
+      window.scrollTo(0, 0); body.scrollTop = 0;
+      guard();
     }));
   }
 
@@ -174,7 +192,11 @@ export function s3Result({ rerender }) {
   const visits = (read(KEYS.install, {}) || {}).visits || 0;
   if (!firstResult && visits >= 2 && !banner && !coachSeen('more')) showCoach('more', moreBtn, { delay: 280 + 400 });
 
-  screen.__update = () => {};
+  // 같은 키(s3)로 다시 그려질 때 기준이 바뀌었으면 제자리 갱신 (U6-14: 같은 문서 해시 딥링크 #/result/top/white)
+  screen.__update = () => {
+    const b = getState().base;
+    if (b && shownBase && (b.category !== shownBase.category || b.color !== shownBase.color)) refresh({ reason: 'deeplink' });
+  };
   return screen;
 }
 

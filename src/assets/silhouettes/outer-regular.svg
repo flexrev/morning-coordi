@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- 아침 코디 실루엣 레이어: 블레이저 / 셔츠 재킷 (레귤러) · viewBox 0 0 200 400 · 단색 fill, 그라데이션 없음 · 원본 제작(자체) -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" role="img" aria-label="블레이저 / 셔츠 재킷 (레귤러)">
-  <path data-slot="outer" data-fit="regular" data-length="regular" fill="var(--c-outer, #555555)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"
-        d="M 58 80 L 84 70 L 88 86 L 100 150 L 112 86 L 116 70 L 142 80 L 156 204 L 138 204 L 138 215 L 62 215 L 62 204 L 44 204 Z M 88 86 L 76 92 M 112 86 L 124 92 M 66 170 L 86 170 M 114 170 L 134 170 M 138 204 L 134 110 M 62 204 L 66 110 M 100 150 L 100 215"/>
-</svg>

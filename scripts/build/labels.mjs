@@ -76,36 +76,88 @@ export const EXPLAIN = {
 };
 
 // ---------------------------------------------------------------- Phase 6-B (CX) 확장 라벨 — content-expansion.md 9절 '라벨'. shortLabel ≤ 6자 (V-12·V-32)
+// Phase 6-B-3 (U6-13·C6-22): label = shortLabel 통일(아이비·비즈캐주얼·운동), help ≤ 24자(칩 아래 한 줄, 내부 id·"2차" 없음)
 const STYLE_LABELS = {
   minimal: ['미니멀', '미니멀', ['미니멀리즘', '콰이어트 럭셔리'], '무채색·뉴트럴, 장식 없는 기본템'],
-  amekaji: ['아메카지', '아메카지', ['아메리칸 캐주얼', '빈티지 워크웨어'], '인디고 데님·플란넬·워크 부츠, 질감과 빈티지 워시'],
-  cityboy: ['시티보이', '시티보이', ['시티보이 룩', '포파이'], '루즈·박시 실루엣, 와이드 치노·로퍼·캔버스 토트'],
-  bizcasual: ['비즈니스 캐주얼', '비즈캐주얼', ['비즈캐주얼', '오피스룩', '출근룩'], '타이 없는 셔츠·니트 + 슬랙스 + 로퍼·블레이저'],
-  street: ['스트릿', '스트릿', ['스트리트'], '오버핏 후디·맨투맨, 와이드 데님, 컬러 스니커즈'],
-  gorpcore: ['고프코어', '고프코어', ['아웃도어 룩', '고프'], '플리스·셸·테크 팬츠·트레일 러닝화를 일상복으로'],
-  ivy: ['클래식·아이비', '아이비', ['아이비', '프레피', '클래식'], '옥스포드·치노·페니 로퍼·네이비 블레이저'],
-  workwear: ['워크웨어', '워크웨어', ['초어 재킷', '작업복'], '초어·데님 재킷, 헨리·데님 셔츠, 워크 부츠'],
+  amekaji: ['아메카지', '아메카지', ['아메리칸 캐주얼', '빈티지 워크웨어'], '인디고 데님·플란넬·워크 부츠'],
+  cityboy: ['시티보이', '시티보이', ['시티보이 룩', '포파이'], '루즈 실루엣, 와이드 치노·로퍼'],
+  bizcasual: ['비즈캐주얼', '비즈캐주얼', ['비즈니스 캐주얼', '오피스룩', '출근룩'], '셔츠·니트 + 슬랙스 + 로퍼·블레이저'],
+  street: ['스트릿', '스트릿', ['스트리트'], '오버핏 후디·맨투맨, 컬러 스니커즈'],
+  gorpcore: ['고프코어', '고프코어', ['아웃도어 룩', '고프'], '플리스·테크 팬츠·트레일 러닝화'],
+  ivy: ['아이비', '아이비', ['클래식 아이비', '프레피', '클래식'], '옥스포드·치노·페니 로퍼·네이비 블레이저'],
+  workwear: ['워크웨어', '워크웨어', ['초어 재킷', '작업복'], '초어·데님 재킷, 헨리, 워크 부츠'],
 };
 const OCCASION_LABELS = {
   work: ['출근', '출근', ['오피스', '회사', '오피스 캐주얼'], '셔츠·니트 + 슬랙스·치노 + 로퍼·더비'],
   weekend: ['주말', '주말', ['휴일', '캐주얼'], '티·플란넬·데님, 스니커즈·부츠'],
   date: ['데이트', '데이트', ['소개팅'], '니트·셔츠, 로퍼·흰 스니커즈, 여유 핏'],
-  active: ['운동·산책', '운동·산책', ['운동', '산책', '액티브'], '티·후디·플리스, 러닝화'],
-  formal: ['격식', '격식', ['결혼식', '하객', '면접', '포멀'], '드레스 셔츠 + 블레이저 + 울 슬랙스 + 더비. 수트는 2차'],
+  active: ['운동', '운동', ['운동·산책', '산책', '액티브'], '티·후디·플리스, 러닝화'],
+  formal: ['격식', '격식', ['결혼식', '하객', '면접', '포멀'], '셔츠 + 블레이저 + 울 슬랙스 + 더비'],
 };
 const PATTERN_SHORT = { breton: '브레통', stripeShirt: '잔줄 셔츠', pinstripe: '핀스트라이프', gingham: '깅엄 체크', plaid: '타탄 체크', windowpane: '윈도페인', houndstooth: '하운드투스', herringbone: '헤링본', camo: '카모' };
 const PATTERN_ALIAS = { breton: ['가로 줄무늬', '마린'], stripeShirt: ['펜슬 스트라이프', '캔디 스트라이프', '세로 줄무늬'], gingham: ['체크 셔츠'], plaid: ['플란넬 체크', '버팔로 체크', '타탄'], camo: ['카무플라주', '위장 무늬'] };
-const MID_SHORT = { cardigan: '가디건', knitVest: '니트 베스트', quiltedVest: '퀼팅 베스트', overshirtMid: '오버셔츠', knitOverShirt: '셔츠위 니트' };
+const MID_SHORT = { cardigan: '가디건', knitVest: '니트 베스트', quiltedVest: '퀼팅 베스트', overshirtMid: '오버셔츠', knitOverShirt: '이너 니트' };
+// C6-19: help는 사용자 문장 (데이터 note는 내부 설명)
+const MID_HELP = { cardigan: '코트 안에 입는 가디건', knitVest: '셔츠 위에 입는 니트 베스트', quiltedVest: '코트·재킷 안에 입는 얇은 조끼', overshirtMid: '코트 안에 입는 오버셔츠', knitOverShirt: '셔츠 위에 겹쳐 입는 니트' };
 const ACCESSORY_SHORT = { beltLeather: '가죽 벨트', beltBraided: '브레이디드', beltWebbing: '웨빙 벨트', watchLeather: '가죽 시계', watchMetal: '메탈 시계', watchNato: '나토 시계', socksMatch: '바지색 양말', socksNeutral: '뉴트럴 양말', socksNoShow: '페이크삭스', socksWhite: '흰 양말', socksPattern: '패턴 양말', bagTote: '토트백', bagBackpack: '백팩', bagCrossbody: '크로스바디', bagBriefcase: '브리프케이스', cap: '볼캡', beanie: '비니', bucketHat: '버킷햇', scarf: '머플러' };
+const ACCESSORY_HELP = {
+  beltLeather: '신발과 같은 가죽 색', beltBraided: '치노·린넨·로퍼에', beltWebbing: '스니커즈·부츠·카고에', watchLeather: '벨트·신발과 같은 가죽 색', watchMetal: '벨트 버클 금속과 통일', watchNato: '캐주얼 코디에만',
+  socksMatch: '바지보다 한 톤 어둡게', socksNeutral: '네이비·차콜·그레이', socksNoShow: '여름 로퍼·스니커즈에', socksWhite: '스니커즈·러닝화에만', socksPattern: '작은 패턴, 코디에 패턴이 없을 때',
+  bagTote: '가죽은 신발 색, 캔버스는 자유', bagBackpack: '블랙·올리브·네이비·차콜', bagCrossbody: '나일론·캔버스', bagBriefcase: '가죽, 신발과 같은 색', cap: '아우터와 비슷한 톤', beanie: '캐주얼 아우터와', bucketHat: '고프코어·스트릿', scarf: '포인트 컬러 1개로 쳐요',
+};
 const ACCESSORY_GROUPS = { belt: '벨트', watch: '시계', socks: '양말', bag: '가방', hat: '모자', scarf: '머플러' };
+// C6-10: 소품 규칙별 사용자 문장 (explain.acc.<ruleId>). 조건·점수·출처 코드 없이 한 문장
+const ACC_RULE_TEXT = {
+  acBeltBrownShoes: '브라운 구두엔 브라운 계열 벨트',
+  acBeltBlackShoes: '블랙 구두엔 블랙 벨트',
+  acBeltBurgundyShoes: '버건디 구두엔 다크 브라운 벨트',
+  acBeltBrownBlack: '브라운 구두에 블랙 벨트는 피해요',
+  acBeltSneaker: '스니커즈엔 캔버스·브레이디드 벨트가 편해요',
+  acBeltSuede: '스웨이드 신발엔 스웨이드 벨트',
+  acBeltFormalWidth: '드레시한 날엔 좁고 매끈한 벨트',
+  acBeltHiddenTee: '상의가 벨트를 가려요',
+  acBeltBuckleMetal: '버클 금속은 시계와 맞춰요',
+  acWatchLeatherUnify: '시계줄도 신발·벨트와 같은 가죽 색으로',
+  acWatchNatoCasual: '캐주얼 코디엔 나토·러버 스트랩도 좋아요',
+  acWatchNatoFormal: '드레시한 코디에 나토 스트랩은 어색해요',
+  acSocksMatchTrousers: '바지색 양말이 다리를 길어 보이게 해요',
+  acSocksNoShowSummerLoafer: '여름 로퍼·스니커즈엔 페이크삭스',
+  acSocksWinterLoafer: '겨울 로퍼엔 바지색이나 네이비·차콜 양말',
+  acSocksPlainDefault: '구두·부츠엔 바지보다 한 톤 어두운 무지 양말',
+  acSocksWhiteSneakerOnly: '흰 운동 양말은 스니커즈·러닝화에만',
+  acSocksWhiteDress: '구두에 흰 운동 양말은 피해요',
+  acSocksCropSneaker: '크롭 바지+스니커즈엔 페이크삭스나 흰 양말',
+  acSocksPatternOnce: '코디에 패턴이 없으니 작은 패턴 양말도 좋아요',
+  acSocksSandal: '샌들엔 양말 없이',
+  acBagFormalLeather: '드레시한 코디엔 가죽 가방, 신발과 같은 색',
+  acBagCasualNylon: '나일론·캔버스 백팩, 블랙·올리브·네이비·차콜 중 하나',
+  acBagBackpackFormal: '코트·블레이저에 백팩은 어색해요',
+  acBagCanvasTote: '캔버스 토트가 이 스타일의 시그니처예요',
+  acBagLeatherUnify: '가죽 가방은 신발과 같은 가죽 색으로',
+  acHatFormalNone: '드레시한 코디엔 모자를 빼요',
+  acHatTailoredNone: '재킷·코트엔 볼캡을 빼요',
+  acCapColorRange: '모자는 아우터와 비슷한 톤이나 코디 안의 색으로',
+  acBeanieCasualOuter: '캐주얼 겨울 아우터엔 비니가 잘 어울려요',
+  acScarfSolidCoat: '무지 코트엔 어떤 색·패턴 머플러도 좋아요',
+  acScarfSfCoat: '봄가을 코트엔 얇은 머플러',
+  acScarfPatternCoat: '패턴 코트엔 무지 머플러, 코트 속 한 색으로',
+  acScarfAccentOnce: '포인트 컬러가 이미 있으니 머플러는 뉴트럴로',
+  acScarfFormalMaterial: '드레시한 코디엔 얇은 울·캐시미어 머플러',
+  acMetalUnify: '시계와 버클 금속은 실버·골드 한 가지로',
+};
 export const EXPLAIN_CX = {
   'explain.style.boost': '{style} 스타일 {delta}',
   'explain.style.tag': '{style} 느낌',
-  'explain.occasion.adj': '{occasion}에 {delta}',
-  'explain.occasion.window': '{occasion} 격식 창 밖 아이템 {n}개 ({delta})',
-  'explain.occasion.target': '{occasion}에 딱 맞는 격식 (+0.2)',
+  // C6-13: 상황 문구 — 중복("격식 격식")·숫자만 노출 금지, 창 밖이면 '딱 맞아요'는 엔진이 생략
+  'explain.occasion.adj': '{occasion} 분위기와 잘 맞아요 ({delta})',
+  'explain.occasion.adjNeg': '{occasion} 분위기와는 조금 멀어요 ({delta})',
+  'explain.occasion.prefer': '{occasion}에 어울리는 아이템 {n}개 ({delta})',
+  'explain.occasion.window': '{occasion} 기준에서 벗어난 아이템 {n}개 ({delta})',
+  'explain.occasion.target': '전체 수준이 {occasion}에 딱 맞아요 (+0.2)',
   'explain.occasion.relaxed': '{occasion} 조건을 일부 완화했어요 ({stages})',
+  'explain.occasion.shortfall': '{occasion}에 맞는 조합이 더 없어요',
   'explain.acc': '{accessory}: {reason}',
+  'explain.acc.occasion': '{occasion} 기본 소품',
   'explain.pattern': '{reason} ({delta})',
   'explain.midLayer': '{mid|은는} {reason} ({score}/5)',
   'explain.midLength': '{mid|이가} {outer}보다 길어요',
@@ -115,7 +167,7 @@ export const EXPLAIN_CX = {
   'explain.twoOuterLength': '안쪽 {inner|이가} 바깥 {outer}보다 짧지 않아요 ({delta})',
   'explain.layerScore': '레이어링 {score}/5',
 };
-const UI_CX = { 'ui.byStyle': '스타일', 'ui.byOccasion': '상황', 'ui.accessories': '소품', 'ui.layering': '겹쳐 입기', 'ui.patterns': '패턴 변주', 'ui.styleAll': '전체', 'ui.formalApprox': '재킷+슬랙스 기준. 수트는 2차' };
+const UI_CX = { 'ui.byStyle': '스타일', 'ui.byOccasion': '상황', 'ui.accessories': '소품', 'ui.layering': '겹쳐 입기', 'ui.patterns': '패턴 변주', 'ui.styleAll': '전체', 'ui.formalApprox': '재킷+슬랙스 기준' };
 
 /** @param {object} [exp] buildExpansion() 결과 — 없으면 기존 라벨만 */
 export function buildLabels(exp = null) {
@@ -126,11 +178,12 @@ export function buildLabels(exp = null) {
     for (const s of exp.styles) { const v = STYLE_LABELS[s.id] ?? [s.labelKo, s.labelKo.slice(0, 6), [], '']; out.push(L(`style.${s.id}`, v[0], v[1], v[2], v[3])); }
     for (const o of exp.occasions) { const v = OCCASION_LABELS[o.id] ?? [o.labelKo, o.labelKo.slice(0, 6), [], '']; out.push(L(`occasion.${o.id}`, v[0], v[1], v[2], v[3])); }
     for (const p of exp.patterns) out.push(L(`pattern.${p.id}`, p.labelKo, PATTERN_SHORT[p.id] ?? p.labelKo.slice(0, 6), PATTERN_ALIAS[p.id] ?? [], p.note));
-    for (const m of exp.midTypes) out.push(L(`midType.${m.id}`, m.labelKo, MID_SHORT[m.id] ?? m.labelKo.slice(0, 6), [], m.note));
-    for (const a of exp.accessoryTypes) out.push(L(`accessory.${a.id}`, a.labelKo, ACCESSORY_SHORT[a.id] ?? a.labelKo.slice(0, 6), [], a.note));
+    for (const m of exp.midTypes) out.push(L(`midType.${m.id}`, m.labelKo, MID_SHORT[m.id] ?? m.labelKo.slice(0, 6), [], MID_HELP[m.id] ?? m.note));
+    for (const a of exp.accessoryTypes) out.push(L(`accessory.${a.id}`, a.labelKo, ACCESSORY_SHORT[a.id] ?? a.labelKo.slice(0, 6), [], ACCESSORY_HELP[a.id] ?? a.note));
     for (const [id, label] of Object.entries(ACCESSORY_GROUPS)) out.push(L(`accessoryGroup.${id}`, label, label, [], ''));
     for (const s of exp.styles) { const v = STYLE_LABELS[s.id]; out.push(L(`explain.style.${s.id}`, `${v?.[0] ?? s.labelKo} — ${v?.[3] ?? ''}`, null, [], '')); }
     for (const [id, label] of Object.entries(EXPLAIN_CX)) out.push(L(id, label, null, [], ''));
+    for (const r of exp.accessoryRules) { const t = ACC_RULE_TEXT[r.id]; if (!t) throw new Error(`labels.mjs: ACC_RULE_TEXT에 ${r.id} 문장 없음 (C6-10)`); out.push(L(`explain.acc.${r.id}`, t, null, [], '')); }
     for (const [id, label] of Object.entries(UI_CX)) out.push(L(id, label, null, [], ''));
   };
   const push = (ns, map, mk) => { for (const [id, v] of Object.entries(map)) out.push(mk ? mk(id, v) : L(`${ns}.${id}`, v[0], v[1], v[2] ?? [], v[3] ?? '')); };

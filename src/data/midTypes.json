@@ -10,6 +10,7 @@
    "springFall",
    "winter"
   ],
+  "colors": [],
   "note": "outerTypes.cardigan과 같은 품목. 아우터 밑에 들어가면 mid"
  },
  {
@@ -23,6 +24,7 @@
    "springFall",
    "winter"
   ],
+  "colors": [],
   "note": "셔츠 위. 아이비·시티보이"
  },
  {
@@ -36,7 +38,14 @@
    "springFall",
    "winter"
   ],
-  "note": "팔 부피 없음. 코트 안 OK"
+  "colors": [
+   "navy",
+   "olive",
+   "black",
+   "charcoal",
+   "brown"
+  ],
+  "note": "팔 부피 없음. 코트 안 OK. 나일론 기능템이라 색 제한(C6-12)"
  },
  {
   "id": "overshirtMid",
@@ -48,11 +57,12 @@
   "seasons": [
    "springFall"
   ],
+  "colors": [],
   "note": "shirtJacket·overshirt가 코트 안에 들어갈 때"
  },
  {
   "id": "knitOverShirt",
-  "labelKo": "셔츠 위 니트",
+  "labelKo": "이너 니트",
   "material": "knitWool",
   "formality": 5,
   "length": "regular",
@@ -61,6 +71,7 @@
    "springFall",
    "winter"
   ],
+  "colors": [],
   "note": "top=oxfordShirt + mid=knitWool. 겨울 기본 3겹"
  }
 ]

@@ -1,6 +1,8 @@
 // 작은 전역 스토어 — {base, season, theme, motion, recents, installPrompt}. get/set/subscribe. 추천 결과는 키로 메모이즈.
 import { read, write, KEYS } from './storage.js';
 import * as favorites from './favorites.js';
+import { todayIndex, classicLabels } from './today.js';
+import { labelField } from './styleText.js';
 
 const listeners = new Set();
 const RESULTS = new Map(); // `${category}|${color}|${season}|${style}|${occasion}` → RecommendResult
@@ -30,6 +32,7 @@ const state = {
   installPrompt: null, // Android beforeinstallprompt 이벤트
   engine: null,
   catalog: null,
+  expanded: false,     // 확장 데이터(스타일·상황·소품·무늬·미드)가 엔진에 실렸는가 — main.js ensureExpansion
 };
 
 export function get() { return state; }
@@ -40,6 +43,28 @@ export function set(patch) {
 }
 
 export function subscribe(fn) { listeners.add(fn); return () => listeners.delete(fn); }
+
+/** 엔진·카탈로그 교체(확장 데이터 적재 뒤). 메모이즈된 결과는 버린다 — 같은 base·season 의 classic 은 결정적이라 ref 가 유지된다. */
+export function setEngine({ engine, catalog, expanded = false }) {
+  RESULTS.clear();
+  set({ engine, catalog, expanded });
+}
+
+/** 확장 데이터 지연 적재 — main.js 가 로더를 등록하고, S4·S5 진입 전에 app.js 가 ensureExpansion() 을 기다린다 (번들 분할, 게이트 6) */
+let expansionLoader = null;
+let expansionPromise = null;
+export function registerExpansionLoader(fn) { expansionLoader = fn; }
+export function ensureExpansion() {
+  if (state.expanded || !expansionLoader) return Promise.resolve(state.expanded);
+  if (!expansionPromise) {
+    expansionPromise = Promise.resolve().then(expansionLoader).then(() => true).catch((e) => {
+      console.error('expansion load failed', e);
+      set({ expanded: true }); // 핵심 엔진만으로 계속 (스타일 탭·소품 OFF)
+      return false;
+    });
+  }
+  return expansionPromise;
+}
 
 /**
  * 기준 아이템 선택 → last·recent 저장.
@@ -142,7 +167,13 @@ export function findCandidate(ref) {
   const n = Number(parts[parts.length - 1]);
   if (parts[0] === 'classic') {
     const c = r.classic?.[n];
-    return c ? { candidate: c, label: `클래식 ${n + 1}/${r.classic.length}` } : null;
+    return c ? { candidate: c, label: classicLabel(r, n) } : null;
+  }
+  if (parts[0] === 'sx') {
+    // 스타일 × 상황 — 엔진 호출 recommend(base, season, 'deep', {style, occasion}) 의 classic (U6-06)
+    const rs = getResult({ style: parts[1], occasion: parts[2] });
+    const c = rs?.classic?.[n];
+    return c ? { candidate: c, label: `${styleLabel(parts[1])} · ${occasionLabel(parts[2])}` } : null;
   }
   if (parts[0] === 'tone') {
     const g = (r.byTone || []).find((t) => t.tone === parts[1]);
@@ -171,6 +202,13 @@ export function findCandidate(ref) {
   return null;
 }
 
+/** classic.N 의 표시 라벨 (U6-01): 오늘 카드 "오늘의 추천", 나머지 "다른 클래식 k/(n-1)" — S3 카드·S5 제목·공유 라벨이 같은 문자열 */
+export function classicLabel(r, n) {
+  const list = r?.classic || [];
+  const ti = todayIndex(state.base, state.season, list.length);
+  return classicLabels(list.length, ti)[n] || `클래식 ${n + 1}/${list.length}`;
+}
+
 export function favLabel(f) {
   const cat = state.catalog;
   const season = cat?.label(`season.${f.season}`) || f.season;
@@ -182,23 +220,18 @@ export function toneLabel(id) {
   return lab || id;
 }
 export function hueLabel(id) {
-  // "보색(탁한)" 같은 괄호 보충은 칩에서 뺀다 (P1-16)
+  // "보색(탁한)" 같은 괄호 보충은 칩에서 뺀다 (P1-16). "무채색 조합" → "무채색" (U6-16: 유사색·보색과 같은 꼴)
   const cat = state.catalog;
-  return (cat?.plain ? cat.plain(`explain.${id}`) : cat?.label(`explain.${id}`)) || { analogous: '유사색', complementary: '보색', achromatic: '무채색' }[id] || id;
+  const lab = (cat?.plain ? cat.plain(`explain.${id}`) : cat?.label(`explain.${id}`)) || { analogous: '유사색', complementary: '보색', achromatic: '무채색' }[id] || id;
+  return lab.replace(/\s*조합$/, '');
 }
-const STYLE_KO = { minimal: '미니멀', amekaji: '아메카지', cityboy: '시티보이', bizcasual: '비즈캐주얼', street: '스트릿', gorpcore: '고프코어', ivy: '아이비', workwear: '워크웨어' };
-const OCC_KO = { work: '출근', weekend: '주말', date: '데이트', active: '운동', formal: '격식' };
-/** 스타일 라벨: labels.ko style.<id> → 내장 폴백 → id */
-export function styleLabel(id) {
-  const cat = state.catalog;
-  const lab = cat?.plain ? cat.plain(`style.${id}`) : cat?.label(`style.${id}`);
-  return (lab && lab !== id) ? lab : (STYLE_KO[id] || id);
-}
-export function occasionLabel(id) {
-  const cat = state.catalog;
-  const lab = cat?.plain ? cat.plain(`occasion.${id}`) : cat?.label(`occasion.${id}`);
-  return (lab && lab !== id) ? lab : (OCC_KO[id] || id);
-}
+const labelRows = () => state.catalog?.data?.labels;
+/** 스타일 라벨: labels.ko style.<id>.shortLabel(U6-13: "클래식·아이비" 대신 "아이비") → label → 내장 폴백 → id */
+export function styleLabel(id) { return labelField(labelRows(), 'style', id, 'shortLabel'); }
+export function occasionLabel(id) { return labelField(labelRows(), 'occasion', id, 'shortLabel'); }
+/** 도움말 한 줄 (U6-05): labels.ko *.help → 내장 폴백(4 스타일 + 5 상황) */
+export function styleHelp(id) { return labelField(labelRows(), 'style', id, 'help'); }
+export function occasionHelp(id) { return labelField(labelRows(), 'occasion', id, 'help'); }
 export function variationLabel(v, r) {
   const idx = (r?.classic || []).findIndex((c) => c.outfit.id === v.fromOutfitId);
   const cat = state.catalog?.label(`category.${v.swapped?.category}`) || v.swapped?.category;

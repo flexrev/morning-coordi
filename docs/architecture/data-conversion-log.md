@@ -362,3 +362,75 @@ engine.index.baseStats              // Map `${category}|${color}` → { classic,
 - 미드 레이어 후보는 base 상의가 midLayerRules에 있는 품목(티·옥스포드·헨리·코튼 니트)일 때만 — 겨울 기본 상의(울 니트)는 규칙상 퀼팅 베스트(변주 3)뿐이라 겨울 layering 카드가 적다. 2차에 겨울 규칙 보강.
 - 액세서리 `shoesFinish`는 품목명 "스웨이드" 유무로만 판정, `tuckIn`은 강제값 없으면 false.
 - `midType` kind affinity 행 없음(0) — 미드가 스타일 벡터에 주는 영향은 색뿐.
+
+## 10. Phase 6-B-3 콘텐츠 재검토 반영 (P3 C6-01…C6-22 · P1 U6-06/10/12/13, 2026-10-20)
+
+입력: `docs/review/phase6-content-check.md`, `docs/review/phase6-usability.md`. 수정 범위: `src/engine/**`, `scripts/build/{styles,labels}.mjs`, `docs/phase6/content-expansion-data.md`(표), `src/data/**`(`npm run build:data`), `tests/expansion.test.js`, `docs/review/scratch-p3-v2/**`(재생성). UI는 Fixer B.
+
+### 10-1. 엔진 (src/engine)
+
+| 발견 | 변경 | 파일 |
+|---|---|---|
+| C6-01 창 감점 고정 | `occasionWindow`: 감점 = Σ max(1, 창 경계까지 거리) × −0.3, 하한 −0.9 → **−1.5**(`OCC_WINDOW_FLOOR`). 티셔츠(격식 창 4단계 밖) −1.2, 린넨 셔츠 −0.3. `occasionFit`(빌드 타임 occasions[])은 창 밖 수만 보므로 outfits.json 변화 없음 | `style.js`, `constants.js` |
+| C6-01·02 완화 상한 | `OCC_RELAX_MAX_STAGE = { formal: 2, active: 2 }` — patterns→materials까지만, itemTypes·shoeTypes는 끝까지. quick(`recommend`)과 deep `groupByOccasion` 둘 다. 상한에서 3장 미만이면 그대로 두고 **`applied.shortfall = true`, `applied.shortfallText`("격식에 맞는 조합이 더 없어요")**, 그룹은 `shortfall: true`. 흰 스니커즈 × 격식은 0장(스니커즈 '격식' 카드 금지) | `recommend.js`, `groups.js` |
+| C6-02·01 대체 구체화 | `OCC_ALT`(constants): active = 울·플란넬 하의 → 스웻팬츠·테크 팬츠, 봄가을 옥스포드 → 티셔츠 / formal = 여름 티셔츠 → 린넨 셔츠(셔츠 허용색)·피케 폴로, 봄가을 코튼 니트 → 울 니트, 브라운 척카·워크 부츠 → 더비, 여름 오버셔츠 → 블레이저. `generateCandidates(opts.alt|alts, altOnly)`가 'occAlt'·'occAlt:<occ>' 태그 후보를 만든다. quick+occasion은 풀에 포함(`quickPool(…, {alt})`), deep은 **그 상황 그룹이 완화 없이 3장을 못 채울 때만 지연 생성**해 `groupByOccasion(opts.extraFor)`로 넣는다 — byTone·byHue·byStyle·variations 집합 불변(E-21b), Deep 평균 +0ms(필요할 때 +10ms) | `candidates.js`, `recommend.js`, `groups.js` |
+| C6-03 byStyle | `groupByStyle`: 후보 = 카드 styleTags(top-2)에 그 스타일 && norm ≥ 0.4, 정렬 10×norm + final, `fillDiverse(strict)`(아우터·신발 종류 상한을 양보하지 않고 5장 미만 허용, 베이스가 고정한 차원은 제외). 그룹 쌍 공통 카드 ≤ `BY_STYLE_MAX_OVERLAP = 2`(앞 그룹 카드 deprioritize → 그래도 넘치면 제거) | `groups.js` |
+| C6-09 date≠work | `occasionAdjust`에 **prefer 보너스**(품목·신발당 +0.1, 최대 +0.3 — `OCC_PREFER_BONUS/MAX`, 그동안 쓰이지 않던 `occasions.prefer` 활용). `groupByOccasion`: 데이트 그룹이 출근 그룹과 2장 이상 겹치면 출근 카드를 deprioritize로 다시 채움 | `style.js`, `groups.js` |
+| C6-06 가죽 소품 | `accWhen` material: **null은 불일치**(가죽 통일 규칙이 가방 소재 미정에 발화 안 함). `deriveAccessoryColor('shoesFamily')`: 신발 색이 `LEATHER_FAMILY`(brown·chocolate·tan·camel·black·burgundy)일 때만, 버건디 → chocolate(`LEATHER_FAMILY_COLOR`), 아니면 다음 항목. 상황 기본값 colorFrom shoes = `['shoesFamily', 'black']` | `style.js`, `constants.js` |
+| C6-08 타입 창 | `suggestAccessories.fits(t)`: 계절 + **accessoryTypes.formality 창**을 규칙 경로에서도 적용 | `style.js` |
+| C6-10 소품 문장 | `attachAccessories`: `labels[explain.acc.<ruleId>]` 우선, 상황 기본값은 `explain.acc.occasion`("{occasion} 기본 소품"). `accessories[].reason`(문장) 필드 추가 | `recommend.js` |
+| C6-13 상황 문구 | adj(+)/adjNeg(−)/prefer/window/target 키 분리, 창 밖 아이템이 있으면 target("딱 맞아요") 생략 | `recommend.js`, `explain.js` |
+| C6-04 겨울 미드 | layering 분기: 겨울 니트 상의 코디를 **셔츠(화이트·라이트 블루, 하의 매치 ≥4, 니트·아우터와 다른 색) + 이너 니트(원래 니트 색) + 코트**로 다시 쌓는다(`DEFAULTS.layeringKnitTops/Shirt/KnitMid`) | `candidates.js`, `constants.js` |
+| C6-12 미드 색 | `midTypes.colors` 허용 목록 ∩ 하의 매치 ≥4 중 첫 색 | `candidates.js`, `styles.mjs` |
+| C6-11 패턴 | `patternFor` 허용 편차 3 → 2(`PATTERN_FORMALITY_TOL`), patternRules when 키에 `shoeType` 추가(validate 참조 검사 포함) | `style.js`, `constants.js`, `validate.js` |
+| C6-17 품목명 | `makePatternVariations`: 품목 라벨이 통째로 없으면 마지막 단어 앞에 패턴 수식어 삽입 → "라이트 블루 잔줄 셔츠" | `groups.js` |
+| C6-21 | 미드 쌍(top↔mid·mid↔outer)의 `explain.ruleMissing`은 explain에서 숨김 | `explain.js` |
+| V-32 | `explain.acc.<ruleId>` 전수 필수 라벨에 추가, `midTypes.colors` 색 참조 검사 | `validate.js` |
+
+### 10-2. 데이터 (content-expansion-data.md → build:data)
+
+| 표 | 변경 |
+|---|---|
+| 1-1 styles | ivy labelKo 클래식·아이비 → **아이비**, bizcasual 비즈니스 캐주얼 → **비즈캐주얼**(U6-13). amekaji signatureTop에서 `sweatshirt` 제거(수정안 B의 sweatshirt amekaji 2→1이 V-26 시그니처 ≥+2와 충돌 — 맨투맨은 스트릿·시티보이) |
+| 2-1 styleAffinity | **C6-05 수정안 B 10셀**: shirtJacket ivy 0→−1 · fleece ivy 0→−2 · hoodie ivy −1→−2 · sweatshirt ivy 1→0 · topLength regular ivy 2→1 · outerLength regular ivy 2→1 · leatherJacket bizcasual −1→−2 · tee bizcasual −1→−2 · navy street 0→1 · sweatshirt amekaji 2→1 |
+| 3-1 occasions | formal avoidItemTypes에서 `linenShirt`·`poloPique` 제거(여름 격식 근사, 창 감점만). date: avoidItemTypes +`dressShirt`, preferItemTypes −`blazer`, styleBoost minimal 2→3 |
+| 4-2 accessoryRules 32→36 | +`acBeltBurgundyShoes`(버건디 → chocolate 벨트, C6-14) · +`acSocksPlainDefault`(구두·부츠 기본 = socksNeutral bottomDarker, C6-07) · +`acHatTailoredNone`(블레이저·트렌치·코트엔 볼캡·버킷햇 skip, C6-08) · +`acScarfSfCoat`(봄가을 머플러는 트렌치·발마칸·체스터필드만, C6-15). `acSocksPatternOnce` → 봄가을 + 스니커즈 + 패턴 0 + F≤5, 색 bottomDarker · `acSocksWinterLoafer` delta 0→1 · `acSocksMatchTrousers` season=springFall,winter(여름 울+로퍼 → 페이크삭스, C6-18) · `acScarfSolidCoat` season=winter · `acScarfAccentOnce`·`acScarfFormalMaterial`에 hasOuter·season · `acBagLeatherUnify`·`acWatchLeatherUnify`에 shoesColor 가죽 계열 |
+| 5-2 patternRules 19→21 | +`ptHoundstoothCasual`(F≤5 exclude) · +`ptHoundstoothCasualShoes`(workboot·chukka·sneakerColor·running·sandal exclude) — C6-11 |
+| 6-1 midTypes | `colors` 열 추가(quiltedVest = navy,olive,black,charcoal,brown, 나머지 `-`), knitOverShirt labelKo 셔츠 위 니트 → **이너 니트** |
+| 6-2 midLayerRules 12→15 | +`mlWiKnitOverShirtNoCoat`(4) · +`mlWiKnitVestCoat`(4) · +`mlWiCardiganUnderCoatKnit`(4) — C6-04. classic 행 note를 사용자 문장으로(C6-19·`explain.midLayer`) |
+| 6-3 twoOuterRules | **2차로 문서화**(C6-20): 점수 규칙으로만 쓰이고 2겹 아우터 후보 생성은 안 한다 |
+| labels.ko (256→296) | `explain.acc.<ruleId>` 36문장 + `explain.acc.occasion` + occasion.adjNeg/prefer/shortfall, window/adj/target 문구 교체(C6-13), midType·accessory help 사용자 문장(C6-19), 스타일 label=shortLabel·help ≤24자, active shortLabel 운동(C6-22), formal help "수트는 2차" 삭제, `ui.formalApprox` "재킷+슬랙스 기준" |
+
+### 10-3. 전후 수치 (check-v2 · dump, 전 칩 × 3계절)
+
+| 항목 | 전(P3 보고) | 후 |
+|---|---|---|
+| ⑥ quick+occasion 3장·stage≤2 | 81.9% (603/0/85/112/40) · work 96 · weekend 100 · date 98 · active 76 · formal 40 | **91.5%** (647/0/182/8/3) · work 96 · weekend 100 · date 98 · **active 77 · formal 88** — shortfall 60(active 39: 블레이저·코트·구두 베이스 / formal 21: 스니커즈·맨투맨·데님 셔츠 베이스) |
+| ⑥ deep byOccasion | 81.8% | **91.5%** (동일 분포) |
+| byStyle 그룹 스타일 ∈ 태그 | 62% (285/462) | **100%** (376/376), 5장 그룹 56/83, 빈 그룹 13 |
+| byStyle 동일 그룹 쌍 / overlap 합계 | 6 / minimal∩bizcasual 63 · bizcasual∩ivy 59 · minimal∩ivy 50 | **0, 최대 2** / 20 · 5 · 7 |
+| 스타일 오태그 (52행) | 7 (13.5%) | **1** (o12 minimal/ivy, 허용) |
+| ⑤ 분포 | minimal 56 · ivy 50 · bizcasual 40 · amekaji 15 | minimal 60 · ivy 33 · bizcasual 40 · amekaji 12 · cityboy 12 · workwear 13 · street 6 · gorpcore 4 (PASS, minimal 31/52 = 59.6%) |
+| 겨울 layering mid 카드 (8 베이스) | 0 | **67** (8/8 베이스 ≥ 5, 경고 0), 봄가을 19 → 30, 퀼팅 베스트 색 제한 |
+| 소품 위반 (dump 4절) | 275 카드(패턴 양말 601/852, 흰 가죽 토트 190, 볼캡+트렌치 63, 웨빙 F>4 136, 머플러 아우터 없음 84) | **0** (989 카드 · 3,211줄). 양말: socksNeutral 391 · socksNoShow 209 · socksPattern 146(봄가을 스니커즈만) · socksMatch 79 |
+| ⑦ 가죽 소품(벨트+시계+가방) 계열 위반 | 벨트만 0 (가방·시계 190 위반) | **0** (7,968 카드 · 8,095 가죽 소품 제안) |
+| date∩work (24 결과) | 3장 동일 6, ≥2 겹침 13 | **동일 0, ≥2 겹침 0** (전 칩 168: 동일 6 = 96.4% 구분) |
+| 하운드투스 변주 | 10 (데님+워크 부츠 포함) | 4 (전부 F≥6 더비·로퍼) |
+| 패턴 품목명 "잔줄 셔츠 라이트 블루 셔츠" | 1 | 0 |
+| validate | 0 error / 40 warn | 0 error / 40 warn |
+| npm test | 117 (112 통과 + C6 영향 5 실패 상태) | **130 통과** (expansion.test.js +13, 스냅샷 E-21·E-21b 불변) |
+| Deep 1회 | ~25ms | 37ms(perf 테스트 <50ms 유지), 대체 후보 필요 시 +10ms |
+
+### 10-4. UI 계약 (Fixer B)
+
+- 스타일×상황 뷰의 권위 있는 결과 = `engine.recommend({ base, season, mode: 'deep', style, occasion })` 의 **`result.classic`**(0~3장, style boost + occasion 보정으로 재정렬, 완화 상한 적용) + `result.applied.relaxed`(string[]) + **`result.applied.shortfall`**(boolean) + **`result.applied.shortfallText`**("격식에 맞는 조합이 더 없어요" | null). shortfall이면 classic이 0~2장이니 `byOccasion[occasion]`(상황 그룹, 역시 `shortfall` 플래그)이나 "상황 해제"로 대체 표시.
+- `result.byOccasion[i]` = `{ occasion, labelKey, candidates(≤3), relaxed, shortfall }`. `result.byStyle[i].candidates`는 1~5장(빈 그룹은 없음).
+- `candidate.accessories[i]` = `{ group, id, color, reason(사용자 문장), text("가죽 벨트: 브라운 — 브라운 구두엔 브라운 계열 벨트"), ruleId, key, severity, material, finish }`.
+- `engine.styles()[i].label === shortLabel`(아이비·비즈캐주얼), `.help` ≤ 24자. `engine.occasions()`: active label "운동"(aliases에 운동·산책), `.help` ≤ 24자.
+
+### 10-5. 미반영·2차
+
+- 2겹 아우터 후보 생성(C6-20, 겨울 데님 재킷 + 더플): twoOuterRules는 점수 규칙으로만. 2차.
+- ⑥ 잔여 shortfall 60: 운동 × 아우터 베이스(블레이저·코트 20건)·구두 베이스(9건), 격식 × 스니커즈 베이스(6건)·탄/초콜릿 하의(상의 매치 부족, gate-4 이월)·그레이 멜란지 상의. 리뷰 권고대로 **UI에서 칩 비활성 또는 shortfallText 안내**로 처리.
+- 깅엄 변주 0(patternFor 첫 매치 = stripeShirt) — 낮음, 2차.
+- 수트 품목 없음 → formal은 여전히 근사(블레이저·린넨 셔츠·더비 대체). V-27 등 스키마 문서(`data-schema.md`)에 `midTypes.colors`·`applied.shortfall` 반영은 문서 담당에게 위임.

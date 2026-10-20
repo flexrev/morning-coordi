@@ -2,7 +2,7 @@
 // index-v2.json 의 zOrder(stage → base → cap → socks → shoes → bottom → belt → top → mid → outer → scarf → bag → watch)로 쌓는다.
 // 색은 --c-* 변수, 소재는 <pattern> 오버레이(main 바로 뒤), 벨트는 상의 tuck 일 때만, 양말은 바지 crop 일 때만.
 // 무대(opts.stage)는 AS 의 stage-spotlight / stage-floor 레이어(index.stage 의 불투명도·블러 값)로, 그레인(opts.grain)은 필터로.
-import { layerFor, patternFor, patternForPrint, accessorySlot, Z_ORDER, STAGE, ACC_LAYER } from './typeToLayer.js';
+import { layerFor, patternFor, patternForPrint, accessorySlot, accessoriesForSize, Z_ORDER, STAGE, ACC_LAYER } from './typeToLayer.js';
 import { ensurePatternDefs, cloneDefs } from './patternDefs.js';
 
 const SVG_NS = 'http://www.w3.org/2000/svg';
@@ -57,6 +57,7 @@ export function renderOutfit(items, opts = {}) {
   }
 
   // 슬롯별 아이템 (outer 2개면 바깥쪽 layer 2만). 액세서리는 items[] 안이든 opts.accessories 든 슬롯으로 정규화.
+  // 액세서리 크기 게이트 (U6-02): 카드(size < 240)는 벨트·양말만, S5·공유는 전부 — items[] 안의 액세서리도 같은 규칙
   const bySlot = {};
   const put = (it) => {
     if (!it) return;
@@ -65,8 +66,10 @@ export function renderOutfit(items, opts = {}) {
     if (slot === 'outer' && bySlot.outer && (bySlot.outer.layer || 1) >= (it.layer || 1)) return;
     bySlot[slot] = { ...it, category: slot };
   };
-  for (const it of items || []) put(it);
-  for (const a of opts.accessories || []) put(a);
+  const cloth = (items || []).filter((it) => it && CLOTH.includes(it.category));
+  const accIn = (items || []).filter((it) => it && !CLOTH.includes(it.category));
+  for (const it of cloth) put(it);
+  for (const a of accessoriesForSize([...accIn, ...(opts.accessories || [])], size)) put(a);
 
   // 색 주입: 의류 + 액세서리 슬롯 (--c-<slot>)
   for (const slot of Object.keys(bySlot)) {
@@ -85,6 +88,9 @@ export function renderOutfit(items, opts = {}) {
   stack.setAttribute('data-stack', '');
   if (opts.grain) stack.setAttribute('filter', 'url(#f-grain)');
 
+  // 백팩(acc-backpack)은 그리지 않는다 — 어깨끈이 상의 위에 오면 멜빵, 상의 아래로 내리면 팩 상단이 목걸이로 읽힌다(U6-02·asset-system 10-7).
+  // S5 소품 줄의 텍스트 칩으로만 남긴다. 토트·크로스바디는 S5·공유(≥ 240)에서 그대로.
+  if (bySlot.bag && /backpack/i.test(String(bySlot.bag.type || bySlot.bag.itemType || bySlot.bag.id || ''))) delete bySlot.bag;
   for (const slot of Z_ORDER) {
     if (slot === 'stage') {
       if (opts.stage) appendStage(stack, size);

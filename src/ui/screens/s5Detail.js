@@ -1,4 +1,4 @@
-// S5 조합 상세 — 무대 조명 일러스트(36dvh, 300px 그레인) + 색 점 + 캡션 + 소품 줄(있을 때) + 상세 칩 4줄 + 하단 ♥ 저장 · 공유.
+// S5 조합 상세 — 무대 조명 일러스트(36dvh, 그레인 없음) + 색 점 + 캡션 + 소품 줄(있을 때) + 상세 칩 4줄 + 하단 ♥ 저장 · 공유. 코치마크 B 는 제거(U6-11).
 import { h, append, joinBold } from '../dom.js';
 import { topbar, dots, flag, isDisputed, captionParts, detailReasons, favButton, styleTagsOf, styleShort } from '../components.js';
 import { icon } from '../icons.js';
@@ -6,7 +6,6 @@ import { renderOutfit, colorValue } from '../silhouette.js';
 import * as nav from '../nav.js';
 import { get as getState, findCandidate } from '../state.js';
 import { accessorySlot } from '../typeToLayer.js';
-import { showCoach, seen as coachSeen } from '../coach.js';
 
 export function s5Detail(ref) {
   const st = getState();
@@ -31,16 +30,14 @@ export function s5Detail(ref) {
   const body = h('div', { class: 'screen__body screen__body--scroll' });
   const hero = h('div', { class: 's5__hero' });
   const ill = h('div', { class: 's5__ill' });
-  const lowPerf = document.documentElement.dataset.perf === 'low';
-  let grain = !lowPerf;
-  try { if (matchMedia('(prefers-reduced-transparency: reduce)').matches) grain = false; } catch { /* noop */ }
-  ill.append(renderOutfit(items, { size: 400, season, hexOf: cat.hex, label: parts.join(', '), stage: true, grain, accessories: candidate.accessories }));
+  // 그레인은 끈다(식별 불가 + 필터 페인트 비용, 리뷰 4절) — 무대 조명(stage)은 유지
+  ill.append(renderOutfit(items, { size: 400, season, hexOf: cat.hex, label: parts.join(', '), stage: true, grain: false, accessories: candidate.accessories }));
   hero.append(ill, dots(items, { base, swapped: variation?.swapped, size: 'lg' }));
   const cap = h('p', { class: 's5__cap' });
   append(cap, joinBold(parts, boldIdx));
   hero.append(cap);
-  const why = detailReasons(candidate).join(' · ');
   const tags = styleTagsOf(candidate);
+  const why = detailReasons(candidate, tags.length ? 1 : 2).join(' · '); // 태그가 있으면 이유 1개 — 한 줄 유지
   if (why || tags.length) {
     const line = h('p', { class: 's5__why' });
     for (const t of tags) line.append(h('span', { class: 'tag', text: styleShort(t) }));
@@ -55,7 +52,7 @@ export function s5Detail(ref) {
   // 소품 줄 (CX accessories[] 가 있을 때만) — 색 점 + 이름 칩
   const acc = Array.isArray(candidate.accessories) ? candidate.accessories.filter(Boolean) : [];
   if (acc.length) {
-    const row = h('div', { class: 's5__acc', role: 'list', 'aria-label': '소품' });
+    const row = h('div', { class: 's5__acc', role: 'list', 'aria-label': '소품', tabindex: '0' }); // 가로 스크롤 영역은 키보드로도 (axe scrollable-region-focusable)
     row.append(h('span', { class: 'eyebrow', text: '소품' }));
     for (const a of acc) {
       const slot = accessorySlot(a) || a.group || a.category || a.type;
@@ -79,9 +76,9 @@ export function s5Detail(ref) {
     ['shoe', '신발 스타일', shoes ? cat.itemName(shoes) : '—'],
     ['len', '기장', [top && `${cat.label(`length.top.${top.length || 'regular'}`)} 상의`, bottom && cat.label(`length.trouser.${bottom.length || 'nobreak'}`), outer && `${cat.label(`length.outer.${outer.length || 'regular'}`)} 아우터`].filter(Boolean).join(' · ')],
   ];
-  const detail = h('div', { class: 'detail', role: 'list' });
+  const detail = h('div', { class: 'detail', role: 'group', 'aria-label': '상세' }); // button 에 listitem 역할은 허용되지 않음 (axe aria-allowed-role)
   for (const [kind, k, v] of rows) {
-    detail.append(h('button', { class: 'drow glass', type: 'button', role: 'listitem', 'aria-label': `${k}: ${v}. 자세히`, 'data-focus-key': `s5:${kind}`, onClick: () => nav.go(`/outfit/${ref}/${kind}`) },
+    detail.append(h('button', { class: 'drow glass', type: 'button', 'aria-label': `${k}: ${v}. 자세히`, 'data-focus-key': `s5:${kind}`, onClick: () => nav.go(`/outfit/${ref}/${kind}`) },
       h('span', { class: 'drow__k', text: k }), h('span', { class: 'drow__v', text: v }), h('span', { class: 'drow__a', 'aria-hidden': 'true', text: '›' })));
   }
   body.append(detail);
@@ -98,7 +95,6 @@ export function s5Detail(ref) {
   const share = h('button', { class: 'btn btn--half glass', type: 'button', 'data-focus-key': 's5:share', onClick: () => nav.go(`/outfit/${ref}/share`) }, icon('share', { size: 20 }), h('span', { text: '공유' }));
   bar.append(fav, share);
   screen.append(bar);
-  if (!coachSeen('fav')) showCoach('fav', fav, { delay: 500 });
   return screen;
 }
 

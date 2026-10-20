@@ -157,3 +157,70 @@ FE 귀속 증가 ≈ **24.1 KB gzip**(예산 40 KB 안). 게이트 6 "gzip JS �
 3. `.screen:has(> .screen__body--scroll)` 로 S3·S4·S5·ST1 을 뷰포트 높이에 고정(본문만 스크롤). `:has` 미지원(Safari < 15.4)은 이전처럼 페이지 스크롤.
 4. 코치마크 A 조건: `install.visits ≥ 2`·배너 없는 날·첫 결과가 아닐 때. 첫 실행 → 재실행 2회째에 보임.
 5. 스크립트 제안(선택): `"test:ui": "node --test \"tests/ui/*.test.js\""`. 새 의존성 없음.
+
+---
+
+## 7. Phase 6-B-3 · Fixer B (UI·번들) — 리뷰 반영 (2026-10-20)
+
+입력: `docs/review/phase6-usability.md` U6-01…U6-18 + 4절 판정표, `phase6-content-check.md` C6-10 맥락. 소유 범위만 수정: `src/ui/**`, `src/styles/**`, `src/main.js`, `vite.config.js`, `tests/ui/**`, `src/data/expansion.js`(재수출 배럴만), `src/assets/silhouettes`(v1 삭제). 엔진·데이터·scripts·package.json 은 손대지 않음(Fixer A 와 병행). QA 실측은 `docs/review/phase6-qa.md`.
+
+### 7-1. 반영 항목 → 코드
+
+| ID | 결정 | 구현 |
+|---|---|---|
+| U6-01 | 오늘 카드 `오늘의 추천`, 나머지 `다른 클래식 1/2`·`2/2`, S5 제목·공유 라벨 동일(`오늘의 추천 · 봄가을`), ref 는 `classic.N` 그대로 | `today.js classicLabels(n, ti)`·`classicOrder()`(순수), `s3Result.js renderCards`, `state.js classicLabel(r, n)` → `findCandidate('classic.N').label` 이 같은 문자열. CSS `.card__detail { flex: 0 20 auto; min-width: 0 }` → "자세히 ›" 가 라벨보다 먼저 양보 |
+| U6-02 | 카드(size < 240) 벨트+양말만, S5·공유(≥ 240) 전부 | `typeToLayer.js accessoriesForSize(list, size)`(순수, `CARD_ACC_SLOTS`), `silhouette.js renderOutfit` 이 `items[]` 안 액세서리·`opts.accessories` 둘 다 통과시킴. 백팩: z순서를 상의 아래로 내려 봤으나(단순 z 변경) 팩 상단(y 58–76)이 목 뒤 고리로 읽혀 **백팩 레이어는 모든 크기에서 그리지 않는다**(S5 소품 줄 텍스트 칩 `블랙 백팩` 으로만). 토트·크로스바디는 S5·공유에서 그대로 |
+| U6-03 | 배너가 하단 뒤로 들어가면 **다음 방문으로 미룸**(겹침 0·스크롤 0) | `fit.js guardStep()`(순수): 배너 아래로 → tight → `defer-banner` → compact. `install.js deferBanner()` 가 `shownAt` 을 되돌리고 세션 플래그로 같은 세션 재노출 차단. 배너는 `.banner-slot` div 에 담아 슬롯을 잰다(`.banner` 는 banner-in translateY 애니메이션 중이라 rect 가 8px 어긋나 1차 실측에서 4px 겹침이 남았었음) |
+| U6-04 | "처음 안내 다시 보기" → 실제 S1 온보딩 스트립 | `app.js compose default`: `st.base && read(KEYS.onboarded)` 일 때만 S3. 첫 S3 가 `onboarded=true` 를 다시 쓴다 |
+| U6-05 | 칩 줄 가로 스크롤 + 가장자리 페이드, 선택 칩 아래 도움말 한 줄(스타일 + 상황) | `s4More.js scrollFade()` → `.pillrow[data-fade=l|r|lr]` CSS mask. `state.styleHelp/occasionHelp` → `styleText.js labelField()`: labels.ko `help` → 내장 폴백(4 스타일 + 5 상황). 스타일 라벨은 `shortLabel` 우선(U6-13 "아이비") |
+| U6-05 축소 | 상황 칩 **출근·주말·데이트 + "더"(운동·격식)** | `styleText.js occasionChipIds()`(순수). 결정 근거: 5칩 + "상황" 키는 360/375 에서 넘쳐(368/328) 스크롤이 필요했고, 1차 3개 + "더" 는 375 에서 343px 한 줄에 들어감(실측). "더" 를 누르면 5개 전부, 고른 상황이 운동·격식이면 펼친 채 유지 |
+| U6-06 | 클라이언트 교집합 제거 → 엔진 `recommend(base, season, 'deep', {style, occasion})` 의 `classic` 이 정본 | `s4More.js collect('style')`: 상황이 있으면 `getResult({style, occasion})` → ref `sx.<style>.<occ>.N`(`state.findCandidate` 분기 추가). `styleText.js styleOccasionCards()`: Fixer A 의 `result.shortfall`(또는 `applied.shortfall`) 우선, 없으면 `applied.relaxed` 또는 3장 미만을 부족으로 → `격식에 맞는 조합이 더 없어요 — 상황을 바꿔 보세요`(목록 위 `.s4__note` / 0장이면 빈 상태 + 상황 해제) |
+| U6-07 | ♥ 를 카드 **오른쪽 아래**(엄지 영역), "자세히 ›" 는 라벨 줄 유지 → 간격 63px | CSS `.card__fav { bottom: 2px; right: 2px }`, `.card__reason { padding-right: 44px }`, 라벨·색 점 줄 padding 제거. 실측 375: 하트 중심 y 249·403·557(이전 217·371·525), 라벨 줄 "자세히" 아래 63px 분리 |
+| U6-08 | 컴팩트 전 **여백 단계**(`is-tight`, −16px) | `.is-tight`: 카드 gap 10→6, 카드 위 12→8, 바로가기 줄 8→4, 기준 바 위 4→0. 360+바로가기 줄: tight 로 해결, 이유 줄·일러스트 유지 |
+| U6-09 | S6 핏·소재·신발 설명에 `userReasons()` 필터 | `s6Sheet.js` 3곳 |
+| U6-10 | S3 세 장 dominant 태그가 같으면 숨김, S4 스타일 탭은 그룹과 같은 태그 제거 | `outfitCard({ tags, hideTag })`, `s3Result` `sameTag`, `s4More` `hideTag: style` |
+| U6-11 | 코치마크 B 제거(평생 1개) | `s5Detail.js` 호출 삭제, `coach.js TEXT.fav` 삭제 |
+| U6-12 | 카드·S5·공유·aria 캡션 **한 어휘** | `components.captionParts()` 가 항상 `catalog.cardName`(색 shortLabel + 품목 정식 라벨: "오트밀 울 니트 · 브라운 페니 로퍼"), `captionOf()` 추가. 공유 이미지는 받는 사람이 보는 유일한 문장이라 긴 쪽 채택. `engine.caption/itemCaption` 은 더 안 씀(엔진 itemName 은 데이터 어휘라 둘이 어긋났음) |
+| U6-13 | 스타일 라벨 shortLabel("아이비") | `state.styleLabel()` → `labelField(rows, 'style', id, 'shortLabel')` |
+| U6-14 | 같은 문서 해시 딥링크(S3 → `#/result/top/white`) | `s3Result.__update`: 그려 둔 base 와 다르면 `refresh()` |
+| U6-15 | 설정에서 계절 세그먼트·앱 행 제거 | `settings.js`: 계절은 `계절 자동으로 되돌리기` 버튼 + `지금 봄가을 · 이번 달 기준` 캡션(자동이면 버튼 비활성) |
+| U6-16 | 카피 6건 | `버튼을 누르면 설치 창이 떠요`(마침표 제거) · 코치마크 `톤별·변주는 여기에` · `카드의 하트를 누르면 여기에 모여요` · `시스템은 줄이지 않음` · 색상별 칩 `무채색`(`hueLabel` 이 " 조합" 제거) · 하의 캡션 `차콜 울 슬랙스`(`catalog.js BOTTOM_NOUN`: wool→울 슬랙스, flannel→플란넬 슬랙스, corduroy→코듀로이 팬츠 …) |
+| U6-17 | 온보딩 스트립을 spacer 아래(힌트 바로 위)로, 3단계 부제 `톤별·색상별·변주` | `s1Category.js`. 375 실측: 스트립 y 404–552, 힌트 568(이전 빈 216px → 16px) |
+| U6-18 | SH1 프라이버시 한 줄 항상 | `sheets.js shareSheet`: `기기 안에서만 만들어요`(iOS 홈 화면 앱은 저장 안내 뒤에 이어 붙임) |
+| QA 보정 | axe·fit 실측에서 나온 것 | `.pill__cat` 색 text-3→text-2(선택 pill 위 4.5:1 미달), S5 상세 줄 `button[role=listitem]` → `role=group` 컨테이너(aria-allowed-role), `.s5__acc` `tabindex=0`(scrollable-region-focusable), `.s5__why` 한 줄 고정 + 태그 있으면 이유 1개(두 줄이면 기장 행이 24px 밀림), `.s5__acc/.detail flex-shrink 0`(소품 줄 찌그러짐), SH1 미리보기 280→240px(프라이버시 줄이 72dvh 안에) |
+| 그레인 | overlay 제거(식별 불가), S5 svg 그레인 필터도 끔, 무대 조명(stage) 유지 | `main.js applyPrefs` opt-in 삭제, `base.css` 규칙 삭제, `tokens.css --grain/--grain-opacity` 삭제, `s5Detail grain:false` |
+| 번들 | 확장 데이터·공유 모듈 지연 청크, v1 실루엣 삭제, v2 SVG 문자열 trim | 7-2 |
+
+### 7-2. 번들 분할 (게이트 6)
+
+- `src/ui/dataCore.js`(핵심 16개 JSON) + `src/data/expansion.js`(확장 10개 JSON 재수출 배럴). `main.js loadEngine()` 은 핵심 엔진으로 먼저 S1/S3 를 그리고, 첫 페인트 뒤 `requestIdleCallback`(1.5s 상한)에 `state.ensureExpansion()` → `createEngine({...core, ...expansion})` 로 엔진·카탈로그 교체(`state.setEngine`, 메모 비움). `app.js render` 는 S4·S5·공유 라우트에서 `state.expanded` 가 아니면 `ensureExpansion()` 을 기다렸다 그린다(SW 캐시 ≈ 수 ms). 적재 실패 시 핵심 엔진으로 계속(스타일 탭·소품 OFF).
+- 핵심 엔진만으로도 classic 3장은 동일(`pickClassic` 은 확장 데이터를 쓰지 않음) → `classic.N` ref 유지. 첫 S3 의 카드에는 태그·벨트가 없을 수 있다(확장 적재 전) — 재렌더하지 않는다(스태거 반복 회피). `tests/ui/fixB.test.js` 가 core ∪ expansion === `src/data/index.js` 를 고정한다 → Fixer A 가 `index.js` 에 파일을 더하면 `dataCore.js` 또는 `expansion.js` 에도 더해야 한다(테스트가 알려줌).
+- `share.js`(캔버스 레이아웃)는 SH1 을 열 때 `import()`.
+- `vite.config.js trimSvgRaw` 플러그인: `src/assets/v2/*.svg?raw` 에서 주석·`aria-label`·`viewBox`·줄바꿈 제거(`<svg xmlns>` 래퍼만 유지 — `DOMParser` 네임스페이스 때문에 필요). v2 문자열은 UI 청크에 **한 번만** 포함(`morning-coordi v2` 주석 0건, `data-slot` 41건).
+- `src/assets/silhouettes`(v1 27파일) 삭제. `scripts/build-asset-demo.mjs` 는 v1 폴더를 읽는 데모 생성기라 그대로 두었다(이제 v1 경로가 없어 **실행하면 실패** — 데모 재생성이 필요하면 AS 가 v1 분기를 떼야 함).
+
+| 청크 (gzip) | 이전 (6-B FE 로그) | 이후 | 비고 |
+|---|---|---|---|
+| UI (`index-*.js`, src/ui + v2 SVG) | 41.19 | **40.59** | +fit/styleText/s4 재작성·직접 SW 등록, −share −SVG trim |
+| 엔진 | 30.86 | 32.99 | Fixer A 작업분(이 로그 시점) |
+| 데이터 핵심 `dataCore-*.js` | 43.74 (전체) | **34.49** | 첫 화면 경로 |
+| 데이터 확장 `expansion-*.js` | – | 11.49 (지연) | S3 첫 페인트 뒤 유휴 시간 |
+| 공유 `share-*.js` | – | 2.21 (지연) | SH1 열 때 |
+| workbox-window | 2.36 | **0** | `virtual:pwa-register` 대신 `navigator.serviceWorker.register` 직접(`main.js`, `injectRegister: null`). 동작 동일: 새 SW installed + 기존 controller → 토스트, SKIP_WAITING 안 보냄(다음 실행 적용) — 패널에서 실증 |
+| **첫 화면 경로 JS 합계** | 118.15 | **108.07** | 게이트 ≤ 120, 여유 **11.9 KB** |
+| 전체 JS(지연 포함) | 118.15 | 121.77 | 청크 분할 오버헤드 ≈ +0.9, 엔진 +2.1 은 Fixer A |
+| CSS | 8.14 | 8.10 | |
+| precache | 665 KiB · 11 | 675 KiB · 12 | |
+
+(수치는 2026-10-20 빌드. Fixer A 가 엔진·데이터를 계속 바꾸고 있어 최종 수치는 `phase6-qa.md` 표를 본다.)
+
+### 7-3. 테스트
+
+`tests/ui/fixB.test.js` 13개: 액세서리 크기 게이트(118/120/239 → 벨트·양말만, 240/300/400/920 → 전부), 오늘 라벨(ti 0·1·2, n 1·2·3, ti<0, 0장) + `classicOrder`·`todayIndex` 일치, `bannerDecision`·`guardStep` 순서(배너 아래 → tight → 미루기 → 컴팩트 → give-up), `labelField` 폴백(4+5, 느낌표·반말 0), `shortfallText`, `styleOccasionCards`(엔진 플래그 우선), `occasionChipIds`(3 + 더), 데이터 분할 동일성. `node --test "tests/ui/*.test.js"` 46/46 · `npm test` 130/130.
+
+### 7-4. Fixer A 에게
+
+1. `recommend(base, season, 'deep', {style, occasion})` 결과에 `shortfall: boolean`(최상위 또는 `applied.shortfall`) — UI 는 둘 다 본다. 없을 때의 임시 판정(relaxed 또는 < 3장)은 아메카지×출근처럼 "3장은 채웠지만 스타일이 안 맞는" 경우를 못 잡는다(실측: 1·3번 카드가 미니멀 태그).
+2. `labels.ko style.ivy.label` 을 "아이비(클래식)" 등으로 바꿔도 UI 는 `shortLabel` 을 쓴다. `help` 가 비면 내장 폴백이 나간다(`styleText.js STYLE_HELP/OCC_HELP` — 데이터와 같은 문장으로 맞춰 둠).
+3. `explain.achromatic` 라벨에서 " 조합" 을 떼면 `hueLabel` 의 정규식은 무해하게 그대로 둔다.
+4. 데이터 파일을 추가하면 `src/ui/dataCore.js`(핵심) 또는 `src/data/expansion.js`(확장) 에 import 를 더해야 한다 — `tests/ui/fixB.test.js` 마지막 테스트가 실패로 알려준다.

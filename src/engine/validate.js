@@ -491,6 +491,7 @@ export function validateData(data) {
       if (w.otherPattern !== undefined) arr(w.otherPattern).forEach((x) => ref(patternIds, x, `${p}.when.otherPattern`));
       if (w.category !== undefined) arr(w.category).forEach((x) => ref(cats, x, `${p}.when.category`));
       if (w.outerType !== undefined) arr(w.outerType).forEach((x) => ref(outerTypeIds, x, `${p}.when.outerType`));
+      if (w.shoeType !== undefined) arr(w.shoeType).forEach((x) => ref(shoeIds, x, `${p}.when.shoeType`));
       if (w.bottomColor !== undefined) arr(w.bottomColor).forEach((x) => ref(colorIds, x, `${p}.when.bottomColor`));
       if (w.outfitTones !== undefined) arr(w.outfitTones).forEach((x) => ref(tones, x, `${p}.when.outfitTones`));
       if (w.mode !== undefined && !['quick', 'deep'].includes(w.mode)) err('V-29', p, `when.mode 오류: ${w.mode}`);
@@ -502,6 +503,7 @@ export function validateData(data) {
       const p = `midTypes[${i}](${m.id})`;
       checkId(m.id, p);
       ref(materialIds, m.material, `${p}.material`, { nullable: true });
+      (m.colors ?? []).forEach((c) => ref(colorIds, c, `${p}.colors`)); // C6-12: 미드 허용 색(빈 배열 = 제한 없음)
       if (!inRange(m.formality, 1, 10)) err('V-30', p, `formality 오류: ${m.formality}`);
       ref(lengthsOf.outer, m.length, `${p}.length`);
       if (!['light', 'mid', 'heavy'].includes(m.weight)) err('V-30', p, `weight 오류: ${m.weight}`);
@@ -548,6 +550,7 @@ export function validateData(data) {
     patterns.forEach((pt) => needCx.push(`pattern.${pt.id}`));
     midTypes.forEach((m) => needCx.push(`midType.${m.id}`));
     accessoryTypes.forEach((a) => needCx.push(`accessory.${a.id}`));
+    accessoryRules.forEach((r) => needCx.push(`explain.acc.${r.id}`)); // C6-10: 소품 문장은 규칙별 사용자 문장
     if (cats.has('mid')) needCx.push('category.mid');
     for (const id of needCx) if (!labelIds.has(id)) err('V-32', 'labels', `label 없음: ${id}`);
   }

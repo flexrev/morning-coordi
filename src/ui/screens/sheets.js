@@ -1,13 +1,13 @@
 // 새 시트 — O2 메뉴 · F1 즐겨찾기 · SH1 공유 미리보기 · ST1-r 초기화 확인 (ux-enhancement 4·5·7-3·8장).
 import { h } from '../dom.js';
-import { sheet, outfitCard, toast, captionParts } from '../components.js';
+import { sheet, outfitCard, toast, captionOf } from '../components.js';
 import { icon } from '../icons.js';
 import * as nav from '../nav.js';
 import { get as getState, findCandidate, favLabel } from '../state.js';
 import * as favorites from '../favorites.js';
 import { isStandalone, isIOS, isAndroid } from '../install.js';
 import { renderOutfit, serializeStandalone, colorValue } from '../silhouette.js';
-import { buildShareImage, shareCapability, shareBlob, downloadBlob } from '../share.js';
+// share.js(캔버스 1080×1350 레이아웃)는 SH1 을 열 때만 지연 적재 — 아침 경로 번들에서 뺀다 (게이트 6)
 import { clearAll, write, KEYS } from '../storage.js';
 import { resetAll as resetCoach } from '../coach.js';
 import { stagger } from '../motion.js';
@@ -35,7 +35,7 @@ export function favSheet() {
     list.replaceChildren();
     const items = favorites.list();
     if (!items.length) {
-      list.append(h('div', { class: 'empty' }, h('p', { text: '아직 저장한 조합이 없어요' }), h('p', { class: 'caption', text: '카드의 ♥ 를 누르면 여기에 모여요' })));
+      list.append(h('div', { class: 'empty' }, h('p', { text: '아직 저장한 조합이 없어요' }), h('p', { class: 'caption', text: '카드의 하트를 누르면 여기에 모여요' })));
       return;
     }
     for (const f of items) {
@@ -79,7 +79,7 @@ export function shareSheet(ref) {
   const { candidate, label } = found;
   const season = found.season || st.season;
   const items = candidate.outfit.items;
-  const caption = captionParts(items).join(' · ');
+  const caption = captionOf(items); // 카드·S5 와 같은 어휘 (U6-12)
   const labelText = `${typeof label === 'string' ? label : '조합'} · ${cat.label(`season.${season}`)}`;
   const deep = `${location.origin}${location.pathname}#/result/${(found.base || st.base).category}/${(found.base || st.base).color}/outfit/${ref.startsWith('fav.') ? 'classic.0' : ref}`;
   const text = `${caption} — 아침 코디`;
@@ -92,21 +92,25 @@ export function shareSheet(ref) {
   body.append(actions, note);
 
   let blob = null;
+  let share = null; // ../share.js 모듈 (지연)
   const iosStandalone = isStandalone() && isIOS();
   const goBtn = h('button', { class: 'btn btn--primary btn--block', type: 'button', text: '공유하기', disabled: true, onClick: async () => {
-    if (!blob) return;
-    try { await shareBlob(blob, { title: '아침 코디', text, url: deep }); } catch { toast('공유하지 못했어요'); }
+    if (!blob || !share) return;
+    try { await share.shareBlob(blob, { title: '아침 코디', text, url: deep }); } catch { toast('공유하지 못했어요'); }
   } });
-  const saveBtn = h('button', { class: 'btn btn--block glass', type: 'button', text: '이미지 저장', disabled: true, onClick: () => { if (blob) downloadBlob(blob); } });
+  const saveBtn = h('button', { class: 'btn btn--block glass', type: 'button', text: '이미지 저장', disabled: true, onClick: () => { if (blob && share) share.downloadBlob(blob); } });
   const textBtn = h('button', { class: 'btn btn--block glass', type: 'button', text: '글로 공유', hidden: true, onClick: async () => {
     try { await navigator.share({ title: '아침 코디', text, url: deep }); } catch { /* 취소 */ }
   } });
   actions.append(goBtn); if (!iosStandalone) actions.append(saveBtn); actions.append(textBtn);
-  if (iosStandalone) note.textContent = '이미지를 길게 눌러 저장할 수 있어요';
+  // 프라이버시 한 줄은 항상 (U6-18) — iOS 홈 화면 앱은 저장 안내를 앞에
+  note.textContent = iosStandalone ? '이미지를 길게 눌러 저장할 수 있어요 · 기기 안에서만 만들어요' : '기기 안에서만 만들어요';
 
   // 미리보기는 시트가 열리는 동안 그린다 (렌더 ≈ 30–80ms)
   (async () => {
     try {
+      share = await import('../share.js');
+      const { buildShareImage, shareCapability } = share;
       const holder = h('div', { style: 'position:absolute;width:0;height:0;overflow:hidden', 'aria-hidden': 'true' });
       const svg = renderOutfit(items, { size: 920, season, hexOf: cat.hex, stage: true, accessories: candidate.accessories });
       holder.append(svg);

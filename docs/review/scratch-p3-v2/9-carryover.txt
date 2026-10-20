@@ -1,0 +1,56 @@
+# 9. Gate-4 이월 — 확장 데이터로 해결 가능한가
+black slacks 봄가을 quick: 화이트 옥스포드 셔츠[6] · 블랙 울 슬랙스[7] · 블랙 더비[7] / 그레이 멜란지 맨투맨[2] · 블랙 울 슬랙스[7] · 블랙 더비[7] / 라이트 그레이 코튼 니트[4] · 블랙 울 슬랙스[7] · 블랙 더비[7]
+   style=minimal: 블랙 더비[7] / 블랙 더비[7] / 블랙 더비[7]
+   style=bizcasual: 블랙 더비[7] / 블랙 더비[7] / 블랙 더비[7]
+   style=ivy: 블랙 더비[7] / 블랙 더비[7] / 블랙 더비[7]
+   style=amekaji: 블랙 더비[7] / 블랙 더비[7] / 블랙 더비[7]
+   occasion=work relaxed=-: 블랙 더비[7] / 블랙 더비[7] / 블랙 더비[7]
+   occasion=weekend relaxed=-: 블랙 더비[7] / 블랙 더비[7] / 블랙 더비[7]
+   occasion=date relaxed=-: 블랙 더비[7] / 블랙 더비[7] / 블랙 더비[7]
+   occasion=active relaxed=-: 흰 스니커즈[3] / 흰 스니커즈[3] / 흰 스니커즈[3]
+   occasion=formal relaxed=-: 블랙 더비[7] / 블랙 더비[7] / 블랙 더비[7]
+   deep 신발 종류: black/derby, white/sneakerWhite
+black slacks 여름 quick: 라이트 그레이 피케 폴로[4] · 블랙 울 슬랙스[7] · 블랙 페니 로퍼[6] / 그레이 멜란지 티셔츠[2] · 블랙 울 슬랙스[7] · 블랙 페니 로퍼[6] / 화이트 린넨 셔츠[5] · 블랙 울 슬랙스[7] · 블랙 페니 로퍼[6]
+   style=minimal: 블랙 페니 로퍼[6] / 블랙 페니 로퍼[6] / 블랙 페니 로퍼[6]
+   style=bizcasual: 블랙 페니 로퍼[6] / 블랙 페니 로퍼[6] / 블랙 페니 로퍼[6]
+   style=ivy: 블랙 페니 로퍼[6] / 블랙 페니 로퍼[6] / 블랙 페니 로퍼[6]
+   style=amekaji: 블랙 페니 로퍼[6] / 블랙 페니 로퍼[6] / 블랙 페니 로퍼[6]
+   occasion=work relaxed=-: 블랙 페니 로퍼[6] / 블랙 페니 로퍼[6] / 흰 스니커즈[3]
+   occasion=weekend relaxed=-: 블랙 페니 로퍼[6] / 블랙 페니 로퍼[6] / 블랙 페니 로퍼[6]
+   occasion=date relaxed=-: 블랙 페니 로퍼[6] / 흰 스니커즈[3] / 흰 스니커즈[3]
+   occasion=active relaxed=-: 흰 스니커즈[3] / 흰 스니커즈[3] / 흰 스니커즈[3]
+   occasion=formal relaxed=patterns>materials: 블랙 페니 로퍼[6] / 블랙 페니 로퍼[6] / 블랙 페니 로퍼[6]
+   deep 신발 종류: black/loaferPenny, white/sneakerWhite
+black slacks 겨울 quick: 화이트 울 니트[5] · 블랙 울 슬랙스[7] · 블랙 더비[7] / 포레스트 그린 울 니트[5] · 블랙 울 슬랙스[7] · 블랙 더비[7] · 블랙 체스터필드 코트[8] / 화이트 울 니트[5] · 블랙 울 슬랙스[7] · 블랙 더비[7] · 차콜 체스터필드 코트[8]
+   style=minimal: 블랙 더비[7] / 블랙 더비[7] / 블랙 더비[7]
+   style=bizcasual: 블랙 더비[7] / 블랙 더비[7] / 블랙 더비[7]
+   style=ivy: 블랙 더비[7] / 블랙 더비[7] / 블랙 더비[7]
+   style=amekaji: 블랙 더비[7] / 블랙 더비[7] / 블랙 더비[7]
+   occasion=work relaxed=-: 블랙 더비[7] / 블랙 더비[7] / 블랙 더비[7]
+   occasion=weekend relaxed=-: 블랙 더비[7] / 블랙 더비[7] / 블랙 더비[7]
+   occasion=date relaxed=-: 블랙 더비[7] / 블랙 더비[7] / 블랙 더비[7]
+   occasion=active relaxed=-: 흰 스니커즈[3] / 흰 스니커즈[3] / 흰 스니커즈[3]
+   occasion=formal relaxed=-: 블랙 더비[7] / 블랙 더비[7] / 블랙 더비[7]
+   deep 신발 종류: black/derby, white/sneakerWhite
+
+bottom/lightGrey 칩 노출=true
+   winter quick: 네이비 울 니트[5] · 라이트 그레이 치노[5] · 흰 스니커즈[3] / 버건디 울 니트[5] · 라이트 그레이 치노[5] · 블랙 더비[7] / 네이비 울 니트[5] · 라이트 그레이 치노[5] · 블랙 더비[7]
+   winter deep(+layering): 아우터 있는 카드 0, mid 카드 10
+bottom/chocolate 칩 노출=true
+   winter quick: 크림 울 니트[5] · 초콜릿 치노[5] · 흰 스니커즈[3] / 오트밀 울 니트[5] · 초콜릿 치노[5] · 흰 스니커즈[3] / 오트밀 울 니트[5] · 초콜릿 치노[5] · 탄 워크 부츠[4]
+   winter deep(+layering): 아우터 있는 카드 0, mid 카드 9
+bottom/tan 칩 노출=true
+   winter quick: 그레이 멜란지 맨투맨[2] · 탄 치노[5] · 흰 스니커즈[3] / 그레이 멜란지 맨투맨[2] · 탄 치노[5] · 브라운 워크 부츠[4] / 그레이 멜란지 맨투맨[2] · 탄 치노[5] · 블랙 더비[7]
+   winter deep(+layering): 아우터 있는 카드 0, mid 카드 0
+bottom/brown 칩 노출=true
+   winter quick: 크림 울 니트[5] · 브라운 코듀로이[4] · 브라운 워크 부츠[4] / 오트밀 울 니트[5] · 브라운 코듀로이[4] · 브라운 워크 부츠[4] · 네이비 체스터필드 코트[8] / 크림 울 니트[5] · 브라운 코듀로이[4] · 초콜릿 워크 부츠[4]
+   winter deep(+layering): 아우터 있는 카드 12, mid 카드 5
+
+outer/indigo winter quick: 라이트 블루 울 니트[5] · 카키 치노[5] · 흰 스니커즈[3] · 인디고 데님 재킷[4] (ivy,minimal) / 초콜릿 울 니트[5] · 베이지 치노[5] · 흰 스니커즈[3] · 인디고 데님 재킷[4] (minimal,amekaji) / 탄 울 니트[5] · 올리브 치노[5] · 블랙 더비[7] · 인디고 데님 재킷[4] (workwear,amekaji)
+   deep(+layering) 2겹 아우터 카드 0: 
+   mid 카드 0: 
+
+charcoal summer quick: 라이트 블루 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] gap2 / 그레이 멜란지 티셔츠[2] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] gap5 / 화이트 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] gap2
+   occasion=work: 라이트 블루 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] gap2 / 화이트 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] gap2 / 화이트 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] gap4
+   occasion=formal: 라이트 블루 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] gap2 / 화이트 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] gap2 / 네이비 피케 폴로[4] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] gap3
+   occasion=date: 화이트 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] gap2 / 라이트 블루 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 블랙 페니 로퍼[6] gap2 / 화이트 린넨 셔츠[5] · 차콜 울 슬랙스[7] · 흰 스니커즈[3] gap4

@@ -14,10 +14,14 @@
 /** @typedef {{ tone: string, labelKey: string, candidates: Candidate[] }} ToneGroup */
 /** @typedef {{ relation: 'analogous'|'complementary'|'achromatic', labelKey: string, candidates: Candidate[] }} HueGroup */
 /** @typedef {{ style: string, labelKey: string, candidates: Candidate[] }} StyleGroup */
-/** @typedef {{ occasion: string, labelKey: string, candidates: Candidate[], relaxed: string[] }} OccasionGroup */
+/** @typedef {{ occasion: string, labelKey: string, candidates: Candidate[], relaxed: string[], shortfall: boolean }} OccasionGroup */
 /** @typedef {{ fromOutfitId: string, swapped: { category: Category, from: OutfitItem, to: OutfitItem }, candidate: Candidate }} Variation */
 /** @typedef {{ base: BaseItem, season: Season, mode: Mode, style?: string|null, occasion?: string|null, accessories?: boolean|{ belt?: string, beltColor?: string, watch?: string, tuckIn?: boolean }, layering?: boolean, patterns?: boolean }} Query */
-/** @typedef {{ style: string|null, occasion: string|null, accessories: boolean, layering: boolean, patterns: boolean, relaxed: string[] }} Applied */
+/**
+ * Phase 6-B-3 (C6-01·02): relaxed = 적용된 완화 단계(['patterns','materials',…]). shortfall = 격식·운동이 완화 상한(stage 2)에서도 3장을 못 채움(classic은 0~2장),
+ * shortfallText = 그때 UI가 보일 한국어 한 줄("격식에 맞는 조합이 더 없어요"), 아니면 null.
+ * @typedef {{ style: string|null, occasion: string|null, accessories: boolean, layering: boolean, patterns: boolean, relaxed: string[], shortfall: boolean, shortfallText: string|null }} Applied
+ */
 /** @typedef {{ mode: Mode, base: BaseItem, season: Season, classic: Candidate[], applied: Applied, byTone?: ToneGroup[], byHue?: HueGroup[], variations?: Variation[], byStyle?: StyleGroup[], byOccasion?: OccasionGroup[], avoid?: Array<{target: string|null, reason: string, ruleId: string|null}>, stats: { candidates: number, ms: number } }} RecommendResult */
 /** @typedef {{ rule: string, severity: 'error'|'warn'|'info', message: string, path: string }} ValidationIssue */
 /** @typedef {Record<string, any>} DataIndex */

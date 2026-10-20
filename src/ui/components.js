@@ -70,13 +70,16 @@ export function userReasons(candidate) {
   return out;
 }
 
-/** 캡션 조각(상의→하의→신발→아우터). short=true 는 컴팩트 카드용 */
-export function captionParts(items, { short = false } = {}) {
-  const { catalog: cat, engine } = getState();
-  const ordered = cat.ordered(items);
-  if (short) return ordered.map(cat.cardName || cat.shortName);
-  return ordered.map((it) => (engine?.itemCaption ? engine.itemCaption(it) : cat.itemName(it)));
+/**
+ * 캡션 조각(상의→하의→신발→아우터) — 카드·S5·공유·aria 전부 한 어휘(U6-12): catalog.cardName(색 shortLabel + 품목 정식 라벨,
+ * "오트밀 울 니트 · 브라운 페니 로퍼"). 공유 이미지는 받는 사람이 보는 유일한 문장이라 긴 쪽을 쓴다. short 옵션은 호환용(무시).
+ */
+export function captionParts(items, _opts = {}) {
+  const { catalog: cat } = getState();
+  return cat.ordered(items).map(cat.cardName || cat.shortName || cat.itemName);
 }
+/** "상의 · 하의 · 신발" 한 줄 */
+export function captionOf(items) { return captionParts(items).join(' · '); }
 
 /** S5 설명 줄: 한 단어 라벨(클래식/변주)을 뺀 앞 n개 */
 export function detailReasons(candidate, n = 2) {
@@ -139,14 +142,14 @@ export function favButton(candidate, { label, season, base } = {}) {
  * @param {object} candidate  {outfit, score, explain, styleTags?}
  * @param {{label:string|Node[], ref:string, swapped?:object, reason?:boolean, today?:boolean, fav?:boolean, season?:string, base?:object, onOpen?:Function}} opts
  */
-export function outfitCard(candidate, { label, ref, swapped, reason = true, today = false, fav = true, season, base, onOpen }) {
+export function outfitCard(candidate, { label, ref, swapped, reason = true, today = false, fav = true, season, base, onOpen, tags: showTags = true, hideTag = null }) {
   const st = getState();
   const cat = st.catalog;
   const items = candidate.outfit.items;
-  const parts = captionParts(items, { short: true });
+  const parts = captionParts(items);
   const curBase = base || st.base;
   const boldIdx = swapped ? cat.ordered(items).findIndex((it) => it.category === swapped.category) : -1;
-  const caption = st.engine?.caption ? st.engine.caption(candidate.outfit) : captionParts(items).join(' · ');
+  const caption = parts.join(' · ');
   const disputed = isDisputed(candidate);
 
   const card = h('div', { class: `card${today ? ' card--today' : ''}` });
@@ -169,8 +172,9 @@ export function outfitCard(candidate, { label, ref, swapped, reason = true, toda
   append(cap, joinBold(parts, boldIdx));
   meta.append(cap);
   const why = cardReason(candidate);
-  // 카드는 dominant 태그 1개(+이유 한 줄), 이유가 없으면 2개까지 (CX 9장 · 높이 0 추가)
-  const tags = styleTagsOf(candidate, reason && why ? 1 : 2);
+  // 카드는 dominant 태그 1개(+이유 한 줄), 이유가 없으면 2개까지 (CX 9장 · 높이 0 추가).
+  // U6-10: S3 는 세 장이 같은 태그면 숨김(tags:false), S4 스타일 탭은 현재 그룹과 같은 태그 제거(hideTag)
+  const tags = showTags ? styleTagsOf(candidate, reason && why ? 1 : 2).filter((t) => t !== hideTag) : [];
   if ((reason && why) || tags.length) {
     const line = h('div', { class: 'card__reason' });
     for (const t of tags) line.append(h('span', { class: 'tag', text: styleShort(t) }));

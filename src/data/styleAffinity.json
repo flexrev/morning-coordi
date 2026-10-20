@@ -186,28 +186,28 @@
    "minimal": 2,
    "amekaji": 2,
    "cityboy": 2,
-   "bizcasual": -1,
+   "bizcasual": -2,
    "street": 2,
    "gorpcore": 2,
    "ivy": 1,
    "workwear": 2
   },
-  "note": "무지 기준"
+  "note": "무지 기준. bizcasual −2(C6-05)"
  },
  {
   "kind": "topType",
   "id": "sweatshirt",
   "weights": {
    "minimal": 1,
-   "amekaji": 2,
+   "amekaji": 1,
    "cityboy": 2,
    "bizcasual": -2,
    "street": 3,
    "gorpcore": 1,
-   "ivy": 1,
+   "ivy": 0,
    "workwear": 1
   },
-  "note": ""
+  "note": "맨투맨은 스트릿·시티보이(C6-05: amekaji 1, ivy 0)"
  },
  {
   "kind": "topType",
@@ -219,10 +219,10 @@
    "bizcasual": -2,
    "street": 3,
    "gorpcore": 2,
-   "ivy": -1,
+   "ivy": -2,
    "workwear": 0
   },
-  "note": ""
+  "note": "ivy avoid 1순위(C6-05)"
  },
  {
   "kind": "topType",
@@ -309,10 +309,10 @@
    "bizcasual": 0,
    "street": 0,
    "gorpcore": 0,
-   "ivy": 0,
+   "ivy": -1,
    "workwear": 3
   },
-  "note": "초어 재킷 포함"
+  "note": "초어 재킷 포함. 워크웨어·아메카지(C6-05: ivy −1)"
  },
  {
   "kind": "outerType",
@@ -459,10 +459,10 @@
    "bizcasual": -2,
    "street": 1,
    "gorpcore": 3,
-   "ivy": 0,
+   "ivy": -2,
    "workwear": 1
   },
-  "note": "고프코어 시그니처"
+  "note": "고프코어 시그니처(C6-05: ivy −2)"
  },
  {
   "kind": "outerType",
@@ -471,13 +471,13 @@
    "minimal": 1,
    "amekaji": 2,
    "cityboy": 0,
-   "bizcasual": -1,
+   "bizcasual": -2,
    "street": 2,
    "gorpcore": -1,
    "ivy": -1,
    "workwear": 1
   },
-  "note": ""
+  "note": "비즈캐주얼 아우터 밖(C6-05)"
  },
  {
   "kind": "shoeType",
@@ -1029,10 +1029,10 @@
    "bizcasual": 2,
    "street": 1,
    "gorpcore": 1,
-   "ivy": 2,
+   "ivy": 1,
    "workwear": 1
   },
-  "note": ""
+  "note": "기장은 저신호(C6-05: ivy 1)"
  },
  {
   "kind": "topLength",
@@ -1074,10 +1074,10 @@
    "bizcasual": 1,
    "street": 0,
    "gorpcore": 1,
-   "ivy": 2,
+   "ivy": 1,
    "workwear": 1
   },
-  "note": ""
+  "note": "기장은 저신호(C6-05: ivy 1)"
  },
  {
   "kind": "outerLength",
@@ -1327,12 +1327,12 @@
    "amekaji": 1,
    "cityboy": 1,
    "bizcasual": 3,
-   "street": 0,
+   "street": 1,
    "gorpcore": 0,
    "ivy": 3,
    "workwear": 1
   },
-  "note": ""
+  "note": "네이비 코치 재킷·스니커즈는 스트릿 안전색(C6-05)"
  },
  {
   "kind": "color",

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- 아침 코디 실루엣 레이어: 후디 (루즈) · viewBox 0 0 200 400 · 단색 fill, 그라데이션 없음 · 원본 제작(자체) -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" role="img" aria-label="후디 (루즈)">
-  <path data-slot="top" data-fit="loose" data-length="regular" fill="var(--c-top, #BBBBBB)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"
-        d="M 52 86 L 66 56 Q 100 32 134 56 L 148 86 L 162 208 L 140 208 L 142 204 L 58 204 L 60 208 L 38 208 Z M 76 80 L 100 102 M 124 80 L 100 102 M 94 102 L 92 124 M 106 102 L 108 124 M 140 208 L 136 120 M 60 208 L 64 120 M 58 196 L 142 196 M 74 156 L 74 196 M 126 156 L 126 196 M 74 156 L 126 156"/>
-</svg>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- 아침 코디 실루엣 레이어: 블루종 / 데님 재킷 (숏) · viewBox 0 0 200 400 · 단색 fill, 그라데이션 없음 · 원본 제작(자체) -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" role="img" aria-label="블루종 / 데님 재킷 (숏)">
-  <path data-slot="outer" data-fit="regular" data-length="short" fill="var(--c-outer, #555555)" stroke="currentColor" stroke-opacity="0.35" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"
-        d="M 56 80 L 86 68 L 92 80 L 100 74 L 108 80 L 114 68 L 144 80 L 158 200 L 140 200 L 140 198 L 60 198 L 60 200 L 42 200 Z M 100 80 L 100 198 M 60 190 L 140 190 M 141 192 L 157 192 M 43 192 L 59 192 M 140 200 L 136 110 M 60 200 L 64 110 M 70 112 L 88 112 M 112 112 L 130 112"/>
-</svg>

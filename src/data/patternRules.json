@@ -248,6 +248,44 @@
   "flags": []
  },
  {
+  "id": "ptHoundstoothCasual",
+  "when": {
+   "pattern": "houndstooth",
+   "formalityMax": 5
+  },
+  "effect": "exclude",
+  "delta": -2,
+  "severity": "block",
+  "note": "하운드투스는 테일러링 코디(포멀도 6 이상)에만 — 데님+워크 부츠 제외(C6-11)",
+  "sources": [
+   "FBPAT",
+   "SSHOUND"
+  ],
+  "flags": []
+ },
+ {
+  "id": "ptHoundstoothCasualShoes",
+  "when": {
+   "pattern": "houndstooth",
+   "shoeType": [
+    "workboot",
+    "chukka",
+    "sneakerColor",
+    "running",
+    "sandal"
+   ]
+  },
+  "effect": "exclude",
+  "delta": -2,
+  "severity": "block",
+  "note": "하운드투스 + 워크 부츠·척카·컬러 스니커즈 금지(C6-11)",
+  "sources": [
+   "FBPAT",
+   "SSHOUND"
+  ],
+  "flags": []
+ },
+ {
   "id": "ptHerringboneTexture",
   "when": {
    "pattern": "herringbone"

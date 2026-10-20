@@ -45,3 +45,32 @@ export function dateStamp(date = new Date()) {
 export function dateSlug(date = new Date()) {
   return dateStamp(date).replaceAll('.', '-');
 }
+
+/**
+ * 클래식 카드 라벨 (U6-01): 오늘 카드는 "오늘의 추천"(번호 없음), 나머지는 "다른 클래식 k/(n-1)" — 표시 순서 기준.
+ * 오늘 카드가 없으면(ti < 0) "클래식 i/n". n === 1 이면 "오늘의 추천" 한 장.
+ * @param {number} n  classic.length
+ * @param {number} ti  todayIndex (0..n-1, 없으면 -1)
+ * @returns {string[]}  인덱스(ref classic.i) → 라벨
+ */
+export function classicLabels(n, ti) {
+  const out = [];
+  if (!n || n <= 0) return out;
+  if (ti < 0 || ti >= n) {
+    for (let i = 0; i < n; i++) out.push(`클래식 ${i + 1}/${n}`);
+    return out;
+  }
+  let k = 0;
+  for (let i = 0; i < n; i++) {
+    if (i === ti) { out.push('오늘의 추천'); continue; }
+    k++;
+    out.push(`다른 클래식 ${k}/${n - 1}`);
+  }
+  return out;
+}
+
+/** 카드 표시 순서: 오늘 카드 먼저, 나머지는 원래 순서 */
+export function classicOrder(n, ti) {
+  const all = Array.from({ length: Math.max(0, n) }, (_, i) => i);
+  return ti >= 0 && ti < n ? [ti, ...all.filter((i) => i !== ti)] : all;
+}

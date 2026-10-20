@@ -135,12 +135,41 @@ function reverseOf(index, category, color, baseCategory, min) {
 const uniq = (arr) => [...new Set(arr)];
 
 /** 여름 + 포멀 하의: 기본(폴로·린넨 셔츠) 외에 티셔츠도 생성 — 점수상 뒤라 deep·변주에 보임 (gate-3 4항) */
-function topVariants(index, color, season, bottom, ov) {
+function topVariants(index, color, season, bottom, ov, alts = []) {
   const primary = materialize(index, 'top', color, season, { ...ov, forBottom: bottom.material });
   const out = [[primary, []]];
   if (!ov.itemType && season === 'summer' && matFormality(index, bottom.material) >= DEFAULTS.topFormalBottomMin && primary.itemType !== DEFAULTS.topFormalSummerAlt[0]) {
     const [itemType, material] = DEFAULTS.topFormalSummerAlt;
     out.push([materialize(index, 'top', color, season, { ...ov, itemType, material }), ['variation']]); // 변주 태그 → quick 클래식에서 제외
+  }
+  // C6-01·02 (OCC_ALT[occ].tops[season]): 상황별 대체 상의 — 여름 격식은 티셔츠 → 린넨 셔츠(셔츠 허용색)·피케 폴로, 봄가을 격식은 코튼 니트 → 울 니트, 봄가을 운동은 옥스포드 → 티셔츠 (색 유지, 'occAlt' 태그)
+  for (const [occId, alt] of alts) {
+    const st = alt?.tops?.[season];
+    if (!st || ov.itemType || !st.from.includes(primary.itemType)) continue;
+    const [itemType, material] = st.shirt && DEFAULTS.topShirtOkColors.includes(color) ? st.shirt : st.other;
+    const dup = out.find(([t]) => t.itemType === itemType);
+    if (dup) { if (dup[1].includes('occAlt')) dup[1].push(altTag(occId)); continue; }
+    out.push([materialize(index, 'top', color, season, { ...ov, itemType, material }), ['occAlt', altTag(occId)]]);
+  }
+  return out;
+}
+
+/** 상황별 대체 후보 태그: 'occAlt' + 'occAlt:<occasion>' (recommend가 상황 그룹별로 나눈다) */
+const altTag = (occId) => `occAlt:${occId}`;
+/** opts.alt(단일 스펙) 또는 opts.alts({ occasion: 스펙 }) → [[occId, spec]] */
+const altEntries = (opts) => (opts.alts ? Object.entries(opts.alts) : opts.alt ? [['', opts.alt]] : []);
+
+/** C6-02 (OCC_ALT.active.bottomMaterials): 울·플란넬 하의 → 스웻팬츠·테크 팬츠로 재구체화한 하의 목록 (원본 포함, 색 유지) */
+function bottomVariants(index, bottom, season, alts = []) {
+  const out = [[bottom, []]];
+  for (const [occId, alt] of alts) {
+    const bm = alt?.bottomMaterials;
+    if (!bm || !bm.from.includes(bottom.material)) continue;
+    for (const material of bm.to) {
+      const dup = out.find(([b]) => b.material === material);
+      if (dup) { dup[1].push(altTag(occId)); continue; }
+      out.push([materialize(index, 'bottom', bottom.color, season, { material, length: bottom.length, pattern: bottom.pattern }), ['occAlt', altTag(occId)]]);
+    }
   }
   return out;
 }
@@ -150,9 +179,13 @@ function topVariants(index, color, season, bottom, ov) {
  * 베이스 규칙이 없는 색(상의 beige·brown…, 하의 lightGrey)도 역참조로 후보를 만든다 (P3-01):
  *  - top 베이스 규칙 없음 → `top|color`가 매치로 오른 하의 베이스들
  *  - bottom 규칙 없음 → `bottom|color`가 매치로 오른 상의 베이스들, 신발은 그 상의 규칙(5장 신발 열) → 없으면 뉴트럴 신발
+ * opts.alt (Phase 6-B-3, OCC_ALT[occasion]) 또는 opts.alts({ occasion: OCC_ALT[occasion] }): 상황별 대체 구체화 후보('occAlt'·'occAlt:<occasion>' 태그)를 함께 만든다.
+ * opts.altOnly: 대체 후보만 돌려준다(점수 계산도 대체 후보만 — Deep 상황 그룹용). 옵션 없으면 Phase 4와 동일
  */
 export function generateCandidates(index, base, season, opts = {}) {
   const max = opts.max ?? CANDIDATE_MAX;
+  const alts = altEntries(opts);
+  const altOnly = !!opts.altOnly;
   const bo = baseOverrides(base);
   let bottomColors;
   if (base.category === 'bottom') bottomColors = [base.color];
@@ -161,8 +194,7 @@ export function generateCandidates(index, base, season, opts = {}) {
 
   const seen = new Set();
   const out = [];
-  for (const bottomColor of uniq(bottomColors)) {
-    const bottom = base.category === 'bottom' ? materialize(index, 'bottom', base.color, season, bo) : materialize(index, 'bottom', bottomColor, season);
+  for (const bottomColor of uniq(bottomColors)) for (const [bottom, bottomTags] of bottomVariants(index, base.category === 'bottom' ? materialize(index, 'bottom', base.color, season, bo) : materialize(index, 'bottom', bottomColor, season), season, alts)) {
     const hasRule = index.colorRules.has(`${bottom.color}|bottom`);
     let topColors;
     if (base.category === 'top') topColors = [base.color];
@@ -178,14 +210,39 @@ export function generateCandidates(index, base, season, opts = {}) {
     if (base.category === 'outer') outers = [materialize(index, 'outer', base.color, season, bo)];
     else if (season === 'summer' || !hasRule) outers = [null];
     else outers = [null, ...matchesOf(index, bottom.color, 'bottom', 'outer', 4).slice(0, OUTER_CANDIDATES).map((m) => materialize(index, 'outer', m.color, season))];
+    // C6-01 (OCC_ALT.formal.outers[season]): 여름 격식 — 오버셔츠 → 블레이저 (색 유지, 'occAlt' 태그). 명시 itemType 베이스는 그대로
+    const outerList = outers.map((o) => [o, []]);
+    for (const [occId, alt] of alts) {
+      const ao = alt?.outers?.[season];
+      if (!ao || bo.itemType) continue;
+      for (const o of outers) {
+        if (!o || !ao.from.includes(o.itemType)) continue;
+        const dup = outerList.find(([x]) => x && x.color === o.color && x.itemType === ao.to);
+        if (dup) { if (dup[1].includes('occAlt')) dup[1].push(altTag(occId)); continue; }
+        outerList.push([materialize(index, 'outer', o.color, season, { itemType: ao.to }), ['occAlt', altTag(occId)]]);
+      }
+    }
 
     for (const topColor of uniq(topColors)) {
-      const tops = topVariants(index, topColor, season, bottom, base.category === 'top' ? bo : {});
-      const shoes = uniq(shoeColorsFor(topColor)).map((c) => materialize(index, 'shoes', c, season, { ...(base.category === 'shoes' ? bo : {}), forBottom: bottom.material }));
-      for (const [top, extraTags] of tops) for (const shoe of shoes) for (const outer of outers) {
+      const tops = topVariants(index, topColor, season, bottom, base.category === 'top' ? bo : {}, alts);
+      const shoeList = uniq(shoeColorsFor(topColor)).map((c) => [materialize(index, 'shoes', c, season, { ...(base.category === 'shoes' ? bo : {}), forBottom: bottom.material }), []]);
+      // C6-01 (OCC_ALT.formal.shoeTypes): 격식 — 브라운 계열 척카·워크 부츠 → 더비 (색 유지, 'occAlt' 태그). 명시 shoeType 베이스는 그대로
+      for (const [occId, alt] of alts) {
+        const as = alt?.shoeTypes;
+        if (!as || (base.category === 'shoes' && bo.shoeType)) continue;
+        for (const [sh] of [...shoeList]) {
+          if (!as.from.includes(sh.shoeType)) continue;
+          const dup = shoeList.find(([x]) => x.color === sh.color && x.shoeType === as.to);
+          if (dup) { if (dup[1].includes('occAlt')) dup[1].push(altTag(occId)); continue; }
+          shoeList.push([materialize(index, 'shoes', sh.color, season, { shoeType: as.to, forBottom: bottom.material }), ['occAlt', altTag(occId)]]);
+        }
+      }
+      for (const [top, extraTags] of tops) for (const [shoe, shoeTags] of shoeList) for (const [outer, outerTags] of outerList) {
+        const tags = [...extraTags, ...bottomTags, ...shoeTags, ...outerTags];
+        if (altOnly && !tags.includes('occAlt')) continue;
         const items = [top, bottom, shoe];
         if (outer) items.push(outer);
-        const outfit = makeOutfit(index, items, season, extraTags);
+        const outfit = makeOutfit(index, items, season, tags);
         const sig = outfitSignature(outfit);
         if (seen.has(sig)) continue;
         seen.add(sig);
@@ -201,26 +258,40 @@ export function generateCandidates(index, base, season, opts = {}) {
   // Phase 6-B (D-3): Deep + layering — 미드 레이어 변형(mid 1개 삽입)을 후보에 추가(상한 +LAYERING_CANDIDATES_MAX, 기본 상한과 별도). Quick은 이 옵션을 절대 켜지 않는다
   if (opts.layering && season !== 'summer' && index.midTypes?.size) {
     const added = [];
+    const tryAdd = (items) => {
+      const outfit = makeOutfit(index, items, season, ['layering']);
+      const sig = outfitSignature(outfit);
+      if (seen.has(sig)) return;
+      seen.add(sig);
+      const s = cachedScore(index, outfit, season);
+      if (s.blocked) return;
+      outfit.isClassic = s.color.detail.allClassic;
+      added.push(outfit);
+    };
     for (const o of base300) {
       if (added.length >= LAYERING_CANDIDATES_MAX) break;
       const top = o.items.find((i) => i.category === 'top'); const bottom = o.items.find((i) => i.category === 'bottom');
       const rule = index.colorRules.get(`${bottom.color}|bottom`);
       const usedColors = new Set(o.items.map((i) => i.color));
-      const midColor = (rule?.rule.matches ?? []).filter((m) => (m.category === 'top' || m.category === 'outer') && m.score >= 4 && !usedColors.has(m.color)).map((m) => m.color)[0] ?? null;
-      if (!midColor) continue;
+      const matchColors = (rule?.rule.matches ?? []).filter((m) => (m.category === 'top' || m.category === 'outer') && m.score >= 4 && !usedColors.has(m.color)).map((m) => m.color);
+      // C6-12: midTypes.colors 허용 목록(퀼팅 베스트 = 네이비·올리브·블랙·차콜·브라운) ∩ 하의 규칙 매치 ≥4 중 첫 색
+      const midColorFor = (mt) => { const allowed = index.midTypes.get(mt)?.colors ?? []; return matchColors.find((c) => !allowed.length || allowed.includes(c)) ?? null; };
       for (const mt of midTypesFor(index, o, season)) {
-        const mid = materialize(index, 'mid', midColor, season, { itemType: mt });
-        const outfit = makeOutfit(index, [...o.items, mid], season, ['layering']);
-        const sig = outfitSignature(outfit);
-        if (seen.has(sig)) continue;
-        seen.add(sig);
-        const s = cachedScore(index, outfit, season);
-        if (s.blocked) continue;
-        outfit.isClassic = s.color.detail.allClassic;
-        added.push(outfit);
         if (added.length >= LAYERING_CANDIDATES_MAX) break;
+        const midColor = midColorFor(mt);
+        if (!midColor) continue;
+        tryAdd([...o.items, materialize(index, 'mid', midColor, season, { itemType: mt })]);
       }
-      void top;
+      // C6-04: 겨울 기본 상의(니트)는 midLayerRules의 base가 아니다 — 니트를 '셔츠 위 니트' 미드로 내리고 그 안에 셔츠(화이트·라이트 블루)를 넣은 3겹 후보
+      if (season === 'winter' && added.length < LAYERING_CANDIDATES_MAX && DEFAULTS.layeringKnitTops.includes(top.itemType) && !hasMid(o)) {
+        const shirtColor = DEFAULTS.topShirtColors.find((c) => c !== top.color && !usedColors.has(c) && (rule ? (rule.rule.matches ?? []).some((m) => m.category === 'top' && m.color === c && m.score >= 4) : true)) ?? null;
+        const outerSame = o.items.some((i) => i.category === 'outer' && i.color === top.color); // 네이비 니트 + 네이비 코트는 미드 색이 코트에 묻힌다
+        if (!shirtColor || outerSame) continue;
+        const shirt = materialize(index, 'top', shirtColor, season, { itemType: DEFAULTS.layeringShirt, fit: top.fit, length: top.length });
+        const shirted = { ...o, items: o.items.map((it) => (it === top ? shirt : it)) };
+        if (!midTypesFor(index, shirted, season).includes(DEFAULTS.layeringKnitMid)) continue;
+        tryAdd([...shirted.items, materialize(index, 'mid', top.color, season, { itemType: DEFAULTS.layeringKnitMid })]);
+      }
     }
     return [...base300, ...added].sort((a, b) => compareOutfits(index, a, b, season));
   }
@@ -279,9 +350,9 @@ export function pickClassic(index, base, season, n = QUICK_CARDS, opts = {}) {
 
 /**
  * Quick 풀 (universal 히트 + 생성 후보, 등급 포함). 한 번 만들어 selectQuick을 여러 번 돌릴 수 있다(상황 완화 단계, Phase 6-B).
- * 풀에 mid 코디·Quick 패턴 상한 초과 코디는 없다 (D-3 · ptQuickMaxOne).
+ * 풀에 mid 코디·Quick 패턴 상한 초과 코디는 없다 (D-3 · ptQuickMaxOne). opts.alt: 상황별 대체 구체화(OCC_ALT) — 옵션 없는 호출은 Phase 4와 동일
  */
-export function quickPool(index, base, season) {
+export function quickPool(index, base, season, opts = {}) {
   // 1. universal 코디 히트
   const ids = index.outfitsByItem.get(`${base.category}|${base.color}`) ?? [];
   const hits = ids.map((id) => index.outfits.get(id))
@@ -289,7 +360,7 @@ export function quickPool(index, base, season) {
     .filter((o) => !cachedScore(index, o, season).blocked && !hasMid(o) && !patternExcluded(index, o, season, 'quick'))
     .sort((a, b) => compareOutfits(index, a, b, season));
   // 2~4. 생성 후보를 등급별로 (A: 전 쌍 5·classic, B: 전 쌍 ≥4·classic, C: 나머지)
-  const gen = generateCandidates(index, base, season).filter((o) => !hasMid(o) && !patternExcluded(index, o, season, 'quick'));
+  const gen = generateCandidates(index, base, season, opts.alt ? { alt: opts.alt } : {}).filter((o) => !hasMid(o) && !patternExcluded(index, o, season, 'quick'));
   const tier = (o) => { if (o.tags.includes('variation')) return 3; const d = cachedScore(index, o, season).color.detail; return d.allClassic && d.minPair >= 5 ? 1 : d.allClassic && d.minPair >= 4 ? 2 : 3; };
   const quickOk = (o) => { const f = cachedScore(index, o, season).style.formality; return !(f.gap >= QUICK_EXCLUDE_GAP && QUICK_EXCLUDE_LO_SHOES.includes(f.lo?.shoeType)); };
   const hitSet = new Set(hits);
