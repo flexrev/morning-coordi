@@ -1,10 +1,10 @@
-# 자산 시스템 v2 — 일러스트 언어·소재·액세서리·제작 파이프라인 (Phase 6-A · AS)
+# 자산 시스템 v2 — 일러스트 언어·소재·액세서리·제작 파이프라인 (Phase 6-A/6-B · AS)
 
-작성일: 2026-10-19 · 담당: AS 자산 시스템
-입력: `docs/phase6/00-plan.md`, `docs/design/design-tokens.md` 6·7장, `src/assets/silhouettes/` (v1 27파일), `src/ui/silhouette.js`·`typeToLayer.js`, `docs/architecture/data-schema.md` 2-5·2-8·2-9·2-10
-산출물: 이 문서, `src/assets/v2/*.svg` (24 레이어) + `src/assets/v2/index-v2.json`, `docs/phase6/asset-demo.html`, `scripts/check-assets.mjs`, `scripts/build-asset-demo.mjs`
+작성일: 2026-10-19 (6-A) · 갱신 2026-10-20 (6-B) · 담당: AS 자산 시스템
+입력: `docs/phase6/00-plan.md`, `docs/design/design-tokens.md` 6·7장, `src/assets/silhouettes/` (v1 27파일), `src/ui/silhouette.js`·`typeToLayer.js`, `docs/architecture/data-schema.md` 2-5·2-8·2-9·2-10, 6-B: `docs/phase6/gate-5-review.md` 3-2, `docs/phase6/ad-concepts.md` 2장(시안 B)·`concept-b.html`, `docs/phase6/content-expansion.md` 3·4·5장
+산출물: 이 문서, `src/assets/v2/*.svg` (**41 레이어**) + `src/assets/v2/index-v2.json`, `docs/phase6/asset-demo.html`, `scripts/check-assets.mjs`, `scripts/build-asset-demo.mjs`, `docs/design/app-icon.svg` + `public/icons/*.png`
 
-> 한 줄 요약: v1의 계약(viewBox 200×400, `--c-*` 변수 채색, 허리 176 · 상의 밑단 192 · 바지 밑단 362 · crop 클립 338)은 그대로 두고, **몸(비례·팔·손·머리카락·그림자) → 선 → 음영 → 질감 → 액세서리**의 다섯 켜를 추가했다. 24 레이어 · 89 path · **25.8 KB**(예산 120 KB), 파일당 최대 1,490 B(예산 1,536 B). 전부 자체 제작 벡터, 그라데이션·래스터·외부 참조 없음.
+> 한 줄 요약: v1의 계약(viewBox 200×400, `--c-*` 변수 채색, 허리 176 · 상의 밑단 192 · 바지 밑단 362 · crop 클립 338)은 그대로 두고, **몸(비례·팔·손·머리카락·그림자) → 선 → 음영 → 질감 → 액세서리**의 다섯 켜를 추가했다. 6-B 에서 **v1 폴백이 남아 있던 품목 9개(폴로 2핏·루즈 셔츠·루즈 후디·슬림·러닝·워크부츠·척카·샌들), 미드 레이어 3(가디건·베스트·오버셔츠, 새 슬롯 `mid`), 액세서리 변형 3(비니·크로스바디·백팩), 스튜디오 다크 연출 레이어 2(`stage-spotlight`·`stage-floor`), 무늬 패턴 5(스트라이프·핀스트라이프·깅엄·플레이드·하운드투스)** 를 더해 41 레이어 · 160 path · **45.0 KB**(예산 120 KB), 파일당 최대 1,490 B(예산 1,536 B). 전부 자체 제작 벡터, 옷에는 그라데이션·래스터·외부 참조 없음. 6-B 추가분은 **11장(스테이지)·12장(아이콘)·13장(FE 통합 메모)** 에 있다.
 
 ---
 
@@ -124,22 +124,25 @@
 - `data-part`: `main`(색 변수 채움, 여러 개 가능) · `shade` · `detail` · `shadow`(base만). `data-kind`는 main의 부속 색(`hair`, `sole`, `metal`)과 detail의 종류(`rib`, `buttons`)를 표시. **패턴 오버레이는 `data-kind`가 없는 main에만** 건다(밑창·버클·머리카락에 데님 결이 생기지 않게).
 - `data-detail="tassel"` 같은 **선택 파트**는 렌더러가 `layer.detail`과 일치할 때만 남긴다(v1 로퍼 규칙 그대로).
 - 금지: `id`, `<linearGradient|radialGradient>`(플래그 없이), `<image|filter|foreignObject|text|style|script>`, `href`. XML 선언·`role` 생략(바이트).
-- 색 변수와 폴백: `--c-skin #C9A98C` · `--c-hair #2B2420` · `--c-top` · `--c-bottom` · `--c-shoes` · `--c-sole #ECE9E2` · `--c-outer` · `--c-belt #3B2F26` · `--c-watch #2A2622` · `--c-metal #C8C6C0` · `--c-socks #D9D5CC` · `--c-bag #CFC4B4` · `--c-cap #1F2E50` · `--c-scarf #722F37`. `--c-sole`·`--c-metal`·`--c-hair`는 tokens.css에 추가(다크/라이트 동일, metal은 라이트에서 #A8A6A0 권장).
+- 색 변수와 폴백: `--c-skin #C9A98C` · `--c-hair #2B2420` · `--c-top` · `--c-bottom` · `--c-shoes` · `--c-sole #ECE9E2` · `--c-outer` · **`--c-mid #999999`**(6-B) · `--c-belt #3B2F26` · `--c-watch #2A2622` · `--c-metal #C8C6C0` · `--c-socks #D9D5CC` · `--c-bag #CFC4B4` · `--c-cap #1F2E50` · `--c-scarf #722F37` · **`--stage-glow #FFE6BE`**(6-B, stage 전용 — 시안 B `--spot` 의 색 성분). `--c-sole`·`--c-metal`·`--c-hair`는 tokens.css에 추가(다크/라이트 동일, metal은 라이트에서 #A8A6A0 권장). `--c-skin` 은 base 외에 `shoes-sandal`(맨발 파트, `data-kind="skin"`)도 쓴다.
+- 6-B 에 추가된 `data-kind`: `skin`(샌들 발). 선택 파트 추가: `mid-vest` 의 `data-detail="quilt"`(퀼팅 베스트일 때만 가로 누빔선).
 
 ### 4-2. 네이밍
 
-`<slot>-<type>[-<fit>].svg` — `figure-base`, `top-tee-regular`, `top-knit-loose`, `bottom-wide`, `shoes-chelsea`, `outer-long`, `acc-belt`. 액세서리는 전부 `acc-` 접두사(슬롯은 `data-slot`으로 구분). 길이 변형이 필요한 상의(`-long`)는 2차에 `top-shirt-regular-long`처럼 뒤에 붙인다. 검증기가 접두사↔슬롯을 대조한다.
+`<slot>-<type>[-<fit>].svg` — `figure-base`, `top-tee-regular`, `top-knit-loose`, `bottom-wide`, `shoes-chelsea`, `outer-long`, `acc-belt`, `mid-cardigan`, `stage-spotlight`. 액세서리는 전부 `acc-` 접두사(슬롯은 `data-slot`으로 구분), 미드 레이어는 `mid-`, 연출 레이어는 `stage-`. **상의 기장 파일은 만들지 않는다** — crop 은 클립(y<184), long 은 transform(4-3)으로 어떤 상의 파일에나 걸린다(tee·knit·polo·shirt·hoodie 전부). 검증기가 접두사↔슬롯을 대조한다.
 
 ### 4-3. z순서 · 클립 · 가시성 규칙
 
 ```
-base → cap → socks → shoes → bottom → belt → top → outer → scarf → bag → watch
+stage → base → cap → socks → shoes → bottom → belt → top → mid → outer → scarf → bag → watch
 ```
+
+(6-B: `stage` 가 맨 앞, `mid` 가 top 과 outer 사이. `index-v2.json.zOrder` 가 원본.)
 
 | 규칙 | CSS/속성 | 설명 |
 |---|---|---|
 | 바지 crop | `g[data-slot=bottom]` `clip-path:url(#clip-crop)` (y<338) | 발목·양말 노출 (v1 동일) |
-| 상의 crop | `clip-path:url(#clip-top-crop)` (y<184) | v1 동일 |
+| 상의 crop | `clip-path:url(#clip-top-crop)` (y<184) | v1 동일. tee·knit·polo·shirt·hoodie 어느 파일에나 적용 — 별도 crop 파일 없음 |
 | 상의 tuck | `clip-path:url(#clip-top-tuck)` (y<176) | **신설.** 벨트를 보이려면 상의를 허리선에서 자른다. `outfit.items[top].tuck === true` 또는 벨트 아이템이 있으면 자동 |
 | 상의 long | `transform: translate(0 70) scale(1 1.06) translate(0 -70)` | v1 동일 |
 | 벨트 | bottom 뒤, top 앞 | tuck이 아니면 상의 밑단에 가려 안 보임 → 렌더러는 tuck일 때만 그린다 |
@@ -148,7 +151,11 @@ base → cap → socks → shoes → bottom → belt → top → outer → scarf
 | 머플러 | outer 뒤 | 목(y 54~80)과 가슴 위 꼬리(80~142). 아우터 칼라 위에 두른 모습 |
 | 토트백 | scarf 뒤 | 그림 왼쪽(인물 오른 어깨). 손을 덮는다 |
 | 시계 | 맨 마지막 | 그림 오른쪽(인물 왼 손목) y 214~225. 긴팔 커프(214~220)에 살짝 걸친다 |
-| 아우터 + 루즈 상의 | 매핑 규칙 | 루즈 상의 소매(x 34)가 아우터 소매(x 36)보다 넓어 어깨 옆으로 1~3 유닛 비친다. **아우터가 있으면 상의는 regular 파일**을 쓴다(아우터가 핏을 가리므로 정보 손실 없음) |
+| 아우터 + 루즈 상의 | 매핑 규칙 | 루즈 상의 소매(x 34)가 아우터 소매(x 36)보다 넓어 어깨 옆으로 1~3 유닛 비친다. **아우터가 있으면 상의는 regular 파일**을 쓴다(아우터가 핏을 가리므로 정보 손실 없음). 미드가 있을 때도 같다(미드 몸통 x 38~162) |
+| 미드 (6-B) | top 뒤, outer 앞 | `items[].category === "mid"` 0~1개. 색 변수 `--c-mid`. 밑단 198~204(상의 192 아래, 아우터 regular 214 위). `outer-short`(밑단 198)와 겹치면 미드 밑단이 2~6 유닛 비친다 — 의도(블루종 아래 가디건). 베스트는 소매가 없어 상의 소매가 그대로 보인다 |
+| 모자 변형 (6-B) | cap 슬롯 | `acc-cap`(볼캡) 또는 `acc-beanie`(비니, y 2~37). 둘 다 머리카락 위, 후드 로브(y≥56)와 안 겹침 |
+| 가방 변형 (6-B) | bag 슬롯 | `acc-bag`(토트, 그림 왼쪽) · `acc-crossbody`(어깨 (60,84) → 허리 (160,206) 대각 스트랩 + 파우치) · `acc-backpack`(가슴 어깨끈 2 + 가슴 스트랩 + 목 뒤로 비치는 팩 상단 y 64~76). 한 번에 하나 |
+| 스테이지 (6-B) | base 앞 | `stage-spotlight` → `stage-floor` 순. 옷 조합과 무관, 렌더러 옵션(`opts.stage`)으로 켠다. 11장 |
 
 ### 4-4. 렌더러 변경안 (FE 팀, `src/ui/silhouette.js`) — 이 문서는 src/ui를 수정하지 않는다
 
@@ -156,7 +163,7 @@ base → cap → socks → shoes → bottom → belt → top → outer → scarf
 2. `appendPaths` → `appendLayer(svg, g, item, patternId)`: `g.cloneNode(true)`; `[data-detail]` 중 `layer.detail`과 다른 것 제거; 패턴이 있으면 `path[data-part="main"]:not([data-kind])` 각각 뒤에 `fill="url(#pat2-x)" stroke="none" data-part="mat"` 복제를 **main 바로 뒤**(shade·detail 앞)에 삽입; `applyLength`는 `<g>`에 건다.
 3. `Z_ORDER`를 `index-v2.json.zOrder`로. 액세서리는 `items[].category ∈ belt|watch|socks|bag|cap|scarf`로 받고 색 변수 `--c-<slot>` 주입. 벨트·양말 가시성 규칙(4-3)을 렌더러가 적용.
 4. `patternDefs.js`에 5장의 v2 defs와 `clip-top-tuck` 추가. 그레인 필터는 `opts.grain`일 때만 스택 `<g>`에 건다.
-5. `typeToLayer.js`: `TOP_SHAPE`에서 polo → 2차 전까지 `shirt`로 폴백(v2에 polo 없음), `BOTTOM_FIT.slim → bottom-tapered` 폴백, `SHOE_LAYER`에서 running/workboot/chukka/sandal → sneaker/chelsea/derby/loafer 폴백(2차 제작 전까지). 아우터는 v1과 동일 4형.
+5. `typeToLayer.js`: ~~polo·slim·running·workboot·chukka·sandal 임시 폴백~~ → **6-B 에서 전부 제작됐으므로 폴백 삭제.** 완전한 type → file 표는 13장(FE 통합 메모).
 6. `aria-label`은 v1처럼 svg 루트에 조합 문장으로. 레이어 파일의 `aria-label`은 index의 `labelKo` 원본일 뿐이다.
 
 ---
@@ -216,6 +223,46 @@ base → cap → socks → shoes → bottom → belt → top → outer → scarf
 
 스케일 원칙: 타일은 viewBox 유닛. 120px(0.3배)에서 8유닛 타일 = 2.4px → 결로만 보이고, 300px(0.75배)에서 6px → 짜임이 보인다. 투명도 합계는 한 지점에서 .20을 넘지 않게(색 칩과 어긋나 보이지 않도록). 패턴 복제 path는 **main 바로 뒤**에 넣어 shade·선이 질감 위에 오게 한다(v1은 선 위에 패턴이 올라 흐려졌다).
 
+### 5-1. 무늬 패턴 (6-B) — `pat2-stripe` · `pat2-pinstripe` · `pat2-gingham` · `pat2-plaid` · `pat2-houndstooth`
+
+소재 결(5장)과 달리 **두 번째 색**이다. `OutfitItem.pattern`(content-expansion 4-1: breton·stripeShirt·pinstripe·gingham·plaid·houndstooth…)에서 온다. 전부 `currentColor` 이므로 렌더러가 오버레이 path 에 `style.color = <패턴 색>` 을 준다(소재 결은 `color: var(--text-1)` 상속 그대로). 소재 결과 **동시에** 걸 수 있다(예: 데님 + 핀스트라이프는 아니지만, 린넨 + 깅엄). 아래 블록은 `scripts/build-asset-demo.mjs` 의 `PATTERN_DEFS_V2` 와 바이트 단위로 같다 — FE 는 이 블록을 `patternDefs.js` 로 복사한다.
+
+```svg
+<pattern id="pat2-stripe" width="4" height="14" patternUnits="userSpaceOnUse">
+  <rect x="0" y="0" width="4" height="5" fill="currentColor" fill-opacity=".85"/>
+</pattern>  <!-- 브레통: 가로 띠 5 / 간격 9. 120px 에서 4.2px 주기, 300px 에서 10.5px -->
+<pattern id="pat2-pinstripe" width="8" height="8" patternUnits="userSpaceOnUse">
+  <line x1="1" y1="0" x2="1" y2="8" stroke="currentColor" stroke-opacity=".55" stroke-width=".9"/>
+</pattern>  <!-- 핀스트라이프: 세로 .9 / 8. 120px 에선 결, 300px 에서 선 -->
+<pattern id="pat2-gingham" width="12" height="12" patternUnits="userSpaceOnUse">
+  <rect x="0" y="0" width="6" height="12" fill="currentColor" fill-opacity=".36"/>
+  <rect x="0" y="0" width="12" height="6" fill="currentColor" fill-opacity=".36"/>
+</pattern>  <!-- 깅엄: 세로띠 × 가로띠 겹침 = 3단(바탕 / .36 / .59) -->
+<pattern id="pat2-plaid" width="32" height="32" patternUnits="userSpaceOnUse">
+  <rect x="0" y="0" width="14" height="32" fill="currentColor" fill-opacity=".30"/>
+  <rect x="0" y="0" width="32" height="14" fill="currentColor" fill-opacity=".30"/>
+  <line x1="23" y1="0" x2="23" y2="32" stroke="currentColor" stroke-opacity=".45" stroke-width="1.6"/>
+  <line x1="0" y1="23" x2="32" y2="23" stroke="currentColor" stroke-opacity=".45" stroke-width="1.6"/>
+</pattern>  <!-- 플레이드(버팔로+오버체크): 굵은 띠 14 + 가는 선 -->
+<pattern id="pat2-houndstooth" width="16" height="16" patternUnits="userSpaceOnUse">
+  <path d="M0 0h8v2h-8zM12 0h4v2h-4zM0 2h10v2h-10zM14 2h2v2h-2zM0 4h12v2h-12zM0 6h8v2h-8zM10 6h4v2h-4zM0 8h4v2h-4zM2 10h4v2h-4zM4 12h4v2h-4zM0 14h2v2h-2zM6 14h2v2h-2z" fill="currentColor" fill-opacity=".8"/>
+</pattern>  <!-- 하운드투스: 2/2 능직 × 4올 체크를 실제로 시뮬레이션한 8×8 비트맵(셀 2). 120px 4.8px 타일 = 질감, 300px 12px = 이빨이 보임 -->
+```
+
+| `pattern` id (CX 4-1) | defs | 기본 패턴 색 (옷 색 기준) | 비고 |
+|---|---|---|---|
+| breton | pat2-stripe | 바탕 white/offWhite → navy · 바탕 navy → offWhite | 상의만 |
+| stripeShirt | pat2-pinstripe | 셔츠 바탕 → midDenim/navy | 잔줄 셔츠. 핀스트라이프와 defs 공유(색만 다름) |
+| pinstripe | pat2-pinstripe | charcoal/navy 바탕 → offWhite | 하의·블레이저 |
+| gingham | pat2-gingham | white → midDenim/navy/forestGreen/burgundy | |
+| plaid | pat2-plaid | burgundy/forestGreen/navy 바탕 → black | 버팔로 체크 |
+| windowpane | pat2-plaid 의 line 2개만(FE 가 rect 없이 쓰거나 opacity .3 rect 를 0 으로) | 바탕 → offWhite | 별도 defs 없이 대응 가능. 필요하면 2차에 `pat2-windowpane` |
+| houndstooth | pat2-houndstooth | offWhite 바탕 → black (모노) | |
+| herringbone | pat2-tweed(소재 결) | — | "질감"이라 패턴 수에 안 세는 것과 일치 |
+| camo | — | — | 6-B 범위 밖(점수 규칙에만 존재). 민무늬로 그린다 |
+
+렌더러 규칙: 패턴 오버레이 색은 데모의 `contrastOf(옷 색)`(명도 > 140 → navy, 아니면 offWhite)을 기본으로 두고, CX `patterns.json.colorsTypical` 이 오면 그것을 우선한다. 신발·벨트에는 걸지 않는다(CX 규칙 "신발·벨트는 항상 무지"). 데모 3장에서 120px/300px 모두 확인.
+
 ---
 
 ## 6. 액세서리 슬롯
@@ -225,11 +272,21 @@ base → cap → socks → shoes → bottom → belt → top → outer → scarf
 | belt | acc-belt | `--c-belt` + `--c-metal` 버클 | 176~186 (+그림자 190) | 상의 tuck | `items[].category:"belt"`, color, `top.tuck` |
 | watch | acc-watch | `--c-watch` 스트랩 + `--c-metal` 케이스 | 214~225, x 141~159 | 항상 | category `watch` |
 | socks | acc-socks | `--c-socks` | 334~358 | 바지 crop | category `socks` |
-| bag | acc-bag (tote) | `--c-bag` | 어깨 82 → 178~242, x 26~68 | 항상 | category `bag`, type `tote` (2차: crossbody, backpack) |
-| cap | acc-cap | `--c-cap` | 5~46 | 항상 | category `cap` |
+| bag | acc-bag (tote) · **acc-crossbody** · **acc-backpack** (6-B) | `--c-bag` | 토트: 어깨 82 → 178~242, x 26~68 · 크로스바디: 스트랩 (60,84)→(140,176) + 파우치 x 126~162, y 176~206 · 백팩: 어깨끈 x 66~80 / 120~134, y 80~160 + 팩 상단 y 64~76 | 항상 | category `bag`, `accessoryTypes` bagTote·bagBriefcase → tote, bagCrossbody → crossbody, bagBackpack → backpack |
+| cap | acc-cap · **acc-beanie** (6-B) | `--c-cap` | 캡 5~46 · 비니 2~37 | 항상 | category `hat`(CX group) → cap 슬롯. cap → acc-cap, beanie → acc-beanie, bucketHat → acc-cap(임시) |
 | scarf | acc-scarf | `--c-scarf` | 54~142 | 항상 (겨울) | category `scarf` |
 
-확장 후보(같은 규칙으로 추가 가능): 선글라스(cap 뒤, y 28~36), 안경, 넥타이(top 뒤·outer 앞, 플래킷 위 y 96~190, `dressShirtTie`와 연결), 크로스바디·백팩 스트랩(bag), 비니(cap 슬롯·다른 type), 브레통 스트라이프(패턴 `pat2-breton`: 가로 띠 — 소재가 아닌 `pattern` 필드).
+### 6-1. 미드 슬롯 (6-B) — content-expansion 5장 `midTypes` 5종 → 파일 3
+
+| 파일 | data-type | 덮는 midType | 모양 |
+|---|---|---|---|
+| mid-cardigan | cardigan | cardigan, knitOverShirt | V 오픈(y 72→130) + 단추 5 + 주머니 2 + 립 밑단 200·커프. 소매 x 38~162 |
+| mid-vest | vest | knitVest, quiltedVest(`detail:"quilt"`) | 민소매 V넥, 암홀 곡선, 밑단 198. quilt 디테일은 가로 누빔선 4 + 중앙선 |
+| mid-overshirt | overshirt | overshirtMid | 칼라 + 플래킷 + 가슴 주머니 2, 밑단 204(outer-short 198 보다 아래, outer-regular 214 보다 위) |
+
+`knitOverShirt`(셔츠 위 니트)는 품목이 "니트"지만 미드 자리에 들어가므로 `mid-cardigan` 이 아니라 **`top-knit-regular` 를 mid 슬롯에 그려도 된다** — 다만 `--c-top` 변수를 쓰므로 렌더러가 `--c-mid` 로 치환해야 한다. 단순함을 위해 1차 매핑은 `mid-cardigan`.
+
+확장 후보(같은 규칙으로 추가 가능): 선글라스(cap 뒤, y 28~36), 안경, 넥타이(top 뒤·outer 앞, 플래킷 위 y 96~190, `dressShirtTie`와 연결), 버킷햇(cap 슬롯), 브리프케이스(bag, 손에 드는 형태).
 
 ---
 
@@ -237,9 +294,9 @@ base → cap → socks → shoes → bottom → belt → top → outer → scarf
 
 | 항목 | 목표 | 현재 |
 |---|---|---|
-| 레이어 1개 | ≤ 1,536 B (1.5 KB) | 최대 1,490 B (figure-base), 중앙값 ≈ 1,060 B |
-| v2 전체 | ≤ 120 KB | 24 파일 **26,369 B (25.8 KB)**. 2차에 폴로·슬림·러닝·워크부츠·척카·샌들·후디 루즈·셔츠 루즈·상의 long 3·액세서리 6을 더해도 ≈ 50 KB |
-| 번들 영향 | gzip JS 예산 120 KB 안 | SVG 문자열은 gzip에서 ~1/4로 줄어 ≈ 7 KB. v1(≈ 21 KB raw)을 지우면 순증 ≈ 1.5 KB gzip |
+| 레이어 1개 | ≤ 1,536 B (1.5 KB) | 최대 1,490 B (figure-base), 6-B 신규 최대 1,400 B (top-polo-loose), 중앙값 ≈ 1,160 B |
+| v2 전체 | ≤ 120 KB | 6-A 24 파일 26,369 B → **6-B 41 파일 46,071 B (45.0 KB)**. 신규 17 파일 19,702 B |
+| 번들 영향 | gzip JS 예산 120 KB 안 | SVG 문자열은 gzip에서 ~1/4로 줄어 ≈ 12 KB. v1(≈ 21 KB raw, ≈ 5 KB gzip)을 지우면 순증 ≈ 7 KB gzip |
 
 바이트를 줄인 기법: 선 속성을 `<g>`에 올려 상속, 정수 좌표, 명령 사이 공백 제거, Q 곡선 우선(C는 머리에만), 주석 한 줄, XML 선언·role 생략, 대칭이어도 좌우를 따로 쓰되 서브패스 하나로.
 
@@ -254,40 +311,59 @@ base → cap → socks → shoes → bottom → belt → top → outer → scarf
 5. **데모 재생성·육안 확인**: `node scripts/build-asset-demo.mjs` → `docs/phase6/asset-demo.html`(v1·v2 소스 인라인, 디스크에서 열림). 120px·300px, 다크·라이트, 그레인, 마스터 그리드를 토글하며 본다. 래스터 확인이 필요하면 `sharp`(devDependency)로 SVG→PNG.
 6. **package.json 제안**: `"assets:check": "node scripts/check-assets.mjs"`, `"assets:index": "node scripts/check-assets.mjs --write-index"`, `"assets:demo": "node scripts/build-asset-demo.mjs"`.
 
-### 8-1. `check-assets.mjs` 출력 (2026-10-19)
+### 8-1. `check-assets.mjs` 출력 (2026-10-20, 6-B)
 
 ```
 file                   slot    type     fit      len      paths   m/s/d  cmds  bytes  status
 --------------------------------------------------------------------------------------------
+stage-spotlight.svg    stage   spotlight -        -            8   8/0/0    32   1376  ok
+stage-floor.svg        stage   floor    -        -            4   0/4/0    16    678  ok
 figure-base.svg        base    figure   -        -            6   3/3/0    69   1490  ok
+acc-beanie.svg         cap     beanie   -        -            4   1/1/2    27    944  ok
 acc-cap.svg            cap     cap      -        -            3   1/1/1    23    767  ok
 acc-socks.svg          socks   socks    -        -            4   1/1/2    28    914  ok
 shoes-chelsea.svg      shoes   chelsea  -        -            3   1/1/1    64   1061  ok
+shoes-chukka.svg       shoes   chukka   -        -            3   1/1/1    57   1053  ok
 shoes-derby.svg        shoes   derby    -        -            3   1/1/1    52   1025  ok
 shoes-loafer.svg       shoes   loafer   -        -            4   2/1/1    64   1192  ok
+shoes-running.svg      shoes   running  -        -            4   2/1/1    77   1322  ok
+shoes-sandal.svg       shoes   sandal   -        -            4   2/1/1    65   1160  ok
 shoes-sneaker.svg      shoes   sneaker  -        -            4   2/1/1    61   1213  ok
+shoes-workboot.svg     shoes   workboot -        -            3   1/1/1    69   1158  ok
+bottom-slim.svg        bottom  trouser  slim     regular      3   1/1/1    40    928  ok
 bottom-straight.svg    bottom  trouser  straight regular      3   1/1/1    36    910  ok
-bottom-tapered.svg     bottom  trouser  tapered  regular      3   1/1/1    39    930  ok
+bottom-tapered.svg     bottom  trouser  tapered  regular      3   1/1/1    40    937  ok
 bottom-wide.svg        bottom  trouser  wide     regular      3   1/1/1    36    900  ok
 acc-belt.svg           belt    belt     -        -            5   2/1/2    24    963  ok
+top-hoodie-loose.svg   top     hoodie   loose    regular      4   1/1/2    79   1376  ok
 top-hoodie-regular.svg top     hoodie   regular  regular      4   1/1/2    79   1367  ok
 top-knit-loose.svg     top     knit     loose    regular      4   1/1/2    56   1208  ok
 top-knit-regular.svg   top     knit     regular  regular      4   1/1/2    56   1199  ok
+top-polo-loose.svg     top     polo     loose    regular      5   1/1/3    72   1400  ok
+top-polo-regular.svg   top     polo     regular  regular      5   1/1/3    72   1389  ok
+top-shirt-loose.svg    top     shirt    loose    regular      4   1/1/2    66   1256  ok
 top-shirt-regular.svg  top     shirt    regular  regular      4   1/1/2    66   1247  ok
 top-tee-loose.svg      top     tee      loose    regular      3   1/1/1    53   1015  ok
 top-tee-regular.svg    top     tee      regular  regular      3   1/1/1    53   1018  ok
+mid-cardigan.svg       mid     cardigan regular  regular      5   1/1/3    65   1383  ok
+mid-overshirt.svg      mid     overshirt regular  regular      4   1/1/2    71   1278  ok
+mid-vest.svg           mid     vest     regular  regular      5   1/1/3    47   1279  ok
 outer-long.svg         outer   coat     regular  long         4   1/1/2    89   1379  ok
 outer-puffer.svg       outer   puffer   regular  regular      3   1/1/1    88   1350  ok
 outer-regular.svg      outer   blazer   regular  regular      4   1/1/2    71   1282  ok
 outer-short.svg        outer   jacket   regular  short        4   1/1/2    80   1339  ok
 acc-scarf.svg          scarf   scarf    -        -            4   1/1/2    31    920  ok
+acc-backpack.svg       bag     backpack -        -            3   1/1/1    41    887  ok
 acc-bag.svg            bag     tote     -        -            3   1/1/1    24    774  ok
+acc-crossbody.svg      bag     crossbody -        -            3   1/1/1    30    828  ok
 acc-watch.svg          watch   watch    -        -            4   2/1/1    22    906  ok
 --------------------------------------------------------------------------------------------
-layers 24 · paths 89 · total 26369 B (25.8 KB, budget 120 KB) · max file 1490 B (budget 1536 B) · errors 0 · warnings 0
+layers 41 · paths 160 · total 46071 B (45.0 KB, budget 120 KB) · max file 1490 B (budget 1536 B) · errors 0 · warnings 0
 ```
 
-(`m/s/d` = main / shade+shadow / detail path 수, `cmds` = path 명령 수.)
+(`m/s/d` = main / shade+shadow / detail path 수, `cmds` = path 명령 수. 6-A 대비 `bottom-tapered` 가 930 → 937 B: 왼 다리 바깥 밑단점 (76,362) 누락 수정.)
+
+검증기 6-B 변경: 슬롯 `mid`(`--c-mid`, fit·length 필수)·`stage`(`<g stroke="none">` 필수, main fill 은 `var(--stage-*,#hex)`, shadow 만으로도 통과) 등록, z순서에 stage·mid 추가, stage 안 정렬(spotlight → floor), `index-v2.json` 에 `stage`(권장 불투명도) 블록과 `colorVars` 에 `--c-mid`·`--stage-glow` 추가.
 
 ---
 
@@ -296,22 +372,30 @@ layers 24 · paths 89 · total 26369 B (25.8 KB, budget 120 KB) · max file 1490
 | v2 파일 | 덮는 데이터 enum | 비고 |
 |---|---|---|
 | figure-base | — | 머리·머리카락·목·몸통·팔·손·발목·그림자. `--c-skin`, `--c-hair` |
-| top-tee-regular / -loose | tee, tank, henley (+ sweatshirt → knit) | 크루넥 립, 소매 스티치, 밑단 스티치. loose는 드롭숄더 |
-| top-shirt-regular | oxfordShirt, dressShirt, dressShirtTie, linenShirt, flannelShirt, denimShirt | 칼라 잎 + V 트임(피부), 플래킷 2줄 + 단추 6, 가슴 주머니, 커프, 셔츠테일 곡선 |
-| top-knit-regular / -loose | knitWool, knitCotton, knitCashmere, sweatshirt, poloWool(임시) | 립 밴드 틱(목·밑단·커프). loose는 드롭숄더 |
-| top-hoodie-regular | hoodie | 후드 로브가 목 뒤에 접힌 모습(머리를 가리지 않음), 드로스트링, 캥거루 주머니, 립 |
-| bottom-straight / -tapered / -wide | bottomFit straight·regular / tapered·slim(임시) / wide | 요크, 플라이 곡선, 앞주머니 곡선, 벨트 루프 3, 밑단 선. 다리 사이 음영 |
-| shoes-sneaker | sneakerWhite, sneakerColor, running(임시) | 흰 밑창 파트(`--c-sole`), 끈 3, 토캡, 설포 선 |
+| top-tee-regular / -loose | tee, tank, henley | 크루넥 립, 소매 스티치, 밑단 스티치. loose는 드롭숄더 |
+| top-shirt-regular / **-loose** | oxfordShirt, dressShirt, dressShirtTie, linenShirt, flannelShirt, denimShirt | 칼라 잎 + V 트임(피부), 플래킷 2줄 + 단추, 가슴 주머니, 커프, 셔츠테일 곡선. loose(6-B)는 드롭숄더 + 밑단 204 + 소매 218 |
+| top-knit-regular / -loose | knitWool, knitCotton, knitCashmere, sweatshirt | 립 밴드 틱(목·밑단·커프). loose는 드롭숄더 |
+| **top-polo-regular / -loose** (6-B) | poloPique, poloWool | 셔츠 칼라(y 62~94) + 짧은 플래킷(94~122) + 단추 2 + 반팔 립 커프. 몸은 tee 와 같은 어깨·밑단(192 / 204) |
+| top-hoodie-regular / **-loose** | hoodie | 후드 로브가 목 뒤에 접힌 모습(머리를 가리지 않음), 드로스트링, 캥거루 주머니, 립. loose(6-B)는 드롭숄더 + 밑단 206 + 소매 220 |
+| bottom-slim / -straight / -tapered / -wide | bottomFit **slim**(6-B) / straight·regular / tapered / wide | 요크, 플라이 곡선, 앞주머니 곡선, 벨트 루프 3, 밑단 선. slim 은 허벅지 133·무릎 127·밑단 121(테이퍼드 135·129·124) |
+| shoes-sneaker | sneakerWhite, sneakerColor | 흰 밑창 파트(`--c-sole`), 끈 3, 토캡, 설포 선 |
+| **shoes-running** (6-B) | running | 두꺼운 미드솔(378~392, `--c-sole`) + 어두운 아웃솔 띠, 측면 곡선, 힐 카운터, 끈 3 |
 | shoes-loafer | loaferPenny, loaferTassel(`detail:"tassel"`) | 모카 솔기, 페니 스트랩, 태슬 선택 |
-| shoes-chelsea | chelsea, workboot·chukka(임시) | y 338부터 — 발목을 덮음. 고무 거싯(음영) + 풀탭 |
+| shoes-chelsea | chelsea | y 338부터 — 발목을 덮음. 고무 거싯(음영) + 풀탭 |
+| **shoes-workboot** (6-B) | workboot | y 336부터, 레이스 4단 + 웰트 선 + 러그솔 띠(.25) |
+| **shoes-chukka** (6-B) | chukka | y 346부터, 2아일릿 레이스 + 쿼터 곡선 |
+| **shoes-sandal** (6-B) | sandal | 풋베드 382~392 + X 스트랩 2 + **맨발 파트**(`data-kind="skin"`, `--c-skin`, 364~382). 바지 regular(밑단 362)와도 맞물림 |
 | shoes-derby | derby, oxford | 토캡, 쿼터, 오픈 레이싱 2줄 |
+| **mid-cardigan / mid-vest / mid-overshirt** (6-B) | midTypes 5종 (6-1) | top 뒤·outer 앞. `--c-mid` |
+| **acc-beanie / acc-crossbody / acc-backpack** (6-B) | hat beanie / bagCrossbody / bagBackpack | cap · bag 슬롯 변형 |
+| **stage-spotlight / stage-floor** (6-B) | — (렌더러 옵션) | 11장 |
 | outer-short | denimJacket, coachJacket, blouson, leatherJacket | 칼라 잎, 단추 플래킷, 가슴 플랩 주머니 2, 요크, 립 밑단 198 |
 | outer-regular | blazer, shirtJacket, cardigan, overshirt, peacoat, fleece | 노치 라펠, 단추 2, 가슴 웰트, 플랩 주머니 2, 밑단 214 |
 | outer-long | trench, chesterfield, balmacaan, duffle, longPuffer(임시) | 라펠, 더블 단추 2열, 벨트+버클, 견장, 플랩 주머니, 밑단 300 |
 | outer-puffer | shortPuffer | 스탠드 칼라, 가로 배플 4 + 소매 배플 4, 배플 사이 음영 |
 | acc-belt / -watch / -socks / -bag / -cap / -scarf | (CX 확장 스키마) | 6장 |
 
-**2차 제작 목록(우선순위)**: ① top-polo(칼라+플래킷 짧게) regular/loose ② bottom-slim ③ shoes-running·workboot·chukka·sandal ④ top-hoodie-loose·top-shirt-loose ⑤ outer-long-puffer(배플 + 300) ⑥ 넥타이·선글라스·비니·크로스바디 ⑦ 히어로/빈 상태 그래픽·아이콘 세트(같은 선 시스템: 1.2px 외곽 + .18 shade, 24px 그리드) — 별도 문서.
+**2차 제작 목록**: ~~① top-polo ② bottom-slim ③ shoes-running·workboot·chukka·sandal ④ top-hoodie-loose·top-shirt-loose ⑥ 비니·크로스바디~~ (6-B 완료). 남은 것: ⑤ outer-long-puffer(배플 + 300, 현재 longPuffer → outer-puffer) · 넥타이·선글라스·버킷햇·브리프케이스 · `pat2-windowpane`·camo · 히어로/빈 상태 그래픽·아이콘 세트(같은 선 시스템: 1.2px 외곽 + .18 shade, 24px 그리드) — 별도 문서.
 
 ---
 
@@ -321,5 +405,141 @@ layers 24 · paths 89 · total 26369 B (25.8 KB, budget 120 KB) · max file 1490
 2. **후드 표현**: 후드를 머리 뒤에 그릴 수 없어(머리가 먼저 그려짐) 목 뒤에 접힌 로브로 표현했다. 머리를 top 뒤로 옮기는 대안은 캡·머플러 z순서를 흔들어 채택하지 않았다.
 3. **피부·머리색**: 변수라 사용자 설정(온보딩 "나와 비슷하게")으로 확장 가능하지만 UX 팀 결정 사항.
 4. **그레인·필터**: 300px 카드 ≤ 3개 제한. QA 팀이 저사양 기기에서 확인.
-5. **왼손목 시계·오른어깨 가방**: 인물 기준 왼손목(그림 오른쪽), 오른어깨(그림 왼쪽)로 고정. 좌우 옵션은 2차.
-6. `.claude/launch.json`은 데모 확인용 Vite 항목(`dev`, 5173)으로 갱신했다. 이전 내용이 필요하면 복구.
+5. **왼손목 시계·오른어깨 가방**: 인물 기준 왼손목(그림 오른쪽), 오른어깨(그림 왼쪽)로 고정. 크로스바디는 반대(인물 왼어깨 → 오른쪽 허리). 좌우 옵션은 2차.
+6. `.claude/launch.json`은 데모 확인용 Vite 항목(`dev`, 5173)으로 갱신했다. 이전 내용이 필요하면 복구. 데모는 `http://localhost:5173/docs/phase6/asset-demo.html` 로도 열린다.
+7. (6-B) **백팩 + 셔츠 칼라**: 팩 상단(y 64~76)이 셔츠·후디 칼라 위에 그려진다(bag 이 outer 뒤라서). 120px 에서는 안 보이고 300px 에서 2~3px. 신경 쓰이면 렌더러가 `acc-backpack` 의 세 번째 서브패스를 빼도 된다(단일 main path 라 현재는 불가 → 필요 시 `data-detail="top"` 으로 분리).
+8. (6-B) **샌들 + 긴 바지**: 바지 밑단 362 아래로 발(364~382)이 보인다 — 실제와 같음. crop·nobreak 과 조합이 자연스럽다.
+9. (6-B) **미드 + outer-short**: 미드 밑단(198~204)이 숏 아우터(198) 아래로 비친다. CX 규칙 "regular 미드 + short 아우터 = block" 과 일치하므로 추천에 안 나온다.
+10. (6-B) **stage 와 필터**: `stage-spotlight` 는 평면 타원 8겹이라 300px 에서 블러 없이 보면 테가 살짝 보인다(데모 6장 가운데 카드). 11장의 CSS `filter: blur(6px)` 를 300px 에서 켜면 사라진다. 120px 에서는 블러 없이도 안 보인다.
+
+---
+
+## 11. 스튜디오 다크 스테이지 레이어 (6-B) — `stage-spotlight` · `stage-floor`
+
+시안 B(`ad-concepts.md` 2장, `concept-b.html` `.plate`)의 "인물 뒤 타원 스포트라이트 + 바닥 그림자"를 **레이어 파일**로 옮긴 것. 플레이트 CSS(`radial-gradient` + `::after` blur)로도 같은 그림이 나오지만, 레이어로 두면 (1) 실루엣 svg 하나에 조명이 들어가 `<img>`·공유 카드·스토리북에서도 같은 룩이고, (2) 스포트라이트가 옷 바로 뒤에 붙어 `drop-shadow` 와 함께 "서 있는 사람"으로 읽히며, (3) 모션 스펙의 "조명이 600ms 늦게 켜짐"을 `g[data-slot=stage]` 의 opacity 트랜지션 하나로 구현할 수 있다.
+
+| 파일 | data-type | 구성 | 색 | 누적 중심 알파(불투명도 1일 때) |
+|---|---|---|---|---|
+| stage-spotlight | spotlight | 타원 8겹, 중심 (100,140)(가슴), rx 98→28 · ry 160→48, 각 fill-opacity .035 | `var(--stage-glow,#FFE6BE)` = 시안 B `--spot` 의 색 성분 | ≈ .25 |
+| stage-floor | floor | 타원 4겹 `data-part="shadow"`, 중심 (100,390), rx 88→34 · ry 10→4, .12/.14/.16/.18 | 검정 | ≈ .48 |
+
+규약: `<g data-slot="stage" data-type stroke="none">`, 선·디테일 없음, 그라데이션 없음(id 금지 규칙 때문에 레이어 파일에서는 radialGradient 를 참조할 수 없다 → 계단 타원). 두 파일 모두 figure-base 의 바닥 타원(.10/.14, rx 62/44)과 **같이** 쓴다 — figure-base 쪽이 발 바로 아래 접지 그림자, stage-floor 가 플레이트의 넓은 그림자.
+
+### 11-1. 권장 불투명도 (index-v2.json `stage` 블록과 동일)
+
+| 크기 | spotlight opacity | spotlight blur | floor opacity | floor blur | 결과 |
+|---|---|---|---|---|---|
+| 120px 카드 (플레이트 92×130) | **.55** | 없음 | **.8** | 없음 | 중심 ≈ 14% 따뜻한 백색(시안 B 17% 와 플레이트 `rgba(0,0,0,.28)` 합산 시 동등). 계단 안 보임 |
+| 300px 상세 | **.75** | `filter: blur(6px)` | **1** | `filter: blur(3px)` | 중심 ≈ 19%. 블러로 테 제거. 블러는 `g[data-slot=stage]` 에만 — 옷에 걸지 않는다 |
+| 라이트 테마 | 0 (끔) | — | .5 | — | 밝은 바탕에서 글로우는 의미 없음. 바닥 그림자만 |
+| `prefers-reduced-transparency` / `data-perf="low"` | .55 / .75 그대로 | **없음** | 그대로 | **없음** | 블러 필터만 끈다 |
+
+렌더러(FE) 규칙:
+
+```js
+// silhouette.js — opts.stage: false | 'card' | 'detail'
+if (opts.stage) for (const s of ['spotlight', 'floor']) {
+  const g = groupOf(`stage-${s}`).cloneNode(true);
+  const k = opts.stage === 'detail' ? 'detail300' : 'card120';
+  g.style.opacity = index.stage[s].opacity[k];
+  if (index.stage[s].blur[k] !== '0' && !lowPerf) g.style.filter = `blur(${index.stage[s].blur[k]})`;
+  stack.prepend(g);            // base 보다 먼저 → zOrder[0] === 'stage'
+}
+```
+
+- 그레인 필터(`#f-grain`)는 `SourceAlpha` 마스크라 스테이지 알파 안에도 노이즈가 생긴다 — 시안 B 의 "화면 전체 7% 그레인"과 겹치므로 상세에서 둘 중 하나만 켠다(권장: 화면 그레인만).
+- 스포트라이트 위쪽(y −20)은 viewBox 밖이라 잘린다 — 의도(탑라이트). svg 에 `overflow:visible` 을 주지 않는다.
+- 색 변수 `--stage-glow` 는 tokens.css 에 `#FFE6BE`(다크) 로 추가. 라이트는 사용 안 함.
+- 데모 6장: 시안 B CSS 플레이트 / stage 레이어 / stage + 그레인 세 카드를 나란히, 300px 상세 3개.
+
+---
+
+## 12. 앱 아이콘 (6-B, 시안 B 언어) — `docs/design/app-icon.svg` → `public/icons/`
+
+| 요소 | 값 | 안전 영역(중심 256, r 204.8) |
+|---|---|---|
+| 배경 | `#0E0F12` 전면 + 좌상단 아침빛 radial 11% + 인물 뒤 스포트라이트 radial 20% (따뜻한 백색 #FFE6BE) | 가장자리까지 채움(maskable) |
+| 해 | 앰버 `#E8B964` r 118, 중심 (256,214) + 글로우 링 .30 | 최상단 y 96 → 거리 160 ✓ |
+| 티셔츠 | `#F4F2ED`, 외곽 `#0E0F12` 2.5, 오른쪽 면 음영 .10, 솔기 .35 (top-tee-regular 외곽선 ×2.2) | 모서리 (139,400) → 거리 186 ✓ |
+| 바닥 그림자 | 타원 rx 112 ry 11 검정 .55 + feGaussianBlur 7 | |
+
+그라데이션은 배경·조명에만(원칙 유지), 티셔츠는 단색. 6-A 아이콘(#1C1C1E 바탕, 인디고 띠)과의 차이: 바탕이 깊은 차콜, 해가 더 따뜻·진한 앰버, 스포트라이트·바닥 그림자로 "스튜디오" 깊이, 인디고 띠 제거(아이콘 크기에서 노이즈).
+
+`npm run icons` 결과 (2026-10-20): `icon-192.png` 192×192 opaque 12.0 KB · `icon-512.png` 512×512 opaque 43.6 KB · `icon-512-maskable.png` 512×512 opaque 43.6 KB · `apple-touch-icon.png` 180×180 opaque 11.1 KB. 원형 마스크·안전 영역 원을 씌워 확인(해·티셔츠 모두 안). `scripts/make-icons.mjs` 의 `BG='#1C1C1E'` 플래튼 색은 SVG 배경이 불투명이라 결과에 영향 없음 — 원하면 `#0E0F12` 로 맞추면 된다(AS 소유 아님). `manifest.webmanifest`·`index.html` 의 `theme-color` 다크 값을 `#0E0F12` 로 바꾸는 것은 FE 몫.
+
+---
+
+## 13. FE 통합 메모 (6-B) — 임시 폴백 제거용
+
+### 13-1. 신규 레이어 id 17
+
+`top-polo-regular` `top-polo-loose` `top-shirt-loose` `top-hoodie-loose` `bottom-slim` `shoes-running` `shoes-workboot` `shoes-chukka` `shoes-sandal` `mid-cardigan` `mid-vest` `mid-overshirt` `acc-beanie` `acc-crossbody` `acc-backpack` `stage-spotlight` `stage-floor`
+(수정: `bottom-tapered` 밑단점. 나머지 24 는 6-A 그대로.)
+
+### 13-2. `typeToLayer.js` 기대 매핑 (type id → 파일, 확장자 제외)
+
+**top** — `top-<shape>-<fit>`. shape: tee·shirt·knit·polo·hoodie (5), fit: regular·loose (2) → 10 파일 전부 존재. `TOP_FIT = { slim:'regular', regular:'regular', loose:'loose', oversized:'loose' }` 유지. 기장은 파일이 아니라 클립/transform(crop → `#clip-top-crop`, long → `translate(0 70) scale(1 1.06) translate(0 -70)`, tuck → `#clip-top-tuck`).
+
+| topType | shape | 파일 (regular / loose) |
+|---|---|---|
+| tee, tank, henley | tee | top-tee-regular / top-tee-loose |
+| sweatshirt, knitWool, knitCotton, knitCashmere | knit | top-knit-regular / top-knit-loose |
+| poloPique, poloWool | **polo** | **top-polo-regular / top-polo-loose** |
+| oxfordShirt, dressShirt, dressShirtTie, linenShirt, flannelShirt, denimShirt | shirt | top-shirt-regular / **top-shirt-loose** |
+| hoodie | hoodie | top-hoodie-regular / **top-hoodie-loose** |
+
+**bottom** — `BOTTOM_FIT = { slim:'bottom-slim', tapered:'bottom-tapered', regular:'bottom-straight', straight:'bottom-straight', wide:'bottom-wide' }` (slim 폴백 제거). 기장 crop → `#clip-crop`, nobreak/half/full 은 파일 동일.
+
+**shoes** — `SHOE_LAYER`:
+
+| shoeType | 파일 | detail |
+|---|---|---|
+| sneakerWhite, sneakerColor | shoes-sneaker | |
+| running | **shoes-running** | |
+| loaferPenny | shoes-loafer | |
+| loaferTassel | shoes-loafer | `tassel` |
+| derby, oxford | shoes-derby | |
+| chelsea | shoes-chelsea | |
+| workboot | **shoes-workboot** | |
+| chukka | **shoes-chukka** | |
+| sandal | **shoes-sandal** | (맨발 파트가 `--c-skin` 을 읽는다 — svg 루트에 변수가 있어야 함) |
+
+**outer** — 변경 없음: denimJacket·coachJacket·blouson·leatherJacket → outer-short · cardigan·shirtJacket·blazer·overshirt·peacoat·fleece → outer-regular · trench·chesterfield·balmacaan·duffle → outer-long · shortPuffer·longPuffer → outer-puffer.
+
+**mid** (신규, `item.category === 'mid'`, `item.itemType` = midType) — 색 변수 `--c-mid`:
+
+| midType | 파일 | detail |
+|---|---|---|
+| cardigan | mid-cardigan | |
+| knitOverShirt | mid-cardigan | (6-1 참조: 2차에 `top-knit-regular` 재사용 가능) |
+| knitVest | mid-vest | |
+| quiltedVest | mid-vest | `quilt` |
+| overshirtMid | mid-overshirt | |
+
+**accessories** (`item.category` = CX group → 슬롯, `item.itemType` = accessoryTypes id) — 색 변수 `--c-<slot>`:
+
+| accessoryTypes id | slot | 파일 | 가시성 |
+|---|---|---|---|
+| beltLeather, beltBraided, beltWebbing | belt | acc-belt | 상의 tuck 일 때만 |
+| watchLeather, watchMetal, watchNato | watch | acc-watch | 항상 |
+| socksMatch, socksNeutral, socksPattern, socksWhite | socks | acc-socks | 바지 crop 일 때만 |
+| socksNoShow | socks | — (그리지 않음) | |
+| bagTote, bagBriefcase | bag | acc-bag | 항상 |
+| bagCrossbody | bag | **acc-crossbody** | 항상 |
+| bagBackpack | bag | **acc-backpack** | 항상 |
+| cap, bucketHat | cap | acc-cap | 항상 |
+| beanie | cap | **acc-beanie** | 항상 |
+| scarf | scarf | acc-scarf | 항상 |
+
+**stage** — 아이템이 아니라 렌더 옵션(`opts.stage: 'card' | 'detail'`): `stage-spotlight`, `stage-floor` (11장).
+
+**pattern** (`item.pattern` → defs id, 5-1): breton → pat2-stripe · stripeShirt, pinstripe → pat2-pinstripe · gingham → pat2-gingham · plaid, windowpane → pat2-plaid · houndstooth → pat2-houndstooth · herringbone → pat2-tweed · camo → null. 오버레이 path 에 `style.color = 패턴 색`.
+
+### 13-3. 렌더러 체크리스트
+
+1. `Z_ORDER` → `index.zOrder` (stage, mid 포함). `groups[slot]` 을 배열로(stage 2개).
+2. `--c-mid`, `--stage-glow` 변수 주입. `--c-skin` 은 항상(샌들).
+3. `patternDefs.js` 에 5-1 의 5 패턴 추가(이 문서 블록 = `build-asset-demo.mjs` `PATTERN_DEFS_V2`).
+4. `typeToLayer.js` 폴백 6개 삭제, `MID_LAYER`·`ACC_LAYER` 추가(13-2).
+5. `layer.detail` 매칭: `tassel`(로퍼) 에 `quilt`(베스트) 추가 — 로직은 동일.
+6. v1 `src/assets/silhouettes/` 삭제는 게이트 5 결정대로 6-B 완료 후.

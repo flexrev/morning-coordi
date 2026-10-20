@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="셔츠 (루즈·드롭숄더)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="top" data-type="shirt" data-fit="loose" data-length="regular" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-top,#BBBBBB)" vector-effect="non-scaling-stroke" d="M90 64L82 72L54 80Q40 112 34 156L33 218L56 218L60 204Q100 212 140 204L144 218L167 218L166 156Q160 112 146 80L118 72L110 64L104 68L100 94L96 68Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.18)" stroke="none" d="M128 100L140 204L130 205L126 100ZM86 92L100 96L114 92L113 100Q100 105 87 100ZM158 124L166 156L167 218L160 218L158 156ZM60 205Q100 213 140 205L140 210Q100 218 60 210Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M90 64L86 92L100 96L114 92L110 64M97 96L97 204M103 96L103 204M54 80Q68 112 62 140L60 204M146 80Q132 112 138 140L140 204M34 211L56 211M144 211L166 211M70 112L86 112L86 130L70 130Z"/>
+<path data-part="detail" data-kind="buttons" fill="none" stroke-opacity=".5" stroke-width="3" stroke-dasharray="0.1 14" d="M100 108L100 198"/>
+</g>
+</svg>

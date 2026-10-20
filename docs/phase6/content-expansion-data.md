@@ -13,7 +13,7 @@
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | minimal | 미니멀 | Minimal | 3 | 9 | mono,neutral | springFall,summer,winter | regular,loose | tapered,straight | nobreak | knitWool,knitCashmere,tee,dressShirt | wool,denimBlack,chino | sneakerWhite,derby,chelsea,loaferPenny | chesterfield,trench,balmacaan | accent2,pattern2,logo,fourColors | 1 | VKMIN,ESQMIN,WKDENIM,VKMIN2 |
 | amekaji | 아메카지 | Amekaji | 2 | 5 | earth,navyBase | springFall,winter,summer | regular,loose | straight,wide | half,nobreak | flannelShirt,denimShirt,henley,tee,sweatshirt | denimIndigo,chino,corduroy,denimWashed | workboot,chukka,sneakerColor | denimJacket,shirtJacket,blouson,leatherJacket | wool,oxford,loaferTassel,pinstripe,black2 | 1 | NTAME,STRUM,TRADEJP,KHSTYLE6 |
-| cityboy | 시티보이 | City boy | 2 | 6 | neutral,earth,pastel | springFall,summer,winter | loose,oversized | wide,straight | crop,nobreak | oxfordShirt,tee,sweatshirt,knitCotton,linenShirt | chino,denimWashed,wool,linen | loaferPenny,sneakerWhite,sneakerColor,sandal | shirtJacket,cardigan,balmacaan,duffle,overshirt | slim,oxford,dressShirtTie,longPuffer | 1 | YOKO,POPWIKI,SNKCITY,ESQCITY,VKWIDE |
+| cityboy | 시티보이 | City boy | 2 | 6 | neutral,earth,pastel | springFall,summer,winter | loose,oversized | wide,straight | crop,nobreak | oxfordShirt,tee,sweatshirt,knitCotton,linenShirt | chino,denimWashed,wool,linen | loaferPenny,sneakerWhite,sneakerColor,sandal | shirtJacket,cardigan,balmacaan,duffle,overshirt | slim,oxford,dressShirtTie,longPuffer | 2 | YOKO,POPWIKI,SNKCITY,ESQCITY,VKWIDE |
 | bizcasual | 비즈니스 캐주얼 | Business casual | 5 | 9 | neutral,navyBase,mono | springFall,summer,winter | regular,slim | tapered,slim | nobreak,half | dressShirt,oxfordShirt,knitWool,poloWool,knitCashmere | wool,chino,flannel,denimBlack | loaferPenny,derby,loaferTassel,chelsea,oxford | blazer,trench,chesterfield,balmacaan | hoodie,sweatshirt,running,sandal,shortPuffer,longPuffer,camo | 1 | SUITBC,ALLWORK,ALLBLZ,GQKSUM |
 | street | 스트릿 | Street | 1 | 4 | mono,accent | springFall,summer,winter | oversized,loose | wide,straight | full,nobreak | hoodie,sweatshirt,tee | jersey,denimWashed,nylonTech,denimBlack | sneakerColor,running,sneakerWhite | coachJacket,shortPuffer,blouson,leatherJacket | wool,loaferTassel,oxford,dressShirt,pinstripe | 2 | VKCARGO,VKNB,R2 7 |
 | gorpcore | 고프코어 | Gorpcore | 1 | 4 | earth,mono,accent | springFall,winter,summer | regular,loose | tapered,straight | nobreak,crop | tee,hoodie,henley | nylonTech,jersey,chino | running,workboot,sandal | fleece,shortPuffer,longPuffer,coachJacket | wool,flannel,loaferPenny,derby,oxford,blazer,trench | 2 | VKGORP,KHGORP,GQKGORP,HSSGORP,SNKGORP |
@@ -33,7 +33,7 @@
 | kind | id | minimal | amekaji | cityboy | bizcasual | street | gorpcore | ivy | workwear | note |
 |---|---|---|---|---|---|---|---|---|---|---|
 | topType | dressShirtTie | 0 | -2 | -1 | 2 | -2 | -2 | 2 | -2 | 격식 전용 |
-| topType | dressShirt | 1 | -1 | 0 | 3 | -2 | -2 | 1 | -1 | |
+| topType | dressShirt | 2 | -1 | 0 | 3 | -2 | -2 | 1 | -1 | |
 | topType | oxfordShirt | 1 | 1 | 2 | 2 | -1 | -1 | 3 | 0 | 아이비 1순위 셔츠 |
 | topType | poloWool | 1 | 0 | 1 | 2 | -1 | -1 | 2 | -1 | |
 | topType | knitWool | 2 | 1 | 2 | 2 | 0 | 0 | 2 | 1 | |
@@ -43,14 +43,14 @@
 | topType | knitCotton | 2 | 1 | 2 | 1 | 0 | 0 | 2 | 0 | |
 | topType | poloPique | 1 | 1 | 1 | 1 | 0 | -1 | 3 | -1 | |
 | topType | denimShirt | 0 | 3 | 1 | -1 | 0 | 0 | 1 | 3 | 샴브레이 포함 |
-| topType | henley | 1 | 2 | 0 | -1 | 0 | 0 | 0 | 2 | |
-| topType | tee | 2 | 2 | 2 | -1 | 2 | 1 | 1 | 2 | 무지 기준 |
+| topType | henley | 1 | 2 | 0 | -1 | 0 | 2 | 0 | 2 | |
+| topType | tee | 2 | 2 | 2 | -1 | 2 | 2 | 1 | 2 | 무지 기준 |
 | topType | sweatshirt | 1 | 2 | 2 | -2 | 3 | 1 | 1 | 1 | |
 | topType | hoodie | -1 | 1 | 1 | -2 | 3 | 2 | -1 | 0 | |
 | topType | tank | 0 | 0 | 0 | -2 | 1 | 0 | -1 | 0 | |
 | outerType | denimJacket | 0 | 3 | 1 | -2 | 1 | 0 | 0 | 3 | |
-| outerType | coachJacket | 0 | 1 | 1 | -2 | 3 | 1 | -1 | 0 | |
-| outerType | blouson | 1 | 2 | 1 | 0 | 2 | 1 | 1 | 1 | 해링턴은 아이비 +1 |
+| outerType | coachJacket | 0 | 1 | 1 | -2 | 3 | 2 | -1 | 0 | |
+| outerType | blouson | 1 | 2 | 1 | 0 | 2 | 1 | 1 | 2 | 해링턴은 아이비 +1 |
 | outerType | cardigan | 1 | 0 | 2 | 1 | 0 | -1 | 3 | 0 | |
 | outerType | shirtJacket | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 3 | 초어 재킷 포함 |
 | outerType | trench | 2 | -1 | 1 | 3 | -1 | -2 | 1 | -1 | |
@@ -58,32 +58,32 @@
 | outerType | overshirt | 1 | 1 | 2 | 0 | 0 | 0 | 1 | 1 | |
 | outerType | chesterfield | 3 | -2 | 0 | 3 | -1 | -2 | 1 | -2 | 미니멀 시그니처 |
 | outerType | balmacaan | 2 | 0 | 2 | 2 | 0 | -1 | 2 | 0 | |
-| outerType | duffle | 0 | 1 | 2 | 0 | 0 | 0 | 3 | 1 | |
+| outerType | duffle | 0 | 1 | 2 | 0 | 0 | 0 | 3 | 2 | |
 | outerType | peacoat | 1 | 1 | 1 | 1 | 0 | -1 | 2 | 1 | |
 | outerType | shortPuffer | 0 | 0 | 1 | -2 | 2 | 3 | -1 | 0 | |
 | outerType | longPuffer | -1 | -1 | 0 | -2 | 1 | 2 | -2 | -1 | |
 | outerType | fleece | -1 | 1 | 1 | -2 | 1 | 3 | 0 | 1 | 고프코어 시그니처 |
 | outerType | leatherJacket | 1 | 2 | 0 | -1 | 2 | -1 | -1 | 1 | |
-| shoeType | sneakerWhite | 3 | 0 | 2 | 1 | 1 | 0 | 1 | 0 | 가죽 미니멀형 기준 |
-| shoeType | sneakerColor | -1 | 1 | 2 | -2 | 3 | 1 | 0 | 0 | 레트로 러닝 포함 |
+| shoeType | sneakerWhite | 3 | 0 | 2 | 1 | 2 | 0 | 2 | 0 | 가죽 미니멀형 기준 |
+| shoeType | sneakerColor | -1 | 2 | 2 | -2 | 3 | 1 | 0 | 0 | 레트로 러닝 포함 |
 | shoeType | running | 0 | 0 | 1 | -2 | 2 | 3 | -1 | -1 | 트레일화 포함 |
 | shoeType | loaferPenny | 2 | 0 | 2 | 3 | -1 | -2 | 3 | -1 | |
 | shoeType | loaferTassel | 1 | -1 | 0 | 2 | -2 | -2 | 2 | -2 | |
-| shoeType | derby | 2 | 0 | 1 | 3 | -1 | -2 | 1 | 1 | 플레인토 기준 |
+| shoeType | derby | 2 | 0 | 1 | 3 | -1 | -2 | 1 | 2 | 플레인토 기준 |
 | shoeType | oxford | 1 | -2 | -1 | 2 | -2 | -2 | 1 | -2 | |
 | shoeType | chelsea | 2 | 0 | 0 | 2 | 0 | -1 | 0 | 1 | |
-| shoeType | workboot | -1 | 3 | 0 | -2 | 0 | 1 | -1 | 3 | |
-| shoeType | chukka | 1 | 2 | 1 | 1 | -1 | 0 | 2 | 1 | 데저트 부츠 |
-| shoeType | sandal | 0 | 0 | 1 | -2 | 0 | 1 | 0 | -1 | |
+| shoeType | workboot | -1 | 3 | 0 | -2 | 0 | 2 | -1 | 3 | |
+| shoeType | chukka | 1 | 2 | 1 | 1 | -1 | 0 | 2 | 2 | 데저트 부츠 |
+| shoeType | sandal | 0 | 0 | 2 | -2 | 0 | 2 | 0 | -1 | |
 | material | denimIndigo | 1 | 3 | 1 | 0 | 1 | 0 | 1 | 3 | 하의만 |
 | material | denimWashed | 0 | 2 | 2 | -2 | 2 | 1 | 0 | 2 | 하의만 |
-| material | denimBlack | 2 | 0 | 0 | 1 | 2 | 0 | -1 | 0 | 하의만 |
+| material | denimBlack | 2 | 0 | 0 | 2 | 2 | 0 | -1 | 0 | 하의만 |
 | material | corduroy | 0 | 2 | 1 | 0 | 0 | 0 | 2 | 2 | 하의만 |
-| material | chino | 2 | 2 | 2 | 2 | 0 | 0 | 3 | 2 | 하의만 |
-| material | wool | 2 | -2 | 1 | 3 | -1 | -2 | 1 | -2 | 하의만 |
+| material | chino | 2 | 2 | 2 | 2 | 0 | 2 | 3 | 2 | 하의만 |
+| material | wool | 2 | -2 | 2 | 3 | -1 | -2 | 2 | -2 | 하의만 |
 | material | flannel | 1 | -1 | 1 | 2 | -1 | -2 | 2 | -1 | 하의만 |
 | material | linen | 1 | 0 | 2 | 1 | -1 | -1 | 1 | 0 | 하의만 |
-| material | jersey | 0 | 1 | 1 | -2 | 3 | 1 | 0 | 0 | 하의만(스웻팬츠) |
+| material | jersey | 0 | 1 | 1 | -2 | 3 | 2 | 0 | 0 | 하의만(스웻팬츠) |
 | material | nylonTech | 0 | 0 | 1 | -2 | 2 | 3 | -1 | 0 | 하의만(테크 팬츠) |
 | material | tweed | 0 | 0 | 0 | 1 | -2 | -2 | 3 | 0 | 하의만 |
 | topFit | slim | 1 | -1 | -2 | 1 | -2 | -1 | 0 | -1 | |
@@ -105,7 +105,7 @@
 | outerLength | short | 0 | 2 | 1 | -1 | 2 | 1 | 0 | 2 | |
 | outerLength | regular | 1 | 1 | 1 | 1 | 0 | 1 | 2 | 1 | |
 | outerLength | long | 2 | -1 | 1 | 2 | 0 | 0 | 1 | -1 | |
-| color | white | 3 | 1 | 2 | 2 | 1 | 0 | 2 | 1 | |
+| color | white | 2 | 1 | 2 | 2 | 1 | 0 | 2 | 1 | |
 | color | offWhite | 2 | 1 | 2 | 1 | 0 | 0 | 2 | 1 | |
 | color | cream | 2 | 1 | 2 | 1 | 0 | 0 | 2 | 0 | |
 | color | oatmeal | 2 | 1 | 2 | 1 | 0 | 0 | 1 | 1 | |

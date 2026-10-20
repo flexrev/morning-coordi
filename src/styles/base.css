@@ -1,6 +1,6 @@
-/* 리셋 · safe-area · 타이포 기본 (C3). docs/design/design-tokens.md 2·3장, ux-flow 7장 */
+/* 리셋 · safe-area · 타이포 기본 (C3 → 6-B B 스튜디오 다크). docs/design/design-tokens.md 2·3장, ux-flow 7장 */
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; height: 100%; }
+html { -webkit-text-size-adjust: 100%; height: 100%; background: var(--bg-0); }
 body {
   margin: 0;
   background: var(--bg-0);
@@ -12,12 +12,24 @@ body {
   word-break: keep-all;
   overflow-wrap: anywhere;
   overflow-x: hidden;
+  overscroll-behavior-y: none; /* motion-spec 3-17: 브라우저 당겨서 새로고침 끔 */
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+/* 아침빛: 좌상단에서 들어오는 옅은 앰버 (시안 B .phone::before). 고정, 애니메이션 없음 */
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(120% 60% at 15% -10%, var(--morning), transparent 55%);
+}
+/* 그레인: html[data-grain] 일 때만 (OLED·저사양 고려해 opt-in, 상한 7%) */
+html[data-grain] body::after {
+  content: ""; position: fixed; inset: 0; z-index: 40; pointer-events: none;
+  background-image: var(--grain); opacity: var(--grain-opacity); mix-blend-mode: overlay;
 }
 h1, h2, h3, p { margin: 0; }
-h1 { font-size: var(--fs-title); line-height: var(--lh-title); font-weight: 700; letter-spacing: -0.01em; }
-h2 { font-size: var(--fs-section); line-height: var(--lh-section); font-weight: 600; letter-spacing: -0.01em; }
+h1 { font-size: var(--fs-title); line-height: var(--lh-title); font-weight: 800; letter-spacing: -0.02em; }
+h2 { font-size: var(--fs-section); line-height: var(--lh-section); font-weight: 700; letter-spacing: -0.01em; }
 button, [role="button"] {
   font: inherit;
   color: inherit;
@@ -34,12 +46,14 @@ button:disabled { cursor: default; }
 :focus { outline: none; }
 :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: var(--r-sm); }
 svg { display: block; }
+[hidden] { display: none !important; } /* .btn 등 display 를 가진 요소에도 hidden 속성이 이긴다 */
 .visually-hidden {
   position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0;
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
 .muted { color: var(--text-2); }
 .caption { font-size: var(--fs-caption); line-height: var(--lh-caption); color: var(--text-3); }
+.eyebrow { font-size: var(--fs-eyebrow); line-height: var(--lh-eyebrow); letter-spacing: var(--ls-eyebrow); font-weight: 700; color: var(--accent); text-transform: uppercase; }
 
 /* 앱 셸: 상단 safe-area, 하단 고정 영역은 각 화면이 처리 */
 #app {
@@ -52,6 +66,4 @@ svg { display: block; }
 @media (display-mode: standalone) {
   #app { padding-top: max(var(--safe-top), 44px); }
 }
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation: none !important; transition: none !important; }
-}
+/* reduced-motion 은 tokens.css 의 토큰 덮어쓰기로 처리한다 (전역 animation:none !important 삭제 — motion-spec 2-2) */

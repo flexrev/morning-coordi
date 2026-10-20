@@ -35,7 +35,7 @@ const SHOES = {
   loaferPenny: ['페니 로퍼', '페니로퍼', ['로퍼'], ''], loaferTassel: ['태슬 로퍼', '태슬로퍼', ['비트 로퍼'], ''], derby: ['더비', '더비', ['구두', '단화'], '끈 부분이 열린 구두'], oxford: ['옥스포드', '옥스포드', ['구두'], '끈 부분이 닫힌 구두'],
   chelsea: ['첼시 부츠', '첼시부츠', ['첼시', '사이드고어'], ''], workboot: ['워크 부츠', '워크부츠', ['워커', '레드윙', '팀버랜드'], ''], chukka: ['척카 부츠', '척카부츠', ['데저트 부츠', '클락스'], '데저트 부츠 포함'], sandal: ['샌들/슬리퍼', '샌들', ['쪼리', '슬라이드', '버켄'], ''],
 };
-const TAGS = { neutral: '뉴트럴', earth: '어스톤', mono: '모노톤', navyBase: '네이비 베이스', accent: '포인트', pastel: '파스텔', variation: '변주', street: '스트릿', business: '비즈니스', weekend: '주말', resort: '휴양' };
+const TAGS = { neutral: '뉴트럴', earth: '어스톤', mono: '모노톤', navyBase: '네이비 베이스', accent: '포인트', pastel: '파스텔', variation: '변주', street: '스트릿', business: '비즈니스', weekend: '주말', resort: '휴양', layering: '겹쳐 입기', pattern: '패턴 변주' };
 const OUTER_ALIASES = { denimJacket: ['청자켓', '트러커'], blouson: ['항공점퍼', 'MA-1', '봄버', '해링턴'], shirtJacket: ['셔켓', '오버셔츠'], chesterfield: ['롱코트', '싱글 코트'], balmacaan: ['롱코트', '래글런 코트'], fleece: ['뽀글이', '후리스'], shortPuffer: ['숏 패딩'], longPuffer: ['벤치 파카', '롱 패딩'], trench: ['바바리'] };
 const OUTER_SHORT = { denimJacket: '데님재킷', coachJacket: '코치재킷', blouson: '블루종', cardigan: '가디건', shirtJacket: '셔츠재킷', trench: '트렌치', blazer: '블레이저', overshirt: '오버셔츠', chesterfield: '체스터필드', balmacaan: '발마칸', duffle: '더플코트', peacoat: '피코트', shortPuffer: '숏패딩', longPuffer: '롱패딩', fleece: '플리스', leatherJacket: '가죽재킷' };
 // 품목명 합성용 라벨(R2 labelKo의 괄호·슬래시 설명 제거 — '그레이 멜란지 맨투맨/스웻셔츠' 방지, P3-16)
@@ -75,8 +75,64 @@ export const EXPLAIN = {
   'explain.seasonBlock': '{season}에 맞지 않는 아이템이 많아요',
 };
 
-export function buildLabels() {
+// ---------------------------------------------------------------- Phase 6-B (CX) 확장 라벨 — content-expansion.md 9절 '라벨'. shortLabel ≤ 6자 (V-12·V-32)
+const STYLE_LABELS = {
+  minimal: ['미니멀', '미니멀', ['미니멀리즘', '콰이어트 럭셔리'], '무채색·뉴트럴, 장식 없는 기본템'],
+  amekaji: ['아메카지', '아메카지', ['아메리칸 캐주얼', '빈티지 워크웨어'], '인디고 데님·플란넬·워크 부츠, 질감과 빈티지 워시'],
+  cityboy: ['시티보이', '시티보이', ['시티보이 룩', '포파이'], '루즈·박시 실루엣, 와이드 치노·로퍼·캔버스 토트'],
+  bizcasual: ['비즈니스 캐주얼', '비즈캐주얼', ['비즈캐주얼', '오피스룩', '출근룩'], '타이 없는 셔츠·니트 + 슬랙스 + 로퍼·블레이저'],
+  street: ['스트릿', '스트릿', ['스트리트'], '오버핏 후디·맨투맨, 와이드 데님, 컬러 스니커즈'],
+  gorpcore: ['고프코어', '고프코어', ['아웃도어 룩', '고프'], '플리스·셸·테크 팬츠·트레일 러닝화를 일상복으로'],
+  ivy: ['클래식·아이비', '아이비', ['아이비', '프레피', '클래식'], '옥스포드·치노·페니 로퍼·네이비 블레이저'],
+  workwear: ['워크웨어', '워크웨어', ['초어 재킷', '작업복'], '초어·데님 재킷, 헨리·데님 셔츠, 워크 부츠'],
+};
+const OCCASION_LABELS = {
+  work: ['출근', '출근', ['오피스', '회사', '오피스 캐주얼'], '셔츠·니트 + 슬랙스·치노 + 로퍼·더비'],
+  weekend: ['주말', '주말', ['휴일', '캐주얼'], '티·플란넬·데님, 스니커즈·부츠'],
+  date: ['데이트', '데이트', ['소개팅'], '니트·셔츠, 로퍼·흰 스니커즈, 여유 핏'],
+  active: ['운동·산책', '운동·산책', ['운동', '산책', '액티브'], '티·후디·플리스, 러닝화'],
+  formal: ['격식', '격식', ['결혼식', '하객', '면접', '포멀'], '드레스 셔츠 + 블레이저 + 울 슬랙스 + 더비. 수트는 2차'],
+};
+const PATTERN_SHORT = { breton: '브레통', stripeShirt: '잔줄 셔츠', pinstripe: '핀스트라이프', gingham: '깅엄 체크', plaid: '타탄 체크', windowpane: '윈도페인', houndstooth: '하운드투스', herringbone: '헤링본', camo: '카모' };
+const PATTERN_ALIAS = { breton: ['가로 줄무늬', '마린'], stripeShirt: ['펜슬 스트라이프', '캔디 스트라이프', '세로 줄무늬'], gingham: ['체크 셔츠'], plaid: ['플란넬 체크', '버팔로 체크', '타탄'], camo: ['카무플라주', '위장 무늬'] };
+const MID_SHORT = { cardigan: '가디건', knitVest: '니트 베스트', quiltedVest: '퀼팅 베스트', overshirtMid: '오버셔츠', knitOverShirt: '셔츠위 니트' };
+const ACCESSORY_SHORT = { beltLeather: '가죽 벨트', beltBraided: '브레이디드', beltWebbing: '웨빙 벨트', watchLeather: '가죽 시계', watchMetal: '메탈 시계', watchNato: '나토 시계', socksMatch: '바지색 양말', socksNeutral: '뉴트럴 양말', socksNoShow: '페이크삭스', socksWhite: '흰 양말', socksPattern: '패턴 양말', bagTote: '토트백', bagBackpack: '백팩', bagCrossbody: '크로스바디', bagBriefcase: '브리프케이스', cap: '볼캡', beanie: '비니', bucketHat: '버킷햇', scarf: '머플러' };
+const ACCESSORY_GROUPS = { belt: '벨트', watch: '시계', socks: '양말', bag: '가방', hat: '모자', scarf: '머플러' };
+export const EXPLAIN_CX = {
+  'explain.style.boost': '{style} 스타일 {delta}',
+  'explain.style.tag': '{style} 느낌',
+  'explain.occasion.adj': '{occasion}에 {delta}',
+  'explain.occasion.window': '{occasion} 격식 창 밖 아이템 {n}개 ({delta})',
+  'explain.occasion.target': '{occasion}에 딱 맞는 격식 (+0.2)',
+  'explain.occasion.relaxed': '{occasion} 조건을 일부 완화했어요 ({stages})',
+  'explain.acc': '{accessory}: {reason}',
+  'explain.pattern': '{reason} ({delta})',
+  'explain.midLayer': '{mid|은는} {reason} ({score}/5)',
+  'explain.midLength': '{mid|이가} {outer}보다 길어요',
+  'explain.midWeight': '{mid|이가} {outer}보다 두꺼워요',
+  'explain.midFormality': '{mid} 격식이 베이스·아우터와 안 맞아요',
+  'explain.twoOuter': '{inner}+{outer}: {reason} ({score}/5)',
+  'explain.twoOuterLength': '안쪽 {inner|이가} 바깥 {outer}보다 짧지 않아요 ({delta})',
+  'explain.layerScore': '레이어링 {score}/5',
+};
+const UI_CX = { 'ui.byStyle': '스타일', 'ui.byOccasion': '상황', 'ui.accessories': '소품', 'ui.layering': '겹쳐 입기', 'ui.patterns': '패턴 변주', 'ui.styleAll': '전체', 'ui.formalApprox': '재킷+슬랙스 기준. 수트는 2차' };
+
+/** @param {object} [exp] buildExpansion() 결과 — 없으면 기존 라벨만 */
+export function buildLabels(exp = null) {
   const out = [];
+  const expansion = () => {
+    if (!exp) return;
+    out.push(L('category.mid', '미드 레이어', '미드', ['중간 레이어', '가디건·베스트'], '상의와 아우터 사이(가디건·니트 베스트). 봄가을·겨울만'));
+    for (const s of exp.styles) { const v = STYLE_LABELS[s.id] ?? [s.labelKo, s.labelKo.slice(0, 6), [], '']; out.push(L(`style.${s.id}`, v[0], v[1], v[2], v[3])); }
+    for (const o of exp.occasions) { const v = OCCASION_LABELS[o.id] ?? [o.labelKo, o.labelKo.slice(0, 6), [], '']; out.push(L(`occasion.${o.id}`, v[0], v[1], v[2], v[3])); }
+    for (const p of exp.patterns) out.push(L(`pattern.${p.id}`, p.labelKo, PATTERN_SHORT[p.id] ?? p.labelKo.slice(0, 6), PATTERN_ALIAS[p.id] ?? [], p.note));
+    for (const m of exp.midTypes) out.push(L(`midType.${m.id}`, m.labelKo, MID_SHORT[m.id] ?? m.labelKo.slice(0, 6), [], m.note));
+    for (const a of exp.accessoryTypes) out.push(L(`accessory.${a.id}`, a.labelKo, ACCESSORY_SHORT[a.id] ?? a.labelKo.slice(0, 6), [], a.note));
+    for (const [id, label] of Object.entries(ACCESSORY_GROUPS)) out.push(L(`accessoryGroup.${id}`, label, label, [], ''));
+    for (const s of exp.styles) { const v = STYLE_LABELS[s.id]; out.push(L(`explain.style.${s.id}`, `${v?.[0] ?? s.labelKo} — ${v?.[3] ?? ''}`, null, [], '')); }
+    for (const [id, label] of Object.entries(EXPLAIN_CX)) out.push(L(id, label, null, [], ''));
+    for (const [id, label] of Object.entries(UI_CX)) out.push(L(id, label, null, [], ''));
+  };
   const push = (ns, map, mk) => { for (const [id, v] of Object.entries(map)) out.push(mk ? mk(id, v) : L(`${ns}.${id}`, v[0], v[1], v[2] ?? [], v[3] ?? '')); };
   push('color', COLORS);
   push('tone', TONES);
@@ -94,5 +150,6 @@ export function buildLabels() {
   for (const [id, label] of Object.entries(TAGS)) out.push(L(`tag.${id}`, label, label.length <= 6 ? label : label.replace(/\s/g, '').slice(0, 6), [], ''));
   for (const [id, label] of Object.entries(EXPLAIN)) out.push(L(id, label, null, [], ''));
   for (const [id, label] of Object.entries({ 'ui.classicN': '클래식 {n}/3', 'ui.safety': '안전도 {percent}', 'ui.more': '더 보기', 'ui.byTone': '톤별', 'ui.byHue': '색상별', 'ui.variations': '변주', 'ui.disputed': '의견 갈림', 'ui.avoid': '피하기', 'ui.blocked': '추천하지 않는 조합' })) out.push(L(id, label, null, [], ''));
+  expansion();
   return out;
 }

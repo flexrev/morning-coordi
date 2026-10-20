@@ -1,4 +1,8 @@
-// 출처 코드표 — R1 10장(그대로) + R2 코드표(C2 작성) + 내부 코드
+// 출처 코드표 — R1 10장(그대로) + R2 코드표(C2 작성) + 내부 코드 + CX 코드표(Phase 6-B, content-expansion-data.md 7-1)
+import { buildCxCodes, CX_INTERNAL_CODES } from './styles.mjs';
+
+export const CX_CODES = buildCxCodes();
+export { CX_INTERNAL_CODES };
 export const R1_CODES = [
   'WH1', 'WH2', 'AtG1', 'AtG2', 'AtG3', 'AtG4', 'FB1', 'FB2', 'FB3', 'FB4', 'FB-stripes', 'GG',
   'PS1', 'PS2', 'PS3', 'PS-snippet', 'RMRS1', 'RMRS2', 'RMRS3', 'RMRS 색상환', 'MF', 'MM', 'TMM-tan',

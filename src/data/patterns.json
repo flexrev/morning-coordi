@@ -1,0 +1,276 @@
+[
+ {
+  "id": "breton",
+  "labelKo": "브레통 스트라이프",
+  "family": "stripe",
+  "scale": "mid",
+  "categories": [
+   "top"
+  ],
+  "itemTypes": [
+   "tee",
+   "knitCotton"
+  ],
+  "formality": 3,
+  "seasons": [
+   "springFall",
+   "summer"
+  ],
+  "colorsTypical": [
+   "navy",
+   "white"
+  ],
+  "note": "가로 줄무늬. 하의는 무지",
+  "sources": [
+   "R1 5-8",
+   "Dalm",
+   "FBPAT"
+  ],
+  "flags": []
+ },
+ {
+  "id": "stripeShirt",
+  "labelKo": "펜슬·캔디 스트라이프 셔츠",
+  "family": "stripe",
+  "scale": "small",
+  "categories": [
+   "top"
+  ],
+  "itemTypes": [
+   "oxfordShirt",
+   "dressShirt",
+   "linenShirt"
+  ],
+  "formality": 6,
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "colorsTypical": [
+   "white",
+   "lightBlue",
+   "navy"
+  ],
+  "note": "세로 잔줄. 블레이저 안 OK",
+  "sources": [
+   "FBPAT",
+   "PRIMER"
+  ],
+  "flags": []
+ },
+ {
+  "id": "pinstripe",
+  "labelKo": "핀스트라이프",
+  "family": "stripe",
+  "scale": "small",
+  "categories": [
+   "bottom",
+   "outer"
+  ],
+  "itemTypes": [
+   "blazer"
+  ],
+  "formality": 8,
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "colorsTypical": [
+   "charcoal",
+   "navy"
+  ],
+  "note": "울 슬랙스·블레이저만",
+  "sources": [
+   "FBPAT",
+   "BLPAT"
+  ],
+  "flags": []
+ },
+ {
+  "id": "gingham",
+  "labelKo": "깅엄 체크",
+  "family": "check",
+  "scale": "small",
+  "categories": [
+   "top"
+  ],
+  "itemTypes": [
+   "oxfordShirt",
+   "linenShirt"
+  ],
+  "formality": 5,
+  "seasons": [
+   "springFall",
+   "summer"
+  ],
+  "colorsTypical": [
+   "lightBlue",
+   "navy",
+   "black"
+  ],
+  "note": "2색 체크. 아이비 시그니처",
+  "sources": [
+   "PRIMER",
+   "FBPAT"
+  ],
+  "flags": []
+ },
+ {
+  "id": "plaid",
+  "labelKo": "플란넬·타탄 체크",
+  "family": "check",
+  "scale": "large",
+  "categories": [
+   "top",
+   "outer"
+  ],
+  "itemTypes": [
+   "flannelShirt",
+   "shirtJacket",
+   "duffle"
+  ],
+  "formality": 3,
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "colorsTypical": [
+   "rust",
+   "forestGreen",
+   "navy",
+   "black"
+  ],
+  "note": "아메카지·워크웨어. 하의는 무지",
+  "sources": [
+   "VKFW26",
+   "PRIMER",
+   "STRIDE"
+  ],
+  "flags": []
+ },
+ {
+  "id": "windowpane",
+  "labelKo": "윈도페인 체크",
+  "family": "check",
+  "scale": "large",
+  "categories": [
+   "outer"
+  ],
+  "itemTypes": [
+   "blazer",
+   "chesterfield",
+   "balmacaan"
+  ],
+  "formality": 7,
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "colorsTypical": [
+   "midGrey",
+   "charcoal",
+   "navy"
+  ],
+  "note": "테일러링 아우터만",
+  "sources": [
+   "FBPAT",
+   "BLPAT"
+  ],
+  "flags": []
+ },
+ {
+  "id": "houndstooth",
+  "labelKo": "하운드투스",
+  "family": "check",
+  "scale": "small",
+  "categories": [
+   "outer",
+   "top"
+  ],
+  "itemTypes": [
+   "blazer",
+   "chesterfield",
+   "balmacaan",
+   "knitWool"
+  ],
+  "formality": 7,
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "colorsTypical": [
+   "black",
+   "white",
+   "midGrey"
+  ],
+  "note": "모노 팔레트와. 테일러링",
+  "sources": [
+   "FBPAT",
+   "SSHOUND"
+  ],
+  "flags": []
+ },
+ {
+  "id": "herringbone",
+  "labelKo": "헤링본",
+  "family": "texture",
+  "scale": "small",
+  "categories": [
+   "outer",
+   "bottom"
+  ],
+  "itemTypes": [
+   "blazer",
+   "chesterfield",
+   "balmacaan",
+   "tweed"
+  ],
+  "formality": 6,
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "colorsTypical": [
+   "midGrey",
+   "charcoal",
+   "brown"
+  ],
+  "note": "질감으로 취급(패턴 수에 세지 않음)",
+  "sources": [
+   "FBPAT",
+   "OPUMOIVY"
+  ],
+  "flags": []
+ },
+ {
+  "id": "camo",
+  "labelKo": "카모",
+  "family": "print",
+  "scale": "large",
+  "categories": [
+   "bottom",
+   "outer"
+  ],
+  "itemTypes": [
+   "shirtJacket",
+   "coachJacket"
+  ],
+  "formality": 2,
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "colorsTypical": [
+   "olive",
+   "khaki",
+   "brown"
+  ],
+  "note": "스트릿·고프코어. 1개만",
+  "sources": [
+   "VKFW26",
+   "HSSGORP"
+  ],
+  "flags": []
+ }
+]

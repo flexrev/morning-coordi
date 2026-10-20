@@ -1,0 +1,375 @@
+[
+ {
+  "id": "work",
+  "labelKo": "출근(오피스 캐주얼)",
+  "formality": {
+   "min": 3,
+   "max": 9,
+   "targetLo": 5,
+   "targetHi": 8
+  },
+  "styleBoost": {
+   "bizcasual": 2,
+   "minimal": 1,
+   "ivy": 1
+  },
+  "avoid": {
+   "itemTypes": [
+    "hoodie",
+    "tank",
+    "sweatshirt",
+    "longPuffer",
+    "fleece"
+   ],
+   "shoeTypes": [
+    "running",
+    "sandal",
+    "sneakerColor"
+   ],
+   "materials": [
+    "jersey"
+   ],
+   "patterns": [
+    "camo",
+    "plaid",
+    "breton"
+   ]
+  },
+  "prefer": {
+   "itemTypes": [
+    "oxfordShirt",
+    "dressShirt",
+    "knitWool",
+    "poloWool",
+    "blazer",
+    "trench",
+    "chesterfield"
+   ],
+   "shoeTypes": [
+    "loaferPenny",
+    "derby",
+    "sneakerWhite",
+    "chelsea"
+   ]
+  },
+  "patternMax": 1,
+  "accessories": [
+   "beltLeather",
+   "bagBriefcase",
+   "bagTote",
+   "watchLeather"
+  ],
+  "sources": [
+   "SUITBC",
+   "ALLWORK",
+   "GQKSUM",
+   "R2 5-5"
+  ],
+  "flags": [],
+  "note": "흰 스니커즈는 가죽 미니멀형만. 격차 ≥4 카드는 제외"
+ },
+ {
+  "id": "weekend",
+  "labelKo": "주말",
+  "formality": {
+   "min": 1,
+   "max": 7,
+   "targetLo": 2,
+   "targetHi": 6
+  },
+  "styleBoost": {
+   "amekaji": 1,
+   "cityboy": 1,
+   "street": 1,
+   "workwear": 1
+  },
+  "avoid": {
+   "itemTypes": [
+    "dressShirtTie",
+    "dressShirt"
+   ],
+   "shoeTypes": [
+    "oxford",
+    "loaferTassel"
+   ],
+   "materials": [],
+   "patterns": [
+    "pinstripe"
+   ]
+  },
+  "prefer": {
+   "itemTypes": [
+    "tee",
+    "sweatshirt",
+    "flannelShirt",
+    "denimShirt",
+    "knitCotton",
+    "denimJacket",
+    "shirtJacket",
+    "fleece"
+   ],
+   "shoeTypes": [
+    "sneakerWhite",
+    "sneakerColor",
+    "chukka",
+    "workboot"
+   ]
+  },
+  "patternMax": 2,
+  "accessories": [
+   "cap",
+   "bagCrossbody",
+   "bagBackpack",
+   "beltWebbing"
+  ],
+  "sources": [
+   "KHSTYLE6",
+   "VKCARGO",
+   "R2 7"
+  ],
+  "flags": [],
+  "note": "포멀도 상한을 낮춰 캐주얼 카드가 먼저 오게"
+ },
+ {
+  "id": "date",
+  "labelKo": "데이트",
+  "formality": {
+   "min": 3,
+   "max": 8,
+   "targetLo": 4,
+   "targetHi": 7
+  },
+  "styleBoost": {
+   "minimal": 2,
+   "cityboy": 1,
+   "ivy": 1
+  },
+  "avoid": {
+   "itemTypes": [
+    "hoodie",
+    "tank",
+    "sweatshirt",
+    "longPuffer",
+    "fleece"
+   ],
+   "shoeTypes": [
+    "running",
+    "sandal"
+   ],
+   "materials": [
+    "jersey"
+   ],
+   "patterns": [
+    "camo",
+    "plaid"
+   ]
+  },
+  "prefer": {
+   "itemTypes": [
+    "knitWool",
+    "knitCotton",
+    "oxfordShirt",
+    "linenShirt",
+    "poloPique",
+    "cardigan",
+    "blazer",
+    "balmacaan"
+   ],
+   "shoeTypes": [
+    "loaferPenny",
+    "sneakerWhite",
+    "chelsea",
+    "derby"
+   ]
+  },
+  "patternMax": 1,
+  "accessories": [
+   "scarf",
+   "beltLeather",
+   "watchLeather"
+  ],
+  "sources": [
+   "GQKDATE",
+   "ESQDATE",
+   "ALLDATE"
+  ],
+  "flags": [],
+  "note": "여유 있는 핏, 소품은 벨트·시계 정도. 각 잡힌 블레이저는 면접처럼 보임"
+ },
+ {
+  "id": "active",
+  "labelKo": "운동·산책",
+  "formality": {
+   "min": 1,
+   "max": 4,
+   "targetLo": 1,
+   "targetHi": 4
+  },
+  "styleBoost": {
+   "gorpcore": 3,
+   "street": 1
+  },
+  "avoid": {
+   "itemTypes": [
+    "dressShirtTie",
+    "dressShirt",
+    "oxfordShirt",
+    "poloWool",
+    "knitCashmere",
+    "blazer",
+    "trench",
+    "chesterfield",
+    "balmacaan",
+    "peacoat",
+    "leatherJacket"
+   ],
+   "shoeTypes": [
+    "loaferPenny",
+    "loaferTassel",
+    "derby",
+    "oxford",
+    "chelsea",
+    "chukka"
+   ],
+   "materials": [
+    "wool",
+    "flannel",
+    "tweed",
+    "knitCashmere",
+    "leather"
+   ],
+   "patterns": [
+    "pinstripe",
+    "houndstooth",
+    "windowpane",
+    "gingham"
+   ]
+  },
+  "prefer": {
+   "itemTypes": [
+    "tee",
+    "hoodie",
+    "sweatshirt",
+    "henley",
+    "fleece",
+    "shortPuffer",
+    "coachJacket"
+   ],
+   "shoeTypes": [
+    "running",
+    "sneakerColor",
+    "sneakerWhite",
+    "sandal"
+   ]
+  },
+  "patternMax": 1,
+  "accessories": [
+   "cap",
+   "bagBackpack",
+   "bagCrossbody",
+   "beltWebbing"
+  ],
+  "sources": [
+   "VKGORP",
+   "HSSGORP",
+   "SNKGORP",
+   "KHGORP"
+  ],
+  "flags": [],
+  "note": "저지·나일론·러닝화 우선. 가죽 신발 전부 제외"
+ },
+ {
+  "id": "formal",
+  "labelKo": "격식(결혼식·면접)",
+  "formality": {
+   "min": 6,
+   "max": 10,
+   "targetLo": 7,
+   "targetHi": 9
+  },
+  "styleBoost": {
+   "bizcasual": 3,
+   "minimal": 1
+  },
+  "avoid": {
+   "itemTypes": [
+    "tee",
+    "hoodie",
+    "sweatshirt",
+    "tank",
+    "henley",
+    "poloPique",
+    "denimShirt",
+    "flannelShirt",
+    "linenShirt",
+    "knitCotton",
+    "denimJacket",
+    "coachJacket",
+    "blouson",
+    "shirtJacket",
+    "overshirt",
+    "shortPuffer",
+    "longPuffer",
+    "fleece",
+    "leatherJacket",
+    "duffle"
+   ],
+   "shoeTypes": [
+    "sneakerWhite",
+    "sneakerColor",
+    "running",
+    "sandal",
+    "workboot",
+    "chukka"
+   ],
+   "materials": [
+    "denimWashed",
+    "denimIndigo",
+    "jersey",
+    "nylonTech",
+    "corduroy",
+    "linen"
+   ],
+   "patterns": [
+    "breton",
+    "plaid",
+    "gingham",
+    "camo",
+    "windowpane"
+   ]
+  },
+  "prefer": {
+   "itemTypes": [
+    "dressShirtTie",
+    "dressShirt",
+    "knitCashmere",
+    "blazer",
+    "chesterfield",
+    "trench"
+   ],
+   "shoeTypes": [
+    "oxford",
+    "derby",
+    "loaferTassel",
+    "loaferPenny"
+   ]
+  },
+  "patternMax": 1,
+  "accessories": [
+   "beltLeather",
+   "watchLeather",
+   "socksMatch"
+  ],
+  "sources": [
+   "GQKWED",
+   "GQKSUIT",
+   "BOSSWED",
+   "CMTINT",
+   "HKINT"
+  ],
+  "flags": [
+   "approx"
+  ],
+  "note": "네이비·차콜 우선, 올블랙 수트 피함(하객·면접 공통). 수트 품목은 MVP 범위 밖 → 블레이저+울 슬랙스로 근사"
+ }
+]

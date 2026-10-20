@@ -1,12 +1,17 @@
-// 데이터 정합성 검사 — docs/architecture/data-schema.md 8절 V-01 ~ V-22. 구현: C2.
+// 데이터 정합성 검사 — docs/architecture/data-schema.md 8절 V-01 ~ V-22 (+ Phase 6-B V-23 ~ V-33, content-expansion.md 6-5). 구현: C2 · CX.
 // 변경점(데이터 변환 로그 참조): V-08 shoes 임계치(bottom 베이스 ≥1), V-05 variant에 "oxfordShirt" 허용, V-09 sources ≥2는 warn.
-import { ADJUST_WHEN_KEYS, RESERVE_COLORS } from './constants.js';
+import { ADJUST_WHEN_KEYS, RESERVE_COLORS, AFFINITY_KINDS, ACCESSORY_WHEN_KEYS, ACCESSORY_PICK_KEYS, ACCESSORY_COLOR_DERIVED, PATTERN_WHEN_KEYS, PATTERN_EFFECTS } from './constants.js';
+import { buildIndex } from './lookup.js';
+import { styleVector, styleTags, occasionFit } from './style.js';
+
+// Phase 6-B (CX) 출처 코드표 — content-expansion-data.md 7-1 (scripts/build/sources.mjs CX_CODES와 동일) + 내부 참조
+const CX_CODES = ['GQK8', 'VKFW26', 'VKMIN', 'VKMIN2', 'WKDENIM', 'WKCHECK', 'ESQMIN', 'VKGORP', 'KHGORP', 'GQKGORP', 'HSSGORP', 'SNKGORP', 'NTAME', 'KHSTYLE6', 'STRUM', 'TRADEJP', 'YOKO', 'POPWIKI', 'SNKCITY', 'ESQCITY', 'VKWIDE', 'WKOVER', 'OPUMOIVY', 'STUIVY', 'VOUIVY', 'STRIDE', 'MRPWORK', 'MOMCHORE', 'DAZEDCW', 'SUITBC', 'ALLWORK', 'ALLBLZ', 'GQKSUM', 'GQKWED', 'GQKSUIT', 'BOSSWED', 'CMTINT', 'HKINT', 'GQKDATE', 'ESQDATE', 'ALLDATE', 'VKCARGO', 'VKNB', 'MYRQ', 'TMMBELT', 'EGSOCK', 'EGNOSHOW', 'WHSOCK', 'MOMBAG', 'FASHBAG', 'MRPBAG', 'LAIRD1', 'ANSIN', 'ASOSSCARF', 'FBPAT', 'BLPAT', 'MRPPAT', 'AOSPAT', 'WHPAT', 'PRIMER', 'SSHOUND', 'ESQLAY', 'ALLCARD', 'KHLAY', 'PTOMID', 'OPUMOLAY', 'IHLAY', 'CX', 'R1 5-8', 'R2 5-5', 'R2 6-2', 'R2 6-3', 'R2 6-4', 'T8', 'T9'];
 
 const ID_RE = /^[a-z][a-zA-Z0-9]*$/;
 const HEX_RE = /^#[0-9A-F]{6}$/;
 const R1_CODES = ['WH1', 'WH2', 'AtG1', 'AtG2', 'AtG3', 'AtG4', 'FB1', 'FB2', 'FB3', 'FB4', 'FB-stripes', 'GG', 'PS1', 'PS2', 'PS3', 'PS-snippet', 'RMRS1', 'RMRS2', 'RMRS3', 'RMRS 색상환', 'MF', 'MM', 'TMM-tan', 'Dapp', 'Fitville', 'MRP', 'MRP-stripes', 'Esq', 'Vou1', 'Vou2', 'Celio', 'Berle', 'HB', 'Acorn', 'Aza', 'Studio', 'Hack', 'PM', 'StyleGF', 'MSR', 'HSS', 'Dalm', 'VK1', 'VK2', 'VK3', 'WK1', 'WK2', 'GQK', 'Allure', 'Khaki-guides', 'Navy-guides', 'Olive-guides', 'Brown-guides', 'Blue-guides', 'Burgundy-guides', 'HEX'];
 const R2_CODES = ['MOM', 'BGU', 'RMRSFIT', 'RMRSWIDE1', 'MRPWIDE', 'DIEWW', 'SQM', 'VKFIT', 'ESQK1', 'ESQK2', 'COSK', 'SUIT', 'PSBREAK', 'EGENT', 'SARTORO', 'TIES', 'BLOOM', 'WKCOAT', 'VKCOAT', 'PSCORD', 'PROPER', 'SFORUM', 'MASHBURN', 'FBLAYER', 'FBFABRIC', 'BALTSUN', 'ARMOURY', 'SUMISSURA', 'KHANCORD', 'WKCORD', 'GQKLINEN', 'NAMU', 'BESPOKE', 'KOACHMAN', 'JWHITE', 'FBSHOES', 'FBWIDE', 'RMRSWIDE2', 'SARTOROSHOE', 'MRPCHELSEA', 'MRPBOOTS', 'BOOTSPY', 'RAKE', 'WHSNEAK', 'GGSOCKS', 'MRPSOCKS', 'RMRSSOCK', 'ONDO', 'ALLUREK1', 'GQKSHOE', 'PAPERSTRAIGHT', 'GQKOUTER', 'ESQKCOACH', 'VKCOATJEAN', 'VKTREND', 'ESQKFW', 'ELLEK', 'ALLUREK2', 'KHANOUTER', 'R2 0', 'R2 1-2', 'R2 2-1', 'R2 2-2', 'R2 2-3', 'R2 2-4', 'R2 2-5', 'R2 3-1', 'R2 3-2', 'R2 3-3', 'R2 3-4', 'R2 4-1', 'R2 4-2', 'R2 4-3', 'R2 5', 'R2 6', 'R2 7', 'R1', 'C1', 'C2'];
-export const SOURCE_CODES = new Set([...R1_CODES, ...R2_CODES]);
+export const SOURCE_CODES = new Set([...R1_CODES, ...R2_CODES, ...CX_CODES]);
 
 /** data-schema.md 8절 V-01~V-22 @returns {import('./types.js').ValidationIssue[]} 빈 배열이면 통과 */
 export function validateData(data) {
@@ -187,7 +192,7 @@ export function validateData(data) {
   enums.outerTypes.forEach((t) => need.push(`outerType.${t.id}`));
   enums.tags.forEach((t) => need.push(`tag.${t}`));
   for (const id of need) if (!labelIds.has(id)) err('V-12', 'labels', `label 없음: ${id}`);
-  const shortNs = ['color.', 'category.', 'shoe.', 'material.', 'fit.', 'length.', 'tone.', 'season.'];
+  const shortNs = ['color.', 'category.', 'shoe.', 'material.', 'fit.', 'length.', 'tone.', 'season.', 'style.', 'occasion.', 'pattern.', 'midType.', 'accessory.'];
   labels.forEach((l) => { if (shortNs.some((ns) => l.id.startsWith(ns))) { if (typeof l.shortLabel !== 'string' || !l.shortLabel) err('V-12', `labels(${l.id})`, 'shortLabel 없음'); else if (l.shortLabel.length > 6) err('V-12', `labels(${l.id})`, `shortLabel 6자 초과: ${l.shortLabel}`); } });
 
   // ---- V-13 shoeRules
@@ -261,6 +266,17 @@ export function validateData(data) {
     (a.sources ?? []).forEach((s) => { if (!SOURCE_CODES.has(s)) warn('V-20', p, `출처 코드 없음: ${s}`); });
   });
 
+  // ---- Phase 6-B 확장 파일 (없으면 빈 배열 = 기능 OFF)
+  const styles = data.styles ?? []; const styleAffinity = data.styleAffinity ?? []; const occasions = data.occasions ?? [];
+  const accessoryTypes = data.accessoryTypes ?? []; const accessoryRules = data.accessoryRules ?? [];
+  const patterns = data.patterns ?? []; const patternRules = data.patternRules ?? [];
+  const midTypes = data.midTypes ?? []; const midLayerRules = data.midLayerRules ?? []; const twoOuterRules = data.twoOuterRules ?? [];
+  const styleIds = new Set(styles.map((s) => s.id));
+  const patternIds = new Set(patterns.length ? patterns.map((p) => p.id) : ['breton']);
+  const midTypeIds = new Set(midTypes.map((m) => m.id));
+  const accessoryIds = new Set(accessoryTypes.map((a) => a.id));
+  const expansionOn = styles.length > 0;
+
   // ---- V-17 ~ V-19 outfits
   const pairScore = (a, b) => {
     const tryRule = (x, y) => {
@@ -285,6 +301,8 @@ export function validateData(data) {
     const by = (c) => o.items.filter((it) => it.category === c);
     if (by('top').length !== 1 || by('bottom').length !== 1 || by('shoes').length !== 1) err('V-17', p, 'top·bottom·shoes 정확히 1개씩이어야 함');
     if (by('outer').length > 2) err('V-17', p, 'outer는 0~2개');
+    if (by('mid').length > 1) err('V-31', p, 'mid는 0~1개'); // D-3
+    if (o.items.filter((it) => it.pattern).length > 2) err('V-31', p, '패턴 아이템은 ≤ 2');
     if (!Array.isArray(o.seasons) || o.seasons.length === 0) err('V-17', p, 'seasons 비어 있음'); else refSeasons(o.seasons, `${p}.seasons`);
     o.tags.forEach((t, j) => { if (!enums.tags.includes(t)) err('V-02', `${p}.tags[${j}]`, `tag 없음: ${t}`); });
     if (o.universal && !o.isClassic) err('V-17', p, 'universal인데 isClassic false');
@@ -301,7 +319,9 @@ export function validateData(data) {
       if (it.category === 'outer') { ref(lengthsOf.outer, it.length, `${q}.length`); ref(outerTypeIds, it.itemType, `${q}.itemType`); if (it.fit !== null) err('V-17', q, 'outer fit은 null'); }
       if (it.category === 'shoes') { ref(shoeIds, it.shoeType, `${q}.shoeType`); if (it.fit !== null || it.length !== null) err('V-17', q, 'shoes fit·length는 null'); }
       else if (it.shoeType !== null && it.shoeType !== undefined) err('V-17', q, 'shoeType은 shoes에만');
-      if (it.pattern !== null && it.pattern !== undefined && it.pattern !== 'breton') err('V-17', q, `pattern 허용값 아님: ${it.pattern}`);
+      if (it.category === 'mid') { ref(midTypeIds, it.itemType, `${q}.itemType`); ref(lengthsOf.outer, it.length, `${q}.length`); if (it.fit !== null) err('V-31', q, 'mid fit은 null'); }
+      // V-17(수정, Phase 6-B 4-3): pattern 허용값은 enums.patterns(없으면 breton만)
+      if (it.pattern !== null && it.pattern !== undefined && !patternIds.has(it.pattern)) err('V-17', q, `pattern 허용값 아님: ${it.pattern}`);
     });
     // V-18 색 쌍
     const top = by('top')[0]; const bottom = by('bottom')[0]; const shoesIt = by('shoes')[0];
@@ -331,9 +351,206 @@ export function validateData(data) {
     else warn('V-21', `colors(${c})`, 'colorRules·outfits 어디에도 등장하지 않음');
   }
 
-  // ---- V-22 용량
-  const bytes = Object.values(data).reduce((a, v) => a + new TextEncoder().encode(JSON.stringify(v)).length, 0);
-  if (bytes > 300 * 1024) warn('V-22', 'data', `JSON 총합 ${(bytes / 1024).toFixed(0)} KB > 300 KB`);
+  // ---- V-22 용량 (기존 16개 파일) · V-33 전체 합 < 360KB (Phase 6-B)
+  const BASE_FILES = ['enums', 'colors', 'toneRules', 'colorRules', 'materials', 'matRules', 'fitRules', 'lengthRules', 'shoes', 'shoeRules', 'formality', 'outerRules', 'layerRules', 'adjust', 'outfits', 'labels'];
+  const size = (v) => new TextEncoder().encode(JSON.stringify(v)).length;
+  const baseBytes = BASE_FILES.reduce((a, k) => a + (data[k] ? size(data[k]) : 0), 0);
+  if (baseBytes > 300 * 1024) warn('V-22', 'data', `기존 JSON 합 ${(baseBytes / 1024).toFixed(0)} KB > 300 KB`);
+  const bytes = Object.values(data).reduce((a, v) => a + size(v), 0);
+  if (bytes > 360 * 1024) warn('V-33', 'data', `JSON 총합 ${(bytes / 1024).toFixed(0)} KB > 360 KB`);
+
+  // ================================================================ Phase 6-B (CX) V-23 ~ V-32 — content-expansion.md 6-5
+  if (expansionOn) {
+    const src = (arr, p) => (arr ?? []).forEach((s) => { if (!SOURCE_CODES.has(s)) warn('V-20', p, `출처 코드 없음: ${s}`); });
+    const topOrOuter = new Set([...topTypeIds, ...outerTypeIds]);
+    const inRange = (v, lo, hi) => Number.isInteger(v) && v >= lo && v <= hi;
+    const kindSet = { topType: topTypeIds, outerType: outerTypeIds, shoeType: shoeIds, material: materialIds, topFit: topFits, bottomFit: bottomFits, trouserLength: lengthsOf.trouser, topLength: lengthsOf.top, outerLength: lengthsOf.outer, color: colorIds, pattern: patternIds, accessory: accessoryIds };
+    const affinity = new Map();
+    // ---- V-24 styleAffinity
+    styleAffinity.forEach((a, i) => {
+      const p = `styleAffinity[${i}](${a.kind}|${a.id})`;
+      if (!AFFINITY_KINDS.includes(a.kind)) err('V-24', p, `kind 허용 안 됨: ${a.kind}`);
+      else ref(kindSet[a.kind], a.id, `${p}.id`);
+      const k = `${a.kind}|${a.id}`;
+      if (affinity.has(k)) err('V-24', p, '(kind,id) 중복'); affinity.set(k, a.weights);
+      const keys = Object.keys(a.weights ?? {});
+      if (keys.length !== styleIds.size || keys.some((s) => !styleIds.has(s))) err('V-24', p, `weights 키가 styles와 1:1 아님: ${keys.join(',')}`);
+      for (const [s, w] of Object.entries(a.weights ?? {})) if (!inRange(w, -2, 3)) err('V-24', `${p}.${s}`, `가중치 범위(−2..+3) 밖: ${w}`);
+    });
+    // ---- V-25 커버리지
+    const BOTTOM_MATERIALS = [...materialIds].filter((m) => !['knitCotton', 'knitWool', 'knitCashmere', 'leather'].includes(m));
+    const coverage = [['topType', topTypeIds], ['outerType', outerTypeIds], ['shoeType', shoeIds], ['material', BOTTOM_MATERIALS], ['topFit', topFits], ['bottomFit', bottomFits], ['trouserLength', lengthsOf.trouser], ['topLength', lengthsOf.top], ['outerLength', lengthsOf.outer], ['color', colorIds]];
+    for (const [kind, set] of coverage) for (const id of set) if (!affinity.has(`${kind}|${id}`)) err('V-25', 'styleAffinity', `${kind}|${id} 행 없음`);
+    // ---- V-23 · V-26 styles
+    const SPECIAL_AVOID = new Set(['accent2', 'pattern2', 'logo', 'fourColors', 'black2']);
+    const styleSeen = new Set();
+    styles.forEach((s, i) => {
+      const p = `styles[${i}](${s.id})`;
+      checkId(s.id, p);
+      if (styleSeen.has(s.id)) err('V-23', p, 'id 중복'); styleSeen.add(s.id);
+      if (!(s.formality && inRange(s.formality.min, 1, 10) && inRange(s.formality.max, 1, 10) && s.formality.min <= s.formality.max)) err('V-23', p, 'formality.min ≤ max 아님');
+      if (![1, 2].includes(s.phase)) err('V-23', p, `phase ∈ 1,2 아님: ${s.phase}`);
+      if (!Array.isArray(s.sources) || s.sources.length < 2) err('V-23', p, `sources ≥ 2 아님: ${s.sources?.length ?? 0}`);
+      src(s.sources, p);
+      (s.tones ?? []).forEach((t, j) => ref(tones, t, `${p}.tones[${j}]`));
+      refSeasons(s.seasons, `${p}.seasons`);
+      const sig = { top: ['topType', topTypeIds], bottom: ['material', materialIds], shoes: ['shoeType', shoeIds], outer: ['outerType', outerTypeIds] };
+      for (const [slot, [kind, set]] of Object.entries(sig)) for (const id of s.signature?.[slot] ?? []) {
+        ref(set, id, `${p}.signature.${slot}`);
+        const w = affinity.get(`${kind}|${id}`)?.[s.id];
+        if (w !== undefined && w < 2) err('V-26', `${p}.signature.${slot}(${id})`, `시그니처 품목인데 ${s.id} 가중 ${w} < +2`);
+      }
+      for (const id of s.avoid ?? []) {
+        if (SPECIAL_AVOID.has(id)) continue;
+        const kinds = AFFINITY_KINDS.filter((k) => kindSet[k]?.has?.(id));
+        if (!kinds.length) err('V-23', `${p}.avoid(${id})`, 'avoid id가 어떤 enum에도 없음');
+        for (const k of kinds) { const w = affinity.get(`${k}|${id}`)?.[s.id]; if (w !== undefined && w > 0) err('V-26', `${p}.avoid(${id})`, `avoid 품목인데 ${s.id} 가중 ${w} > 0 (${k})`); }
+      }
+    });
+    if (enums.styles && enums.styles.join(',') !== styles.map((s) => s.id).join(',')) err('V-23', 'enums.styles', 'styles.json id 순서와 다름');
+    // ---- V-27 occasions
+    if (occasions.length < 5) err('V-27', 'occasions', `5개 이상이어야 함: ${occasions.length}`);
+    occasions.forEach((o, i) => {
+      const p = `occasions[${i}](${o.id})`;
+      checkId(o.id, p);
+      const f = o.formality ?? {};
+      if (!(inRange(f.min, 1, 10) && inRange(f.max, 1, 10) && inRange(f.targetLo, 1, 10) && inRange(f.targetHi, 1, 10) && f.min <= f.targetLo && f.targetLo <= f.targetHi && f.targetHi <= f.max)) err('V-27', p, 'formality min ≤ targetLo ≤ targetHi ≤ max 아님');
+      for (const [s, b] of Object.entries(o.styleBoost ?? {})) { ref(styleIds, s, `${p}.styleBoost`); if (!inRange(b, 1, 3)) err('V-27', `${p}.styleBoost.${s}`, `범위(1..3) 밖: ${b}`); }
+      (o.avoid?.itemTypes ?? []).forEach((x) => ref(topOrOuter, x, `${p}.avoid.itemTypes`));
+      (o.avoid?.shoeTypes ?? []).forEach((x) => ref(shoeIds, x, `${p}.avoid.shoeTypes`));
+      (o.avoid?.materials ?? []).forEach((x) => ref(materialIds, x, `${p}.avoid.materials`));
+      (o.avoid?.patterns ?? []).forEach((x) => ref(patternIds, x, `${p}.avoid.patterns`));
+      (o.prefer?.itemTypes ?? []).forEach((x) => { ref(topOrOuter, x, `${p}.prefer.itemTypes`); if (o.avoid?.itemTypes?.includes(x)) err('V-27', p, `avoid와 prefer에 동시 등장: ${x}`); });
+      (o.prefer?.shoeTypes ?? []).forEach((x) => { ref(shoeIds, x, `${p}.prefer.shoeTypes`); if (o.avoid?.shoeTypes?.includes(x)) err('V-27', p, `avoid와 prefer에 동시 등장: ${x}`); });
+      (o.accessories ?? []).forEach((x) => ref(accessoryIds, x, `${p}.accessories`));
+      if (!inRange(o.patternMax, 0, 3)) err('V-27', p, `patternMax 범위 오류: ${o.patternMax}`);
+      src(o.sources, p);
+    });
+    // ---- V-28 accessoryTypes · accessoryRules
+    const groups = new Set();
+    accessoryTypes.forEach((a, i) => {
+      const p = `accessoryTypes[${i}](${a.id})`;
+      checkId(a.id, p); groups.add(a.group);
+      if (!(inRange(a.formality?.min, 1, 10) && inRange(a.formality?.max, 1, 10) && a.formality.min <= a.formality.max)) err('V-28', p, 'formality 창 오류');
+      refSeasons(a.seasons, `${p}.seasons`);
+      if (a.colorFrom !== null && !['shoes', 'bottom', 'outfit', 'neutral', 'free'].includes(a.colorFrom)) err('V-28', p, `colorFrom 오류: ${a.colorFrom}`);
+    });
+    const acIds = new Set();
+    accessoryRules.forEach((r, i) => {
+      const p = `accessoryRules[${i}](${r.id})`;
+      checkId(r.id, p);
+      if (acIds.has(r.id)) err('V-28', p, 'id 중복'); acIds.add(r.id);
+      for (const k of Object.keys(r.when ?? {})) if (!ACCESSORY_WHEN_KEYS.includes(k)) err('V-28', p, `when 키 허용 안 됨: ${k}`);
+      (r.accessory ?? []).forEach((a) => ref(accessoryIds, a, `${p}.accessory`));
+      if (!inRange(r.delta, -2, 1)) err('V-28', p, `delta 범위(−2..+1) 밖: ${r.delta}`);
+      if (!['info', 'warn'].includes(r.severity)) err('V-28', p, `severity 오류: ${r.severity}`);
+      for (const k of Object.keys(r.pick ?? {})) if (!ACCESSORY_PICK_KEYS.includes(k)) err('V-28', p, `pick 키 허용 안 됨: ${k}`);
+      if (r.pick?.color !== undefined) for (const c of (Array.isArray(r.pick.color) ? r.pick.color : [r.pick.color])) if (!colorIds.has(c) && !ACCESSORY_COLOR_DERIVED.includes(c)) err('V-28', p, `pick.color 값 오류: ${c}`);
+      const w = r.when ?? {};
+      const arr = (v) => (Array.isArray(v) ? v : [v]);
+      if (w.shoeType) arr(w.shoeType).forEach((s) => ref(shoeIds, s, `${p}.when.shoeType`));
+      if (w.shoesColor) arr(w.shoesColor).forEach((c) => ref(colorIds, c, `${p}.when.shoesColor`));
+      if (w.beltColor) arr(w.beltColor).forEach((c) => ref(colorIds, c, `${p}.when.beltColor`));
+      if (w.topType) arr(w.topType).forEach((t) => ref(topTypeIds, t, `${p}.when.topType`));
+      if (w.outerType) arr(w.outerType).forEach((t) => ref(outerTypeIds, t, `${p}.when.outerType`));
+      if (w.bottomMaterial) arr(w.bottomMaterial).forEach((m) => ref(materialIds, m, `${p}.when.bottomMaterial`));
+      if (w.season) arr(w.season).forEach((s) => ref(seasons, s, `${p}.when.season`));
+      if (w.style) arr(w.style).forEach((s) => ref(styleIds, s, `${p}.when.style`));
+      if (w.belt) arr(w.belt).forEach((s) => ref(accessoryIds, s, `${p}.when.belt`));
+      if (w.watch) arr(w.watch).forEach((s) => ref(accessoryIds, s, `${p}.when.watch`));
+      if (w.outerPattern !== undefined && w.outerPattern !== null) arr(w.outerPattern).forEach((x) => ref(patternIds, x, `${p}.when.outerPattern`));
+      src(r.sources, p);
+    });
+    if (enums.accessoryGroups && enums.accessoryGroups.some((g) => !groups.has(g))) err('V-28', 'enums.accessoryGroups', 'accessoryTypes.group에 없는 그룹');
+    // ---- V-29 patterns · patternRules
+    if (patterns.length !== 9) err('V-29', 'patterns', `9개여야 함: ${patterns.length}`);
+    patterns.forEach((pt, i) => {
+      const p = `patterns[${i}](${pt.id})`;
+      checkId(pt.id, p);
+      if (!['stripe', 'check', 'texture', 'print'].includes(pt.family)) err('V-29', p, `family 오류: ${pt.family}`);
+      if (!['small', 'mid', 'large'].includes(pt.scale)) err('V-29', p, `scale 오류: ${pt.scale}`);
+      (pt.categories ?? []).forEach((c) => ref(cats, c, `${p}.categories`));
+      (pt.itemTypes ?? []).forEach((t) => { if (!topOrOuter.has(t) && !materialIds.has(t)) err('V-02', `${p}.itemTypes`, `참조 없음: ${t}`); });
+      if (!inRange(pt.formality, 1, 10)) err('V-29', p, `formality 오류: ${pt.formality}`);
+      refSeasons(pt.seasons, `${p}.seasons`);
+      (pt.colorsTypical ?? []).forEach((c) => ref(colorIds, c, `${p}.colorsTypical`));
+      src(pt.sources, p);
+    });
+    const ptIds = new Set();
+    patternRules.forEach((r, i) => {
+      const p = `patternRules[${i}](${r.id})`;
+      checkId(r.id, p);
+      if (ptIds.has(r.id)) err('V-29', p, 'id 중복'); ptIds.add(r.id);
+      for (const k of Object.keys(r.when ?? {})) if (!PATTERN_WHEN_KEYS.includes(k)) err('V-29', p, `when 키 허용 안 됨: ${k}`);
+      if (!PATTERN_EFFECTS.includes(r.effect)) err('V-29', p, `effect 오류: ${r.effect}`);
+      if (r.effect === 'exclude' && r.severity !== 'block') err('V-29', p, 'exclude인데 severity block 아님');
+      if (!inRange(r.delta, -2, 1)) err('V-29', p, `delta 범위 오류: ${r.delta}`);
+      const arr = (v) => (Array.isArray(v) ? v : [v]);
+      const w = r.when ?? {};
+      if (w.pattern !== undefined && w.pattern !== 'any') arr(w.pattern).forEach((x) => ref(patternIds, x, `${p}.when.pattern`));
+      if (w.otherPattern !== undefined) arr(w.otherPattern).forEach((x) => ref(patternIds, x, `${p}.when.otherPattern`));
+      if (w.category !== undefined) arr(w.category).forEach((x) => ref(cats, x, `${p}.when.category`));
+      if (w.outerType !== undefined) arr(w.outerType).forEach((x) => ref(outerTypeIds, x, `${p}.when.outerType`));
+      if (w.bottomColor !== undefined) arr(w.bottomColor).forEach((x) => ref(colorIds, x, `${p}.when.bottomColor`));
+      if (w.outfitTones !== undefined) arr(w.outfitTones).forEach((x) => ref(tones, x, `${p}.when.outfitTones`));
+      if (w.mode !== undefined && !['quick', 'deep'].includes(w.mode)) err('V-29', p, `when.mode 오류: ${w.mode}`);
+      src(r.sources, p);
+    });
+    if (enums.patterns && enums.patterns.join(',') !== patterns.map((x) => x.id).join(',')) err('V-29', 'enums.patterns', 'patterns.json id 순서와 다름');
+    // ---- V-30 midTypes · midLayerRules · twoOuterRules
+    midTypes.forEach((m, i) => {
+      const p = `midTypes[${i}](${m.id})`;
+      checkId(m.id, p);
+      ref(materialIds, m.material, `${p}.material`, { nullable: true });
+      if (!inRange(m.formality, 1, 10)) err('V-30', p, `formality 오류: ${m.formality}`);
+      ref(lengthsOf.outer, m.length, `${p}.length`);
+      if (!['light', 'mid', 'heavy'].includes(m.weight)) err('V-30', p, `weight 오류: ${m.weight}`);
+      refSeasons(m.seasons, `${p}.seasons`);
+    });
+    if (enums.midTypes && enums.midTypes.join(',') !== midTypes.map((x) => x.id).join(',')) err('V-30', 'enums.midTypes', 'midTypes.json id 순서와 다름');
+    const listOr = (v, set, p, extra) => { if (typeof v === 'string') { if (!extra.includes(v)) err('V-30', p, `값 오류: ${v}`); } else if (Array.isArray(v)) v.forEach((x) => { if (!(x === 'none' && extra.includes('none'))) ref(set, x, p); }); else err('V-30', p, '배열 또는 any/none 아님'); };
+    midLayerRules.forEach((r, i) => {
+      const p = `midLayerRules[${i}](${r.id})`;
+      checkId(r.id, p);
+      ref(seasons, r.season, `${p}.season`);
+      listOr(r.base, topTypeIds, `${p}.base`, ['any']);
+      listOr(r.mid, midTypeIds, `${p}.mid`, ['none']);
+      listOr(r.outer, outerTypeIds, `${p}.outer`, ['any', 'none']);
+      if (!inRange(r.score, 1, 5)) err('V-30', p, `score 범위 오류: ${r.score}`);
+      if (!['classic', 'variation', 'block'].includes(r.tag)) err('V-30', p, `tag 오류: ${r.tag}`);
+      if (r.season === 'summer' && r.mid !== 'none' && !(r.score === 1 && r.tag === 'block')) err('V-30', p, '여름 미드 행은 score 1·block이어야 함');
+      src(r.sources, p);
+    });
+    twoOuterRules.forEach((r, i) => {
+      const p = `twoOuterRules[${i}](${r.id})`;
+      checkId(r.id, p);
+      ref(seasons, r.season, `${p}.season`);
+      listOr(r.inner, outerTypeIds, `${p}.inner`, ['any']);
+      listOr(r.outer, outerTypeIds, `${p}.outer`, ['any']);
+      if (!inRange(r.score, 1, 5)) err('V-30', p, `score 범위 오류: ${r.score}`);
+      src(r.sources, p);
+    });
+    // ---- V-31 outfits.styles[]·occasions[] = 재계산 (손 태깅 탐지)
+    let idx = null;
+    try { idx = buildIndex(data); } catch (e) { err('V-31', 'data', `buildIndex 실패: ${e.message}`); }
+    if (idx) outfits.forEach((o, i) => {
+      const p = `outfits[${i}](${o.id})`;
+      const want = JSON.stringify(styleTags(styleVector(idx, o), idx));
+      const got = JSON.stringify(o.styles ?? null);
+      if (want !== got) err('V-31', p, `styles[] 재계산 불일치: 기록 ${got} ≠ 계산 ${want}`);
+      const wantO = JSON.stringify(occasionFit(idx, o)); const gotO = JSON.stringify(o.occasions ?? null);
+      if (wantO !== gotO) err('V-31', p, `occasions[] 재계산 불일치: 기록 ${gotO} ≠ 계산 ${wantO}`);
+    });
+    // ---- V-32 labels
+    const needCx = [];
+    styles.forEach((s) => { needCx.push(`style.${s.id}`, `explain.style.${s.id}`); });
+    occasions.forEach((o) => needCx.push(`occasion.${o.id}`));
+    patterns.forEach((pt) => needCx.push(`pattern.${pt.id}`));
+    midTypes.forEach((m) => needCx.push(`midType.${m.id}`));
+    accessoryTypes.forEach((a) => needCx.push(`accessory.${a.id}`));
+    if (cats.has('mid')) needCx.push('category.mid');
+    for (const id of needCx) if (!labelIds.has(id)) err('V-32', 'labels', `label 없음: ${id}`);
+  }
 
   return issues;
 }

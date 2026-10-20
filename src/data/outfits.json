@@ -51,6 +51,20 @@
   ],
   "isClassic": true,
   "universal": true,
+  "styles": [
+   {
+    "id": "minimal",
+    "score": 0.6
+   },
+   {
+    "id": "amekaji",
+    "score": 0.54
+   }
+  ],
+  "occasions": [
+   "weekend",
+   "active"
+  ],
   "sources": [
    "WK1",
    "GQK",
@@ -120,6 +134,19 @@
   ],
   "isClassic": true,
   "universal": true,
+  "styles": [
+   {
+    "id": "minimal",
+    "score": 0.55
+   },
+   {
+    "id": "ivy",
+    "score": 0.47
+   }
+  ],
+  "occasions": [
+   "weekend"
+  ],
   "sources": [
    "VK1",
    "GG"
@@ -190,6 +217,19 @@
   ],
   "isClassic": true,
   "universal": true,
+  "styles": [
+   {
+    "id": "minimal",
+    "score": 0.51
+   },
+   {
+    "id": "ivy",
+    "score": 0.51
+   }
+  ],
+  "occasions": [
+   "weekend"
+  ],
   "sources": [
    "Hack",
    "FB1"
@@ -251,6 +291,21 @@
   ],
   "isClassic": true,
   "universal": true,
+  "styles": [
+   {
+    "id": "ivy",
+    "score": 0.75
+   },
+   {
+    "id": "bizcasual",
+    "score": 0.68
+   }
+  ],
+  "occasions": [
+   "work",
+   "weekend",
+   "date"
+  ],
   "sources": [
    "Celio",
    "WH2"
@@ -323,6 +378,21 @@
   ],
   "isClassic": true,
   "universal": true,
+  "styles": [
+   {
+    "id": "ivy",
+    "score": 0.79
+   },
+   {
+    "id": "bizcasual",
+    "score": 0.73
+   }
+  ],
+  "occasions": [
+   "work",
+   "weekend",
+   "date"
+  ],
   "sources": [
    "AtG2",
    "MF",
@@ -382,6 +452,21 @@
   ],
   "isClassic": true,
   "universal": true,
+  "styles": [
+   {
+    "id": "ivy",
+    "score": 0.68
+   },
+   {
+    "id": "bizcasual",
+    "score": 0.61
+   }
+  ],
+  "occasions": [
+   "work",
+   "weekend",
+   "date"
+  ],
   "sources": [
    "Celio",
    "AtG2"
@@ -441,6 +526,19 @@
   ],
   "isClassic": true,
   "universal": true,
+  "styles": [
+   {
+    "id": "minimal",
+    "score": 0.63
+   },
+   {
+    "id": "ivy",
+    "score": 0.6
+   }
+  ],
+  "occasions": [
+   "weekend"
+  ],
   "sources": [
    "AtG2",
    "MM",
@@ -510,6 +608,15 @@
   ],
   "isClassic": true,
   "universal": true,
+  "styles": [
+   {
+    "id": "minimal",
+    "score": 0.61
+   }
+  ],
+  "occasions": [
+   "weekend"
+  ],
   "sources": [
    "AtG1",
    "FB1"
@@ -568,6 +675,21 @@
   ],
   "isClassic": true,
   "universal": true,
+  "styles": [
+   {
+    "id": "minimal",
+    "score": 0.54
+   },
+   {
+    "id": "ivy",
+    "score": 0.54
+   }
+  ],
+  "occasions": [
+   "work",
+   "weekend",
+   "date"
+  ],
   "sources": [
    "VK1",
    "AtG4"
@@ -640,6 +762,17 @@
   ],
   "isClassic": true,
   "universal": true,
+  "styles": [
+   {
+    "id": "bizcasual",
+    "score": 0.79
+   }
+  ],
+  "occasions": [
+   "work",
+   "date",
+   "formal"
+  ],
   "sources": [
    "MF",
    "Vou1",
@@ -711,6 +844,20 @@
   ],
   "isClassic": true,
   "universal": true,
+  "styles": [
+   {
+    "id": "ivy",
+    "score": 0.68
+   },
+   {
+    "id": "bizcasual",
+    "score": 0.63
+   }
+  ],
+  "occasions": [
+   "work",
+   "date"
+  ],
   "sources": [
    "MF",
    "RMRS2"
@@ -780,6 +927,19 @@
   ],
   "isClassic": true,
   "universal": true,
+  "styles": [
+   {
+    "id": "ivy",
+    "score": 0.56
+   },
+   {
+    "id": "minimal",
+    "score": 0.51
+   }
+  ],
+  "occasions": [
+   "weekend"
+  ],
   "sources": [
    "PM"
   ],
@@ -848,6 +1008,20 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "bizcasual",
+    "score": 0.6
+   },
+   {
+    "id": "ivy",
+    "score": 0.6
+   }
+  ],
+  "occasions": [
+   "work",
+   "date"
+  ],
   "sources": [
    "AtG2"
   ],
@@ -917,6 +1091,20 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "minimal",
+    "score": 0.55
+   },
+   {
+    "id": "bizcasual",
+    "score": 0.47
+   }
+  ],
+  "occasions": [
+   "weekend",
+   "date"
+  ],
   "sources": [
    "FB1"
   ],
@@ -987,6 +1175,20 @@
   ],
   "isClassic": false,
   "universal": false,
+  "styles": [
+   {
+    "id": "minimal",
+    "score": 0.71
+   },
+   {
+    "id": "bizcasual",
+    "score": 0.68
+   }
+  ],
+  "occasions": [
+   "work",
+   "date"
+  ],
   "sources": [
    "AtG2"
   ],
@@ -1045,6 +1247,20 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "ivy",
+    "score": 0.61
+   },
+   {
+    "id": "minimal",
+    "score": 0.54
+   }
+  ],
+  "occasions": [
+   "weekend",
+   "date"
+  ],
   "sources": [
    "FB2",
    "HSS"
@@ -1104,6 +1320,16 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "ivy",
+    "score": 0.65
+   }
+  ],
+  "occasions": [
+   "weekend",
+   "date"
+  ],
   "sources": [
    "AtG2"
   ],
@@ -1171,6 +1397,21 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "ivy",
+    "score": 0.55
+   },
+   {
+    "id": "amekaji",
+    "score": 0.51
+   }
+  ],
+  "occasions": [
+   "work",
+   "weekend",
+   "date"
+  ],
   "sources": [
    "Vou1"
   ],
@@ -1229,6 +1470,21 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "bizcasual",
+    "score": 0.65
+   },
+   {
+    "id": "ivy",
+    "score": 0.61
+   }
+  ],
+  "occasions": [
+   "work",
+   "weekend",
+   "date"
+  ],
   "sources": [
    "Burgundy-guides"
   ],
@@ -1287,6 +1543,20 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "amekaji",
+    "score": 0.53
+   },
+   {
+    "id": "workwear",
+    "score": 0.53
+   }
+  ],
+  "occasions": [
+   "weekend",
+   "date"
+  ],
   "sources": [
    "AtG4",
    "Studio"
@@ -1357,6 +1627,21 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "ivy",
+    "score": 0.65
+   },
+   {
+    "id": "bizcasual",
+    "score": 0.57
+   }
+  ],
+  "occasions": [
+   "work",
+   "weekend",
+   "date"
+  ],
   "sources": [
    "GG",
    "HB"
@@ -1415,6 +1700,21 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "ivy",
+    "score": 0.63
+   },
+   {
+    "id": "minimal",
+    "score": 0.51
+   }
+  ],
+  "occasions": [
+   "work",
+   "weekend",
+   "date"
+  ],
   "sources": [
    "HB",
    "Brown-guides"
@@ -1485,6 +1785,19 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "amekaji",
+    "score": 0.53
+   },
+   {
+    "id": "workwear",
+    "score": 0.53
+   }
+  ],
+  "occasions": [
+   "weekend"
+  ],
   "sources": [
    "PM",
    "MM"
@@ -1543,6 +1856,20 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "ivy",
+    "score": 0.57
+   },
+   {
+    "id": "minimal",
+    "score": 0.54
+   }
+  ],
+  "occasions": [
+   "weekend",
+   "active"
+  ],
   "sources": [
    "Dalm"
   ],
@@ -1611,6 +1938,15 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "ivy",
+    "score": 0.7
+   }
+  ],
+  "occasions": [
+   "weekend"
+  ],
   "sources": [
    "Dalm",
    "MRP-stripes"
@@ -1681,6 +2017,20 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "minimal",
+    "score": 0.6
+   },
+   {
+    "id": "bizcasual",
+    "score": 0.55
+   }
+  ],
+  "occasions": [
+   "work",
+   "date"
+  ],
   "sources": [
    "AtG1"
   ],
@@ -1749,6 +2099,19 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "minimal",
+    "score": 0.59
+   },
+   {
+    "id": "ivy",
+    "score": 0.56
+   }
+  ],
+  "occasions": [
+   "weekend"
+  ],
   "sources": [
    "AtG1"
   ],
@@ -1806,6 +2169,15 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "minimal",
+    "score": 0.7
+   }
+  ],
+  "occasions": [
+   "weekend"
+  ],
   "sources": [
    "AtG1",
    "MF"
@@ -1876,6 +2248,13 @@
   ],
   "isClassic": false,
   "universal": false,
+  "styles": [
+   {
+    "id": "minimal",
+    "score": 0.51
+   }
+  ],
+  "occasions": [],
   "sources": [
    "AtG1"
   ],
@@ -1947,6 +2326,17 @@
   ],
   "isClassic": false,
   "universal": false,
+  "styles": [
+   {
+    "id": "minimal",
+    "score": 0.48
+   },
+   {
+    "id": "ivy",
+    "score": 0.43
+   }
+  ],
+  "occasions": [],
   "sources": [
    "AtG1"
   ],
@@ -2006,6 +2396,21 @@
   ],
   "isClassic": false,
   "universal": false,
+  "styles": [
+   {
+    "id": "ivy",
+    "score": 0.65
+   },
+   {
+    "id": "bizcasual",
+    "score": 0.54
+   }
+  ],
+  "occasions": [
+   "work",
+   "weekend",
+   "date"
+  ],
   "sources": [
    "AtG1",
    "WH1"
@@ -2075,6 +2480,20 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "amekaji",
+    "score": 0.53
+   },
+   {
+    "id": "ivy",
+    "score": 0.52
+   }
+  ],
+  "occasions": [
+   "weekend",
+   "date"
+  ],
   "sources": [
    "R2 7"
   ],
@@ -2144,6 +2563,16 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "bizcasual",
+    "score": 0.76
+   }
+  ],
+  "occasions": [
+   "work",
+   "date"
+  ],
   "sources": [
    "R2 7"
   ],
@@ -2213,6 +2642,20 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "amekaji",
+    "score": 0.55
+   },
+   {
+    "id": "cityboy",
+    "score": 0.55
+   }
+  ],
+  "occasions": [
+   "weekend",
+   "active"
+  ],
   "sources": [
    "R2 7"
   ],
@@ -2271,6 +2714,20 @@
   ],
   "isClassic": false,
   "universal": false,
+  "styles": [
+   {
+    "id": "bizcasual",
+    "score": 0.54
+   },
+   {
+    "id": "minimal",
+    "score": 0.47
+   }
+  ],
+  "occasions": [
+   "work",
+   "date"
+  ],
   "sources": [
    "R2 7"
   ],
@@ -2340,6 +2797,20 @@
   ],
   "isClassic": false,
   "universal": false,
+  "styles": [
+   {
+    "id": "minimal",
+    "score": 0.53
+   },
+   {
+    "id": "cityboy",
+    "score": 0.51
+   }
+  ],
+  "occasions": [
+   "weekend",
+   "active"
+  ],
   "sources": [
    "R2 7"
   ],
@@ -2397,6 +2868,21 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "minimal",
+    "score": 0.51
+   },
+   {
+    "id": "bizcasual",
+    "score": 0.51
+   }
+  ],
+  "occasions": [
+   "work",
+   "weekend",
+   "date"
+  ],
   "sources": [
    "R2 7"
   ],
@@ -2465,6 +2951,21 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "ivy",
+    "score": 0.68
+   },
+   {
+    "id": "bizcasual",
+    "score": 0.57
+   }
+  ],
+  "occasions": [
+   "work",
+   "weekend",
+   "date"
+  ],
   "sources": [
    "R2 7",
    "WKCORD"
@@ -2522,6 +3023,21 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "ivy",
+    "score": 0.68
+   },
+   {
+    "id": "bizcasual",
+    "score": 0.61
+   }
+  ],
+  "occasions": [
+   "work",
+   "weekend",
+   "date"
+  ],
   "sources": [
    "R2 7"
   ],
@@ -2579,6 +3095,20 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "cityboy",
+    "score": 0.56
+   },
+   {
+    "id": "minimal",
+    "score": 0.49
+   }
+  ],
+  "occasions": [
+   "weekend",
+   "active"
+  ],
   "sources": [
    "R2 7"
   ],
@@ -2637,6 +3167,17 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "minimal",
+    "score": 0.54
+   },
+   {
+    "id": "bizcasual",
+    "score": 0.54
+   }
+  ],
+  "occasions": [],
   "sources": [
    "R2 7"
   ],
@@ -2707,6 +3248,16 @@
   ],
   "isClassic": false,
   "universal": false,
+  "styles": [
+   {
+    "id": "cityboy",
+    "score": 0.44
+   }
+  ],
+  "occasions": [
+   "weekend",
+   "active"
+  ],
   "sources": [
    "R2 7"
   ],
@@ -2765,6 +3316,20 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "minimal",
+    "score": 0.51
+   },
+   {
+    "id": "gorpcore",
+    "score": 0.46
+   }
+  ],
+  "occasions": [
+   "weekend",
+   "active"
+  ],
   "sources": [
    "R2 7"
   ],
@@ -2821,6 +3386,20 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "minimal",
+    "score": 0.6
+   },
+   {
+    "id": "cityboy",
+    "score": 0.6
+   }
+  ],
+  "occasions": [
+   "weekend",
+   "date"
+  ],
   "sources": [
    "R2 7"
   ],
@@ -2889,6 +3468,20 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "minimal",
+    "score": 0.68
+   },
+   {
+    "id": "bizcasual",
+    "score": 0.57
+   }
+  ],
+  "occasions": [
+   "work",
+   "date"
+  ],
   "sources": [
    "R2 7"
   ],
@@ -2957,6 +3550,20 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "amekaji",
+    "score": 0.51
+   },
+   {
+    "id": "workwear",
+    "score": 0.51
+   }
+  ],
+  "occasions": [
+   "weekend",
+   "date"
+  ],
   "sources": [
    "R2 7"
   ],
@@ -3025,6 +3632,21 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "minimal",
+    "score": 0.52
+   },
+   {
+    "id": "ivy",
+    "score": 0.52
+   }
+  ],
+  "occasions": [
+   "work",
+   "weekend",
+   "date"
+  ],
   "sources": [
    "R2 7"
   ],
@@ -3095,6 +3717,20 @@
   ],
   "isClassic": false,
   "universal": false,
+  "styles": [
+   {
+    "id": "street",
+    "score": 0.53
+   },
+   {
+    "id": "amekaji",
+    "score": 0.44
+   }
+  ],
+  "occasions": [
+   "weekend",
+   "active"
+  ],
   "sources": [
    "R2 7"
   ],
@@ -3163,6 +3799,20 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "ivy",
+    "score": 0.59
+   },
+   {
+    "id": "minimal",
+    "score": 0.56
+   }
+  ],
+  "occasions": [
+   "weekend",
+   "active"
+  ],
   "sources": [
    "R2 7"
   ],
@@ -3245,6 +3895,17 @@
   ],
   "isClassic": false,
   "universal": false,
+  "styles": [
+   {
+    "id": "minimal",
+    "score": 0.68
+   },
+   {
+    "id": "bizcasual",
+    "score": 0.55
+   }
+  ],
+  "occasions": [],
   "sources": [
    "R2 7"
   ],
@@ -3314,6 +3975,20 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "bizcasual",
+    "score": 0.71
+   },
+   {
+    "id": "minimal",
+    "score": 0.6
+   }
+  ],
+  "occasions": [
+   "work",
+   "date"
+  ],
   "sources": [
    "R2 7"
   ],
@@ -3382,6 +4057,19 @@
   ],
   "isClassic": true,
   "universal": false,
+  "styles": [
+   {
+    "id": "street",
+    "score": 0.57
+   },
+   {
+    "id": "gorpcore",
+    "score": 0.51
+   }
+  ],
+  "occasions": [
+   "active"
+  ],
   "sources": [
    "R2 7"
   ],

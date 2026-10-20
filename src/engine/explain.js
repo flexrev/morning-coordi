@@ -30,10 +30,26 @@ export const FALLBACK = {
   'explain.outerScore': '아우터 조합 {score}/5',
   'explain.lengthBlock': '기장 조합이 맞지 않아요',
   'explain.seasonBlock': '{season}에 맞지 않는 아이템이 많아요',
+  // Phase 6-B (CX) — 스타일·상황·소품·패턴·레이어. S3 카드 줄에는 올리지 않는다(candidate.explain 불변, candidate.styleExplain·accessories에만)
+  'explain.style.boost': '{style} 스타일 {delta}',
+  'explain.style.tag': '{style} 느낌',
+  'explain.occasion.adj': '{occasion}에 {delta}',
+  'explain.occasion.window': '{occasion} 격식 창 밖 아이템 {n}개 ({delta})',
+  'explain.occasion.target': '{occasion}에 딱 맞는 격식 (+0.2)',
+  'explain.occasion.relaxed': '{occasion} 조건을 일부 완화했어요 ({stages})',
+  'explain.acc': '{accessory}: {reason}',
+  'explain.pattern': '{reason} ({delta})',
+  'explain.midLayer': '{mid|은는} {reason} ({score}/5)',
+  'explain.midLength': '{mid|이가} {outer}보다 길어요',
+  'explain.midWeight': '{mid|이가} {outer}보다 두꺼워요',
+  'explain.midFormality': '{mid} 격식이 베이스·아우터와 안 맞아요',
+  'explain.twoOuter': '{inner}+{outer}: {reason} ({score}/5)',
+  'explain.twoOuterLength': '안쪽 {inner|이가} 바깥 {outer}보다 짧지 않아요 ({delta})',
+  'explain.layerScore': '레이어링 {score}/5',
 };
 
 // 파라미터별 라벨 네임스페이스 (id → 한국어)
-const PARAM_NS = { color: 'color', a: 'color', b: 'color', season: 'season', tone: 'tone', from: 'tone', to: 'tone', shoe: 'shoe', outer: 'outerType' };
+const PARAM_NS = { color: 'color', a: 'color', b: 'color', season: 'season', tone: 'tone', from: 'tone', to: 'tone', shoe: 'shoe', outer: 'outerType', inner: 'outerType', style: 'style', occasion: 'occasion', pattern: 'pattern', mid: 'midType', accessory: 'accessory' };
 const PARAM_NS_MAT = { a: 'material', b: 'material' };
 
 const fmtDelta = (d) => (typeof d !== 'number' ? String(d) : d > 0 ? `+${d}` : d < 0 ? `−${Math.abs(d)}` : '0');
@@ -103,7 +119,7 @@ export function itemCaption(item, labels, index) {
   let name = item.itemName;
   if (item.category === 'shoes' || !item.material) return name;
   const implied = item.category === 'top' && index?.topTypes?.get(item.itemType)?.material === item.material;
-  const implied2 = item.category === 'outer' && index?.outerTypes?.get(item.itemType)?.material === item.material;
+  const implied2 = (item.category === 'outer' && index?.outerTypes?.get(item.itemType)?.material === item.material) || (item.category === 'mid' && index?.midTypes?.get(item.itemType)?.material === item.material);
   const mLabel = L[`material.${item.material}`] ?? item.material;
   const mShort = index?.labels?.get(`material.${item.material}`)?.shortLabel ?? mLabel;
   const parts = [mLabel, mShort, ...mLabel.split(/[\s/]/).filter((p) => p.length >= 2)].filter(Boolean); // '울'(1자)은 전체 라벨로만 비교
@@ -113,6 +129,6 @@ export function itemCaption(item, labels, index) {
 
 /** 코디 캡션: "흰 티 · 인디고 데님 · 흰 스니커즈" */
 export function captionOutfit(outfit, labels, index) {
-  const order = { top: 0, bottom: 1, shoes: 2, outer: 3 };
+  const order = { top: 0, mid: 1, bottom: 2, shoes: 3, outer: 4 };
   return [...outfit.items].sort((a, b) => order[a.category] - order[b.category] || (a.layer ?? 0) - (b.layer ?? 0)).map((i) => itemCaption(i, labels, index)).join(' · ');
 }

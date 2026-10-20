@@ -1,6 +1,7 @@
 {
   "viewBox": "0 0 200 400",
   "zOrder": [
+    "stage",
     "base",
     "cap",
     "socks",
@@ -8,6 +9,7 @@
     "bottom",
     "belt",
     "top",
+    "mid",
     "outer",
     "scarf",
     "bag",
@@ -26,13 +28,15 @@
     "--c-shoes",
     "--c-sole",
     "--c-outer",
+    "--c-mid",
     "--c-belt",
     "--c-watch",
     "--c-metal",
     "--c-socks",
     "--c-bag",
     "--c-cap",
-    "--c-scarf"
+    "--c-scarf",
+    "--stage-glow"
   ],
   "parts": [
     "main",
@@ -40,9 +44,59 @@
     "detail",
     "shadow"
   ],
-  "totalPaths": 89,
-  "totalBytes": 26369,
+  "stage": {
+    "spotlight": {
+      "file": "stage-spotlight.svg",
+      "opacity": {
+        "card120": 0.55,
+        "detail300": 0.75
+      },
+      "blur": {
+        "card120": "0",
+        "detail300": "6px"
+      },
+      "centerAlpha": 0.25
+    },
+    "floor": {
+      "file": "stage-floor.svg",
+      "opacity": {
+        "card120": 0.8,
+        "detail300": 1
+      },
+      "blur": {
+        "card120": "0",
+        "detail300": "3px"
+      },
+      "centerAlpha": 0.48
+    }
+  },
+  "totalPaths": 160,
+  "totalBytes": 46071,
   "layers": [
+    {
+      "file": "stage-spotlight.svg",
+      "slot": "stage",
+      "type": "spotlight",
+      "fit": null,
+      "length": null,
+      "labelKo": "스테이지 스포트라이트 (인물 뒤 타원광)",
+      "paths": 8,
+      "bytes": 1376,
+      "shade": false,
+      "details": false
+    },
+    {
+      "file": "stage-floor.svg",
+      "slot": "stage",
+      "type": "floor",
+      "fit": null,
+      "length": null,
+      "labelKo": "스테이지 바닥 그림자 (신발 아래)",
+      "paths": 4,
+      "bytes": 678,
+      "shade": true,
+      "details": false
+    },
     {
       "file": "figure-base.svg",
       "slot": "base",
@@ -54,6 +108,18 @@
       "bytes": 1490,
       "shade": true,
       "details": false
+    },
+    {
+      "file": "acc-beanie.svg",
+      "slot": "cap",
+      "type": "beanie",
+      "fit": null,
+      "length": null,
+      "labelKo": "비니 (cap 슬롯)",
+      "paths": 4,
+      "bytes": 944,
+      "shade": true,
+      "details": true
     },
     {
       "file": "acc-cap.svg",
@@ -92,6 +158,18 @@
       "details": true
     },
     {
+      "file": "shoes-chukka.svg",
+      "slot": "shoes",
+      "type": "chukka",
+      "fit": null,
+      "length": null,
+      "labelKo": "척카 부츠 (2아일릿)",
+      "paths": 3,
+      "bytes": 1053,
+      "shade": true,
+      "details": true
+    },
+    {
       "file": "shoes-derby.svg",
       "slot": "shoes",
       "type": "derby",
@@ -119,6 +197,30 @@
       ]
     },
     {
+      "file": "shoes-running.svg",
+      "slot": "shoes",
+      "type": "running",
+      "fit": null,
+      "length": null,
+      "labelKo": "러닝화 (두꺼운 미드솔)",
+      "paths": 4,
+      "bytes": 1322,
+      "shade": true,
+      "details": true
+    },
+    {
+      "file": "shoes-sandal.svg",
+      "slot": "shoes",
+      "type": "sandal",
+      "fit": null,
+      "length": null,
+      "labelKo": "샌들 (스트랩·맨발)",
+      "paths": 4,
+      "bytes": 1160,
+      "shade": true,
+      "details": true
+    },
+    {
       "file": "shoes-sneaker.svg",
       "slot": "shoes",
       "type": "sneaker",
@@ -127,6 +229,30 @@
       "labelKo": "스니커즈 (흰/컬러 공용·흰 밑창)",
       "paths": 4,
       "bytes": 1213,
+      "shade": true,
+      "details": true
+    },
+    {
+      "file": "shoes-workboot.svg",
+      "slot": "shoes",
+      "type": "workboot",
+      "fit": null,
+      "length": null,
+      "labelKo": "워크 부츠 (레이스업·러그솔)",
+      "paths": 3,
+      "bytes": 1158,
+      "shade": true,
+      "details": true
+    },
+    {
+      "file": "bottom-slim.svg",
+      "slot": "bottom",
+      "type": "trouser",
+      "fit": "slim",
+      "length": "regular",
+      "labelKo": "하의 슬림",
+      "paths": 3,
+      "bytes": 928,
       "shade": true,
       "details": true
     },
@@ -150,7 +276,7 @@
       "length": "regular",
       "labelKo": "하의 테이퍼드",
       "paths": 3,
-      "bytes": 930,
+      "bytes": 937,
       "shade": true,
       "details": true
     },
@@ -175,6 +301,18 @@
       "labelKo": "벨트",
       "paths": 5,
       "bytes": 963,
+      "shade": true,
+      "details": true
+    },
+    {
+      "file": "top-hoodie-loose.svg",
+      "slot": "top",
+      "type": "hoodie",
+      "fit": "loose",
+      "length": "regular",
+      "labelKo": "후디 (루즈·드롭숄더)",
+      "paths": 4,
+      "bytes": 1376,
       "shade": true,
       "details": true
     },
@@ -215,6 +353,42 @@
       "details": true
     },
     {
+      "file": "top-polo-loose.svg",
+      "slot": "top",
+      "type": "polo",
+      "fit": "loose",
+      "length": "regular",
+      "labelKo": "폴로 (루즈·드롭숄더)",
+      "paths": 5,
+      "bytes": 1400,
+      "shade": true,
+      "details": true
+    },
+    {
+      "file": "top-polo-regular.svg",
+      "slot": "top",
+      "type": "polo",
+      "fit": "regular",
+      "length": "regular",
+      "labelKo": "폴로 (레귤러)",
+      "paths": 5,
+      "bytes": 1389,
+      "shade": true,
+      "details": true
+    },
+    {
+      "file": "top-shirt-loose.svg",
+      "slot": "top",
+      "type": "shirt",
+      "fit": "loose",
+      "length": "regular",
+      "labelKo": "셔츠 (루즈·드롭숄더)",
+      "paths": 4,
+      "bytes": 1256,
+      "shade": true,
+      "details": true
+    },
+    {
       "file": "top-shirt-regular.svg",
       "slot": "top",
       "type": "shirt",
@@ -249,6 +423,45 @@
       "bytes": 1018,
       "shade": true,
       "details": true
+    },
+    {
+      "file": "mid-cardigan.svg",
+      "slot": "mid",
+      "type": "cardigan",
+      "fit": "regular",
+      "length": "regular",
+      "labelKo": "가디건 (미드 레이어)",
+      "paths": 5,
+      "bytes": 1383,
+      "shade": true,
+      "details": true
+    },
+    {
+      "file": "mid-overshirt.svg",
+      "slot": "mid",
+      "type": "overshirt",
+      "fit": "regular",
+      "length": "regular",
+      "labelKo": "오버셔츠 (미드 레이어)",
+      "paths": 4,
+      "bytes": 1278,
+      "shade": true,
+      "details": true
+    },
+    {
+      "file": "mid-vest.svg",
+      "slot": "mid",
+      "type": "vest",
+      "fit": "regular",
+      "length": "regular",
+      "labelKo": "베스트 (니트·퀼팅 공용, 미드 레이어)",
+      "paths": 5,
+      "bytes": 1279,
+      "shade": true,
+      "details": true,
+      "optionalDetails": [
+        "quilt"
+      ]
     },
     {
       "file": "outer-long.svg",
@@ -311,6 +524,18 @@
       "details": true
     },
     {
+      "file": "acc-backpack.svg",
+      "slot": "bag",
+      "type": "backpack",
+      "fit": null,
+      "length": null,
+      "labelKo": "백팩 (bag 슬롯, 어깨끈 2 + 가슴 스트랩)",
+      "paths": 3,
+      "bytes": 887,
+      "shade": true,
+      "details": true
+    },
+    {
       "file": "acc-bag.svg",
       "slot": "bag",
       "type": "tote",
@@ -319,6 +544,18 @@
       "labelKo": "토트백 (오른어깨 = 그림 왼쪽)",
       "paths": 3,
       "bytes": 774,
+      "shade": true,
+      "details": true
+    },
+    {
+      "file": "acc-crossbody.svg",
+      "slot": "bag",
+      "type": "crossbody",
+      "fit": null,
+      "length": null,
+      "labelKo": "크로스바디 (bag 슬롯, 왼어깨→오른쪽 허리)",
+      "paths": 3,
+      "bytes": 828,
       "shade": true,
       "details": true
     },

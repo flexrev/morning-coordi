@@ -1,0 +1,598 @@
+[
+ {
+  "id": "minimal",
+  "labelKo": "미니멀",
+  "labelEn": "Minimal",
+  "phase": 1,
+  "formality": {
+   "min": 3,
+   "max": 9
+  },
+  "tones": [
+   "mono",
+   "neutral"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "fits": {
+   "top": [
+    "regular",
+    "loose"
+   ],
+   "bottom": [
+    "tapered",
+    "straight"
+   ],
+   "trouserLength": [
+    "nobreak"
+   ]
+  },
+  "signature": {
+   "top": [
+    "knitWool",
+    "knitCashmere",
+    "tee",
+    "dressShirt"
+   ],
+   "bottom": [
+    "wool",
+    "denimBlack",
+    "chino"
+   ],
+   "shoes": [
+    "sneakerWhite",
+    "derby",
+    "chelsea",
+    "loaferPenny"
+   ],
+   "outer": [
+    "chesterfield",
+    "trench",
+    "balmacaan"
+   ]
+  },
+  "avoid": [
+   "accent2",
+   "pattern2",
+   "logo",
+   "fourColors"
+  ],
+  "sources": [
+   "VKMIN",
+   "ESQMIN",
+   "WKDENIM",
+   "VKMIN2"
+  ],
+  "flags": [],
+  "note": ""
+ },
+ {
+  "id": "amekaji",
+  "labelKo": "아메카지",
+  "labelEn": "Amekaji",
+  "phase": 1,
+  "formality": {
+   "min": 2,
+   "max": 5
+  },
+  "tones": [
+   "earth",
+   "navyBase"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "fits": {
+   "top": [
+    "regular",
+    "loose"
+   ],
+   "bottom": [
+    "straight",
+    "wide"
+   ],
+   "trouserLength": [
+    "half",
+    "nobreak"
+   ]
+  },
+  "signature": {
+   "top": [
+    "flannelShirt",
+    "denimShirt",
+    "henley",
+    "tee",
+    "sweatshirt"
+   ],
+   "bottom": [
+    "denimIndigo",
+    "chino",
+    "corduroy",
+    "denimWashed"
+   ],
+   "shoes": [
+    "workboot",
+    "chukka",
+    "sneakerColor"
+   ],
+   "outer": [
+    "denimJacket",
+    "shirtJacket",
+    "blouson",
+    "leatherJacket"
+   ]
+  },
+  "avoid": [
+   "wool",
+   "oxford",
+   "loaferTassel",
+   "pinstripe",
+   "black2"
+  ],
+  "sources": [
+   "NTAME",
+   "STRUM",
+   "TRADEJP",
+   "KHSTYLE6"
+  ],
+  "flags": [],
+  "note": ""
+ },
+ {
+  "id": "cityboy",
+  "labelKo": "시티보이",
+  "labelEn": "City boy",
+  "phase": 2,
+  "formality": {
+   "min": 2,
+   "max": 6
+  },
+  "tones": [
+   "neutral",
+   "earth",
+   "pastel"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "fits": {
+   "top": [
+    "loose",
+    "oversized"
+   ],
+   "bottom": [
+    "wide",
+    "straight"
+   ],
+   "trouserLength": [
+    "crop",
+    "nobreak"
+   ]
+  },
+  "signature": {
+   "top": [
+    "oxfordShirt",
+    "tee",
+    "sweatshirt",
+    "knitCotton",
+    "linenShirt"
+   ],
+   "bottom": [
+    "chino",
+    "denimWashed",
+    "wool",
+    "linen"
+   ],
+   "shoes": [
+    "loaferPenny",
+    "sneakerWhite",
+    "sneakerColor",
+    "sandal"
+   ],
+   "outer": [
+    "shirtJacket",
+    "cardigan",
+    "balmacaan",
+    "duffle",
+    "overshirt"
+   ]
+  },
+  "avoid": [
+   "slim",
+   "oxford",
+   "dressShirtTie",
+   "longPuffer"
+  ],
+  "sources": [
+   "YOKO",
+   "POPWIKI",
+   "SNKCITY",
+   "ESQCITY",
+   "VKWIDE"
+  ],
+  "flags": [],
+  "note": ""
+ },
+ {
+  "id": "bizcasual",
+  "labelKo": "비즈니스 캐주얼",
+  "labelEn": "Business casual",
+  "phase": 1,
+  "formality": {
+   "min": 5,
+   "max": 9
+  },
+  "tones": [
+   "neutral",
+   "navyBase",
+   "mono"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "fits": {
+   "top": [
+    "regular",
+    "slim"
+   ],
+   "bottom": [
+    "tapered",
+    "slim"
+   ],
+   "trouserLength": [
+    "nobreak",
+    "half"
+   ]
+  },
+  "signature": {
+   "top": [
+    "dressShirt",
+    "oxfordShirt",
+    "knitWool",
+    "poloWool",
+    "knitCashmere"
+   ],
+   "bottom": [
+    "wool",
+    "chino",
+    "flannel",
+    "denimBlack"
+   ],
+   "shoes": [
+    "loaferPenny",
+    "derby",
+    "loaferTassel",
+    "chelsea",
+    "oxford"
+   ],
+   "outer": [
+    "blazer",
+    "trench",
+    "chesterfield",
+    "balmacaan"
+   ]
+  },
+  "avoid": [
+   "hoodie",
+   "sweatshirt",
+   "running",
+   "sandal",
+   "shortPuffer",
+   "longPuffer",
+   "camo"
+  ],
+  "sources": [
+   "SUITBC",
+   "ALLWORK",
+   "ALLBLZ",
+   "GQKSUM"
+  ],
+  "flags": [],
+  "note": ""
+ },
+ {
+  "id": "street",
+  "labelKo": "스트릿",
+  "labelEn": "Street",
+  "phase": 2,
+  "formality": {
+   "min": 1,
+   "max": 4
+  },
+  "tones": [
+   "mono",
+   "accent"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "fits": {
+   "top": [
+    "oversized",
+    "loose"
+   ],
+   "bottom": [
+    "wide",
+    "straight"
+   ],
+   "trouserLength": [
+    "full",
+    "nobreak"
+   ]
+  },
+  "signature": {
+   "top": [
+    "hoodie",
+    "sweatshirt",
+    "tee"
+   ],
+   "bottom": [
+    "jersey",
+    "denimWashed",
+    "nylonTech",
+    "denimBlack"
+   ],
+   "shoes": [
+    "sneakerColor",
+    "running",
+    "sneakerWhite"
+   ],
+   "outer": [
+    "coachJacket",
+    "shortPuffer",
+    "blouson",
+    "leatherJacket"
+   ]
+  },
+  "avoid": [
+   "wool",
+   "loaferTassel",
+   "oxford",
+   "dressShirt",
+   "pinstripe"
+  ],
+  "sources": [
+   "VKCARGO",
+   "VKNB",
+   "R2 7"
+  ],
+  "flags": [],
+  "note": ""
+ },
+ {
+  "id": "gorpcore",
+  "labelKo": "고프코어",
+  "labelEn": "Gorpcore",
+  "phase": 2,
+  "formality": {
+   "min": 1,
+   "max": 4
+  },
+  "tones": [
+   "earth",
+   "mono",
+   "accent"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "fits": {
+   "top": [
+    "regular",
+    "loose"
+   ],
+   "bottom": [
+    "tapered",
+    "straight"
+   ],
+   "trouserLength": [
+    "nobreak",
+    "crop"
+   ]
+  },
+  "signature": {
+   "top": [
+    "tee",
+    "hoodie",
+    "henley"
+   ],
+   "bottom": [
+    "nylonTech",
+    "jersey",
+    "chino"
+   ],
+   "shoes": [
+    "running",
+    "workboot",
+    "sandal"
+   ],
+   "outer": [
+    "fleece",
+    "shortPuffer",
+    "longPuffer",
+    "coachJacket"
+   ]
+  },
+  "avoid": [
+   "wool",
+   "flannel",
+   "loaferPenny",
+   "derby",
+   "oxford",
+   "blazer",
+   "trench"
+  ],
+  "sources": [
+   "VKGORP",
+   "KHGORP",
+   "GQKGORP",
+   "HSSGORP",
+   "SNKGORP"
+  ],
+  "flags": [],
+  "note": ""
+ },
+ {
+  "id": "ivy",
+  "labelKo": "클래식·아이비",
+  "labelEn": "Classic Ivy",
+  "phase": 1,
+  "formality": {
+   "min": 4,
+   "max": 8
+  },
+  "tones": [
+   "navyBase",
+   "neutral",
+   "earth"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "fits": {
+   "top": [
+    "regular"
+   ],
+   "bottom": [
+    "tapered",
+    "regular"
+   ],
+   "trouserLength": [
+    "crop",
+    "nobreak"
+   ]
+  },
+  "signature": {
+   "top": [
+    "oxfordShirt",
+    "poloPique",
+    "knitCotton",
+    "knitWool",
+    "poloWool"
+   ],
+   "bottom": [
+    "chino",
+    "corduroy",
+    "flannel",
+    "wool"
+   ],
+   "shoes": [
+    "loaferPenny",
+    "chukka",
+    "loaferTassel",
+    "sneakerWhite"
+   ],
+   "outer": [
+    "blazer",
+    "cardigan",
+    "duffle",
+    "peacoat",
+    "balmacaan"
+   ]
+  },
+  "avoid": [
+   "hoodie",
+   "running",
+   "longPuffer",
+   "camo",
+   "oversized"
+  ],
+  "sources": [
+   "OPUMOIVY",
+   "STUIVY",
+   "VOUIVY",
+   "GQK8",
+   "VKFW26"
+  ],
+  "flags": [],
+  "note": ""
+ },
+ {
+  "id": "workwear",
+  "labelKo": "워크웨어",
+  "labelEn": "Workwear",
+  "phase": 2,
+  "formality": {
+   "min": 2,
+   "max": 5
+  },
+  "tones": [
+   "earth",
+   "navyBase"
+  ],
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "fits": {
+   "top": [
+    "regular",
+    "loose"
+   ],
+   "bottom": [
+    "straight",
+    "wide"
+   ],
+   "trouserLength": [
+    "half",
+    "nobreak"
+   ]
+  },
+  "signature": {
+   "top": [
+    "tee",
+    "henley",
+    "denimShirt",
+    "flannelShirt"
+   ],
+   "bottom": [
+    "denimIndigo",
+    "chino",
+    "corduroy",
+    "denimWashed"
+   ],
+   "shoes": [
+    "workboot",
+    "chukka",
+    "derby"
+   ],
+   "outer": [
+    "shirtJacket",
+    "denimJacket",
+    "duffle",
+    "blouson"
+   ]
+  },
+  "avoid": [
+   "oxford",
+   "loaferTassel",
+   "pinstripe",
+   "wool",
+   "knitCashmere"
+  ],
+  "sources": [
+   "STRIDE",
+   "MRPWORK",
+   "MOMCHORE",
+   "DAZEDCW"
+  ],
+  "flags": [],
+  "note": ""
+ }
+]

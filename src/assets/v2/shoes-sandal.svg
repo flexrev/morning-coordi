@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="샌들 (스트랩·맨발)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="shoes" data-type="sandal" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" data-kind="skin" fill="var(--c-skin,#C9A98C)" vector-effect="non-scaling-stroke" d="M76 364L97 364L98 382L54 382Q60 372 76 364ZM124 364L103 364L102 382L146 382Q140 372 124 364Z"/>
+<path data-part="main" fill="var(--c-shoes,#222222)" vector-effect="non-scaling-stroke" d="M50 382L98 382L98 392L54 392Q44 392 50 382ZM58 384L70 368L76 368L64 384ZM94 384L80 368L74 368L86 384ZM150 382L102 382L102 392L146 392Q156 392 150 382ZM142 384L130 368L124 368L136 384ZM106 384L120 368L126 368L114 384Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.18)" stroke="none" d="M44 388L98 388L98 392L54 392Q45 392 44 388ZM156 388L102 388L102 392L146 392Q155 392 156 388ZM90 364L97 364L98 382L92 382Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M62 376L78 376M138 376L122 376"/>
+</g>
+</svg>

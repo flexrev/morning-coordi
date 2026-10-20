@@ -468,3 +468,24 @@ rank(candidates, { style, occasion }):
 4. 스타일 affinity 가중치 1,008개는 CX 단독 판단 — 리서치 출처는 품목 수준까지만 말하고 핏·색 × 스타일 수치는 없다. 게이트 5에서 **52개 코디의 자동 태그 결과**를 보고 가중치를 조정하는 반복이 필요(V-26이 정의↔가중치 모순을 잡아준다).
 5. 수트·카고 팬츠·반팔 셔츠·터틀넥·버킷햇·니트 베스트 등 **품목 enum 부재**로 스트릿·고프코어·격식이 근사치. 2차에 `topTypes`·`outerTypes`·`bottomTypes`(현재는 소재만) 확대 제안.
 6. 고프코어는 국내 매체 기준 2026년 "러닝코어"로 이동 중 — 2차 범위로 둔 이유.
+
+## 12. 6-B 구현 메모 (CX, 2026-10-20) — 설계와 달라진 점
+
+구현 상세는 `docs/architecture/data-schema.md` 11절·`engine-spec.md` 12절·`data-conversion-log.md` 9절. 이 문서의 설계와 다른 점만 적는다.
+
+| 절 | 설계 | 구현 | 이유 |
+|---|---|---|---|
+| 1-4 | `STYLE_TAGS_MAX = 3` | **2** (`styleTags()` = 상위 2, 임계 못 넘으면 dominant 1개) | 게이트 5 지시 "top-2". 태그 없는 코디 0 유지 |
+| 1-4 검산 | o01 minimal 18.5 / 분모 28.5 = 0.65 | minimal 17 / 28.5 = **0.60** (amekaji 0.54) | 분포 조정으로 `color white` minimal 3 → 2 (data 2-1). 태그는 그대로 minimal·amekaji |
+| 1-4 1차 범위 | 표 1-1 cityboy phase 1 | **phase 2** (`scripts/build/styles.mjs PHASE1_STYLES`가 phase를 결정, 표도 수정) | PM D-1: minimal·bizcasual·ivy·amekaji 4개 |
+| 2-1 표 2-1 | — | 시그니처 품목 19셀을 +2로 올림 | V-26(시그니처 ≥ +2) 통과. 목록은 data-schema 11-4 |
+| 2 처리 규칙 1 | avoidMaterials | 신발 소재에는 적용 안 함(shoeTypes로만) | sneakerWhite가 가죽이라 `active` 선호 신발이 걸림 |
+| 2 처리 규칙 1 | 신발 avoid는 끝까지 유지 | 4단계(최후)에서 신발 avoid도 해제 | "항상 3장" 보장이 우선. `applied.relaxed`에 `shoeTypes`가 남으면 UI가 알 수 있다 |
+| 4-3 | Deep에서 patternize 자동 | **opt-in** `patterns: true` | 7-3 "옵션 없는 Deep은 byTone·byHue·variations 동일" 원칙 |
+| 4-3 | 패턴 delta = adjust 축 | 같되 합을 −2..+1로 클램프 | +1+1 중첩으로 변주가 클래식을 앞지르는 폭 제한 |
+| 7-1 | `Query.style/occasion/accessories/layering` | + `patterns`, 그리고 `recommend(base, season, mode, opts)` 위치 인자 형태도 허용 | FE가 gate-5 3절 3항의 형태로 호출 |
+| 7-1 | `Candidate.styleTags: StyleId[]` | `[{ id, score }]` + `tags: { style, occasion }` + `tagLabels` | UX 7-5 계약(`candidate.tags.style`)도 같이 제공 |
+| 7-2 | 설명 `explain.styleBoost` | `candidate.styleReasons`/`styleExplain`(키 `explain.style.*`·`explain.occasion.*`·`explain.acc.*`)로 분리, `candidate.explain`은 불변 | S3 카드 줄에 스타일·상황 문구가 섞이지 않게 |
+| 7-3 Deep+accessories | 옵션 ON일 때만 | Deep은 기본 ON, Quick은 요청 시만. 결과에 실리는 카드에만 계산 | UI가 S6 소품 섹션을 바로 그릴 수 있게. 300장 전부 계산은 낭비 |
+| 7-5 E-27 | 평균 포멀도 ≥ 7 | ≥ 6 | 베이지 치노(5) 베이스로는 최대 6.75. 수트 품목(2차) 전까지 불가 |
+| 5-2 | 미드 weight > 아우터 weight = 2 | 동일 + regular 미드 + short 아우터 = block, 포멀도 ±2 밖 = warn | 설계 공통 규칙 그대로. `midType` affinity 행은 없어 스타일 벡터엔 색만 기여 |

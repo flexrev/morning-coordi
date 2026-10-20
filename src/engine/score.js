@@ -1,6 +1,7 @@
 // 점수 합산 — engine-spec.md 2·3절. 구현: C2.
-import { WEIGHTS, W_COLOR, W_STYLE, K_ADJ, FORMALITY_WARN, FORMALITY_BLOCK, FORMALITY_EXEMPT_SOURCES, SEASON_COLOR_PENALTY, DEFAULT_SCORE, PAIR_WEIGHT_TOP_OUTER, LAYER_OVER_PENALTY } from './constants.js';
+import { WEIGHTS, W_COLOR, W_STYLE, K_ADJ, FORMALITY_WARN, FORMALITY_BLOCK, FORMALITY_EXEMPT_SOURCES, SEASON_COLOR_PENALTY, DEFAULT_SCORE, PAIR_WEIGHT_TOP_OUTER, LAYER_OVER_PENALTY, W_LAYER, PAIR_WEIGHT_MID, TWO_OUTER_INNER_WEIGHT } from './constants.js';
 import { colorPair, toneModifier, fitScore, lengthScore, matPair, shoeScore, outerScore, formalityLevel, itemSeasons } from './lookup.js';
+import { evalPatterns, midLayerScore, twoOuterScore } from './style.js';
 
 const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 const round2 = (v) => Math.round(v * 100) / 100;
@@ -14,14 +15,16 @@ export function outerOf(outfit) {
   if (outers.length === 1) return outers[0];
   return outers.find((o) => o.layer === 2) ?? outers[outers.length - 1];
 }
-const parts = (outfit) => ({ top: by(outfit, 'top')[0], bottom: by(outfit, 'bottom')[0], shoes: by(outfit, 'shoes')[0], outer: outerOf(outfit), outerCount: by(outfit, 'outer').length });
+const parts = (outfit) => ({ top: by(outfit, 'top')[0], bottom: by(outfit, 'bottom')[0], shoes: by(outfit, 'shoes')[0], outer: outerOf(outfit), outerCount: by(outfit, 'outer').length, mid: by(outfit, 'mid')[0] ?? null });
 
 /** @returns {import('./types.js').AxisScore} */
 export function scoreColorAxis(index, outfit, season) {
-  const { top, bottom, shoes, outer } = parts(outfit);
+  const { top, bottom, shoes, outer, mid } = parts(outfit);
   const reasons = [];
   const pairs = [[bottom, top, 1], [bottom, shoes, 1]];
   if (outer) pairs.push([bottom, outer, 1], [top, outer, PAIR_WEIGHT_TOP_OUTER]);
+  // D-3: mid가 있을 때만 top↔mid·mid↔outer(0.5) — mid 없는 코디는 기존과 동일
+  if (mid) { pairs.push([top, mid, PAIR_WEIGHT_MID]); if (outer) pairs.push([mid, outer, PAIR_WEIGHT_MID]); }
   let sum = 0;
   let wsum = 0;
   let toneSum = 0;
@@ -103,8 +106,8 @@ export function formalityGap(index, outfit) {
 
 /** adjust.when 평가용 파생 속성 (engine-spec 3-7) */
 export function deriveProps(index, outfit, season) {
-  const { top, bottom, shoes, outer } = parts(outfit);
-  const mats = [top, bottom, outer].filter((i) => i && i.material).map((i) => i.material);
+  const { top, bottom, shoes, outer, mid } = parts(outfit);
+  const mats = [top, bottom, outer, mid].filter((i) => i && i.material).map((i) => i.material);
   const weights = new Set(mats.map((m) => index.materials.get(m)?.weight).filter(Boolean));
   const colorCount = new Set(outfit.items.filter((i) => !(i.category === 'shoes' && index.colors.get(i.color)?.tones.includes('neutral'))).map((i) => i.color)).size;
   return {
@@ -128,7 +131,7 @@ function whenMatches(when, props) {
 
 /** @returns {import('./types.js').OutfitScore['style']} */
 export function scoreStyleAxes(index, outfit, season) {
-  const { top, bottom, shoes, outer, outerCount } = parts(outfit);
+  const { top, bottom, shoes, outer, outerCount, mid } = parts(outfit);
   const axis = (name, score, weight, reasons = []) => ({ axis: name, score: round2(score), weight, reasons });
 
   // 3-1 핏
@@ -144,6 +147,7 @@ export function scoreStyleAxes(index, outfit, season) {
   // 3-3 소재
   const matPairs = [[top, bottom], [bottom, shoes]];
   if (outer) matPairs.push([bottom, outer], [top, outer]);
+  if (mid) { matPairs.push([top, mid]); if (outer) matPairs.push([mid, outer]); }
   const matReasons = [];
   let matSum = 0; let matN = 0;
   for (const [a, b] of matPairs) {
@@ -166,7 +170,19 @@ export function scoreStyleAxes(index, outfit, season) {
   let outerAxis = null;
   if (outer) {
     const o = outerScore(index, outer.itemType, bottom, shoes.shoeType);
-    outerAxis = axis('outer', o.score, WEIGHTS.outer, [{ key: 'explain.outerScore', params: { outer: outer.itemType, score: o.score }, severity: o.score === 1 ? 'block' : 'info' }]);
+    const oReasons = [{ key: 'explain.outerScore', params: { outer: outer.itemType, score: o.score }, severity: o.score === 1 ? 'block' : 'info' }];
+    let oScore = o.score;
+    // Phase 6-B 5-3: 2겹 아우터면 안쪽을 twoOuterRules로 평가해 outer 축에 0.5 가중 평균 (규칙 파일 없으면 기존과 동일)
+    const two = outerCount >= 2 ? twoOuterScore(index, outfit, season) : null;
+    if (two) { oScore = round2((o.score + TWO_OUTER_INNER_WEIGHT * two.score) / (1 + TWO_OUTER_INNER_WEIGHT)); oReasons.push(...two.reasons); if (two.reasons.some((r) => r.severity === 'block')) oScore = 1; }
+    outerAxis = axis('outer', oScore, WEIGHTS.outer, oReasons);
+  }
+
+  // Phase 6-B (D-3): mid 레이어 축 — mid가 있을 때만 존재(ΣW에 W_LAYER 포함)
+  let layerAxis = null;
+  if (mid) {
+    const ml = midLayerScore(index, outfit, season);
+    layerAxis = axis('layer', ml.score, W_LAYER, [{ key: 'explain.layerScore', params: { score: ml.score }, severity: 'info' }, ...ml.reasons]);
   }
 
   // 3-6 계절
@@ -178,7 +194,7 @@ export function scoreStyleAxes(index, outfit, season) {
   }
   let seasonS = Math.max(1, 5 - 2 * k);
   const maxLayers = index.layerRules.get(season)?.maxLayers ?? 3;
-  const layers = 1 + outerCount;
+  const layers = 1 + outerCount + (mid ? 1 : 0);
   if (layers > maxLayers) { seasonS = Math.max(1, seasonS + LAYER_OVER_PENALTY); seasonReasons.push({ key: 'explain.layerOver', params: { season, layers, maxLayers }, severity: 'warn', delta: LAYER_OVER_PENALTY }); }
   if (seasonS === 1) seasonReasons.push({ key: 'explain.seasonBlock', params: { season }, severity: 'block' });
   const seasonAxis = axis('season', seasonS, WEIGHTS.season, seasonReasons);
@@ -194,7 +210,10 @@ export function scoreStyleAxes(index, outfit, season) {
     const key = rule.id === 'adjFourColors' ? 'explain.fourColors' : rule.id === 'adjSameColorTopBottom' ? 'explain.sameColor' : 'explain.adjust';
     adjReasons.push({ key, params: { id: rule.id, reason: rule.reason, delta: rule.delta }, delta: rule.delta, severity: disputed || rule.delta === 0 ? 'info' : rule.delta < 0 ? 'warn' : 'info', sources: rule.sources });
   }
-  const adjust = { axis: 'adjust', score: delta, weight: K_ADJ, reasons: adjReasons };
+  // Phase 6-B 4-3: 패턴 규칙 delta는 adjust 축과 같은 자리. 패턴 아이템이 없으면(또는 patterns.json 없으면) 무영향
+  const pat = evalPatterns(index, outfit, season);
+  if (pat.reasons.length) { delta += pat.delta; adjReasons.push(...pat.reasons); }
+  const adjust = { axis: 'adjust', score: delta, weight: K_ADJ, reasons: adjReasons, patternCount: pat.count, patternBlocked: pat.blocked };
 
   // 3-8 포멀도
   const fg = formalityGap(index, outfit);
@@ -202,7 +221,7 @@ export function scoreStyleAxes(index, outfit, season) {
   if (fg.gap >= FORMALITY_WARN) fReasons.push({ key: 'explain.formalityGap', params: { gap: fg.gap, hi: fg.hi?.itemName ?? '', lo: fg.lo?.itemName ?? '', hiLevel: fg.hiLevel, loLevel: fg.loLevel }, severity: fg.blocked ? 'block' : 'warn', delta: -fg.penalty });
   const formality = { axis: 'formality', score: 5 - fg.penalty, weight: 1, reasons: fReasons, gap: fg.gap, penalty: fg.penalty, blocked: fg.blocked };
 
-  return { fit, len, mat, shoe, outer: outerAxis, season: seasonAxis, adjust, formality };
+  return { fit, len, mat, shoe, outer: outerAxis, layer: layerAxis, season: seasonAxis, adjust, formality };
 }
 
 /** @returns {import('./types.js').OutfitScore} */
@@ -213,13 +232,14 @@ export function scoreOutfit(index, outfit, season) {
   if (color.detail.allClassic && style.formality.gap < FORMALITY_BLOCK - 1) for (const r of style.formality.reasons) if (r.key === 'explain.formalityGap' && r.severity === 'warn') r.severity = 'info';
   const axes = [style.fit, style.len, style.mat, style.shoe, style.season];
   if (style.outer) axes.push(style.outer);
+  if (style.layer) axes.push(style.layer); // D-3: mid가 있을 때만
   const wsum = axes.reduce((a, x) => a + x.weight, 0);
   const raw = axes.reduce((a, x) => a + x.weight * x.score, 0) + K_ADJ * (style.adjust.score - style.formality.penalty);
   const styleNorm = clamp(raw / wsum, 1, 5);
   const final = round2((W_COLOR * color.score + W_STYLE * styleNorm) / (W_COLOR + W_STYLE));
   const reasons = [...color.reasons, ...axes.flatMap((x) => x.reasons), ...style.adjust.reasons, ...style.formality.reasons]
     .sort((a, b) => SEV_ORDER[a.severity] - SEV_ORDER[b.severity]);
-  const blocked = color.detail.blocked || axes.some((x) => x.score === 1) || style.formality.blocked || style.mat.reasons.some((r) => r.severity === 'block');
+  const blocked = color.detail.blocked || axes.some((x) => x.score === 1) || style.formality.blocked || style.mat.reasons.some((r) => r.severity === 'block') || !!style.adjust.patternBlocked;
   return {
     final, percent: Math.round(((final - 1) / 4) * 100), blocked, color, style,
     styleNorm: round2(styleNorm),

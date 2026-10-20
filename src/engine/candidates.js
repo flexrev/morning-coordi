@@ -1,10 +1,12 @@
 // 후보 생성·Quick 카드 — engine-spec.md 5·6절 + gate-2 3절 2항(클래식 3 선정 규칙). 구현: C2.
 // Phase 4 수정: P3-01(역참조 생성) · P3-02(quick 풀 제외) · P3-03/06/P1-04(계절·tier 3 제외) · P3-04/05/08(구체화) · P3-07/13/20, P1-05/17(클래식 3 다양성)
-import { DEFAULTS, QUICK_CARDS, CANDIDATE_MAX, OUTER_CANDIDATES, QUICK_EXCLUDE_GAP, QUICK_EXCLUDE_LO_SHOES } from './constants.js';
+import { DEFAULTS, QUICK_CARDS, CANDIDATE_MAX, OUTER_CANDIDATES, QUICK_EXCLUDE_GAP, QUICK_EXCLUDE_LO_SHOES, LAYERING_CANDIDATES_MAX } from './constants.js';
 import { scoreOutfit } from './score.js';
 import { explainScore } from './explain.js';
+import { patternExcluded, midTypesFor } from './style.js';
 
-const CAT_ORDER = { top: 0, bottom: 1, shoes: 2, outer: 3 };
+const CAT_ORDER = { top: 0, mid: 1, bottom: 2, shoes: 3, outer: 4 };
+const hasMid = (outfit) => outfit.items.some((i) => i.category === 'mid');
 const scoreCache = new WeakMap(); // outfit → { season → OutfitScore }
 
 /** 같은 outfit 객체·계절이면 점수 재계산 없음 */
@@ -25,7 +27,7 @@ function hash(str) {
 export function outfitSignature(outfit) {
   return [...outfit.items]
     .sort((a, b) => a.category.localeCompare(b.category) || (a.layer ?? 0) - (b.layer ?? 0))
-    .map((i) => `${i.category}:${i.color}:${i.category === 'shoes' ? i.shoeType : i.category === 'outer' ? i.itemType : (i.material ?? i.itemType)}`)
+    .map((i) => `${i.category}:${i.color}:${i.category === 'shoes' ? i.shoeType : i.category === 'outer' || i.category === 'mid' ? i.itemType : (i.material ?? i.itemType)}${i.pattern ? `:${i.pattern}` : ''}`)
     .join('|');
 }
 
@@ -45,7 +47,7 @@ export function materialize(index, category, color, season, overrides = {}) {
     // 품목명: '인디고'+'인디고 데님' → '인디고 데님', '라이트워시 데님'+'워시드 데님' → '라이트워시 데님', '차콜'+'울' → '차콜 울 슬랙스' (P3-05·P3-10)
     const mName = DEFAULTS.bottomNameByMaterial[material] ?? label(index, `material.${material}`, material);
     const itemName = mName.includes(cl) ? mName : cl.includes('데님') && mName.includes('데님') ? cl : `${cl} ${mName}`;
-    return { category, color, material, fit, length, shoeType: null, itemType: null, itemName, pattern: null };
+    return { category, color, material, fit, length, shoeType: null, itemType: null, itemName, pattern: ov.pattern ?? null };
   }
   if (category === 'top') {
     let itemType = ov.itemType ?? null;
@@ -74,6 +76,12 @@ export function materialize(index, category, color, season, overrides = {}) {
     const itemName = shoeType === 'sneakerWhite' ? sl : `${cl} ${sl}`;
     return { category, color, material, fit: null, length: null, shoeType, itemType: null, itemName, pattern: null };
   }
+  if (category === 'mid') {
+    // Phase 6-B (D-3): 미드 레이어 — itemType은 midTypes id. fit은 null
+    const itemType = ov.itemType ?? 'cardigan';
+    const mt = index.midTypes?.get(itemType);
+    return { category, color, material: ov.material !== undefined ? ov.material : (mt?.material ?? null), fit: null, length: ov.length ?? mt?.length ?? 'regular', shoeType: null, itemType, itemName: `${cl} ${label(index, `midType.${itemType}`, itemType)}`, pattern: ov.pattern ?? null };
+  }
   // outer
   let itemType = ov.itemType ?? null;
   if (!itemType) {
@@ -84,7 +92,7 @@ export function materialize(index, category, color, season, overrides = {}) {
     if (itemType === 'leatherJacket' && !DEFAULTS.leatherColors.includes(color)) itemType = DEFAULTS.outerBySeason[season][0];
   }
   const ot = index.outerTypes.get(itemType);
-  return { category, color, material: ov.material !== undefined ? ov.material : (ot?.material ?? null), fit: null, length: ot?.length ?? 'regular', shoeType: null, itemType, itemName: `${cl} ${label(index, `outerType.${itemType}`, itemType)}`, pattern: null };
+  return { category, color, material: ov.material !== undefined ? ov.material : (ot?.material ?? null), fit: null, length: ot?.length ?? 'regular', shoeType: null, itemType, itemName: `${cl} ${label(index, `outerType.${itemType}`, itemType)}`, pattern: ov.pattern ?? null };
 }
 
 /** base의 사용자 지정값을 materialize overrides로 */
@@ -189,7 +197,34 @@ export function generateCandidates(index, base, season, opts = {}) {
     }
   }
   out.sort((a, b) => compareOutfits(index, a, b, season));
-  return out.slice(0, max);
+  const base300 = out.slice(0, max);
+  // Phase 6-B (D-3): Deep + layering — 미드 레이어 변형(mid 1개 삽입)을 후보에 추가(상한 +LAYERING_CANDIDATES_MAX, 기본 상한과 별도). Quick은 이 옵션을 절대 켜지 않는다
+  if (opts.layering && season !== 'summer' && index.midTypes?.size) {
+    const added = [];
+    for (const o of base300) {
+      if (added.length >= LAYERING_CANDIDATES_MAX) break;
+      const top = o.items.find((i) => i.category === 'top'); const bottom = o.items.find((i) => i.category === 'bottom');
+      const rule = index.colorRules.get(`${bottom.color}|bottom`);
+      const usedColors = new Set(o.items.map((i) => i.color));
+      const midColor = (rule?.rule.matches ?? []).filter((m) => (m.category === 'top' || m.category === 'outer') && m.score >= 4 && !usedColors.has(m.color)).map((m) => m.color)[0] ?? null;
+      if (!midColor) continue;
+      for (const mt of midTypesFor(index, o, season)) {
+        const mid = materialize(index, 'mid', midColor, season, { itemType: mt });
+        const outfit = makeOutfit(index, [...o.items, mid], season, ['layering']);
+        const sig = outfitSignature(outfit);
+        if (seen.has(sig)) continue;
+        seen.add(sig);
+        const s = cachedScore(index, outfit, season);
+        if (s.blocked) continue;
+        outfit.isClassic = s.color.detail.allClassic;
+        added.push(outfit);
+        if (added.length >= LAYERING_CANDIDATES_MAX) break;
+      }
+      void top;
+    }
+    return [...base300, ...added].sort((a, b) => compareOutfits(index, a, b, season));
+  }
+  return base300;
 }
 
 /** 정렬: final 내림차순 → universal → isClassic → sources.length → id */
@@ -238,19 +273,38 @@ function seasonReasonFromBase(r, base) {
  *  pass 2: 깨끗
  *  pass 3: 계절은 맞는 variation 카드, pass 4: 나머지(계절 경고·겨울 티 단품) — 깨끗한 대안이 모자랄 때만 (P3-03·P3-06·P1-04)
  */
-export function pickClassic(index, base, season, n = QUICK_CARDS) {
+export function pickClassic(index, base, season, n = QUICK_CARDS, opts = {}) {
+  return selectQuick(index, base, season, quickPool(index, base, season), n, opts);
+}
+
+/**
+ * Quick 풀 (universal 히트 + 생성 후보, 등급 포함). 한 번 만들어 selectQuick을 여러 번 돌릴 수 있다(상황 완화 단계, Phase 6-B).
+ * 풀에 mid 코디·Quick 패턴 상한 초과 코디는 없다 (D-3 · ptQuickMaxOne).
+ */
+export function quickPool(index, base, season) {
   // 1. universal 코디 히트
   const ids = index.outfitsByItem.get(`${base.category}|${base.color}`) ?? [];
   const hits = ids.map((id) => index.outfits.get(id))
     .filter((o) => o.universal && o.seasons.includes(season) && o.items.some((it) => baseMatchesItem(base, it)))
-    .filter((o) => !cachedScore(index, o, season).blocked)
+    .filter((o) => !cachedScore(index, o, season).blocked && !hasMid(o) && !patternExcluded(index, o, season, 'quick'))
     .sort((a, b) => compareOutfits(index, a, b, season));
   // 2~4. 생성 후보를 등급별로 (A: 전 쌍 5·classic, B: 전 쌍 ≥4·classic, C: 나머지)
-  const gen = generateCandidates(index, base, season);
+  const gen = generateCandidates(index, base, season).filter((o) => !hasMid(o) && !patternExcluded(index, o, season, 'quick'));
   const tier = (o) => { if (o.tags.includes('variation')) return 3; const d = cachedScore(index, o, season).color.detail; return d.allClassic && d.minPair >= 5 ? 1 : d.allClassic && d.minPair >= 4 ? 2 : 3; };
   const quickOk = (o) => { const f = cachedScore(index, o, season).style.formality; return !(f.gap >= QUICK_EXCLUDE_GAP && QUICK_EXCLUDE_LO_SHOES.includes(f.lo?.shoeType)); };
   const hitSet = new Set(hits);
-  const pool = [...hits.map((o) => [0, o]), ...gen.filter(quickOk).map((o) => [tier(o), o])].sort((x, y) => x[0] - y[0] || compareOutfits(index, x[1], y[1], season)).map((x) => x[1]);
+  const entries = [...hits.map((o) => [0, o]), ...gen.filter(quickOk).map((o) => [tier(o), o])];
+  return { entries, hitSet, tier };
+}
+
+/**
+ * 풀에서 n장 선정. opts.rankAdj(outfit) → number: 같은 티어 안에서 final + rankAdj 내림차순(스타일·상황 재정렬, 풀 자체는 불변).
+ * opts.exclude(outfit) → boolean: 풀에서 제외(상황 avoid). 둘 다 없으면 Phase 4와 바이트 단위로 같은 결과.
+ */
+export function selectQuick(index, base, season, { entries, hitSet, tier }, n = QUICK_CARDS, opts = {}) {
+  const adj = opts.rankAdj ?? (() => 0);
+  const excluded = opts.exclude ?? (() => false);
+  const pool = entries.filter(([, o]) => !excluded(o)).sort((x, y) => x[0] - y[0] || adj(y[1]) - adj(x[1]) || compareOutfits(index, x[1], y[1], season)).map((x) => x[1]);
 
   const seasonBad = (o) => cachedScore(index, o, season).reasons.some((r) => (r.key === 'explain.seasonOut' || r.key === 'explain.seasonItem') && !seasonReasonFromBase(r, base));
   const bareWinter = (o) => season === 'winter' && item(o, 'top')?.material === 'jersey' && !hasOuter(o); // 티·맨투맨·후디 단품 (R2 6-4 겨울 레이어)
@@ -290,8 +344,8 @@ export function pickClassic(index, base, season, n = QUICK_CARDS) {
     }
     if (chosen.length >= n) break;
   }
-  // 최소 1개 보장: 규칙이 전혀 없으면 기본 템플릿
-  if (chosen.length === 0) {
+  // 최소 1개 보장: 규칙이 전혀 없으면 기본 템플릿 (상황 완화 중에는 호출자가 부족분을 판단하므로 생략)
+  if (chosen.length === 0 && !opts.noFallback) {
     const items = { top: ['white', 'top'], bottom: ['indigo', 'bottom'], shoes: ['white', 'shoes'] };
     const list = Object.entries(items).map(([cat, [color]]) => (cat === base.category ? materialize(index, cat, base.color, season, baseOverrides(base)) : materialize(index, cat, color, season)));
     if (base.category === 'outer') list.push(materialize(index, 'outer', base.color, season, baseOverrides(base)));

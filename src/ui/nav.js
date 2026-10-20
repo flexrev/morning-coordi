@@ -44,6 +44,6 @@ export function back(fallback = '/') {
 export function start(onRoute) {
   handler = onRoute;
   if (!history.state || !history.state.mc) history.replaceState({ mc: true, root: true, depth: 0 }, '', location.hash || '#/');
-  window.addEventListener('popstate', () => handler(parse()));
+  window.addEventListener('popstate', () => handler(parse(), { pop: true })); // motion-spec 4-1: popstate 는 항상 '뒤로'
   handler(parse());
 }

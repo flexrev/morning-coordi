@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="백팩 (bag 슬롯, 어깨끈 2 + 가슴 스트랩)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="bag" data-type="backpack" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-bag,#CFC4B4)" vector-effect="non-scaling-stroke" d="M66 80L78 80L80 160L70 160ZM134 80L122 80L120 160L130 160ZM76 64Q100 58 124 64L124 76Q100 72 76 76Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.18)" stroke="none" d="M74 80L78 80L80 160L76 160ZM126 80L130 80L130 160L126 160ZM116 64Q120 64 124 64L124 76Q120 75 116 75Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M72 84L74 156M128 84L126 156M80 112L120 112M96 108L104 108L104 116L96 116Z"/>
+</g>
+</svg>

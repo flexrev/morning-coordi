@@ -1,0 +1,1892 @@
+[
+ {
+  "kind": "topType",
+  "id": "dressShirtTie",
+  "weights": {
+   "minimal": 0,
+   "amekaji": -2,
+   "cityboy": -1,
+   "bizcasual": 2,
+   "street": -2,
+   "gorpcore": -2,
+   "ivy": 2,
+   "workwear": -2
+  },
+  "note": "격식 전용"
+ },
+ {
+  "kind": "topType",
+  "id": "dressShirt",
+  "weights": {
+   "minimal": 2,
+   "amekaji": -1,
+   "cityboy": 0,
+   "bizcasual": 3,
+   "street": -2,
+   "gorpcore": -2,
+   "ivy": 1,
+   "workwear": -1
+  },
+  "note": ""
+ },
+ {
+  "kind": "topType",
+  "id": "oxfordShirt",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 1,
+   "cityboy": 2,
+   "bizcasual": 2,
+   "street": -1,
+   "gorpcore": -1,
+   "ivy": 3,
+   "workwear": 0
+  },
+  "note": "아이비 1순위 셔츠"
+ },
+ {
+  "kind": "topType",
+  "id": "poloWool",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 0,
+   "cityboy": 1,
+   "bizcasual": 2,
+   "street": -1,
+   "gorpcore": -1,
+   "ivy": 2,
+   "workwear": -1
+  },
+  "note": ""
+ },
+ {
+  "kind": "topType",
+  "id": "knitWool",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 1,
+   "cityboy": 2,
+   "bizcasual": 2,
+   "street": 0,
+   "gorpcore": 0,
+   "ivy": 2,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "topType",
+  "id": "knitCashmere",
+  "weights": {
+   "minimal": 2,
+   "amekaji": -1,
+   "cityboy": 0,
+   "bizcasual": 2,
+   "street": -1,
+   "gorpcore": -1,
+   "ivy": 1,
+   "workwear": -1
+  },
+  "note": ""
+ },
+ {
+  "kind": "topType",
+  "id": "linenShirt",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 0,
+   "cityboy": 2,
+   "bizcasual": 1,
+   "street": -1,
+   "gorpcore": -1,
+   "ivy": 1,
+   "workwear": 0
+  },
+  "note": "여름 시티보이"
+ },
+ {
+  "kind": "topType",
+  "id": "flannelShirt",
+  "weights": {
+   "minimal": -1,
+   "amekaji": 3,
+   "cityboy": 1,
+   "bizcasual": -1,
+   "street": 1,
+   "gorpcore": 1,
+   "ivy": 0,
+   "workwear": 3
+  },
+  "note": "아메카지·워크웨어 시그니처"
+ },
+ {
+  "kind": "topType",
+  "id": "knitCotton",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 1,
+   "cityboy": 2,
+   "bizcasual": 1,
+   "street": 0,
+   "gorpcore": 0,
+   "ivy": 2,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "topType",
+  "id": "poloPique",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 1,
+   "cityboy": 1,
+   "bizcasual": 1,
+   "street": 0,
+   "gorpcore": -1,
+   "ivy": 3,
+   "workwear": -1
+  },
+  "note": ""
+ },
+ {
+  "kind": "topType",
+  "id": "denimShirt",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 3,
+   "cityboy": 1,
+   "bizcasual": -1,
+   "street": 0,
+   "gorpcore": 0,
+   "ivy": 1,
+   "workwear": 3
+  },
+  "note": "샴브레이 포함"
+ },
+ {
+  "kind": "topType",
+  "id": "henley",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 2,
+   "cityboy": 0,
+   "bizcasual": -1,
+   "street": 0,
+   "gorpcore": 2,
+   "ivy": 0,
+   "workwear": 2
+  },
+  "note": ""
+ },
+ {
+  "kind": "topType",
+  "id": "tee",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 2,
+   "cityboy": 2,
+   "bizcasual": -1,
+   "street": 2,
+   "gorpcore": 2,
+   "ivy": 1,
+   "workwear": 2
+  },
+  "note": "무지 기준"
+ },
+ {
+  "kind": "topType",
+  "id": "sweatshirt",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 2,
+   "cityboy": 2,
+   "bizcasual": -2,
+   "street": 3,
+   "gorpcore": 1,
+   "ivy": 1,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "topType",
+  "id": "hoodie",
+  "weights": {
+   "minimal": -1,
+   "amekaji": 1,
+   "cityboy": 1,
+   "bizcasual": -2,
+   "street": 3,
+   "gorpcore": 2,
+   "ivy": -1,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "topType",
+  "id": "tank",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 0,
+   "cityboy": 0,
+   "bizcasual": -2,
+   "street": 1,
+   "gorpcore": 0,
+   "ivy": -1,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "outerType",
+  "id": "denimJacket",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 3,
+   "cityboy": 1,
+   "bizcasual": -2,
+   "street": 1,
+   "gorpcore": 0,
+   "ivy": 0,
+   "workwear": 3
+  },
+  "note": ""
+ },
+ {
+  "kind": "outerType",
+  "id": "coachJacket",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 1,
+   "cityboy": 1,
+   "bizcasual": -2,
+   "street": 3,
+   "gorpcore": 2,
+   "ivy": -1,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "outerType",
+  "id": "blouson",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 2,
+   "cityboy": 1,
+   "bizcasual": 0,
+   "street": 2,
+   "gorpcore": 1,
+   "ivy": 1,
+   "workwear": 2
+  },
+  "note": "해링턴은 아이비 +1"
+ },
+ {
+  "kind": "outerType",
+  "id": "cardigan",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 0,
+   "cityboy": 2,
+   "bizcasual": 1,
+   "street": 0,
+   "gorpcore": -1,
+   "ivy": 3,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "outerType",
+  "id": "shirtJacket",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 2,
+   "cityboy": 2,
+   "bizcasual": 0,
+   "street": 0,
+   "gorpcore": 0,
+   "ivy": 0,
+   "workwear": 3
+  },
+  "note": "초어 재킷 포함"
+ },
+ {
+  "kind": "outerType",
+  "id": "trench",
+  "weights": {
+   "minimal": 2,
+   "amekaji": -1,
+   "cityboy": 1,
+   "bizcasual": 3,
+   "street": -1,
+   "gorpcore": -2,
+   "ivy": 1,
+   "workwear": -1
+  },
+  "note": ""
+ },
+ {
+  "kind": "outerType",
+  "id": "blazer",
+  "weights": {
+   "minimal": 1,
+   "amekaji": -2,
+   "cityboy": 1,
+   "bizcasual": 3,
+   "street": -1,
+   "gorpcore": -2,
+   "ivy": 3,
+   "workwear": -2
+  },
+  "note": ""
+ },
+ {
+  "kind": "outerType",
+  "id": "overshirt",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 1,
+   "cityboy": 2,
+   "bizcasual": 0,
+   "street": 0,
+   "gorpcore": 0,
+   "ivy": 1,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "outerType",
+  "id": "chesterfield",
+  "weights": {
+   "minimal": 3,
+   "amekaji": -2,
+   "cityboy": 0,
+   "bizcasual": 3,
+   "street": -1,
+   "gorpcore": -2,
+   "ivy": 1,
+   "workwear": -2
+  },
+  "note": "미니멀 시그니처"
+ },
+ {
+  "kind": "outerType",
+  "id": "balmacaan",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 0,
+   "cityboy": 2,
+   "bizcasual": 2,
+   "street": 0,
+   "gorpcore": -1,
+   "ivy": 2,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "outerType",
+  "id": "duffle",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 1,
+   "cityboy": 2,
+   "bizcasual": 0,
+   "street": 0,
+   "gorpcore": 0,
+   "ivy": 3,
+   "workwear": 2
+  },
+  "note": ""
+ },
+ {
+  "kind": "outerType",
+  "id": "peacoat",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 1,
+   "cityboy": 1,
+   "bizcasual": 1,
+   "street": 0,
+   "gorpcore": -1,
+   "ivy": 2,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "outerType",
+  "id": "shortPuffer",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 0,
+   "cityboy": 1,
+   "bizcasual": -2,
+   "street": 2,
+   "gorpcore": 3,
+   "ivy": -1,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "outerType",
+  "id": "longPuffer",
+  "weights": {
+   "minimal": -1,
+   "amekaji": -1,
+   "cityboy": 0,
+   "bizcasual": -2,
+   "street": 1,
+   "gorpcore": 2,
+   "ivy": -2,
+   "workwear": -1
+  },
+  "note": ""
+ },
+ {
+  "kind": "outerType",
+  "id": "fleece",
+  "weights": {
+   "minimal": -1,
+   "amekaji": 1,
+   "cityboy": 1,
+   "bizcasual": -2,
+   "street": 1,
+   "gorpcore": 3,
+   "ivy": 0,
+   "workwear": 1
+  },
+  "note": "고프코어 시그니처"
+ },
+ {
+  "kind": "outerType",
+  "id": "leatherJacket",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 2,
+   "cityboy": 0,
+   "bizcasual": -1,
+   "street": 2,
+   "gorpcore": -1,
+   "ivy": -1,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "shoeType",
+  "id": "sneakerWhite",
+  "weights": {
+   "minimal": 3,
+   "amekaji": 0,
+   "cityboy": 2,
+   "bizcasual": 1,
+   "street": 2,
+   "gorpcore": 0,
+   "ivy": 2,
+   "workwear": 0
+  },
+  "note": "가죽 미니멀형 기준"
+ },
+ {
+  "kind": "shoeType",
+  "id": "sneakerColor",
+  "weights": {
+   "minimal": -1,
+   "amekaji": 2,
+   "cityboy": 2,
+   "bizcasual": -2,
+   "street": 3,
+   "gorpcore": 1,
+   "ivy": 0,
+   "workwear": 0
+  },
+  "note": "레트로 러닝 포함"
+ },
+ {
+  "kind": "shoeType",
+  "id": "running",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 0,
+   "cityboy": 1,
+   "bizcasual": -2,
+   "street": 2,
+   "gorpcore": 3,
+   "ivy": -1,
+   "workwear": -1
+  },
+  "note": "트레일화 포함"
+ },
+ {
+  "kind": "shoeType",
+  "id": "loaferPenny",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 0,
+   "cityboy": 2,
+   "bizcasual": 3,
+   "street": -1,
+   "gorpcore": -2,
+   "ivy": 3,
+   "workwear": -1
+  },
+  "note": ""
+ },
+ {
+  "kind": "shoeType",
+  "id": "loaferTassel",
+  "weights": {
+   "minimal": 1,
+   "amekaji": -1,
+   "cityboy": 0,
+   "bizcasual": 2,
+   "street": -2,
+   "gorpcore": -2,
+   "ivy": 2,
+   "workwear": -2
+  },
+  "note": ""
+ },
+ {
+  "kind": "shoeType",
+  "id": "derby",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 0,
+   "cityboy": 1,
+   "bizcasual": 3,
+   "street": -1,
+   "gorpcore": -2,
+   "ivy": 1,
+   "workwear": 2
+  },
+  "note": "플레인토 기준"
+ },
+ {
+  "kind": "shoeType",
+  "id": "oxford",
+  "weights": {
+   "minimal": 1,
+   "amekaji": -2,
+   "cityboy": -1,
+   "bizcasual": 2,
+   "street": -2,
+   "gorpcore": -2,
+   "ivy": 1,
+   "workwear": -2
+  },
+  "note": ""
+ },
+ {
+  "kind": "shoeType",
+  "id": "chelsea",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 0,
+   "cityboy": 0,
+   "bizcasual": 2,
+   "street": 0,
+   "gorpcore": -1,
+   "ivy": 0,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "shoeType",
+  "id": "workboot",
+  "weights": {
+   "minimal": -1,
+   "amekaji": 3,
+   "cityboy": 0,
+   "bizcasual": -2,
+   "street": 0,
+   "gorpcore": 2,
+   "ivy": -1,
+   "workwear": 3
+  },
+  "note": ""
+ },
+ {
+  "kind": "shoeType",
+  "id": "chukka",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 2,
+   "cityboy": 1,
+   "bizcasual": 1,
+   "street": -1,
+   "gorpcore": 0,
+   "ivy": 2,
+   "workwear": 2
+  },
+  "note": "데저트 부츠"
+ },
+ {
+  "kind": "shoeType",
+  "id": "sandal",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 0,
+   "cityboy": 2,
+   "bizcasual": -2,
+   "street": 0,
+   "gorpcore": 2,
+   "ivy": 0,
+   "workwear": -1
+  },
+  "note": ""
+ },
+ {
+  "kind": "material",
+  "id": "denimIndigo",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 3,
+   "cityboy": 1,
+   "bizcasual": 0,
+   "street": 1,
+   "gorpcore": 0,
+   "ivy": 1,
+   "workwear": 3
+  },
+  "note": "하의만"
+ },
+ {
+  "kind": "material",
+  "id": "denimWashed",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 2,
+   "cityboy": 2,
+   "bizcasual": -2,
+   "street": 2,
+   "gorpcore": 1,
+   "ivy": 0,
+   "workwear": 2
+  },
+  "note": "하의만"
+ },
+ {
+  "kind": "material",
+  "id": "denimBlack",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 0,
+   "cityboy": 0,
+   "bizcasual": 2,
+   "street": 2,
+   "gorpcore": 0,
+   "ivy": -1,
+   "workwear": 0
+  },
+  "note": "하의만"
+ },
+ {
+  "kind": "material",
+  "id": "corduroy",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 2,
+   "cityboy": 1,
+   "bizcasual": 0,
+   "street": 0,
+   "gorpcore": 0,
+   "ivy": 2,
+   "workwear": 2
+  },
+  "note": "하의만"
+ },
+ {
+  "kind": "material",
+  "id": "chino",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 2,
+   "cityboy": 2,
+   "bizcasual": 2,
+   "street": 0,
+   "gorpcore": 2,
+   "ivy": 3,
+   "workwear": 2
+  },
+  "note": "하의만"
+ },
+ {
+  "kind": "material",
+  "id": "wool",
+  "weights": {
+   "minimal": 2,
+   "amekaji": -2,
+   "cityboy": 2,
+   "bizcasual": 3,
+   "street": -1,
+   "gorpcore": -2,
+   "ivy": 2,
+   "workwear": -2
+  },
+  "note": "하의만"
+ },
+ {
+  "kind": "material",
+  "id": "flannel",
+  "weights": {
+   "minimal": 1,
+   "amekaji": -1,
+   "cityboy": 1,
+   "bizcasual": 2,
+   "street": -1,
+   "gorpcore": -2,
+   "ivy": 2,
+   "workwear": -1
+  },
+  "note": "하의만"
+ },
+ {
+  "kind": "material",
+  "id": "linen",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 0,
+   "cityboy": 2,
+   "bizcasual": 1,
+   "street": -1,
+   "gorpcore": -1,
+   "ivy": 1,
+   "workwear": 0
+  },
+  "note": "하의만"
+ },
+ {
+  "kind": "material",
+  "id": "jersey",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 1,
+   "cityboy": 1,
+   "bizcasual": -2,
+   "street": 3,
+   "gorpcore": 2,
+   "ivy": 0,
+   "workwear": 0
+  },
+  "note": "하의만(스웻팬츠)"
+ },
+ {
+  "kind": "material",
+  "id": "nylonTech",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 0,
+   "cityboy": 1,
+   "bizcasual": -2,
+   "street": 2,
+   "gorpcore": 3,
+   "ivy": -1,
+   "workwear": 0
+  },
+  "note": "하의만(테크 팬츠)"
+ },
+ {
+  "kind": "material",
+  "id": "tweed",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 0,
+   "cityboy": 0,
+   "bizcasual": 1,
+   "street": -2,
+   "gorpcore": -2,
+   "ivy": 3,
+   "workwear": 0
+  },
+  "note": "하의만"
+ },
+ {
+  "kind": "topFit",
+  "id": "slim",
+  "weights": {
+   "minimal": 1,
+   "amekaji": -1,
+   "cityboy": -2,
+   "bizcasual": 1,
+   "street": -2,
+   "gorpcore": -1,
+   "ivy": 0,
+   "workwear": -1
+  },
+  "note": ""
+ },
+ {
+  "kind": "topFit",
+  "id": "regular",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 1,
+   "cityboy": 0,
+   "bizcasual": 2,
+   "street": 0,
+   "gorpcore": 0,
+   "ivy": 2,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "topFit",
+  "id": "loose",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 2,
+   "cityboy": 3,
+   "bizcasual": 0,
+   "street": 2,
+   "gorpcore": 2,
+   "ivy": 1,
+   "workwear": 2
+  },
+  "note": ""
+ },
+ {
+  "kind": "topFit",
+  "id": "oversized",
+  "weights": {
+   "minimal": -1,
+   "amekaji": 1,
+   "cityboy": 2,
+   "bizcasual": -2,
+   "street": 3,
+   "gorpcore": 1,
+   "ivy": -1,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "bottomFit",
+  "id": "slim",
+  "weights": {
+   "minimal": 1,
+   "amekaji": -1,
+   "cityboy": -2,
+   "bizcasual": 1,
+   "street": -2,
+   "gorpcore": -1,
+   "ivy": 0,
+   "workwear": -1
+  },
+  "note": ""
+ },
+ {
+  "kind": "bottomFit",
+  "id": "tapered",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 0,
+   "cityboy": 0,
+   "bizcasual": 3,
+   "street": 0,
+   "gorpcore": 1,
+   "ivy": 2,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "bottomFit",
+  "id": "regular",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 1,
+   "cityboy": 1,
+   "bizcasual": 1,
+   "street": 0,
+   "gorpcore": 1,
+   "ivy": 2,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "bottomFit",
+  "id": "straight",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 3,
+   "cityboy": 2,
+   "bizcasual": 0,
+   "street": 1,
+   "gorpcore": 1,
+   "ivy": 1,
+   "workwear": 3
+  },
+  "note": ""
+ },
+ {
+  "kind": "bottomFit",
+  "id": "wide",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 1,
+   "cityboy": 3,
+   "bizcasual": -1,
+   "street": 3,
+   "gorpcore": 1,
+   "ivy": 0,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "trouserLength",
+  "id": "crop",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 0,
+   "cityboy": 2,
+   "bizcasual": 0,
+   "street": 0,
+   "gorpcore": 0,
+   "ivy": 2,
+   "workwear": -1
+  },
+  "note": ""
+ },
+ {
+  "kind": "trouserLength",
+  "id": "nobreak",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 1,
+   "cityboy": 1,
+   "bizcasual": 2,
+   "street": 0,
+   "gorpcore": 1,
+   "ivy": 1,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "trouserLength",
+  "id": "half",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 1,
+   "cityboy": 0,
+   "bizcasual": 1,
+   "street": 0,
+   "gorpcore": 0,
+   "ivy": 0,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "trouserLength",
+  "id": "full",
+  "weights": {
+   "minimal": -1,
+   "amekaji": 1,
+   "cityboy": 0,
+   "bizcasual": -1,
+   "street": 2,
+   "gorpcore": 0,
+   "ivy": -1,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "topLength",
+  "id": "crop",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 0,
+   "cityboy": 1,
+   "bizcasual": -2,
+   "street": 1,
+   "gorpcore": 0,
+   "ivy": -1,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "topLength",
+  "id": "regular",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 1,
+   "cityboy": 1,
+   "bizcasual": 2,
+   "street": 1,
+   "gorpcore": 1,
+   "ivy": 2,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "topLength",
+  "id": "long",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 0,
+   "cityboy": 1,
+   "bizcasual": 0,
+   "street": 1,
+   "gorpcore": 0,
+   "ivy": 0,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "outerLength",
+  "id": "short",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 2,
+   "cityboy": 1,
+   "bizcasual": -1,
+   "street": 2,
+   "gorpcore": 1,
+   "ivy": 0,
+   "workwear": 2
+  },
+  "note": ""
+ },
+ {
+  "kind": "outerLength",
+  "id": "regular",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 1,
+   "cityboy": 1,
+   "bizcasual": 1,
+   "street": 0,
+   "gorpcore": 1,
+   "ivy": 2,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "outerLength",
+  "id": "long",
+  "weights": {
+   "minimal": 2,
+   "amekaji": -1,
+   "cityboy": 1,
+   "bizcasual": 2,
+   "street": 0,
+   "gorpcore": 0,
+   "ivy": 1,
+   "workwear": -1
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "white",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 1,
+   "cityboy": 2,
+   "bizcasual": 2,
+   "street": 1,
+   "gorpcore": 0,
+   "ivy": 2,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "offWhite",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 1,
+   "cityboy": 2,
+   "bizcasual": 1,
+   "street": 0,
+   "gorpcore": 0,
+   "ivy": 2,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "cream",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 1,
+   "cityboy": 2,
+   "bizcasual": 1,
+   "street": 0,
+   "gorpcore": 0,
+   "ivy": 2,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "oatmeal",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 1,
+   "cityboy": 2,
+   "bizcasual": 1,
+   "street": 0,
+   "gorpcore": 0,
+   "ivy": 1,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "beige",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 2,
+   "cityboy": 2,
+   "bizcasual": 2,
+   "street": 0,
+   "gorpcore": 1,
+   "ivy": 2,
+   "workwear": 2
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "khaki",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 2,
+   "cityboy": 1,
+   "bizcasual": 1,
+   "street": 0,
+   "gorpcore": 2,
+   "ivy": 2,
+   "workwear": 2
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "tan",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 2,
+   "cityboy": 1,
+   "bizcasual": 1,
+   "street": 0,
+   "gorpcore": 1,
+   "ivy": 2,
+   "workwear": 2
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "camel",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 1,
+   "cityboy": 1,
+   "bizcasual": 2,
+   "street": -1,
+   "gorpcore": 0,
+   "ivy": 1,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "brown",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 2,
+   "cityboy": 1,
+   "bizcasual": 1,
+   "street": 0,
+   "gorpcore": 1,
+   "ivy": 1,
+   "workwear": 2
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "chocolate",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 2,
+   "cityboy": 0,
+   "bizcasual": 1,
+   "street": 0,
+   "gorpcore": 1,
+   "ivy": 1,
+   "workwear": 2
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "lightGrey",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 0,
+   "cityboy": 1,
+   "bizcasual": 1,
+   "street": 1,
+   "gorpcore": 0,
+   "ivy": 1,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "greyMelange",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 1,
+   "cityboy": 1,
+   "bizcasual": -1,
+   "street": 2,
+   "gorpcore": 1,
+   "ivy": 1,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "midGrey",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 0,
+   "cityboy": 1,
+   "bizcasual": 2,
+   "street": 1,
+   "gorpcore": 0,
+   "ivy": 1,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "charcoal",
+  "weights": {
+   "minimal": 3,
+   "amekaji": 0,
+   "cityboy": 1,
+   "bizcasual": 3,
+   "street": 1,
+   "gorpcore": 0,
+   "ivy": 1,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "black",
+  "weights": {
+   "minimal": 3,
+   "amekaji": 0,
+   "cityboy": 0,
+   "bizcasual": 1,
+   "street": 3,
+   "gorpcore": 2,
+   "ivy": -1,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "navy",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 1,
+   "cityboy": 1,
+   "bizcasual": 3,
+   "street": 0,
+   "gorpcore": 0,
+   "ivy": 3,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "indigo",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 3,
+   "cityboy": 1,
+   "bizcasual": 0,
+   "street": 1,
+   "gorpcore": 0,
+   "ivy": 1,
+   "workwear": 3
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "midDenim",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 2,
+   "cityboy": 2,
+   "bizcasual": -1,
+   "street": 1,
+   "gorpcore": 0,
+   "ivy": 1,
+   "workwear": 2
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "lightDenim",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 2,
+   "cityboy": 2,
+   "bizcasual": -2,
+   "street": 2,
+   "gorpcore": 0,
+   "ivy": 0,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "blackDenim",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 0,
+   "cityboy": 0,
+   "bizcasual": 1,
+   "street": 2,
+   "gorpcore": 0,
+   "ivy": -1,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "lightBlue",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 0,
+   "cityboy": 2,
+   "bizcasual": 2,
+   "street": 0,
+   "gorpcore": 0,
+   "ivy": 3,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "skyBlue",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 0,
+   "cityboy": 2,
+   "bizcasual": 1,
+   "street": 0,
+   "gorpcore": 0,
+   "ivy": 2,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "olive",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 3,
+   "cityboy": 1,
+   "bizcasual": 0,
+   "street": 1,
+   "gorpcore": 3,
+   "ivy": 1,
+   "workwear": 3
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "forestGreen",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 1,
+   "cityboy": 0,
+   "bizcasual": 0,
+   "street": 0,
+   "gorpcore": 2,
+   "ivy": 2,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "sage",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 0,
+   "cityboy": 2,
+   "bizcasual": 0,
+   "street": 0,
+   "gorpcore": 1,
+   "ivy": 1,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "burgundy",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 0,
+   "cityboy": 0,
+   "bizcasual": 1,
+   "street": 0,
+   "gorpcore": -1,
+   "ivy": 2,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "rust",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 2,
+   "cityboy": 1,
+   "bizcasual": 0,
+   "street": 0,
+   "gorpcore": 1,
+   "ivy": 0,
+   "workwear": 2
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "mustard",
+  "weights": {
+   "minimal": -1,
+   "amekaji": 1,
+   "cityboy": 1,
+   "bizcasual": -1,
+   "street": 0,
+   "gorpcore": 1,
+   "ivy": 1,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "dustyPink",
+  "weights": {
+   "minimal": 0,
+   "amekaji": -1,
+   "cityboy": 1,
+   "bizcasual": 0,
+   "street": 0,
+   "gorpcore": -1,
+   "ivy": 2,
+   "workwear": -1
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "lavender",
+  "weights": {
+   "minimal": 0,
+   "amekaji": -1,
+   "cityboy": 1,
+   "bizcasual": 0,
+   "street": 0,
+   "gorpcore": -1,
+   "ivy": 1,
+   "workwear": -1
+  },
+  "note": ""
+ },
+ {
+  "kind": "color",
+  "id": "teal",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 0,
+   "cityboy": 0,
+   "bizcasual": 0,
+   "street": 0,
+   "gorpcore": 1,
+   "ivy": 0,
+   "workwear": 0
+  },
+  "note": "예비 색"
+ },
+ {
+  "kind": "color",
+  "id": "taupe",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 1,
+   "cityboy": 1,
+   "bizcasual": 1,
+   "street": 0,
+   "gorpcore": 1,
+   "ivy": 0,
+   "workwear": 1
+  },
+  "note": "예비 색"
+ },
+ {
+  "kind": "pattern",
+  "id": "breton",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 1,
+   "cityboy": 2,
+   "bizcasual": -1,
+   "street": 0,
+   "gorpcore": -1,
+   "ivy": 2,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "pattern",
+  "id": "stripeShirt",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 0,
+   "cityboy": 2,
+   "bizcasual": 2,
+   "street": -1,
+   "gorpcore": -2,
+   "ivy": 2,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "pattern",
+  "id": "pinstripe",
+  "weights": {
+   "minimal": 0,
+   "amekaji": -2,
+   "cityboy": -1,
+   "bizcasual": 2,
+   "street": -1,
+   "gorpcore": -2,
+   "ivy": 0,
+   "workwear": -2
+  },
+  "note": ""
+ },
+ {
+  "kind": "pattern",
+  "id": "gingham",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 0,
+   "cityboy": 1,
+   "bizcasual": 1,
+   "street": -1,
+   "gorpcore": -2,
+   "ivy": 3,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "pattern",
+  "id": "plaid",
+  "weights": {
+   "minimal": -1,
+   "amekaji": 3,
+   "cityboy": 1,
+   "bizcasual": -2,
+   "street": 1,
+   "gorpcore": 1,
+   "ivy": 0,
+   "workwear": 3
+  },
+  "note": ""
+ },
+ {
+  "kind": "pattern",
+  "id": "windowpane",
+  "weights": {
+   "minimal": 0,
+   "amekaji": -1,
+   "cityboy": 0,
+   "bizcasual": 2,
+   "street": -1,
+   "gorpcore": -2,
+   "ivy": 1,
+   "workwear": -1
+  },
+  "note": ""
+ },
+ {
+  "kind": "pattern",
+  "id": "houndstooth",
+  "weights": {
+   "minimal": 1,
+   "amekaji": -1,
+   "cityboy": 0,
+   "bizcasual": 2,
+   "street": -1,
+   "gorpcore": -2,
+   "ivy": 2,
+   "workwear": -1
+  },
+  "note": ""
+ },
+ {
+  "kind": "pattern",
+  "id": "herringbone",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 0,
+   "cityboy": 0,
+   "bizcasual": 2,
+   "street": -1,
+   "gorpcore": -1,
+   "ivy": 3,
+   "workwear": 0
+  },
+  "note": "질감으로 취급"
+ },
+ {
+  "kind": "pattern",
+  "id": "camo",
+  "weights": {
+   "minimal": -2,
+   "amekaji": 1,
+   "cityboy": 0,
+   "bizcasual": -2,
+   "street": 2,
+   "gorpcore": 1,
+   "ivy": -2,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "accessory",
+  "id": "beltLeather",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 0,
+   "cityboy": 0,
+   "bizcasual": 2,
+   "street": -1,
+   "gorpcore": -1,
+   "ivy": 2,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "accessory",
+  "id": "beltBraided",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 1,
+   "cityboy": 1,
+   "bizcasual": 0,
+   "street": -1,
+   "gorpcore": -1,
+   "ivy": 3,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "accessory",
+  "id": "beltWebbing",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 2,
+   "cityboy": 1,
+   "bizcasual": -2,
+   "street": 1,
+   "gorpcore": 2,
+   "ivy": 0,
+   "workwear": 2
+  },
+  "note": ""
+ },
+ {
+  "kind": "accessory",
+  "id": "bagTote",
+  "weights": {
+   "minimal": 1,
+   "amekaji": 0,
+   "cityboy": 3,
+   "bizcasual": 1,
+   "street": 0,
+   "gorpcore": 0,
+   "ivy": 2,
+   "workwear": 0
+  },
+  "note": "시티보이 시그니처"
+ },
+ {
+  "kind": "accessory",
+  "id": "bagBackpack",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 1,
+   "cityboy": 1,
+   "bizcasual": -1,
+   "street": 2,
+   "gorpcore": 3,
+   "ivy": 0,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "accessory",
+  "id": "bagCrossbody",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 1,
+   "cityboy": 2,
+   "bizcasual": -1,
+   "street": 3,
+   "gorpcore": 2,
+   "ivy": 0,
+   "workwear": 1
+  },
+  "note": ""
+ },
+ {
+  "kind": "accessory",
+  "id": "bagBriefcase",
+  "weights": {
+   "minimal": 1,
+   "amekaji": -2,
+   "cityboy": -1,
+   "bizcasual": 3,
+   "street": -2,
+   "gorpcore": -2,
+   "ivy": 1,
+   "workwear": -2
+  },
+  "note": ""
+ },
+ {
+  "kind": "accessory",
+  "id": "cap",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 2,
+   "cityboy": 2,
+   "bizcasual": -2,
+   "street": 2,
+   "gorpcore": 1,
+   "ivy": 1,
+   "workwear": 2
+  },
+  "note": ""
+ },
+ {
+  "kind": "accessory",
+  "id": "beanie",
+  "weights": {
+   "minimal": 0,
+   "amekaji": 1,
+   "cityboy": 2,
+   "bizcasual": -2,
+   "street": 2,
+   "gorpcore": 2,
+   "ivy": 0,
+   "workwear": 2
+  },
+  "note": ""
+ },
+ {
+  "kind": "accessory",
+  "id": "bucketHat",
+  "weights": {
+   "minimal": -1,
+   "amekaji": 1,
+   "cityboy": 1,
+   "bizcasual": -2,
+   "street": 1,
+   "gorpcore": 2,
+   "ivy": -1,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "accessory",
+  "id": "scarf",
+  "weights": {
+   "minimal": 2,
+   "amekaji": 0,
+   "cityboy": 1,
+   "bizcasual": 2,
+   "street": 0,
+   "gorpcore": 0,
+   "ivy": 2,
+   "workwear": 0
+  },
+  "note": ""
+ },
+ {
+  "kind": "accessory",
+  "id": "watchNato",
+  "weights": {
+   "minimal": -1,
+   "amekaji": 1,
+   "cityboy": 1,
+   "bizcasual": -1,
+   "street": 0,
+   "gorpcore": 1,
+   "ivy": 2,
+   "workwear": 1
+  },
+  "note": ""
+ }
+]

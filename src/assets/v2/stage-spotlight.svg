@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="스테이지 스포트라이트 (인물 뒤 타원광)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="stage" data-type="spotlight" stroke="none">
+<path data-part="main" fill="var(--stage-glow,#FFE6BE)" fill-opacity=".035" stroke="none" d="M2 140a98 160 0 1 0 196 0a98 160 0 1 0-196 0Z"/>
+<path data-part="main" fill="var(--stage-glow,#FFE6BE)" fill-opacity=".035" stroke="none" d="M12 140a88 144 0 1 0 176 0a88 144 0 1 0-176 0Z"/>
+<path data-part="main" fill="var(--stage-glow,#FFE6BE)" fill-opacity=".035" stroke="none" d="M22 140a78 128 0 1 0 156 0a78 128 0 1 0-156 0Z"/>
+<path data-part="main" fill="var(--stage-glow,#FFE6BE)" fill-opacity=".035" stroke="none" d="M32 140a68 112 0 1 0 136 0a68 112 0 1 0-136 0Z"/>
+<path data-part="main" fill="var(--stage-glow,#FFE6BE)" fill-opacity=".035" stroke="none" d="M42 140a58 96 0 1 0 116 0a58 96 0 1 0-116 0Z"/>
+<path data-part="main" fill="var(--stage-glow,#FFE6BE)" fill-opacity=".035" stroke="none" d="M52 140a48 80 0 1 0 96 0a48 80 0 1 0-96 0Z"/>
+<path data-part="main" fill="var(--stage-glow,#FFE6BE)" fill-opacity=".035" stroke="none" d="M62 140a38 64 0 1 0 76 0a38 64 0 1 0-76 0Z"/>
+<path data-part="main" fill="var(--stage-glow,#FFE6BE)" fill-opacity=".035" stroke="none" d="M72 140a28 48 0 1 0 56 0a28 48 0 1 0-56 0Z"/>
+</g>
+</svg>

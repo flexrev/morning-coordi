@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="워크 부츠 (레이스업·러그솔)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="shoes" data-type="workboot" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-shoes,#222222)" vector-effect="non-scaling-stroke" d="M68 336L98 336L98 390L50 390Q40 388 44 380Q52 368 66 362ZM132 336L102 336L102 390L150 390Q160 388 156 380Q148 368 134 362Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.25)" stroke="none" d="M42 384L98 384L98 390L50 390Q41 389 42 384ZM158 384L102 384L102 390L150 390Q159 389 158 384ZM92 336L98 336L98 384L92 384ZM152 372L156 380Q158 385 152 386L148 380ZM68 336L74 336L72 362L66 362Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M74 341L92 341M73 348L92 348M72 355L92 355M71 362L90 362M68 336Q70 352 70 364M54 378Q68 370 80 374M126 341L108 341M127 348L108 348M128 355L108 355M129 362L110 362M132 336Q130 352 130 364M146 378Q132 370 120 374M44 388L98 388M156 388L102 388"/>
+</g>
+</svg>

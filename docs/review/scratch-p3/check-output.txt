@@ -1,0 +1,19 @@
+quick cards checked: 504 (168 chip×season)
+PASS ① SEASON! (베이스 자체 원인 제외) = 0 (0)
+PASS ② gap5 + lo ∈ {sneakerColor, running, sandal} = 0 (0)
+PASS ③ 라벨에 'a-z'·'인디고 데님 울'·'(울슬랙스)' = 0 (0)
+PASS ④ 모든 칩(baseColors × 3계절) 3장 (0)
+PASS ⑤ 스타일 태그 분포: 3% ≤ 스타일별 코디 비율 ≤ 60%, 태그 없는 코디 0 (0)
+   분포 (outfits 52, 태그 = 상위 2 / dominant = 1위): minimal* 29(56%)/21 · amekaji* 8(15%)/5 · cityboy 5(10%)/2 · bizcasual* 21(40%)/6 · street 2(4%)/2 · gorpcore 2(4%)/0 · ivy* 26(50%)/16 · workwear 3(6%)/0   (* 1차 범위)
+
+-- 참고(기준 외) 10건
+   신발 단조 bottom/charcoal/summer: 라이트 블루 린넨 셔츠 · 차콜 울 슬랙스 · 블랙 페니 로퍼 / 그레이 멜란지 티셔츠 · 차콜 울 슬랙스 · 블랙 페니 로퍼 / 화이트 린넨 셔츠 · 차콜 울 슬랙스 · 블랙 페니 로퍼
+   신발 단조 bottom/black/springFall: 화이트 옥스포드 셔츠 · 블랙 울 슬랙스 · 블랙 더비 / 그레이 멜란지 맨투맨 · 블랙 울 슬랙스 · 블랙 더비 / 라이트 그레이 코튼 니트 · 블랙 울 슬랙스 · 블랙 더비
+   신발 단조 bottom/black/summer: 라이트 그레이 피케 폴로 · 블랙 울 슬랙스 · 블랙 페니 로퍼 / 그레이 멜란지 티셔츠 · 블랙 울 슬랙스 · 블랙 페니 로퍼 / 화이트 린넨 셔츠 · 블랙 울 슬랙스 · 블랙 페니 로퍼
+   신발 단조 bottom/black/winter: 화이트 울 니트 · 블랙 울 슬랙스 · 블랙 더비 / 포레스트 그린 울 니트 · 블랙 울 슬랙스 · 블랙 더비 · 블랙 체스터필드 코트 / 화이트 울 니트 · 블랙 울 슬랙스 · 블랙 더비 · 차콜 체스터필드 코트
+   신발 단조 top/forestGreen/springFall: 포레스트 그린 코튼 니트 · 블랙 울 슬랙스 · 블랙 더비 / 포레스트 그린 코튼 니트 · 블랙 울 슬랙스 · 블랙 더비 · 블랙 블레이저 / 포레스트 그린 코튼 니트 · 블랙 울 슬랙스 · 블랙 더비 · 미드 그레이 블레이저
+   신발 단조 top/forestGreen/winter: 포레스트 그린 울 니트 · 블랙 울 슬랙스 · 블랙 더비 / 포레스트 그린 울 니트 · 블랙 울 슬랙스 · 블랙 더비 · 블랙 체스터필드 코트 / 포레스트 그린 울 니트 · 블랙 울 슬랙스 · 블랙 더비 · 미드 그레이 체스터필드 코트
+   겨울 아우터 없음 bottom/lightGrey/winter
+   겨울 아우터 없음 bottom/chocolate/winter
+   겨울 아우터 없음 bottom/tan/winter
+   non-classic in quick top/forestGreen/summer: 포레스트 그린 티셔츠 · 인디고 데님 · 브라운 페니 로퍼 / 포레스트 그린 티셔츠 · 네이비 치노 · 브라운 페니 로퍼

@@ -671,3 +671,58 @@ colorRules ~380 match × ~110B ≈ 42KB, shoeRules ~130행 ≈ 12KB, outfits ~45
 6. adjust `adjHeavyLight`는 `bottomMaterial × topMaterial` 조건(R2 3-4 원문), `adjHeavyLightOuter` 추가. `materialWeights`는 신발 제외 집합.
 7. V-20 출처 코드표(R2)는 `scripts/build/sources.mjs`와 `src/engine/validate.js`에 동일하게 둔다. 내부 코드 `R1`(출처 미기재 행), `R2 n-m`(절 참조), `C1`, `C2`.
 8. colorRules는 `a / b` 분리 후 514 match(표 380행). outfits 52(universal 10). JSON은 1칸 들여쓰기(총 302 KB).
+
+---
+
+## 11. Phase 6-B 콘텐츠 확장 (CX, 2026-10-20) — 스타일·상황·액세서리·패턴·미드 레이어
+
+설계 원문: `docs/phase6/content-expansion.md` 1~6절, 표: `docs/phase6/content-expansion-data.md`(`scripts/build/styles.mjs`가 `### N-M.` 제목으로 파싱). PM 결정(gate-5 2절): D-1 스타일 가중은 `recommend()` 재정렬만(K_STYLE 0.5), 1차 범위 `minimal · bizcasual · ivy · amekaji`; D-2 상황은 감점 + avoid 제외 + 단계 완화(항상 3장); D-3 `mid` 5번째 카테고리.
+**원칙**: 새 파일 10개는 전부 **빈 배열이면 기능 OFF**(`buildIndex`가 `index.styles = null` 등). 기존 파일 변경은 선택 필드·enum 추가뿐 — 옵션 없는 `recommend()` 결과는 Phase 4와 바이트 단위로 같다(`tests/fixtures/quick-baseline.json`).
+
+### 11-1. 새 파일 (src/data/)
+
+| 파일 | 최상위 | 레코드 | 키 | 비고 |
+|---|---|---|---|---|
+| `styles.json` | 배열 | 8 | `id, labelKo, labelEn, phase(1·2), formality{min,max}, tones[], seasons[], fits{top,bottom,trouserLength}, signature{top,bottom,shoes,outer}, avoid[], sources[], flags[], note` | `phase`는 표가 아니라 `scripts/build/styles.mjs PHASE1_STYLES`(PM D-1)가 결정. `avoid`의 `accent2·pattern2·logo·fourColors·black2`는 특수 토큰(V-23에서 무시) |
+| `styleAffinity.json` | 배열 | 126 | `kind, id, weights{8 스타일: −2..+3}, note` | `kind` 12종 = `constants.AFFINITY_KINDS`. `material`은 하의 소재에만. 표에 없는 (kind,id)는 0 |
+| `occasions.json` | 배열 | 5 | `id, labelKo, formality{min,max,targetLo,targetHi}, styleBoost{style: 1..3}, avoid{itemTypes,shoeTypes,materials,patterns}, prefer{itemTypes,shoeTypes}, patternMax, accessories[], sources, flags, note` | `formal`은 `flags: ["approx"]`(수트 품목 없음) |
+| `accessoryTypes.json` | 배열 | 19 | `id, labelKo, group(belt·watch·socks·bag·hat·scarf), formality{min,max}, seasons[], colorFrom(shoes·bottom·outfit·neutral·free·null), note` | |
+| `accessoryRules.json` | 배열 | 32 | `id, accessory[], when{}, pick{} 또는 {skip:true}, delta(−2..+1), severity(info·warn), note, sources, flags` | `when` 키 = `constants.ACCESSORY_WHEN_KEYS`(adjust 규약 + `shoesMaterial, shoesFinish, outerPattern, formalityMin/Max, patternCount, accentCount, style, tuckIn, belt, watch, beltColor, material`). `pick.color` = 색 id 또는 파생 키 `shoesFamily·bottomDarker·outfit·outfitSecondary·outerTone2·outerPick·neutral·free` |
+| `patterns.json` | 배열 | 9 | `id, labelKo, family(stripe·check·texture·print), scale(small·mid·large), categories[], itemTypes[](topType·outerType·material), formality, seasons[], colorsTypical[], note, sources, flags` | `herringbone`은 `countAs: texture`(패턴 수 미포함) |
+| `patternRules.json` | 배열 | 19 | `id, when{}, effect(exclude·penalty·bonus·countAs), countAs?, delta, severity, note, sources, flags` | `when` 키 = `constants.PATTERN_WHEN_KEYS`. `mode` 조건(quick/deep) 규칙은 후보 생성이 평가, 나머지 `exclude`는 점수에서 차단 |
+| `midTypes.json` | 배열 | 5 | `id, labelKo, material(nullable), formality, length, weight(light·mid·heavy), seasons[], note` | `mid` 아이템의 `itemType` 어휘 |
+| `midLayerRules.json` | 배열 | 12 | `id, season, base(topType[] 또는 "any"), mid(midType[] 또는 "none"), outer(outerType[] 또는 "any"/"none", 배열 안 "none" 허용), score 1..5, tag(classic·variation·block), note, sources, flags` | 여름 미드 행은 score 1·block (V-30) |
+| `twoOuterRules.json` | 배열 | 6 | `id, season, inner(outerType[] 또는 "any"), outer(outerType[] 또는 "any"), score, tag, note, sources, flags` | |
+
+### 11-2. 기존 파일 변경
+
+- `enums.json`: `categories`에 `mid` 추가(5개). `tags`에 `layering`, `pattern`(생성 코디 태그). 새 키 `styles[8]·occasions[5]·patterns[9]·midTypes[5]·accessoryTypes[19]·accessoryGroups[6]` — 각 파일의 id 순서와 1:1(V-23·29·30 검사).
+- `outfits.json`: 레코드에 **계산 필드** `styles: [{id, score}] (≤2)`·`occasions: string[]` 추가(키 위치: `universal` 다음). `scripts/build-data.mjs`가 `src/engine/style.js`의 `styleTags(styleVector())`·`occasionFit()`으로 써 넣고 V-31이 재계산과 비교한다 — **손으로 고치지 않는다**. `items`에 `category: "mid"` 0~1개 허용(`itemType` = midType, `fit: null`, `length` ∈ outerLengths). `items[].pattern` 허용값은 `enums.patterns`(V-17 수정).
+- `labels.ko.json`: +85행 — `category.mid`, `style.*`(8, help = 한 줄 정의, aliases에 구어 "아메리칸 캐주얼"·"아웃도어 룩"…), `occasion.*`(5), `pattern.*`(9), `midType.*`(5), `accessory.*`(19), `accessoryGroup.*`(6), `explain.style.<id>`(8, V-32), `explain.*` 15종(style.boost·style.tag·occasion.adj/window/target/relaxed·acc·pattern·midLayer·midLength·midWeight·midFormality·twoOuter·twoOuterLength·layerScore), `ui.*` 7종(byStyle·byOccasion·accessories·layering·patterns·styleAll·formalApprox), `tag.layering`·`tag.pattern`. 새 네임스페이스 5개는 `shortLabel ≤ 6자` 필수(V-12 확장).
+- `src/data/index.js`: 새 JSON 10개를 정적 import — 파일은 항상 존재시키되 빈 배열 허용.
+
+### 11-3. 검증 규칙 V-23 ~ V-33 (`src/engine/validate.js`, 확장 파일이 있을 때만)
+
+| # | 규칙 | 심각도 |
+|---|---|---|
+| V-23 | styles: id 유일·camelCase, formality.min ≤ max, signature id가 enum에 존재, avoid id가 어떤 enum에든 존재(특수 토큰 제외), phase ∈ 1,2, sources ≥ 2, `enums.styles` 순서 일치 | error |
+| V-24 | styleAffinity: (kind,id) 유일, kind ∈ 12종, id가 해당 enum에 존재, weights 키가 styles 전체와 1:1, 값 정수 −2..+3 | error |
+| V-25 | 커버리지: topTypes 16·outerTypes 16·shoes 11·하의 소재 11(knit*·leather 제외)·fits 9·lengths 10·colors 32 전부 행 존재 | error |
+| V-26 | 시그니처 품목은 그 스타일 열 ≥ +2, avoid 품목은 ≤ 0 | error |
+| V-27 | occasions ≥ 5, min ≤ targetLo ≤ targetHi ≤ max, styleBoost 키 ∈ styles(1..3), avoid/prefer/accessories 참조 무결, avoid∩prefer = ∅, patternMax 0..3 | error |
+| V-28 | accessoryTypes 창·계절·colorFrom, accessoryRules: id 유일, when 키 허용 목록, accessory ∈ types, delta −2..+1, severity, pick 키 허용 목록, pick.color = 색 id 또는 파생 키, when 안 참조 무결 | error |
+| V-29 | patterns 9, family·scale enum, itemTypes ∈ topTypes∪outerTypes∪materials, patternRules: when 키 허용, effect enum, exclude → severity block, 참조 무결 | error |
+| V-30 | midTypes 필드·enum, midLayerRules·twoOuterRules 참조 무결(any/none 규약), score 1..5, 여름 미드 행은 score 1·block | error |
+| V-31 | outfits: `styles[]`·`occasions[]`가 `styleTags(styleVector())`·`occasionFit()` 재계산과 동일, mid 0~1(fit null), 패턴 아이템 ≤ 2 | error |
+| V-32 | labels: `style.*` `occasion.*` `pattern.*` `midType.*` `accessory.*` `category.mid` 전부 + 각 스타일 `explain.style.<id>` | error |
+| V-33 | 전체 JSON 합(JSON.stringify, 들여쓰기 없음) < 360KB. V-22는 기존 16개 파일 < 300KB로 범위 조정 | warn |
+
+V-20 출처 코드표에 CX 코드 68개(`content-expansion-data.md` 7-1) + 내부 참조 `CX, R1 5-8, R2 5-5, R2 6-2, R2 6-3, R2 6-4, T8, T9`를 합쳤다(`validate.js CX_CODES` = `scripts/build/sources.mjs CX_CODES`).
+
+### 11-4. 데이터 결정·조정 (2026-10-20)
+
+1. **V-26 정합 19셀**: 시그니처 품목인데 가중 < +2였던 셀을 +2로(표 2-1): minimal dressShirt · amekaji sneakerColor · cityboy wool·sandal · bizcasual denimBlack · street sneakerWhite · gorpcore tee·henley·jersey·chino·workboot·sandal·coachJacket · ivy wool·sneakerWhite · workwear chukka·derby·duffle·blouson.
+2. **분포 조정 1셀**: `color white` minimal 3 → 2. 조정 전 minimal 태그 34/52(65%) > 60%. 후보 8안을 시뮬레이션해 가장 작은 변경을 택했다. 결과(태그 = 상위 2): minimal 29(56%) · ivy 26(50%) · bizcasual 21(40%) · amekaji 8(15%) · cityboy 5(10%) · workwear 3(6%) · street 2(4%) · gorpcore 2(4%), 태그 없는 코디 0.
+3. `cityboy` phase 1 → 2 (PM D-1 1차 범위 4개). 표 1-1도 같이 고쳤다.
+4. 상황 avoid의 `materials`는 top·bottom·outer·mid에만 적용, 신발 소재는 보지 않는다(`sneakerWhite`는 가죽이지만 `active`의 선호 신발) — 신발은 `shoeTypes`로만 거른다.
+5. 상황별 코디 수(`occasions[]`): work 22 · weekend 38 · date 29 · active 10 · formal 1(수트 없음, 예상대로), 상황 없는 코디 4.

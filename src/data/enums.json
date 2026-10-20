@@ -3,7 +3,8 @@
   "top",
   "bottom",
   "shoes",
-  "outer"
+  "outer",
+  "mid"
  ],
  "seasons": [
   "springFall",
@@ -58,7 +59,9 @@
   "street",
   "business",
   "weekend",
-  "resort"
+  "resort",
+  "layering",
+  "pattern"
  ],
  "topTypes": [
   {
@@ -337,5 +340,69 @@
     "winter"
    ]
   }
+ ],
+ "styles": [
+  "minimal",
+  "amekaji",
+  "cityboy",
+  "bizcasual",
+  "street",
+  "gorpcore",
+  "ivy",
+  "workwear"
+ ],
+ "occasions": [
+  "work",
+  "weekend",
+  "date",
+  "active",
+  "formal"
+ ],
+ "patterns": [
+  "breton",
+  "stripeShirt",
+  "pinstripe",
+  "gingham",
+  "plaid",
+  "windowpane",
+  "houndstooth",
+  "herringbone",
+  "camo"
+ ],
+ "midTypes": [
+  "cardigan",
+  "knitVest",
+  "quiltedVest",
+  "overshirtMid",
+  "knitOverShirt"
+ ],
+ "accessoryTypes": [
+  "beltLeather",
+  "beltBraided",
+  "beltWebbing",
+  "watchLeather",
+  "watchMetal",
+  "watchNato",
+  "socksMatch",
+  "socksNeutral",
+  "socksNoShow",
+  "socksWhite",
+  "socksPattern",
+  "bagTote",
+  "bagBackpack",
+  "bagCrossbody",
+  "bagBriefcase",
+  "cap",
+  "beanie",
+  "bucketHat",
+  "scarf"
+ ],
+ "accessoryGroups": [
+  "belt",
+  "watch",
+  "socks",
+  "bag",
+  "hat",
+  "scarf"
  ]
 }

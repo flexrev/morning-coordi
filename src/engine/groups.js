@@ -1,7 +1,8 @@
 // Deep 그룹핑(톤별·색상별·변주) — engine-spec.md 5-2절. 구현: C2.
 // Phase 4: 그룹 5장 중복 상한(P1-06·P3-20), 유사색=톤별 동일 집합 금지(P1-06), 변주 품목 재구체화(P3-12)
 import { materialize, makeOutfit, outfitSignature, cachedScore, toCandidate, compareOutfits } from './candidates.js';
-import { DEFAULTS, GROUP_MAX_SAME_OUTER, GROUP_MAX_SAME_SHOE, GROUP_MAX_SAME_TOP } from './constants.js';
+import { DEFAULTS, GROUP_MAX_SAME_OUTER, GROUP_MAX_SAME_SHOE, GROUP_MAX_SAME_TOP, K_STYLE, STYLE_TAG_MIN, BY_STYLE_MAX_GROUPS, BY_STYLE_PER_GROUP, BY_OCCASION_PER_GROUP } from './constants.js';
+import { occasionAvoidHit, occasionAdjust, patternFor, patternExcluded, outfitFormality } from './style.js';
 
 const TONE_ORDER = ['neutral', 'earth', 'mono', 'navyBase', 'accent', 'pastel'];
 const item = (outfit, cat) => outfit.items.find((i) => i.category === cat);
@@ -11,9 +12,12 @@ const byScore = (a, b) => b.score.final - a.score.final || a.outfit.id.localeCom
  * 점수순으로 채우되 같은 아우터 종류 ≤ GROUP_MAX_SAME_OUTER, 같은 신발 종류 ≤ GROUP_MAX_SAME_SHOE, 같은 (상의 종류+색) ≤ GROUP_MAX_SAME_TOP.
  * 상한에 걸리는 카드만 남으면 '상한 위반 수'가 가장 적은 카드부터(동점이면 점수순) 채운다 — 신발이 전부 같아도 아우터 상한은 따로 지켜진다.
  * deprioritize: 이 id들은 같은 위반 수 안에서 뒤로 미룬다(제외는 아님) — 색상별 그룹이 톤별 그룹과 같은 5장이 되지 않게
+ * rankOf (Phase 6-B): 정렬 기준 점수 함수. 기본 score.final — 스타일·상황 그룹은 finalRanked를 준다
  */
-export function fillDiverse(candidates, perGroup, deprioritize = new Set()) {
-  const sorted = [...candidates].sort((a, b) => (deprioritize.has(a.outfit.id) ? 1 : 0) - (deprioritize.has(b.outfit.id) ? 1 : 0) || byScore(a, b));
+export function fillDiverse(candidates, perGroup, deprioritize = new Set(), rankOf = null) {
+  const rank = rankOf ? new Map(candidates.map((c) => [c, rankOf(c)])) : null; // 후보당 1회 계산
+  const cmp = rank ? (a, b) => rank.get(b) - rank.get(a) || byScore(a, b) : byScore;
+  const sorted = [...candidates].sort((a, b) => (deprioritize.has(a.outfit.id) ? 1 : 0) - (deprioritize.has(b.outfit.id) ? 1 : 0) || cmp(a, b));
   const out = [];
   const outer = new Map(); const shoe = new Map(); const top = new Map();
   const bump = (m, k) => m.set(k, (m.get(k) ?? 0) + 1);
@@ -152,4 +156,77 @@ export function makeVariations(index, classic, base, season, opts = {}) {
     }
   }
   return out.sort((a, b) => compareOutfits(index, a.candidate.outfit, b.candidate.outfit, season));
+}
+
+// ================================================================ Phase 6-B (CX) — 스타일·상황 그룹, 패턴 변주 (content-expansion 4-3·7-3)
+
+/**
+ * @returns {Array<{ style: string, labelKey: string, candidates: Candidate[] }>}
+ * 후보는 decorate된 Candidate(c.styleVec 있음). 그룹 = styleNorm[s] ≥ STYLE_TAG_MIN인 후보를 final + K_STYLE × styleNorm[s] 순으로 fillDiverse.
+ * opts.style 선택 시 [선택 스타일, 근접 스타일 1개(그룹 교집합 최대)], 아니면 1차 범위(phase 1) 순 ≤ BY_STYLE_MAX_GROUPS. 빈 그룹은 뺀다.
+ */
+export function groupByStyle(index, candidates, opts = {}) {
+  if (!index.styles) return [];
+  const per = opts.perGroup ?? BY_STYLE_PER_GROUP;
+  const norm = (c, s) => c.styleVec?.norm?.[s] ?? 0;
+  const build = (s) => fillDiverse(candidates.filter((c) => norm(c, s) >= STYLE_TAG_MIN), per, new Set(), (c) => c.score.final + K_STYLE * norm(c, s));
+  const phase1 = index.styles.filter((s) => s.phase === 1).map((s) => s.id);
+  const mk = (s) => ({ style: s, labelKey: `style.${s}`, candidates: build(s) });
+  if (opts.style && index.styles.some((s) => s.id === opts.style)) {
+    const sel = mk(opts.style);
+    const ids = new Set(sel.candidates.map((c) => c.outfit.id));
+    const others = phase1.filter((s) => s !== opts.style).map(mk).filter((g) => g.candidates.length);
+    others.sort((a, b) => b.candidates.filter((c) => ids.has(c.outfit.id)).length - a.candidates.filter((c) => ids.has(c.outfit.id)).length || phase1.indexOf(a.style) - phase1.indexOf(b.style));
+    return [sel, ...others.slice(0, 1)].filter((g) => g.candidates.length);
+  }
+  return phase1.map(mk).filter((g) => g.candidates.length).slice(0, BY_STYLE_MAX_GROUPS);
+}
+
+/**
+ * @returns {Array<{ occasion: string, labelKey: string, candidates: Candidate[], relaxed: string[] }>}
+ * 상황별 ≤ BY_OCCASION_PER_GROUP장: avoid 제외(단계 완화 0→4) + final + occasionAdjust 순 fillDiverse. 3장이 되는 첫 단계에서 멈춘다.
+ */
+export const RELAX_STAGES = [[], ['patterns'], ['patterns', 'materials'], ['patterns', 'materials', 'itemTypes'], ['patterns', 'materials', 'itemTypes', 'shoeTypes']];
+export function groupByOccasion(index, candidates, opts = {}) {
+  if (!index.occasions?.size) return [];
+  const per = opts.perGroup ?? BY_OCCASION_PER_GROUP;
+  const out = [];
+  for (const occ of index.occasions.values()) {
+    const rank = (c) => c.score.final + occasionAdjust(index, c.outfit, occ, c.styleVec ?? null).total;
+    let list = []; let relaxed = [];
+    for (let stage = 0; stage < RELAX_STAGES.length; stage++) {
+      list = fillDiverse(candidates.filter((c) => !occasionAvoidHit(c.outfit, occ, stage)), per, new Set(), rank);
+      relaxed = RELAX_STAGES[stage];
+      if (list.length >= per) break;
+    }
+    if (list.length) out.push({ occasion: occ.id, labelKey: `occasion.${occ.id}`, candidates: list, relaxed });
+  }
+  return out;
+}
+
+/**
+ * Deep + patterns 옵션: 클래식 카드 상의에 패턴(브레통·잔줄·깅엄)을 입힌 변주 ≤ 1장/카드. AS 패턴 텍스처 자산이 있어야 화면에 보인다.
+ * @returns {import('./types.js').Variation[]}
+ */
+export function makePatternVariations(index, classic, season) {
+  if (!index.patterns?.size) return [];
+  const out = [];
+  for (const card of classic) {
+    const o = card.outfit;
+    const top = item(o, 'top');
+    const p = patternFor(index, top, season, outfitFormality(index, o).avg);
+    if (!p) continue;
+    // 품목명: "라이트 블루 잔줄 셔츠"(패턴 짧은 라벨이 품목을 담으면 치환) · "네이비 브레통 코튼 니트"(아니면 품목 앞에 삽입)
+    const pl = index.labels.get(`pattern.${p.id}`)?.shortLabel ?? index.labels.get(`pattern.${p.id}`)?.label ?? p.id;
+    const tl = index.labels.get(`topType.${top.itemType}`)?.label ?? '';
+    const lastWord = tl.split(/\s/).pop();
+    const itemName = tl && top.itemName.includes(tl) ? top.itemName.replace(tl, lastWord && pl.endsWith(lastWord) ? pl : `${pl} ${tl}`) : `${pl} ${top.itemName}`;
+    const next = { ...top, pattern: p.id, itemName };
+    const outfit = makeOutfit(index, o.items.map((it) => (it === top ? next : it)), season, ['variation', 'pattern']);
+    const score = cachedScore(index, outfit, season);
+    if (score.blocked || patternExcluded(index, outfit, season, 'deep')) continue;
+    outfit.isClassic = false;
+    out.push({ fromOutfitId: o.id, swapped: { category: 'top', from: top, to: next }, candidate: toCandidate(index, outfit, season) });
+  }
+  return out;
 }

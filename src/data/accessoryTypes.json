@@ -1,0 +1,300 @@
+[
+ {
+  "id": "beltLeather",
+  "labelKo": "가죽 벨트",
+  "group": "belt",
+  "formality": {
+   "min": 4,
+   "max": 10
+  },
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "colorFrom": "shoes",
+  "note": "신발 가죽 색·마감과 같은 계열"
+ },
+ {
+  "id": "beltBraided",
+  "labelKo": "브레이디드 벨트",
+  "group": "belt",
+  "formality": {
+   "min": 3,
+   "max": 6
+  },
+  "seasons": [
+   "springFall",
+   "summer"
+  ],
+  "colorFrom": "shoes",
+  "note": "치노·린넨·로퍼. 수트 금지"
+ },
+ {
+  "id": "beltWebbing",
+  "labelKo": "웨빙·캔버스 벨트",
+  "group": "belt",
+  "formality": {
+   "min": 1,
+   "max": 4
+  },
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "colorFrom": "free",
+  "note": "스니커즈·부츠·카고"
+ },
+ {
+  "id": "watchLeather",
+  "labelKo": "가죽 스트랩 시계",
+  "group": "watch",
+  "formality": {
+   "min": 4,
+   "max": 10
+  },
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "colorFrom": "shoes",
+  "note": "벨트·신발과 가죽 통일(T8)"
+ },
+ {
+  "id": "watchMetal",
+  "labelKo": "메탈 시계",
+  "group": "watch",
+  "formality": {
+   "min": 3,
+   "max": 10
+  },
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "colorFrom": "free",
+  "note": "버클 금속과 통일"
+ },
+ {
+  "id": "watchNato",
+  "labelKo": "나토·러버 시계",
+  "group": "watch",
+  "formality": {
+   "min": 1,
+   "max": 5
+  },
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "colorFrom": "outfit",
+  "note": "캐주얼만"
+ },
+ {
+  "id": "socksMatch",
+  "labelKo": "바지색 양말",
+  "group": "socks",
+  "formality": {
+   "min": 6,
+   "max": 10
+  },
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "colorFrom": "bottom",
+  "note": "바지보다 한 톤 어둡게"
+ },
+ {
+  "id": "socksNeutral",
+  "labelKo": "뉴트럴 양말",
+  "group": "socks",
+  "formality": {
+   "min": 3,
+   "max": 8
+  },
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "colorFrom": "neutral",
+  "note": "네이비·차콜·그레이"
+ },
+ {
+  "id": "socksNoShow",
+  "labelKo": "페이크삭스",
+  "group": "socks",
+  "formality": {
+   "min": 1,
+   "max": 6
+  },
+  "seasons": [
+   "springFall",
+   "summer"
+  ],
+  "colorFrom": null,
+  "note": "로퍼·스니커즈 여름"
+ },
+ {
+  "id": "socksWhite",
+  "labelKo": "흰 운동 양말",
+  "group": "socks",
+  "formality": {
+   "min": 1,
+   "max": 3
+  },
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "colorFrom": null,
+  "note": "스니커즈·러닝화만"
+ },
+ {
+  "id": "socksPattern",
+  "labelKo": "패턴 양말",
+  "group": "socks",
+  "formality": {
+   "min": 3,
+   "max": 7
+  },
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "colorFrom": "outfit",
+  "note": "작은 패턴만. 코디 패턴 0개일 때"
+ },
+ {
+  "id": "bagTote",
+  "labelKo": "토트백",
+  "group": "bag",
+  "formality": {
+   "min": 2,
+   "max": 8
+  },
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "colorFrom": "shoes",
+  "note": "가죽은 신발 계열, 캔버스는 자유"
+ },
+ {
+  "id": "bagBackpack",
+  "labelKo": "백팩",
+  "group": "bag",
+  "formality": {
+   "min": 1,
+   "max": 5
+  },
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "colorFrom": "neutral",
+  "note": "블랙·올리브·네이비·차콜"
+ },
+ {
+  "id": "bagCrossbody",
+  "labelKo": "크로스바디",
+  "group": "bag",
+  "formality": {
+   "min": 1,
+   "max": 5
+  },
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "colorFrom": "neutral",
+  "note": "나일론·캔버스"
+ },
+ {
+  "id": "bagBriefcase",
+  "labelKo": "브리프케이스",
+  "group": "bag",
+  "formality": {
+   "min": 6,
+   "max": 10
+  },
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "colorFrom": "shoes",
+  "note": "가죽, 신발 계열"
+ },
+ {
+  "id": "cap",
+  "labelKo": "볼캡",
+  "group": "hat",
+  "formality": {
+   "min": 1,
+   "max": 5
+  },
+  "seasons": [
+   "springFall",
+   "summer",
+   "winter"
+  ],
+  "colorFrom": "outfit",
+  "note": "아우터와 2~3톤 이내"
+ },
+ {
+  "id": "beanie",
+  "labelKo": "비니",
+  "group": "hat",
+  "formality": {
+   "min": 1,
+   "max": 5
+  },
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "colorFrom": "outfit",
+  "note": "캐주얼 아우터와"
+ },
+ {
+  "id": "bucketHat",
+  "labelKo": "버킷햇",
+  "group": "hat",
+  "formality": {
+   "min": 1,
+   "max": 4
+  },
+  "seasons": [
+   "springFall",
+   "summer"
+  ],
+  "colorFrom": "outfit",
+  "note": "고프코어·스트릿"
+ },
+ {
+  "id": "scarf",
+  "labelKo": "머플러",
+  "group": "scarf",
+  "formality": {
+   "min": 3,
+   "max": 10
+  },
+  "seasons": [
+   "springFall",
+   "winter"
+  ],
+  "colorFrom": "outfit",
+  "note": "포인트 컬러 1개로 계산"
+ }
+]

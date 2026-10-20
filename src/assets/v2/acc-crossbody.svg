@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="크로스바디 (bag 슬롯, 왼어깨→오른쪽 허리)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="bag" data-type="crossbody" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-bag,#CFC4B4)" vector-effect="non-scaling-stroke" d="M60 84L66 82L140 176L134 180ZM126 180Q145 176 162 180L160 206L128 206Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.18)" stroke="none" d="M150 180L162 180L160 206L150 206ZM128 200L160 200L160 206L128 206ZM134 178L140 176L136 180Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M63 83L137 178M128 190L160 190M144 190L144 196"/>
+</g>
+</svg>

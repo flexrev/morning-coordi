@@ -30,8 +30,17 @@ const SLOTS = {
   bag:    { attrs: ['data-type'], vars: ['--c-bag'] },
   cap:    { attrs: ['data-type'], vars: ['--c-cap'] },
   scarf:  { attrs: ['data-type'], vars: ['--c-scarf'] },
+  mid:    { attrs: ['data-type', 'data-fit', 'data-length'], vars: ['--c-mid'] }, // 6-B: 가디건·베스트·오버셔츠 (top 뒤, outer 앞)
+  stage:  { attrs: ['data-type'], vars: [] },                                      // 6-B: 스튜디오 다크 연출 레이어 (base 앞). 선 없음, 불투명도는 CSS
 };
-const Z_ORDER = ['base', 'cap', 'socks', 'shoes', 'bottom', 'belt', 'top', 'outer', 'scarf', 'bag', 'watch'];
+const Z_ORDER = ['stage', 'base', 'cap', 'socks', 'shoes', 'bottom', 'belt', 'top', 'mid', 'outer', 'scarf', 'bag', 'watch'];
+const STAGE_ORDER = { spotlight: 0, floor: 1 }; // stage 슬롯 안 그리기 순서 (광 → 바닥 그림자)
+const COLOR_VARS = ['--c-skin', '--c-hair', '--c-top', '--c-bottom', '--c-shoes', '--c-sole', '--c-outer', '--c-mid', '--c-belt', '--c-watch', '--c-metal', '--c-socks', '--c-bag', '--c-cap', '--c-scarf', '--stage-glow'];
+// stage 레이어 권장 불투명도 (asset-system.md 11장). 렌더러가 <g data-slot=stage> 에 style.opacity / filter 로 건다.
+const STAGE = {
+  spotlight: { file: 'stage-spotlight.svg', opacity: { card120: 0.55, detail300: 0.75 }, blur: { card120: '0', detail300: '6px' }, centerAlpha: 0.25 },
+  floor:     { file: 'stage-floor.svg',     opacity: { card120: 0.8,  detail300: 1 },    blur: { card120: '0', detail300: '3px' }, centerAlpha: 0.48 },
+};
 
 const attr = (tag, name) => { const m = tag.match(new RegExp(`\\s${name}="([^"]*)"`)); return m ? m[1] : null; };
 
@@ -54,8 +63,10 @@ function check(file) {
   if (!spec) errors.push(`data-slot 미지정 또는 미등록 (${slot})`);
   else for (const a of spec.attrs) if (attr(g, a) == null) errors.push(`${a} 없음`);
   const [prefix] = name.split('-');
-  const expectPrefix = { base: 'figure', top: 'top', bottom: 'bottom', shoes: 'shoes', outer: 'outer' }[slot] || 'acc';
+  const expectPrefix = { base: 'figure', top: 'top', bottom: 'bottom', shoes: 'shoes', outer: 'outer', mid: 'mid', stage: 'stage' }[slot] || 'acc';
   if (prefix !== expectPrefix) errors.push(`파일명 접두사 "${prefix}-" 가 슬롯 "${slot}" 규약(${expectPrefix}-)과 다름`);
+  const isStage = slot === 'stage';
+  if (isStage && attr(g, 'stroke') !== 'none') errors.push('stage 레이어는 <g stroke="none"> 이어야 함');
 
   const paths = src.match(/<path\b[^>]*>/g) || [];
   if (!paths.length) errors.push('path 없음');
@@ -68,8 +79,9 @@ function check(file) {
     cmds += (d.match(/[MLHVCSQTAZ]/gi) || []).length;
     const fill = attr(p, 'fill') || '';
     if (part === 'main') {
-      if (!/^var\(--c-[a-z]+,#[0-9A-Fa-f]{6}\)$/.test(fill)) errors.push(`main fill 은 var(--c-*,#hex) 여야 함: ${fill}`);
-      if (!/vector-effect="non-scaling-stroke"/.test(p)) warns.push('main 에 vector-effect 없음');
+      const re = isStage ? /^var\(--stage-[a-z]+,#[0-9A-Fa-f]{6}\)$/ : /^var\(--c-[a-z]+,#[0-9A-Fa-f]{6}\)$/;
+      if (!re.test(fill)) errors.push(`main fill 은 var(${isStage ? '--stage-*' : '--c-*'},#hex) 여야 함: ${fill}`);
+      if (!isStage && !/vector-effect="non-scaling-stroke"/.test(p)) warns.push('main 에 vector-effect 없음');
     }
     if (part === 'shade' || part === 'shadow') {
       if (!/^rgba\(0,0,0,\.\d+\)$/.test(fill)) errors.push(`${part} fill 은 rgba(0,0,0,.nn) 여야 함: ${fill}`);
@@ -85,7 +97,7 @@ function check(file) {
   if (/xlink:href|href=/.test(src)) errors.push('외부 참조 금지');
   if (/<\?xml/.test(src)) warns.push('XML 선언은 생략 권장 (바이트 절약)');
   if (bytes > BUDGET_FILE) errors.push(`파일 ${bytes} B > 예산 ${BUDGET_FILE} B`);
-  if (parts.main === 0) errors.push('main 파트 없음');
+  if (parts.main === 0 && !(isStage && parts.shadow > 0)) errors.push('main 파트 없음');
 
   return {
     file: `${name}.svg`, slot, type: attr(g, 'data-type'), fit: attr(g, 'data-fit'), length: attr(g, 'data-length'),
@@ -96,11 +108,12 @@ function check(file) {
   };
 }
 
-const files = readdirSync(DIR).filter((f) => f.endsWith('.svg')).sort((a, b) => {
-  const za = Z_ORDER.indexOf(check(join(DIR, a)).slot), zb = Z_ORDER.indexOf(check(join(DIR, b)).slot);
-  return za - zb || a.localeCompare(b);
+const rows = readdirSync(DIR).filter((f) => f.endsWith('.svg')).map((f) => check(join(DIR, f))).sort((a, b) => {
+  const za = Z_ORDER.indexOf(a.slot), zb = Z_ORDER.indexOf(b.slot);
+  if (za !== zb) return za - zb;
+  if (a.slot === 'stage') return (STAGE_ORDER[a.type] ?? 9) - (STAGE_ORDER[b.type] ?? 9);
+  return a.file.localeCompare(b.file);
 });
-const rows = files.map((f) => check(join(DIR, f)));
 const total = rows.reduce((s, r) => s + r.bytes, 0);
 const totalPaths = rows.reduce((s, r) => s + r.paths, 0);
 const errCount = rows.reduce((s, r) => s + r.errors.length, 0);
@@ -131,8 +144,9 @@ if (args.has('--write-index') && errCount === 0 && !totalErr.length) {
       top: 'rect 0 0 200 184 (clipPath id=clip-top-crop)',
       topTuck: 'rect 0 0 200 176 (clipPath id=clip-top-tuck) — 벨트 노출용',
     },
-    colorVars: ['--c-skin', '--c-hair', '--c-top', '--c-bottom', '--c-shoes', '--c-sole', '--c-outer', '--c-belt', '--c-watch', '--c-metal', '--c-socks', '--c-bag', '--c-cap', '--c-scarf'],
+    colorVars: COLOR_VARS,
     parts: ['main', 'shade', 'detail', 'shadow'],
+    stage: STAGE,
     totalPaths, totalBytes: total,
     layers: rows.map((r) => ({
       file: r.file, slot: r.slot, type: r.type, fit: r.fit, length: r.length, labelKo: r.labelKo,

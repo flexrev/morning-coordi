@@ -24,6 +24,41 @@ export const GROUP_MAX_SAME_TOP = 1;
 // Phase 4 (P3-25/V-21): 규칙 없이 어휘만 유지하는 예비 색 — 베이스 칩으로 올리지 않음
 export const RESERVE_COLORS = ['teal', 'taupe'];
 
+// ---------------------------------------------------------------- Phase 6-B (CX) 콘텐츠 확장 — content-expansion.md 7-2
+export const K_STYLE = 0.5;                // 스타일 선택 시 final + K_STYLE × styleNorm[style] (재정렬만, D-1)
+export const K_OCC = 0.4;                  // 상황 styleBoost 가중 합 × K_OCC
+export const OCC_WINDOW_PENALTY = -0.3;    // 상황 포멀도 창 밖 아이템당
+export const OCC_WINDOW_FLOOR = -0.9;
+export const OCC_TARGET_BONUS = 0.2;       // 코디 평균 포멀도가 목표 창 안
+export const STYLE_TAG_MIN = 0.4;          // styleNorm ≥ 이면 태그 후보
+export const STYLE_TAG_RATIO = 0.8;        // 최대값의 80% 이상만
+export const STYLE_TAGS_MAX = 2;           // 카드 태그 상위 2개 (gate-5 지시: top-2)
+export const STYLE_SHOES_COLOR_WEIGHT = 0.5;
+export const STYLE_NORM_DIV = 3;           // styleNorm = vec / (3 × Σ가중) — 가중치 최대 +3
+export const BY_STYLE_MAX_GROUPS = 4;
+export const BY_STYLE_PER_GROUP = 5;
+export const BY_OCCASION_PER_GROUP = 3;
+export const W_LAYER = 0.7;                // mid 레이어 축 가중 — mid가 있을 때만 ΣW에 포함 (D-3)
+export const PAIR_WEIGHT_MID = 0.5;        // 색 축 top↔mid·mid↔outer 쌍 가중
+export const MID_FORMALITY_TOL = 2;        // 미드 포멀도가 베이스·아우터 사이 ±2 밖이면 warn
+export const TWO_OUTER_INNER_WEIGHT = 0.5; // 2겹 아우터: 안쪽 twoOuterRules 점수를 outer 축에 섞는 가중
+export const TWO_OUTER_LENGTH_PENALTY = { same: -1, longer: -2 }; // 안쪽 아우터 기장 ≥ 바깥
+export const PATTERN_DELTA_MIN = -2;       // 패턴 규칙 delta 합 클램프 (adjust 축과 같은 자리)
+export const PATTERN_DELTA_MAX = 1;
+export const PATTERN_MAX = { quick: 1, deep: 2 }; // 코디 내 패턴 아이템 상한 (patternRules ptQuickMaxOne·ptDeepMaxTwo와 동일)
+export const LAYERING_CANDIDATES_MAX = 100; // Deep + layering: 미드 변형 후보 상한
+export const ACCESSORY_GROUP_ORDER = ['belt', 'socks', 'watch', 'bag', 'scarf', 'hat'];
+export const ACCESSORY_LINES_MAX = 5;
+export const AFFINITY_KINDS = ['topType', 'outerType', 'shoeType', 'material', 'topFit', 'bottomFit', 'trouserLength', 'topLength', 'outerLength', 'color', 'pattern', 'accessory'];
+export const ACCESSORY_WHEN_KEYS = ['season', 'shoeType', 'shoesColor', 'shoesMaterial', 'shoesFinish', 'bottomMaterial', 'topType', 'outerType', 'outerPattern', 'trouserLength', 'hasOuter', 'formalityMin', 'formalityMax', 'patternCount', 'accentCount', 'style', 'tuckIn', 'belt', 'watch', 'beltColor', 'material'];
+export const ACCESSORY_PICK_KEYS = ['color', 'finish', 'material', 'width', 'metal', 'pattern', 'scale', 'knit', 'skip'];
+export const ACCESSORY_COLOR_DERIVED = ['shoesFamily', 'bottomDarker', 'outfit', 'outfitSecondary', 'outerTone2', 'outerPick', 'neutral', 'free'];
+export const PATTERN_WHEN_KEYS = ['mode', 'patternCount', 'sameFamily', 'scaleDiff', 'sharedColor', 'pattern', 'otherPattern', 'category', 'bottomColor', 'bottomPattern', 'outerType', 'outfitTones', 'formalityMin', 'formalityMax', 'accentCount'];
+export const PATTERN_EFFECTS = ['exclude', 'penalty', 'bonus', 'countAs'];
+// 한 톤 어두운 색(양말 bottomDarker 파생) — 없으면 같은 색
+export const DARKER_OF = { white: 'lightGrey', offWhite: 'lightGrey', cream: 'beige', oatmeal: 'beige', beige: 'khaki', khaki: 'brown', tan: 'brown', camel: 'brown', brown: 'chocolate', lightGrey: 'midGrey', greyMelange: 'midGrey', midGrey: 'charcoal', charcoal: 'black', navy: 'navy', indigo: 'navy', midDenim: 'indigo', lightDenim: 'midDenim', blackDenim: 'black', lightBlue: 'navy', skyBlue: 'navy', olive: 'forestGreen', sage: 'olive', burgundy: 'burgundy', rust: 'brown', mustard: 'brown', dustyPink: 'burgundy', lavender: 'navy', teal: 'navy', taupe: 'chocolate' };
+export const NEUTRAL_ACCESSORY_COLOR = 'charcoal';
+
 // data-schema 4-14: adjust.when 허용 키
 export const ADJUST_WHEN_KEYS = ['season', 'trouserLength', 'topLength', 'outerLength', 'bottomFit', 'topFit', 'shoe', 'bottomMaterial', 'topMaterial', 'outerMaterial', 'bottomWeight', 'materialWeights', 'colorCountMin', 'sameColorTopBottom', 'topColor', 'bottomColor', 'shoesColor', 'outerColor', 'hasOuter'];
 

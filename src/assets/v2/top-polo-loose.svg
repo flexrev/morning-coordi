@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="폴로 (루즈·드롭숄더)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="top" data-type="polo" data-fit="loose" data-length="regular" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-top,#BBBBBB)" vector-effect="non-scaling-stroke" d="M88 62L82 72L54 80Q40 104 34 130L60 140L58 204L142 204L140 140L166 130Q160 104 146 80L118 72L112 62L104 68L100 92L96 68Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.18)" stroke="none" d="M128 104L140 140L142 204L130 204ZM86 90L100 94L114 90L113 98Q100 103 87 98ZM58 204L142 204L142 210L58 210ZM52 133L64 138L62 143L50 138ZM136 138L148 133L150 138L138 143ZM142 138L166 130L164 135L142 144Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M88 62L86 90L100 94L114 90L112 62M97 94L97 124M103 94L103 124M54 80Q66 110 60 140M146 80Q134 110 140 140M37 127L59 135M163 127L141 135M60 199L140 199"/>
+<path data-part="detail" data-kind="rib" fill="none" stroke-opacity=".22" stroke-width="5" stroke-dasharray="1 2.5" d="M36 128.5L59 136.5M164 128.5L141 136.5"/>
+<path data-part="detail" data-kind="buttons" fill="none" stroke-opacity=".5" stroke-width="3" stroke-dasharray="0.1 14" d="M100 100L100 118"/>
+</g>
+</svg>

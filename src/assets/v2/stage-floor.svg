@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="스테이지 바닥 그림자 (신발 아래)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="stage" data-type="floor" stroke="none">
+<path data-part="shadow" fill="rgba(0,0,0,.12)" stroke="none" d="M12 390a88 10 0 1 0 176 0a88 10 0 1 0-176 0Z"/>
+<path data-part="shadow" fill="rgba(0,0,0,.14)" stroke="none" d="M30 390a70 8 0 1 0 140 0a70 8 0 1 0-140 0Z"/>
+<path data-part="shadow" fill="rgba(0,0,0,.16)" stroke="none" d="M48 390a52 6 0 1 0 104 0a52 6 0 1 0-104 0Z"/>
+<path data-part="shadow" fill="rgba(0,0,0,.18)" stroke="none" d="M66 390a34 4 0 1 0 68 0a34 4 0 1 0-68 0Z"/>
+</g>
+</svg>

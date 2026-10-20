@@ -752,7 +752,7 @@
 
 ==================== 2. DEEP (6 bases × 봄가을) ====================
 
-##### DEEP bottom/indigo (인디고) · 봄가을 · candidates=300 ms=20.91
+##### DEEP bottom/indigo (인디고) · 봄가을 · candidates=300 ms=36.07
   [톤별]
    ▸ 네이비 베이스 (navyBase)
       - 네이비 코튼 니트[4] · 인디고 데님[4] · 브라운 척카 부츠[5] · 베이지 트렌치 코트[7] => 5 [C,rule?]
@@ -803,7 +803,7 @@
       - 아우터 인디고 — 같은 워시의 데님 재킷은 유니폼처럼 보임 (A8)
       - (일반) — 4색 이상 (A11)
 
-##### DEEP bottom/beige (베이지) · 봄가을 · candidates=300 ms=16.12
+##### DEEP bottom/beige (베이지) · 봄가을 · candidates=300 ms=25.57
   [톤별]
    ▸ 뉴트럴 (neutral)
       - 네이비 코튼 니트[4] · 베이지 치노[5] · 버건디 페니 로퍼[6] · — => 4.96 []
@@ -859,7 +859,7 @@
   [피할 것]
       - (일반) — 올베이지(명도 차 없이). 베이지+화이트 셔츠+탄 신발만으로는 밋밋 → 한 점 어두운 색 필요 ()
 
-##### DEEP bottom/charcoal (차콜) · 봄가을 · candidates=120 ms=5.03
+##### DEEP bottom/charcoal (차콜) · 봄가을 · candidates=120 ms=8.44
   [톤별]
    ▸ 뉴트럴 (neutral)
       - 라이트 블루 옥스포드 셔츠[6] · 차콜 울 슬랙스[7] · 블랙 더비[7] · 카멜 트렌치 코트[7] => 4.86 [C,rule?]
@@ -908,7 +908,7 @@
       - 상의 탱크톱 — 격식 차이 6단계 (formality)
       - 아우터 롱 패딩 — 격식 차이 6단계 (formality)
 
-##### DEEP bottom/blackDenim (블랙 데님) · 봄가을 · candidates=300 ms=12.03
+##### DEEP bottom/blackDenim (블랙 데님) · 봄가을 · candidates=300 ms=18.88
   [톤별]
    ▸ 모노톤 (mono)
       - 화이트 옥스포드 셔츠[6] · 블랙 데님[5] · 블랙 더비[7] · — => 4.92 [C]
@@ -947,7 +947,7 @@
       - 상의 블랙 — 여름 블랙 셔츠+블랙 데님은 너무 어둡고 웨이터 느낌 (A13)
       - (일반) — 스키니 핏, 블랙 데님+브라운 벨트+블랙 신발(가죽 불일치) (A2)
 
-##### DEEP top/white (화이트) · 봄가을 · candidates=272 ms=12.84
+##### DEEP top/white (화이트) · 봄가을 · candidates=272 ms=17.59
   [톤별]
    ▸ 뉴트럴 (neutral)
       - 화이트 옥스포드 셔츠[6] · 브라운 코듀로이[4] · 브라운 척카 부츠[5] · — => 5 [C]
@@ -992,7 +992,7 @@
       - 하의 화이트 — 화이트온화이트 정확히 같은 흰색 (A12)
       - 하의 크림 — 올화이트 ()
 
-##### DEEP top/navy (네이비) · 봄가을 · candidates=286 ms=11.53
+##### DEEP top/navy (네이비) · 봄가을 · candidates=286 ms=19.05
   [톤별]
    ▸ 뉴트럴 (neutral)
       - 네이비 코튼 니트[4] · 브라운 코듀로이[4] · 브라운 척카 부츠[5] · — => 5 [C]
@@ -1168,6 +1168,23 @@
 
 
 ==================== 6. labels 샘플 ====================
+  LONG/SPACE shortLabel: tag.layering "겹쳐 입기"
+  LONG/SPACE shortLabel: tag.pattern "패턴 변주"
+  LONG/SPACE shortLabel: pattern.stripeShirt "잔줄 셔츠"
+  LONG/SPACE shortLabel: pattern.gingham "깅엄 체크"
+  LONG/SPACE shortLabel: pattern.plaid "타탄 체크"
+  LONG/SPACE shortLabel: midType.knitVest "니트 베스트"
+  LONG/SPACE shortLabel: midType.quiltedVest "퀼팅 베스트"
+  LONG/SPACE shortLabel: midType.knitOverShirt "셔츠위 니트"
+  LONG/SPACE shortLabel: accessory.beltLeather "가죽 벨트"
+  LONG/SPACE shortLabel: accessory.beltWebbing "웨빙 벨트"
+  LONG/SPACE shortLabel: accessory.watchLeather "가죽 시계"
+  LONG/SPACE shortLabel: accessory.watchMetal "메탈 시계"
+  LONG/SPACE shortLabel: accessory.watchNato "나토 시계"
+  LONG/SPACE shortLabel: accessory.socksMatch "바지색 양말"
+  LONG/SPACE shortLabel: accessory.socksNeutral "뉴트럴 양말"
+  LONG/SPACE shortLabel: accessory.socksWhite "흰 양말"
+  LONG/SPACE shortLabel: accessory.socksPattern "패턴 양말"
   -- color.
      color.white                label="화이트" short="화이트"  
      color.offWhite             label="오프화이트" short="오프화이트"  
@@ -1268,6 +1285,7 @@
      category.bottom            label="하의" short="하의"  
      category.shoes             label="신발" short="신발"  
      category.outer             label="아우터" short="아우터"  
+     category.mid               label="미드 레이어" short="미드"  help=상의와 아우터 사이(가디건·니트 베스트). 봄가을·겨울만
   -- fit.
      fit.top.slim               label="슬림" short="슬림"  help=몸에 붙음
      fit.top.regular            label="레귤러" short="레귤러"  help=손가락 2~3개 여유
@@ -1312,6 +1330,8 @@
      tag.business               label="비즈니스" short="비즈니스"  
      tag.weekend                label="주말" short="주말"  
      tag.resort                 label="휴양" short="휴양"  
+     tag.layering               label="겹쳐 입기" short="겹쳐 입기"  
+     tag.pattern                label="패턴 변주" short="패턴 변주"  
   -- explain.* / ui.*
      explain.classic            "클래식"
      explain.universal          "누구나 안전한 기본 조합"
@@ -1351,6 +1371,36 @@
      ui.disputed                "의견 갈림"
      ui.avoid                   "피하기"
      ui.blocked                 "추천하지 않는 조합"
+     explain.style.minimal      "미니멀 — 무채색·뉴트럴, 장식 없는 기본템"
+     explain.style.amekaji      "아메카지 — 인디고 데님·플란넬·워크 부츠, 질감과 빈티지 워시"
+     explain.style.cityboy      "시티보이 — 루즈·박시 실루엣, 와이드 치노·로퍼·캔버스 토트"
+     explain.style.bizcasual    "비즈니스 캐주얼 — 타이 없는 셔츠·니트 + 슬랙스 + 로퍼·블레이저"
+     explain.style.street       "스트릿 — 오버핏 후디·맨투맨, 와이드 데님, 컬러 스니커즈"
+     explain.style.gorpcore     "고프코어 — 플리스·셸·테크 팬츠·트레일 러닝화를 일상복으로"
+     explain.style.ivy          "클래식·아이비 — 옥스포드·치노·페니 로퍼·네이비 블레이저"
+     explain.style.workwear     "워크웨어 — 초어·데님 재킷, 헨리·데님 셔츠, 워크 부츠"
+     explain.style.boost        "{style} 스타일 {delta}"
+     explain.style.tag          "{style} 느낌"
+     explain.occasion.adj       "{occasion}에 {delta}"
+     explain.occasion.window    "{occasion} 격식 창 밖 아이템 {n}개 ({delta})"
+     explain.occasion.target    "{occasion}에 딱 맞는 격식 (+0.2)"
+     explain.occasion.relaxed   "{occasion} 조건을 일부 완화했어요 ({stages})"
+     explain.acc                "{accessory}: {reason}"
+     explain.pattern            "{reason} ({delta})"
+     explain.midLayer           "{mid|은는} {reason} ({score}/5)"
+     explain.midLength          "{mid|이가} {outer}보다 길어요"
+     explain.midWeight          "{mid|이가} {outer}보다 두꺼워요"
+     explain.midFormality       "{mid} 격식이 베이스·아우터와 안 맞아요"
+     explain.twoOuter           "{inner}+{outer}: {reason} ({score}/5)"
+     explain.twoOuterLength     "안쪽 {inner|이가} 바깥 {outer}보다 짧지 않아요 ({delta})"
+     explain.layerScore         "레이어링 {score}/5"
+     ui.byStyle                 "스타일"
+     ui.byOccasion              "상황"
+     ui.accessories             "소품"
+     ui.layering                "겹쳐 입기"
+     ui.patterns                "패턴 변주"
+     ui.styleAll                "전체"
+     ui.formalApprox            "재킷+슬랙스 기준. 수트는 2차"
 
 
 ==================== 7. 보조 데이터 ====================

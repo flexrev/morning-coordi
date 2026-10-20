@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="후디 (루즈·드롭숄더)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="top" data-type="hoodie" data-fit="loose" data-length="regular" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-top,#BBBBBB)" vector-effect="non-scaling-stroke" d="M88 56Q78 56 72 64L54 82Q40 114 32 156L32 220L54 220L58 206L142 206L146 220L168 220L168 156Q160 114 146 82L128 64Q122 56 112 56L108 62Q100 74 92 62Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.18)" stroke="none" d="M130 104L142 206L132 206L128 104ZM74 66Q100 84 126 66Q100 92 74 66ZM160 126L168 156L168 220L162 220L160 158ZM58 206L142 206L142 212L58 212ZM112 56Q122 56 128 64L124 66Q118 60 110 60Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M74 66Q84 70 92 64M126 66Q116 70 108 64M96 70L95 106M104 70L105 106M74 158L126 158L126 196L74 196ZM74 158L84 170L84 196M126 158L116 170L116 196M58 198L142 198M33 212L54 212M146 212L167 212M54 82Q68 112 62 142L58 206M146 82Q132 112 138 142L142 206"/>
+<path data-part="detail" data-kind="rib" fill="none" stroke-opacity=".22" stroke-width="5" stroke-dasharray="1 2.5" d="M60 202.5L140 202.5M34 216L53 216M147 216L166 216"/>
+</g>
+</svg>

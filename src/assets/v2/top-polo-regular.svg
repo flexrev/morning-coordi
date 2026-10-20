@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="폴로 (레귤러)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="top" data-type="polo" data-fit="regular" data-length="regular" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-top,#BBBBBB)" vector-effect="non-scaling-stroke" d="M88 62L82 72L58 78Q48 96 44 120L68 128L70 192L130 192L132 128L156 120Q152 96 142 78L118 72L112 62L104 68L100 92L96 68Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.18)" stroke="none" d="M120 100L132 128L130 192L121 192ZM86 90L100 94L114 90L113 98Q100 103 87 98ZM134 126L156 120L154 125L134 132ZM70 192L130 192L130 198L70 198ZM52 123L66 128L65 133L52 129ZM134 128L148 123L148 129L135 133Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M88 62L86 90L100 94L114 90L112 62M97 94L97 122M103 94L103 122M58 78Q70 104 68 128M142 78Q130 104 132 128M47 117L67 124M153 117L133 124M71 187L129 187"/>
+<path data-part="detail" data-kind="rib" fill="none" stroke-opacity=".22" stroke-width="5" stroke-dasharray="1 2.5" d="M46 118.5L67 125.5M154 118.5L133 125.5"/>
+<path data-part="detail" data-kind="buttons" fill="none" stroke-opacity=".5" stroke-width="3" stroke-dasharray="0.1 14" d="M100 100L100 116"/>
+</g>
+</svg>

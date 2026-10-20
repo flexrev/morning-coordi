@@ -82,11 +82,25 @@ export function buildIndex(data) {
     .sort((a, b) => b.classic - a.classic || b.total - a.total || a.color.localeCompare(b.color))
     .map((x) => x.color);
 
+  // Phase 6-B (CX) 콘텐츠 확장 — 파일이 없거나 빈 배열이면 null/빈 Map → 기능 OFF (content-expansion 6-3)
+  const list = (v) => (Array.isArray(v) && v.length ? v : null);
+  const styles = list(data.styles);
+  const affinity = new Map((data.styleAffinity ?? []).map((a) => [`${a.kind}|${a.id}`, a]));
+  const occasions = new Map((data.occasions ?? []).map((o) => [o.id, o]));
+  const accessoryTypes = new Map((data.accessoryTypes ?? []).map((a) => [a.id, a]));
+  const accessoryRules = list(data.accessoryRules) ?? [];
+  const patterns = new Map((data.patterns ?? []).map((p) => [p.id, p]));
+  const patternRules = list(data.patternRules) ?? [];
+  const midTypes = new Map((data.midTypes ?? []).map((m) => [m.id, m]));
+  const midLayerRules = list(data.midLayerRules) ?? [];
+  const twoOuterRules = list(data.twoOuterRules) ?? [];
+
   return {
     data, enums: data.enums, colors, materials, shoes, topTypes, outerTypes, colorRules, reverse, hasBaseRule, baseColors, baseStats,
     toneRules, toneGroups, toneRaw: data.toneRules, hue, analogousOf, complementary, achromatic,
     matRules, fitRules, lengthRules, shoeRules, formality, outerRules, layerRules, adjust: data.adjust,
     outfits, outfitsByItem, labels, labelMap,
+    styles, affinity, occasions, accessoryTypes, accessoryRules, patterns, patternRules, midTypes, midLayerRules, twoOuterRules,
   };
 }
 
@@ -98,7 +112,9 @@ export function colorPair(index, a, b) {
     if (x.category !== 'bottom' && x.category !== 'top') return null;
     const r = index.colorRules.get(`${x.color}|${x.category}`);
     if (!r) return null;
-    const m = r.matches.get(`${y.category}|${y.color}`);
+    // mid(가디건·베스트)는 색 규칙이 없으므로 상의 → 아우터 행으로 대신 본다 (D-3)
+    const cats = y.category === 'mid' ? ['top', 'outer'] : [y.category];
+    const m = cats.map((c) => r.matches.get(`${c}|${y.color}`)).find(Boolean);
     if (!m) return null;
     return { score: m.score, tag: m.tag, sources: m.sources, flags: m.flags, note: m.note, found: true, avoid: r.avoid.get(`${y.category}|${y.color}`) ?? null, ruleId: m.ruleId ?? null };
   };
@@ -174,6 +190,7 @@ export function outerScore(index, outerType, bottom, shoeType) {
 
 /** @returns {number|null} */
 export function formalityLevel(index, item) {
+  if (item.category === 'mid') return index.midTypes?.get(item.itemType)?.formality ?? null;
   const id = item.category === 'bottom' ? item.material : item.category === 'shoes' ? item.shoeType : item.itemType;
   if (!id) return null;
   const rows = index.formality.get(`${item.category}|${id}`);
@@ -189,5 +206,6 @@ export function itemSeasons(index, item) {
   if (!material && item.category === 'top') material = index.topTypes.get(item.itemType)?.material ?? null;
   if (material) return index.materials.get(material)?.seasons ?? null;
   if (item.category === 'outer') return index.outerTypes.get(item.itemType)?.seasons ?? null;
+  if (item.category === 'mid') return index.midTypes?.get(item.itemType)?.seasons ?? null;
   return null;
 }

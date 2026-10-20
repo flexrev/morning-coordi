@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="베스트 (니트·퀼팅 공용, 미드 레이어)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="mid" data-type="vest" data-fit="regular" data-length="regular" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-mid,#999999)" vector-effect="non-scaling-stroke" d="M86 72Q72 74 62 80Q72 100 68 130L68 198L132 198L132 130Q128 100 138 80Q128 74 114 72L100 118Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.18)" stroke="none" d="M122 100L132 198L123 198L120 100ZM68 198L132 198L132 204L68 204ZM100 118L104 118L114 76L112 72Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M88 76L100 122M112 76L100 122M64 84Q73 104 70 130M136 84Q127 104 130 130M68 190L132 190"/>
+<path data-part="detail" data-kind="rib" fill="none" stroke-opacity=".22" stroke-width="5" stroke-dasharray="1 2.5" d="M70 194.5L130 194.5"/>
+<path data-part="detail" data-detail="quilt" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M68 140L132 140M68 154L132 154M68 168L132 168M68 182L132 182M100 122L100 198"/>
+</g>
+</svg>

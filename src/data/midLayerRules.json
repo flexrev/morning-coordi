@@ -1,0 +1,272 @@
+[
+ {
+  "id": "mlSfCardiganShirtJacket",
+  "season": "springFall",
+  "base": [
+   "tee",
+   "oxfordShirt",
+   "henley"
+  ],
+  "mid": [
+   "cardigan"
+  ],
+  "outer": [
+   "shirtJacket",
+   "trench",
+   "balmacaan"
+  ],
+  "score": 5,
+  "tag": "classic",
+  "note": "봄가을 기본 3겹. 안쪽 얇고 매끈, 바깥 두껍고 질감",
+  "sources": [
+   "R2 6-4",
+   "ESQLAY",
+   "ALLCARD"
+  ],
+  "flags": []
+ },
+ {
+  "id": "mlSfVestBlazer",
+  "season": "springFall",
+  "base": [
+   "oxfordShirt",
+   "dressShirt"
+  ],
+  "mid": [
+   "knitVest"
+  ],
+  "outer": [
+   "blazer",
+   "balmacaan"
+  ],
+  "score": 5,
+  "tag": "classic",
+  "note": "아이비 정석. 베스트는 재킷 밑단 안에",
+  "sources": [
+   "OPUMOIVY",
+   "STUIVY"
+  ],
+  "flags": []
+ },
+ {
+  "id": "mlSfQuiltedVest",
+  "season": "springFall",
+  "base": [
+   "oxfordShirt",
+   "knitCotton",
+   "tee"
+  ],
+  "mid": [
+   "quiltedVest"
+  ],
+  "outer": [
+   "none",
+   "shirtJacket"
+  ],
+  "score": 4,
+  "tag": "classic",
+  "note": "초봄·늦가을 미드. 팔 부피 없어 재킷 안에도",
+  "sources": [
+   "PTOMID",
+   "OPUMOLAY"
+  ],
+  "flags": []
+ },
+ {
+  "id": "mlSfOvershirtUnderCoat",
+  "season": "springFall",
+  "base": [
+   "tee",
+   "henley"
+  ],
+  "mid": [
+   "overshirtMid"
+  ],
+  "outer": [
+   "trench",
+   "balmacaan"
+  ],
+  "score": 4,
+  "tag": "classic",
+  "note": "오버셔츠를 코트 안 미드로. 밑단 < 코트",
+  "sources": [
+   "OPUMOLAY",
+   "IHLAY"
+  ],
+  "flags": []
+ },
+ {
+  "id": "mlWiKnitOverShirt",
+  "season": "winter",
+  "base": [
+   "oxfordShirt",
+   "dressShirt"
+  ],
+  "mid": [
+   "knitOverShirt"
+  ],
+  "outer": [
+   "chesterfield",
+   "balmacaan",
+   "peacoat",
+   "duffle"
+  ],
+  "score": 5,
+  "tag": "classic",
+  "note": "겨울 기본. 니트 기장이 코트 밖으로 안 나오게",
+  "sources": [
+   "R2 6-4",
+   "KHLAY"
+  ],
+  "flags": []
+ },
+ {
+  "id": "mlWiCardiganPeacoat",
+  "season": "winter",
+  "base": [
+   "tee",
+   "oxfordShirt"
+  ],
+  "mid": [
+   "cardigan"
+  ],
+  "outer": [
+   "peacoat",
+   "duffle",
+   "balmacaan"
+  ],
+  "score": 5,
+  "tag": "classic",
+  "note": "가디건은 코트·패딩 안 레이어 기본",
+  "sources": [
+   "ESQLAY",
+   "ALLCARD"
+  ],
+  "flags": []
+ },
+ {
+  "id": "mlWiCardiganChesterfield",
+  "season": "winter",
+  "base": [
+   "oxfordShirt"
+  ],
+  "mid": [
+   "cardigan"
+  ],
+  "outer": [
+   "chesterfield"
+  ],
+  "score": 4,
+  "tag": "classic",
+  "note": "로키 쓰리피스 효과. 가디건 톤은 코트보다 밝게",
+  "sources": [
+   "OPUMOLAY",
+   "PTOMID"
+  ],
+  "flags": []
+ },
+ {
+  "id": "mlWiQuiltedUnderCoat",
+  "season": "winter",
+  "base": [
+   "knitWool"
+  ],
+  "mid": [
+   "quiltedVest"
+  ],
+  "outer": [
+   "chesterfield",
+   "balmacaan"
+  ],
+  "score": 3,
+  "tag": "variation",
+  "note": "니트+퀼팅+코트는 부피 과다 → 변주",
+  "sources": [
+   "PTOMID"
+  ],
+  "flags": []
+ },
+ {
+  "id": "mlWiHoodiePuffer",
+  "season": "winter",
+  "base": [
+   "hoodie"
+  ],
+  "mid": "none",
+  "outer": [
+   "shortPuffer",
+   "longPuffer",
+   "coachJacket"
+  ],
+  "score": 5,
+  "tag": "classic",
+  "note": "후디 위 패딩은 후드를 밖으로. 스트릿·고프코어",
+  "sources": [
+   "VKNB",
+   "HSSGORP"
+  ],
+  "flags": []
+ },
+ {
+  "id": "mlWiHoodieCoat",
+  "season": "winter",
+  "base": [
+   "hoodie"
+  ],
+  "mid": "none",
+  "outer": [
+   "chesterfield",
+   "balmacaan"
+  ],
+  "score": 3,
+  "tag": "variation",
+  "note": "후디+롱코트는 스트릿 변주(격차 경고)",
+  "sources": [
+   "R2 5-5",
+   "ALLWORK"
+  ],
+  "flags": []
+ },
+ {
+  "id": "mlSuNoMid",
+  "season": "summer",
+  "base": [
+   "tee",
+   "linenShirt",
+   "poloPique",
+   "tank"
+  ],
+  "mid": "none",
+  "outer": [
+   "none",
+   "overshirt"
+  ],
+  "score": 5,
+  "tag": "classic",
+  "note": "여름은 미드 없음. 2겹 초과 금지",
+  "sources": [
+   "R2 6-2",
+   "R2 6-4"
+  ],
+  "flags": []
+ },
+ {
+  "id": "mlSuMidBlock",
+  "season": "summer",
+  "base": "any",
+  "mid": [
+   "cardigan",
+   "knitVest",
+   "quiltedVest",
+   "knitOverShirt"
+  ],
+  "outer": "any",
+  "score": 1,
+  "tag": "block",
+  "note": "여름 미드 레이어는 차단",
+  "sources": [
+   "R2 6-4"
+  ],
+  "flags": []
+ }
+]

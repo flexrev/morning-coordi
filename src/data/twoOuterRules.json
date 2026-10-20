@@ -1,0 +1,105 @@
+[
+ {
+  "id": "toLeatherLongCoat",
+  "season": "winter",
+  "inner": [
+   "leatherJacket"
+  ],
+  "outer": [
+   "chesterfield",
+   "balmacaan"
+  ],
+  "score": 3,
+  "tag": "variation",
+  "note": "가죽 재킷 + 롱 코트(R2 s22). 안쪽 short < 바깥 long",
+  "sources": [
+   "R2 7",
+   "R2 6-4"
+  ],
+  "flags": []
+ },
+ {
+  "id": "toBlousonLongCoat",
+  "season": "winter",
+  "inner": [
+   "blouson"
+  ],
+  "outer": [
+   "balmacaan",
+   "chesterfield"
+  ],
+  "score": 3,
+  "tag": "variation",
+  "note": "숏 블루종 + 롱 코트. 롱 코트 안 숏 아우터는 변주",
+  "sources": [
+   "R2 6-4",
+   "VKCOAT"
+  ],
+  "flags": []
+ },
+ {
+  "id": "toDenimDuffle",
+  "season": "winter",
+  "inner": [
+   "denimJacket"
+  ],
+  "outer": [
+   "duffle",
+   "balmacaan"
+  ],
+  "score": 4,
+  "tag": "classic",
+  "note": "데님 재킷 + 더플·발마칸. 아메카지·시티보이 겨울 정석",
+  "sources": [
+   "YOKO",
+   "NTAME",
+   "R2 6-3"
+  ],
+  "flags": []
+ },
+ {
+  "id": "toFleecePuffer",
+  "season": "winter",
+  "inner": [
+   "fleece"
+  ],
+  "outer": [
+   "shortPuffer",
+   "longPuffer"
+  ],
+  "score": 4,
+  "tag": "classic",
+  "note": "플리스 + 패딩. 고프코어 레이어",
+  "sources": [
+   "HSSGORP",
+   "SNKGORP"
+  ],
+  "flags": []
+ },
+ {
+  "id": "toSfTwoOuter",
+  "season": "springFall",
+  "inner": "any",
+  "outer": "any",
+  "score": 2,
+  "tag": "variation",
+  "note": "봄가을 2겹 아우터는 데님 재킷+트렌치 정도만(변주)",
+  "sources": [
+   "R2 6-4"
+  ],
+  "flags": []
+ },
+ {
+  "id": "toSummerTwoOuter",
+  "season": "summer",
+  "inner": "any",
+  "outer": "any",
+  "score": 1,
+  "tag": "block",
+  "note": "여름 2겹 아우터 차단(기존 LAYER_OVER_PENALTY와 동일)",
+  "sources": [
+   "R2 6-2"
+  ],
+  "flags": []
+ }
+]

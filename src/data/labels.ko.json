@@ -1197,6 +1197,20 @@
   "help": ""
  },
  {
+  "id": "tag.layering",
+  "label": "겹쳐 입기",
+  "shortLabel": "겹쳐 입기",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "tag.pattern",
+  "label": "패턴 변주",
+  "shortLabel": "패턴 변주",
+  "aliases": [],
+  "help": ""
+ },
+ {
   "id": "explain.classic",
   "label": "클래식",
   "shortLabel": null,
@@ -1458,6 +1472,649 @@
  {
   "id": "ui.blocked",
   "label": "추천하지 않는 조합",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "category.mid",
+  "label": "미드 레이어",
+  "shortLabel": "미드",
+  "aliases": [
+   "중간 레이어",
+   "가디건·베스트"
+  ],
+  "help": "상의와 아우터 사이(가디건·니트 베스트). 봄가을·겨울만"
+ },
+ {
+  "id": "style.minimal",
+  "label": "미니멀",
+  "shortLabel": "미니멀",
+  "aliases": [
+   "미니멀리즘",
+   "콰이어트 럭셔리"
+  ],
+  "help": "무채색·뉴트럴, 장식 없는 기본템"
+ },
+ {
+  "id": "style.amekaji",
+  "label": "아메카지",
+  "shortLabel": "아메카지",
+  "aliases": [
+   "아메리칸 캐주얼",
+   "빈티지 워크웨어"
+  ],
+  "help": "인디고 데님·플란넬·워크 부츠, 질감과 빈티지 워시"
+ },
+ {
+  "id": "style.cityboy",
+  "label": "시티보이",
+  "shortLabel": "시티보이",
+  "aliases": [
+   "시티보이 룩",
+   "포파이"
+  ],
+  "help": "루즈·박시 실루엣, 와이드 치노·로퍼·캔버스 토트"
+ },
+ {
+  "id": "style.bizcasual",
+  "label": "비즈니스 캐주얼",
+  "shortLabel": "비즈캐주얼",
+  "aliases": [
+   "비즈캐주얼",
+   "오피스룩",
+   "출근룩"
+  ],
+  "help": "타이 없는 셔츠·니트 + 슬랙스 + 로퍼·블레이저"
+ },
+ {
+  "id": "style.street",
+  "label": "스트릿",
+  "shortLabel": "스트릿",
+  "aliases": [
+   "스트리트"
+  ],
+  "help": "오버핏 후디·맨투맨, 와이드 데님, 컬러 스니커즈"
+ },
+ {
+  "id": "style.gorpcore",
+  "label": "고프코어",
+  "shortLabel": "고프코어",
+  "aliases": [
+   "아웃도어 룩",
+   "고프"
+  ],
+  "help": "플리스·셸·테크 팬츠·트레일 러닝화를 일상복으로"
+ },
+ {
+  "id": "style.ivy",
+  "label": "클래식·아이비",
+  "shortLabel": "아이비",
+  "aliases": [
+   "아이비",
+   "프레피",
+   "클래식"
+  ],
+  "help": "옥스포드·치노·페니 로퍼·네이비 블레이저"
+ },
+ {
+  "id": "style.workwear",
+  "label": "워크웨어",
+  "shortLabel": "워크웨어",
+  "aliases": [
+   "초어 재킷",
+   "작업복"
+  ],
+  "help": "초어·데님 재킷, 헨리·데님 셔츠, 워크 부츠"
+ },
+ {
+  "id": "occasion.work",
+  "label": "출근",
+  "shortLabel": "출근",
+  "aliases": [
+   "오피스",
+   "회사",
+   "오피스 캐주얼"
+  ],
+  "help": "셔츠·니트 + 슬랙스·치노 + 로퍼·더비"
+ },
+ {
+  "id": "occasion.weekend",
+  "label": "주말",
+  "shortLabel": "주말",
+  "aliases": [
+   "휴일",
+   "캐주얼"
+  ],
+  "help": "티·플란넬·데님, 스니커즈·부츠"
+ },
+ {
+  "id": "occasion.date",
+  "label": "데이트",
+  "shortLabel": "데이트",
+  "aliases": [
+   "소개팅"
+  ],
+  "help": "니트·셔츠, 로퍼·흰 스니커즈, 여유 핏"
+ },
+ {
+  "id": "occasion.active",
+  "label": "운동·산책",
+  "shortLabel": "운동·산책",
+  "aliases": [
+   "운동",
+   "산책",
+   "액티브"
+  ],
+  "help": "티·후디·플리스, 러닝화"
+ },
+ {
+  "id": "occasion.formal",
+  "label": "격식",
+  "shortLabel": "격식",
+  "aliases": [
+   "결혼식",
+   "하객",
+   "면접",
+   "포멀"
+  ],
+  "help": "드레스 셔츠 + 블레이저 + 울 슬랙스 + 더비. 수트는 2차"
+ },
+ {
+  "id": "pattern.breton",
+  "label": "브레통 스트라이프",
+  "shortLabel": "브레통",
+  "aliases": [
+   "가로 줄무늬",
+   "마린"
+  ],
+  "help": "가로 줄무늬. 하의는 무지"
+ },
+ {
+  "id": "pattern.stripeShirt",
+  "label": "펜슬·캔디 스트라이프 셔츠",
+  "shortLabel": "잔줄 셔츠",
+  "aliases": [
+   "펜슬 스트라이프",
+   "캔디 스트라이프",
+   "세로 줄무늬"
+  ],
+  "help": "세로 잔줄. 블레이저 안 OK"
+ },
+ {
+  "id": "pattern.pinstripe",
+  "label": "핀스트라이프",
+  "shortLabel": "핀스트라이프",
+  "aliases": [],
+  "help": "울 슬랙스·블레이저만"
+ },
+ {
+  "id": "pattern.gingham",
+  "label": "깅엄 체크",
+  "shortLabel": "깅엄 체크",
+  "aliases": [
+   "체크 셔츠"
+  ],
+  "help": "2색 체크. 아이비 시그니처"
+ },
+ {
+  "id": "pattern.plaid",
+  "label": "플란넬·타탄 체크",
+  "shortLabel": "타탄 체크",
+  "aliases": [
+   "플란넬 체크",
+   "버팔로 체크",
+   "타탄"
+  ],
+  "help": "아메카지·워크웨어. 하의는 무지"
+ },
+ {
+  "id": "pattern.windowpane",
+  "label": "윈도페인 체크",
+  "shortLabel": "윈도페인",
+  "aliases": [],
+  "help": "테일러링 아우터만"
+ },
+ {
+  "id": "pattern.houndstooth",
+  "label": "하운드투스",
+  "shortLabel": "하운드투스",
+  "aliases": [],
+  "help": "모노 팔레트와. 테일러링"
+ },
+ {
+  "id": "pattern.herringbone",
+  "label": "헤링본",
+  "shortLabel": "헤링본",
+  "aliases": [],
+  "help": "질감으로 취급(패턴 수에 세지 않음)"
+ },
+ {
+  "id": "pattern.camo",
+  "label": "카모",
+  "shortLabel": "카모",
+  "aliases": [
+   "카무플라주",
+   "위장 무늬"
+  ],
+  "help": "스트릿·고프코어. 1개만"
+ },
+ {
+  "id": "midType.cardigan",
+  "label": "가디건",
+  "shortLabel": "가디건",
+  "aliases": [],
+  "help": "outerTypes.cardigan과 같은 품목. 아우터 밑에 들어가면 mid"
+ },
+ {
+  "id": "midType.knitVest",
+  "label": "니트 베스트",
+  "shortLabel": "니트 베스트",
+  "aliases": [],
+  "help": "셔츠 위. 아이비·시티보이"
+ },
+ {
+  "id": "midType.quiltedVest",
+  "label": "퀼팅 베스트",
+  "shortLabel": "퀼팅 베스트",
+  "aliases": [],
+  "help": "팔 부피 없음. 코트 안 OK"
+ },
+ {
+  "id": "midType.overshirtMid",
+  "label": "오버셔츠(미드)",
+  "shortLabel": "오버셔츠",
+  "aliases": [],
+  "help": "shirtJacket·overshirt가 코트 안에 들어갈 때"
+ },
+ {
+  "id": "midType.knitOverShirt",
+  "label": "셔츠 위 니트",
+  "shortLabel": "셔츠위 니트",
+  "aliases": [],
+  "help": "top=oxfordShirt + mid=knitWool. 겨울 기본 3겹"
+ },
+ {
+  "id": "accessory.beltLeather",
+  "label": "가죽 벨트",
+  "shortLabel": "가죽 벨트",
+  "aliases": [],
+  "help": "신발 가죽 색·마감과 같은 계열"
+ },
+ {
+  "id": "accessory.beltBraided",
+  "label": "브레이디드 벨트",
+  "shortLabel": "브레이디드",
+  "aliases": [],
+  "help": "치노·린넨·로퍼. 수트 금지"
+ },
+ {
+  "id": "accessory.beltWebbing",
+  "label": "웨빙·캔버스 벨트",
+  "shortLabel": "웨빙 벨트",
+  "aliases": [],
+  "help": "스니커즈·부츠·카고"
+ },
+ {
+  "id": "accessory.watchLeather",
+  "label": "가죽 스트랩 시계",
+  "shortLabel": "가죽 시계",
+  "aliases": [],
+  "help": "벨트·신발과 가죽 통일(T8)"
+ },
+ {
+  "id": "accessory.watchMetal",
+  "label": "메탈 시계",
+  "shortLabel": "메탈 시계",
+  "aliases": [],
+  "help": "버클 금속과 통일"
+ },
+ {
+  "id": "accessory.watchNato",
+  "label": "나토·러버 시계",
+  "shortLabel": "나토 시계",
+  "aliases": [],
+  "help": "캐주얼만"
+ },
+ {
+  "id": "accessory.socksMatch",
+  "label": "바지색 양말",
+  "shortLabel": "바지색 양말",
+  "aliases": [],
+  "help": "바지보다 한 톤 어둡게"
+ },
+ {
+  "id": "accessory.socksNeutral",
+  "label": "뉴트럴 양말",
+  "shortLabel": "뉴트럴 양말",
+  "aliases": [],
+  "help": "네이비·차콜·그레이"
+ },
+ {
+  "id": "accessory.socksNoShow",
+  "label": "페이크삭스",
+  "shortLabel": "페이크삭스",
+  "aliases": [],
+  "help": "로퍼·스니커즈 여름"
+ },
+ {
+  "id": "accessory.socksWhite",
+  "label": "흰 운동 양말",
+  "shortLabel": "흰 양말",
+  "aliases": [],
+  "help": "스니커즈·러닝화만"
+ },
+ {
+  "id": "accessory.socksPattern",
+  "label": "패턴 양말",
+  "shortLabel": "패턴 양말",
+  "aliases": [],
+  "help": "작은 패턴만. 코디 패턴 0개일 때"
+ },
+ {
+  "id": "accessory.bagTote",
+  "label": "토트백",
+  "shortLabel": "토트백",
+  "aliases": [],
+  "help": "가죽은 신발 계열, 캔버스는 자유"
+ },
+ {
+  "id": "accessory.bagBackpack",
+  "label": "백팩",
+  "shortLabel": "백팩",
+  "aliases": [],
+  "help": "블랙·올리브·네이비·차콜"
+ },
+ {
+  "id": "accessory.bagCrossbody",
+  "label": "크로스바디",
+  "shortLabel": "크로스바디",
+  "aliases": [],
+  "help": "나일론·캔버스"
+ },
+ {
+  "id": "accessory.bagBriefcase",
+  "label": "브리프케이스",
+  "shortLabel": "브리프케이스",
+  "aliases": [],
+  "help": "가죽, 신발 계열"
+ },
+ {
+  "id": "accessory.cap",
+  "label": "볼캡",
+  "shortLabel": "볼캡",
+  "aliases": [],
+  "help": "아우터와 2~3톤 이내"
+ },
+ {
+  "id": "accessory.beanie",
+  "label": "비니",
+  "shortLabel": "비니",
+  "aliases": [],
+  "help": "캐주얼 아우터와"
+ },
+ {
+  "id": "accessory.bucketHat",
+  "label": "버킷햇",
+  "shortLabel": "버킷햇",
+  "aliases": [],
+  "help": "고프코어·스트릿"
+ },
+ {
+  "id": "accessory.scarf",
+  "label": "머플러",
+  "shortLabel": "머플러",
+  "aliases": [],
+  "help": "포인트 컬러 1개로 계산"
+ },
+ {
+  "id": "accessoryGroup.belt",
+  "label": "벨트",
+  "shortLabel": "벨트",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "accessoryGroup.watch",
+  "label": "시계",
+  "shortLabel": "시계",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "accessoryGroup.socks",
+  "label": "양말",
+  "shortLabel": "양말",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "accessoryGroup.bag",
+  "label": "가방",
+  "shortLabel": "가방",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "accessoryGroup.hat",
+  "label": "모자",
+  "shortLabel": "모자",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "accessoryGroup.scarf",
+  "label": "머플러",
+  "shortLabel": "머플러",
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.style.minimal",
+  "label": "미니멀 — 무채색·뉴트럴, 장식 없는 기본템",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.style.amekaji",
+  "label": "아메카지 — 인디고 데님·플란넬·워크 부츠, 질감과 빈티지 워시",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.style.cityboy",
+  "label": "시티보이 — 루즈·박시 실루엣, 와이드 치노·로퍼·캔버스 토트",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.style.bizcasual",
+  "label": "비즈니스 캐주얼 — 타이 없는 셔츠·니트 + 슬랙스 + 로퍼·블레이저",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.style.street",
+  "label": "스트릿 — 오버핏 후디·맨투맨, 와이드 데님, 컬러 스니커즈",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.style.gorpcore",
+  "label": "고프코어 — 플리스·셸·테크 팬츠·트레일 러닝화를 일상복으로",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.style.ivy",
+  "label": "클래식·아이비 — 옥스포드·치노·페니 로퍼·네이비 블레이저",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.style.workwear",
+  "label": "워크웨어 — 초어·데님 재킷, 헨리·데님 셔츠, 워크 부츠",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.style.boost",
+  "label": "{style} 스타일 {delta}",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.style.tag",
+  "label": "{style} 느낌",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.occasion.adj",
+  "label": "{occasion}에 {delta}",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.occasion.window",
+  "label": "{occasion} 격식 창 밖 아이템 {n}개 ({delta})",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.occasion.target",
+  "label": "{occasion}에 딱 맞는 격식 (+0.2)",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.occasion.relaxed",
+  "label": "{occasion} 조건을 일부 완화했어요 ({stages})",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.acc",
+  "label": "{accessory}: {reason}",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.pattern",
+  "label": "{reason} ({delta})",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.midLayer",
+  "label": "{mid|은는} {reason} ({score}/5)",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.midLength",
+  "label": "{mid|이가} {outer}보다 길어요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.midWeight",
+  "label": "{mid|이가} {outer}보다 두꺼워요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.midFormality",
+  "label": "{mid} 격식이 베이스·아우터와 안 맞아요",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.twoOuter",
+  "label": "{inner}+{outer}: {reason} ({score}/5)",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.twoOuterLength",
+  "label": "안쪽 {inner|이가} 바깥 {outer}보다 짧지 않아요 ({delta})",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "explain.layerScore",
+  "label": "레이어링 {score}/5",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "ui.byStyle",
+  "label": "스타일",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "ui.byOccasion",
+  "label": "상황",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "ui.accessories",
+  "label": "소품",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "ui.layering",
+  "label": "겹쳐 입기",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "ui.patterns",
+  "label": "패턴 변주",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "ui.styleAll",
+  "label": "전체",
+  "shortLabel": null,
+  "aliases": [],
+  "help": ""
+ },
+ {
+  "id": "ui.formalApprox",
+  "label": "재킷+슬랙스 기준. 수트는 2차",
   "shortLabel": null,
   "aliases": [],
   "help": ""

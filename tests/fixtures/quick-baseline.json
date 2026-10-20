@@ -1,0 +1,627 @@
+{
+ "bottom|indigo|springFall": [
+  {
+   "id": "o01",
+   "sig": "top:white:tee|bottom:indigo:denimIndigo|shoes:white:sneakerWhite",
+   "final": 5,
+   "percent": 100,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "누구나 안전한 기본 조합",
+    "출처 3개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 5/5",
+    "신발 조합 5/5"
+   ]
+  },
+  {
+   "id": "o09",
+   "sig": "top:oatmeal:knitWool|bottom:indigo:denimIndigo|shoes:brown:loaferPenny",
+   "final": 4.92,
+   "percent": 98,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "누구나 안전한 기본 조합",
+    "네이비 베이스+어스톤 조합 (+1)",
+    "출처 2개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 5/5",
+    "신발 조합 4/5"
+   ]
+  },
+  {
+   "id": "o03",
+   "sig": "top:greyMelange:sweatshirt|bottom:indigo:denimIndigo|shoes:white:sneakerWhite|outer:navy:shirtJacket",
+   "final": 4.73,
+   "percent": 93,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "누구나 안전한 기본 조합",
+    "톤온톤 (네이비 베이스)",
+    "출처 3개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 5/5",
+    "신발 조합 4/5",
+    "아우터 조합 4.5/5",
+    "규칙 없음(기본 3)"
+   ]
+  }
+ ],
+ "bottom|indigo|summer": [
+  {
+   "id": "o01",
+   "sig": "top:white:tee|bottom:indigo:denimIndigo|shoes:white:sneakerWhite",
+   "final": 5,
+   "percent": 100,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "누구나 안전한 기본 조합",
+    "출처 3개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 5/5",
+    "신발 조합 5/5"
+   ]
+  },
+  {
+   "id": "g-1fk8kq1",
+   "sig": "top:white:tee|bottom:indigo:denimIndigo|shoes:brown:loaferPenny",
+   "final": 4.81,
+   "percent": 95,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "네이비 베이스+어스톤 조합 (+1)",
+    "출처 3개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 5/5",
+    "신발 조합 5/5"
+   ]
+  },
+  {
+   "id": "g-15ietiq",
+   "sig": "top:greyMelange:tee|bottom:indigo:denimIndigo|shoes:white:sneakerWhite",
+   "final": 5,
+   "percent": 100,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "출처 3개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 5/5",
+    "신발 조합 5/5"
+   ]
+  }
+ ],
+ "bottom|indigo|winter": [
+  {
+   "id": "g-1dm5o0i",
+   "sig": "top:white:knitWool|bottom:indigo:denimIndigo|shoes:brown:workboot",
+   "final": 5,
+   "percent": 100,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "네이비 베이스+어스톤 조합 (+1)",
+    "출처 3개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 5/5",
+    "신발 조합 3.5/5",
+    "무거운 하의 + 무거운 신발 (+1)"
+   ]
+  },
+  {
+   "id": "g-1bdpxus",
+   "sig": "top:burgundy:knitWool|bottom:indigo:denimIndigo|shoes:brown:workboot|outer:beige:chesterfield",
+   "final": 4.82,
+   "percent": 96,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "네이비 베이스+어스톤 조합 (+1)",
+    "출처 2개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 4.75/5",
+    "신발 조합 3.5/5",
+    "아우터 조합 4/5",
+    "무거운 하의 + 무거운 신발 (+1)",
+    "규칙 없음(기본 3)"
+   ]
+  },
+  {
+   "id": "g-1v39c00",
+   "sig": "top:white:knitWool|bottom:indigo:denimIndigo|shoes:chocolate:workboot",
+   "final": 5,
+   "percent": 100,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "네이비 베이스+어스톤 조합 (+1)",
+    "출처 3개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 5/5",
+    "신발 조합 3.5/5",
+    "무거운 하의 + 무거운 신발 (+1)"
+   ]
+  }
+ ],
+ "top|white|springFall": [
+  {
+   "id": "o01",
+   "sig": "top:white:tee|bottom:indigo:denimIndigo|shoes:white:sneakerWhite",
+   "final": 5,
+   "percent": 100,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "누구나 안전한 기본 조합",
+    "출처 3개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 5/5",
+    "신발 조합 5/5"
+   ]
+  },
+  {
+   "id": "o04",
+   "sig": "top:white:oxfordShirt|bottom:navy:chino|shoes:brown:loaferPenny",
+   "final": 4.85,
+   "percent": 96,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "누구나 안전한 기본 조합",
+    "톤온톤 (뉴트럴)",
+    "네이비 베이스+어스톤 조합 (+1)",
+    "출처 3개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 4/5",
+    "신발 조합 4/5"
+   ]
+  },
+  {
+   "id": "o02",
+   "sig": "top:white:tee|bottom:indigo:denimIndigo|shoes:brown:chukka|outer:camel:trench",
+   "final": 4.82,
+   "percent": 96,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "누구나 안전한 기본 조합",
+    "네이비 베이스+어스톤 조합 (+1)",
+    "출처 2개 이상",
+    "격식 차이 5단계 (카멜 트렌치 코트 ↔ 화이트 티셔츠)",
+    "핏 밸런스 5/5",
+    "소재 궁합 5/5",
+    "신발 조합 4/5",
+    "아우터 조합 3/5",
+    "무거운 하의 + 무거운 신발 (+1)",
+    "규칙 없음(기본 3)"
+   ]
+  }
+ ],
+ "top|white|summer": [
+  {
+   "id": "o01",
+   "sig": "top:white:tee|bottom:indigo:denimIndigo|shoes:white:sneakerWhite",
+   "final": 5,
+   "percent": 100,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "누구나 안전한 기본 조합",
+    "출처 3개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 5/5",
+    "신발 조합 5/5"
+   ]
+  },
+  {
+   "id": "o07",
+   "sig": "top:white:tee|bottom:olive:chino|shoes:white:sneakerWhite",
+   "final": 4.85,
+   "percent": 96,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "누구나 안전한 기본 조합",
+    "톤온톤 (뉴트럴)",
+    "출처 2개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 4/5",
+    "신발 조합 4/5"
+   ]
+  },
+  {
+   "id": "o04",
+   "sig": "top:white:oxfordShirt|bottom:navy:chino|shoes:brown:loaferPenny",
+   "final": 4.85,
+   "percent": 96,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "누구나 안전한 기본 조합",
+    "톤온톤 (뉴트럴)",
+    "네이비 베이스+어스톤 조합 (+1)",
+    "출처 3개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 4/5",
+    "신발 조합 4/5"
+   ]
+  }
+ ],
+ "top|white|winter": [
+  {
+   "id": "o04",
+   "sig": "top:white:oxfordShirt|bottom:navy:chino|shoes:brown:loaferPenny",
+   "final": 4.85,
+   "percent": 96,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "누구나 안전한 기본 조합",
+    "톤온톤 (뉴트럴)",
+    "네이비 베이스+어스톤 조합 (+1)",
+    "출처 3개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 4/5",
+    "신발 조합 4/5"
+   ]
+  },
+  {
+   "id": "g-1dm5o0i",
+   "sig": "top:white:knitWool|bottom:indigo:denimIndigo|shoes:brown:workboot",
+   "final": 5,
+   "percent": 100,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "네이비 베이스+어스톤 조합 (+1)",
+    "출처 3개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 5/5",
+    "신발 조합 3.5/5",
+    "무거운 하의 + 무거운 신발 (+1)"
+   ]
+  },
+  {
+   "id": "g-12ya07e",
+   "sig": "top:white:knitWool|bottom:midGrey:wool|shoes:black:derby|outer:camel:chesterfield",
+   "final": 4.72,
+   "percent": 93,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "톤온톤 (뉴트럴)",
+    "핏 밸런스 5/5",
+    "소재 궁합 4.75/5",
+    "신발 조합 4/5",
+    "아우터 조합 4.5/5",
+    "규칙 없음(기본 3)"
+   ]
+  }
+ ],
+ "shoes|white|springFall": [
+  {
+   "id": "o01",
+   "sig": "top:white:tee|bottom:indigo:denimIndigo|shoes:white:sneakerWhite",
+   "final": 5,
+   "percent": 100,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "누구나 안전한 기본 조합",
+    "출처 3개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 5/5",
+    "신발 조합 5/5"
+   ]
+  },
+  {
+   "id": "o03",
+   "sig": "top:greyMelange:sweatshirt|bottom:indigo:denimIndigo|shoes:white:sneakerWhite|outer:navy:shirtJacket",
+   "final": 4.73,
+   "percent": 93,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "누구나 안전한 기본 조합",
+    "톤온톤 (네이비 베이스)",
+    "출처 3개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 5/5",
+    "신발 조합 4/5",
+    "아우터 조합 4.5/5",
+    "규칙 없음(기본 3)"
+   ]
+  },
+  {
+   "id": "o08",
+   "sig": "top:white:tee|bottom:blackDenim:denimBlack|shoes:white:sneakerWhite|outer:black:leatherJacket",
+   "final": 4.49,
+   "percent": 87,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "누구나 안전한 기본 조합",
+    "톤온톤 (모노톤)",
+    "톤온톤 (뉴트럴)",
+    "핏 밸런스 5/5",
+    "소재 궁합 4.5/5",
+    "신발 조합 4/5",
+    "아우터 조합 3.5/5",
+    "규칙 없음(기본 3)"
+   ]
+  }
+ ],
+ "shoes|white|summer": [
+  {
+   "id": "o01",
+   "sig": "top:white:tee|bottom:indigo:denimIndigo|shoes:white:sneakerWhite",
+   "final": 5,
+   "percent": 100,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "누구나 안전한 기본 조합",
+    "출처 3개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 5/5",
+    "신발 조합 5/5"
+   ]
+  },
+  {
+   "id": "o07",
+   "sig": "top:white:tee|bottom:olive:chino|shoes:white:sneakerWhite",
+   "final": 4.85,
+   "percent": 96,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "누구나 안전한 기본 조합",
+    "톤온톤 (뉴트럴)",
+    "출처 2개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 4/5",
+    "신발 조합 4/5"
+   ]
+  },
+  {
+   "id": "g-7s7nsb",
+   "sig": "top:indigo:denimShirt|bottom:brown:chino|shoes:white:sneakerWhite",
+   "final": 4.92,
+   "percent": 98,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "톤온톤 (뉴트럴)",
+    "어스톤+네이비 베이스 조합 (+1)",
+    "핏 밸런스 5/5",
+    "소재 궁합 4/5",
+    "신발 조합 5/5"
+   ]
+  }
+ ],
+ "shoes|white|winter": [
+  {
+   "id": "g-7ctkp2",
+   "sig": "top:white:knitWool|bottom:indigo:denimIndigo|shoes:white:sneakerWhite",
+   "final": 5,
+   "percent": 100,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "출처 3개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 5/5",
+    "신발 조합 5/5"
+   ]
+  },
+  {
+   "id": "g-10ktu4c",
+   "sig": "top:beige:knitWool|bottom:olive:chino|shoes:white:sneakerWhite",
+   "final": 4.96,
+   "percent": 99,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "톤온톤 (뉴트럴)",
+    "출처 2개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 4.5/5",
+    "신발 조합 5/5"
+   ]
+  },
+  {
+   "id": "g-1hnpnbz",
+   "sig": "top:greyMelange:sweatshirt|bottom:olive:chino|shoes:white:sneakerWhite|outer:indigo:denimJacket",
+   "final": 4.91,
+   "percent": 98,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "톤온톤 (뉴트럴)",
+    "어스톤+네이비 베이스 조합 (+1)",
+    "핏 밸런스 5/5",
+    "소재 궁합 4.25/5",
+    "신발 조합 5/5",
+    "아우터 조합 4.5/5",
+    "규칙 없음(기본 3)"
+   ]
+  }
+ ],
+ "outer|navy|springFall": [
+  {
+   "id": "o05",
+   "sig": "top:lightBlue:oxfordShirt|bottom:beige:chino|shoes:brown:loaferPenny|outer:navy:blazer",
+   "final": 4.91,
+   "percent": 98,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "누구나 안전한 기본 조합",
+    "톤온톤 (뉴트럴)",
+    "어스톤+네이비 베이스 조합 (+1)",
+    "출처 2개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 4/5",
+    "신발 조합 5/5",
+    "아우터 조합 4.5/5",
+    "규칙 없음(기본 3)"
+   ]
+  },
+  {
+   "id": "o11",
+   "sig": "top:white:oxfordShirt|bottom:midGrey:flannel|shoes:brown:chukka|outer:navy:blazer",
+   "final": 4.79,
+   "percent": 95,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "누구나 안전한 기본 조합",
+    "톤온톤 (뉴트럴)",
+    "출처 2개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 4/5",
+    "신발 조합 4/5",
+    "아우터 조합 3.5/5",
+    "무거운 하의 + 무거운 신발 (+1)",
+    "규칙 없음(기본 3)"
+   ]
+  },
+  {
+   "id": "g-1o1vxwd",
+   "sig": "top:navy:knitCotton|bottom:brown:corduroy|shoes:chocolate:chukka|outer:navy:blazer",
+   "final": 4.91,
+   "percent": 98,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "톤온톤 (뉴트럴)",
+    "톤온톤 (어스톤)",
+    "어스톤+네이비 베이스 조합 (+1)",
+    "출처 2개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 3.5/5",
+    "신발 조합 4/5",
+    "아우터 조합 3/5",
+    "무거운 하의 + 무거운 신발 (+1)",
+    "규칙 없음(기본 3)"
+   ]
+  }
+ ],
+ "outer|navy|summer": [
+  {
+   "id": "g-13w2e93",
+   "sig": "top:tan:tee|bottom:olive:chino|shoes:white:sneakerWhite|outer:navy:overshirt",
+   "final": 4.91,
+   "percent": 98,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "톤온톤 (뉴트럴)",
+    "어스톤+네이비 베이스 조합 (+1)",
+    "출처 2개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 4/5",
+    "신발 조합 5/5",
+    "아우터 조합 4.5/5",
+    "규칙 없음(기본 3)"
+   ]
+  },
+  {
+   "id": "g-17tx676",
+   "sig": "top:white:tee|bottom:khaki:chino|shoes:white:sneakerWhite|outer:navy:overshirt",
+   "final": 4.91,
+   "percent": 98,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "톤온톤 (뉴트럴)",
+    "어스톤+네이비 베이스 조합 (+1)",
+    "출처 2개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 4/5",
+    "신발 조합 5/5",
+    "아우터 조합 4.5/5",
+    "규칙 없음(기본 3)"
+   ]
+  },
+  {
+   "id": "g-k2cl9",
+   "sig": "top:white:linenShirt|bottom:midGrey:wool|shoes:brown:loaferPenny|outer:navy:overshirt",
+   "final": 4.65,
+   "percent": 91,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "톤온톤 (뉴트럴)",
+    "출처 2개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 3.5/5",
+    "신발 조합 5/5",
+    "아우터 조합 3.5/5",
+    "규칙 없음(기본 3)"
+   ]
+  }
+ ],
+ "outer|navy|winter": [
+  {
+   "id": "o10",
+   "sig": "top:lightBlue:oxfordShirt|bottom:charcoal:wool|shoes:black:derby|outer:navy:chesterfield",
+   "final": 4.77,
+   "percent": 94,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "누구나 안전한 기본 조합",
+    "톤온톤 (뉴트럴)",
+    "출처 2개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 4.5/5",
+    "신발 조합 5/5",
+    "아우터 조합 4.5/5",
+    "규칙 없음(기본 3)"
+   ]
+  },
+  {
+   "id": "g-1y6ovyj",
+   "sig": "top:white:knitWool|bottom:indigo:denimIndigo|shoes:brown:workboot|outer:navy:chesterfield",
+   "final": 4.82,
+   "percent": 96,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "톤온톤 (네이비 베이스)",
+    "톤온톤 (뉴트럴)",
+    "네이비 베이스+어스톤 조합 (+1)",
+    "출처 3개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 4.75/5",
+    "신발 조합 3.5/5",
+    "아우터 조합 4/5",
+    "무거운 하의 + 무거운 신발 (+1)",
+    "규칙 없음(기본 3)"
+   ]
+  },
+  {
+   "id": "g-198y2qf",
+   "sig": "top:navy:knitWool|bottom:midGrey:wool|shoes:brown:chelsea|outer:navy:chesterfield",
+   "final": 4.79,
+   "percent": 95,
+   "blocked": false,
+   "explain": [
+    "클래식",
+    "톤온톤 (뉴트럴)",
+    "출처 2개 이상",
+    "핏 밸런스 5/5",
+    "소재 궁합 4.75/5",
+    "신발 조합 5/5",
+    "아우터 조합 4.5/5",
+    "규칙 없음(기본 3)"
+   ]
+  }
+ ]
+}

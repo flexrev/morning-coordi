@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="러닝화 (두꺼운 미드솔)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="shoes" data-type="running" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-shoes,#222222)" vector-effect="non-scaling-stroke" d="M70 354L98 354L98 384L52 384Q42 382 44 374Q48 362 70 354ZM130 354L102 354L102 384L148 384Q158 382 156 374Q152 362 130 354Z"/>
+<path data-part="main" data-kind="sole" fill="var(--c-sole,#ECE9E2)" vector-effect="non-scaling-stroke" d="M44 378L98 378L98 392L52 392Q40 391 44 378ZM156 378L102 378L102 392L148 392Q160 391 156 378Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.18)" stroke="none" d="M90 354L98 354L98 378L90 378ZM150 366L156 374Q157 381 152 384L146 378ZM70 354L80 354L78 376L66 376ZM43 387L98 387L98 392L52 392Q41 391 43 387ZM157 387L102 387L102 392L148 392Q159 391 157 387Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M74 359L92 359M73 365L92 365M72 371L92 371M70 354Q66 366 64 378M48 376Q60 362 80 372M126 359L108 359M127 365L108 365M128 371L108 371M130 354Q134 366 136 378M152 376Q140 362 120 372M46 385L98 385M154 385L102 385"/>
+</g>
+</svg>

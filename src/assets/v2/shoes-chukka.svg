@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="척카 부츠 (2아일릿)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="shoes" data-type="chukka" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-shoes,#222222)" vector-effect="non-scaling-stroke" d="M70 346L98 346L98 390L50 390Q40 388 44 380Q54 370 68 364ZM130 346L102 346L102 390L150 390Q160 388 156 380Q146 370 132 364Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.22)" stroke="none" d="M42 386L98 386L98 390L50 390Q41 389 42 386ZM158 386L102 386L102 390L150 390Q159 389 158 386ZM92 346L98 346L98 386L92 386ZM152 372L156 380Q158 385 152 386L148 380ZM70 346L76 346L74 364L68 364Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M76 352L92 352M75 359L92 359M70 346Q72 360 84 368M48 380Q58 372 68 382M124 352L108 352M125 359L108 359M130 346Q128 360 116 368M152 380Q142 372 132 382"/>
+</g>
+</svg>

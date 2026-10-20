@@ -1,0 +1,329 @@
+[
+ {
+  "id": "ptQuickMaxOne",
+  "when": {
+   "mode": "quick",
+   "patternCount": 2
+  },
+  "effect": "exclude",
+  "delta": -2,
+  "severity": "block",
+  "note": "Quick 3장엔 패턴 아이템 최대 1개",
+  "sources": [
+   "FBPAT",
+   "WKCHECK"
+  ],
+  "flags": []
+ },
+ {
+  "id": "ptDeepMaxTwo",
+  "when": {
+   "mode": "deep",
+   "patternCount": 3
+  },
+  "effect": "exclude",
+  "delta": -2,
+  "severity": "block",
+  "note": "Deep에서도 3개 이상 금지(세 번째는 액세서리만)",
+  "sources": [
+   "FBPAT",
+   "BLPAT"
+  ],
+  "flags": []
+ },
+ {
+  "id": "ptSameFamilyScale",
+  "when": {
+   "patternCount": 2,
+   "sameFamily": true,
+   "scaleDiff": 0
+  },
+  "effect": "penalty",
+  "delta": -2,
+  "severity": "warn",
+  "note": "같은 계열(줄+줄, 체크+체크)은 크기가 달라야 함",
+  "sources": [
+   "BLPAT",
+   "FBPAT",
+   "MRPPAT"
+  ],
+  "flags": []
+ },
+ {
+  "id": "ptSameFamilyScaleOk",
+  "when": {
+   "patternCount": 2,
+   "sameFamily": true,
+   "scaleDiff": 2
+  },
+  "effect": "bonus",
+  "delta": 1,
+  "severity": "info",
+  "note": "작은+큰 같은 계열(깅엄+윈도페인)은 허용",
+  "sources": [
+   "BLPAT",
+   "FBPAT"
+  ],
+  "flags": []
+ },
+ {
+  "id": "ptDiffFamilyScale",
+  "when": {
+   "patternCount": 2,
+   "sameFamily": false,
+   "scaleDiff": [
+    0,
+    1
+   ]
+  },
+  "effect": "bonus",
+  "delta": 0,
+  "severity": "info",
+  "note": "다른 계열(줄+체크)은 비슷한 크기 OK",
+  "sources": [
+   "BLPAT"
+  ],
+  "flags": []
+ },
+ {
+  "id": "ptShareColor",
+  "when": {
+   "patternCount": 2,
+   "sharedColor": false
+  },
+  "effect": "penalty",
+  "delta": -1,
+  "severity": "warn",
+  "note": "두 패턴은 색을 하나 이상 공유",
+  "sources": [
+   "FBPAT",
+   "WHPAT",
+   "AOSPAT"
+  ],
+  "flags": []
+ },
+ {
+  "id": "ptSolidGround",
+  "when": {
+   "patternCount": 1
+  },
+  "effect": "bonus",
+  "delta": 1,
+  "severity": "info",
+  "note": "패턴 1개 + 나머지 무지가 기본. 미니멀 룩의 킥",
+  "sources": [
+   "WKCHECK",
+   "FBPAT"
+  ],
+  "flags": []
+ },
+ {
+  "id": "ptBretonTopOnly",
+  "when": {
+   "pattern": "breton",
+   "category": [
+    "bottom",
+    "outer",
+    "shoes"
+   ]
+  },
+  "effect": "exclude",
+  "delta": -2,
+  "severity": "block",
+  "note": "브레통은 상의만",
+  "sources": [
+   "R1 5-8",
+   "Dalm"
+  ],
+  "flags": []
+ },
+ {
+  "id": "ptBretonPairs",
+  "when": {
+   "pattern": "breton",
+   "bottomColor": [
+    "navy",
+    "indigo",
+    "beige",
+    "white",
+    "midDenim"
+   ]
+  },
+  "effect": "bonus",
+  "delta": 1,
+  "severity": "info",
+  "note": "브레통 + 네이비·인디고·베이지·화이트 하의",
+  "sources": [
+   "R1 5-8",
+   "Dalm"
+  ],
+  "flags": []
+ },
+ {
+  "id": "ptStripeShirtBlazer",
+  "when": {
+   "pattern": "stripeShirt",
+   "outerType": [
+    "blazer",
+    "chesterfield",
+    "trench"
+   ]
+  },
+  "effect": "bonus",
+  "delta": 1,
+  "severity": "info",
+  "note": "잔줄 셔츠는 테일러링 아우터 안에서 가장 안전",
+  "sources": [
+   "FBPAT",
+   "BLPAT"
+  ],
+  "flags": []
+ },
+ {
+  "id": "ptPinstripeFormal",
+  "when": {
+   "pattern": "pinstripe",
+   "formalityMax": 5
+  },
+  "effect": "penalty",
+  "delta": -2,
+  "severity": "warn",
+  "note": "핀스트라이프는 포멀도 6 이상 코디에서만",
+  "sources": [
+   "FBPAT",
+   "BLPAT"
+  ],
+  "flags": []
+ },
+ {
+  "id": "ptPlaidBottomSolid",
+  "when": {
+   "pattern": "plaid",
+   "bottomPattern": null
+  },
+  "effect": "bonus",
+  "delta": 1,
+  "severity": "info",
+  "note": "체크 셔츠·셔츠재킷엔 무지 하의(데님·치노)",
+  "sources": [
+   "STRIDE",
+   "PRIMER"
+  ],
+  "flags": []
+ },
+ {
+  "id": "ptPlaidCheckClash",
+  "when": {
+   "pattern": "plaid",
+   "otherPattern": [
+    "gingham",
+    "windowpane",
+    "houndstooth"
+   ]
+  },
+  "effect": "penalty",
+  "delta": -2,
+  "severity": "warn",
+  "note": "큰 체크 + 다른 체크는 크기 차가 있어도 피함(Quick)",
+  "sources": [
+   "FBPAT",
+   "MRPPAT"
+  ],
+  "flags": []
+ },
+ {
+  "id": "ptHoundstoothMono",
+  "when": {
+   "pattern": "houndstooth",
+   "outfitTones": "mono"
+  },
+  "effect": "bonus",
+  "delta": 1,
+  "severity": "info",
+  "note": "하운드투스는 모노 팔레트 + 무지 하의",
+  "sources": [
+   "FBPAT",
+   "SSHOUND"
+  ],
+  "flags": []
+ },
+ {
+  "id": "ptHerringboneTexture",
+  "when": {
+   "pattern": "herringbone"
+  },
+  "effect": "countAs",
+  "countAs": "texture",
+  "delta": 0,
+  "severity": "info",
+  "note": "헤링본은 패턴 수에 세지 않음(질감)",
+  "sources": [
+   "FBPAT"
+  ],
+  "flags": []
+ },
+ {
+  "id": "ptCamoAlone",
+  "when": {
+   "pattern": "camo",
+   "patternCount": 2
+  },
+  "effect": "exclude",
+  "delta": -2,
+  "severity": "block",
+  "note": "카모는 다른 패턴과 절대 같이 안 씀",
+  "sources": [
+   "HSSGORP",
+   "CX"
+  ],
+  "flags": []
+ },
+ {
+  "id": "ptCamoFormal",
+  "when": {
+   "pattern": "camo",
+   "formalityMin": 6
+  },
+  "effect": "exclude",
+  "delta": -2,
+  "severity": "block",
+  "note": "카모는 포멀 코디 금지",
+  "sources": [
+   "CX"
+  ],
+  "flags": []
+ },
+ {
+  "id": "ptPatternAccent",
+  "when": {
+   "patternCount": 1,
+   "accentCount": 1,
+   "sharedColor": false
+  },
+  "effect": "penalty",
+  "delta": -1,
+  "severity": "warn",
+  "note": "패턴 + 포인트 컬러가 색을 공유하지 않으면 '시끄러움'",
+  "sources": [
+   "FBPAT",
+   "Vou1",
+   "T9"
+  ],
+  "flags": []
+ },
+ {
+  "id": "ptShoesSolid",
+  "when": {
+   "pattern": "any",
+   "category": "shoes"
+  },
+  "effect": "exclude",
+  "delta": -2,
+  "severity": "block",
+  "note": "신발·벨트는 항상 무지",
+  "sources": [
+   "CX"
+  ],
+  "flags": []
+ }
+]

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="오버셔츠 (미드 레이어)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="mid" data-type="overshirt" data-fit="regular" data-length="regular" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-mid,#999999)" vector-effect="non-scaling-stroke" d="M90 64L82 72L56 78Q42 110 36 152L36 216L58 216L62 204L138 204L142 216L164 216L164 152Q158 110 144 78L118 72L110 64L104 70L100 100L96 70Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.18)" stroke="none" d="M126 104L138 204L128 204L124 104ZM84 92L100 100L116 92L115 102Q100 108 85 102ZM156 120L164 152L164 216L157 216L156 152ZM62 204L138 204L138 210L62 210Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M90 64L84 92L100 100L116 92L110 64M97 100L97 204M103 100L103 204M68 120L90 120L90 136L68 136ZM110 120L132 120L132 136L110 136ZM37 208L58 208M142 208L163 208M56 78Q68 110 66 140L62 204M144 78Q132 110 134 140L138 204"/>
+<path data-part="detail" data-kind="buttons" fill="none" stroke-opacity=".5" stroke-width="3" stroke-dasharray="0.1 14" d="M100 112L100 196"/>
+</g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="비니 (cap 슬롯)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="cap" data-type="beanie" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-cap,#1F2E50)" vector-effect="non-scaling-stroke" d="M80 30C80 10 88 2 100 2C112 2 120 10 120 30ZM78 26Q100 36 122 26L122 34Q100 44 78 34Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.25)" stroke="none" d="M112 5C119 11 120 20 120 30L115 29C115 20 115 11 112 5ZM78 34Q100 44 122 34L122 37Q100 47 78 37Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M92 4L90 26M100 2L100 25M108 4L110 26"/>
+<path data-part="detail" data-kind="rib" fill="none" stroke-opacity=".22" stroke-width="5" stroke-dasharray="1 2.5" d="M80 30.5Q100 40 120 30.5"/>
+</g>
+</svg>

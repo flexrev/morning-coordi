@@ -1,0 +1,743 @@
+[
+ {
+  "id": "acBeltBrownShoes",
+  "accessory": [
+   "beltLeather"
+  ],
+  "when": {
+   "shoesMaterial": "leather",
+   "shoesColor": [
+    "brown",
+    "chocolate",
+    "tan",
+    "camel"
+   ]
+  },
+  "pick": {
+   "color": "shoesFamily",
+   "finish": "shoes"
+  },
+  "delta": 1,
+  "severity": "info",
+  "note": "브라운 계열끼리. 탄+에스프레소처럼 명도 차 크면 −1",
+  "sources": [
+   "MYRQ",
+   "TMMBELT"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acBeltBlackShoes",
+  "accessory": [
+   "beltLeather"
+  ],
+  "when": {
+   "shoesMaterial": "leather",
+   "shoesColor": "black"
+  },
+  "pick": {
+   "color": "black"
+  },
+  "delta": 1,
+  "severity": "info",
+  "note": "블랙 신발엔 블랙 벨트만",
+  "sources": [
+   "MYRQ",
+   "TMMBELT"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acBeltBrownBlack",
+  "accessory": [
+   "beltLeather"
+  ],
+  "when": {
+   "shoesMaterial": "leather",
+   "beltColor": "black",
+   "shoesColor": [
+    "brown",
+    "chocolate",
+    "tan",
+    "camel"
+   ]
+  },
+  "pick": {},
+  "delta": -2,
+  "severity": "warn",
+  "note": "블랙 벨트+브라운 구두 금지(에스프레소 예외)",
+  "sources": [
+   "MYRQ",
+   "WH2",
+   "MM"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acBeltSneaker",
+  "accessory": [
+   "beltWebbing",
+   "beltBraided"
+  ],
+  "when": {
+   "shoeType": [
+    "sneakerWhite",
+    "sneakerColor",
+    "running"
+   ]
+  },
+  "pick": {
+   "color": "free"
+  },
+  "delta": 0,
+  "severity": "info",
+  "note": "비가죽 신발엔 벨트 매칭 규칙 없음. 캔버스·브레이디드 권장",
+  "sources": [
+   "MYRQ"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acBeltSuede",
+  "accessory": [
+   "beltLeather"
+  ],
+  "when": {
+   "shoesFinish": "suede"
+  },
+  "pick": {
+   "finish": "suede"
+  },
+  "delta": 1,
+  "severity": "info",
+  "note": "스웨이드엔 스웨이드. 매끈 가죽도 같은 계열이면 OK",
+  "sources": [
+   "MYRQ"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acBeltFormalWidth",
+  "accessory": [
+   "beltLeather"
+  ],
+  "when": {
+   "formalityMin": 7
+  },
+  "pick": {
+   "width": "25-32",
+   "finish": "smooth"
+  },
+  "delta": 1,
+  "severity": "info",
+  "note": "드레시할수록 좁은 벨트. 브레이디드는 수트에 −1",
+  "sources": [
+   "MYRQ"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acBeltHiddenTee",
+  "accessory": [
+   "beltLeather",
+   "beltBraided",
+   "beltWebbing"
+  ],
+  "when": {
+   "topType": [
+    "tee",
+    "sweatshirt",
+    "hoodie",
+    "tank"
+   ],
+   "tuckIn": false
+  },
+  "pick": {
+   "skip": true
+  },
+  "delta": 0,
+  "severity": "info",
+  "note": "상의가 벨트를 가리면 추천 생략",
+  "sources": [
+   "CX"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acBeltBuckleMetal",
+  "accessory": [
+   "beltLeather"
+  ],
+  "when": {
+   "watch": "watchMetal"
+  },
+  "pick": {
+   "metal": "watch"
+  },
+  "delta": 0,
+  "severity": "info",
+  "note": "버클 금속 = 시계 금속(실버·골드 통일)",
+  "sources": [
+   "MYRQ"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acWatchLeatherUnify",
+  "accessory": [
+   "watchLeather"
+  ],
+  "when": {
+   "shoesMaterial": "leather",
+   "belt": "beltLeather"
+  },
+  "pick": {
+   "color": "shoesFamily"
+  },
+  "delta": 1,
+  "severity": "info",
+  "note": "신발·벨트·시계줄 가죽 한 색(T8)",
+  "sources": [
+   "WH2",
+   "MM"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acWatchNatoCasual",
+  "accessory": [
+   "watchNato"
+  ],
+  "when": {
+   "formalityMax": 5
+  },
+  "pick": {
+   "color": "outfitSecondary"
+  },
+  "delta": 0,
+  "severity": "info",
+  "note": "나토·러버는 포멀도 5 이하 코디만",
+  "sources": [
+   "CX",
+   "OPUMOIVY"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acWatchNatoFormal",
+  "accessory": [
+   "watchNato"
+  ],
+  "when": {
+   "formalityMin": 7
+  },
+  "pick": {},
+  "delta": -1,
+  "severity": "warn",
+  "note": "드레스 코디에 나토 스트랩은 격차",
+  "sources": [
+   "CX"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acSocksMatchTrousers",
+  "accessory": [
+   "socksMatch"
+  ],
+  "when": {
+   "bottomMaterial": [
+    "wool",
+    "flannel"
+   ],
+   "shoeType": [
+    "derby",
+    "oxford",
+    "loaferTassel",
+    "loaferPenny",
+    "chelsea"
+   ]
+  },
+  "pick": {
+   "color": "bottomDarker"
+  },
+  "delta": 1,
+  "severity": "info",
+  "note": "바지색 양말이 다리를 길어 보이게. 포멀웨어 기본",
+  "sources": [
+   "EGSOCK",
+   "WHSOCK"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acSocksNoShowSummerLoafer",
+  "accessory": [
+   "socksNoShow"
+  ],
+  "when": {
+   "season": "summer",
+   "shoeType": [
+    "loaferPenny",
+    "loaferTassel",
+    "sneakerWhite"
+   ]
+  },
+  "pick": {},
+  "delta": 1,
+  "severity": "info",
+  "note": "여름 로퍼는 페이크삭스(맨발 금지)",
+  "sources": [
+   "EGNOSHOW",
+   "R2 4-1"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acSocksWinterLoafer",
+  "accessory": [
+   "socksMatch",
+   "socksNeutral"
+  ],
+  "when": {
+   "season": "winter",
+   "shoeType": [
+    "loaferPenny",
+    "loaferTassel"
+   ]
+  },
+  "pick": {
+   "color": [
+    "bottomDarker",
+    "navy",
+    "charcoal"
+   ]
+  },
+  "delta": 0,
+  "severity": "info",
+  "note": "겨울 로퍼는 양말 노출. 바지색 또는 네이비·차콜",
+  "sources": [
+   "R2 4-1",
+   "EGSOCK"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acSocksWhiteSneakerOnly",
+  "accessory": [
+   "socksWhite"
+  ],
+  "when": {
+   "shoeType": [
+    "sneakerWhite",
+    "sneakerColor",
+    "running"
+   ]
+  },
+  "pick": {
+   "color": "white"
+  },
+  "delta": 0,
+  "severity": "info",
+  "note": "흰 운동 양말은 스니커즈·러닝화에만",
+  "sources": [
+   "EGSOCK"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acSocksWhiteDress",
+  "accessory": [
+   "socksWhite"
+  ],
+  "when": {
+   "shoeType": [
+    "derby",
+    "oxford",
+    "loaferPenny",
+    "loaferTassel",
+    "chelsea",
+    "chukka"
+   ]
+  },
+  "pick": {},
+  "delta": -2,
+  "severity": "warn",
+  "note": "가죽 구두에 흰 운동 양말 금지",
+  "sources": [
+   "EGSOCK"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acSocksCropSneaker",
+  "accessory": [
+   "socksNoShow",
+   "socksWhite"
+  ],
+  "when": {
+   "trouserLength": "crop",
+   "shoeType": [
+    "sneakerWhite",
+    "sneakerColor"
+   ]
+  },
+  "pick": {},
+  "delta": 0,
+  "severity": "info",
+  "note": "크롭+스니커즈는 페이크삭스 또는 흰 크루(시티보이·스트릿)",
+  "sources": [
+   "EGSOCK",
+   "YOKO"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acSocksPatternOnce",
+  "accessory": [
+   "socksPattern"
+  ],
+  "when": {
+   "patternCount": 0,
+   "formalityMax": 7
+  },
+  "pick": {
+   "scale": "small",
+   "color": "outfit"
+  },
+  "delta": 0,
+  "severity": "info",
+  "note": "코디에 패턴이 없을 때만, 작은 패턴",
+  "sources": [
+   "EGSOCK",
+   "FBPAT"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acSocksSandal",
+  "accessory": [
+   "socksNoShow"
+  ],
+  "when": {
+   "shoeType": "sandal"
+  },
+  "pick": {
+   "skip": true
+  },
+  "delta": 0,
+  "severity": "info",
+  "note": "샌들은 양말 없음. 양말+샌들은 스트릿 변주",
+  "sources": [
+   "CX"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acBagFormalLeather",
+  "accessory": [
+   "bagBriefcase",
+   "bagTote"
+  ],
+  "when": {
+   "formalityMin": 7
+  },
+  "pick": {
+   "material": "leather",
+   "color": "shoesFamily"
+  },
+  "delta": 1,
+  "severity": "info",
+  "note": "드레시 코디엔 가죽 브리프케이스·토트, 신발 계열 색",
+  "sources": [
+   "MOMBAG",
+   "FASHBAG"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acBagCasualNylon",
+  "accessory": [
+   "bagBackpack",
+   "bagCrossbody"
+  ],
+  "when": {
+   "formalityMax": 4
+  },
+  "pick": {
+   "material": [
+    "nylon",
+    "canvas"
+   ],
+   "color": [
+    "black",
+    "olive",
+    "navy",
+    "charcoal"
+   ]
+  },
+  "delta": 1,
+  "severity": "info",
+  "note": "캐주얼엔 나일론·캔버스. 안전색 4개",
+  "sources": [
+   "MOMBAG"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acBagBackpackFormal",
+  "accessory": [
+   "bagBackpack"
+  ],
+  "when": {
+   "formalityMin": 7
+  },
+  "pick": {},
+  "delta": -1,
+  "severity": "warn",
+  "note": "백팩+코트·블레이저는 격차(가죽 백팩만 0)",
+  "sources": [
+   "MOMBAG",
+   "FASHBAG"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acBagCanvasTote",
+  "accessory": [
+   "bagTote"
+  ],
+  "when": {
+   "style": [
+    "cityboy",
+    "workwear",
+    "ivy"
+   ],
+   "formalityMax": 6
+  },
+  "pick": {
+   "material": "canvas",
+   "color": [
+    "offWhite",
+    "navy",
+    "olive"
+   ]
+  },
+  "delta": 1,
+  "severity": "info",
+  "note": "캔버스 토트는 시티보이·워크웨어·아이비 시그니처",
+  "sources": [
+   "YOKO",
+   "MOMBAG"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acBagLeatherUnify",
+  "accessory": [
+   "bagTote",
+   "bagBriefcase"
+  ],
+  "when": {
+   "material": "leather",
+   "shoesMaterial": "leather"
+  },
+  "pick": {
+   "color": "shoesFamily"
+  },
+  "delta": 1,
+  "severity": "info",
+  "note": "가죽 가방은 신발 가죽 색 계열(T8)",
+  "sources": [
+   "WH2",
+   "MOMBAG"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acHatFormalNone",
+  "accessory": [
+   "cap",
+   "beanie",
+   "bucketHat"
+  ],
+  "when": {
+   "formalityMin": 7
+  },
+  "pick": {
+   "skip": true
+  },
+  "delta": -1,
+  "severity": "warn",
+  "note": "포멀도 7 이상엔 볼캡·비니·버킷햇 생략",
+  "sources": [
+   "LAIRD1",
+   "CX"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acCapColorRange",
+  "accessory": [
+   "cap",
+   "beanie"
+  ],
+  "when": {
+   "hasOuter": true
+  },
+  "pick": {
+   "color": "outerTone2"
+  },
+  "delta": 0,
+  "severity": "info",
+  "note": "아우터와 2~3톤 이내 또는 코디 안의 색. 4번째 색 금지",
+  "sources": [
+   "LAIRD1",
+   "Vou1"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acBeanieCasualOuter",
+  "accessory": [
+   "beanie"
+  ],
+  "when": {
+   "season": "winter",
+   "outerType": [
+    "shortPuffer",
+    "longPuffer",
+    "fleece",
+    "duffle",
+    "peacoat",
+    "denimJacket"
+   ]
+  },
+  "pick": {
+   "color": "outfit"
+  },
+  "delta": 1,
+  "severity": "info",
+  "note": "캐주얼 겨울 아우터엔 비니 +1. 체스터필드엔 변주",
+  "sources": [
+   "LAIRD1",
+   "CX"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acScarfSolidCoat",
+  "accessory": [
+   "scarf"
+  ],
+  "when": {
+   "outerPattern": null,
+   "season": [
+    "winter",
+    "springFall"
+   ]
+  },
+  "pick": {
+   "color": "free",
+   "pattern": "allowed"
+  },
+  "delta": 1,
+  "severity": "info",
+  "note": "무지 코트엔 어떤 색·패턴 머플러도 OK",
+  "sources": [
+   "ANSIN",
+   "ASOSSCARF"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acScarfPatternCoat",
+  "accessory": [
+   "scarf"
+  ],
+  "when": {
+   "outerPattern": [
+    "houndstooth",
+    "plaid",
+    "herringbone",
+    "windowpane"
+   ]
+  },
+  "pick": {
+   "pattern": "solid",
+   "color": "outerPick"
+  },
+  "delta": 0,
+  "severity": "info",
+  "note": "패턴 코트엔 무지 머플러, 코트 패턴에서 한 색",
+  "sources": [
+   "ANSIN"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acScarfAccentOnce",
+  "accessory": [
+   "scarf"
+  ],
+  "when": {
+   "accentCount": 1
+  },
+  "pick": {
+   "color": "neutral"
+  },
+  "delta": 0,
+  "severity": "info",
+  "note": "코디에 포인트 컬러가 이미 있으면 머플러는 뉴트럴(3색 규칙)",
+  "sources": [
+   "Vou1",
+   "WH1"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acScarfFormalMaterial",
+  "accessory": [
+   "scarf"
+  ],
+  "when": {
+   "formalityMin": 6
+  },
+  "pick": {
+   "material": [
+    "wool",
+    "cashmere"
+   ],
+   "knit": "fine"
+  },
+  "delta": 0,
+  "severity": "info",
+  "note": "드레시 코디엔 얇은 울·캐시미어. 청키 니트 머플러는 5 이하",
+  "sources": [
+   "CX",
+   "ASOSSCARF"
+  ],
+  "flags": []
+ },
+ {
+  "id": "acMetalUnify",
+  "accessory": [
+   "watchMetal",
+   "beltLeather"
+  ],
+  "when": {
+   "watch": "watchMetal",
+   "belt": "beltLeather"
+  },
+  "pick": {
+   "metal": "unify"
+  },
+  "delta": 0,
+  "severity": "info",
+  "note": "금속(실버·골드) 통일",
+  "sources": [
+   "MYRQ"
+  ],
+  "flags": []
+ }
+]

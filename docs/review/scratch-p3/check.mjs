@@ -3,6 +3,7 @@
 // ② gap5 카드의 lo 가 sneakerColor·running·sandal 0
 // ③ 라벨(캡션)에 'a-z'·"인디고 데님 울"·"(울슬랙스)" 0
 // ④ 모든 S2 칩(engine.baseColors × 3계절)이 3장 반환
+// ⑤ (Phase 6-B) outfits.json 스타일 태그 분포 — 어떤 스타일도 > 60% 또는 < 3% 아님 (분포 출력)
 // 대상 = 엔진이 UI에 칩으로 내주는 색 전부(engine.baseColors) × 3계절 (content-check 1절의 270장 + 보조 84장을 포함)
 import { data } from '../../../src/data/index.js';
 import { createEngine } from '../../../src/engine/index.js';
@@ -22,7 +23,7 @@ for (const category of CATS) for (const color of engine.baseColors(category)) fo
   cards.push({ base, season, n: r.classic.length, classic: r.classic });
 }
 const flat = cards.flatMap((c) => c.classic.map((x) => ({ ...c, c: x })));
-const bad = { s1: [], s2: [], s3: [], s4: [] };
+const bad = { s1: [], s2: [], s3: [], s4: [], s5: [] };
 const tag = (x) => `${x.base.category}/${x.base.color}/${x.season}`;
 const line = (o) => o.items.map((i) => engine.itemCaption(i)).join(' · ');
 
@@ -40,6 +41,20 @@ for (const x of flat) {
   for (const t of c.explain) if (/[a-z]/i.test(t) && !/^[^a-z]*\d+\/5/.test(t)) bad.s3.push(`${tag(x)} explain: "${t}"`);
 }
 for (const x of cards) if (x.n !== 3) bad.s4.push(`${tag(x)}: ${x.n}장`);
+
+// ⑤ 스타일 태그 분포 (outfits.json styles[] = 빌드 타임 styleTags(), V-31로 재계산 일치 보장)
+const N = data.outfits.length;
+const dist = (data.styles ?? []).map((s) => {
+  const tagged = data.outfits.filter((o) => (o.styles ?? []).some((t) => t.id === s.id)).length;
+  const dominant = data.outfits.filter((o) => o.styles?.[0]?.id === s.id).length;
+  return { id: s.id, phase: s.phase, tagged, dominant, pct: (100 * tagged) / N };
+});
+for (const d of dist) {
+  if (d.pct > 60) bad.s5.push(`${d.id}: ${d.tagged}/${N} = ${d.pct.toFixed(0)}% > 60%`);
+  if (d.pct < 3) bad.s5.push(`${d.id}: ${d.tagged}/${N} = ${d.pct.toFixed(0)}% < 3%`);
+}
+const untagged = data.outfits.filter((o) => !(o.styles ?? []).length).length;
+if (untagged) bad.s5.push(`태그 없는 코디 ${untagged}장`);
 
 const extra = [];
 for (const x of cards) {
@@ -63,6 +78,8 @@ report('① SEASON! (베이스 자체 원인 제외) = 0', bad.s1);
 report('② gap5 + lo ∈ {sneakerColor, running, sandal} = 0', bad.s2);
 report("③ 라벨에 'a-z'·'인디고 데님 울'·'(울슬랙스)' = 0", bad.s3);
 report('④ 모든 칩(baseColors × 3계절) 3장', bad.s4);
+report('⑤ 스타일 태그 분포: 3% ≤ 스타일별 코디 비율 ≤ 60%, 태그 없는 코디 0', bad.s5);
+console.log(`   분포 (outfits ${N}, 태그 = 상위 2 / dominant = 1위): ` + dist.map((d) => `${d.id}${d.phase === 1 ? '*' : ''} ${d.tagged}(${d.pct.toFixed(0)}%)/${d.dominant}`).join(' · ') + '   (* 1차 범위)');
 console.log(`\n-- 참고(기준 외) ${extra.length}건`);
 for (const l of extra) console.log('   ' + l);
 process.exitCode = Object.values(bad).some((l) => l.length) ? 1 : 0;

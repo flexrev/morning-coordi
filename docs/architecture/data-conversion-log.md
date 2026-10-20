@@ -315,3 +315,50 @@ engine.index.baseStats              // Map `${category}|${color}` → { classic,
 - 역참조로만 만든 하의(lightGrey·chocolate·tan)는 아우터 규칙이 없어 겨울에도 아우터 카드가 없다(하의 규칙 추가가 근본 해결).
 - `outer|indigo` 겨울은 데님 재킷(소재 denimIndigo 연중)이라 경고 없이 나오지만 R2 outerTypes seasons는 봄가을 — 겨울 데님 재킷 허용 여부는 콘텐츠 판단.
 - `top|indigo`(데님 셔츠, denimWashed) 겨울은 베이스 자체 계절 경고가 붙는다(classic 매치 1개뿐인 색).
+
+## 9. Phase 6-B 콘텐츠 확장 (CX, 2026-10-20)
+
+### 9-1. 레코드 수
+
+| 파일 | 레코드 | 원본 표 | 비고 |
+|---|---|---|---|
+| styles.json | 8 | 1-1 | phase: 1차 4(minimal·bizcasual·ivy·amekaji), 2차 4 |
+| styleAffinity.json | 126 (× 8 = 1,008 가중치) | 2-1 | 20셀 수정(아래) |
+| occasions.json | 5 | 3-1 | formal `approx` |
+| accessoryTypes.json | 19 | 4-1 | |
+| accessoryRules.json | 32 | 4-2 | `pick=skip` 3행 → `{skip:true}` |
+| patterns.json | 9 | 5-1 | |
+| patternRules.json | 19 | 5-2 | `countAs=texture` 1행 |
+| midTypes.json | 5 | 6-1 | |
+| midLayerRules.json | 12 | 6-2 | |
+| twoOuterRules.json | 6 | 6-3 | |
+| labels.ko.json | 171 → 256 (+85) | — | data-schema 11-2 |
+| outfits.json | 52 (필드 +2) | — | styles[]·occasions[] 계산 |
+| enums.json | 11 → 17 키 | — | categories +mid, tags +2, 새 키 6 |
+| 합계 | 302 KB → 미압축 399 KB(1칸 들여쓰기), V-33 기준(들여쓰기 없음) 257 KB < 360 KB | | |
+
+### 9-2. 결정
+
+1. **스타일 태그 = 상위 2**(설계 ≤3 → gate-5 지시 top-2). 임계 0.4·비율 0.8을 넘는 스타일이 없으면 dominant 1개를 남겨 "태그 없는 코디 0".
+2. **V-26 정합 19셀 +2**, **분포 조정 1셀**(white minimal 3→2), **cityboy phase 2**. 상세·시뮬레이션 결과는 data-schema 11-4. 조정 후 분포: minimal 56% · ivy 50% · bizcasual 40% · amekaji 15% · cityboy 10% · workwear 6% · street 4% · gorpcore 4%.
+3. **패턴 변주·미드 레이어 후보는 opt-in**(`patterns`·`layering`) — 옵션 없는 Deep 결과(byTone·byHue·variations 집합)가 스타일 데이터 유무와 무관하게 같아야 한다는 7-3 원칙을 지키기 위해. 테스트 E-21b가 보장.
+4. **Deep 소품 기본 ON, Quick은 요청 시만**. 결과에 실리는 카드에만 계산.
+5. **상황 avoid의 materials는 신발에 적용하지 않음**(sneakerWhite가 가죽). 완화 순서 patterns → materials → itemTypes → shoeTypes(최후). `applied.relaxed`에 기록.
+6. **2겹 아우터**: 안쪽은 twoOuterRules 점수를 outer 축에 0.5 가중 평균. E-19(여름 2겹 layerOver)는 그대로 통과하며 추가로 차단된다(toSummerTwoOuter block).
+7. **패턴 delta 합은 −2..+1 클램프**(adjust 규칙 1개와 같은 범위) — ptSolidGround(+1) + ptBretonPairs(+1)이 +2로 쌓여 변주가 클래식을 앞지르는 폭을 제한.
+8. `outfitSignature`에 패턴을 포함(`top:navy:tee:breton`) — 패턴 변주가 원본과 다른 id를 받는다. 패턴 없는 코디의 시그니처·id는 변화 없음.
+9. `materialize()`가 `mid` 카테고리를 지원하고, bottom·outer에서도 `pattern` override를 받는다(기존엔 top만).
+10. `recommend()` 시그니처는 `(query)`와 `(base, season, mode, opts)` 둘 다(`toQuery`). `applied`로 UI가 무엇이 적용됐는지 읽는다.
+
+### 9-3. 검증·테스트
+
+- validate 0 error / 40 warning(변경 전과 동일). 신규 규칙 V-23~V-33 전부 통과. V-20 코드표에 CX 68 + 내부 8 추가.
+- `npm test` 71 pass(48 + 23). 하위 호환 스냅샷(`tests/fixtures/quick-baseline.json`) 12키 바이트 일치.
+- `docs/review/scratch-p3/check.mjs` ①~④ PASS 유지, ⑤ 스타일 분포 PASS.
+
+### 9-4. 미반영·2차
+
+- 수트 품목(`suitJacket`·`suitTrouser`) 없음 → `formal` 상황은 블레이저+울 슬랙스 근사(코디 1개만 occasions에 formal). E-27 기대치 조정(평균 ≥6).
+- 미드 레이어 후보는 base 상의가 midLayerRules에 있는 품목(티·옥스포드·헨리·코튼 니트)일 때만 — 겨울 기본 상의(울 니트)는 규칙상 퀼팅 베스트(변주 3)뿐이라 겨울 layering 카드가 적다. 2차에 겨울 규칙 보강.
+- 액세서리 `shoesFinish`는 품목명 "스웨이드" 유무로만 판정, `tuckIn`은 강제값 없으면 false.
+- `midType` kind affinity 행 없음(0) — 미드가 스타일 벡터에 주는 영향은 색뿐.

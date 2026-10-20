@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" aria-label="가디건 (미드 레이어)">
+<!-- morning-coordi v2 / original artwork -->
+<g data-slot="mid" data-type="cardigan" data-fit="regular" data-length="regular" stroke="currentColor" stroke-opacity=".45" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+<path data-part="main" fill="var(--c-mid,#999999)" vector-effect="non-scaling-stroke" d="M86 72Q70 74 56 80Q44 110 38 152L38 216L60 216L64 200L136 200L140 216L162 216L162 152Q156 110 144 80Q130 74 114 72L100 130Z"/>
+<path data-part="shade" fill="rgba(0,0,0,.18)" stroke="none" d="M124 100L136 200L126 200L122 100ZM154 120L162 152L162 216L156 216L154 152ZM64 200L136 200L136 206L64 206ZM100 130L104 130L114 76L112 72Z"/>
+<path data-part="detail" fill="none" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke" d="M88 76L100 134M112 76L100 134M100 134L100 200M64 192L136 192M56 80Q68 108 66 134L64 200M144 80Q132 108 134 134L136 200M39 208L60 208M140 208L161 208M66 170L86 170M114 170L134 170"/>
+<path data-part="detail" data-kind="rib" fill="none" stroke-opacity=".22" stroke-width="5" stroke-dasharray="1 2.5" d="M66 196.5L134 196.5M40 212L59 212M141 212L160 212"/>
+<path data-part="detail" data-kind="buttons" fill="none" stroke-opacity=".5" stroke-width="3" stroke-dasharray="0.1 14" d="M100 140L100 196"/>
+</g>
+</svg>

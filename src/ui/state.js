@@ -1,8 +1,9 @@
-// 작은 전역 스토어 — {base, season, theme, recents, installPrompt}. get/set/subscribe. 추천 결과는 키로 메모이즈.
+// 작은 전역 스토어 — {base, season, theme, motion, recents, installPrompt}. get/set/subscribe. 추천 결과는 키로 메모이즈.
 import { read, write, KEYS } from './storage.js';
+import * as favorites from './favorites.js';
 
 const listeners = new Set();
-const RESULTS = new Map(); // `${category}|${color}|${season}` → RecommendResult
+const RESULTS = new Map(); // `${category}|${color}|${season}|${style}|${occasion}` → RecommendResult
 
 /** 현재 월로 계절 추정 (ux-flow 2-4): 3~5·10~11 봄가을, 6~9 여름, 12~2 겨울 */
 export function seasonForMonth(m = new Date().getMonth() + 1) {
@@ -25,6 +26,7 @@ const state = {
   seasonIsAuto: !VALID_SEASON.has(savedSeason),
   recents: (read(KEYS.recent, []) || []).map(validBase).filter(Boolean).slice(0, 3),
   theme: read(KEYS.theme) || 'dark',
+  motion: read(KEYS.motion) === 'reduce' ? 'reduce' : 'auto',
   installPrompt: null, // Android beforeinstallprompt 이벤트
   engine: null,
   catalog: null,
@@ -60,33 +62,83 @@ export function setSeason(season) {
   set({ season, seasonIsAuto: false });
   write(KEYS.season, season);
 }
+/** 설정 "자동으로 되돌리기" */
+export function resetSeason() {
+  set({ season: seasonForMonth(), seasonIsAuto: true });
+  write(KEYS.season, null);
+}
 
-/** 추천 결과 (deep 모드 1회 호출, 메모이즈). base 없으면 null. */
-export function getResult() {
-  const { base, season, engine } = state;
+export function setTheme(theme) {
+  const t = ['dark', 'light', 'auto'].includes(theme) ? theme : 'dark';
+  set({ theme: t });
+  write(KEYS.theme, t);
+}
+export function setMotion(pref) {
+  const m = pref === 'reduce' ? 'reduce' : 'auto';
+  set({ motion: m });
+  write(KEYS.motion, m === 'reduce' ? 'reduce' : null);
+}
+
+const now = () => (typeof performance !== 'undefined' ? performance.now() : Date.now());
+
+/**
+ * 엔진 호출 단일 지점 — CX 7-1 시그니처(Query 객체: {base, season, mode, style, occasion, accessories}).
+ * CX 가 위치 인자(recommend(base, season, mode, opts))로 바꾸면 이 함수만 고친다.
+ */
+function callRecommend(engine, base, season, opts = {}) {
+  const query = { base, season, mode: 'deep', accessories: true };
+  if (opts.style) query.style = opts.style;
+  if (opts.occasion) query.occasion = opts.occasion;
+  return engine.recommend(query);
+}
+
+/**
+ * 추천 결과 (deep 모드, 메모이즈). base 없으면 null.
+ * @param {{base?:object, season?:string, style?:string|null, occasion?:string|null}} [opts]  생략하면 현재 기준·계절
+ */
+export function getResult(opts = {}) {
+  const base = opts.base || state.base;
+  const season = opts.season || state.season;
+  const { engine } = state;
   if (!base || !engine) return null;
-  const key = `${base.category}|${base.color}|${season}`;
+  const key = `${base.category}|${base.color}|${season}|${opts.style || ''}|${opts.occasion || ''}`;
   if (!RESULTS.has(key)) {
+    const t0 = now();
     try {
-      RESULTS.set(key, engine.recommend({ base, season, mode: 'deep' }));
+      RESULTS.set(key, callRecommend(engine, base, season, opts));
     } catch (e) {
       console.error('recommend failed', e);
       RESULTS.set(key, null);
     }
+    // 스켈레톤 판단용 (motion-spec 3-11): 실제 계산한 경우만 기록
+    const ms = Math.round(now() - t0);
+    write(KEYS.perf, { computeMs: ms });
     if (RESULTS.size > 20) RESULTS.delete(RESULTS.keys().next().value);
   }
   return RESULTS.get(key);
 }
 
+/** 지난번 계산이 80ms 를 넘었나 (다음 렌더에서 스켈레톤 먼저) */
+export function wasSlow() { return ((read(KEYS.perf, {}) || {}).computeMs || 0) > 80; }
+
 /**
  * 카드 참조 문자열로 후보 찾기. ref 형식:
- *   classic.N · tone.<toneId>.N · hue.<relation>.N · var.N
- * @returns {{candidate:object, label:string, variation?:object}|null}
+ *   classic.N · tone.<toneId>.N · hue.<relation>.N · var.N · style.<styleId>.N · occ.<occasionId>.N · fav.<outfitId>
+ * @returns {{candidate:object, label:string, variation?:object, base?:object, season?:string}|null}
  */
 export function findCandidate(ref) {
-  const r = getResult();
-  if (!r || !ref) return null;
+  if (!ref) return null;
   const parts = String(ref).split('.');
+  if (parts[0] === 'fav') {
+    const id = parts.slice(1).join('.');
+    const f = favorites.find(id);
+    if (!f) return null;
+    const r = getResult({ base: f.base, season: f.season });
+    const c = favorites.findInResult(r, id);
+    return c ? { candidate: c, label: favLabel(f), base: f.base, season: f.season } : null;
+  }
+  const r = getResult();
+  if (!r) return null;
   const n = Number(parts[parts.length - 1]);
   if (parts[0] === 'classic') {
     const c = r.classic?.[n];
@@ -102,11 +154,27 @@ export function findCandidate(ref) {
     const c = g?.candidates?.[n];
     return c ? { candidate: c, label: hueLabel(parts[1]) } : null;
   }
+  if (parts[0] === 'style') {
+    const g = (r.byStyle || []).find((t) => t.style === parts[1]);
+    const c = g?.candidates?.[n];
+    return c ? { candidate: c, label: styleLabel(parts[1]) } : null;
+  }
+  if (parts[0] === 'occ') {
+    const g = (r.byOccasion || []).find((t) => t.occasion === parts[1]);
+    const c = g?.candidates?.[n];
+    return c ? { candidate: c, label: occasionLabel(parts[1]) } : null;
+  }
   if (parts[0] === 'var') {
     const v = (r.variations || [])[n];
     return v ? { candidate: v.candidate, label: variationLabel(v, r), variation: v } : null;
   }
   return null;
+}
+
+export function favLabel(f) {
+  const cat = state.catalog;
+  const season = cat?.label(`season.${f.season}`) || f.season;
+  return `${cat ? cat.baseName(f.base) : `${f.base.category} · ${f.base.color}`} · ${season}`;
 }
 
 export function toneLabel(id) {
@@ -117,6 +185,19 @@ export function hueLabel(id) {
   // "보색(탁한)" 같은 괄호 보충은 칩에서 뺀다 (P1-16)
   const cat = state.catalog;
   return (cat?.plain ? cat.plain(`explain.${id}`) : cat?.label(`explain.${id}`)) || { analogous: '유사색', complementary: '보색', achromatic: '무채색' }[id] || id;
+}
+const STYLE_KO = { minimal: '미니멀', amekaji: '아메카지', cityboy: '시티보이', bizcasual: '비즈캐주얼', street: '스트릿', gorpcore: '고프코어', ivy: '아이비', workwear: '워크웨어' };
+const OCC_KO = { work: '출근', weekend: '주말', date: '데이트', active: '운동', formal: '격식' };
+/** 스타일 라벨: labels.ko style.<id> → 내장 폴백 → id */
+export function styleLabel(id) {
+  const cat = state.catalog;
+  const lab = cat?.plain ? cat.plain(`style.${id}`) : cat?.label(`style.${id}`);
+  return (lab && lab !== id) ? lab : (STYLE_KO[id] || id);
+}
+export function occasionLabel(id) {
+  const cat = state.catalog;
+  const lab = cat?.plain ? cat.plain(`occasion.${id}`) : cat?.label(`occasion.${id}`);
+  return (lab && lab !== id) ? lab : (OCC_KO[id] || id);
 }
 export function variationLabel(v, r) {
   const idx = (r?.classic || []).findIndex((c) => c.outfit.id === v.fromOutfitId);

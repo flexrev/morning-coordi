@@ -1,0 +1,59 @@
+// ST1 설정 — 화면(다크·라이트·자동) · 움직임(시스템 따름·줄이기) · 계절 · 처음 안내 · 홈 화면 · 모든 저장 지우기 · 정보.
+import { h } from '../dom.js';
+import { topbar, segment } from '../components.js';
+import * as nav from '../nav.js';
+import { get as getState, setTheme, setMotion, setSeason, resetSeason, seasonForMonth } from '../state.js';
+import { applyMotionPref } from '../motion.js';
+import { write, KEYS, available } from '../storage.js';
+import { resetAll as resetCoach } from '../coach.js';
+import { isStandalone, isIOS, isAndroid } from '../install.js';
+
+const VERSION = '1.1.0';
+
+export function applyThemeAttr(theme) {
+  document.documentElement.dataset.theme = ['dark', 'light', 'auto'].includes(theme) ? theme : 'dark';
+}
+
+export function settingsScreen() {
+  const st = getState();
+  const cat = st.catalog;
+  const screen = h('main', { class: 'screen', id: 'st1' });
+  screen.append(topbar({ title: '설정', back: () => nav.back('/result') }));
+  const body = h('div', { class: 'screen__body screen__body--scroll set' });
+
+  const row = (k, control, note) => h('div', { class: 'srow' }, h('div', { class: 'srow__k', text: k }), control, note ? h('p', { class: 'caption srow__note', text: note }) : null);
+
+  // 화면 — 전환 모션 없음(색이 한 프레임에 바뀐다, P5)
+  body.append(row('화면', segment({ label: '화면', value: st.theme, name: 'theme', options: [['dark', '다크'], ['light', '라이트'], ['auto', '자동']], onChange: (t) => { setTheme(t); applyThemeAttr(t); } })));
+
+  // 움직임
+  let osReduce = false;
+  try { osReduce = matchMedia('(prefers-reduced-motion: reduce)').matches; } catch { /* noop */ }
+  body.append(row('움직임', segment({ label: '움직임', value: st.motion, name: 'motion', options: [['auto', '시스템 따름'], ['reduce', '줄이기']], onChange: (m) => { setMotion(m); applyMotionPref(m); } }),
+    `지금 시스템 설정: ${osReduce ? '줄이기' : '줄이지 않음'}`));
+
+  // 계절
+  const seasonSeg = segment({ label: '계절', value: st.season, name: 'season', options: ['springFall', 'summer', 'winter'].map((s) => [s, cat.label(`season.${s}`)]), onChange: (s) => setSeason(s) });
+  const auto = h('button', { class: 'btn btn--ghost btn--sm-text', type: 'button', text: '자동으로 되돌리기', onClick: () => { resetSeason(); seasonSeg.setValue(seasonForMonth()); } });
+  body.append(row('계절', h('div', { class: 'srow__stack' }, seasonSeg, auto)));
+
+  // 처음 안내
+  body.append(row('안내', h('button', { class: 'btn btn--block glass', type: 'button', text: '처음 안내 다시 보기', onClick: () => { write(KEYS.onboarded, null); resetCoach(); nav.replace('/'); } })));
+
+  // 홈 화면 (미설치·모바일만)
+  if (!isStandalone() && (isIOS() || isAndroid())) {
+    body.append(row('앱', h('button', { class: 'btn btn--block glass', type: 'button', text: '홈 화면에 두는 방법', onClick: () => nav.go('/result/install') })));
+  }
+
+  // 저장
+  body.append(row('저장', h('button', { class: 'btn btn--block btn--danger-text glass', type: 'button', 'data-focus-key': 'st1:reset', text: '모든 저장 지우기', onClick: () => nav.go('/settings/reset') }),
+    available() ? null : '이 기기에선 저장이 안 돼요'));
+
+  body.append(h('div', { class: 'spacer' }));
+  body.append(h('p', { class: 'caption set__info', text: `버전 ${VERSION} · 오프라인에서도 열려요` }));
+  body.append(h('p', { class: 'caption set__info', text: '공유는 기기 안에서 만들어져요. 서버로 보내지 않아요' }));
+  body.append(h('div', { style: 'height:max(var(--safe-bottom), var(--sp-5))' }));
+  screen.append(body);
+  screen.__update = () => {};
+  return screen;
+}

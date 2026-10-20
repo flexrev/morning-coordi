@@ -1,4 +1,4 @@
-// 아침 코디 — 앱 부트스트랩 (C3·C1). 토큰/스타일은 index.html <link>, 화면은 src/ui/, 엔진은 아래 USE_MOCK 한 줄에서 선택.
+// 아침 코디 — 앱 부트스트랩 (C3·C1 → 6-B). 토큰/스타일은 index.html <link>, 화면은 src/ui/, 엔진은 아래 USE_MOCK 한 줄에서 선택.
 import { registerSW } from 'virtual:pwa-register';
 import * as state from './ui/state.js';
 import { createCatalog } from './ui/catalog.js';
@@ -6,18 +6,17 @@ import { ensurePatternDefs } from './ui/patternDefs.js';
 import { mount } from './ui/app.js';
 import { countVisit, dismissBanner } from './ui/install.js';
 import { toast } from './ui/components.js';
+import { applyMotionPref } from './ui/motion.js';
+import { applyThemeAttr } from './ui/screens/settings.js';
 
 /**
  * 엔진 선택 — 단일 전환점 (Phase 3-C 이후).
  *   기본(미설정)         → 실제 엔진(src/engine/index.js createEngine) + 실데이터(src/data/index.js data). dev·build 모두.
  *   VITE_USE_MOCK=true   → 목 엔진 + 더미 데이터 (src/mock). UI만 따로 볼 때: `VITE_USE_MOCK=true npm run dev`.
- * .env.production 은 false 로 고정. 비교는 빌드 타임 상수로 접히므로 프로덕션 번들에 mock 청크가 들어가지 않는다.
- * 엔진과 카탈로그는 반드시 같은 data 객체를 받는다(G4: shortLabel·라벨 출처 일치).
  */
 const USE_MOCK = import.meta.env.VITE_USE_MOCK === 'true';
 
 async function loadEngine() {
-  // 카탈로그는 엔진을 받아 S2 정렬(index.baseColors)에 쓴다. 없으면 data 에서 직접 센다 (P1-02).
   if (USE_MOCK) {
     const mod = await import('./mock/index.js');
     const engine = mod.createEngine(mod.data);
@@ -28,13 +27,21 @@ async function loadEngine() {
   return { engine, catalog: createCatalog(data, engine) };
 }
 
-function applyTheme() {
-  const t = state.get().theme;
-  document.documentElement.dataset.theme = ['dark', 'light', 'auto'].includes(t) ? t : 'dark';
+function applyPrefs() {
+  const st = state.get();
+  applyThemeAttr(st.theme);
+  applyMotionPref(st.motion);
+  // 그레인(시안 B 7% 상한 → 5%): 다크에서만, 저사양(data-perf=low)·투명도 줄이기면 끔
+  const html = document.documentElement;
+  let noTransparency = false;
+  try { noTransparency = matchMedia('(prefers-reduced-transparency: reduce)').matches; } catch { /* noop */ }
+  const lowPerf = html.dataset.perf === 'low' || (navigator.deviceMemory && navigator.deviceMemory <= 2);
+  if (lowPerf) html.dataset.perf = 'low';
+  if (!noTransparency && !lowPerf) html.dataset.grain = 'on'; else delete html.dataset.grain;
 }
 
 async function boot() {
-  applyTheme();
+  applyPrefs();
   ensurePatternDefs();
   const { engine, catalog } = await loadEngine();
   state.set({ engine, catalog });

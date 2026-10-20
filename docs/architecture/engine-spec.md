@@ -480,3 +480,78 @@ export { recommend, scoreOutfit, generateCandidates, pickClassic, groupByTone, g
 6. reason 키 추가: `explain.accentAccent`, `explain.outerScore`, `explain.shoeLength`, `explain.layerOver`, `explain.lengthBlock`, `explain.seasonBlock`. `style.formality`에 `gap/penalty/blocked`, `color.detail`에 `mean/toneMod/seasonMod/allClassic/minPair`, `OutfitScore.styleNorm`.
 7. **성능**: quick(히트만) 0.5~2 ms, 역조회·deep 15~27 ms(후보 300). 테스트 기준 < 50 ms(CI). 10 ms 목표가 필요하면 `CANDIDATE_MAX`를 150으로.
 8. `src/data/index.js`의 JSON import는 `with { type: 'json' }`(Node 22 직접 실행용, Vite 호환).
+
+---
+
+## 12. Phase 6-B 콘텐츠 확장 (CX, 2026-10-20) — 시그니처·그룹·점수 위치
+
+설계: `docs/phase6/content-expansion.md` 7절. 데이터: `data-schema.md` 11절. PM 결정 D-1·D-2·D-3(gate-5 2절) 반영. 구현 파일: `src/engine/style.js`(신설, 순수 함수 — 빌드와 런타임이 같은 함수), `recommend.js`, `groups.js`, `candidates.js`, `score.js`, `lookup.js`, `explain.js`, `constants.js`.
+
+### 12-1. 시그니처
+
+```ts
+// 두 형태 모두 허용 (createEngine().recommend). 4번째 인자/옵션 필드는 전부 선택 — 없으면 Phase 4와 동일 결과
+engine.recommend(query: Query)
+engine.recommend(base: BaseItem, season: Season, mode?: Mode, opts?: Options)
+Query = { base, season, mode, ...Options }
+Options = {
+  style?: StyleId | null,       // D-1: final + K_STYLE(0.5) × styleNorm[style] 로 재정렬만. 데이터에 없는 id는 무시
+  occasion?: OccasionId | null, // D-2: avoid 제외(단계 완화) + 창 감점(−0.3/아이템, 하한 −0.9) + 목표 보너스(+0.2) + K_OCC(0.4)×styleBoost
+  accessories?: boolean | { belt?, beltColor?, watch?, tuckIn? },  // 소품 제안. Deep은 기본 ON, Quick은 요청 시만. 객체면 강제값(경고 규칙용)
+  layering?: boolean,           // D-3: Deep에서 mid 레이어 변형 후보 추가(≤ +100). Quick은 무시
+  patterns?: boolean,           // Deep에서 패턴 변주(브레통·잔줄·깅엄…) ≤ 1장/클래식 카드 — 옵션 없는 Deep 결과를 바꾸지 않기 위해 opt-in
+}
+RecommendResult {
+  …기존 필드 동일 (classic·byTone·byHue·variations·avoid·stats)…,
+  applied: { style, occasion, accessories, layering, patterns, relaxed: string[] },  // relaxed = 상황 avoid 완화 단계 (patterns → materials → itemTypes → shoeTypes)
+  byStyle?: StyleGroup[],       // Deep만. 1차 범위 4개(phase 1) 각 ≤5, fillDiverse. style 선택 시 [선택, 근접 1개]
+  byOccasion?: OccasionGroup[], // Deep만. 5개 각 ≤3, 단계 완화, relaxed 포함
+}
+Candidate {
+  outfit, score, explain,        // 불변 — explain(S3 카드 줄)에는 스타일·상황·소품 문구를 넣지 않는다
+  styleVec: { vec, norm, dominant, wsum } | null,
+  styleTags: [{ id, score }] (≤2),             // 상위 2 (STYLE_TAG_MIN 0.4 · RATIO 0.8, 없으면 dominant 1개)
+  tags: { style: StyleId[], occasion: OccasionId[] },  // UX 7-5 계약 (candidate.tags.style[0..1])
+  tagLabels: string[],                          // 한국어 shortLabel (스타일 → 상황 순)
+  rank: { boost, occasionAdj, finalRanked },    // 정렬에만 쓴 값. score.final·percent·blocked는 그대로
+  styleReasons: Reason[], styleExplain: string[],  // key: explain.style.* · explain.occasion.* (S6용, userReasons 필터 밖)
+  accessories?: AccessoryPick[],               // { group, id, color, note, severity, ruleId, delta, key: 'explain.acc.<ruleId>', text }
+}
+engine.styles({ all? })  → [{ id, label, shortLabel, help, phase }]  // 1차 범위 4개(기본) / 8개
+engine.occasions()       → [{ id, label, shortLabel, help }]
+```
+
+메모 키: `base|season|mode|style|occasion|accessories|layering|patterns` (LRU 20 유지).
+
+### 12-2. 점수 위치
+
+```
+scoreOutfit(index, outfit, season)              // 변경 없음 — 단, 아래 3가지는 해당 아이템이 있을 때만 켜진다
+  mid 있음  → style.layer 축(가중 W_LAYER 0.7)이 ΣW에 추가. midLayerRules(season, base, mid, outer) → score, 없으면 3.
+             공통 규칙: regular 미드 + short 아우터 = block · 미드 weight > 아우터 weight = ≤2 · 미드 포멀도가 top·outer ±2 밖 = warn.
+             색 축에 top↔mid·mid↔outer(0.5) 쌍, 소재 축에 [top,mid]·[mid,outer] 추가. 계절 겹 수 = 1 + mid + outer 수.
+  outer 2개 → outer 축 = (바깥 outerScore + 0.5 × twoOuterRules score) / 1.5. 안쪽 기장 ≥ 바깥이면 −2(같으면 −1). tag block이면 축 1(차단)
+  pattern 있음 → patternRules delta(합 −2..+1 클램프)를 adjust 축에 더함(K_ADJ). mode 없는 exclude(브레통 하의·카모 포멀·신발 패턴)는 블록.
+             mode 조건 exclude(ptQuickMaxOne·ptDeepMaxTwo)는 후보 생성이 patternExcluded(mode)로 평가
+styleVector(index, outfit) → vec·norm·dominant   // 항상(스타일 데이터 있을 때), 코디 객체당 WeakMap 캐시
+rank: finalRanked = final + K_STYLE × styleNorm[style] + occasionAdj     // 정렬에만. blocked·percent 불변
+Quick: quickPool(hits + 생성 후보, 등급) → selectQuick(rankAdj, exclude)   // 풀 불변, 티어 안에서 finalRanked, 상황 avoid는 제외.
+       3장 미만이면 완화 단계 0→4 (shoeTypes는 마지막). 옵션 없으면 pickClassic = Phase 4 그대로
+Deep:  후보 300(+layering ≤100) → byTone·byHue·variations 집합 동일, style/occasion 있으면 finalRanked로 재정렬
+       byStyle: styleNorm[s] ≥ 0.4 후보를 final + 0.5×norm 순 fillDiverse(5)   byOccasion: avoid 완화 + final + occasionAdj 순 fillDiverse(3)
+       accessories: 결과에 실리는 카드에만 계산(후보 300장 전부 아님)
+```
+
+상수(`constants.js`): `K_STYLE 0.5 · K_OCC 0.4 · OCC_WINDOW_PENALTY −0.3 · OCC_WINDOW_FLOOR −0.9 · OCC_TARGET_BONUS 0.2 · STYLE_TAG_MIN 0.4 · STYLE_TAG_RATIO 0.8 · STYLE_TAGS_MAX 2 · STYLE_SHOES_COLOR_WEIGHT 0.5 · W_LAYER 0.7 · PAIR_WEIGHT_MID 0.5 · TWO_OUTER_INNER_WEIGHT 0.5 · PATTERN_DELTA −2..+1 · LAYERING_CANDIDATES_MAX 100 · ACCESSORY_LINES_MAX 5`.
+
+### 12-3. 소품 제안 (`suggestAccessories`)
+
+규칙 32개를 2패스로 평가(1패스: belt·watch·beltColor·material 조건 없는 규칙 → 벨트·시계 결정, 2패스: 나머지). 그룹(belt·socks·watch·bag·scarf·hat)별 1개 — delta 큰 것 → 출처 수 → id. `pick.skip`(티셔츠가 벨트를 가림, 샌들 양말 없음)이면 그 그룹 생략. **delta < 0 규칙은 그 소품이 실제로 골라졌거나 강제됐을 때만 경고**(가죽 구두에 흰 양말은 흰 양말을 고른 경우에만). 상황이 있으면 비어 있는 그룹을 `occasions.accessories`에서 창·계절 맞게 채운다. 색은 `deriveAccessoryColor`(shoesFamily = 신발 색, bottomDarker = `DARKER_OF` 표, neutral = charcoal…).
+
+### 12-4. 테스트·검증 결과
+
+- `npm test` 48 → **71 pass**(`tests/expansion.test.js` 23건: E-21~E-32 + 하위 호환 스냅샷(`tests/fixtures/quick-baseline.json`, 4 베이스 × 3계절, Phase 4 출력 그대로) + 스타일 재정렬 풀 불변 + 상황 항상 3장(4 베이스 × 3계절 × 5상황 + 하의 칩 16 × 3계절 × formal·active) + 벨트=신발 색 + 패턴 ≤1 + mid Quick 금지 + 2겹 아우터).
+- `npm run validate` 0 error / 40 warning(변경 전과 동일 — V-09 36·V-18 3·V-21 1).
+- `check.mjs` ① ② ③ ④ PASS 유지 + ⑤ 스타일 분포 PASS(분포는 data-schema 11-4).
+- 성능: Quick 옵션 없음 변화 없음(코드 경로 동일), Quick + occasion ≈ 8ms, Deep ≈ 50ms(스타일 벡터 300 + byStyle·byOccasion 그룹 + 소품), Deep + 전 옵션 ≈ 60ms.
+- E-27 조정: 베이지 **치노(5)** 베이스로는 평균 포멀도 ≥7이 불가(최대 6.75) → 테스트는 ≥6 + 스니커즈·데님 0으로. 수트 품목(2차)이 들어와야 ≥7.

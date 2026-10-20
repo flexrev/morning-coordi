@@ -1,29 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  아침 코디 앱 아이콘 (maskable, 512×512)
-  - 전체 배경을 꽉 채움(마스크 형태가 원·스쿼클·물방울이어도 가장자리가 비지 않음).
-  - 안전 영역: 중심 (256,256) 반지름 204.8px(지름의 40%) 원. 해·티셔츠 모두 이 안에 들어감.
-  - 단색 fill만 사용, 그라데이션·외부 자산 없음. 티셔츠 path는 src/assets/silhouettes/top-tee-regular.svg와 같은 자체 제작 외곽선.
-  내보내기(C1):
-  - manifest icons: 192×192, 512×512 PNG, purpose "any maskable" (같은 SVG에서 렌더).
-  - apple-touch-icon: 180×180 PNG, 투명 없음(iOS가 자체 마스크를 씌우므로 모서리 둥글리기 금지),
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png"> 로 연결.
-    예) npx sharp-cli -i docs/design/app-icon.svg -o public/apple-touch-icon.png resize 180 180
-       (또는 Inkscape: inkscape app-icon.svg -w 180 -h 180 -o apple-touch-icon.png)
-  - theme-color: 다크 #121212 / 라이트 #F6F5F1 (design-tokens.md 참조)
+  아침 코디 앱 아이콘 (maskable, 512×512) — Phase 6-B "B 스튜디오 다크" 언어
+  - 전체 배경을 꽉 채움(마스크 형태가 원·스쿼클·물방울이어도 가장자리가 비지 않음). 배경 #0E0F12(깊은 차콜).
+  - 안전 영역: 중심 (256,256) 반지름 204.8px(지름의 40%) 원. 해(r118, 중심 y214 → 최상단 96)·티셔츠(모서리 (139,400) → 거리 186) 모두 안.
+  - 조명 언어: 좌상단 아침빛(radial 11%) + 인물 뒤 스포트라이트(radial, 따뜻한 백색 20%) + 바닥 그림자. 그라데이션은 배경·조명에만, 티셔츠는 단색.
+  - 앰버 #E8B964(시안 B 액센트), 티셔츠 #F4F2ED(text-1). 티셔츠 path는 src/assets/silhouettes/top-tee-regular.svg와 같은 자체 제작 외곽선.
+  내보내기: `npm run icons` (scripts/make-icons.mjs, sharp) → public/icons/icon-192.png · icon-512.png · icon-512-maskable.png · apple-touch-icon.png(180, 불투명).
+  theme-color: 다크 #0E0F12 (시안 B) / 라이트 #F6F5F1 (design-tokens.md 참조)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="아침 코디">
-  <!-- 배경: 다크 상승면(순흑 아님) -->
-  <rect width="512" height="512" fill="#1C1C1E"/>
-  <!-- 아침 해: 저채도 앰버 액센트 -->
-  <circle cx="256" cy="244" r="152" fill="#E0BE7E"/>
-  <!-- 티셔츠 실루엣 (top-tee-regular 외곽선 ×2.2, 중앙 정렬) -->
+  <defs>
+    <radialGradient id="morning" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(40 0) scale(420 300)">
+      <stop offset="0" stop-color="#FFE6BE" stop-opacity=".11"/>
+      <stop offset=".7" stop-color="#FFE6BE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="spot" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(256 236) scale(200 230)">
+      <stop offset="0" stop-color="#FFE6BE" stop-opacity=".20"/>
+      <stop offset=".72" stop-color="#FFE6BE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sunglow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(256 214) scale(160)">
+      <stop offset=".72" stop-color="#E8B964" stop-opacity=".30"/>
+      <stop offset="1" stop-color="#E8B964" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-100%" width="160%" height="300%"><feGaussianBlur stdDeviation="7"/></filter>
+  </defs>
+  <!-- 배경: 깊은 차콜 + 좌상단 아침빛 -->
+  <rect width="512" height="512" fill="#0E0F12"/>
+  <rect width="512" height="512" fill="url(#morning)"/>
+  <!-- 스포트라이트 플레이트 (인물 뒤 타원광) -->
+  <rect width="512" height="512" fill="url(#spot)"/>
+  <!-- 아침 해: 앰버 + 글로우 -->
+  <circle cx="256" cy="214" r="160" fill="url(#sunglow)"/>
+  <circle cx="256" cy="214" r="118" fill="#E8B964"/>
+  <!-- 바닥 그림자 (티셔츠 아래) -->
+  <ellipse cx="256" cy="412" rx="112" ry="11" fill="#000" fill-opacity=".55" filter="url(#soft)"/>
+  <!-- 티셔츠 실루엣 (top-tee-regular 외곽선 ×2.2, 중앙 정렬) + 오른쪽 면 음영 -->
   <g transform="translate(36 -22) scale(2.2)">
     <path d="M 88 70 Q 100 82 112 70 L 138 78 L 153 118 L 135 125 L 134 192 L 66 192 L 65 125 L 47 118 L 62 78 Z"
-          fill="#F2EDE4" stroke="#1C1C1E" stroke-width="2.5" stroke-linejoin="round"/>
+          fill="#F4F2ED" stroke="#0E0F12" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M 122 96 L 134 125 L 134 192 L 124 192 Z" fill="#000" fill-opacity=".10"/>
     <!-- 소매 솔기 -->
-    <path d="M 135 125 L 130 104 M 65 125 L 70 104" fill="none" stroke="#1C1C1E" stroke-opacity="0.35" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 135 125 L 130 104 M 65 125 L 70 104" fill="none" stroke="#0E0F12" stroke-opacity="0.35" stroke-width="2" stroke-linecap="round"/>
   </g>
-  <!-- 인디고 하의 힌트: 티셔츠 아래 가로 띠 (안전 영역 안) -->
-  <rect x="182" y="402" width="148" height="26" rx="4" fill="#2C4270"/>
 </svg>
