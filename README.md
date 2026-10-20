@@ -49,7 +49,7 @@ sharp가 설치되지 않는 환경에서는 `npm run icons:placeholder`로 단�
 - 공개 URL: **https://flexrev.github.io/morning-coordi/**
 - 저장소: https://github.com/flexrev/morning-coordi
 - 배포 방식: `main` 브랜치에 푸시하면 `.github/workflows/pages.yml`이 validate → test → `BASE_PATH=/morning-coordi/ npm run build` → GitHub Pages 배포를 실행한다. 수동 실행은 Actions 탭의 `pages` 워크플로에서 "Run workflow".
-- 배포 확인(2026-10-19): index·manifest·sw.js·아이콘 200, 프리캐시 11항목, 서비스워커 activated, 하의 → 인디고 2탭에 클래식 3장 표시.
+- 배포 확인(2026-10-20, v1.1): 스튜디오 다크 리뉴얼·스타일/상황 확장 반영. 첫 화면 JS 108KB gzip, Lighthouse 99/100/100
 
 ### 핸드폰 홈화면 추가
 

@@ -243,3 +243,10 @@ outfit    { id, items[], tags[], isClassic }   // 예시 조합 (리서치에서
 - 공개 URL **https://flexrev.github.io/morning-coordi/** — 배포 환경에서 서비스워커·프리캐시·Quick 경로 확인(콘솔 오류 0)
 - 남은 것: 실기기(iOS·Android) 홈화면 추가 → 비행기 모드 실행 확인(사용자), DevTools 패널 확인. 통과하면 MVP 1.0
 - 2차 후보: 게이트 4 이월 5건, 내 옷장·날씨·상황별 프리셋(계획 2-2)
+
+### v1.1 (2026-10-20) — Phase 6 완료·배포
+
+- 비주얼 B 스튜디오 다크 + A 타이포 위계, View Transitions 모션, 실루엣 v2 41레이어(음영·디테일·스테이지 조명), 스타일 8종(1차 4종)·상황 5종·액세서리·패턴·미드 레이어, 오늘의 추천·즐겨찾기·공유·온보딩·설정
+- 게이트 5(컨셉)·게이트 6(구현) 통과: Lighthouse 99/100/100, axe 0, 첫 화면 JS 108KB gzip, 테스트 130, 콘텐츠 기준 ①~⑦ PASS. 상세 `phase6/gate-6-review.md`
+- 배포 https://flexrev.github.io/morning-coordi/ (GitHub Pages). 실기기 체감(모션·조명)은 사용자 확인 대기
+- 2차 후보: 2겹 아우터 생성, 수트 품목, 탄·초콜릿 하의 데이터 공백, Pretendard 셀프호스팅, 내 옷장·날씨 연동(계획 2-2)
